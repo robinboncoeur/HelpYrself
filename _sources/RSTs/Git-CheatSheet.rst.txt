@@ -12,11 +12,11 @@ On the Mac, in the main user folder - sort-of like the "Home/Username" folder in
 
 You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
-In the first - Sphinx - Terminal:
+In the first - Sphinx - Terminal::
 
-   * cd AllHelp/MyApp
+   cd AllHelp/MyApp
    
-   * sphinx-quickstart
+   sphinx-quickstart
    
 In the list of prompts, it will ask whether to separate source from build: select Yes.
 
@@ -66,21 +66,21 @@ In your github account, set up a new repository. This will have a URL::
 
    git@github.com:myAccount/MyApp
 
-In the Second Terminal (the one for git), navigate to the git folder:
+In the Second Terminal (the one for git), navigate to the git folder::
 
-   * cd AllHelp/GitPages/MyApp
+   cd AllHelp/GitPages/MyApp
    
-   * git init
+   git init
 
-   * git clone git@github.com:myAccount/MyApp.git html
+   git clone git@github.com:myAccount/MyApp.git html
 
-   * cd html
+   cd html
    
-   * git symbolic-ref HEAD refs/heads/gh-pages
+   git symbolic-ref HEAD refs/heads/gh-pages
    
-   * rm .git/index
+   rm .git/index
    
-   * git clean -fdx
+   git clean -fdx
    
 At this point, the folder is clean. In the Sphinx (source) folder, run::
 
@@ -114,8 +114,10 @@ In the GitPages build (cd AllHelp/GitPages/MyApp/html) folder::
    
 Read, rinse, repeat.
 
+
 Saves::
 
     cd /Users/robinhahn/AllHelp/GitPages/AssetMgr/html
     cd /Users/robinhahn/AllHelp/GitPages/CallSheet/html
     cd /Users/robinhahn/AllHelp/GitPages/FigureShader/html
+    cd /Users/robinhahn/AllHelp/GitPages/HelpYrself/html
