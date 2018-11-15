@@ -9,15 +9,19 @@ Setting Up Help Pages
 *********************
 
 
-After creating your site on GitHub, do the following:
+I'm on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder.
 
-   * Create folder in AllHelp
-   
-   * cd MyApp
+I then create a repository for that product (call it "MyApp") on GitHub. After that:
+
+   * cd AllHelp/MyApp
    
    * run sphinx-quickstart
    
-In the index.rst, change the title as needed, then add the pages like this::
+In the list of prompts, it will ask whether to separate source from build: select Yes. In order to have the build end up in the right place, I have the following entry in the Makefile::
+
+   * BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/CallSheet
+
+In the index.rst, change the title as needed, then add the pages in the RSTs folder so::
    
     .. toctree::
        :maxdepth: 3
@@ -29,7 +33,7 @@ In the index.rst, change the title as needed, then add the pages like this::
        RSTs/Licence.rst
        RSTs/Caveats.rst
 
-Modify the conf.py::
+Modify the conf.py for sphinx to use a nicer template::
 
     html_theme = 'sphinx_rtd_theme'
 
@@ -49,17 +53,15 @@ Modify the conf.py::
         'titles_only': False
     }
 
-Modify the Makefile
+You will need two instances of Terminal running: one for building html from .rst files, the other, to talk to github.
 
-   * BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/CallSheet
+After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary **make html** to check for errors.
 
-Add all your help files, check for errors and clean them up. Run:
-
-   * make html
-
-Then, in Terminal, invoke git:
+In the Second Terminal (the one for git), invoke git:
 
    * cd /to/working/git/folder
+   
+   * git init
 
    * git clone git@github.com:robinboncoeur/xlVBA-AssetMgr.git html
 
@@ -71,6 +73,12 @@ Then, in Terminal, invoke git:
    
    * git clean -fdx
    
+At this point, the folder is clean. So, run::
+
+   * make html
+
+Then:
+
    * git add -A
    
    * git commit -am "-date- committing help"
