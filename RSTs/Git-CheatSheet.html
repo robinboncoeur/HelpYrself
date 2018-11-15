@@ -156,13 +156,13 @@
 <p>Stuff on here could be totally wrong, or outdated or whatever. YMMV.</p>
 <div class="section" id="setting-up-help-pages">
 <h2>Setting Up Help Pages<a class="headerlink" href="#setting-up-help-pages" title="Permalink to this headline">¶</a></h2>
-<p>I’m on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder. I create a repository for that product (let’s call it “MyApp”) on GitHub.</p>
-<p>You will need two instances of Terminal running: one for building html from .rst files, the other, to talk to github.</p>
-<p>In the first, Sphinx Terminal:</p>
+<p>On the Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux -is an AllHelp folder containing subfolders for each product. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let’s as an example follow a product called “MyApp”.</p>
+<p>You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
+<p>In the first - Sphinx - Terminal:</p>
 <blockquote>
 <div><ul class="simple">
 <li>cd AllHelp/MyApp</li>
-<li>run sphinx-quickstart</li>
+<li>sphinx-quickstart</li>
 </ul>
 </div></blockquote>
 <p>In the list of prompts, it will ask whether to separate source from build: select Yes.</p>
