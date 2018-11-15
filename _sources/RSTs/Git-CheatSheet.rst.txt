@@ -9,19 +9,23 @@ Setting Up Help Pages
 *********************
 
 
-I'm on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder.
+I'm on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder. I create a repository for that product (let's call it "MyApp") on GitHub. 
 
-I then create a repository for that product (let's call it "MyApp") on GitHub. After that:
+You will need two instances of Terminal running: one for building html from .rst files, the other, to talk to github.
+
+In the first, Sphinx Terminal:
 
    * cd AllHelp/MyApp
    
    * run sphinx-quickstart
    
-In the list of prompts, it will ask whether to separate source from build: select Yes. In order to have the build end up in the right place, I have the following entry in the Makefile::
+In the list of prompts, it will ask whether to separate source from build: select Yes.
+
+In order to have the build end up in the right place, I have the following entry in the Makefile::
 
    BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/MyApp
 
-In the index.rst, change the title as needed, then add the pages in the RSTs folder so::
+In the newly created index.rst, change the title of the header as desired, then add the pages in the RSTs folder so that index.rst refllects what's in the RSTs folder::
    
     .. toctree::
        :maxdepth: 3
@@ -52,8 +56,6 @@ Modify the conf.py for sphinx to use a nicer template::
         'includehidden': True,
         'titles_only': False
     }
-
-You will need two instances of Terminal running: one for building html from .rst files, the other, to talk to github.
 
 After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary **make html** to check for errors.
 
