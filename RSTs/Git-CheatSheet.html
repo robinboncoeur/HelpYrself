@@ -228,7 +228,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
-<p>Then:</p>
+<p>In the GitPages build folder:</p>
 <blockquote>
 <div><ul class="simple">
 <li>git add -A</li>
@@ -240,16 +240,19 @@
 </div>
 <div class="section" id="from-then-on">
 <h2>From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h2>
-<p>In the source Terminal, run <strong>make html</strong></p>
-<p>In the build (html) folder:</p>
-<blockquote>
-<div><ul class="simple">
-<li>cd AllHelp/GitPages/MyApp/html</li>
-<li>git add -A</li>
-<li>git commit -am “-date- committing help”</li>
-<li>git push origin gh-pages</li>
-</ul>
-</div></blockquote>
+<p>In the source Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>In the GitPages build (cd AllHelp/GitPages/MyApp/html) folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;update note xxxx&quot;</span>
+
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+<p>Read, rinse, repeat.</p>
 <p>Saves:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">AssetMgr</span><span class="o">/</span><span class="n">html</span>
 <span class="n">cd</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">CallSheet</span><span class="o">/</span><span class="n">html</span>

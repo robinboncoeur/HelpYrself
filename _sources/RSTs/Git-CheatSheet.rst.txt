@@ -86,7 +86,7 @@ At this point, the folder is clean. In the Sphinx (source) folder, run::
 
    * make html
 
-Then:
+In the GitPages build folder:
 
    * git add -A
    
@@ -100,18 +100,20 @@ On Github, go to that repository and click on the settings icon (right-most). Ha
 From then on
 ************
 
-In the source Terminal, run **make html**
+In the source Terminal::
 
-In the build (html) folder:
+   make html
+
+In the GitPages build (cd AllHelp/GitPages/MyApp/html) folder::
    
-   * cd AllHelp/GitPages/MyApp/html
+   git add -A
    
-   * git add -A
+   git commit -am "update note xxxx"
    
-   * git commit -am "-date- committing help"
+   git push origin gh-pages
    
-   * git push origin gh-pages
-   
+Read, rinse, repeat.
+
 Saves::
 
     cd /Users/robinhahn/AllHelp/GitPages/AssetMgr/html
