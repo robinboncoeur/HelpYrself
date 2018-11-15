@@ -157,7 +157,7 @@
 <div class="section" id="setting-up-help-pages">
 <h2>Setting Up Help Pages<a class="headerlink" href="#setting-up-help-pages" title="Permalink to this headline">¶</a></h2>
 <p>I’m on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder.</p>
-<p>I then create a repository for that product (call it “MyApp”) on GitHub. After that:</p>
+<p>I then create a repository for that product (let’s call it “MyApp”) on GitHub. After that:</p>
 <blockquote>
 <div><ul class="simple">
 <li>cd AllHelp/MyApp</li>
@@ -165,7 +165,7 @@
 </ul>
 </div></blockquote>
 <p>In the list of prompts, it will ask whether to separate source from build: select Yes. In order to have the build end up in the right place, I have the following entry in the Makefile:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">BUILDDIR</span>      <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">CallSheet</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUILDDIR</span>      <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">MyApp</span>
 </pre></div>
 </div>
 <p>In the index.rst, change the title as needed, then add the pages in the RSTs folder so:</p>

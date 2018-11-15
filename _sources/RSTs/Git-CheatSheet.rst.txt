@@ -11,7 +11,7 @@ Setting Up Help Pages
 
 I'm on a Mac: I have my user folder, in which I have an AllHelp folder containing subfolders for each product. When I create a new product and wish to create help for that product, I create a folder in my AllHelp folder.
 
-I then create a repository for that product (call it "MyApp") on GitHub. After that:
+I then create a repository for that product (let's call it "MyApp") on GitHub. After that:
 
    * cd AllHelp/MyApp
    
@@ -19,7 +19,7 @@ I then create a repository for that product (call it "MyApp") on GitHub. After t
    
 In the list of prompts, it will ask whether to separate source from build: select Yes. In order to have the build end up in the right place, I have the following entry in the Makefile::
 
-   * BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/CallSheet
+   BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/MyApp
 
 In the index.rst, change the title as needed, then add the pages in the RSTs folder so::
    
