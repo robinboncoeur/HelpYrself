@@ -84,15 +84,15 @@ In the Second Terminal (the one for git), navigate to the git folder:
    
 At this point, the folder is clean. In the Sphinx (source) folder, run::
 
-   * make html
+   make html
 
-In the GitPages build folder:
+In the GitPages build folder::
 
-   * git add -A
+   git add -A
    
-   * git commit -am "committing help"
+   git commit -am "committing help"
    
-   * git push origin gh-pages
+   git push origin gh-pages
    
 On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
 
