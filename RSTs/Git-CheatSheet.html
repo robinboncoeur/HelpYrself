@@ -81,7 +81,9 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Totally Unofficial Git Help Page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#setting-up-help-pages">Setting Up Help Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-set-up">Local set-up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-set-up">Github set-up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-then-on">From then on</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
@@ -154,9 +156,9 @@
   <div class="section" id="the-totally-unofficial-git-help-page">
 <h1>The Totally Unofficial Git Help Page<a class="headerlink" href="#the-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
 <p>Stuff on here could be totally wrong, or outdated or whatever. YMMV.</p>
-<div class="section" id="setting-up-help-pages">
-<h2>Setting Up Help Pages<a class="headerlink" href="#setting-up-help-pages" title="Permalink to this headline">¶</a></h2>
-<p>On the Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux -is an AllHelp folder containing subfolders for each product. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let’s as an example follow a product called “MyApp”.</p>
+<div class="section" id="local-set-up">
+<h2>Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this headline">¶</a></h2>
+<p>On the Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux -is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let’s as an example follow a product called “MyApp”.</p>
 <p>You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
 <p>In the first - Sphinx - Terminal:</p>
 <blockquote>
@@ -203,19 +205,26 @@
 </pre></div>
 </div>
 <p>After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary <strong>make html</strong> to check for errors.</p>
-<p>In the Second Terminal (the one for git), invoke git:</p>
+</div>
+<div class="section" id="github-set-up">
+<h2>Github set-up<a class="headerlink" href="#github-set-up" title="Permalink to this headline">¶</a></h2>
+<p>In your github account, set up a new repository. This will have a URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">myAccount</span><span class="o">/</span><span class="n">MyApp</span>
+</pre></div>
+</div>
+<p>In the Second Terminal (the one for git), navigate to the git folder:</p>
 <blockquote>
 <div><ul class="simple">
-<li>cd /to/working/git/folder</li>
+<li>cd AllHelp/GitPages/MyApp</li>
 <li>git init</li>
-<li>git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:robinboncoeur/xlVBA-AssetMgr.git html</li>
+<li>git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:myAccount/MyApp.git html</li>
 <li>cd html</li>
 <li>git symbolic-ref HEAD refs/heads/gh-pages</li>
 <li>rm .git/index</li>
 <li>git clean -fdx</li>
 </ul>
 </div></blockquote>
-<p>At this point, the folder is clean. So, run:</p>
+<p>At this point, the folder is clean. In the Sphinx (source) folder, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
@@ -223,14 +232,19 @@
 <blockquote>
 <div><ul class="simple">
 <li>git add -A</li>
-<li>git commit -am “-date- committing help”</li>
+<li>git commit -am “committing help”</li>
 <li>git push origin gh-pages</li>
 </ul>
 </div></blockquote>
-<p>From then on, you need to navigate to the html folder</p>
+<p>On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.</p>
+</div>
+<div class="section" id="from-then-on">
+<h2>From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h2>
+<p>In the source Terminal, run <strong>make html</strong></p>
+<p>In the build (html) folder:</p>
 <blockquote>
 <div><ul class="simple">
-<li>cd /AllHelp/GitPages/MyApp/html</li>
+<li>cd AllHelp/GitPages/MyApp/html</li>
 <li>git add -A</li>
 <li>git commit -am “-date- committing help”</li>
 <li>git push origin gh-pages</li>

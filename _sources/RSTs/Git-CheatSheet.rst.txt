@@ -5,11 +5,10 @@ The Totally Unofficial Git Help Page
 Stuff on here could be totally wrong, or outdated or whatever. YMMV.
 
 
-Setting Up Help Pages
-*********************
+Local set-up
+************
 
-
-On the Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux -is an AllHelp folder containing subfolders for each product. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let's as an example follow a product called "MyApp".
+On the Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux -is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let's as an example follow a product called "MyApp".
 
 You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
@@ -59,13 +58,21 @@ Modify the conf.py for sphinx to use a nicer template::
 
 After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary **make html** to check for errors.
 
-In the Second Terminal (the one for git), invoke git:
 
-   * cd /to/working/git/folder
+Github set-up
+*************
+
+In your github account, set up a new repository. This will have a URL::
+
+   git@github.com:myAccount/MyApp
+
+In the Second Terminal (the one for git), navigate to the git folder:
+
+   * cd AllHelp/GitPages/MyApp
    
    * git init
 
-   * git clone git@github.com:robinboncoeur/xlVBA-AssetMgr.git html
+   * git clone git@github.com:myAccount/MyApp.git html
 
    * cd html
    
@@ -75,7 +82,7 @@ In the Second Terminal (the one for git), invoke git:
    
    * git clean -fdx
    
-At this point, the folder is clean. So, run::
+At this point, the folder is clean. In the Sphinx (source) folder, run::
 
    * make html
 
@@ -83,14 +90,21 @@ Then:
 
    * git add -A
    
-   * git commit -am "-date- committing help"
+   * git commit -am "committing help"
    
    * git push origin gh-pages
    
-From then on, you need to navigate to the html folder
+On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
 
    
-   * cd /AllHelp/GitPages/MyApp/html
+From then on
+************
+
+In the source Terminal, run **make html**
+
+In the build (html) folder:
+   
+   * cd AllHelp/GitPages/MyApp/html
    
    * git add -A
    
