@@ -11,8 +11,9 @@ Welcome to Help Yourself
    :caption: Contents:
 
    RSTs/Git-CheatSheet.rst
-   RSTs/Video.rst
    RSTs/Blender.rst
+   RSTs/ExcelApps.rst
+   RSTs/Video.rst
 
 
 Indices and tables
