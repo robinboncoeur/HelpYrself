@@ -1,16 +1,18 @@
-####################################
-The Totally Unofficial Git Help Page
-####################################
+###################################
+My Totally Unofficial Git Help Page
+###################################
 
-Stuff on here could be totally wrong, or outdated or whatever. YMMV.
+Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I'll do some testing of this process as I've already encountered issues I couldn't explain when I cerated this set of documents called HelpYrself.
+
+If it works for you, great. However, YMMV.
 
 
 Local set-up
 ************
 
-On the Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux -is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let's as an example follow a product called "MyApp".
+On my Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.
 
-You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
+Using as an example a product called "MyApp", the following approach more-or-less seemed to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
 In the first - Sphinx - Terminal::
 
@@ -18,7 +20,9 @@ In the first - Sphinx - Terminal::
    
    sphinx-quickstart
    
-In the list of prompts, it will ask whether to separate source from build: select Yes.
+In the list of prompts, it will ask whether to separate source from build: select Yes. Note:
+
+   *where this is the best approach remains to be discovered, as it sort-of didn't work quite as I had anticipated. Will explore this further when I create the testDoc.* 
 
 In order to have the build end up in the right place, I have the following entry in the Makefile::
 
@@ -36,7 +40,7 @@ In the newly created index.rst, change the title of the header as desired, then 
        RSTs/Licence.rst
        RSTs/Caveats.rst
 
-Modify the conf.py for sphinx to use a nicer template::
+Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easily more useful than some of the others::
 
     html_theme = 'sphinx_rtd_theme'
 
@@ -56,7 +60,11 @@ Modify the conf.py for sphinx to use a nicer template::
         'titles_only': False
     }
 
-After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary **make html** to check for errors.
+After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary::
+
+   **make html** 
+   
+to check for errors.
 
 
 Github set-up

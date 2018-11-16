@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The Totally Unofficial Git Help Page &mdash; Help Yourself 0.01 documentation</title>
+  <title>My Totally Unofficial Git Help Page &mdash; Help Yourself 0.01 documentation</title>
   
 
   
@@ -81,7 +81,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">The Totally Unofficial Git Help Page</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">My Totally Unofficial Git Help Page</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-set-up">Local set-up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#github-set-up">Github set-up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#from-then-on">From then on</a></li>
@@ -136,7 +136,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>The Totally Unofficial Git Help Page</li>
+      <li>My Totally Unofficial Git Help Page</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,20 +155,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-totally-unofficial-git-help-page">
-<h1>The Totally Unofficial Git Help Page<a class="headerlink" href="#the-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
-<p>Stuff on here could be totally wrong, or outdated or whatever. YMMV.</p>
+  <div class="section" id="my-totally-unofficial-git-help-page">
+<h1>My Totally Unofficial Git Help Page<a class="headerlink" href="#my-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
+<p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself.</p>
+<p>If it works for you, great. However, YMMV.</p>
 <div class="section" id="local-set-up">
 <h2>Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this headline">¶</a></h2>
-<p>On the Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux -is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let’s as an example follow a product called “MyApp”.</p>
-<p>You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
+<p>On my Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.</p>
+<p>Using as an example a product called “MyApp”, the following approach more-or-less seemed to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
 <p>In the first - Sphinx - Terminal:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">MyApp</span>
 
 <span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
-<p>In the list of prompts, it will ask whether to separate source from build: select Yes.</p>
+<p>In the list of prompts, it will ask whether to separate source from build: select Yes. Note:</p>
+<blockquote>
+<div><em>where this is the best approach remains to be discovered, as it sort-of didn’t work quite as I had anticipated. Will explore this further when I create the testDoc.</em></div></blockquote>
 <p>In order to have the build end up in the right place, I have the following entry in the Makefile:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUILDDIR</span>      <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">MyApp</span>
 </pre></div>
@@ -185,7 +188,7 @@
    <span class="n">RSTs</span><span class="o">/</span><span class="n">Caveats</span><span class="o">.</span><span class="n">rst</span>
 </pre></div>
 </div>
-<p>Modify the conf.py for sphinx to use a nicer template:</p>
+<p>Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easily more useful than some of the others:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
 
 <span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
@@ -205,7 +208,11 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary <strong>make html</strong> to check for errors.</p>
+<p>After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">make</span> <span class="n">html</span><span class="o">**</span>
+</pre></div>
+</div>
+<p>to check for errors.</p>
 </div>
 <div class="section" id="github-set-up">
 <h2>Github set-up<a class="headerlink" href="#github-set-up" title="Permalink to this headline">¶</a></h2>
