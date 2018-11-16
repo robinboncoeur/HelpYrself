@@ -10,9 +10,11 @@ Welcome to Help Yourself
    :maxdepth: 2
    :caption: Contents:
 
-   RSTs/Git-CheatSheet.rst
+   RSTs/Intro.rst
+   RSTs/Git.rst
    RSTs/Blender.rst
    RSTs/ExcelApps.rst
+   RSTs/Python.rst
    RSTs/Video.rst
 
 

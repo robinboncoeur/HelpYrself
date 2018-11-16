@@ -1,0 +1,123 @@
+####################################
+The Totally Unofficial Git Help Page
+####################################
+
+Stuff on here could be totally wrong, or outdated or whatever. YMMV.
+
+
+Local set-up
+************
+
+On the Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux -is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub. Let's as an example follow a product called "MyApp".
+
+You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
+
+In the first - Sphinx - Terminal::
+
+   cd AllHelp/MyApp
+   
+   sphinx-quickstart
+   
+In the list of prompts, it will ask whether to separate source from build: select Yes.
+
+In order to have the build end up in the right place, I have the following entry in the Makefile::
+
+   BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/MyApp
+
+In the newly created index.rst, change the title of the header as desired, then add the pages in the RSTs folder so that index.rst refllects what's in the RSTs folder::
+   
+    .. toctree::
+       :maxdepth: 3
+       :caption: Contents:
+
+
+       RSTs/Introduction.rst
+       RSTs/GetStarted.rst
+       RSTs/Licence.rst
+       RSTs/Caveats.rst
+
+Modify the conf.py for sphinx to use a nicer template::
+
+    html_theme = 'sphinx_rtd_theme'
+
+    html_theme_options = {
+        'canonical_url': '',
+        'analytics_id': '',
+        'logo_only': False,
+        'display_version': True,
+        'prev_next_buttons_location': 'bottom',
+        'style_external_links': False,
+        #'vcs_pageview_mode': '',
+        # Toc options
+        'collapse_navigation': True,
+        'sticky_navigation': True,
+        'navigation_depth': 4,
+        'includehidden': True,
+        'titles_only': False
+    }
+
+After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary **make html** to check for errors.
+
+
+Github set-up
+*************
+
+In your github account, set up a new repository. This will have a URL::
+
+   git@github.com:myAccount/MyApp
+
+In the Second Terminal (the one for git), navigate to the git folder::
+
+   cd AllHelp/GitPages/MyApp
+   
+   git init
+
+   git clone git@github.com:myAccount/MyApp.git html
+
+   cd html
+   
+   git symbolic-ref HEAD refs/heads/gh-pages
+   
+   rm .git/index
+   
+   git clean -fdx
+   
+At this point, the folder is clean. In the Sphinx (source) folder, run::
+
+   make html
+
+In the GitPages build folder::
+
+   git add -A
+   
+   git commit -am "committing help"
+   
+   git push origin gh-pages
+   
+On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
+
+   
+From then on
+************
+
+In the source Terminal::
+
+   make html
+
+In the GitPages build (cd AllHelp/GitPages/MyApp/html) folder::
+   
+   git add -A
+   
+   git commit -am "update note xxxx"
+   
+   git push origin gh-pages
+   
+Read, rinse, repeat.
+
+
+Saves::
+
+    cd /Users/robinhahn/AllHelp/GitPages/AssetMgr/html
+    cd /Users/robinhahn/AllHelp/GitPages/CallSheet/html
+    cd /Users/robinhahn/AllHelp/GitPages/FigureShader/html
+    cd /Users/robinhahn/AllHelp/GitPages/HelpYrself/html
