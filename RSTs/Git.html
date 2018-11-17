@@ -82,9 +82,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">My Totally Unofficial Git Help Page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#local-set-up">Local set-up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github-set-up">Github set-up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#from-then-on">From then on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-set-up">01 - Local set-up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-terminal">02 - Sphinx Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-terminal">03 - Github Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">04 - Sphinx Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">05 - Github Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-then-on">06 - From then on</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
@@ -157,23 +160,26 @@
             
   <div class="section" id="my-totally-unofficial-git-help-page">
 <h1>My Totally Unofficial Git Help Page<a class="headerlink" href="#my-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
-<p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself.</p>
-<p>If it works for you, great. However, YMMV.</p>
+<p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.</p>
+<p>Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
 <div class="section" id="local-set-up">
-<h2>Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this headline">¶</a></h2>
+<h2>01 - Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this headline">¶</a></h2>
 <p>On my Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.</p>
-<p>Using as an example a product called “MyApp”, the following approach more-or-less seemed to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
-<p>In the first - Sphinx - Terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">MyApp</span>
+<p>Using as an example a document called “KeysToLife”, the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
+</div>
+<div class="section" id="sphinx-terminal">
+<h2>02 - Sphinx Terminal<a class="headerlink" href="#sphinx-terminal" title="Permalink to this headline">¶</a></h2>
+<p>In the first terminal, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">KeysToLife</span>
 
 <span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
-<p>In the list of prompts, it will ask whether to separate source from build: select Yes. Note:</p>
+<p>In the list of prompts, it will ask whether to separate source from build: I have selected No. Note:</p>
 <blockquote>
-<div><em>where this is the best approach remains to be discovered, as it sort-of didn’t work quite as I had anticipated. Will explore this further when I create the testDoc.</em></div></blockquote>
+<div><em>where this approach suggested, the author said to choose Yes. It sort-of didn’t work quite as I had anticipated, so I’m selecting No.</em></div></blockquote>
 <p>In order to have the build end up in the right place, I have the following entry in the Makefile:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUILDDIR</span>      <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">MyApp</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BUILDDIR</span>      <span class="o">=</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">robinhahn</span><span class="o">/</span><span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">KeysToLife</span>
 </pre></div>
 </div>
 <p>In the newly created index.rst, change the title of the header as desired, then add the pages in the RSTs folder so that index.rst refllects what’s in the RSTs folder:</p>
@@ -183,9 +189,9 @@
 
 
    <span class="n">RSTs</span><span class="o">/</span><span class="n">Introduction</span><span class="o">.</span><span class="n">rst</span>
-   <span class="n">RSTs</span><span class="o">/</span><span class="n">GetStarted</span><span class="o">.</span><span class="n">rst</span>
-   <span class="n">RSTs</span><span class="o">/</span><span class="n">Licence</span><span class="o">.</span><span class="n">rst</span>
-   <span class="n">RSTs</span><span class="o">/</span><span class="n">Caveats</span><span class="o">.</span><span class="n">rst</span>
+   <span class="n">RSTs</span><span class="o">/</span><span class="n">Des</span><span class="o">.</span><span class="n">rst</span>
+   <span class="n">RSTs</span><span class="o">/</span><span class="n">Eli</span><span class="o">.</span><span class="n">rst</span>
+   <span class="n">RSTs</span><span class="o">/</span><span class="n">Spurg</span><span class="o">.</span><span class="n">rst</span>
 </pre></div>
 </div>
 <p>Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easily more useful than some of the others:</p>
@@ -208,26 +214,30 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. Do a preliminary:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">make</span> <span class="n">html</span><span class="o">**</span>
+<p>Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding and editing your files to the RSTs folder, edit your index.rst to include all these files.</p>
+</div>
+<div class="section" id="github-terminal">
+<h2>03 - Github Terminal<a class="headerlink" href="#github-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Online, at Github, in your github account, set up a new repository. This will have a URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:{</span><span class="n">myAccount</span><span class="p">}</span><span class="o">/</span><span class="n">KeysToLife</span>
 </pre></div>
 </div>
-<p>to check for errors.</p>
-</div>
-<div class="section" id="github-set-up">
-<h2>Github set-up<a class="headerlink" href="#github-set-up" title="Permalink to this headline">¶</a></h2>
-<p>In your github account, set up a new repository. This will have a URL:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">myAccount</span><span class="o">/</span><span class="n">MyApp</span>
-</pre></div>
-</div>
-<p>In the Second Terminal (the one for git), navigate to the git folder:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">MyApp</span>
+<p>Locally, in the git terminal, navigate to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">GitPages</span><span class="o">/</span><span class="n">KeysToLife</span>
 
 <span class="n">git</span> <span class="n">init</span>
-
-<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">myAccount</span><span class="o">/</span><span class="n">MyApp</span><span class="o">.</span><span class="n">git</span> <span class="n">html</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Note:</dt>
+<dd><em>Not sure if this git init-ed .git folder is a keeper, as it will not be used to upload files. However, this is how I set up the initial html folder, which needs to have a .git folder, as this is the working folder from whence files will be staged and uploaded to the GitPages.</em></dd>
+</dl>
+<p>Next:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:{</span><span class="n">myAccount</span><span class="p">}</span><span class="o">/</span><span class="n">KeysToLife</span><span class="o">.</span><span class="n">git</span> <span class="n">html</span>
 
 <span class="n">cd</span> <span class="n">html</span>
+
+<span class="n">git</span> <span class="n">init</span>
 
 <span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
 
@@ -236,11 +246,19 @@
 <span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">fdx</span>
 </pre></div>
 </div>
-<p>At this point, the folder is clean. In the Sphinx (source) folder, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+<p>At this point, the folder is clean.</p>
+</div>
+<div class="section" id="id1">
+<h2>04 - Sphinx Terminal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Run a preliminary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">make</span> <span class="n">html</span><span class="o">**</span>
 </pre></div>
 </div>
-<p>In the GitPages build folder:</p>
+<p>to check for errors and to put the first lot of files for git to stage and put up in your repository’s gh-pages.</p>
+</div>
+<div class="section" id="id2">
+<h2>05 - Github Terminal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
 
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;committing help&quot;</span>
@@ -251,12 +269,12 @@
 <p>On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.</p>
 </div>
 <div class="section" id="from-then-on">
-<h2>From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h2>
-<p>In the source Terminal:</p>
+<h2>06 - From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h2>
+<p>In the Sphinx Terminal - cd AllHelp/KeysToLife:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
-<p>In the GitPages build (cd AllHelp/GitPages/MyApp/html) folder:</p>
+<p>In the GitPages Terminal - cd AllHelp/GitPages/KeysToLife/html:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
 
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;update note xxxx&quot;</span>
