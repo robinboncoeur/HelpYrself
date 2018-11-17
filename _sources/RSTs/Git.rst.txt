@@ -139,12 +139,12 @@ In the GitPages Terminal - cd AllHelp/GitPages/KeysToLife/html::
    
    git push origin gh-pages
    
-Read, rinse, repeat.
+Read, rinse, repeat. Terminal saves previous commands, so:
 
+  * up-arrow three times, hit enter
+  
+  * up-arrow three times, edit comment, hit enter
+  
+  * up-arrow three times, hit enter
 
-Saves::
-
-    cd /Users/robinhahn/AllHelp/GitPages/AssetMgr/html
-    cd /Users/robinhahn/AllHelp/GitPages/CallSheet/html
-    cd /Users/robinhahn/AllHelp/GitPages/FigureShader/html
-    cd /Users/robinhahn/AllHelp/GitPages/HelpYrself/html
+Easy-peasy.
