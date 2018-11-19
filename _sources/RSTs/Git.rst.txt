@@ -105,7 +105,7 @@ At this point, the folder is clean.
 
 Run a preliminary::
 
-   **make html** 
+   make html 
    
 to check for errors and to put the first lot of files for git to stage and put up in your repository's gh-pages.
 
