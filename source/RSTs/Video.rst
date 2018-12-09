@@ -1,0 +1,17 @@
+################
+Video Processing
+################
+
+
+Short, Hopefully Helpful Videos
+*******************************
+
+
+**Exporting a simple figure from Poser**
+
+.. image:: http://www.tightbytes.com/Blender/InstrVideos/FigShadImg01b.png
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="http://www.tightbytes.com/Blender/InstrVideos/FigShader060-01b.mp4" frameborder="0" allowfullscreen></iframe>
+
