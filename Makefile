@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SOURCEDIR     = source
+SOURCEDIR     = .
 BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/HelpYrself
 
 # Put it first so that "make" without argument is like "make help".
