@@ -86,6 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
@@ -163,6 +164,18 @@
 </pre></div>
 </div>
 <p>needed for the picture to actually take.</p>
+</div>
+<div class="section" id="updating-path">
+<h2>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this headline">¶</a></h2>
+<p>In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span>
+</pre></div>
+</div>
+<p>So you can just open up this file as root and add whatever you want.</p>
+<p>For Immediate results, Run (try as normal user and root):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">export</span> <span class="n">PATH</span>
+</pre></div>
+</div>
 </div>
 </div>
 

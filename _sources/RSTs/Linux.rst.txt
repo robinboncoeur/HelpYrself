@@ -11,3 +11,17 @@ Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customize
     sudo update-grub
 
 needed for the picture to actually take.
+
+
+Updating PATH
+*************
+
+In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file::
+
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+So you can just open up this file as root and add whatever you want.
+
+For Immediate results, Run (try as normal user and root)::
+
+    source /etc/environment && export PATH
