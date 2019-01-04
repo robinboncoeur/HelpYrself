@@ -11,3 +11,120 @@ Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customize
     sudo update-grub
 
 needed for the picture to actually take.
+
+
+Updating PATH
+*************
+
+In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file::
+
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+So you can just open up this file as root and add whatever you want.
+
+For Immediate results, Run (try as normal user and root)::
+
+    source /etc/environment && export PATH
+
+
+Kivy and PyCharm
+****************
+
+Kivy Virtual Environment Installation using PyCharm
+
+Assumption
+
+Assuming virtualenv or/and virtualenvwrapper already installed::
+
+    sudo pip install virtualenv virtualenvwrapper
+
+Launch PyCharm. Then:
+
+    * Click File
+    * Click Settings
+    * Click project Interpreter
+    * Click cogwheel next to the Project Interpreter field, and choose Add...
+    * New environment is the default selection.
+    * Type kivyinstall for the Location e.g. /home/iam/.virtualenvs/kivyinstall
+    * Select Base interpreter (Python 3.5, or Python 2.7) from the drop down
+    * Do not select the Inherit global site-packages check-box.
+    * Select the Make available to all projects check-box, if needed.
+    * Click OK
+
+After pip and setuptools have been installed:
+
+    * click + beside the column heading, Latest.
+    * Type cython in the search text input box under Available Packages Dialog.
+    * Select Specify version check-box to load version 0.25.2 which is compatible to Kivy version 1.10.0
+    * Click Install Package button.
+    * After cython 0.25.2 version installed successfully, type kivy in the search text input box under Available Packages Dialog.
+    * Click Install Package
+
+After kivy installed successfully, create a new project.
+Opened a new project. If kivyinstall did not appear in the expanded External Libraries:
+
+    * click File » Settings... » Project Interpreter
+    * select Python...(kivyinstall) e.g. Python 3.5 (kivyinstall)
+
+
+Brackets in Mint (Ubuntu)
+*************************
+
+Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from `It's FOSS <https://itsfoss.com/install-brackets-ubuntu/>`_.
+
+
+Method 1: Install Brackets using Snap
+=====================================
+
+To install Snap, enter the following in Terminal::
+
+    sudo apt-get install snapd
+    
+Starting Ubuntu 16.04, Brackets is available as a Snap app. You can also find it in the Software Center and install it from there in a few clicks for Ubuntu 16.04 and higher versions.
+
+If you want to install via the command line, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging. First, make sure you have snapd daemon installed on your system. Use the command below::
+
+    snap --version
+
+Once you have made sure that snapd is installed on your Linux system, install Brackets with::
+
+    sudo snap install brackets
+
+In mint, an error occurred with the above command:
+
+    This revision of snap "brackets" was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk
+
+This can be rectified by adding --classic::
+
+    sudo snap install brackets --classic
+
+
+Method 2: Install Brackets using PPA 
+====================================
+... **in Ubuntu and Linux Mint** (*Not recommended*)
+
+Note: *This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.*
+
+Open a terminal and use the following commands to install Brackets via the unofficial PPA::
+
+    sudo add-apt-repository ppa:webupd8team/brackets
+    sudo apt-get update
+    sudo apt-get install brackets
+
+
+Method 3: Install Brackets using DEB package
+============================================
+... **or source code** 
+
+If you do not like PPAs, you can get the .deb installation files from the link below. You will also get the source code of the latest version here:
+
+`Download Brackets Editor <https://github.com/adobe/brackets/releases>`_
+
+These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.
+
+
+Suggested reads
+===============
+
+`How To Install Visual Studio Code On Ubuntu <https://itsfoss.com/install-visual-studio-code-ubuntu/>`_
+

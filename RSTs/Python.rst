@@ -8,6 +8,54 @@ Pip Installs
 
 For PyTube, to install the latest source directly from github using pip, type this in your command line::
 
-   pip install git+https://github.com/nficano/pytube.git
+    pip install git+https://github.com/nficano/pytube.git
 
-Next.
+
+PyCharm and Kivy Install
+========================
+
+To explore: in Ubuntu 12.04, one user solved it this way:
+
+    * Install CYTHON -- Do this First!
+    * Install the Python header files: sudo apt-get install python-dev
+    * Install KIVY: [sudo apt-get install Python-Kivy] or [sudo apt-get install python3-kivy]
+    * Install the kivy-examples: sudo apt-get install kivy-examples
+
+An important `link <http://kivy.org/docs/installation/installation-linux.html#ubuntu-12-04-with-python-2-7>`_ for Python 2x was included. The user went on to say that "the code builds and runs, but does not display in Python. I will edit this answer if I fix that, but this should at least get you started."
+
+Note: *PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.*
+
+
+Brackets Install...
+===================
+... **in Linux Mint**
+
+A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
+
+
+Kivy kv file Python...
+======================
+... **syntax highlighting**
+
+Create a brackets.json file with the following code::
+
+    (code to follow)
+    
+
+Project: Roster App
+===================
+
+Name of application::
+
+    rosterapp21s9453
+
+Credentials set up `here <https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453>`_ :: 
+
+    https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453
+
+In google drive, set things up to be able to access with Python `this way <https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html>`_.
+
+Installed gspread and oauth2client via pip3::
+
+    pip3 install gspread oauth2client
+    
