@@ -88,11 +88,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-snap-installer">The SNAP Installer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#brackets-in-mint-ubuntu">Brackets in Mint (Ubuntu)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#method-1-install-brackets-using-snap">Method 1: Install Brackets using Snap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#method-2-install-brackets-using-ppa">Method 2: Install Brackets using PPA</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#method-3-install-brackets-using-deb-package">Method 3: Install Brackets using DEB package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suggested-reads">Suggested reads</a></li>
 </ul>
 </li>
 </ul>
@@ -228,35 +228,35 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="the-snap-installer">
-<h2>The SNAP Installer<a class="headerlink" href="#the-snap-installer" title="Permalink to this headline">¶</a></h2>
-<p>To install Snap, try this:</p>
+<div class="section" id="brackets-in-mint-ubuntu">
+<h2>Brackets in Mint (Ubuntu)<a class="headerlink" href="#brackets-in-mint-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from <a class="reference external" href="https://itsfoss.com/install-brackets-ubuntu/">It’s FOSS</a>.</p>
+<div class="section" id="method-1-install-brackets-using-snap">
+<h3>Method 1: Install Brackets using Snap<a class="headerlink" href="#method-1-install-brackets-using-snap" title="Permalink to this headline">¶</a></h3>
+<p>To install Snap, enter the following in Terminal:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">snapd</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="brackets-in-mint-ubuntu">
-<h2>Brackets in Mint (Ubuntu)<a class="headerlink" href="#brackets-in-mint-ubuntu" title="Permalink to this headline">¶</a></h2>
-<p>Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. Here’s installation pointers from <a class="reference external" href="https://itsfoss.com/install-brackets-ubuntu/">this page</a> :</p>
-<div class="section" id="method-1-install-brackets-using-snap">
-<h3>Method 1: Install Brackets using Snap<a class="headerlink" href="#method-1-install-brackets-using-snap" title="Permalink to this headline">¶</a></h3>
-<p>Starting Ubuntu 16.04, Bracket is available as Snap app. You can find it in Software Center and install it from there in a few clicks.</p>
-<p>Brackets is available in Software Center for Ubuntu 16.04 and higher versions
-If you want to go the command line way, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging.</p>
-<p>But first, make sure you have snapd daemon installed on your system. Use the command below to install it. Don’t worry if it is already installed. Just run the command below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">snapd</span>
+<p>Starting Ubuntu 16.04, Brackets is available as a Snap app. You can also find it in the Software Center and install it from there in a few clicks for Ubuntu 16.04 and higher versions.</p>
+<p>If you want to install via the command line, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging. First, make sure you have snapd daemon installed on your system. Use the command below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snap</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
 <p>Once you have made sure that snapd is installed on your Linux system, install Brackets with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span>
 </pre></div>
 </div>
-<p>That’s it.</p>
-<p>Suggested read: <a class="reference external" href="https://itsfoss.com/install-visual-studio-code-ubuntu/">How To Install Visual Studio Code On Ubuntu</a></p>
+<p>In mint, an error occurred with the above command:</p>
+<blockquote>
+<div>This revision of snap “brackets” was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk</div></blockquote>
+<p>This can be rectified by adding –classic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span> <span class="o">--</span><span class="n">classic</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="method-2-install-brackets-using-ppa">
 <h3>Method 2: Install Brackets using PPA<a class="headerlink" href="#method-2-install-brackets-using-ppa" title="Permalink to this headline">¶</a></h3>
-<p>… ** in Ubuntu and Linux Mint** (Not recommended)</p>
+<p>… <strong>in Ubuntu and Linux Mint</strong> (<em>Not recommended</em>)</p>
 <p>Note: <em>This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.</em></p>
 <p>Open a terminal and use the following commands to install Brackets via the unofficial PPA:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">webupd8team</span><span class="o">/</span><span class="n">brackets</span>
@@ -271,6 +271,10 @@ If you want to go the command line way, you can use the Snap commands to install
 <p>If you do not like PPAs, you can get the .deb installation files from the link below. You will also get the source code of the latest version here:</p>
 <p><a class="reference external" href="https://github.com/adobe/brackets/releases">Download Brackets Editor</a></p>
 <p>These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.</p>
+</div>
+<div class="section" id="suggested-reads">
+<h3>Suggested reads<a class="headerlink" href="#suggested-reads" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://itsfoss.com/install-visual-studio-code-ubuntu/">How To Install Visual Studio Code On Ubuntu</a></p>
 </div>
 </div>
 </div>

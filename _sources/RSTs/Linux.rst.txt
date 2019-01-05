@@ -67,42 +67,41 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
     * select Python...(kivyinstall) e.g. Python 3.5 (kivyinstall)
 
 
-The SNAP Installer
-******************
-
-To install Snap, try this::
-
-    sudo apt-get install snapd
-    
-
 Brackets in Mint (Ubuntu)
 *************************
 
-Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. Here's installation pointers from `this page <https://itsfoss.com/install-brackets-ubuntu/>`_ :
+Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from `It's FOSS <https://itsfoss.com/install-brackets-ubuntu/>`_.
+
 
 Method 1: Install Brackets using Snap
 =====================================
 
-Starting Ubuntu 16.04, Bracket is available as Snap app. You can find it in Software Center and install it from there in a few clicks.
-
-Brackets is available in Software Center for Ubuntu 16.04 and higher versions
-If you want to go the command line way, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging.
-
-But first, make sure you have snapd daemon installed on your system. Use the command below to install it. Don’t worry if it is already installed. Just run the command below::
+To install Snap, enter the following in Terminal::
 
     sudo apt-get install snapd
+    
+Starting Ubuntu 16.04, Brackets is available as a Snap app. You can also find it in the Software Center and install it from there in a few clicks for Ubuntu 16.04 and higher versions.
+
+If you want to install via the command line, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging. First, make sure you have snapd daemon installed on your system. Use the command below::
+
+    snap --version
 
 Once you have made sure that snapd is installed on your Linux system, install Brackets with::
 
     sudo snap install brackets
 
-That’s it. 
+In mint, an error occurred with the above command:
 
-Suggested read: `How To Install Visual Studio Code On Ubuntu <https://itsfoss.com/install-visual-studio-code-ubuntu/>`_
+    This revision of snap "brackets" was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk
+
+This can be rectified by adding --classic::
+
+    sudo snap install brackets --classic
+
 
 Method 2: Install Brackets using PPA 
 ====================================
-... ** in Ubuntu and Linux Mint** (Not recommended)
+... **in Ubuntu and Linux Mint** (*Not recommended*)
 
 Note: *This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.*
 
@@ -122,4 +121,10 @@ If you do not like PPAs, you can get the .deb installation files from the link b
 `Download Brackets Editor <https://github.com/adobe/brackets/releases>`_
 
 These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.
+
+
+Suggested reads
+===============
+
+`How To Install Visual Studio Code On Ubuntu <https://itsfoss.com/install-visual-studio-code-ubuntu/>`_
 

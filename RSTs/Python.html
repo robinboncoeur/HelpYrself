@@ -86,8 +86,13 @@
 <li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python including Pip</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brackets-install">Brackets Install…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kivy-kv-file-python">Kivy kv file Python…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-roster-app">Project: Roster App</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
@@ -163,9 +168,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nficano</span><span class="o">/</span><span class="n">pytube</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="pycharm-and-kivy-install">
-<h2>PyCharm and Kivy Install<a class="headerlink" href="#pycharm-and-kivy-install" title="Permalink to this headline">¶</a></h2>
+<h3>PyCharm and Kivy Install<a class="headerlink" href="#pycharm-and-kivy-install" title="Permalink to this headline">¶</a></h3>
 <p>To explore: in Ubuntu 12.04, one user solved it this way:</p>
 <blockquote>
 <div><ul class="simple">
@@ -176,6 +180,37 @@
 </ul>
 </div></blockquote>
 <p>An important <a class="reference external" href="http://kivy.org/docs/installation/installation-linux.html#ubuntu-12-04-with-python-2-7">link</a> for Python 2x was included. The user went on to say that “the code builds and runs, but does not display in Python. I will edit this answer if I fix that, but this should at least get you started.”</p>
+<p>Note: <em>PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.</em></p>
+</div>
+<div class="section" id="brackets-install">
+<h3>Brackets Install…<a class="headerlink" href="#brackets-install" title="Permalink to this headline">¶</a></h3>
+<p>… <strong>in Linux Mint</strong></p>
+<p>A no-brainer. For Windows, Mac or Linux, just get onto <a class="reference external" href="http://brackets.io">Brackets.io</a>: it will automatically offer the download for your host OS. In Mint, download the .deb and install.</p>
+</div>
+<div class="section" id="kivy-kv-file-python">
+<h3>Kivy kv file Python…<a class="headerlink" href="#kivy-kv-file-python" title="Permalink to this headline">¶</a></h3>
+<p>… <strong>syntax highlighting</strong></p>
+<p>Create a brackets.json file with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">code</span> <span class="n">to</span> <span class="n">follow</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="project-roster-app">
+<h3>Project: Roster App<a class="headerlink" href="#project-roster-app" title="Permalink to this headline">¶</a></h3>
+<p>Name of application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosterapp21s9453</span>
+</pre></div>
+</div>
+<p>Credentials set up <a class="reference external" href="https://console.developers.google.com/apis/credentials?showWizardSurvey=true&amp;project=rosterapp21s9453">here</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://console.developers.google.com/apis/credentials?showWizardSurvey=true&amp;project=rosterapp21s9453
+</pre></div>
+</div>
+<p>In google drive, set things up to be able to access with Python <a class="reference external" href="https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html">this way</a>.</p>
+<p>Installed gspread and oauth2client via pip3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">gspread</span> <span class="n">oauth2client</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
