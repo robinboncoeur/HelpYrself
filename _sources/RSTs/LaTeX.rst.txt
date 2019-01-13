@@ -102,11 +102,11 @@ You might want `to read this <http://tug.org/pracjourn/2008-2/madsen/>`_.
 Macro-Expansion
 ===============
 
-Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a "\") into one command. Easier said than done. Tried the::
+Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a "\\") into one command. Easier said than done. Tried the::
 
     \newcommand{\commandname}{\thecommands\torun}
 
-approach first, but reading on TeX.StackExchange site revealed that \newcommand can quite frequently spit the dummy. And then I found \def. Or, for really complex commands::
+approach first, but reading on TeX.StackExchange site revealed that \\newcommand can quite frequently spit the dummy. And then I found \\def. Or, for really complex commands::
 
     \long\def\nameofcommand{
       \list

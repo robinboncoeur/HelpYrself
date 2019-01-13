@@ -251,11 +251,11 @@
 </div>
 <div class="section" id="macro-expansion">
 <h3>Macro-Expansion<a class="headerlink" href="#macro-expansion" title="Permalink to this headline">¶</a></h3>
-<p>Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a “”) into one command. Easier said than done. Tried the:</p>
+<p>Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a “&quot;) into one command. Easier said than done. Tried the:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">newcommand</span><span class="p">{</span>\<span class="n">commandname</span><span class="p">}{</span>\<span class="n">thecommands</span>\<span class="n">torun</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>approach first, but reading on TeX.StackExchange site revealed that newcommand can quite frequently spit the dummy. And then I found def. Or, for really complex commands:</p>
+<p>approach first, but reading on TeX.StackExchange site revealed that \newcommand can quite frequently spit the dummy. And then I found \def. Or, for really complex commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">long</span>\<span class="n">def</span>\<span class="n">nameofcommand</span><span class="p">{</span>
   \<span class="nb">list</span>
   \<span class="n">ofcommands</span>
