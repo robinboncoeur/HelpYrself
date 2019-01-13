@@ -257,27 +257,26 @@
 </div>
 <p>approach first, but reading on TeX.StackExchange site revealed that \newcommand can quite frequently spit the dummy. And then I found \def. Or, for really complex commands:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">long</span>\<span class="n">def</span>\<span class="n">nameofcommand</span><span class="p">{</span>
-  \<span class="nb">list</span>
-  \<span class="n">ofcommands</span>
+  \<span class="n">groupsof</span>
+  \<span class="n">ltxcommands</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>which works a treat. for example, this paints a flourish on the bottom of a page, and issues a pagebreak:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">long</span>\<span class="n">def</span>\<span class="n">imgnp</span><span class="p">{</span>
-\<span class="n">begin</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
-\<span class="n">includegraphics</span><span class="p">[</span><span class="n">scale</span><span class="o">=.</span><span class="mi">6</span><span class="p">]{</span><span class="n">Flourish02</span><span class="o">.</span><span class="n">png</span><span class="p">}</span>
-\<span class="n">end</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
-\<span class="n">pagebreak</span>
+  \<span class="n">begin</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+  \<span class="n">includegraphics</span><span class="p">[</span><span class="n">scale</span><span class="o">=.</span><span class="mi">6</span><span class="p">]{</span><span class="n">Flourish02</span><span class="o">.</span><span class="n">png</span><span class="p">}</span>
+  \<span class="n">end</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+  \<span class="n">pagebreak</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Note, <em>it’s not perfect: it expects numbers at certain places and won’t accept anything else. For example, what would normally execute on the docuemtn itself</em>:</p>
+<p>Note, <em>it’s not a perfectly painless approach: LaTeX expects numbers at certain places and won’t accept anything else. For example, what would normally execute on the docuemtn itself</em>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">includegraphics</span><span class="p">[</span><span class="n">scale</span><span class="o">=</span><span class="mi">50</span><span class="n">mm</span><span class="p">]{</span><span class="o">./</span><span class="n">images</span><span class="o">/</span><span class="n">Flourish02</span><span class="o">.</span><span class="n">png</span><span class="p">}</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li>i.e., “scale=50mm” had to be translates to a float.</li>
-</ul>
+<p><em>i.e., “scale=50mm” had to be translates to a float</em>.</p>
+<p>Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.</p>
 </div>
 <div class="section" id="sample-templates">
 <h3>Sample Templates<a class="headerlink" href="#sample-templates" title="Permalink to this headline">¶</a></h3>

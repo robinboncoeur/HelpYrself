@@ -12,10 +12,21 @@ Hence, this document.
 
 As in all of open source, we tend to create solutions to "scratch our own itch". If anyone else finds it useful, fantastic. However, as with anything published, information can become dated, no-longer-relevant or, because the goal-posts have moved, just plain wrong. Consider this when using this information.
 
+LaTeX and Learning
+==================
+
+From a learning perspective, I'm a bit challenged. I'll sit through tutorials for a while but if I don't see a practical application to some instruction, this ability to retain the information suffers.
+
+For example: one of the key abilities of LaTeX is to insert math formulae into the body of a text. For mathematicians and math students and math hobbyists and - I'm sure - a whole slew of other folk: crucial information.
+
+But I discovered LaTeX (pronounced "Lah-Tek") has an elegant book-making solution, far superior to Word or any of the booklet apps one can find and pay for. So, I got stuck into learning how to use a very powerful book-publishing template called "Memoir". Again, the youtubers put a lot of effort into supporting the maths folk and only gave a glancing nod to the novelists.
+
+Still, there's a lot of crucial stuff in those videos. So, one of the next workflows to fleshing out these "HelpYrself" pages is taking dictation from the videos.
 
 
-Miscellaneous Stuff
-*******************
+
+Mac Pointers
+************
 
 On the Mac: Toggling Hidden Files
 =================================

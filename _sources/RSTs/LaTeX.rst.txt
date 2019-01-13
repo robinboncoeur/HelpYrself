@@ -109,24 +109,26 @@ Not sure if this is even the correct termminology for this process, but what I w
 approach first, but reading on TeX.StackExchange site revealed that \\newcommand can quite frequently spit the dummy. And then I found \\def. Or, for really complex commands::
 
     \long\def\nameofcommand{
-      \list
-      \ofcommands
+      \groupsof
+      \ltxcommands
     }
 
 which works a treat. for example, this paints a flourish on the bottom of a page, and issues a pagebreak::
 
     \long\def\imgnp{
-    \begin{center}
-    \includegraphics[scale=.6]{Flourish02.png}
-    \end{center}
-    \pagebreak
+      \begin{center}
+      \includegraphics[scale=.6]{Flourish02.png}
+      \end{center}
+      \pagebreak
     }
 
-Note, *it's not perfect: it expects numbers at certain places and won't accept anything else. For example, what would normally execute on the docuemtn itself*::
+Note, *it's not a perfectly painless approach: LaTeX expects numbers at certain places and won't accept anything else. For example, what would normally execute on the docuemtn itself*::
 
     \includegraphics[scale=50mm]{./images/Flourish02.png}
 
-* i.e., "scale=50mm" had to be translates to a float.
+*i.e., "scale=50mm" had to be translates to a float*.
+
+Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.
 
 Sample Templates
 ================
