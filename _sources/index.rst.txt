@@ -14,6 +14,7 @@ Welcome to Help Yourself
    RSTs/Git.rst
    RSTs/Blender.rst
    RSTs/ExcelApps.rst
+   RSTs/LaTeX.rst
    RSTs/Linux.rst
    RSTs/Python.rst
    RSTs/Video.rst

@@ -1,0 +1,519 @@
+################
+LaTeX and Memoir
+################
+
+
+LaTeX is pronounced Lah-Tek
+***************************
+
+
+Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.
+
+
+Tips - How-Tos
+**************
+
+Forced page-breaks
+==================
+
+To force a pagebreak::
+
+    \pagebreak
+
+
+Hyperlinks in LaTeX
+===================
+
+Add the hyperref package to your preamble::
+
+    \usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+Then::
+
+    Links will show up in a colored box which will be invisible when you print it.
+    
+    Use \href{URL}{DESCRIPTION} to add a link with description.
+    
+    Use \url{URL} to add a link without a description.
+
+
+Dot-points in LaTeX
+===================
+
+Uses the package::
+
+    \usepackage{enumitem}
+
+and then, optionally numbers, letters or character::
+
+    \begin{document}
+    Some text goes here.
+
+    \begin{itemize}
+       \item This is top level item with a certain bullet.
+
+       \begin{itemize}
+         \item Line with a 'sub bullet'.
+         \item Another line with a 'sub bullet'.
+       \end{itemize}
+
+       \item Back to main bullet list.
+
+    \end{itemize}
+    \end{document}
+
+
+
+Insert images
+=============
+
+Have the graphicx package installed 
+
+    \usepackage{graphicx}
+
+and for a centred image::
+
+    \begin{center}
+    \includegraphics[width=50mm]{./images/Flourish02.png}
+    \end{center}
+
+...centers an image of a flourish on a page.
+
+No chapter numbers
+==================
+
+The proper memoir way of doing this::
+
+    \addtopsmarks{headings}{}{
+      \createmark{chapter}{left}{nonumber}{}{}
+    }
+    \pagestyle{headings} % activate changes
+
+There is no need to try to figure out how the internals work or that sort of thing.
+
+You might want `to read this <http://tug.org/pracjourn/2008-2/madsen/>`_.
+
+
+
+Macro-Expansion
+===============
+
+Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a "\") into one command. Easier said than done. Tried the::
+
+    \newcommand{\commandname}{\thecommands\torun}
+
+approach first, but reading on TeX.StackExchange site revealed that \newcommand can quite frequently spit the dummy. And then I found \def. Or, for really complex commands::
+
+    \long\def\nameofcommand{
+      \list
+      \ofcommands
+    }
+
+which works a treat. for example, this paints a flourish on the bottom of a page, and issues a pagebreak::
+
+    \long\def\imgnp{
+    \begin{center}
+    \includegraphics[scale=.6]{Flourish02.png}
+    \end{center}
+    \pagebreak
+    }
+
+Note, *it's not perfect: it expects numbers at certain places and won't accept anything else. For example, what would normally execute on the docuemtn itself*::
+
+    \includegraphics[scale=50mm]{./images/Flourish02.png}
+
+* i.e., "scale=50mm" had to be translates to a float.
+
+Sample Templates
+================
+
+Chapter Style 01::
+
+    \makechapterstyle{standard}{
+      \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{\vspace*{\beforechapskip}}
+      \renewcommand{\chapnamefont}{\centering\normalfont\Large}
+      \renewcommand{\printchaptername}{\chapnamefont \@chapapp}
+      \renewcommand{\chapternamenum}{\space}
+      \renewcommand{\chapnumfont}{\normalfont\Large}
+      \renewcommand{\printchapternum}{\chapnumfont \thechapter}
+      \renewcommand{\afterchapternum}{\par\nobreak\vskip \midchapskip}
+      \renewcommand{\printchapternonum}{\vspace*{\midchapskip}\vspace*{5mm}}
+      \renewcommand{\chaptitlefont}{\centering\bfseries\LARGE}
+      \renewcommand{\printchaptertitle}[1]{\chaptitlefont ##1}
+      \renewcommand{\afterchaptertitle}{\par\nobreak\vskip \afterchapskip}
+    }
+    \makeatother
+
+    \chapterstyle{standard}
+
+    \setsecheadstyle{\normalfont\large\bfseries}
+    \setsubsecheadstyle{\normalfont\normalsize\bfseries}
+    \setparaheadstyle{\normalfont\normalsize\bfseries}
+    \setparaindent{0pt}\setafterparaskip{0pt}
+
+
+Chapter Style 02::
+
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+
+
+Full Settings for a memoir document (book), saved in a .sty file, 01::
+
+    % The following statement is actually in the main .tex file, at the
+    % top:
+    %
+    %     \documentclass[a5paper, 11pt, onecolumn, openany]{memoir}
+    %
+    % The subsequent code is contained (saved) in a FileName.sty
+    % file, and is referenced in the FileName.tex file using:
+    %
+    %     \usepackage{FileName}
+    %
+    
+
+    %-------------------------------------------------------------
+    %     PACKAGES 
+    %-------------------------------------------------------------
+    \usepackage[utf8]{inputenc} % If utf8 encoding
+    \usepackage[T1]{fontenc}    %
+    \usepackage[english]{babel} % English please
+    \usepackage[final]{microtype} % Less badboxes
+    \usepackage{kpfonts} %Font
+    \usepackage{graphicx} % Include figures
+    \usepackage{afterpage}% for "\afterpage"
+    \usepackage{xcolor}
+    \usepackage{pagecolor}
+
+    %-------------------------------------------------------------
+    %     PAGE LAYOUT 
+    %-------------------------------------------------------------
+
+    \setlrmarginsandblock{0.12\paperwidth}{*}{1} % Left and right margin
+    \setulmarginsandblock{0.15\paperwidth}{*}{1}  % Upper and lower margin
+    \checkandfixthelayout
+
+    %-------------------------------------------------------------
+    %     SECTIONAL DIVISIONS
+    %-------------------------------------------------------------
+
+    % \maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+    % \setsecnumdepth{subsection}
+
+    \makeatletter
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+    \makeatother
+
+    %-------------------------------------------------------------
+    %     FLOATS AND CAPTIONS
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    %     ABSTRACT
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % HEADER AND FOOTER 
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % NEW COMMANDS
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % TABLE OF CONTENTS
+    %-------------------------------------------------------------
+    \maxtocdepth{subsection}
+    \settocdepth{subsection}
+    \AtEndDocument{\addtocontents{toc}{\par}}
+
+    %-------------------------------------------------------------
+    % INTERNAL HYPERLINKS
+    %-------------------------------------------------------------
+    \usepackage{hyperref}   % Internal hyperlinks
+    \hypersetup{
+    pdfborder={0 0 0},      % No borders around internal hyperlinks
+    pdfauthor={Good News Unlimited} % author
+    }
+    \usepackage{memhfixc}   %
+    \setsecnumformat{}
+    \def\sectionmark#1{\markboth{#1}{#1}}
+    \renewcommand{\rmdefault}{ptm}
+
+
+    %-------------------------------------------------------------
+    %                  THE TITLE
+    %-------------------------------------------------------------
+    \usepackage{titlesec}  %needs recent version of »titlesec«
+    \usepackage{xcolor}
+
+    \newlength\drop
+    \newcommand*{\titleKtL}{%
+      \thispagestyle{empty}
+      \begingroup% Keys to Life
+      \drop = 0.1\textheight
+      \vspace*{\baselineskip}
+      \vfill
+      \hbox{%
+        \hspace*{0.2\textwidth}%
+        \rule{1pt}{\dimexpr\textheight-28pt\relax}%
+        \hspace*{0.05\textwidth}%
+        \parbox[b]{0.75\textwidth}{
+          \vbox{%
+            \vspace{\drop}
+            {\noindent\HUGE\bfseries True\\[0.5\baselineskip]
+            Keys to Life}\\[2\baselineskip]
+            {\Large\itshape Writings by Ford, Gonzalez and others}\\[.37\baselineskip]
+            {\Large Good New Unlimited}\par
+            \vspace{0.5\textheight}
+            {\noindent Offered as PDF and Print}\\[\baselineskip]
+          }% end of vbox
+        }% end of parbox
+      }% end of hbox
+    \vfill
+    \null
+    \endgroup}
+
+    %  REPLACES:
+    %\title{\HUGE\textbf{True Keys to Life}}
+    %\author{\Large\textbf{Writings by Ford, Gonzalez and others}}
+    %\date{\Large{\today}}
+    %  OR
+    %\author{Good News Unlimited}
+    %\title{True Keys to Life}
+    % Update font of \title.
+    %\pretitle{\begin{center}\HUGE\sffamily}
+
+    %-------------------------------------------------------------
+    %                THE DOCUMENT
+    %-------------------------------------------------------------
+    \begin{document}
+
+    \frontmatter
+    %\maketitle
+    \titleKtL
+
+    \begin{abstract}
+
+
+Title Template 03::
+
+    \newcommand*{\titleAT}{
+      \begingroup  % Anatomy of a Typeface
+      \FSfont{5bp} % FontSite Bergamo (Bembo)
+      \drop=0.1\textheight
+      \vspace*{\drop}
+      \rule{\textwidth}{1pt}\par
+      \vspace{2pt}\vspace{-\baselineskip}
+      \rule{\textwidth}{0.4pt}\par
+      \vspace{0.5\drop}
+      \centering
+      \textcolor{Red}{
+        {\FSfont{5ml} % FontSite Mona Lisa
+        \Huge THE BOOK}\\[0.5\baselineskip]
+        {\FSfont{5ml}
+        \Large OF}\\[0.75\baselineskip]
+        {\FSfont{5ml}
+        \Huge CONUNDRUMS}}\par
+        \vspace{0.25\drop}
+        \rule{0.3\textwidth}{0.4pt}\par
+        \vspace{\drop}
+        {\Large \scshape The Author}\par
+        \vfill
+        {\large \textcolor{Red}{\plogo}}\\[0.5\baselineskip]
+        {\large\scshape the publisher}\par
+        \vspace*{\drop}
+      \endgroup}
+
+
+Sample Document Beginning::
+
+    \documentclass[a5paper, 11pt, onecolumn, openany]{memoir}
+
+    %-------------------------------------------------------------
+    %     PACKAGES 
+    %-------------------------------------------------------------
+    \usepackage[utf8]{inputenc} % If utf8 encoding
+    \usepackage[T1]{fontenc}    %
+    \usepackage[english]{babel} % English please
+    \usepackage[final]{microtype} % Less badboxes
+    \usepackage{kpfonts} %Font
+    \usepackage{graphicx} % Include figures
+    \usepackage{afterpage}% for "\afterpage"
+    \usepackage{xcolor}
+    \usepackage{pagecolor}
+
+    %-------------------------------------------------------------
+    %     PAGE LAYOUT 
+    %-------------------------------------------------------------
+    \setlrmarginsandblock{0.12\paperwidth}{*}{1} % Left and right margin
+    \setulmarginsandblock{0.15\paperwidth}{*}{1}  % Upper and lower margin
+    \checkandfixthelayout
+
+    %-------------------------------------------------------------
+    %     SECTIONAL DIVISIONS
+    %-------------------------------------------------------------
+    \maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+    \setsecnumdepth{subsection}
+
+    \makeatletter
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+    \makeatother
+
+    %-------------------------------------------------------------
+    % TABLE OF CONTENTS
+    %-------------------------------------------------------------
+    \maxtocdepth{subsection}
+    \settocdepth{subsection}
+    \AtEndDocument{\addtocontents{toc}{\par}}
+
+    %-------------------------------------------------------------
+    % INTERNAL HYPERLINKS
+    %-------------------------------------------------------------
+    \usepackage{hyperref}   % Internal hyperlinks
+    \hypersetup{
+    pdfborder={0 0 0},      % No borders around internal hyperlinks
+    pdfauthor={Good News Unlimited} % author
+    }
+    \usepackage{memhfixc}
+    \setsecnumformat{}
+    \def\sectionmark#1{\markboth{#1}{#1}}
+    \renewcommand{\rmdefault}{ptm}
+
+    %-------------------------------------------------------------
+    %                  THE TITLE
+    %-------------------------------------------------------------
+    \usepackage{titlesec}  %needs recent version of »titlesec«
+    \usepackage{xcolor}
+
+    \newlength\drop
+    \newcommand*{\titleKtL}{%
+    \thispagestyle{empty}
+    \begingroup% Keys to Life
+    \drop = 0.1\textheight
+    \vspace*{\baselineskip}
+    \vfill
+    \hbox{%
+    \hspace*{0.2\textwidth}%
+    \rule{1pt}{\dimexpr\textheight-28pt\relax}%
+    \hspace*{0.05\textwidth}%
+    \parbox[b]{0.75\textwidth}{
+    \vbox{%
+    \vspace{\drop}
+    {\noindent\HUGE\bfseries True\\[0.5\baselineskip]
+    Keys to Life}\\[2\baselineskip]
+    {\Large\itshape Writings by Ford, Gonzalez and others}\\[.37\baselineskip]
+    {\Large Good New Unlimited}\par
+    \vspace{0.5\textheight}
+    {\noindent Offered as PDF and Print}\\[\baselineskip]
+    }% end of vbox
+    }% end of parbox
+    }% end of hbox
+    \vfill
+    \null
+    \endgroup}
+
+
+    %-------------------------------------------------------------
+    %                    THE DOCUMENT
+    %-------------------------------------------------------------
+    %\author{Good News Unlimited}
+    %\title{True Keys to Life}
+    % Update font of \title.
+    %\pretitle{\begin{center}\HUGE\sffamily}
+
+    \begin{document}
+
+    \frontmatter
+    %\maketitle
+    \pagestyle{empty}
+    \titleKtL
+    \clearpage
+
+    \begin{abstract}
+    The news that travels quickly ...
+
+    In other words, when \underline{instead} ...
+    \end{abstract}
+
+    \clearpage
+
+    \tableofcontents*
+
+    \clearpage
+
+    \chapter{Introduction}
+
+    I feel quite blessed to receive ...
+
+    The text in this document are saved ...
+
+    I am quite certain ...
+
+    \mainmatter
+
+    \chapter{The Gospel Message}
+
+    \section{The Gospel is for Free}
+
+    \textit{Blessed are the poor in spirit}. - Matthew 5:3
+
+    True religion is the union of the heart with God. It is not being a member of a denomination, or simply being baptized. All these ...
+
+
