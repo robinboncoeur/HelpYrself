@@ -41,6 +41,7 @@ Then::
     Use \url{URL} to add a link without a description.
 
 
+
 Dot-points in LaTeX
 ===================
 
@@ -66,6 +67,8 @@ and then, optionally numbers, letters or character::
     \end{itemize}
     \end{document}
 
+And that's the name of *that* tune.
+
 
 
 Insert images
@@ -82,6 +85,8 @@ and for a centred image::
     \end{center}
 
 ...centers an image of a flourish on a page.
+
+
 
 No chapter numbers
 ==================
@@ -129,6 +134,8 @@ Note, *it's not a perfectly painless approach: LaTeX expects numbers at certain 
 *i.e., "scale=50mm" had to be translates to a float*.
 
 Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.
+
+
 
 Sample Templates
 ================
