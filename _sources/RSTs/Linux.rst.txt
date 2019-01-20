@@ -47,6 +47,22 @@ From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spo
     sudo apt-get purge spotify-client
 
 
+For IF you HAVE to have Windows
+===============================
+
+To `activate your copy of Windows 7 <https://www.itechgyan.com/windows-7-professional-product-key-32-64-bit/>`_ even without a Windows 7 Professional Product Key, do the following:
+
+    1. Click on the Start button in Windows
+    2. Open the Run app - a dialogue box will appear where you can enter text
+    3. Enter ‘CMD’, and right-click on the executable and frome the dropdown select "Run as Administrator"
+    4. In the DOS (CMD) window, enter ‘slmgr –rearm’, press [Enter]
+    5. Wait a minute and then restart your PC
+    6. Follow steps 1-5 to open CMD, and type ‘slmgr –ato’
+    7. Read the message on your screen: you're done
+
+Remember, Window 7 support ends in 2020. Just sayin'.
+
+
 
 Kivy and PyCharm
 ****************
