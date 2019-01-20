@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python including Pip" href="Python.html" />
-    <link rel="prev" title="Excel 2016 VBA Apps" href="ExcelApps.html" /> 
+    <link rel="next" title="Python3, Pip and Kivy3" href="Python.html" />
+    <link rel="prev" title="LaTeX and Memoir" href="LaTeX.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,9 +84,15 @@
 <li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX and Memoir</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-tools">Command Line Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-cache">Clear Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#removing-spotify">Removing Spotify</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#brackets-in-mint-ubuntu">Brackets in Mint (Ubuntu)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#method-1-install-brackets-using-snap">Method 1: Install Brackets using Snap</a></li>
@@ -97,7 +103,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 </ul>
 
@@ -173,16 +179,34 @@
 </div>
 <p>needed for the picture to actually take.</p>
 </div>
+<div class="section" id="command-line-tools">
+<h2>Command Line Tools<a class="headerlink" href="#command-line-tools" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="updating-path">
-<h2>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this headline">¶</a></h2>
+<h3>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this headline">¶</a></h3>
 <p>In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span>
 </pre></div>
 </div>
 <p>So you can just open up this file as root and add whatever you want.</p>
-<p>For Immediate results, Run (try as normal user and root):</p>
+<p>For immediate results, Run (try as normal user and root):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">export</span> <span class="n">PATH</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="clear-cache">
+<h3>Clear Cache<a class="headerlink" href="#clear-cache" title="Permalink to this headline">¶</a></h3>
+<p>Type this exactly - dangerous command!:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">lists</span><span class="o">/*</span> <span class="o">-</span><span class="n">vf</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removing-spotify">
+<h3>Removing Spotify<a class="headerlink" href="#removing-spotify" title="Permalink to this headline">¶</a></h3>
+<p>From <a class="reference external" href="https://askubuntu.com/questions/491476/how-to-uninstall-spotify">StackExchange</a>, use this command for uninstall Spotify… the culprite is the spotify-client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">spotify</span><span class="o">-</span><span class="n">client</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="kivy-and-pycharm">
@@ -287,10 +311,10 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Python.html" class="btn btn-neutral float-right" title="Python including Pip" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Python.html" class="btn btn-neutral float-right" title="Python3, Pip and Kivy3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ExcelApps.html" class="btn btn-neutral" title="Excel 2016 VBA Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="LaTeX.html" class="btn btn-neutral" title="LaTeX and Memoir" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
