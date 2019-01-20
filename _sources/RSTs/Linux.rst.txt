@@ -42,7 +42,7 @@ Type this exactly - dangerous command!::
 Removing Spotify
 ================
 
-From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spotify>`_, use this command for uninstall Spotify... the culprite is the spotify-client::
+From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spotify>`_, use this command to uninstall Spotify... the culprit is the spotify-client::
 
     sudo apt-get purge spotify-client
 

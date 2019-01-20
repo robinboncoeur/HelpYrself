@@ -136,9 +136,19 @@ Note, *it's not a perfectly painless approach: LaTeX expects numbers at certain 
 Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.
 
 
+Books
+=====
+
+Two tools exist for printing signatures: Booklet and \pdfpages.
+
+
+
+
+
+
 
 Sample Templates
-================
+****************
 
 Chapter Style 01::
 
