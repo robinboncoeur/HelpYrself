@@ -84,7 +84,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Excel 2016 VBA Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview-a-living-document">Overview - A Living Document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nreccount">nRecCount()</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
@@ -184,10 +187,14 @@
 </div>
 <div class="section" id="common-code-snippets">
 <h2>Common Code Snippets<a class="headerlink" href="#common-code-snippets" title="Permalink to this headline">¶</a></h2>
-<p>nRecCount():
-TypeDescr..: integer RecordCount()
-Accepts….: (str) worksheet name, (int) column to count
-Returns….: record count</p>
+<div class="section" id="nreccount">
+<h3>nRecCount()<a class="headerlink" href="#nreccount" title="Permalink to this headline">¶</a></h3>
+<p>A very basic worksheet record count tool: it assumes all records are contiguous:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TypeDescr</span><span class="o">..</span><span class="p">:</span> <span class="n">integer</span> <span class="n">RecordCount</span><span class="p">()</span>
+<span class="n">Accepts</span><span class="o">....</span><span class="p">:</span> <span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="n">worksheet</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="n">column</span> <span class="n">to</span> <span class="n">count</span>
+<span class="n">Returns</span><span class="o">....</span><span class="p">:</span> <span class="n">record</span> <span class="n">count</span>
+</pre></div>
+</div>
 <p>The code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">nRecCount</span><span class="p">(</span><span class="n">sSheet</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">_</span>
                           <span class="n">nColN</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span> <span class="n">As</span> <span class="n">Integer</span>
@@ -200,6 +207,7 @@ Returns….: record count</p>
   <span class="n">Application</span><span class="o">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
 <span class="n">End</span> <span class="n">Function</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
