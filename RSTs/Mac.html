@@ -161,24 +161,38 @@
 <h1>Mac Pointers<a class="headerlink" href="#mac-pointers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="toggling-hidden-files">
 <h2>Toggling Hidden Files<a class="headerlink" href="#toggling-hidden-files" title="Permalink to this headline">¶</a></h2>
-<p>Make sure the folder is actually active, then press [Shift] [Command] [.]</p>
+<p>Make sure a folder is actually active, then press [Shift] [Command] [.]</p>
 </div>
 <div class="section" id="slow-boot-after-ssd-upgrade">
 <h2>Slow Boot after SSD Upgrade<a class="headerlink" href="#slow-boot-after-ssd-upgrade" title="Permalink to this headline">¶</a></h2>
 <p><strong>Question</strong>:</p>
-<p>MBP extremely slow after SSD Upgrade. What’s wrong with my mac?</p>
-<p>I have a MPB 15” 2.53 mid 2009. I upgraded the standard hard drive to a SSD (512 GB Sandisk X210) purchased from ifixit.</p>
-<p>I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on, it booted up fine but not quite as quickly as I would expect for an SSD.</p>
-<p>Verified and reparied disk permissions.</p>
-<p>Restert. Boot up time about 1 minute 20 seconds.</p>
-<p>Shut down.</p>
-<p>Reset PRAM</p>
-<p>Boot up about 1 minute.</p>
-<p>Restart. Boot up time about 43 minutes.</p>
-<p>I have no idea what happened in the middle there but something is obviously not working right. Now when I click on applications they go gray then take several minutes before launching. I’m not sure what to do. Please help!</p>
+<p>My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Verified</span> <span class="ow">and</span> <span class="n">repaired</span> <span class="n">disk</span> <span class="n">permissions</span><span class="o">.</span>
+
+<span class="n">Resterted</span><span class="o">.</span> <span class="n">Boot</span> <span class="n">up</span> <span class="n">time</span> <span class="n">about</span> <span class="mi">1</span> <span class="n">minute</span> <span class="mi">20</span> <span class="n">seconds</span><span class="o">.</span>
+
+<span class="n">Shut</span> <span class="n">down</span><span class="o">.</span>
+
+<span class="n">Reset</span> <span class="n">PRAM</span><span class="o">.</span>
+
+<span class="n">Boot</span> <span class="n">up</span> <span class="n">time</span> <span class="n">about</span> <span class="mi">1</span> <span class="n">minute</span><span class="o">.</span>
+
+<span class="n">Restarted</span><span class="o">.</span> <span class="n">Boot</span> <span class="n">up</span> <span class="n">time</span> <span class="n">about</span> <span class="mi">43</span> <span class="n">minutes</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>I have no idea what to do.</p>
 <p><strong>Answer</strong>:</p>
-<p>The internet had the answer for me. Apparently your startup disk setting is pointing to a disk that’s no longer in your system. I’m guessing the OS can’t find it and is waiting for it to spin up. It doesn’t try the new SSD until a timeout occurs.</p>
-<p>Go to system preferences and set your Startup Disk setting to be the new disk and I’ll bet that changes everything. It did for me.</p>
+<p>The startup disk setting is pointing to a disk that’s no longer in your system. Most probably the OS can’t find it and is waiting for it to spin up: it won’t try the new SSD until a timeout occurs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Go</span> <span class="n">to</span> <span class="n">System</span> <span class="n">Preferences</span> <span class="o">-&gt;</span> <span class="n">Startup</span> <span class="n">Disk</span>
+
+<span class="mf">2.</span> <span class="n">Click</span> <span class="n">on</span> <span class="n">the</span> <span class="n">bottom</span> <span class="n">left</span> <span class="n">Lock</span> <span class="n">tu</span> <span class="n">unlock</span> <span class="n">the</span> <span class="n">changes</span>
+
+<span class="mf">3.</span> <span class="n">Select</span> <span class="n">Macintosh</span> <span class="n">HD</span> <span class="p">(</span><span class="n">it</span><span class="s1">&#39;s likely to be the only on the list)</span>
+
+<span class="mf">4.</span> <span class="n">Click</span> <span class="s1">&#39;Restart...&#39;</span>
+</pre></div>
+</div>
+<p>Be patient: the restart can take a few minutes.</p>
 </div>
 </div>
 
