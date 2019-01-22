@@ -1,17 +1,35 @@
-################
-LaTeX and Memoir
-################
+#############################
+LaTeX, Memoir and Bookbinding
+#############################
 
 
-LaTeX is pronounced Lah-Tek
-***************************
+
+Book Binding
+************
+
+Signatures
+==========
+
+Number of pages to a signature: 4. Here's the `video to watch <https://www.youtube.com/watch?v=9O4kFTOEh6k>`_ to get clear on the kettle-stitch technique.
 
 
-Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.
+
+Book Glue
+=========
+
+PVA is best: poly-vinyl acetate. Need to find it online.
 
 
-Tips - How-Tos
-**************
+
+
+
+
+
+LaTeX Tips - How-Tos
+********************
+
+LaTeX is pronounced Lah-Tek. Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.
+
 
 Forced page-breaks
 ==================

@@ -16,6 +16,7 @@ Welcome to Help Yourself
    RSTs/ExcelApps.rst
    RSTs/LaTeX.rst
    RSTs/Linux.rst
+   RSTs/Mac.rst
    RSTs/Python.rst
    RSTs/Video.rst
 
