@@ -21,3 +21,28 @@ Reviewing Script Installation Instructions
       4. Browse your add-ons - click on 'User' under 'Categories' - and find the add-on. It is called 'Material: Shaders for Imported Figures'. Tick the box on the right to activate it. **(If this does not appear, check in the scripts/addons/ folder for the existence of a make_shaders folder, and that all these files are within that folder).**
 
 
+
+Keeping Blender Happy
+*********************
+
+
+The Alt-Right-Click Conundrum
+=============================
+
+From `Blender StackExchange <https://blender.stackexchange.com/questions/60961/how-to-use-the-alt-right-click-in-edit-mode-in-linux>`_ comes this solution. The problem: keyboard shortcuts on the OS override those in Blender. Two possible solutions are suggested:
+
+    1. Change the keyboard shortcuts on blender and avoid conflicting key combinations.
+    2. Reassign the keyboard shortcuts on the OS using key-combinations that are not used in blender.
+
+The main disadvantage to the first solution (custom shortcuts) is that it's hard to follow tutorials or other help. If you work with blender on other computers your shortcuts will not match. Resetting to factory defaults will also result in the loss of your custom settings, unless you save them to a file.
+
+The way the author (cegaton) dealt with it is by re-assigning the Linux keyboard shortcuts so that Alt or Ctrl keys are not used by the OS, but let the OS use the super (windows) key instead.
+
+In Linux Mint open the system settings and navigate to "Windows".
+
+.. image:: ../images/altrtclick01.png
+
+and select the super key to move or resize windows:
+
+.. image:: ../images/altrtclick02.png
+
