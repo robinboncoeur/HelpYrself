@@ -288,7 +288,87 @@
 <p>The “If Not” part of this statement is what checks which value is being returned: so if a True is being returned by bHtmlHelp(), then the sHTMLError procedure is called (executed). If a False is returned, an error message about being unable to find the Help files is displayed.</p>
 <p>bHtmlHelp() is being sent two parameters or arguments. A parameter is anything within the “(” and the “)” - it’s basically a value that will be used by the funtion - in this case: bHtmlHelp() - which value is set somewhere else in the program.</p>
 <p>The first value - Me.sHelpURL - is set up in the Userform_Activate(): it it holds a string value: the path to the Help files - for example: “Users/robyn/Dev/VBA/AssetMgr”. Notice the “Me.” before the “sHelpURL”… any value-holding variable with a “Me.” prefix means that that variable is actually a property of “Me”, which in this case is the form. Properties versus global variables are discussed <a class="reference external" href="xl-Variables">here</a>.</p>
-<p>The second parameter that is being passed is a string - anything between “” is a string - and this string tells the sHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.</p>
+<p>The second parameter that is being passed is a string - anything between “” is a string - and this string tells the bHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.</p>
+<p>bHtmlHelp() opens the Help file. Here is the whole function group… first, the actual bHtmlHelp() function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">bHtmlHelp</span><span class="p">(</span><span class="n">sHelpPath</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">Optional</span> <span class="n">sTopic</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
+  <span class="n">Dim</span> <span class="n">sValidHelpURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">sLocalHelpURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">sChk</span> <span class="n">As</span> <span class="n">String</span>
+
+  <span class="s1">&#39; check first if help is on same folder as this App, if not go to default network folder</span>
+  <span class="n">sLocalHelpURL</span> <span class="o">=</span> <span class="n">sHelpPath</span>
+  <span class="n">sChk</span> <span class="o">=</span> <span class="n">sLocalHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;index.html&quot;</span>
+  <span class="n">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="n">Then</span>
+    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sLocalHelpURL</span>
+    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">True</span>
+  <span class="n">Else</span>
+    <span class="n">sChk</span> <span class="o">=</span> <span class="s2">&quot;G:\Theatre\RecoveryCN\AssetMgr</span><span class="se">\a</span><span class="s2">mHelp\index.html&quot;</span>
+    <span class="n">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="n">Then</span>
+      <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="s2">&quot;G:\Theatre\RecoveryCN\AssetMgr</span><span class="se">\a</span><span class="s2">mHelp</span><span class="se">\&quot;</span>
+      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Else</span>
+      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">False</span>
+      <span class="n">Exit</span> <span class="n">Function</span>
+    <span class="n">End</span> <span class="n">If</span>
+  <span class="n">End</span> <span class="n">If</span>
+
+  <span class="s1">&#39; open specific page</span>
+  <span class="n">If</span> <span class="n">Len</span><span class="p">(</span><span class="n">sTopic</span> <span class="o">&amp;</span> <span class="n">vbNullString</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
+    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;index.html&quot;</span>
+  <span class="n">Else</span>
+    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;RSTs</span><span class="se">\&quot;</span><span class="s2"> &amp; sTopic</span>
+  <span class="n">End</span> <span class="n">If</span>
+
+  <span class="n">If</span> <span class="n">Not</span> <span class="n">OpenInIE</span><span class="p">(</span><span class="n">sValidHelpURL</span><span class="p">)</span> <span class="n">Then</span>
+    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">Exit</span> <span class="n">Function</span>
+  <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Function</span>
+</pre></div>
+</div>
+<p>This function checks if the file exists… a discrete process that can be used by other parts of the software:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;=================================================================</span>
+<span class="s1">&#39;  Does File Exist? (boolean)</span>
+<span class="s1">&#39;  Accepts: fully-qualified path</span><span class="se">\n</span><span class="s1">ame string</span>
+<span class="s1">&#39;  Returns: boolean (True if exists)</span>
+<span class="s1">&#39;===========================================</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">cFullName</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
+  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">EarlyExit</span>
+  <span class="n">If</span> <span class="n">Not</span> <span class="n">Dir</span><span class="p">(</span><span class="n">cFullName</span><span class="p">)</span> <span class="o">=</span> <span class="n">vbNullString</span> <span class="n">Then</span> <span class="n">bFileExists</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">EarlyExit</span><span class="p">:</span>
+  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="mi">0</span>
+  <span class="s1">&#39; bFileExists = False (default is false, so superfluous statement)</span>
+<span class="n">End</span> <span class="n">Function</span>
+</pre></div>
+</div>
+<p>This opens the help file in Microsoft’s Internet Explorer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">OpenInIE</span><span class="p">(</span><span class="n">sURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
+<span class="n">Dim</span> <span class="n">ieDoc</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">ieTable</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">clip</span> <span class="n">As</span> <span class="n">DataObject</span>
+<span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">URL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">IE</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">objElement</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">objCollection</span> <span class="n">As</span> <span class="n">Object</span>
+
+   <span class="s1">&#39;Create InternetExplorer Object</span>
+   <span class="n">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s2">&quot;InternetExplorer.Application&quot;</span><span class="p">)</span>
+
+  <span class="s1">&#39;Set IE.Visible = True to make IE visible, or False for IE to run in the background</span>
+   <span class="n">IE</span><span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="kc">True</span>
+
+   <span class="s1">&#39;Navigate to URL</span>
+   <span class="n">IE</span><span class="o">.</span><span class="n">Navigate</span> <span class="n">sURL</span>
+
+   <span class="s1">&#39;Unload IE</span>
+   <span class="n">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="n">Nothing</span>
+   <span class="n">Set</span> <span class="n">objElement</span> <span class="o">=</span> <span class="n">Nothing</span>
+   <span class="n">Set</span> <span class="n">objCollection</span> <span class="o">=</span> <span class="n">Nothing</span>
+   <span class="n">OpenInIE</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Function</span>
+</pre></div>
+</div>
+<p>Finally, the function that generates the error message if the help files aren’t where they are expected to be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">sHTMLError</span><span class="p">(</span><span class="n">Optional</span> <span class="n">sCond</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span>
+  <span class="n">MsgBox</span> <span class="s2">&quot;Help not available. Please notify Developer.&quot;</span><span class="p">,</span> <span class="n">_</span>
+            <span class="n">vbCritical</span><span class="p">,</span> <span class="s2">&quot;Help not Found&quot;</span>
+<span class="n">End</span> <span class="n">Function</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
