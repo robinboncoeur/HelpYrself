@@ -48,6 +48,11 @@ From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spo
 
 
 
+.. image:: ../images/Flou02.png
+    :align: center
+    :width: 273px
+
+
 
 Kivy and PyCharm
 ****************
@@ -87,6 +92,15 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
 
     * click File » Settings... » Project Interpreter
     * select Python...(kivyinstall) e.g. Python 3.5 (kivyinstall)
+
+
+
+
+.. image:: ../images/Flou02.png
+    :align: center
+    :width: 273px
+
+
 
 
 Brackets in Mint (Ubuntu)

@@ -85,7 +85,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Excel 2016 VBA Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#excel-apps-living-documents">Excel Apps - Living Documents</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#project-updates">Project Updates</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#a-gentle-vba-primer">A Gentle VBA Primer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#a-gentle-vba-primer">A Gentle VBA Primer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-modules">Code Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#variables-and-properties">Variables and Properties</a></li>
 </ul>
@@ -194,13 +196,14 @@
 <p>The last part of the strategy will need to be assessed for feasibility, as a lot will depend on the end-user’s willingness to dig into the code side of the app. This is a significant variable to consider.</p>
 <p>19.01.23 - In working with these documents, I’ve noticed that there is some commonality of code. Those snippets will be the code I will publish first.</p>
 <p>This is not elegant, optimal code by any means… but it works. If any user happens on these pages and decides it might be worth “Helping Yrself” to, by all means feel free, but remember, you get what you pay for. It it breaks, you get to keep both pieces. :)</p>
+<a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
+</div>
 </div>
 <div class="section" id="a-gentle-vba-primer">
-<h3>A Gentle VBA Primer<a class="headerlink" href="#a-gentle-vba-primer" title="Permalink to this headline">¶</a></h3>
+<h2>A Gentle VBA Primer<a class="headerlink" href="#a-gentle-vba-primer" title="Permalink to this headline">¶</a></h2>
 <p>The products I’ve created in Excel work the way they do because they use code to perform the tasks. That code is written in a special ‘flavour’ of the BASIC language called ‘Visual Basic for Applications’ (VBA), which is provided by Microsoft in most if not all of their Office products for automation. VBA is most commonly used for ‘macros’, which combines multiple commands into one by Office users, but also provides the ability to create forms to help manage tasks that would otherwise be tedious to carry out on a spreadsheet, for example.</p>
 <p>In order to write or edit VBA code or forms, a VBA editor has been provided, called the ‘VBE’.</p>
 <p>In Excel 2016 for Windows, this can be accessed with [Alt] [F11]… on the Mac, with [fn] [Alt] [F11].</p>
-</div>
 <div class="section" id="code-modules">
 <h3>Code Modules<a class="headerlink" href="#code-modules" title="Permalink to this headline">¶</a></h3>
 <p>In the VBE, code is saved in modules, the names of which are visible under the project browser. In order to view code associated with a form, you open the Forms folder by clicking on the [+] and then, right-clicking on form name and selecting “View Code”. Double-clicking the name of the form with bring up a graphical view of the form itself. (On the Mac in Excel 2016, forms are neither viewable nor can they be edited although the code can be.)</p>
@@ -213,6 +216,7 @@
 <p>TutorialsPoint define variables as “… a named memory location used to hold a value that can be changed during the script execution.” The point of using a variable is that you can have this point in memory that you can access from within your software to read or change data as circumstances require. This allows for cleaner, simpler code to write and maintain.</p>
 <p>Variable have a specific type: either they are strings (letters or numeric characters with which no math is to be performed), numbers such as integers (whole numbers) or doubles (can have decimal values) or booleans (True or False values). I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this. So, “sImagePath” indicates the value will be a string that will indicate where (the path) to find an image.</p>
 <p>A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment. The other thing that these products do make use of is this: a property allows external access (that is, external to where it was declared) as though the property was a public field, while allowing the class to keep control of the data. In the case of the abovementioned products, this allows a subform or a code module to have access to data set up by the main form.</p>
+<a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
 </div>
 </div>
 <div class="section" id="common-code-snippets">

@@ -21,6 +21,9 @@ PVA is best: poly-vinyl acetate. Need to find it online.
 
 
 
+.. image:: ../images/Flou02.png
+    :align: center
+    :width: 273px
 
 
 
@@ -161,6 +164,9 @@ Two tools exist for printing signatures: Booklet and \pdfpages.
 
 
 
+.. image:: ../images/Flou02.png
+    :align: center
+    :width: 273px
 
 
 
