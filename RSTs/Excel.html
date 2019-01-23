@@ -83,9 +83,17 @@
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Excel 2016 VBA Apps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview-a-living-document">Overview - A Living Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excel-apps-living-documents">Excel Apps - Living Documents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-updates">Project Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-gentle-vba-primer">A Gentle VBA Primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-modules">Code Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables-and-properties">Variables and Properties</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nreccount">nRecCount()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stp">stp()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-whole-help-file-thing">The Whole Help File Thing</a></li>
 </ul>
 </li>
 </ul>
@@ -162,8 +170,10 @@
             
   <div class="section" id="excel-2016-vba-apps">
 <h1>Excel 2016 VBA Apps<a class="headerlink" href="#excel-2016-vba-apps" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview-a-living-document">
-<h2>Overview - A Living Document<a class="headerlink" href="#overview-a-living-document" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="excel-apps-living-documents">
+<h2>Excel Apps - Living Documents<a class="headerlink" href="#excel-apps-living-documents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-updates">
+<h3>Project Updates<a class="headerlink" href="#project-updates" title="Permalink to this headline">¶</a></h3>
 <p>18.11.15 - I currently have two VBA-based apps I wrote for Queen Elizabeth II Jubilee Hospital in Coopers Plains, QLD. I intend to maintain those apps, which will include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -184,6 +194,26 @@
 <p>The last part of the strategy will need to be assessed for feasibility, as a lot will depend on the end-user’s willingness to dig into the code side of the app. This is a significant variable to consider.</p>
 <p>19.01.23 - In working with these documents, I’ve noticed that there is some commonality of code. Those snippets will be the code I will publish first.</p>
 <p>This is not elegant, optimal code by any means… but it works. If any user happens on these pages and decides it might be worth “Helping Yrself” to, by all means feel free, but remember, you get what you pay for. It it breaks, you get to keep both pieces. :)</p>
+</div>
+<div class="section" id="a-gentle-vba-primer">
+<h3>A Gentle VBA Primer<a class="headerlink" href="#a-gentle-vba-primer" title="Permalink to this headline">¶</a></h3>
+<p>The products I’ve created in Excel work the way they do because they use code to perform the tasks. That code is written in a special ‘flavour’ of the BASIC language called ‘Visual Basic for Applications’ (VBA), which is provided by Microsoft in most if not all of their Office products for automation. VBA is most commonly used for ‘macros’, which combines multiple commands into one by Office users, but also provides the ability to create forms to help manage tasks that would otherwise be tedious to carry out on a spreadsheet, for example.</p>
+<p>In order to write or edit VBA code or forms, a VBA editor has been provided, called the ‘VBE’.</p>
+<p>In Excel 2016 for Windows, this can be accessed with [Alt] [F11]… on the Mac, with [fn] [Alt] [F11].</p>
+</div>
+<div class="section" id="code-modules">
+<h3>Code Modules<a class="headerlink" href="#code-modules" title="Permalink to this headline">¶</a></h3>
+<p>In the VBE, code is saved in modules, the names of which are visible under the project browser. In order to view code associated with a form, you open the Forms folder by clicking on the [+] and then, right-clicking on form name and selecting “View Code”. Double-clicking the name of the form with bring up a graphical view of the form itself. (On the Mac in Excel 2016, forms are neither viewable nor can they be edited although the code can be.)</p>
+<p>The code is essentially a collection of procedures or functions containing calls to other proedures and functions and variables or properties whose values are either being read, checked or assigned.</p>
+<p>At the top of the code module is the statement “Option Explicit”. This tells Visual Basic to make sure every variable as been initialised (using the Dim statement) at the beginning of a procedure, or in the top section of the module where public variables or properties are declared.</p>
+<p>Each form has its own code module. There is also a general code module that contains common code used by all the form code modules. The one for Asset Manager is called “MdlE”.</p>
+</div>
+<div class="section" id="variables-and-properties">
+<span id="xl-variables"></span><h3>Variables and Properties<a class="headerlink" href="#variables-and-properties" title="Permalink to this headline">¶</a></h3>
+<p>TutorialsPoint define variables as “… a named memory location used to hold a value that can be changed during the script execution.” The point of using a variable is that you can have this point in memory that you can access from within your software to read or change data as circumstances require. This allows for cleaner, simpler code to write and maintain.</p>
+<p>Variable have a specific type: either they are strings (letters or numeric characters with which no math is to be performed), numbers such as integers (whole numbers) or doubles (can have decimal values) or booleans (True or False values). I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this. So, “sImagePath” indicates the value will be a string that will indicate where (the path) to find an image.</p>
+<p>A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment. The other thing that these products do make use of is this: a property allows external access (that is, external to where it was declared) as though the property was a public field, while allowing the class to keep control of the data. In the case of the abovementioned products, this allows a subform or a code module to have access to data set up by the main form.</p>
+</div>
 </div>
 <div class="section" id="common-code-snippets">
 <h2>Common Code Snippets<a class="headerlink" href="#common-code-snippets" title="Permalink to this headline">¶</a></h2>
@@ -208,6 +238,37 @@
 <span class="n">End</span> <span class="n">Function</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="stp">
+<h3>stp()<a class="headerlink" href="#stp" title="Permalink to this headline">¶</a></h3>
+<p>Only because I’m too lazy to type “Trim(Str(” in front of numbers I want to convert to strings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">stp</span><span class="p">(</span><span class="n">nNum</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span>
+  <span class="n">stp</span> <span class="o">=</span> <span class="n">Trim</span><span class="p">(</span><span class="n">Str</span><span class="p">(</span><span class="n">nNum</span><span class="p">))</span>
+<span class="n">End</span> <span class="n">Function</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-whole-help-file-thing">
+<h3>The Whole Help File Thing<a class="headerlink" href="#the-whole-help-file-thing" title="Permalink to this headline">¶</a></h3>
+<p>I wanted to make sure that at least the very basics of help for CallSheet and Asset Manager were easily accessible to users. I decided that this Sphinx-Doc method was the easiest for me to learn how to use, and to maintain, even remotely.</p>
+<p>Unfortunately, I have yet to sort out how to get control-specific help to work, but the Excel tooltip can at least offer a name of the control, which users can then search for in the Help file. In any event, Help can be accessed via a button on all forms and - in CallSheet - from the main sheet.</p>
+<p>First, the methods fired by clicking the Help button:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Private</span> <span class="n">Sub</span> <span class="n">CmdeqHelp_Click</span><span class="p">()</span>
+   <span class="n">Call</span> <span class="n">Me</span><span class="o">.</span><span class="n">DoHelp</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<p>which calls:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Sub</span> <span class="n">DoHelp</span><span class="p">()</span>
+  <span class="n">If</span> <span class="n">Not</span> <span class="n">MdlE</span><span class="o">.</span><span class="n">bHtmlHelp</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">sHelpURL</span><span class="p">,</span> <span class="s2">&quot;EquipMain.html&quot;</span><span class="p">)</span> <span class="n">Then</span> <span class="n">MdlE</span><span class="o">.</span><span class="n">sHTMLError</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<p>To break down the DoHelp() procedure, DoHelp() calls a function on the MdlE code module that sends back (returns) either a True or a False: True if the help file could be opened and read, False if not. “MdlE” is a code module that holds mostly functions common to all the forms and sheets in the workbook.</p>
+<p>The “If Not” part of this statement is what checks which value is being returned: so if a False is being returned by bHtmlHelp(), then the sHTMLError procedure is called (executed).</p>
+<p>bHtmlHelp() is being sent two parameters or arguments. A parameter is anything within the “(” and the “)” - it’s basically a value that will be used by the funtion - in this case: bHtmlHelp() - which value is set somewhere else in the program.</p>
+<p>The first value - Me.sHelpURL - is set up in the Userform_Activate(): it indicates where the Help files are located. Notice the “Me.” before the “sHelpURL”… any value-holding variable with a “Me.” prefix means that that variable is actually a property of the form. Properties versus global variables are discussed <a class="reference external" href="xl-Variables">here</a>.</p>
+<p>The second parameter that is being passed is a string - anything between “” is a string - and this string tells the sHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.</p>
 </div>
 </div>
 </div>
