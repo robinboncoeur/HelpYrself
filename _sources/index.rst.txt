@@ -1,7 +1,7 @@
 .. Help Yourself documentation master file, created by
    sphinx-quickstart on Thu Nov 15 10:14:37 2018.
    You can adapt this file completely to your liking, 
-   but it should at least contain the root `toctree` directive.
+   but it must at least contain the root `toctree` directive.
 
 Can't remember? Help Yourself
 =============================
