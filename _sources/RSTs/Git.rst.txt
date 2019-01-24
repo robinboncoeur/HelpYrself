@@ -4,6 +4,9 @@ My Totally Unofficial Git Help Page
 
 Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I'll do some testing of this process as I've already encountered issues I couldn't explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.
 
+Update 19.01.25: 
+To be honest, I'm pretty sure there's a better way, and will be testing it soon. And update these pages.
+
 Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I'm saving them in this document.
 
 
@@ -14,7 +17,6 @@ On my Mac, in the main user folder - sort-of like the "Home/Username" folder in 
 
 Using as an example a document called "KeysToLife", the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
-To be honest, I'm pretty sure there's a better way, and will be testing it soon. And update these pages.
 
 
 01 - Sphinx Terminal
