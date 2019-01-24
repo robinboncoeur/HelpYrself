@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Blender Tips I Keep Forgetting" href="Blender.html" />
-    <link rel="prev" title="Introduction" href="Intro.html" /> 
+    <link rel="next" title="LaTeX, Memoir and Bookbinding" href="LaTeX.html" />
+    <link rel="prev" title="Excel 2016 VBA Apps" href="Excel.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,19 +81,23 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">My Totally Unofficial Git Help Page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#local-set-up">01 - Local set-up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sphinx-terminal">02 - Sphinx Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github-terminal">03 - Github Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">04 - Sphinx Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">05 - Github Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#from-then-on">06 - From then on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac-set-up">Mac set-up</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx-terminal">01 - Sphinx Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-terminal">02 - Github Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">03 - Sphinx Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">04 - Github Terminal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#from-then-on">From then on</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 </ul>
 
@@ -163,13 +167,13 @@
 <h1>My Totally Unofficial Git Help Page<a class="headerlink" href="#my-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
 <p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.</p>
 <p>Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
-<div class="section" id="local-set-up">
-<h2>01 - Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mac-set-up">
+<h2>Mac set-up<a class="headerlink" href="#mac-set-up" title="Permalink to this headline">¶</a></h2>
 <p>On my Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.</p>
 <p>Using as an example a document called “KeysToLife”, the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
-</div>
+<p>To be honest, I’m pretty sure there’s a better way, and will be testing it soon. And update these pages.</p>
 <div class="section" id="sphinx-terminal">
-<h2>02 - Sphinx Terminal<a class="headerlink" href="#sphinx-terminal" title="Permalink to this headline">¶</a></h2>
+<h3>01 - Sphinx Terminal<a class="headerlink" href="#sphinx-terminal" title="Permalink to this headline">¶</a></h3>
 <p>In the first terminal, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">AllHelp</span><span class="o">/</span><span class="n">KeysToLife</span>
 
@@ -218,7 +222,7 @@
 <p>Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding and editing your files to the RSTs folder, edit your index.rst to include all these files.</p>
 </div>
 <div class="section" id="github-terminal">
-<h2>03 - Github Terminal<a class="headerlink" href="#github-terminal" title="Permalink to this headline">¶</a></h2>
+<h3>02 - Github Terminal<a class="headerlink" href="#github-terminal" title="Permalink to this headline">¶</a></h3>
 <p>Online, at Github, in your github account, set up a new repository. This will have a URL:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:{</span><span class="n">myAccount</span><span class="p">}</span><span class="o">/</span><span class="n">KeysToLife</span>
 </pre></div>
@@ -250,7 +254,7 @@
 <p>At this point, the folder is clean.</p>
 </div>
 <div class="section" id="id1">
-<h2>04 - Sphinx Terminal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>03 - Sphinx Terminal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Run a preliminary:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
@@ -258,7 +262,7 @@
 <p>to check for errors and to put the first lot of files for git to stage and put up in your repository’s gh-pages.</p>
 </div>
 <div class="section" id="id2">
-<h2>05 - Github Terminal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h3>04 - Github Terminal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
 
@@ -270,7 +274,7 @@
 <p>On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.</p>
 </div>
 <div class="section" id="from-then-on">
-<h2>06 - From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h2>
+<h3>From then on<a class="headerlink" href="#from-then-on" title="Permalink to this headline">¶</a></h3>
 <p>In the Sphinx Terminal - cd AllHelp/KeysToLife:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
@@ -294,6 +298,7 @@
 <p>Easy-peasy.</p>
 </div>
 </div>
+</div>
 
 
            </div>
@@ -303,10 +308,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Blender.html" class="btn btn-neutral float-right" title="Blender Tips I Keep Forgetting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="LaTeX.html" class="btn btn-neutral float-right" title="LaTeX, Memoir and Bookbinding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Intro.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Excel.html" class="btn btn-neutral" title="Excel 2016 VBA Apps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -7,16 +7,18 @@ Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I'll do some tes
 Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I'm saving them in this document.
 
 
-01 - Local set-up
-*****************
+Mac set-up
+**********
 
 On my Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.
 
 Using as an example a document called "KeysToLife", the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
+To be honest, I'm pretty sure there's a better way, and will be testing it soon. And update these pages.
 
-02 - Sphinx Terminal
-********************
+
+01 - Sphinx Terminal
+====================
 
 In the first terminal, run::
 
@@ -67,8 +69,8 @@ Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easi
 Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. 
 
 
-03 - Github Terminal
-********************
+02 - Github Terminal
+====================
 
 Online, at Github, in your github account, set up a new repository. This will have a URL::
 
@@ -100,8 +102,8 @@ Next::
 At this point, the folder is clean. 
 
 
-04 - Sphinx Terminal
-********************
+03 - Sphinx Terminal
+====================
 
 Run a preliminary::
 
@@ -110,8 +112,8 @@ Run a preliminary::
 to check for errors and to put the first lot of files for git to stage and put up in your repository's gh-pages.
 
 
-05 - Github Terminal
-********************
+04 - Github Terminal
+====================
 
 Run::
 
@@ -124,8 +126,8 @@ Run::
 On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
 
    
-06 - From then on
-*****************
+From then on
+============
 
 In the Sphinx Terminal - cd AllHelp/KeysToLife::
 
