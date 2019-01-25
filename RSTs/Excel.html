@@ -96,7 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nreccount">nRecCount()</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stp">stp()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-whole-help-file-thing">The Whole Help File Thing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-current-help-solution">The Current ‘Help’ Solution</a></li>
 </ul>
 </li>
 </ul>
@@ -211,18 +211,18 @@
 <div class="section" id="code-modules">
 <h3>Code Modules<a class="headerlink" href="#code-modules" title="Permalink to this headline">¶</a></h3>
 <p>In the VBE, code is saved in modules, the names of which are visible under the project browser. In order to view code associated with a form, you open the Forms folder by clicking on the [+] and then, right-clicking on the form name and selecting “View Code”. Double-clicking the name of the form will bring up a graphical view of the form itself. (On the Mac in Excel 2016, forms are neither viewable nor can they be edited, although the code can be.)</p>
-<p>The code is essentially a collection of procedures or functions containing calls to other procedures and functions. A “call” is basically an instruction for that function or procedure to “run”, or execute.</p>
-<p>The difference between a ‘function’ and ‘procedure’ is minimal: essentially a function can return a value, where a procedure just performs a task without returning anything. What do I mean by ‘return’? For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">AddNumbers</span><span class="p">(</span><span class="n">nNum1</span> <span class="k">as</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nNum2</span> <span class="k">as</span> <span class="n">Integer</span><span class="p">)</span> <span class="k">as</span> <span class="n">Integer</span>
+<p>The code is essentially a collection of procedures or functions containing calls to other procedures and functions. A “call” is basically an instruction for that function or procedure (labelled ‘sub’, for ‘subroutine’, <em>I think</em>) to “run”, or execute.</p>
+<p>The difference between a ‘function’ and ‘procedure’ is minimal: essentially a function can return a value, where a procedure just performs a task without returning anything. What do I mean by ‘return’? For example below is an example of a function. You can tell it’s a function by the way it’s defined - ‘Public Function AddNumbers’ and by the fact that after the closing parenthesis you can see what type of value is being returned… in this case, an Integer:</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">nAddNumbers</span><span class="p">(</span><span class="n">nNum1</span> <span class="ow">as</span> <span class="kt">Integer</span><span class="p">,</span> <span class="n">nNum2</span> <span class="ow">as</span> <span class="kt">Integer</span><span class="p">)</span> <span class="ow">as</span> <span class="kt">Integer</span>
   <span class="n">AddNumbers</span> <span class="o">=</span> <span class="n">nNum1</span> <span class="o">+</span> <span class="n">nNum2</span>
-<span class="n">End</span> <span class="n">Function</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 <p>can be called with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myNumber</span> <span class="o">=</span> <span class="n">AddNumbers</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">nMyNumber</span> <span class="o">=</span> <span class="n">nAddNumbers</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>which will result in myNumber acquiring the value of 70, which was <strong>returned</strong> by AddNumbers().</p>
+<p>which will result in the variable nMyNumber acquiring the value of 70, which was <strong>returned</strong> by nAddNumbers().</p>
 <p>The code also includes variables or properties whose values are either being read, checked or assigned. See the section following this one for a description of a variable.</p>
 <p>At the top of the code module page is the statement “Option Explicit”. This tells Visual Basic to make sure every variable has been initialised (using the Dim statement) at the beginning of a procedure, or in the top section of the module where public variables or properties are declared. This helps prevent <strong>some</strong> errors from happening during code execution, because the compiler will spit the dummy when you first run the code.</p>
 <p>Each form has its own code module. There is also a general code module that contains common code used by all the form code modules. The one for Asset Manager is called “MdlE”.</p>
@@ -230,8 +230,17 @@
 <div class="section" id="variables-and-properties">
 <span id="xl-variables"></span><h3>Variables and Properties<a class="headerlink" href="#variables-and-properties" title="Permalink to this headline">¶</a></h3>
 <p>TutorialsPoint define variables as “… a named memory location used to hold a value that can be changed during the script execution.” The reason for using a variable is that you can have this named address (the variable name) in memory (RAM) containing data that you can access from within your software to read or change as circumstances require. This allows for cleaner, simpler code to write and maintain.</p>
-<p>Variable have a specific type: either they are strings (letters or numeric characters with which no math is to be performed), numbers such as integers (whole numbers) or doubles (can have decimal values) or booleans (True or False values). I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this. So, “sImagePath” indicates the value will be a string that will indicate where (the path) to find an image.</p>
+<p>Variable have a specific type:</p>
+<blockquote>
+<div><ul class="simple">
+<li>strings - letters or numeric characters with which no math is to be performed</li>
+<li>numbers - integers (whole numbers) or doubles (can have decimal values)</li>
+<li>booleans - True or False</li>
+</ul>
+</div></blockquote>
+<p>There are other types, but these are the main ones. I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this approach, nor even with how I use the prefix. For example, my integers <strong>should</strong> probably be prefaced with an ‘i’, but as a hold-over from my FoxPro days I use the letter ‘n’. Anyway, the ‘s’ in the variable name ‘sImagePath’ indicates the value will be a string that will define the path to the image.</p>
 <p>A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment, although it’s on the cards. The other thing that these products <strong>do</strong> make use of is this: a property allows external access (that is, external to where it was declared) from other modules or forms as though the property was a public field, while allowing the class that owns that property (like a form, for example) to keep control of the data.</p>
+<p>One could use global variables, which are defined under the ‘Option Explicit’ at the top of the module, but my experience with them has been that while they should be available to the entire form and all subforms, they are a lot less reliable to use than form properties. YMMV, of course.</p>
 <a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
 </div>
 </div>
@@ -245,133 +254,133 @@
 <span class="n">Returns</span><span class="o">....</span><span class="p">:</span> <span class="n">record</span> <span class="n">count</span>
 </pre></div>
 </div>
-<p>The code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">nRecCount</span><span class="p">(</span><span class="n">sSheet</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">_</span>
-                          <span class="n">nColN</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span> <span class="n">As</span> <span class="n">Integer</span>
-<span class="n">Dim</span> <span class="n">sSavSheet</span> <span class="n">As</span> <span class="n">String</span>
-  <span class="n">sSavSheet</span> <span class="o">=</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span>
-  <span class="n">With</span> <span class="n">Application</span><span class="o">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSheet</span><span class="p">)</span>
-    <span class="n">On</span> <span class="n">Error</span> <span class="n">Resume</span> <span class="n">Next</span>
-    <span class="o">.</span><span class="n">Select</span><span class="p">:</span> <span class="n">nRecCount</span> <span class="o">=</span> <span class="n">WorksheetFunction</span><span class="o">.</span><span class="n">CountA</span><span class="p">(</span><span class="n">Columns</span><span class="p">(</span><span class="n">nColN</span><span class="p">))</span>
-  <span class="n">End</span> <span class="n">With</span>
-  <span class="n">Application</span><span class="o">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
-<span class="n">End</span> <span class="n">Function</span>
+<p>The code?</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">nRecCount</span><span class="p">(</span><span class="n">sSheet</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> _
+                          <span class="n">nColN</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Integer</span>
+<span class="k">Dim</span> <span class="n">sSavSheet</span> <span class="ow">As</span> <span class="kt">String</span>
+  <span class="n">sSavSheet</span> <span class="o">=</span> <span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Name</span>
+  <span class="k">With</span> <span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSheet</span><span class="p">)</span>
+    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span>
+    <span class="p">.</span><span class="n">Select</span><span class="p">:</span> <span class="n">nRecCount</span> <span class="o">=</span> <span class="n">WorksheetFunction</span><span class="p">.</span><span class="n">CountA</span><span class="p">(</span><span class="n">Columns</span><span class="p">(</span><span class="n">nColN</span><span class="p">))</span>
+  <span class="k">End</span> <span class="k">With</span>
+  <span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">).</span><span class="n">Select</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="stp">
 <h3>stp()<a class="headerlink" href="#stp" title="Permalink to this headline">¶</a></h3>
-<p>Only because I’m too lazy to type “Trim(Str(” in front of numbers I want to convert to strings:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">stp</span><span class="p">(</span><span class="n">nNum</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span>
+<p>Only because I’m too lazy to type “Trim(Str(” in front of numbers I want to convert to strings.</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">stp</span><span class="p">(</span><span class="n">nNum</span> <span class="ow">As</span> <span class="kt">Integer</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">String</span>
   <span class="n">stp</span> <span class="o">=</span> <span class="n">Trim</span><span class="p">(</span><span class="n">Str</span><span class="p">(</span><span class="n">nNum</span><span class="p">))</span>
-<span class="n">End</span> <span class="n">Function</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="the-whole-help-file-thing">
-<h3>The Whole Help File Thing<a class="headerlink" href="#the-whole-help-file-thing" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="the-current-help-solution">
+<h3>The Current ‘Help’ Solution<a class="headerlink" href="#the-current-help-solution" title="Permalink to this headline">¶</a></h3>
 <p>I wanted to make sure that at least the very basics of help for CallSheet and Asset Manager were easily accessible to users. I decided that this Sphinx-Doc method was the easiest for me to learn how to use, and to maintain, even remotely.</p>
 <p>Unfortunately, I have yet to sort out how to get control-specific help to work, but the Excel tooltip can at least offer a name of the control, which users can then search for in the Help file. In any event, Help can be accessed via a button on all forms and - in CallSheet - from the main sheet.</p>
-<p>First, the methods fired by clicking the Help button:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Private</span> <span class="n">Sub</span> <span class="n">CmdeqHelp_Click</span><span class="p">()</span>
-   <span class="n">Call</span> <span class="n">Me</span><span class="o">.</span><span class="n">DoHelp</span>
-<span class="n">End</span> <span class="n">Sub</span>
+<p>First, the methods fired by clicking the Help button.</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Private</span> <span class="k">Sub</span> <span class="nf">CmdeqHelp_Click</span><span class="p">()</span>
+   <span class="k">Call</span> <span class="k">Me</span><span class="p">.</span><span class="n">DoHelp</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
 </div>
 <p>which calls:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Sub</span> <span class="n">DoHelp</span><span class="p">()</span>
-  <span class="n">If</span> <span class="n">Not</span> <span class="n">MdlE</span><span class="o">.</span><span class="n">bHtmlHelp</span><span class="p">(</span><span class="n">Me</span><span class="o">.</span><span class="n">sHelpURL</span><span class="p">,</span> <span class="s2">&quot;EquipMain.html&quot;</span><span class="p">)</span> <span class="n">Then</span> <span class="n">MdlE</span><span class="o">.</span><span class="n">sHTMLError</span>
-<span class="n">End</span> <span class="n">Sub</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Sub</span> <span class="nf">DoHelp</span><span class="p">()</span>
+  <span class="k">If</span> <span class="k">Not</span> <span class="n">MdlE</span><span class="p">.</span><span class="n">bHtmlHelp</span><span class="p">(</span><span class="k">Me</span><span class="p">.</span><span class="n">sHelpURL</span><span class="p">,</span> <span class="s">&quot;EquipMain.html&quot;</span><span class="p">)</span> <span class="k">Then</span> <span class="n">MdlE</span><span class="p">.</span><span class="n">sHTMLError</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
 </div>
 <p>To break down the DoHelp() procedure, DoHelp() calls a function on the MdlE code module that sends back (returns) either a True or a False: True if the help file could be opened and read, False if not. “MdlE” is a code module that holds mostly functions common to all the forms and sheets in the workbook.</p>
 <p>The “If Not” part of this statement is what checks which value is being returned: so if a True is being returned by bHtmlHelp(), then the sHTMLError procedure is called (executed). If a False is returned, an error message about being unable to find the Help files is displayed.</p>
 <p>bHtmlHelp() is being sent two parameters or arguments. A parameter is anything within the “(” and the “)” - it’s basically a value that will be used by the funtion - in this case: bHtmlHelp() - which value is set somewhere else in the program.</p>
 <p>The first value - Me.sHelpURL - is set up in the Userform_Activate(). It holds a string value: the path to the Help files - for example: “Users/robyn/Dev/VBA/AssetMgr”. Notice the “Me.” before the “sHelpURL”… any value-holding variable with a “Me.” prefix means that that variable is actually a property of “Me”, which in this case is the form. Besides properties, “Me” can also have methods (procedures or functions).</p>
-<p>Properties versus global variables are discussed [fixThis] <a class="reference external" href="xl-Variables">here</a>.</p>
+<p>Properties versus global variables are discussed up in the <a class="reference internal" href="#xl-variables"><span class="std std-ref">Variables and Properties</span></a> section.</p>
 <p>The second parameter that is being passed is a string - anything between “” is a string - and this string tells the bHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.</p>
 <p>bHtmlHelp() opens the Help file. Here is the whole function group… first, the actual bHtmlHelp() function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">bHtmlHelp</span><span class="p">(</span><span class="n">sHelpPath</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">Optional</span> <span class="n">sTopic</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
-  <span class="n">Dim</span> <span class="n">sValidHelpURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">sLocalHelpURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">sChk</span> <span class="n">As</span> <span class="n">String</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">bHtmlHelp</span><span class="p">(</span><span class="n">sHelpPath</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> <span class="k">Optional</span> <span class="n">sTopic</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+  <span class="k">Dim</span> <span class="n">sValidHelpURL</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> <span class="n">sLocalHelpURL</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> <span class="n">sChk</span> <span class="ow">As</span> <span class="kt">String</span>
 
-  <span class="s1">&#39; check first if help is on same folder as the App; if not, go to</span>
-  <span class="s1">&#39;  the default - hard-coded - network help folder</span>
+  <span class="c">&#39; check first if help is on same folder as the App; if not, go to</span>
+  <span class="c">&#39;  the default - hard-coded - network help folder</span>
   <span class="n">sLocalHelpURL</span> <span class="o">=</span> <span class="n">sHelpPath</span>
-  <span class="n">sChk</span> <span class="o">=</span> <span class="n">sLocalHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;index.html&quot;</span>
-  <span class="n">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="n">Then</span>
+  <span class="n">sChk</span> <span class="o">=</span> <span class="n">sLocalHelpURL</span> <span class="o">&amp;</span> <span class="s">&quot;index.html&quot;</span>
+  <span class="k">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="k">Then</span>
     <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sLocalHelpURL</span>
-    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">True</span>
-  <span class="n">Else</span>
-    <span class="n">sChk</span> <span class="o">=</span> <span class="s2">&quot;G:\Theatre\RecoveryCN\AssetMgr</span><span class="se">\a</span><span class="s2">mHelp\index.html&quot;</span>
-    <span class="n">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="n">Then</span>
-      <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="s2">&quot;G:\Theatre\RecoveryCN\AssetMgr</span><span class="se">\a</span><span class="s2">mHelp</span><span class="se">\&quot;</span>
-      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">Else</span>
-      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">False</span>
-      <span class="n">Exit</span> <span class="n">Function</span>
-    <span class="n">End</span> <span class="n">If</span>
-  <span class="n">End</span> <span class="n">If</span>
+    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="k">True</span>
+  <span class="k">Else</span>
+    <span class="n">sChk</span> <span class="o">=</span> <span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\index.html&quot;</span>
+    <span class="k">If</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span> <span class="k">Then</span>
+      <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\&quot;</span>
+      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="k">True</span>
+    <span class="k">Else</span>
+      <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="k">False</span>
+      <span class="k">Exit</span> <span class="k">Function</span>
+    <span class="nf">End</span> <span class="k">If</span>
+  <span class="k">End</span> <span class="k">If</span>
 
-  <span class="s1">&#39; open specific page</span>
-  <span class="n">If</span> <span class="n">Len</span><span class="p">(</span><span class="n">sTopic</span> <span class="o">&amp;</span> <span class="n">vbNullString</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
-    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;index.html&quot;</span>
-  <span class="n">Else</span>
-    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s2">&quot;RSTs</span><span class="se">\&quot;</span><span class="s2"> &amp; sTopic</span>
-  <span class="n">End</span> <span class="n">If</span>
+  <span class="c">&#39; open specific page</span>
+  <span class="k">If</span> <span class="n">Len</span><span class="p">(</span><span class="n">sTopic</span> <span class="o">&amp;</span> <span class="n">vbNullString</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">Then</span>
+    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s">&quot;index.html&quot;</span>
+  <span class="k">Else</span>
+    <span class="n">sValidHelpURL</span> <span class="o">=</span> <span class="n">sValidHelpURL</span> <span class="o">&amp;</span> <span class="s">&quot;RSTs\&quot;</span> <span class="o">&amp;</span> <span class="n">sTopic</span>
+  <span class="k">End</span> <span class="k">If</span>
 
-  <span class="n">If</span> <span class="n">Not</span> <span class="n">OpenInIE</span><span class="p">(</span><span class="n">sValidHelpURL</span><span class="p">)</span> <span class="n">Then</span>
-    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">Exit</span> <span class="n">Function</span>
-  <span class="n">End</span> <span class="n">If</span>
-<span class="n">End</span> <span class="n">Function</span>
+  <span class="k">If</span> <span class="k">Not</span> <span class="n">OpenInIE</span><span class="p">(</span><span class="n">sValidHelpURL</span><span class="p">)</span> <span class="k">Then</span>
+    <span class="n">bHtmlHelp</span> <span class="o">=</span> <span class="k">False</span>
+    <span class="k">Exit</span> <span class="k">Function</span>
+  <span class="nf">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 <p>I’ll be the first to admit the logic in this function is - to put it nicely - suboptimal. The ‘return’ logic should be together in the same are of the code: it’s a bit hard to follow what exactly is happening, as this function sort-of organically grew (as opposed to being properly <strong>designed</strong>).</p>
 <p>Anyway, it works.</p>
 <p>This function checks if the file exists… a discrete process that can be used by other parts of the software:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;=================================================================</span>
-<span class="s1">&#39;  Does File Exist? (boolean)</span>
-<span class="s1">&#39;  Accepts: fully-qualified path</span><span class="se">\n</span><span class="s1">ame string</span>
-<span class="s1">&#39;  Returns: boolean (True if exists)</span>
-<span class="s1">&#39;===========================================</span>
-<span class="n">Public</span> <span class="n">Function</span> <span class="n">bFileExists</span><span class="p">(</span><span class="n">cFullName</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
-  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">EarlyExit</span>
-  <span class="n">If</span> <span class="n">Not</span> <span class="n">Dir</span><span class="p">(</span><span class="n">cFullName</span><span class="p">)</span> <span class="o">=</span> <span class="n">vbNullString</span> <span class="n">Then</span> <span class="n">bFileExists</span> <span class="o">=</span> <span class="kc">True</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="c">&#39;=================================================================</span>
+<span class="c">&#39;  Does File Exist? (boolean)</span>
+<span class="c">&#39;  Accepts: fully-qualified path\name string</span>
+<span class="c">&#39;  Returns: boolean (True if exists)</span>
+<span class="c">&#39;===========================================</span>
+<span class="k">Public</span> <span class="k">Function</span> <span class="nf">bFileExists</span><span class="p">(</span><span class="n">cFullName</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+  <span class="k">On</span> <span class="k">Error</span> <span class="k">GoTo</span> <span class="n">EarlyExit</span>
+  <span class="k">If</span> <span class="k">Not</span> <span class="n">Dir</span><span class="p">(</span><span class="n">cFullName</span><span class="p">)</span> <span class="o">=</span> <span class="n">vbNullString</span> <span class="k">Then</span> <span class="n">bFileExists</span> <span class="o">=</span> <span class="k">True</span>
 
 <span class="n">EarlyExit</span><span class="p">:</span>
-  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="mi">0</span>
-  <span class="s1">&#39; bFileExists = False (default is false, so superfluous statement)</span>
-<span class="n">End</span> <span class="n">Function</span>
+  <span class="k">On</span> <span class="k">Error</span> <span class="k">GoTo</span> <span class="mi">0</span>
+  <span class="c">&#39; bFileExists = False (default is false, so superfluous statement)</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 <p>Finally, this one opens the help file in Microsoft’s Internet Explorer:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">OpenInIE</span><span class="p">(</span><span class="n">sURL</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Boolean</span>
-<span class="n">Dim</span> <span class="n">ieDoc</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">ieTable</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">clip</span> <span class="n">As</span> <span class="n">DataObject</span>
-<span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">URL</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">IE</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">objElement</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">objCollection</span> <span class="n">As</span> <span class="n">Object</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">OpenInIE</span><span class="p">(</span><span class="n">sURL</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span> <span class="ow">As</span> <span class="kt">Boolean</span>
+<span class="k">Dim</span> <span class="n">ieDoc</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">ieTable</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">clip</span> <span class="ow">As</span> <span class="n">DataObject</span>
+<span class="k">Dim</span> <span class="n">i</span> <span class="ow">As</span> <span class="kt">Long</span><span class="p">,</span> <span class="n">URL</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">,</span> <span class="n">IE</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">objElement</span> <span class="ow">As</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">objCollection</span> <span class="ow">As</span> <span class="kt">Object</span>
 
-   <span class="s1">&#39;Create InternetExplorer Object</span>
-   <span class="n">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s2">&quot;InternetExplorer.Application&quot;</span><span class="p">)</span>
+   <span class="c">&#39;Create InternetExplorer Object</span>
+   <span class="k">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">&quot;InternetExplorer.Application&quot;</span><span class="p">)</span>
 
-  <span class="s1">&#39;Set IE.Visible = True to make IE visible, or False for IE to run in the background</span>
-   <span class="n">IE</span><span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="kc">True</span>
+  <span class="c">&#39;Set IE.Visible = True to make IE visible, or False for IE to run in the background</span>
+   <span class="n">IE</span><span class="p">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="k">True</span>
 
-   <span class="s1">&#39;Navigate to URL</span>
-   <span class="n">IE</span><span class="o">.</span><span class="n">Navigate</span> <span class="n">sURL</span>
+   <span class="c">&#39;Navigate to URL</span>
+   <span class="n">IE</span><span class="p">.</span><span class="n">Navigate</span> <span class="n">sURL</span>
 
-   <span class="s1">&#39;Unload IE</span>
-   <span class="n">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="n">Nothing</span>
-   <span class="n">Set</span> <span class="n">objElement</span> <span class="o">=</span> <span class="n">Nothing</span>
-   <span class="n">Set</span> <span class="n">objCollection</span> <span class="o">=</span> <span class="n">Nothing</span>
-   <span class="n">OpenInIE</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">End</span> <span class="n">Function</span>
+   <span class="c">&#39;Unload IE</span>
+   <span class="k">Set</span> <span class="n">IE</span> <span class="o">=</span> <span class="k">Nothing</span>
+   <span class="k">Set</span> <span class="n">objElement</span> <span class="o">=</span> <span class="k">Nothing</span>
+   <span class="k">Set</span> <span class="n">objCollection</span> <span class="o">=</span> <span class="k">Nothing</span>
+   <span class="n">OpenInIE</span> <span class="o">=</span> <span class="k">True</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 <p>Note: <em>I recently (2019.01.16) had to change the target browser from Firefox to IE, because as Qld Health migrated to Windows 10, Firefox was no longer a thing, and help ceased to work. In retrospect, I should have allowed opening in IE if Firefox was no longer available. This is an example of poor coding decision-making</em>.</p>
 <p>Finally, the function that generates the error message if the help files aren’t where they are expected to be:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Public</span> <span class="n">Function</span> <span class="n">sHTMLError</span><span class="p">(</span><span class="n">Optional</span> <span class="n">sCond</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span>
-  <span class="n">MsgBox</span> <span class="s2">&quot;Help not available. Please notify Developer.&quot;</span><span class="p">,</span> <span class="n">_</span>
-            <span class="n">vbCritical</span><span class="p">,</span> <span class="s2">&quot;Help not Found&quot;</span>
-<span class="n">End</span> <span class="n">Function</span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Function</span> <span class="nf">sHTMLError</span><span class="p">(</span><span class="k">Optional</span> <span class="n">sCond</span> <span class="ow">As</span> <span class="kt">String</span><span class="p">)</span>
+  <span class="n">MsgBox</span> <span class="s">&quot;Help not available. Please notify Developer.&quot;</span><span class="p">,</span> _
+            <span class="n">vbCritical</span><span class="p">,</span> <span class="s">&quot;Help not Found&quot;</span>
+<span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
 </div>
