@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Video Processing" href="Video.html" />
-    <link rel="prev" title="Linux Tips" href="Linux.html" /> 
+    <link rel="prev" title="Mac Pointers" href="Mac.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,13 +81,16 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX and Memoir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python3, Pip and Kivy3</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pytube">PyTube</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pytube-regex-errors">PyTube Regex Errors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#brackets-install">Brackets Install…</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-imported-modules-in-kivy">Running imported Modules in Kivy</a></li>
@@ -166,9 +169,43 @@
 <h1>Python3, Pip and Kivy3<a class="headerlink" href="#python3-pip-and-kivy3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="pip-installs">
 <h2>Pip Installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>
-<p>For PyTube, to install the latest source directly from github using pip, type this in your command line:</p>
+<div class="section" id="pytube">
+<h3>PyTube<a class="headerlink" href="#pytube" title="Permalink to this headline">¶</a></h3>
+<p>To install the latest source directly from github using pip, type this in your command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nficano</span><span class="o">/</span><span class="n">pytube</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
+</div>
+<p>Usually a good idea to upgrade pip while you’re at it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pytube-regex-errors">
+<h3>PyTube Regex Errors<a class="headerlink" href="#pytube-regex-errors" title="Permalink to this headline">¶</a></h3>
+<p>The fix was published 19 Jan, 2019 on the <a class="reference external" href="https://github.com/nficano/pytube/issues/353#issuecomment-455116197">Github issues page</a>. It essentially involved patching cypher.py and helpers.py. Now, to find those files on my Mac: not trivial. Finally invoked “find”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">iname</span> <span class="s2">&quot;*.py&quot;</span>
+</pre></div>
+</div>
+<p>to get a lot of cruft, and this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">captions</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">cipher</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">cli</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">compat</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">playlist</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">exceptions</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">extract</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">helpers</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">itags</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">logging</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">mixins</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">query</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">request</span><span class="o">.</span><span class="n">py</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">streams</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Patched the files 03 Mar, 2019 and voila, success!</p>
 </div>
 <div class="section" id="pycharm-and-kivy-install">
 <h3>PyCharm and Kivy Install<a class="headerlink" href="#pycharm-and-kivy-install" title="Permalink to this headline">¶</a></h3>
@@ -239,7 +276,7 @@
         <a href="Video.html" class="btn btn-neutral float-right" title="Video Processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Linux.html" class="btn btn-neutral" title="Linux Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Mac.html" class="btn btn-neutral" title="Mac Pointers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

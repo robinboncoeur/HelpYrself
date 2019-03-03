@@ -96,7 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nreccount">nRecCount()</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stp">stp()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#buttons-resizing-on-their-own">Buttons Resizing on their Own</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-current-help-solution">The Current ‘Help’ Solution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#and-then">And then…</a></li>
 </ul>
 </li>
 </ul>
@@ -277,6 +279,13 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="buttons-resizing-on-their-own">
+<h3>Buttons Resizing on their Own<a class="headerlink" href="#buttons-resizing-on-their-own" title="Permalink to this headline">¶</a></h3>
+<p>… when you don’t want them to, like on a worksheet, for instance.</p>
+<p>Open C:Users&lt;yourusername&gt;AppDataRoamingMicrosoftExcel (AppData may be a hidden folder).  Delete any files starting in XL&lt;hexnumber&gt; and ending in .xlsb or xlb.  These files are created when you use two monitors of different resolutions or use a projector and save the file under a different resolution.  Deleting them solves then font shrinking problem and the button resizing issue as well.</p>
+<p>Do not close the workbook with the activeX controls as the current worksheet, because if reopening the workbook on a different resolution monitor, they would be off if the activeX controls were on the opening worksheet. Opening the workbook with no activeX controls on the active worksheet would have no effect on activeX controls on other worksheets.</p>
+<p>Proposed as answer by <a class="reference external" href="https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?referrer=https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?forum=exceldev">Erik Live Monday, January 7, 2013 12:36 PM</a></p>
+</div>
 <div class="section" id="the-current-help-solution">
 <h3>The Current ‘Help’ Solution<a class="headerlink" href="#the-current-help-solution" title="Permalink to this headline">¶</a></h3>
 <p>I wanted to make sure that at least the very basics of help for CallSheet and Asset Manager were easily accessible to users. I decided that this Sphinx-Doc method was the easiest for me to learn how to use, and to maintain, even remotely.</p>
@@ -383,6 +392,14 @@
 <span class="k">End</span> <span class="k">Function</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="and-then">
+<h3>And then…<a class="headerlink" href="#and-then" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>.CboEqType.ColumnHeads = False: .CboEqType.ColumnCount = 2
+.CboEqType.ColumnWidths = “140;3”
+.CboEqType.RowSource = “=Meta!A1:B” &amp; cRowCnt
+.CboEqType.TextColumn = 1: .CboEqType.BoundColumn = 1</div></blockquote>
 </div>
 </div>
 </div>

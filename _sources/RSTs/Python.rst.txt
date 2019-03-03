@@ -6,9 +6,45 @@ Python3, Pip and Kivy3
 Pip Installs
 ************
 
-For PyTube, to install the latest source directly from github using pip, type this in your command line::
+PyTube
+======
+
+To install the latest source directly from github using pip, type this in your command line::
 
     pip install git+https://github.com/nficano/pytube.git
+
+Usually a good idea to upgrade pip while you're at it::
+
+    pip install --upgrade pip
+
+
+PyTube Regex Errors
+===================
+
+The fix was published 19 Jan, 2019 on the `Github issues page <https://github.com/nficano/pytube/issues/353#issuecomment-455116197>`_. It essentially involved patching cypher.py and helpers.py. Now, to find those files on my Mac: not trivial. Finally invoked "find"::
+
+    sudo find / -iname "*.py"
+
+to get a lot of cruft, and this::
+
+    /usr/local/lib/python3.7/site-packages/pytube/__main__.py
+    /usr/local/lib/python3.7/site-packages/pytube/captions.py
+    /usr/local/lib/python3.7/site-packages/pytube/cipher.py
+    /usr/local/lib/python3.7/site-packages/pytube/cli.py
+    /usr/local/lib/python3.7/site-packages/pytube/compat.py
+    /usr/local/lib/python3.7/site-packages/pytube/contrib/__init__.py
+    /usr/local/lib/python3.7/site-packages/pytube/contrib/playlist.py
+    /usr/local/lib/python3.7/site-packages/pytube/exceptions.py
+    /usr/local/lib/python3.7/site-packages/pytube/extract.py
+    /usr/local/lib/python3.7/site-packages/pytube/helpers.py
+    /usr/local/lib/python3.7/site-packages/pytube/itags.py
+    /usr/local/lib/python3.7/site-packages/pytube/logging.py
+    /usr/local/lib/python3.7/site-packages/pytube/mixins.py
+    /usr/local/lib/python3.7/site-packages/pytube/query.py
+    /usr/local/lib/python3.7/site-packages/pytube/request.py
+    /usr/local/lib/python3.7/site-packages/pytube/streams.py
+
+Patched the files 03 Mar, 2019 and voila, success!
 
 
 PyCharm and Kivy Install
