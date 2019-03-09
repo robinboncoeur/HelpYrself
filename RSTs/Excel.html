@@ -101,6 +101,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#and-then">And then…</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#the-tax-worksheet-conundrums">The Tax Worksheet Conundrums</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intro">Intro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
@@ -395,11 +400,36 @@
 </div>
 <div class="section" id="and-then">
 <h3>And then…<a class="headerlink" href="#and-then" title="Permalink to this headline">¶</a></h3>
+<p>Saving a solution for a driving 2-column dropdown… set it up this way:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">ColumnHeads</span> <span class="o">=</span> <span class="kc">False</span><span class="p">:</span> <span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">ColumnCount</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">ColumnWidths</span> <span class="o">=</span> <span class="s2">&quot;140;3&quot;</span>
+<span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">RowSource</span> <span class="o">=</span> <span class="s2">&quot;=Meta!A1:B&quot;</span> <span class="o">&amp;</span> <span class="n">cRowCnt</span>
+<span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">TextColumn</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span> <span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">BoundColumn</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-tax-worksheet-conundrums">
+<h2>The Tax Worksheet Conundrums<a class="headerlink" href="#the-tax-worksheet-conundrums" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intro">
+<h3>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h3>
+<p>Sort of starting this note-taking in the middle of development instead of at the outset. The Checking account data presents significant challenges in terms of finding a tructure way of identifying entries in order to code them. At this point (07.03.2019) it’s all being done manually.</p>
+<p>Credit card entries are to be reviewed next, but codifying them is currently working well.</p>
+</div>
+<div class="section" id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h3>
+<p>The checking account entries are not consistent in structure, thus rules have been developed in the MetaDefs sheet. Roughly, the approach runs in a Do While which will continue if the string suffix is “~C”, waits for a “~D” suffix (Done) to end loop:</p>
 <blockquote>
-<div>.CboEqType.ColumnHeads = False: .CboEqType.ColumnCount = 2
-.CboEqType.ColumnWidths = “140;3”
-.CboEqType.RowSource = “=Meta!A1:B” &amp; cRowCnt
-.CboEqType.TextColumn = 1: .CboEqType.BoundColumn = 1</div></blockquote>
+<div><ol class="arabic simple">
+<li>The first pass: look for 1st 10 chars in col-Y. There will be a 2nd pass.</li>
+<li>Truncate the entry by the value in col-Z, return to Do While</li>
+<li>The second pass: look for 1st 4 chars in col-AC. Check in col-AF for “Y”.</li>
+<li>If col-AF is a “Y”, truncate entry by value in col-AD, else use code in col-AE.</li>
+<li>The third pass: look for 1st 4 chars in col-AG. Check in col-AJ for “Y”.</li>
+<li>If col-AJ is a “Y”, truncate entry by value in col-AH, else use code in col-AI.</li>
+<li>The fourth pass: look for entire string in col-AK. Col-AN wil have code.</li>
+</ol>
+</div></blockquote>
 </div>
 </div>
 </div>

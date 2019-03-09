@@ -15,7 +15,7 @@ As in all of open source, we tend to create solutions to "scratch our own itch".
 LaTeX and Learning
 ==================
 
-From a learning perspective, I'm a bit challenged. I'll sit through tutorials for a while but if I don't see a practical application to some instruction, this ability to retain the information suffers.
+From a learning perspective, I'm a bit challenged. I'll sit through tutorials for a while but if I don't see a practical application to some instruction, the ability to retain the information learned suffers.
 
 For example: one of the key abilities of LaTeX is to insert math formulae into the body of a text. For mathematicians and math students and math hobbyists and - I'm sure - a whole slew of other folk: crucial information.
 
