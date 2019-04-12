@@ -109,3 +109,27 @@ Installed gspread and oauth2client via pip3::
 
     pip3 install gspread oauth2client
     
+
+Project: Netflix Download
+=========================
+Extract links to video/audio for direct download, and get thumbnail, info about uploader, likes, etc.
+
+
+Header Parameters
+RapidAPI Project
+
+X-RapidAPI-Host
+STRING
+getvideo.p.rapidapi.com
+REQUIRED
+X-RapidAPI-Key
+STRING
+af87ff4fd4msh044a9ed78894f46p11bbb3jsnc2f0bece1f36
+REQUIRED
+
+Required Parameters
+url
+STRING
+https://www.youtube.com/watch?v=nfWlot6h_JM
+REQUIRED
+URL of video/audio page

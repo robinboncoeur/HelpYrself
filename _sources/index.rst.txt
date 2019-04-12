@@ -19,6 +19,7 @@ Can't remember? Help Yourself
    RSTs/Mac.rst
    RSTs/Python.rst
    RSTs/Video.rst
+   RSTs/Windoze.rst
 
 
 Indices and tables
