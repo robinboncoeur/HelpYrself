@@ -3,15 +3,74 @@ Video Processing
 ################
 
 
-Short, Hopefully Helpful Videos
-*******************************
+FFMPEG
+******
+
+These scripts allow commandline processing of audio and video files. FFMPEG must be installed on your PC and accessible from the commandline processor.
 
 
-**Exporting a simple figure from Poser**
+Concatenating Files
+===================
 
-.. image:: http://www.tightbytes.com/Blender/InstrVideos/FigShadImg01b.png
+Copy and paste this script template into a plain text document, save as an .sh file and make it executable::
+
+    $ cat mylist.txt
+    file '/path/to/file1'
+    file '/path/to/file2'
+    file '/path/to/file3'
+
+    $ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
+
+Note: *had to change things a bit to get rid of a problem with non-monotonous DTS in output stream issues, based on a suggestion made on StackExchange. First, rename the long file name (e.g., NT66B REVELATION-DSgtRXWSzBg.f136.mp4) to a generic shorter name (NTb.mp4).*
+
+So, convert the .mp4 files to .MTS in Terminal::
+
+    ffmpeg -i NTb.mp4 -q 0 NTb.MTS
+
+I made the appropriate changes to the input file (DesVids.txt)::
+
+    file './Rev/NTa.MTS'
+    file './Rev/NTb.MTS'
+    file './Rev/NTc.MTS'
+
+Fortunately, FFMPEG was fine to turn this straight into an MP4 (albeit a rather large one) in the script file DesFordConcat.sh::
+
+    ffmpeg -f concat -safe 0 -i DesVids.txt -c copy Revelation66.mp4
+    
+This output a perfect video. However, it was still a bit time-consuming. The final script still needs work, but is a significant improvement::
+
+    #!/bin/bash
+    # DesFordConcat3.sh
+    # Concatenates MTS files into 1 file, then converts that to mp4
+    # WARNING: conversion takes ages - e.g., upwards of 40mins for 2.4 gig file - in 
+    #          Handbrake, VLC and FFMPEG. Which is why I went to veryfast instead of slow.
+    # USAGE: ./DesFordConcat.h xx (where xx is the file number, e.g., 66) [3]
+    # Robyn Hahn - 06/Jun/2020
+    if [ "$1" != "" ]; then
+        ffmpeg -i ./Rev/NTa.mp4 -q 0 ./Rev/NTa.MTS
+        ffmpeg -i ./Rev/NTb.mp4 -q 0 ./Rev/NTb.MTS
+        if [ "$2" = "3" ]; then
+            ffmpeg -i ./Rev/NTc.mp4 -q 0 ./Rev/NTc.MTS
+            ffmpeg -f concat -safe 0 -i DesVids3.txt -c copy NT.MTS
+        else
+            ffmpeg -f concat -safe 0 -i DesVids.txt -c copy NT.MTS
+        fi
+        ffmpeg -i NT.MTS -c:a copy -c:v libx264 -preset veryfast -crf 18 -f mp4 "Revelation${1}.mp4"
+    else
+        echo "Positional parameter 1 is empty"
+    fi
+
+
+
+
+How to display a Video
+**********************
+
+**Template for displaying a video in Sphinx**
+
+.. image:: http://www.mysite.com/mypath/myimage.png
 
 .. raw:: html
 
-    <iframe width="640" height="360" src="http://www.tightbytes.com/Blender/InstrVideos/FigShader060-01b.mp4" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe>
 

@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python3, Pip and Kivy3" href="Python.html" />
+    <link rel="next" title="Published on Musescore" href="Musescore.html" />
     <link rel="prev" title="Linux Tips" href="Linux.html" /> 
 
   
@@ -82,6 +82,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
@@ -93,10 +94,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#where-is-this-file">Where is This File?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#saving-youtube-videos">Saving YouTube Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#make-a-py-script-executable">Make a Py Script Executable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-file-executable-in-terminal">Make a file executable in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clone-my-vdmk">Clone My VDMK</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
             
@@ -291,6 +299,34 @@ pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&amp;&amp;\s*d\.set\([^,
 </pre></div>
 </div>
 </div>
+<div class="section" id="make-a-file-executable-in-terminal">
+<h2>Make a file executable in Terminal<a class="headerlink" href="#make-a-file-executable-in-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Shell scripts must be executable files in order to run. You can use the chmod command to indicate that the text file is executable (that is, its contents can be run as a shell script). In the Terminal app  on your Mac, use the cd command to move into the directory that contains the file you want to make executable. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">YourScriptDirectory</span>
+</pre></div>
+</div>
+<p>Enter the chmod command. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">755</span> <span class="n">YourScriptName</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>After making the shell script file executable, you can run it by entering its pathname:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Dev</span><span class="o">/</span><span class="n">YourScriptName</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">Dev</span><span class="o">/</span>
+<span class="o">./</span><span class="n">YourScriptName</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone-my-vdmk">
+<h2>Clone My VDMK<a class="headerlink" href="#clone-my-vdmk" title="Permalink to this headline">¶</a></h2>
+<p>Last login: Fri Nov 22 06:58:35 on ttys000
+Robins-MBP:VirtualBox VMs robinhahn$ VBoxManage clonehd –format vdi “/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vmdk” “/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vdi”
+0%…10%…20%…30%…40%…50%…60%…70%…80%…90%…100%
+Clone medium created in format ‘vdi’. UUID: 34fd4231-0eb6-4d35-94ed-89a4ef1331a3
+Robins-MBP:VirtualBox VMs robinhahn$</p>
+</div>
 </div>
 
 
@@ -301,7 +337,7 @@ pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&amp;&amp;\s*d\.set\([^,
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Python.html" class="btn btn-neutral float-right" title="Python3, Pip and Kivy3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Musescore.html" class="btn btn-neutral float-right" title="Published on Musescore" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Linux.html" class="btn btn-neutral" title="Linux Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -335,10 +371,10 @@ pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&amp;&amp;\s*d\.set\([^,
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
 
   

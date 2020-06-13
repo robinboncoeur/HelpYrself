@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>A Discussion on Reabanks &mdash; Help Yourself 0.01 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Help Yourself
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>A Discussion on Reabanks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/RSTs/ReaperReabanks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a-discussion-on-reabanks">
+<h1>A Discussion on Reabanks<a class="headerlink" href="#a-discussion-on-reabanks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-they-work">
+<h2>How They Work<a class="headerlink" href="#how-they-work" title="Permalink to this headline">¶</a></h2>
+<p>The reabank file should look something like this when you’ve finished editing:</p>
+<p>Here’s what I’ve come up with for Embertone’s Fischer Viola:</p>
+<p>//—————————————————————————-
+//! g=”Embertone/Fischer Viola” n=”Fischer Viola”
+//! m=”Embertone Fischer Viola 1.0”
+Bank 37 10 Embertone - Viola
+//! c=textured i=vibrato g=2 n=”default vibrato” o=note:27
+27 vib default
+//! c=textured i=vibrato g=2 n=”progressive vibrato” o=note:28
+28 vib prog
+//! c=textured i=vibrato g=2 n=”open string vibrato” o=note:29
+29 vib open
+//! c=textured i=vibrato g=2 n=”gentle vibrato” o=note:30
+30 vib gentle
+//! c=textured i=vibrato g=2 n=”passionate vibrato” o=note:31
+31 vib passion
+//! c=default i=note-whole g=3 n=”sord/sul off” o=note:43/note:42
+43 sord-sul off
+//! c=default i=con-sord g=3 n=”con sord” o=note:41/note:43
+41 con sord
+//! c=default i=sul-pont g=3 n=”sul pont” o=note:42/note:44
+44 sul pont
+//! c=default i=sul-tasto g=3 n=”sul tasto” o=note:42/note:45
+45 sul tasto
+//! c=default i=sul-pont g=3 n=”sul pont/con sord” o=note:41/note:44
+48 cs sul pont
+//! c=default i=sul-tasto g=3 n=”sul tasto/con sord” o=note:41/note:45
+49 cs sul tasto
+//! c=fx i=bow-up g=4 n=”color on” o=note:33
+33 color on
+//! c=fx i=bow-down g=4 n=”color off” o=note:34
+34 color off
+//! c=long i=note-whole o=note:36
+36 sustain
+//! c=short i=staccato o=note:38
+38 staccato
+//! c=short i=pizz o=note:39
+39 pizz
+//! c=short-dark i=tremolo o=note:40
+40 tremolo
+//—————————————————————————-</p>
+</div>
+<div class="section" id="an-observation">
+<h2>An Observation<a class="headerlink" href="#an-observation" title="Permalink to this headline">¶</a></h2>
+<p>As you can see from the example, an example of a fully-qualified path for Linux would be:</p>
+<blockquote>
+<div><p>/home/robyn/Documents/Blender/Projects/AllTextures/AllSkin/Antonia/</p>
+</div></blockquote>
+<p>or, for the Mac:</p>
+<blockquote>
+<div><p>/Volumes/500GB/Blender/Projects/AllTextures/AllSkin/Antonia/</p>
+</div></blockquote>
+<p>or, for Windows:</p>
+<blockquote>
+<div><p>E:\MyRuntime\runtime\textures\VendorName\ImagesFolder\Character\</p>
+</div></blockquote>
+</div>
+<div class="section" id="jason-lyon-s-approach">
+<h2>Jason Lyon’s Approach<a class="headerlink" href="#jason-lyon-s-approach" title="Permalink to this headline">¶</a></h2>
+<p>// GPO5 MOST USED
+//</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Violins”
+Bank 16 1 GPO5 - Violins</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:36
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:36
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:36
+1 sustain
+//! c=long i=legato-bowed2 o=note:38
+21 auto alt
+//! c=long i=bow-up o=note:39
+108 upbow
+//! c=long i=bow-down o=note:40
+107 dwnbow
+//! c=short-light i=pizz o=note:41
+56 pizz
+//! c=long-dark i=tremolo o=note:43
+11 trem
+//! c=long i=trill-min2 o=note:45
+70 tr m2
+//! c=long i=trill-maj2 o=note:47
+71 tr M2</p>
+<p>//! c=long-light i=con-sord o=note:37
+7 sust cs
+//! c=long-light i=tremolo-con-sord o=note:42
+12 trem cs
+//! c=long-light i=trill-min2 o=note:44
+44 tr m2 cs
+//! c=long-light i=trill-maj2 o=note:46
+46 tr M2 cs</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Violas”
+Bank 16 2 GPO5 - Violas</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:36
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:36
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:36
+1 sustain
+//! c=long i=legato-bowed2 o=note:38
+21 auto alt
+//! c=long i=bow-up o=note:39
+108 upbow
+//! c=long i=bow-down o=note:40
+107 dwnbow
+//! c=short-light i=pizz o=note:41
+56 pizz
+//! c=long-dark i=tremolo o=note:43
+11 trem
+//! c=long i=trill-min2 o=note:45
+70 tr m2
+//! c=long i=trill-maj2 o=note:47
+71 tr M2</p>
+<p>//! c=long-light i=con-sord o=note:37
+7 sus cs
+//! c=long-light i=tremolo-con-sord o=note:42
+12 trem cs
+//! c=long-light i=trill-min2 o=note:44
+44 tr m2 cs
+//! c=long-light i=trill-maj2 o=note:46
+46 tr M2 cs</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Cellos”
+Bank 16 3 GPO5 - Cellos</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:24
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:24
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:24
+1 sustain
+//! c=long i=legato-bowed2 o=note:26
+21 auto alt
+//! c=long i=bow-up o=note:27
+108 upbow
+//! c=long i=bow-down o=note:28
+107 dwnbow
+//! c=short-light i=pizz o=note:29
+56 pizz
+//! c=long-dark i=tremolo o=note:31
+11 trem
+//! c=long i=trill-min2 o=note:33
+70 tr m2
+//! c=long i=trill-maj2 o=note:35
+71 tr M2</p>
+<p>//! c=long-light i=con-sord o=note:25
+7 sus cs
+//! c=long-light i=tremolo-con-sord o=note:30
+12 trem cs
+//! c=long-light i=trill-min2 o=note:32
+44 tr m2 cs
+//! c=long-light i=trill-maj2 o=note:34
+46 tr M2 cs</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Basses”
+Bank 16 4 GPO5 - Basses</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:12
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:12
+1 sustain
+//! c=long i=legato-bowed2 o=note:14
+21 auto alt
+//! c=long i=bow-up o=note:15
+108 upbow
+//! c=long i=bow-down o=note:16
+107 dwnbow
+//! c=short-light i=pizz o=note:17
+56 pizz
+//! c=long-dark i=tremolo o=note:19
+11 trem</p>
+<p>//! c=long-light i=con-sord o=note:13
+7 sus cs
+//! c=long-light i=tremolo-con-sord o=note:18
+12 trem cs</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO FrHn”
+Bank 17 1 GPO5 - FHn</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:24
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:24
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:24
+1 sustain
+//! c=long-light i=con-sord o=note:26
+7 mute</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Tpt”
+Bank 17 2 GPO5 - Tpt</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:48
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:48
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:48
+1 sustain
+//! c=long-light i=con-sord o=note:50
+7 mute</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Tbn”
+Bank 17 3 GPO5 - Tbn</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:12
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:12
+1 sustain
+//! c=short i=marcato o=note:14
+55 marc
+//! c=short i=staccato o=note:16
+59 stacc</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Tuba”
+Bank 17 4 GPO5 - Tuba</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0/note:12
+19 leg off</p>
+<p>//! c=long i=legato-slurred o=note:12
+1 sustain
+//! c=short i=marcato o=note:14
+55 marc
+//! c=short i=staccato o=note:16
+59 stacc</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Garritan/GPO5” n=”GPO Woods”
+Bank 17 5 GPO5 - Woods</p>
+<p>//! c=legato i=legato g=2 o=cc:102,64
+20 leg on
+//! c=legato i=note-whole g=2 o=cc:102,0
+19 leg off</p>
+<p>//—————————————————————————-</p>
+<p>// KIRK HUNTER CONCERT BRASS 2
+//</p>
+<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Fr Horn”
+Bank 18 1 KH - FrHn</p>
+<p>//! c=long i=legato o=note:85
+1 sustain
+//! c=long i=legato-slurred o=note:89
+2 adagio
+//! c=short i=marcato o=note:86
+54 acc pp
+//! c=short i=marcato o=note:87
+54 acc mf
+//! c=short i=marcato o=note:88
+54 acc ff
+//! c=short i=staccato o=note:90
+59 stacc</p>
+<p>//! c=short-dark i=rip o=note:23
+100 rip</p>
+<p>//! c=fx g=2 i=fx o=note:30
+106 solo
+//! c=fx g=2 i=fx o=note:29
+107 a2
+//! c=fx g=2 i=fx o=note:28
+108 a4
+//! c=fx g=2 i=fx o-note:27
+109 a8</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tpt”
+Bank 18 2 KH - Tpt</p>
+<p>//! c=long i=legato o=note:25
+1 sustain
+//! c=long i=legato-slurred o=note:29
+2 adagio
+//! c=short i=marcato o=note:26
+54 acc pp
+//! c=short i=marcato o=note:27
+54 acc mf
+//! c=short i=marcato o=note:28
+54 acc ff
+//! c=short i=staccato o=note:30
+40 stacc</p>
+<p>//! c=short-dark i=rip o=note:23
+100 rip</p>
+<p>//! c=fx g=2 i=fx o=note:42
+106 solo
+//! c=fx g=2 i=fx o=note:41
+107 a2
+//! c=fx g=2 i=fx o=note:40
+108 a4</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tbn”
+Bank 18 3 KH - Tbn</p>
+<p>//! c=long i=legato o=note:85
+1 sustain
+//! c=long i=legato-slurred o=note:89
+2 adagio
+//! c=short i=marcato o=note:86
+54 acc pp
+//! c=short i=marcato o=note:87
+54 acc mf
+//! c=short i=marcato o=note:88
+54 acc ff
+//! c=short i=staccato o=note:90
+40 stacc</p>
+<p>//! c=short-dark i=rip o=note:23
+100 rip</p>
+<p>//! c=fx g=2 i=fx o=note:30
+106 solo
+//! c=fx g=2 i=fx o=note:29
+107 a2
+//! c=fx g=2 i=fx o=note:28
+108 a4
+//! c=fx g=2 i=fx o-note:27
+109 a8</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tuba”
+Bank 18 4 KH - Tuba</p>
+<p>//! c=long i=legato o=note:85
+1 sustain
+//! c=long i=legato-slurred o=note:89
+2 adagio
+//! c=short i=marcato o=note:86
+54 acc pp
+//! c=short i=marcato o=note:87
+54 acc mf
+//! c=short i=marcato o=note:88
+54 acc ff
+//! c=short i=staccato o=note:90
+40 stacc</p>
+<p>//—————————————————————————-</p>
+<p>// CineWinds Core
+//</p>
+<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Piccolo”
+Bank 19 1 CWC - Piccolo</p>
+<p>//! c=long i=legato o=note:36
+1 sustain
+//! c=short i=marcato-quarter o=note:41
+52 marc
+//! c=short i=tenuto-eighth o=note:40
+50 ten
+//! c=short i=staccato o=note:38
+40 stacc
+//! c=long i=trill-min2 o=note:43
+70 tr m2
+//! c=long i=trill-maj2 o=note:45
+71 tr M2</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Flt”
+Bank 19 2 CWC - Flt</p>
+<p>//! c=long i=legato o=note:36
+1 sustain
+//! c=short i=marcato-quarter o=note:41
+52 marc
+//! c=short i=tenuto-eighth o=note:40
+50 ten
+//! c=short i=staccato o=note:38
+40 stacc
+//! c=long i=trill-min2 o=note:43
+70 tr m2
+//! c=long i=trill-maj2 o=note:45
+71 tr M2</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Oboe”
+Bank 19 3 CWC - Oboe</p>
+<p>//! c=long i=legato o=note:36
+1 sustain
+//! c=short i=marcato-quarter o=note:41
+52 marc
+//! c=short i=tenuto-eighth o=note:40
+50 ten
+//! c=short i=staccato o=note:38
+40 stacc
+//! c=long i=trill-min2 o=note:43
+70 tr m2
+//! c=long i=trill-maj2 o=note:45
+71 tr M2</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Clnt”
+Bank 19 4 CWC - Clnt</p>
+<p>//! c=long i=legato o=note:24
+1 sustain
+//! c=short i=marcato-quarter o=note:29
+52 marc
+//! c=short i=tenuto-eighth o=note:28
+50 ten
+//! c=short i=staccato o=note:26
+40 stacc
+//! c=long i=trill-min2 o=note:31
+70 tr m2
+//! c=long i=trill-maj2 o=note:33
+71 tr M2</p>
+<p>//—————————————————————————-</p>
+<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Bassn”
+Bank 19 5 CWC - Bassn</p>
+<p>//! c=long i=legato o=note:12
+1 sustain
+//! c=short i=marcato-quarter o=note:17
+52 marc
+//! c=short i=tenuto-eighth o=note:16
+50 ten
+//! c=short i=staccato o=note:14
+40 stacc
+//! c=long i=trill-min2 o=note:19
+70 tr m2
+//! c=long i=trill-maj2 o=note:21
+71 tr M2</p>
+<p>//—————————————————————————-</p>
+<p>// KIRK HUNTER CONCERT BRASS LEGACY
+//</p>
+<p>//! g=”Kirk Hunter/Concert Brass Legacy” n=”KH Brass Ens”
+Bank 20 1 KH - Brass Ens</p>
+<p>//! c=long i=legato o=note:97
+1 sustain
+//! c=long i=legato-slurred o=note:101
+20 adagio
+//! c=long i=legato-slurred o=note:98
+21 allegro
+//! c=long i=legato-slurred o=note:99
+28 vivo
+//! c=long i=sfz o=note:102
+49 sfz
+//! c=short i=marcato o=note:100
+52 marc
+//! c=short i=staccato o=note:103
+40 staccato
+//! c=long i=con-sord o=note:104
+7 con sord
+//! c=long i=note-whole o=note:106
+109 senza sord</p>
+<p>And Jason’s notes:</p>
+<p>I’ve finally fixed my MIDI-chasing issue, and I thought I’d share the fruits of my labours. The attached template uses GPO5 as a basis and augments it with CSS, Kirk Hunter Concert Brass 2 and CineWinds Core.</p>
+<p>It’s unlikely most people will have precisely all of those, of course. You could always delete the tracks pertaining to the ones you don’t. Or you could substitute in ones you do, but then you’ll have to do some work on the MIDI note names and Reaticulate banks. The former task is boring rather than difficult and the latter isn’t half as terrifying as it first seems.</p>
+<p>I hope people will get some kind of use out of this, even if they just pick up on some of the methodology.</p>
+<p>Template:
+<a class="reference external" href="https://www.dropbox.com/s/k6fdgngd5b...%20v5.rpp?dl=0">https://www.dropbox.com/s/k6fdgngd5b…%20v5.rpp?dl=0</a></p>
+<p>Reaticulate Reabank File:
+<a class="reference external" href="https://www.dropbox.com/s/ykddubrg91...%20v5.txt?dl=0">https://www.dropbox.com/s/ykddubrg91…%20v5.txt?dl=0</a></p>
+<p>Screengrab:
+<a class="reference external" href="https://www.dropbox.com/s/qzybcq01ng...Temp1.jpg?dl=0">https://www.dropbox.com/s/qzybcq01ng…Temp1.jpg?dl=0</a></p>
+<ul class="simple">
+<li><ul>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>GPO5+CSS+KHB+CWC KS ORCHESTRAL TEMPLATE v5
+Reaticulate Version</p>
+<p>This is a mid to late Romantic-era orchestra, not a kitchen sink epic job.</p>
+<p>THE LIBRARIES</p>
+<ul class="simple">
+<li><p>GARRITAN PERSONAL ORCHESTRA 5</p></li>
+</ul>
+<p>GPO is limited by modern standards (for instance the legato and portamento are scripted not sampled, and most instruments have vibrato baked in) but you can’t fault it on sheer value. It’s more a “concertish” sound than a “filmic” one, but it makes a very good bedrock for any project. Meat and potatoes, and its auto handling of long-short is very intuitive. It also fills in a lot of less common auxiliaries.</p>
+<p>It involves quite a few compromises, but it’s comprehensive, practical and has a minimal hit to resources. It’s ideal for sketching and even full productions, especially if you really get under the hood.</p>
+<ul class="simple">
+<li><p>CINEMATIC STUDIO STRINGS</p></li>
+</ul>
+<p>CSS is a more advanced string library, allowing for more natural sounding sampled legato (among many other things). Its inclusion here is primarily for layering purposes. The workhorse legato and articulation approach of GPO5 can be augmented by doubling the GPO MIDI content in the nested CSS MIDI tracks, creating an overlay for far more realistic performance, as well as variety of tone and more density.</p>
+<p>I’ve used the older Classic Legato patches since they seem to combine with other libraries with less angst over timing.</p>
+<p>CSS has generally brighter and more aggressive performances (a little more in the “filmic” direction). Experimenting with the relative feeds of GPO and CSS (from the purple “container” tracks - see below) can give interesting and different results. For instance, to stay “concertish”, dial in just enough of CSS to give the increased realism. To get brighter and tighter, alter the balance more in favour of CSS. You could of course simply mute out one or the other entirely.</p>
+<p>I find the CSS basses “cut” and “dig” a little too much in this context, so they aren’t included.</p>
+<ul class="simple">
+<li><p>KIRK HUNTER CONCERT BRASS 2</p></li>
+</ul>
+<p>All instruments but the bass trombone are doubled in nested tracks. As opposed to the string sections, I feel these are best used as either/or, but I suppose you could double up (or more) your brass up if you wished.</p>
+<p>Again, the advantage to using these samples is primarily for more sophisticated legato handling and much greater control over articulations. KHCB is brighter and punchier than GPO, but not enough to trouble the overall balance too much.</p>
+<ul class="simple">
+<li><p>CINEWINDS CORE</p></li>
+</ul>
+<p>All major woods are doubled in nested tracks. Again these can be either/or/and. The advantages are the same as with KHCB. Again, this library is punchier than GPO, but combines well with it.</p>
+<p>REATICULATION &amp; KEYSWITCHES</p>
+<p>Jason Tackaberry’s solution to articulation management - flexible, visually appealing and auto-chasing. You’ll need to add the packaged text file to the Reaticulate file in REAPER/Data.</p>
+<p>This version of the template retains the default KS mapping for all libraries. I’ve left them in the MIDI Editor as named notes - they can be useful for translating previous projects to Reaticulate. You can use traditional KSes in conjunction with Reaticulate, but the former won’t always chase properly.</p>
+<p>In general, if you want to simply copy over MIDI items from one library track to another you’ll probably have to do some editing. It shouldn’t be too bad if you use Reatic events though - all but the most unusual map across different sample players, using Spitfire’s UACC standard.</p>
+<p>THE TEMPLATE</p>
+<p>The layout philosophy is simple - when you’re above the line (track panel) you’re a musician, when you’re below (mixer panel) you’re an engineer.</p>
+<p>The template compromises total flexibility in favour of what I’ve found to be practical workflow. For instance, it’s better to control instrument volume in MIDI by sample cross-fades rather than volume, so envelopes for audio tracks aren’t displayed.</p>
+<ul class="simple">
+<li><p>TCP</p></li>
+</ul>
+<p>The Track Panel Master at the top (the real Master) is acting as a sort of “Conductor” track, with visible control over global tempo and volume envelopes.</p>
+<p>The MIDI tracks have preroll items in them to send setup info to the VSTis. These items also include MIDI note name info to display only in-range notes and KSes for each library in MIDI Editor.</p>
+<p>The top control lane clearly displays Reatic bank and program changes. The Editor windows also include cc lanes for cc2 vibrato (where applicable), cc20 portamento (for GPO instruments only), mod wheel and velocity. You can add many more lanes for detailed control, but I’ve found these are the most frequently used.</p>
+<p>Every available instrument is displayed by default, but they can be hidden or deleted if you wish. All Kontakt libraries are pre-purged, so a clean load should come in at a little under 8GB.</p>
+<p>The sections are laid out in traditional score order, but you can move them around. (Note that the MIDI tracks above and Audio tracks below are different entities, so you’ll need to hide, delete or move them in both panels.)</p>
+<ul class="simple">
+<li><p>MCP</p></li>
+</ul>
+<p>The “MASTER FX” track serves as the mix master and contains flat-set EQ and multiband compressor. (The top Master track has the final say over volume, however.) While you can put FX on the Master, this seems to have a bad effect on CPU usage on some systems and “premastering” like this won’t hurt anyway.</p>
+<p>The five blue section tracks labelled “CTRL” (in blue) simply bulk-handle the M, S and fader trim controls of all section audio tracks. The summed audio outputs of all instruments in each section are displayed for visual monitoring purposes.</p>
+<p>The audio track M, S and R controls are master-slaved to the related MIDI tracks. The audio tracks themselves are record-disabled to prevent inadvertent doubling.</p>
+<p>The individual instrument audio tracks contain instances of ReaPitch randomly knocked a few cents sharp and flat (helps with realism and phasing). Second rank instruments (woods and FHs) also have a slight high EQ cut, Third rank instruments (other brass and percussion) have a slightly stronger high EQ cut.</p>
+<p>There are three reverbs - Room, Preverb Rank 2 and Preverb Rank 3 (in black). The instrument tracks are bussed in combination to these to create spacial depth in combination with the per-track EQ cuts.</p>
+<p>The “engine room” is the VSTi “container” tracks (in purple). Instruments are banked here, set to auto-legato, centred and dry. Relative output from all “container” tracks can be faded to taste.</p>
+<p>There is an extra “container” track called GPOFrontDesks. This receives MIDI from the GPO VlnsI, VlnsII, Vlas and Cellos tracks and outputs small sections. It can be faded up to add a little variety and bite to the strings.</p>
+<p>All instruments are sent mono except the General Percussion and String Sections. The strings, although stereo, are centred so you can pan your sections in-DAW while retaining their individual spreads.</p>
+<p>All FX used are stock REAPER ones, for maximum compatibility. You can swap in your favourites, of course.</p>
+<p>Comments, suggestions and bug reports to:
+<a class="reference external" href="mailto:jasonalyon&#37;&#52;&#48;hotmail&#46;com">jasonalyon<span>&#64;</span>hotmail<span>&#46;</span>com</a>
+01/03/18</p>
+</div>
+<div class="section" id="and-dex-opines">
+<h2>And Dex Opines<a class="headerlink" href="#and-dex-opines" title="Permalink to this headline">¶</a></h2>
+<p>I like having different articulations on different midi channels. I have hotkeys set up to change all selected notes to a given midi channel, and I find it quicker to just select the notes whose articulations I want to change and hit a hotkey than drawing a keyswitch command or futzing with a cc command.</p>
+<p>Set up track templates for your instruments you use all the time. (Select any number of tracks, right click, save as track template.) Then you can pull them into any new track when you need them. This is easier on resources than setting up a complete template and is considerably less intimidating as well. I found myself paralyzed for a couple of weeks at one point thinking about how exactly I wanted to set up a full template for writing the kind of music I like to write, until I discovered the power of track templates. I never set up a complete template and I don’t think I ever will. It’s much easier to use track templates for your major instruments and then pull in other instruments from scratch as you need them. Eventually you’ll get your primary track templates pretty well mixed with one another, and it will be pretty straightforward to mix new instruments into the bunch as needed.</p>
+<p>Seriously, I can’t recommend track templates enough.</p>
+</div>
+<div class="section" id="default-using-reaticulate-for-program-changes">
+<h2>Default Using Reaticulate for Program Changes<a class="headerlink" href="#default-using-reaticulate-for-program-changes" title="Permalink to this headline">¶</a></h2>
+<p>Okay. I may be the only one to use it (and indeed there are a few features that are definitely specific to my workflow) but here is a script I’ve built to write to the reaticulate reabank file, so as to interface with reaticulate for selecting program changes. I think it shouldn’t interfere with regular use of reaticulate, but you may have to insure you don’t get multiple banks with the same MSB and LSB…. But if you just want to use reaticulate for preset selection, you shouldn’t ever have to edit the reabank file.</p>
+<p>Basically, you need to open the fx window for the vst you want to select presets for (not the fx chain window, you have to double-click on the fx entry and top its window, or you’ll get an error!) and run the action.</p>
+<p>A window pops up. Here is the full field information:</p>
+<blockquote>
+<div><p>Bank Name: This is just whatever you want to call this bank. Often the VST name, but doesn’t need to be.</p>
+<p>New Bank [yes or no]: Are you creating a new bank, or overwriting an old one? If you are overwriting, make sure your bank name text matches an existing bank, or you’ll get a completely inscrutible error.</p>
+<p>Bank Color [#0x0x0x]: This script will color all the elements in a bank the same. I use the bank color to make sure I’m changing the presets of the correct track.</p>
+<p>Plugin Category [integer 1 to 4]: Mine are 1=Kontakt,2=Reaktor,3=Other Insts,4=Other FX. You can use whatever scheme you like, but there’s only support for 4 categories currently. This becomes the bank MSB. The LSBs are incremented automatically. If you want to avoid conflicts with regular reaticulate banks, just avoid the first 4 MSBs.</p>
+<p>Preset Type [rpl or vst]: Do you want the user RPL’s, or the built-in VST preset list supplied by increasingly-fewer fx designers?</p>
+<p>Filter by Start Text: If you have a ton of presets for an instrument like, say, Kontakt, you can name them with a category first, like ‘PNO-Vienna Grand’. Then if you put ‘PNO-‘ in this field, only those presets that start with that text will be put in the bank, and the filter text itself will be removed. It’s pretty painless to open the .ini for the vst in a text editor and add prefix categories to all your presets in one go…</p>
+<p>Alphabetize? [yes or no]: If you have presets in a specific order, you may not want this, but I think it’s pretty helpful. Be warned that if you have 2 presets with the same name (possible in Reaktor) you’ll only get one entry.</p>
+<p>Empty?: Some VST program lists get padded with empty presets, to fill a bank of 128. In Reaktor these are named ‘&lt;empty&gt;’ and in Guitar Rig they are called ‘no sound’. Put that text in this field, and those presets will not be linked.</p>
+</div></blockquote>
+<p>The script requires ALL the addons. SWS, js (Julian Sader), and ultraschall.</p>
+<p>I think that’s about it. If anyone uses this, let me know, especially if you find any bugs.</p>
+<p>cheers!
+Attached Files
+File Type: lua  convertVSTpresetsToReaticulateBank.lua (9.9 KB, 72 views)
+__________________
+eric moon
+Very Stable Genius
+<a class="reference external" href="https://gogolab.com/">https://gogolab.com/</a></p>
+</div>
+<div class="section" id="writing-these-banks">
+<h2>Writing these Banks<a class="headerlink" href="#writing-these-banks" title="Permalink to this headline">¶</a></h2>
+<p>Originally Posted by jeranx
+<em>Yes, I did overwrite the file, I’ve just clean it and rename properly. I did paste my code into the Reaticulate.reabank. And nothing works.</em></p>
+<p>Looking at your screenshot here, I suppose the reason why nothing works is that your articulations have no output events (o=blah,blah) defined. So when you click on them, nothing will happen because you’ve not assigned any behavior to them.</p>
+<p>So for example while you have:</p>
+<p>Code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=long i=long
+1 long
+</pre></div>
+</div>
+<p>If you compare with one of the factory banks for Spitfire patches (which require the patches be set to UACC mode):</p>
+<p>Code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=long i=note-whole o=cc:32,1
+1 long
+</pre></div>
+</div>
+<p>See the difference? The latter one says “when you activate the long articulation, send CC 32 value 1 on the default channel” while your bank won’t do anything when you click the articulation.</p>
+<p>I appreciate this can be a bit confusing. You might hold off for the GUI that will be coming to make your own banks. It will make this sort of thing a lot easier.</p>
+<p>Edit: Ah, I misunderstood your problem (well, it will be your first problem, considering you’re still missing the output events ) which is that your bank definition starts with “BANK” (uppercase) instead of “Bank”. If Reaper accepts BANK, I consider it a bug in Reaticulate. I’ll check that and fix it if so. Meanwhile, you can just change BANK to Bank and it should show up in the menu.</p>
+<p>Edit 2: and fixed in the just-released 0.3.0.</p>
+</div>
+<div class="section" id="version-0-3-0-notes">
+<h2>Version 0.3.0 Notes<a class="headerlink" href="#version-0-3-0-notes" title="Permalink to this headline">¶</a></h2>
+<p>I’ve just promoted the last prerelease (plus a couple small tweaks) to version 0.3.0.</p>
+<p>This release of Reaticulate focuses on general usability improvements and knocking down those little workflow irritations. Apart from that, there are quite a number of internal structural changes that you don’t see, but will help pave the way for future releases.</p>
+<p>Eh?
+Reaticulate is an articulation management system for REAPER. Check the website for the skinny.</p>
+<div class="section" id="installing">
+<h3>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h3>
+<p>If you’re a new user (not upgrading), just follow these installation instructions.</p>
+</div>
+<div class="section" id="upgrading">
+<h3>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h3>
+<p>For those of you on the release track, you should eventually receive the update, but you can force it by following these instructions. Those using the prerelease track will receive this update as well, plus of course all the prereleases leading up to 0.4.0.</p>
+<p>Here are the changes since 0.2.0:</p>
+</div>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<p>Here are the new features:</p>
+<blockquote>
+<div><p>Articulations are now fed back to control surface (#48)
+CC0/32 bank select indicates bank for articulation
+Articulations can be expressed either as native program change events or custom CC events
+When the js_ReaScriptAPI extension is installed (strongly recommended but not required):
+You can now pin the Reaticulate window when floating
+Some new actions and features become available
+Much improved focusing behavior
+New action “Focus articulation filter” (which works best when the js_ReaScriptAPI extension is installed)
+New action “Activate articulation slot number by CC on default channel” which can be used to activate articulations based on their position in the bank list (#58)
+New action “Insert last activated articulation into MIDI item on default channel” to insert the last activated articulation into MIDI item at edit cursor (same behavior as right clicking the articulation)
+New option “Track section follows focused FX window” (with associated toggle action) (requires js_ReaScriptAPI extension)
+New option “Track selection follows MIDI editor target item” (with associated toggle action)
+This is most conveniently paired with the “Options: MIDI track list/media item lane selection is linked to editability”
+New action “Select last selected track”
+Various new actions to select but not activate articulations, plus an action to activate currently selected articulation (#59)
+Running the action to activate currently selected articulation twice in rapid succession will cause it to insert into MIDI item
+On pages that scroll, scrollbars will appear when the mouse hovers toward the right edge</p>
+</div></blockquote>
+</div>
+<div class="section" id="minor-enhancements">
+<h3>Minor Enhancements<a class="headerlink" href="#minor-enhancements" title="Permalink to this headline">¶</a></h3>
+<p>Added a new “Behaviors” section on Settings page
+Activating an articulation now scrolls it into view in the GUI (#50)
+Improved First Run experience (especially for portable Reaper installations) (#46)
+Minor cosmetic improvements with drag-and-drop to reorder banks on the track configuration page</p>
+</div>
+<div class="section" id="bug-fixes">
+<h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
+<p>Fixed regression in control surface feedback when reopening a project
+Force control surface update on track selection (workaround for <a class="reference external" href="https://forum.cockos.com/showthread.php?p=2077098">https://forum.cockos.com/showthread.php?p=2077098</a>)
+Ensure articulations on same MIDI tick as notes are processed before the notes (#53)
+Other minor fixes</p>
+</div>
+</div>
+<div class="section" id="cc-actions">
+<h2>CC Actions<a class="headerlink" href="#cc-actions" title="Permalink to this headline">¶</a></h2>
+<p>Quote:
+Originally Posted by daeavelwyn View Post
+I’ve tried “Activate selected articulation on default channel” but it just do nothing…I guess it’s mainly because I don’t understand (yet …) how this script works.
+The usage documentation might be of help here. In particular the section on actions.</p>
+<p>The “activate selected articulation” action isn’t intended to be binded to a CC. That’s a discrete action that activates an articulation that’s been selected with one of the “Select” actions. These actions support a workflow where you use a control surface to scroll through the list of articulations and activate one based on the current selection.</p>
+<p>If you want to trigger specific articulations from your controller, I think the action you’ll want to use is “Activate articulation by CC on default channel.” The docs I linked to say a bit more about that.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Robyn Hahn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

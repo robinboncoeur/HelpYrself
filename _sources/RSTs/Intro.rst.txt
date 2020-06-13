@@ -2,9 +2,9 @@
 Introduction
 ############
 
-
-A Quick Note on why "HelpYrself"
-********************************
+******************************
+A Quick Note on why HelpYrself
+******************************
 
 I'm getting old and forgetful and keep reinventing the wheel, searching for answers that I'd already dealt with not all that long ago.
 
@@ -22,5 +22,40 @@ For example: one of the key abilities of LaTeX is to insert math formulae into t
 But I discovered LaTeX (pronounced "Lah-Tek") has an elegant book-making solution, far superior to Word or any of the booklet apps one can find and pay for. So, I got stuck into learning how to use a very powerful book-publishing template called "Memoir". Again, the youtubers put a lot of effort into supporting the maths folk and only gave a glancing nod to the novelists.
 
 Still, there's a lot of crucial stuff in those videos. So, one of the next workflows to fleshing out these "HelpYrself" pages is taking dictation from the videos.
+
+
+*************************
+Reminders of Sphinx Stuff
+*************************
+
+Inline images
+=============
+
+.. image:: http://www.tightbytes.com/Music/CReinecke/CReinecke1890.jpg
+
+
+
+Creating Dotpoints
+==================
+
+Once you've decided:
+
+  * Select A.
+
+  * Select B. 
+
+  * To identify C.
+
+  * Finally, click on D.
+
+
+Note: setting defaults have been arbitrarily set - these have yielded reasonable results. You will almost certainly find better settings, which is the whole point of sharing this.
+
+
+
+Links Management
+================
+
+Blender for Mac users, please refer to the `Mac user help <http://blender.stackexchange.com/questions/6173/where-does-console-output-go>`_ page.
 
 

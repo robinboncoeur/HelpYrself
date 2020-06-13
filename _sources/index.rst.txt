@@ -12,12 +12,17 @@ Can't remember? Help Yourself
 
    RSTs/Intro.rst
    RSTs/Blender.rst
+   RSTs/Composition.rst
    RSTs/Excel.rst
    RSTs/Git.rst
    RSTs/LaTeX.rst
    RSTs/Linux.rst
    RSTs/Mac.rst
+   RSTs/Musescore.rst
    RSTs/Python.rst
+   RSTs/ReaperApp.rst
+   RSTs/ReaperReabanks.rst
+   RSTs/ReaperReaticulate.rst
    RSTs/Video.rst
    RSTs/Windoze.rst
 

@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="My Totally Unofficial Git Help Page" href="Git.html" />
-    <link rel="prev" title="Blender Tips I Keep Forgetting" href="Blender.html" /> 
+    <link rel="prev" title="Resources and Videos" href="Composition.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,6 +82,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Excel 2016 VBA Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#excel-apps-living-documents">Excel Apps - Living Documents</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#project-updates">Project Updates</a></li>
@@ -112,8 +113,13 @@
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
             
@@ -187,18 +193,18 @@
 <p>18.11.15 - I currently have two VBA-based apps I wrote for Queen Elizabeth II Jubilee Hospital in Coopers Plains, QLD. I intend to maintain those apps, which will include:</p>
 <blockquote>
 <div><ul class="simple">
-<li>fixing bugs that testing had not revealed</li>
-<li>adding features as requested</li>
-<li>data management</li>
+<li><p>fixing bugs that testing had not revealed</p></li>
+<li><p>adding features as requested</p></li>
+<li><p>data management</p></li>
 </ul>
 </div></blockquote>
 <p>These apps are CallSheet and AssetMgr. In order to remotely fix bugs, I’m looking at the following strategy:</p>
 <blockquote>
 <div><ul class="simple">
-<li>have users avail themselves of the issues section of the app’s GitHub page</li>
-<li>identify and eradicate bugs, then test the latest version of the app in my possession</li>
-<li>publish the code on the GitHub page</li>
-<li>have the user insert the fixed code into their version of the app</li>
+<li><p>have users avail themselves of the issues section of the app’s GitHub page</p></li>
+<li><p>identify and eradicate bugs, then test the latest version of the app in my possession</p></li>
+<li><p>publish the code on the GitHub page</p></li>
+<li><p>have the user insert the fixed code into their version of the app</p></li>
 </ul>
 </div></blockquote>
 <p>The last part of the strategy will need to be assessed for feasibility, as a lot will depend on the end-user’s willingness to dig into the code side of the app. This is a significant variable to consider.</p>
@@ -240,9 +246,9 @@
 <p>Variable have a specific type:</p>
 <blockquote>
 <div><ul class="simple">
-<li>strings - letters or numeric characters with which no math is to be performed</li>
-<li>numbers - integers (whole numbers) or doubles (can have decimal values)</li>
-<li>booleans - True or False</li>
+<li><p>strings - letters or numeric characters with which no math is to be performed</p></li>
+<li><p>numbers - integers (whole numbers) or doubles (can have decimal values)</p></li>
+<li><p>booleans - True or False</p></li>
 </ul>
 </div></blockquote>
 <p>There are other types, but these are the main ones. I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this approach, nor even with how I use the prefix. For example, my integers <strong>should</strong> probably be prefaced with an ‘i’, but as a hold-over from my FoxPro days I use the letter ‘n’. Anyway, the ‘s’ in the variable name ‘sImagePath’ indicates the value will be a string that will define the path to the image.</p>
@@ -272,6 +278,22 @@
   <span class="k">End</span> <span class="k">With</span>
   <span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">).</span><span class="n">Select</span>
 <span class="k">End</span> <span class="k">Function</span>
+</pre></div>
+</div>
+<p><strong>This is now obsolete</strong>. The better approach takes place within the code that needs to know what the record count of your range is, so you use a “Range” object thus:</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span> <span class="k">Sub</span> <span class="nf">SomeSub</span><span class="p">(</span><span class="n">dVal</span> <span class="ow">as</span> <span class="kt">Double</span><span class="p">)</span>
+  <span class="k">Dim</span> <span class="n">rRng</span> <span class="ow">as</span> <span class="n">Range</span>
+  <span class="k">Dim</span> <span class="n">dRecCount</span> <span class="ow">as</span> <span class="kt">Double</span>
+
+  <span class="k">Set</span> <span class="n">rRng</span> <span class="o">=</span> <span class="n">WkStName</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">CurrentRegion</span>
+  <span class="n">dRecCount</span> <span class="o">=</span> <span class="n">rRng</span><span class="p">.</span><span class="n">Rows</span><span class="p">.</span><span class="n">Count</span>  <span class="c">&#39; Probably will not need this anymore anyway</span>
+
+  <span class="k">With</span> <span class="n">WkStName</span>
+    <span class="c">&#39; Process stuff here</span>
+  <span class="k">End</span> <span class="k">With</span>
+
+  <span class="k">Set</span> <span class="n">rRng</span> <span class="o">=</span> <span class="k">Nothing</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </pre></div>
 </div>
 </div>
@@ -421,13 +443,13 @@
 <p>The checking account entries are not consistent in structure, thus rules have been developed in the MetaDefs sheet. Roughly, the approach runs in a Do While which will continue if the string suffix is “~C”, waits for a “~D” suffix (Done) to end loop:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>The first pass: look for 1st 10 chars in col-Y. There will be a 2nd pass.</li>
-<li>Truncate the entry by the value in col-Z, return to Do While</li>
-<li>The second pass: look for 1st 4 chars in col-AC. Check in col-AF for “Y”.</li>
-<li>If col-AF is a “Y”, truncate entry by value in col-AD, else use code in col-AE.</li>
-<li>The third pass: look for 1st 4 chars in col-AG. Check in col-AJ for “Y”.</li>
-<li>If col-AJ is a “Y”, truncate entry by value in col-AH, else use code in col-AI.</li>
-<li>The fourth pass: look for entire string in col-AK. Col-AN wil have code.</li>
+<li><p>The first pass: look for 1st 10 chars in col-Y. There will be a 2nd pass.</p></li>
+<li><p>Truncate the entry by the value in col-Z, return to Do While</p></li>
+<li><p>The second pass: look for 1st 4 chars in col-AC. Check in col-AF for “Y”.</p></li>
+<li><p>If col-AF is a “Y”, truncate entry by value in col-AD, else use code in col-AE.</p></li>
+<li><p>The third pass: look for 1st 4 chars in col-AG. Check in col-AJ for “Y”.</p></li>
+<li><p>If col-AJ is a “Y”, truncate entry by value in col-AH, else use code in col-AI.</p></li>
+<li><p>The fourth pass: look for entire string in col-AK. Col-AN wil have code.</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -445,7 +467,7 @@
         <a href="Git.html" class="btn btn-neutral float-right" title="My Totally Unofficial Git Help Page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Blender.html" class="btn btn-neutral" title="Blender Tips I Keep Forgetting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Composition.html" class="btn btn-neutral" title="Resources and Videos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -476,10 +498,10 @@
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
 
   

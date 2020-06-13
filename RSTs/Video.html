@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Python including Pip" href="Python.html" /> 
+    <link rel="next" title="Reluctantly, Windows" href="Windoze.html" />
+    <link rel="prev" title="Reaticulate - Reabanks Development" href="Reaticulate.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -80,15 +81,27 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExcelApps.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Video Processing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#short-hopefully-helpful-videos">Short, Hopefully Helpful Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ffmpeg">FFMPEG</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#concatenating-files">Concatenating Files</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-display-a-video">How to display a Video</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
             
@@ -155,11 +168,65 @@
             
   <div class="section" id="video-processing">
 <h1>Video Processing<a class="headerlink" href="#video-processing" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="short-hopefully-helpful-videos">
-<h2>Short, Hopefully Helpful Videos<a class="headerlink" href="#short-hopefully-helpful-videos" title="Permalink to this headline">¶</a></h2>
-<p><strong>Exporting a simple figure from Poser</strong></p>
-<img alt="http://www.tightbytes.com/Blender/InstrVideos/FigShadImg01b.png" src="http://www.tightbytes.com/Blender/InstrVideos/FigShadImg01b.png" />
-<iframe width="640" height="360" src="http://www.tightbytes.com/Blender/InstrVideos/FigShader060-01b.mp4" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="ffmpeg">
+<h2>FFMPEG<a class="headerlink" href="#ffmpeg" title="Permalink to this headline">¶</a></h2>
+<p>These scripts allow commandline processing of audio and video files. FFMPEG must be installed on your PC and accessible from the commandline processor.</p>
+<div class="section" id="concatenating-files">
+<h3>Concatenating Files<a class="headerlink" href="#concatenating-files" title="Permalink to this headline">¶</a></h3>
+<p>Copy and paste this script template into a plain text document, save as an .sh file and make it executable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat mylist.txt
+file &#39;/path/to/file1&#39;
+file &#39;/path/to/file2&#39;
+file &#39;/path/to/file3&#39;
+
+$ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
+</pre></div>
+</div>
+<p>Note: <em>had to change things a bit to get rid of a problem with non-monotonous DTS in output stream issues, based on a suggestion made on StackExchange. First, rename the long file name (e.g., NT66B REVELATION-DSgtRXWSzBg.f136.mp4) to a generic shorter name (NTb.mp4).</em></p>
+<p>So, convert the .mp4 files to .MTS in Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">NTb</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">q</span> <span class="mi">0</span> <span class="n">NTb</span><span class="o">.</span><span class="n">MTS</span>
+</pre></div>
+</div>
+<p>I made the appropriate changes to the input file (DesVids.txt):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="s1">&#39;./Rev/NTa.MTS&#39;</span>
+<span class="n">file</span> <span class="s1">&#39;./Rev/NTb.MTS&#39;</span>
+<span class="n">file</span> <span class="s1">&#39;./Rev/NTc.MTS&#39;</span>
+</pre></div>
+</div>
+<p>Fortunately, FFMPEG was fine to turn this straight into an MP4 (albeit a rather large one) in the script file DesFordConcat.sh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">concat</span> <span class="o">-</span><span class="n">safe</span> <span class="mi">0</span> <span class="o">-</span><span class="n">i</span> <span class="n">DesVids</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">c</span> <span class="n">copy</span> <span class="n">Revelation66</span><span class="o">.</span><span class="n">mp4</span>
+</pre></div>
+</div>
+<p>This output a perfect video. However, it was still a bit time-consuming. The final script still needs work, but is a significant improvement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># DesFordConcat3.sh</span>
+<span class="c1"># Concatenates MTS files into 1 file, then converts that to mp4</span>
+<span class="c1"># WARNING: conversion takes ages - e.g., upwards of 40mins for 2.4 gig file - in</span>
+<span class="c1">#          Handbrake, VLC and FFMPEG. Which is why I went to veryfast instead of slow.</span>
+<span class="c1"># USAGE: ./DesFordConcat.h xx (where xx is the file number, e.g., 66) [3]</span>
+<span class="c1"># Robyn Hahn - 06/Jun/2020</span>
+<span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$1&quot;</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="p">];</span> <span class="n">then</span>
+    <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTa</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">q</span> <span class="mi">0</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTa</span><span class="o">.</span><span class="n">MTS</span>
+    <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTb</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">q</span> <span class="mi">0</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTb</span><span class="o">.</span><span class="n">MTS</span>
+    <span class="k">if</span> <span class="p">[</span> <span class="s2">&quot;$2&quot;</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span> <span class="p">];</span> <span class="n">then</span>
+        <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTc</span><span class="o">.</span><span class="n">mp4</span> <span class="o">-</span><span class="n">q</span> <span class="mi">0</span> <span class="o">./</span><span class="n">Rev</span><span class="o">/</span><span class="n">NTc</span><span class="o">.</span><span class="n">MTS</span>
+        <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">concat</span> <span class="o">-</span><span class="n">safe</span> <span class="mi">0</span> <span class="o">-</span><span class="n">i</span> <span class="n">DesVids3</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">c</span> <span class="n">copy</span> <span class="n">NT</span><span class="o">.</span><span class="n">MTS</span>
+    <span class="k">else</span>
+        <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">f</span> <span class="n">concat</span> <span class="o">-</span><span class="n">safe</span> <span class="mi">0</span> <span class="o">-</span><span class="n">i</span> <span class="n">DesVids</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">c</span> <span class="n">copy</span> <span class="n">NT</span><span class="o">.</span><span class="n">MTS</span>
+    <span class="n">fi</span>
+    <span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">NT</span><span class="o">.</span><span class="n">MTS</span> <span class="o">-</span><span class="n">c</span><span class="p">:</span><span class="n">a</span> <span class="n">copy</span> <span class="o">-</span><span class="n">c</span><span class="p">:</span><span class="n">v</span> <span class="n">libx264</span> <span class="o">-</span><span class="n">preset</span> <span class="n">veryfast</span> <span class="o">-</span><span class="n">crf</span> <span class="mi">18</span> <span class="o">-</span><span class="n">f</span> <span class="n">mp4</span> <span class="s2">&quot;Revelation$</span><span class="si">{1}</span><span class="s2">.mp4&quot;</span>
+<span class="k">else</span>
+    <span class="n">echo</span> <span class="s2">&quot;Positional parameter 1 is empty&quot;</span>
+<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-display-a-video">
+<h2>How to display a Video<a class="headerlink" href="#how-to-display-a-video" title="Permalink to this headline">¶</a></h2>
+<p><strong>Template for displaying a video in Sphinx</strong></p>
+<img alt="http://www.mysite.com/mypath/myimage.png" src="http://www.mysite.com/mypath/myimage.png" />
+<iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
 
@@ -170,8 +237,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="Windoze.html" class="btn btn-neutral float-right" title="Reluctantly, Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="Python.html" class="btn btn-neutral" title="Python including Pip" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="Reaticulate.html" class="btn btn-neutral" title="Reaticulate - Reabanks Development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -202,10 +271,10 @@
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
 
   

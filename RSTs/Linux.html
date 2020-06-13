@@ -82,6 +82,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
@@ -104,8 +105,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
             
@@ -222,35 +228,35 @@
 <p>Launch PyCharm. Then:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Click File</li>
-<li>Click Settings</li>
-<li>Click project Interpreter</li>
-<li>Click cogwheel next to the Project Interpreter field, and choose Add…</li>
-<li>New environment is the default selection.</li>
-<li>Type kivyinstall for the Location e.g. /home/iam/.virtualenvs/kivyinstall</li>
-<li>Select Base interpreter (Python 3.5, or Python 2.7) from the drop down</li>
-<li>Do not select the Inherit global site-packages check-box.</li>
-<li>Select the Make available to all projects check-box, if needed.</li>
-<li>Click OK</li>
+<li><p>Click File</p></li>
+<li><p>Click Settings</p></li>
+<li><p>Click project Interpreter</p></li>
+<li><p>Click cogwheel next to the Project Interpreter field, and choose Add…</p></li>
+<li><p>New environment is the default selection.</p></li>
+<li><p>Type kivyinstall for the Location e.g. /home/iam/.virtualenvs/kivyinstall</p></li>
+<li><p>Select Base interpreter (Python 3.5, or Python 2.7) from the drop down</p></li>
+<li><p>Do not select the Inherit global site-packages check-box.</p></li>
+<li><p>Select the Make available to all projects check-box, if needed.</p></li>
+<li><p>Click OK</p></li>
 </ul>
 </div></blockquote>
 <p>After pip and setuptools have been installed:</p>
 <blockquote>
 <div><ul class="simple">
-<li>click + beside the column heading, Latest.</li>
-<li>Type cython in the search text input box under Available Packages Dialog.</li>
-<li>Select Specify version check-box to load version 0.25.2 which is compatible to Kivy version 1.10.0</li>
-<li>Click Install Package button.</li>
-<li>After cython 0.25.2 version installed successfully, type kivy in the search text input box under Available Packages Dialog.</li>
-<li>Click Install Package</li>
+<li><p>click + beside the column heading, Latest.</p></li>
+<li><p>Type cython in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Select Specify version check-box to load version 0.25.2 which is compatible to Kivy version 1.10.0</p></li>
+<li><p>Click Install Package button.</p></li>
+<li><p>After cython 0.25.2 version installed successfully, type kivy in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Click Install Package</p></li>
 </ul>
 </div></blockquote>
 <p>After kivy installed successfully, create a new project.
 Opened a new project. If kivyinstall did not appear in the expanded External Libraries:</p>
 <blockquote>
 <div><ul class="simple">
-<li>click File » Settings… » Project Interpreter</li>
-<li>select Python…(kivyinstall) e.g. Python 3.5 (kivyinstall)</li>
+<li><p>click File » Settings… » Project Interpreter</p></li>
+<li><p>select Python…(kivyinstall) e.g. Python 3.5 (kivyinstall)</p></li>
 </ul>
 </div></blockquote>
 <a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
@@ -275,7 +281,8 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
 </div>
 <p>In mint, an error occurred with the above command:</p>
 <blockquote>
-<div>This revision of snap “brackets” was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk</div></blockquote>
+<div><p>This revision of snap “brackets” was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk</p>
+</div></blockquote>
 <p>This can be rectified by adding –classic:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span> <span class="o">--</span><span class="n">classic</span>
 </pre></div>
@@ -348,10 +355,10 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
     
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
 
   
