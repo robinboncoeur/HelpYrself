@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reaticulate - Reabanks Development" href="ReaperReaticulate.html" />
+    <link rel="prev" title="Reaper" href="ReaperApp.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -77,7 +79,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
@@ -88,6 +90,29 @@
 <li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">A Discussion on Reabanks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-they-work">How They Work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#an-observation">An Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jason-lyon-s-approach">Jason Lyon’s Approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jason-s-notes">Jason’s notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#and-dex-opines">And Dex Opines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-using-reaticulate-for-program-changes">Default Using Reaticulate for Program Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-these-banks">Writing these Banks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#originally-posted-by-jeranx">Originally Posted by jeranx</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-3-0-notes">Version 0.3.0 Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing">Installing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrading">Upgrading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-features">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minor-enhancements">Minor Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
@@ -158,37 +183,36 @@
 <h1>A Discussion on Reabanks<a class="headerlink" href="#a-discussion-on-reabanks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="how-they-work">
 <h2>How They Work<a class="headerlink" href="#how-they-work" title="Permalink to this headline">¶</a></h2>
-<p>The reabank file should look something like this when you’ve finished editing:</p>
-<p>Here’s what I’ve come up with for Embertone’s Fischer Viola:</p>
-<p>//—————————————————————————-
-//! g=”Embertone/Fischer Viola” n=”Fischer Viola”
-//! m=”Embertone Fischer Viola 1.0”
+<p>The reabank file should look something like this when you’ve finished editing. Here’s what I’ve come up with for Embertone’s Fischer Viola:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//----------------------------------
+//! g=&quot;Embertone/Fischer Viola&quot; n=&quot;Fischer Viola&quot;
+//! m=&quot;Embertone Fischer Viola 1.0&quot;
 Bank 37 10 Embertone - Viola
-//! c=textured i=vibrato g=2 n=”default vibrato” o=note:27
+//! c=textured i=vibrato g=2 n=&quot;default vibrato&quot; o=note:27
 27 vib default
-//! c=textured i=vibrato g=2 n=”progressive vibrato” o=note:28
+//! c=textured i=vibrato g=2 n=&quot;progressive vibrato&quot; o=note:28
 28 vib prog
-//! c=textured i=vibrato g=2 n=”open string vibrato” o=note:29
+//! c=textured i=vibrato g=2 n=&quot;open string vibrato&quot; o=note:29
 29 vib open
-//! c=textured i=vibrato g=2 n=”gentle vibrato” o=note:30
+//! c=textured i=vibrato g=2 n=&quot;gentle vibrato&quot; o=note:30
 30 vib gentle
-//! c=textured i=vibrato g=2 n=”passionate vibrato” o=note:31
+//! c=textured i=vibrato g=2 n=&quot;passionate vibrato&quot; o=note:31
 31 vib passion
-//! c=default i=note-whole g=3 n=”sord/sul off” o=note:43/note:42
+//! c=default i=note-whole g=3 n=&quot;sord/sul off&quot; o=note:43/note:42
 43 sord-sul off
-//! c=default i=con-sord g=3 n=”con sord” o=note:41/note:43
+//! c=default i=con-sord g=3 n=&quot;con sord&quot; o=note:41/note:43
 41 con sord
-//! c=default i=sul-pont g=3 n=”sul pont” o=note:42/note:44
+//! c=default i=sul-pont g=3 n=&quot;sul pont&quot; o=note:42/note:44
 44 sul pont
-//! c=default i=sul-tasto g=3 n=”sul tasto” o=note:42/note:45
+//! c=default i=sul-tasto g=3 n=&quot;sul tasto&quot; o=note:42/note:45
 45 sul tasto
-//! c=default i=sul-pont g=3 n=”sul pont/con sord” o=note:41/note:44
+//! c=default i=sul-pont g=3 n=&quot;sul pont/con sord&quot; o=note:41/note:44
 48 cs sul pont
-//! c=default i=sul-tasto g=3 n=”sul tasto/con sord” o=note:41/note:45
+//! c=default i=sul-tasto g=3 n=&quot;sul tasto/con sord&quot; o=note:41/note:45
 49 cs sul tasto
-//! c=fx i=bow-up g=4 n=”color on” o=note:33
+//! c=fx i=bow-up g=4 n=&quot;color on&quot; o=note:33
 33 color on
-//! c=fx i=bow-down g=4 n=”color off” o=note:34
+//! c=fx i=bow-down g=4 n=&quot;color off&quot; o=note:34
 34 color off
 //! c=long i=note-whole o=note:36
 36 sustain
@@ -198,7 +222,9 @@ Bank 37 10 Embertone - Viola
 39 pizz
 //! c=short-dark i=tremolo o=note:40
 40 tremolo
-//—————————————————————————-</p>
+//----------------------------------
+</pre></div>
+</div>
 </div>
 <div class="section" id="an-observation">
 <h2>An Observation<a class="headerlink" href="#an-observation" title="Permalink to this headline">¶</a></h2>
@@ -217,15 +243,19 @@ Bank 37 10 Embertone - Viola
 </div>
 <div class="section" id="jason-lyon-s-approach">
 <h2>Jason Lyon’s Approach<a class="headerlink" href="#jason-lyon-s-approach" title="Permalink to this headline">¶</a></h2>
-<p>// GPO5 MOST USED
-//</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Violins”
-Bank 16 1 GPO5 - Violins</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:36
+<p>This reabank is for the Garritan Personal Orchestra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// GPO5 MOST USED
+//
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Violins&quot;
+Bank 16 1 GPO5 - Violins
+
+//! c=legato i=legato g=2 o=cc:102,64/note:36
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:36
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:36
+19 leg off
+
+//! c=long i=legato-slurred o=note:36
 1 sustain
 //! c=long i=legato-bowed2 o=note:38
 21 auto alt
@@ -240,23 +270,28 @@ Bank 16 1 GPO5 - Violins</p>
 //! c=long i=trill-min2 o=note:45
 70 tr m2
 //! c=long i=trill-maj2 o=note:47
-71 tr M2</p>
-<p>//! c=long-light i=con-sord o=note:37
+71 tr M2
+
+//! c=long-light i=con-sord o=note:37
 7 sust cs
 //! c=long-light i=tremolo-con-sord o=note:42
 12 trem cs
 //! c=long-light i=trill-min2 o=note:44
 44 tr m2 cs
 //! c=long-light i=trill-maj2 o=note:46
-46 tr M2 cs</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Violas”
-Bank 16 2 GPO5 - Violas</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:36
+46 tr M2 cs
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Violas&quot;
+Bank 16 2 GPO5 - Violas
+
+//! c=legato i=legato g=2 o=cc:102,64/note:36
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:36
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:36
+19 leg off
+
+//! c=long i=legato-slurred o=note:36
 1 sustain
 //! c=long i=legato-bowed2 o=note:38
 21 auto alt
@@ -271,23 +306,28 @@ Bank 16 2 GPO5 - Violas</p>
 //! c=long i=trill-min2 o=note:45
 70 tr m2
 //! c=long i=trill-maj2 o=note:47
-71 tr M2</p>
-<p>//! c=long-light i=con-sord o=note:37
+71 tr M2
+
+//! c=long-light i=con-sord o=note:37
 7 sus cs
 //! c=long-light i=tremolo-con-sord o=note:42
 12 trem cs
 //! c=long-light i=trill-min2 o=note:44
 44 tr m2 cs
 //! c=long-light i=trill-maj2 o=note:46
-46 tr M2 cs</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Cellos”
-Bank 16 3 GPO5 - Cellos</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:24
+46 tr M2 cs
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Cellos&quot;
+Bank 16 3 GPO5 - Cellos
+
+//! c=legato i=legato g=2 o=cc:102,64/note:24
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:24
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:24
+19 leg off
+
+//! c=long i=legato-slurred o=note:24
 1 sustain
 //! c=long i=legato-bowed2 o=note:26
 21 auto alt
@@ -302,23 +342,28 @@ Bank 16 3 GPO5 - Cellos</p>
 //! c=long i=trill-min2 o=note:33
 70 tr m2
 //! c=long i=trill-maj2 o=note:35
-71 tr M2</p>
-<p>//! c=long-light i=con-sord o=note:25
+71 tr M2
+
+//! c=long-light i=con-sord o=note:25
 7 sus cs
 //! c=long-light i=tremolo-con-sord o=note:30
 12 trem cs
 //! c=long-light i=trill-min2 o=note:32
 44 tr m2 cs
 //! c=long-light i=trill-maj2 o=note:34
-46 tr M2 cs</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Basses”
-Bank 16 4 GPO5 - Basses</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+46 tr M2 cs
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Basses&quot;
+Bank 16 4 GPO5 - Basses
+
+//! c=legato i=legato g=2 o=cc:102,64/note:12
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:12
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:12
+19 leg off
+
+//! c=long i=legato-slurred o=note:12
 1 sustain
 //! c=long i=legato-bowed2 o=note:14
 21 auto alt
@@ -329,72 +374,98 @@ Bank 16 4 GPO5 - Basses</p>
 //! c=short-light i=pizz o=note:17
 56 pizz
 //! c=long-dark i=tremolo o=note:19
-11 trem</p>
-<p>//! c=long-light i=con-sord o=note:13
+11 trem
+
+//! c=long-light i=con-sord o=note:13
 7 sus cs
 //! c=long-light i=tremolo-con-sord o=note:18
-12 trem cs</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO FrHn”
-Bank 17 1 GPO5 - FHn</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:24
+12 trem cs
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO FrHn&quot;
+Bank 17 1 GPO5 - FHn
+
+//! c=legato i=legato g=2 o=cc:102,64/note:24
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:24
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:24
+19 leg off
+
+//! c=long i=legato-slurred o=note:24
 1 sustain
 //! c=long-light i=con-sord o=note:26
-7 mute</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Tpt”
-Bank 17 2 GPO5 - Tpt</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:48
+7 mute
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Tpt&quot;
+Bank 17 2 GPO5 - Tpt
+
+//! c=legato i=legato g=2 o=cc:102,64/note:48
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:48
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:48
+19 leg off
+
+//! c=long i=legato-slurred o=note:48
 1 sustain
 //! c=long-light i=con-sord o=note:50
-7 mute</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Tbn”
-Bank 17 3 GPO5 - Tbn</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+7 mute
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Tbn&quot;
+Bank 17 3 GPO5 - Tbn
+
+//! c=legato i=legato g=2 o=cc:102,64/note:12
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:12
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:12
+19 leg off
+
+//! c=long i=legato-slurred o=note:12
 1 sustain
 //! c=short i=marcato o=note:14
 55 marc
 //! c=short i=staccato o=note:16
-59 stacc</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Tuba”
-Bank 17 4 GPO5 - Tuba</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64/note:12
+59 stacc
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Tuba&quot;
+Bank 17 4 GPO5 - Tuba
+
+//! c=legato i=legato g=2 o=cc:102,64/note:12
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0/note:12
-19 leg off</p>
-<p>//! c=long i=legato-slurred o=note:12
+19 leg off
+
+//! c=long i=legato-slurred o=note:12
 1 sustain
 //! c=short i=marcato o=note:14
 55 marc
 //! c=short i=staccato o=note:16
-59 stacc</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Garritan/GPO5” n=”GPO Woods”
-Bank 17 5 GPO5 - Woods</p>
-<p>//! c=legato i=legato g=2 o=cc:102,64
+59 stacc
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Garritan/GPO5&quot; n=&quot;GPO Woods&quot;
+Bank 17 5 GPO5 - Woods
+
+//! c=legato i=legato g=2 o=cc:102,64
 20 leg on
 //! c=legato i=note-whole g=2 o=cc:102,0
-19 leg off</p>
-<p>//—————————————————————————-</p>
-<p>// KIRK HUNTER CONCERT BRASS 2
-//</p>
-<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Fr Horn”
-Bank 18 1 KH - FrHn</p>
-<p>//! c=long i=legato o=note:85
+19 leg off
+</pre></div>
+</div>
+<p>And then, for the Cinewind and Kirk Hunter libraries:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//----------------------------------------------------------------------------
+
+// KIRK HUNTER CONCERT BRASS 2
+//
+
+//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Fr Horn&quot;
+Bank 18 1 KH - FrHn
+
+//! c=long i=legato o=note:85
 1 sustain
 //! c=long i=legato-slurred o=note:89
 2 adagio
@@ -405,21 +476,26 @@ Bank 18 1 KH - FrHn</p>
 //! c=short i=marcato o=note:88
 54 acc ff
 //! c=short i=staccato o=note:90
-59 stacc</p>
-<p>//! c=short-dark i=rip o=note:23
-100 rip</p>
-<p>//! c=fx g=2 i=fx o=note:30
+59 stacc
+
+//! c=short-dark i=rip o=note:23
+100 rip
+
+//! c=fx g=2 i=fx o=note:30
 106 solo
 //! c=fx g=2 i=fx o=note:29
 107 a2
 //! c=fx g=2 i=fx o=note:28
 108 a4
 //! c=fx g=2 i=fx o-note:27
-109 a8</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tpt”
-Bank 18 2 KH - Tpt</p>
-<p>//! c=long i=legato o=note:25
+109 a8
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tpt&quot;
+Bank 18 2 KH - Tpt
+
+//! c=long i=legato o=note:25
 1 sustain
 //! c=long i=legato-slurred o=note:29
 2 adagio
@@ -430,19 +506,24 @@ Bank 18 2 KH - Tpt</p>
 //! c=short i=marcato o=note:28
 54 acc ff
 //! c=short i=staccato o=note:30
-40 stacc</p>
-<p>//! c=short-dark i=rip o=note:23
-100 rip</p>
-<p>//! c=fx g=2 i=fx o=note:42
+40 stacc
+
+//! c=short-dark i=rip o=note:23
+100 rip
+
+//! c=fx g=2 i=fx o=note:42
 106 solo
 //! c=fx g=2 i=fx o=note:41
 107 a2
 //! c=fx g=2 i=fx o=note:40
-108 a4</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tbn”
-Bank 18 3 KH - Tbn</p>
-<p>//! c=long i=legato o=note:85
+108 a4
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tbn&quot;
+Bank 18 3 KH - Tbn
+
+//! c=long i=legato o=note:85
 1 sustain
 //! c=long i=legato-slurred o=note:89
 2 adagio
@@ -453,21 +534,26 @@ Bank 18 3 KH - Tbn</p>
 //! c=short i=marcato o=note:88
 54 acc ff
 //! c=short i=staccato o=note:90
-40 stacc</p>
-<p>//! c=short-dark i=rip o=note:23
-100 rip</p>
-<p>//! c=fx g=2 i=fx o=note:30
+40 stacc
+
+//! c=short-dark i=rip o=note:23
+100 rip
+
+//! c=fx g=2 i=fx o=note:30
 106 solo
 //! c=fx g=2 i=fx o=note:29
 107 a2
 //! c=fx g=2 i=fx o=note:28
 108 a4
 //! c=fx g=2 i=fx o-note:27
-109 a8</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Kirk Hunter/Concert Brass 2” n=”KH Tuba”
-Bank 18 4 KH - Tuba</p>
-<p>//! c=long i=legato o=note:85
+109 a8
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tuba&quot;
+Bank 18 4 KH - Tuba
+
+//! c=long i=legato o=note:85
 1 sustain
 //! c=long i=legato-slurred o=note:89
 2 adagio
@@ -478,13 +564,17 @@ Bank 18 4 KH - Tuba</p>
 //! c=short i=marcato o=note:88
 54 acc ff
 //! c=short i=staccato o=note:90
-40 stacc</p>
-<p>//—————————————————————————-</p>
-<p>// CineWinds Core
-//</p>
-<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Piccolo”
-Bank 19 1 CWC - Piccolo</p>
-<p>//! c=long i=legato o=note:36
+40 stacc
+
+//----------------------------------------------------------------------------
+
+// CineWinds Core
+//
+
+//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Piccolo&quot;
+Bank 19 1 CWC - Piccolo
+
+//! c=long i=legato o=note:36
 1 sustain
 //! c=short i=marcato-quarter o=note:41
 52 marc
@@ -495,11 +585,14 @@ Bank 19 1 CWC - Piccolo</p>
 //! c=long i=trill-min2 o=note:43
 70 tr m2
 //! c=long i=trill-maj2 o=note:45
-71 tr M2</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Flt”
-Bank 19 2 CWC - Flt</p>
-<p>//! c=long i=legato o=note:36
+71 tr M2
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Flt&quot;
+Bank 19 2 CWC - Flt
+
+//! c=long i=legato o=note:36
 1 sustain
 //! c=short i=marcato-quarter o=note:41
 52 marc
@@ -510,11 +603,14 @@ Bank 19 2 CWC - Flt</p>
 //! c=long i=trill-min2 o=note:43
 70 tr m2
 //! c=long i=trill-maj2 o=note:45
-71 tr M2</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Oboe”
-Bank 19 3 CWC - Oboe</p>
-<p>//! c=long i=legato o=note:36
+71 tr M2
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Oboe&quot;
+Bank 19 3 CWC - Oboe
+
+//! c=long i=legato o=note:36
 1 sustain
 //! c=short i=marcato-quarter o=note:41
 52 marc
@@ -525,11 +621,14 @@ Bank 19 3 CWC - Oboe</p>
 //! c=long i=trill-min2 o=note:43
 70 tr m2
 //! c=long i=trill-maj2 o=note:45
-71 tr M2</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Clnt”
-Bank 19 4 CWC - Clnt</p>
-<p>//! c=long i=legato o=note:24
+71 tr M2
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Clnt&quot;
+Bank 19 4 CWC - Clnt
+
+//! c=long i=legato o=note:24
 1 sustain
 //! c=short i=marcato-quarter o=note:29
 52 marc
@@ -540,11 +639,14 @@ Bank 19 4 CWC - Clnt</p>
 //! c=long i=trill-min2 o=note:31
 70 tr m2
 //! c=long i=trill-maj2 o=note:33
-71 tr M2</p>
-<p>//—————————————————————————-</p>
-<p>//! g=”Cinesamples/Cinewinds Core” n=”CWC Bassn”
-Bank 19 5 CWC - Bassn</p>
-<p>//! c=long i=legato o=note:12
+71 tr M2
+
+//----------------------------------------------------------------------------
+
+//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Bassn&quot;
+Bank 19 5 CWC - Bassn
+
+//! c=long i=legato o=note:12
 1 sustain
 //! c=short i=marcato-quarter o=note:17
 52 marc
@@ -555,13 +657,18 @@ Bank 19 5 CWC - Bassn</p>
 //! c=long i=trill-min2 o=note:19
 70 tr m2
 //! c=long i=trill-maj2 o=note:21
-71 tr M2</p>
-<p>//—————————————————————————-</p>
-<p>// KIRK HUNTER CONCERT BRASS LEGACY
-//</p>
-<p>//! g=”Kirk Hunter/Concert Brass Legacy” n=”KH Brass Ens”
-Bank 20 1 KH - Brass Ens</p>
-<p>//! c=long i=legato o=note:97
+71 tr M2
+
+
+//----------------------------------------------------------------------------
+
+// KIRK HUNTER CONCERT BRASS LEGACY
+//
+
+//! g=&quot;Kirk Hunter/Concert Brass Legacy&quot; n=&quot;KH Brass Ens&quot;
+Bank 20 1 KH - Brass Ens
+
+//! c=long i=legato o=note:97
 1 sustain
 //! c=long i=legato-slurred o=note:101
 20 adagio
@@ -578,8 +685,12 @@ Bank 20 1 KH - Brass Ens</p>
 //! c=long i=con-sord o=note:104
 7 con sord
 //! c=long i=note-whole o=note:106
-109 senza sord</p>
-<p>And Jason’s notes:</p>
+109 senza sord
+</pre></div>
+</div>
+</div>
+<div class="section" id="jason-s-notes">
+<h2>Jason’s notes<a class="headerlink" href="#jason-s-notes" title="Permalink to this headline">¶</a></h2>
 <p>I’ve finally fixed my MIDI-chasing issue, and I thought I’d share the fruits of my labours. The attached template uses GPO5 as a basis and augments it with CSS, Kirk Hunter Concert Brass 2 and CineWinds Core.</p>
 <p>It’s unlikely most people will have precisely all of those, of course. You could always delete the tracks pertaining to the ones you don’t. Or you could substitute in ones you do, but then you’ll have to do some work on the MIDI note names and Reaticulate banks. The former task is boring rather than difficult and the latter isn’t half as terrifying as it first seems.</p>
 <p>I hope people will get some kind of use out of this, even if they just pick up on some of the methodology.</p>
@@ -687,8 +798,9 @@ Very Stable Genius
 </div>
 <div class="section" id="writing-these-banks">
 <h2>Writing these Banks<a class="headerlink" href="#writing-these-banks" title="Permalink to this headline">¶</a></h2>
-<p>Originally Posted by jeranx
-<em>Yes, I did overwrite the file, I’ve just clean it and rename properly. I did paste my code into the Reaticulate.reabank. And nothing works.</em></p>
+<div class="section" id="originally-posted-by-jeranx">
+<h3>Originally Posted by jeranx<a class="headerlink" href="#originally-posted-by-jeranx" title="Permalink to this headline">¶</a></h3>
+<p><em>Yes, I did overwrite the file, I’ve just clean it and rename properly. I did paste my code into the Reaticulate.reabank. And nothing works.</em></p>
 <p>Looking at your screenshot here, I suppose the reason why nothing works is that your articulations have no output events (o=blah,blah) defined. So when you click on them, nothing will happen because you’ve not assigned any behavior to them.</p>
 <p>So for example while you have:</p>
 <p>Code:</p>
@@ -706,6 +818,7 @@ Very Stable Genius
 <p>I appreciate this can be a bit confusing. You might hold off for the GUI that will be coming to make your own banks. It will make this sort of thing a lot easier.</p>
 <p>Edit: Ah, I misunderstood your problem (well, it will be your first problem, considering you’re still missing the output events ) which is that your bank definition starts with “BANK” (uppercase) instead of “Bank”. If Reaper accepts BANK, I consider it a bug in Reaticulate. I’ll check that and fix it if so. Meanwhile, you can just change BANK to Bank and it should show up in the menu.</p>
 <p>Edit 2: and fixed in the just-released 0.3.0.</p>
+</div>
 </div>
 <div class="section" id="version-0-3-0-notes">
 <h2>Version 0.3.0 Notes<a class="headerlink" href="#version-0-3-0-notes" title="Permalink to this headline">¶</a></h2>
@@ -725,25 +838,25 @@ Reaticulate is an articulation management system for REAPER. Check the website f
 <div class="section" id="new-features">
 <h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
 <p>Here are the new features:</p>
-<blockquote>
-<div><p>Articulations are now fed back to control surface (#48)
-CC0/32 bank select indicates bank for articulation
-Articulations can be expressed either as native program change events or custom CC events
-When the js_ReaScriptAPI extension is installed (strongly recommended but not required):
-You can now pin the Reaticulate window when floating
-Some new actions and features become available
-Much improved focusing behavior
-New action “Focus articulation filter” (which works best when the js_ReaScriptAPI extension is installed)
-New action “Activate articulation slot number by CC on default channel” which can be used to activate articulations based on their position in the bank list (#58)
-New action “Insert last activated articulation into MIDI item on default channel” to insert the last activated articulation into MIDI item at edit cursor (same behavior as right clicking the articulation)
-New option “Track section follows focused FX window” (with associated toggle action) (requires js_ReaScriptAPI extension)
-New option “Track selection follows MIDI editor target item” (with associated toggle action)
-This is most conveniently paired with the “Options: MIDI track list/media item lane selection is linked to editability”
-New action “Select last selected track”
-Various new actions to select but not activate articulations, plus an action to activate currently selected articulation (#59)
-Running the action to activate currently selected articulation twice in rapid succession will cause it to insert into MIDI item
-On pages that scroll, scrollbars will appear when the mouse hovers toward the right edge</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Articulations</span> <span class="n">are</span> <span class="n">now</span> <span class="n">fed</span> <span class="n">back</span> <span class="n">to</span> <span class="n">control</span> <span class="n">surface</span> <span class="p">(</span><span class="c1">#48)</span>
+<span class="n">CC0</span><span class="o">/</span><span class="mi">32</span> <span class="n">bank</span> <span class="n">select</span> <span class="n">indicates</span> <span class="n">bank</span> <span class="k">for</span> <span class="n">articulation</span>
+<span class="n">Articulations</span> <span class="n">can</span> <span class="n">be</span> <span class="n">expressed</span> <span class="n">either</span> <span class="k">as</span> <span class="n">native</span> <span class="n">program</span> <span class="n">change</span> <span class="n">events</span> <span class="ow">or</span> <span class="n">custom</span> <span class="n">CC</span> <span class="n">events</span>
+<span class="n">When</span> <span class="n">the</span> <span class="n">js_ReaScriptAPI</span> <span class="n">extension</span> <span class="ow">is</span> <span class="n">installed</span> <span class="p">(</span><span class="n">strongly</span> <span class="n">recommended</span> <span class="n">but</span> <span class="ow">not</span> <span class="n">required</span><span class="p">):</span>
+<span class="n">You</span> <span class="n">can</span> <span class="n">now</span> <span class="n">pin</span> <span class="n">the</span> <span class="n">Reaticulate</span> <span class="n">window</span> <span class="n">when</span> <span class="n">floating</span>
+<span class="n">Some</span> <span class="n">new</span> <span class="n">actions</span> <span class="ow">and</span> <span class="n">features</span> <span class="n">become</span> <span class="n">available</span>
+<span class="n">Much</span> <span class="n">improved</span> <span class="n">focusing</span> <span class="n">behavior</span>
+<span class="n">New</span> <span class="n">action</span> <span class="s2">&quot;Focus articulation filter&quot;</span> <span class="p">(</span><span class="n">which</span> <span class="n">works</span> <span class="n">best</span> <span class="n">when</span> <span class="n">the</span> <span class="n">js_ReaScriptAPI</span> <span class="n">extension</span> <span class="ow">is</span> <span class="n">installed</span><span class="p">)</span>
+<span class="n">New</span> <span class="n">action</span> <span class="s2">&quot;Activate articulation slot number by CC on default channel&quot;</span> <span class="n">which</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">activate</span> <span class="n">articulations</span> <span class="n">based</span> <span class="n">on</span> <span class="n">their</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">bank</span> <span class="nb">list</span> <span class="p">(</span><span class="c1">#58)</span>
+<span class="n">New</span> <span class="n">action</span> <span class="s2">&quot;Insert last activated articulation into MIDI item on default channel&quot;</span> <span class="n">to</span> <span class="n">insert</span> <span class="n">the</span> <span class="n">last</span> <span class="n">activated</span> <span class="n">articulation</span> <span class="n">into</span> <span class="n">MIDI</span> <span class="n">item</span> <span class="n">at</span> <span class="n">edit</span> <span class="n">cursor</span> <span class="p">(</span><span class="n">same</span> <span class="n">behavior</span> <span class="k">as</span> <span class="n">right</span> <span class="n">clicking</span> <span class="n">the</span> <span class="n">articulation</span><span class="p">)</span>
+<span class="n">New</span> <span class="n">option</span> <span class="s2">&quot;Track section follows focused FX window&quot;</span> <span class="p">(</span><span class="k">with</span> <span class="n">associated</span> <span class="n">toggle</span> <span class="n">action</span><span class="p">)</span> <span class="p">(</span><span class="n">requires</span> <span class="n">js_ReaScriptAPI</span> <span class="n">extension</span><span class="p">)</span>
+<span class="n">New</span> <span class="n">option</span> <span class="s2">&quot;Track selection follows MIDI editor target item&quot;</span> <span class="p">(</span><span class="k">with</span> <span class="n">associated</span> <span class="n">toggle</span> <span class="n">action</span><span class="p">)</span>
+<span class="n">This</span> <span class="ow">is</span> <span class="n">most</span> <span class="n">conveniently</span> <span class="n">paired</span> <span class="k">with</span> <span class="n">the</span> <span class="s2">&quot;Options: MIDI track list/media item lane selection is linked to editability&quot;</span>
+<span class="n">New</span> <span class="n">action</span> <span class="s2">&quot;Select last selected track&quot;</span>
+<span class="n">Various</span> <span class="n">new</span> <span class="n">actions</span> <span class="n">to</span> <span class="n">select</span> <span class="n">but</span> <span class="ow">not</span> <span class="n">activate</span> <span class="n">articulations</span><span class="p">,</span> <span class="n">plus</span> <span class="n">an</span> <span class="n">action</span> <span class="n">to</span> <span class="n">activate</span> <span class="n">currently</span> <span class="n">selected</span> <span class="n">articulation</span> <span class="p">(</span><span class="c1">#59)</span>
+<span class="n">Running</span> <span class="n">the</span> <span class="n">action</span> <span class="n">to</span> <span class="n">activate</span> <span class="n">currently</span> <span class="n">selected</span> <span class="n">articulation</span> <span class="n">twice</span> <span class="ow">in</span> <span class="n">rapid</span> <span class="n">succession</span> <span class="n">will</span> <span class="n">cause</span> <span class="n">it</span> <span class="n">to</span> <span class="n">insert</span> <span class="n">into</span> <span class="n">MIDI</span> <span class="n">item</span>
+<span class="n">On</span> <span class="n">pages</span> <span class="n">that</span> <span class="n">scroll</span><span class="p">,</span> <span class="n">scrollbars</span> <span class="n">will</span> <span class="n">appear</span> <span class="n">when</span> <span class="n">the</span> <span class="n">mouse</span> <span class="n">hovers</span> <span class="n">toward</span> <span class="n">the</span> <span class="n">right</span> <span class="n">edge</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="minor-enhancements">
 <h3>Minor Enhancements<a class="headerlink" href="#minor-enhancements" title="Permalink to this headline">¶</a></h3>
@@ -758,10 +871,9 @@ Minor cosmetic improvements with drag-and-drop to reorder banks on the track con
 Force control surface update on track selection (workaround for <a class="reference external" href="https://forum.cockos.com/showthread.php?p=2077098">https://forum.cockos.com/showthread.php?p=2077098</a>)
 Ensure articulations on same MIDI tick as notes are processed before the notes (#53)
 Other minor fixes</p>
-</div>
-</div>
-<div class="section" id="cc-actions">
-<h2>CC Actions<a class="headerlink" href="#cc-actions" title="Permalink to this headline">¶</a></h2>
+<p><strong>********S
+CC Actions
+********</strong></p>
 <p>Quote:
 Originally Posted by daeavelwyn View Post
 I’ve tried “Activate selected articulation on default channel” but it just do nothing…I guess it’s mainly because I don’t understand (yet …) how this script works.
@@ -770,12 +882,22 @@ The usage documentation might be of help here. In particular the section on acti
 <p>If you want to trigger specific articulations from your controller, I think the action you’ll want to use is “Activate articulation by CC on default channel.” The docs I linked to say a bit more about that.</p>
 </div>
 </div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ReaperReaticulate.html" class="btn btn-neutral float-right" title="Reaticulate - Reabanks Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ReaperApp.html" class="btn btn-neutral" title="Reaper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
