@@ -36,7 +36,7 @@ The first thing we need to know is the total number of pages needed as an intege
 
 So, instead of 500 pages we need 504 pages (504/8 is 63 signatures; each composed by 8 pages) that will be juxtaposed at 2 by two like in your diagram:
 
-.. image:: ../images/16pg_Sig.png
+.. image:: ../images/tex16pg_Sig.png
 
 Now, the imposition order for 504 pages that you want fold in files of 8 pages, will be:
 
@@ -255,11 +255,6 @@ For different folding you only need to write once the beginning of the impositio
 
     java -cp /path...to/Multivalent.jar tool.pdf.Impose -dim 2x1 -paper 29.7x21cm -layout "16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9" file.pdf 
 
-
-
-
-
-
 Book Glue
 =========
 
@@ -267,13 +262,14 @@ PVA is best: poly-vinyl acetate. Need to find it online.
 
 
 
-.. image:: ../images/Flou02.png
+.. image:: ../images/flou02.png
     :align: center
     :width: 273px
 
 
 
 
+********************
 LaTeX Tips - How-Tos
 ********************
 
@@ -429,6 +425,7 @@ Two tools exist for printing signatures: Booklet and \pdfpages.
 
 
 
+****************
 Sample Templates
 ****************
 

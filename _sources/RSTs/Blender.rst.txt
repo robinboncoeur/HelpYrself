@@ -3,6 +3,7 @@ Blender Tips I Keep Forgetting
 ##############################
 
 
+******************************************
 Reviewing Script Installation Instructions
 ******************************************
 
@@ -22,6 +23,7 @@ Reviewing Script Installation Instructions
 
 
 
+*********************
 Keeping Blender Happy
 *********************
 
@@ -40,14 +42,15 @@ The way the author (cegaton) dealt with it is by re-assigning the Linux keyboard
 
 In Linux Mint open the system settings and navigate to "Windows".
 
-.. image:: ../images/altrtclick01.png
+.. image:: ../images/blAltRtClick01.png
 
 and select the super key to move or resize windows:
 
-.. image:: ../images/altrtclick02.png
+.. image:: ../images/blAltRtClick02.png
 
 
 
+***************
 The Viewer Node
 ***************
 
@@ -56,6 +59,7 @@ To get one in the Material Node Editor, you have to activate the Node Wrangler a
 Shit+RightClick+Drag to add a reroute.
 
 
+***********************
 ErinDale's Knit Texture
 ***********************
 
@@ -142,8 +146,109 @@ CONVERTER::
       +Fraction
 
 
+******************************
 Baking Diffuse and Normal Maps
 ******************************
 
+METHOD 1 – BAKING FROM THE SHADER
+=================================
 
+First let’s take a look at what is probably the simplest. Here I’ve got a simple 2D plane, on that plane is a whole network of procedural textures such as noise texture nodes working together to create the height map going into the bump node for this shader.
+
+.. image:: ../images/blBigNode-Network.jpg
+
+We don’t need to know the details of all those nodes just now, just know that we can bake all that stuff down to one image texture!
+
+Instead of all those nodes (which create that texture on the right) I want to bake all that bump information down into just 1 single texture.
+
+1. UV Unwrap
+------------
+
+We may have some UV’s already which you can check in the UV image editor. However, assuming we don’t for some reason, or they need to be changed let’s head over to the 3d view. While in edit mode, press A to make sure everything is selected and then press ‘U’ for the unwrap menu (see below), for a simple plane several of these options will give us what we need.
+
+.. image:: ../images/blUnwrapMenu.jpg
+
+For 3D geometry the ‘Smart UV project’ option is a good one (again which also would work fine for the 2D plane), so if unsure give that a try.
+
+.. image:: ../images/blUV-Workspace.jpg
+
+Here notice i’m in the UV Editing workspace and in the uv editor on the left we can see the orange selected outline of the uv’s filling the entire grid space. A simple plane clearly won’t waste any texture space!
+
+2. Create an image to bake to
+-----------------------------
+
+There are several ways to create images in Blender, let’s do it this time from within the shader editor. I’ll switch the workspace (from UV editing) back again (as the previous workspace had the shader editor on the left) and then I’ll zoom in to get a better look at the nodes and go Shift A > Texture adding in a new ‘Image Texture’ node.
+
+.. image:: ../images/blAddImage-TextureNode.jpg
+
+Click ‘New’ on the image node…
+
+.. image:: ../images/blNewImage.jpg
+
+and from there we can name it, set the resolution and choose ‘32 bit Float’.
+
+Once the new image is created, open up the properties sidebar with ‘N’ and find the ‘properties’ section, here we can change the color space from ‘linear’ to ‘non-color’. Note we can confirm this is 32 bit by looking at the checkbox next to ‘Float Buffer’.
+
+.. image:: ../images/blNonColor.jpg
+
+The image node doesn’t need to be hooked up to anything it simply just needs to be present in the shader editor so that we can select it and let Blender know this is the image we want to overwrite when we hit the bake button (in a moment!).
+
+3. Bake
+-------
+
+Ok, we’re ready to bake! Eevee doesn’t have options to bake as I write this so in our main properties window on the render settings tab we’ll make sure our render engine is set to ‘Cycles’.
+
+Also on the render tab at the bottom we’ll find the bake settings themselves.
+
+.. image:: ../images/blRenderTab.jpg
+
+Note also the samples in the sampling section are only set to ‘1’, that’ll be useful in a moment but not relevant while baking our normals.
+
+**NORMAL**
+
+If I want to bake the bump information of the shader into a normal map, I can keep the shader setup as it is. In the bake settings simply select ‘Normal’ as the bake type.
+
+Then with a quick glance that the correct image node is still selected in the shader editor (the one i’ve called ‘bake to me’ 2 images ago) we hit the bake button.
+
+That’s it!
+
+All’s that’s left is to save the result somewhere. (See Problem 3!)
+
+**BUMP**
+
+If instead we want to bake the bump information, then we create an emission shader and hook what is going into the bump node up to that emission shader and that would need to hook into the main material output.
+
+.. image:: ../images/blBumpBake-Setup.jpg
+
+In the bake settings we can then select ‘Emit’ as our bake type and then as before we’re ready to hit the bake button!
+
+Note: *Something to keep in mind is that the rendering process for the Emit pass (and several other passes for that matter (but not the normal pass!)) will take the render samples into account. So since we only need one sample for the emit shader to give us everything we need, to save needlessly wasting baking time we can set that down to just 1 pass in our render sampling settings.*
+
+
+METHOD 2 – BAKING FROM ANOTHER OBJECT
+=====================================
+
+The first 2 steps are the same as baking from the shader. So see above for more details.
+
+    1. UV Unwrap
+
+    2. Create an image to bake to
+
+    3. Bake
+
+Here’s where things start to diverge a little, to bake from another object we’ll need to enable ‘selected to active’ in the baking panel and set the ray distance. In this example about 0.2 seems to work just fine. Though if after baking it doesn’t look quite right, try changing this ray distance setting to a higher value.
+
+.. image:: ../images/blBakeSettings.jpg
+
+To actually perform the bake we need to select the object we want to bake from (typically some higher resolution mesh) and then shift select the object we’ll be baking to (so that it becomes the active object and therefore our target mesh).
+
+Then as before make sure we have the correct image node selected in the shader editor and then hit that bake button!
+
+It may feel like we’ve covered a lot, I think we should congratulate ourselves on putting in the time to read through all this. Sit back, relax and as a reward I suggest reminiscing about the good old times, like all the stuff we came across in this article. The main takeaways along this adventure were these:
+
+  - 8 bit (i.e. the default option) needs to be changed if we’re to get normal/bump maps that are useable in the majority of cases (i.e. shiny and clean and not grungy and rough surfaces)
+  - When generating your 32 bit float textures for your bump/normal maps, set them to non-color in the image or node editor
+  - When set to non-color in the image editor color space, the color space setting of the image node in the shader editor can be ignored. This maybe a little buggy though so keep an eye on this.
+  - If you want the most data of all saving into your image texture then use an openEXR format (Float Full) – Sometimes you can save a lot of space if you try a lossy codec such as Pxr24.
+  - If relying heavily on bump nodes in Eevee and find there is a lot of undesirable sparkly/jaggedness to the animation then try swapping the bump map out for a normal map.
 

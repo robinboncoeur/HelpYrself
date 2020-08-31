@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Linux Tips" href="Linux.html" />
-    <link rel="prev" title="My Totally Unofficial Git Help Page" href="Git.html" /> 
+    <link rel="prev" title="Git Help Page (not official!)" href="Git.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -84,16 +84,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LaTeX, Memoir and Bookbinding</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#latex-and-learning">LaTeX and Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#book-binding">Book Binding</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#signatures">Signatures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#print-ready-signatures">Print-ready Signatures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#book-glue">Book Glue</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#latex-tips-how-tos">LaTeX Tips - How-Tos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#book-glue">Book Glue</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#latex-tips-how-tos">LaTeX Tips - How-Tos</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#forced-page-breaks">Forced page-breaks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hyperlinks-in-latex">Hyperlinks in LaTeX</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dot-points-in-latex">Dot-points in LaTeX</a></li>
@@ -101,12 +101,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#no-chapter-numbers">No chapter numbers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#memoir-no-paragraph-indentation">Memoir: No Paragraph Indentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#macro-expansion">Macro-Expansion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#books">Books</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sample-templates">Sample Templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#books">Books</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-templates">Sample Templates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
@@ -203,7 +201,7 @@
 <p>Folding together 8 pages at once for binding in center of any group, means put 4 sheets containing 2 pages for any side (front / back) so to have a particular printing order</p>
 <p>The first thing we need to know is the total number of pages needed as an integer multiple of the number of signatures we have chosen (8 in our case) ot the last signature will be not one in-octavo and this can cause problems in binding</p>
 <p>So, instead of 500 pages we need 504 pages (504/8 is 63 signatures; each composed by 8 pages) that will be juxtaposed at 2 by two like in your diagram:</p>
-<img alt="../_images/16pg_Sig.png" src="../_images/16pg_Sig.png" />
+<img alt="../_images/tex16pg_Sig.png" src="../_images/tex16pg_Sig.png" />
 <p>Now, the imposition order for 504 pages that you want fold in files of 8 pages, will be:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1472,12 +1470,12 @@
 <div class="section" id="book-glue">
 <h3>Book Glue<a class="headerlink" href="#book-glue" title="Permalink to this headline">¶</a></h3>
 <p>PVA is best: poly-vinyl acetate. Need to find it online.</p>
-<a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
+<a class="reference internal image-reference" href="../_images/flou02.png"><img alt="../_images/flou02.png" class="align-center" src="../_images/flou02.png" style="width: 273px;" /></a>
+</div>
+</div>
 <div class="section" id="latex-tips-how-tos">
-<h4>LaTeX Tips - How-Tos<a class="headerlink" href="#latex-tips-how-tos" title="Permalink to this headline">¶</a></h4>
+<h2>LaTeX Tips - How-Tos<a class="headerlink" href="#latex-tips-how-tos" title="Permalink to this headline">¶</a></h2>
 <p>LaTeX is pronounced Lah-Tek. Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.</p>
-</div>
-</div>
 <div class="section" id="forced-page-breaks">
 <h3>Forced page-breaks<a class="headerlink" href="#forced-page-breaks" title="Permalink to this headline">¶</a></h3>
 <p>To force a pagebreak:</p>
@@ -1597,8 +1595,10 @@
 <h3>Books<a class="headerlink" href="#books" title="Permalink to this headline">¶</a></h3>
 <p>Two tools exist for printing signatures: Booklet and pdfpages.</p>
 <a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
+</div>
+</div>
 <div class="section" id="sample-templates">
-<h4>Sample Templates<a class="headerlink" href="#sample-templates" title="Permalink to this headline">¶</a></h4>
+<h2>Sample Templates<a class="headerlink" href="#sample-templates" title="Permalink to this headline">¶</a></h2>
 <p>Chapter Style 01:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">makechapterstyle</span><span class="p">{</span><span class="n">standard</span><span class="p">}{</span>
   \<span class="n">setlength</span><span class="p">{</span>\<span class="n">parindent</span><span class="p">}{</span><span class="mi">0</span><span class="n">pt</span><span class="p">}</span>
@@ -1982,8 +1982,6 @@ True religion is the union of the heart with God. It is not being a member of a 
 </div>
 </div>
 </div>
-</div>
-</div>
 
 
            </div>
@@ -1996,7 +1994,7 @@ True religion is the union of the heart with God. It is not being a member of a 
         <a href="Linux.html" class="btn btn-neutral float-right" title="Linux Tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Git.html" class="btn btn-neutral" title="My Totally Unofficial Git Help Page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Git.html" class="btn btn-neutral" title="Git Help Page (not official!)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

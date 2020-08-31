@@ -3,6 +3,7 @@ Video Processing
 ################
 
 
+******
 FFMPEG
 ******
 
@@ -63,6 +64,7 @@ This output a perfect video. However, it was still a bit time-consuming. The fin
 
 
 
+**********************
 How to display a Video
 **********************
 

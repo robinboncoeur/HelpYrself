@@ -3,6 +3,7 @@ Python3, Pip and Kivy3
 ######################
 
 
+************
 Pip Installs
 ************
 
@@ -62,9 +63,9 @@ An important `link <http://kivy.org/docs/installation/installation-linux.html#ub
 Note: *PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.*
 
 
-Brackets Install...
-===================
-... **in Linux Mint**
+Brackets Install in Linux Mint
+==============================
+
 
 A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
 
@@ -85,6 +86,7 @@ to get Kivy to see them.
 
 Kivy kv file Python...
 ======================
+
 ... **syntax highlighting**
 
 Create a brackets.json file with the following code::
@@ -112,6 +114,7 @@ Installed gspread and oauth2client via pip3::
 
 Project: Netflix Download
 =========================
+
 Extract links to video/audio for direct download, and get thumbnail, info about uploader, likes, etc.
 
 

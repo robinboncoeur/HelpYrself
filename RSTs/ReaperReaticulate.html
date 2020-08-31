@@ -84,7 +84,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
@@ -248,7 +248,7 @@
 </ul>
 </div></blockquote>
 <p>(Reaticulate combines these files into a file it manages called Data/Reaticulate-tmp*.reabank. You’ll never edit this file directly, but it’s what Reaticulate feeds back to REAPER to use as the default reabank file.)</p>
-<img alt="../_images/reabank-edit.png" src="../_images/reabank-edit.png" />
+<img alt="../_images/reaBankEdit.png" src="../_images/reaBankEdit.png" />
 <p>Note: <em>You can take a look at the factory banks for inspiration, but if you want to start slinging your own custom articulation banks, the easiest way is to click the pencil button at the top of the UI and open the file in your editor. Clicking this will create the file if necessary before opening the editor. Open in Default App will launch whatever application you’ve associated with .reabank files.</em></p>
 <p><strong>Once you save changes to the file, click the reload button (next to the pencil) to force Reaticulate to pick up the changes.</strong></p>
 </div>
@@ -306,7 +306,7 @@ Bank 65 1 SSB - Horn Solo
 </pre></div>
 </div>
 <p>… and how this bank looks in the GUI:</p>
-<img alt="../_images/bank-horn-solo.png" src="../_images/bank-horn-solo.png" />
+<img alt="../_images/reaBank-HornSolo.png" src="../_images/reaBank-HornSolo.png" />
 <p>Notated attributes take the form:</p>
 <blockquote>
 <div><p>name=value (or name=”value” if the value contains spaces)</p>
@@ -701,7 +701,7 @@ Bank 42 7 Bohemian Violin Exp1
 <h3>Articulation Colors<a class="headerlink" href="#articulation-colors" title="Permalink to this headline">¶</a></h3>
 <p>The c program attribute defines the color of the button for the articulation, which is either a HTML color code or one of the predefined names. When c isn’t specified, then the default color is used.</p>
 <p>This image shows the available names and their out-of-the-box colors:</p>
-<img alt="../_images/artcolors.png" src="../_images/artcolors.png" />
+<img alt="../_images/reaArtColors.png" src="../_images/reaArtColors.png" />
 <p>(The icons shown are just for demonstration purposes. The color selection has no bearing on the icon. That’s defined by the i attribute.)</p>
 <p>The factory banks use the light variants for articulations played more softly or subdued than normale, for example con sordino, sul tasto, or harmonics. The dark variants are used for grittier, distorted, or louder articulations, such as sul ponticello or Bartok pizzicato.</p>
 <p>These color names can be overridden by specifying a color attribute anywhere in your user Reabank file (path #2 listed at the top of this page), whose value is a comma-delimited list of name=#hexcode items. For example, this line overrides the default and fx colors:</p>
@@ -712,7 +712,7 @@ Bank 42 7 Bohemian Violin Exp1
 <div class="section" id="articulation-icons">
 <h3>Articulation Icons<a class="headerlink" href="#articulation-icons" title="Permalink to this headline">¶</a></h3>
 <p>Here are the current icon names that may be assigned to the i attribute:</p>
-<img alt="../_images/articonsB.png" src="../_images/articonsB.png" />
+<img alt="../_images/reaArtIconsB.png" src="../_images/reaArtIconsB.png" />
 </div>
 </div>
 <div class="section" id="tack-s-addendae-on-the-thread">
@@ -841,43 +841,24 @@ What’s the correct syntax?</p>
 </div>
 <div class="section" id="garritan-personal-orchestra-5">
 <h4>Garritan Personal Orchestra 5<a class="headerlink" href="#garritan-personal-orchestra-5" title="Permalink to this headline">¶</a></h4>
-<p>GPO is limited by modern standards (for instance the legato and portamento are
-scripted not sampled) but you can’t fault it on sheer value. It’s more a “concertish”
-sound than a “filmic” one, but it makes a very good bedrock for any project.</p>
-<p>It involves quite a few compromises, but it’s comprehensive, practical, durable and
-has a minimal hit to resources. It’s ideal for sketching and even full productions,
-especially if you really get under the hood. It’s used here as the “meat and potatoes”
-element of the template.</p>
+<p>GPO is limited by modern standards (for instance the legato and portamento are scripted not sampled) but you can’t fault it on sheer value. It’s more a “concertish” sound than a “filmic” one, but it makes a very good bedrock for any project.</p>
+<p>It involves quite a few compromises, but it’s comprehensive, practical, durable and has a minimal hit to resources. It’s ideal for sketching and even full productions, especially if you really get under the hood. It’s used here as the “meat and potatoes” element of the template.</p>
 </div>
 <div class="section" id="cinematic-studio-strings">
 <h4>Cinematic Studio Strings<a class="headerlink" href="#cinematic-studio-strings" title="Permalink to this headline">¶</a></h4>
-<p>CSS is a more advanced string library, allowing for more natural sounding sampled
-legato (among many other things). Its inclusion here is primarily for layering purposes.
-The workhorse legato approach of GPO5 can be augmented by doubling the GPO
-MIDI content in the nested CSS MIDI tracks, creating an overlay for far more realistic
-performance, as well as variety of tone and more density.</p>
+<p>CSS is a more advanced string library, allowing for more natural sounding sampled legato (among many other things). Its inclusion here is primarily for layering purposes. The workhorse legato approach of GPO5 can be augmented by doubling the GPO MIDI content in the nested CSS MIDI tracks, creating an overlay for far more realistic performance, as well as variety of tone and more density.</p>
 <p>I’ve used the older Classic Legato patches since they seem to blend with less angst.</p>
-<p>CSS has generally brighter and more aggressive performances (a little more in the
-“filmic” direction). Experimenting with the relative feeds of GPO and CSS can give
-interesting and different results. For instance, to stay “concertish”, dial in just enough
-of CSS to give the increased realism. To get brighter and tighter, alter the balance
-more in favour of CSS. You could of course simply mute out one or the other entirely.</p>
-<p>CSS Solo Vlns, Vla and Cello are included..</p>
+<p>CSS has generally brighter and more aggressive performances (a little more in the “filmic” direction). Experimenting with the relative feeds of GPO and CSS can give interesting and different results. For instance, to stay “concertish”, dial in just enough of CSS to give the increased realism. To get brighter and tighter, alter the balance more in favour of CSS. You could of course simply mute out one or the other entirely.</p>
+<p>CSS Solo Vlns, Vla and Cello are included.</p>
 </div>
 <div class="section" id="kirk-hunter-concert-brass-2">
 <h4>Kirk Hunter Concert Brass 2<a class="headerlink" href="#kirk-hunter-concert-brass-2" title="Permalink to this headline">¶</a></h4>
-<p>All instruments but the bass trombone are doubled in nested tracks. As opposed to
-the strings sections, I feel these are best used as either/or, but I suppose you could
-double your brass up if you wished.</p>
-<p>Again, the advantage to using these samples is primarily for more sophisticated
-legato handling, as well as much greater control over articulations. KHB is brighter
-and punchier than GPO, but not enough to trouble the overall balance too much.</p>
+<p>All instruments but the bass trombone are doubled in nested tracks. As opposed to the strings sections, I feel these are best used as either/or, but I suppose you could double your brass up if you wished.</p>
+<p>Again, the advantage to using these samples is primarily for more sophisticated legato handling, as well as much greater control over articulations. KHB is brighter and punchier than GPO, but not enough to trouble the overall balance too much.</p>
 </div>
 <div class="section" id="cinewinds-core">
 <h4>Cinewinds Core<a class="headerlink" href="#cinewinds-core" title="Permalink to this headline">¶</a></h4>
-<p>All major woods are doubled in nested tracks. Again these can be either/or/and.</p>
-<p>The adtantages are the same as with KHB. Again, this library is punchier than GPO,
-but combines well with it.</p>
+<p>All major woods are doubled in nested tracks. Again these can be either/or/and. The advantages are the same as with KHB. Again, this library is punchier than GPO, but combines well with it.</p>
 </div>
 <div class="section" id="pianoteq-stage">
 <h4>Pianoteq Stage<a class="headerlink" href="#pianoteq-stage" title="Permalink to this headline">¶</a></h4>
@@ -885,80 +866,40 @@ but combines well with it.</p>
 </div>
 <div class="section" id="reaticulation">
 <h4>Reaticulation<a class="headerlink" href="#reaticulation" title="Permalink to this headline">¶</a></h4>
-<p>Jason Tackaberry’s solution to articulation management. Flexible, visually appealing
-and auto-chasing. You’ll need to add my text file to the Reaticulate file in
-REAPER/Data.</p>
-<p>NB: This version of the template retains the default KS mapping for all libraries. If
-you want to simply copy over MIDI items you’ll have to do some editing work.</p>
+<p>Jason Tackaberry’s solution to articulation management. Flexible, visually appealing and auto-chasing. You’ll need to add my text file to the Reaticulate file in REAPER/Data. NB: <em>This version of the template retains the default KS mapping for all libraries. If you want to simply copy over MIDI items you’ll have to do some editing work.</em></p>
 </div>
 </div>
 <div class="section" id="the-template">
 <h3>The Template<a class="headerlink" href="#the-template" title="Permalink to this headline">¶</a></h3>
-<p>The layout philosophy is simple - when you’re above the line (track panel) you’re a
-musician, when you’re below (mixer panel) you’re an engineer.</p>
-<p>The template compromises total flexibility in favour of what I’ve found to be practical
-workflow. For instance, it’s better to control instrument volume in MIDI by sample
-cross-fades rather than volume envelopes. Thus envelopes for audio tracks aren’t
-displayed.</p>
+<p>The layout philosophy is simple - when you’re above the line (track panel) you’re a musician, when you’re below (mixer panel) you’re an engineer.</p>
+<p>The template compromises total flexibility in favour of what I’ve found to be practical workflow. For instance, it’s better to control instrument volume in MIDI by sample cross-fades rather than volume envelopes. Thus envelopes for audio tracks aren’t displayed.</p>
 <div class="section" id="track-control-panel-tcp">
 <h4>Track Control Panel (TCP)<a class="headerlink" href="#track-control-panel-tcp" title="Permalink to this headline">¶</a></h4>
-<p>The Track Panel Master (the real Master) is acting as a sort of “Conductor” track,
-with visible control over global tempo and volume envelopes.</p>
-<p>The MIDI tracks have preroll items in them to send setup info to the VSTis. These
-items also include MIDI note name info to display only in-range notes and KSes in
-MIDI Editor. The Editor windows also include cc lanes for cc2 vibrato, cc20
-portamento (for GPO instruments only), mod wheel and velocity. You can add many
-more lanes for detailed control, but I’ve found these are the most frequently used.</p>
-<p>Every available instrument is displayed by default, but they can be hidden or deleted
-if you wish. The sections are laid out in traditional score order, but you can move them
-around. (Note that the MIDI tracks above and Audio tracks below are different
-entities, so you’ll need to hide, delete or move them in both panels.)</p>
+<p>The Track Panel Master (the real Master) is acting as a sort of “Conductor” track, with visible control over global tempo and volume envelopes.</p>
+<p>The MIDI tracks have preroll items in them to send setup info to the VSTis. These items also include MIDI note name info to display only in-range notes and KSes in MIDI Editor. The Editor windows also include cc lanes for cc2 vibrato, cc20 portamento (for GPO instruments only), mod wheel and velocity. You can add many more lanes for detailed control, but I’ve found these are the most frequently used.</p>
+<p>Every available instrument is displayed by default, but they can be hidden or deleted if you wish. The sections are laid out in traditional score order, but you can move them around. (Note that the MIDI tracks above and Audio tracks below are different entities, so you’ll need to hide, delete or move them in both panels.)</p>
 </div>
 <div class="section" id="master-control-panel">
 <h4>Master Control Panel<a class="headerlink" href="#master-control-panel" title="Permalink to this headline">¶</a></h4>
-<p>The “MASTER FX” track serves as the mix master and contains EQ, multiband
-compressor and limiter. (The top Master track has the final say over volume though)</p>
-<p>The five blue section tracks labelled “SUB” simply bulk-handle the M, S and fader
-controls of all section audio tracks. The summed audio output of all instruments in
-each section are displayed for visual monitoring purposes.</p>
-<p>The audio track M, S and R controls are master-slaved to the related MIDI tracks.
-The audio tracks themselves are record-disabled to prevent inadvertent doubling.</p>
-<p>The individual instrument audio tracks contain instances of ReaPitch randomly
-knocked a few cents sharp and flat. Second rank instruments (woods and FHs)
-also have a slight high EQ cut, Third rank instruments (other brass and percussion)
-have a slightly stronger high EQ cut.</p>
-<p>There are three reverbs - Room, Preverb Rank 2 and Preverb Rank 3 (in black). The
-instrument tracks are bussed in combination to these to create spacial depth in
-combination with the per-track EQ cuts.</p>
+<p>The “MASTER FX” track serves as the mix master and contains EQ, multiband compressor and limiter. (The top Master track has the final say over volume though).</p>
+<p>The five blue section tracks labelled “SUB” simply bulk-handle the M, S and fader controls of all section audio tracks. The summed audio output of all instruments in each section are displayed for visual monitoring purposes.</p>
+<p>The audio track M, S and R controls are master-slaved to the related MIDI tracks. The audio tracks themselves are record-disabled to prevent inadvertent doubling.</p>
+<p>The individual instrument audio tracks contain instances of ReaPitch randomly knocked a few cents sharp and flat. Second rank instruments (woods and FHs) also have a slight high EQ cut, Third rank instruments (other brass and percussion) have a slightly stronger high EQ cut.</p>
+<p>There are three reverbs - Room, Preverb Rank 2 and Preverb Rank 3 (in black). The instrument tracks are bussed in combination to these to create spacial depth in combination with the per-track EQ cuts.</p>
 <p>The reverb busses all have their own slight EQ low roll-off to help combat mud.</p>
-<p>The “engine room” is the VSTi “container” tracks (in purple). Instruments are
-banked here, set to auto-legato, centred and dry. Relative output from all “container”
-tracks can be faded to taste.</p>
-<p>There is an extra “container” track called GPOFrontDesks. This receives MIDI from
-the GPO VlnsI, VlnsII, Vlas and Cellos tracks and outputs small sections. It can be
-faded up to add a little variety and bite to the strings.</p>
-<p>All instruments are sent mono except the General Percussion and String Sections.
-The strings, although stereo, are centred so you can pan your sections in-Daw while
-retaining their individual spreads.</p>
-<p>All FX used are stock REAPER ones, for maximum compatibility.You can swap in your
-favourites, of course.</p>
+<p>The “engine room” is the VSTi “container” tracks (in purple). Instruments are banked here, set to auto-legato, centred and dry. Relative output from all “container” tracks can be faded to taste.</p>
+<p>There is an extra “container” track called GPOFrontDesks. This receives MIDI from the GPO VlnsI, VlnsII, Vlas and Cellos tracks and outputs small sections. It can be faded up to add a little variety and bite to the strings.</p>
+<p>All instruments are sent mono except the General Percussion and String Sections. The strings, although stereo, are centred so you can pan your sections in-Daw while retaining their individual spreads.</p>
+<p>All FX used are stock REAPER ones, for maximum compatibility.You can swap in your favourites, of course.</p>
 </div>
 <div class="section" id="sketches-section">
 <h4>Sketches Section<a class="headerlink" href="#sketches-section" title="Permalink to this headline">¶</a></h4>
-<p>CWC, KH Legacy and CSS ensemble tracks for sketching generic wood, brass and
-string chords or lines. Articulations are available.</p>
+<p>CWC, KH Legacy and CSS ensemble tracks for sketching generic wood, brass and string chords or lines. Articulations are available.</p>
 </div>
 <div class="section" id="general-mixing-and-mastering">
 <h4>General Mixing and Mastering<a class="headerlink" href="#general-mixing-and-mastering" title="Permalink to this headline">¶</a></h4>
-<p>The emphasis of the template all the way through the signal chain until the SUB
-busses is on achieving a natural sounding mix. Each of the SUB busses contains a flat-set
-EQ in case you get naughty buildups.</p>
-<p>The MASTER FX (or premaster) has the potential to start straying from mxiing into
-mastering territory. The EQ, band compressor and limiter are all very gently set to
-provide a littlle more idea of how it’s all going to eventually sound while you’re
-composing and mixing. Obviously if you’re going to be sending your mix to be
-mastered by someone else you should disable the FX chain on this channel before
-sending the file(s).</p>
+<p>The emphasis of the template all the way through the signal chain until the SUB busses is on achieving a natural sounding mix. Each of the SUB busses contains a flat-set EQ in case you get naughty buildups.</p>
+<p>The MASTER FX (or premaster) has the potential to start straying from mxiing into mastering territory. The EQ, band compressor and limiter are all very gently set to provide a littlle more idea of how it’s all going to eventually sound while you’re composing and mixing. Obviously if you’re going to be sending your mix to be mastered by someone else you should disable the FX chain on this channel before sending the file(s).</p>
 </div>
 <div class="section" id="finally">
 <h4>Finally<a class="headerlink" href="#finally" title="Permalink to this headline">¶</a></h4>

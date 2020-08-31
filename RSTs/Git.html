@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>My Totally Unofficial Git Help Page &mdash; Help Yourself 0.01 documentation</title>
+  <title>Git Help Page (not official!) &mdash; Help Yourself 0.01 documentation</title>
   
 
   
@@ -84,8 +84,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">My Totally Unofficial Git Help Page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mac-set-up">Mac set-up</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git Help Page (not official!)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-on-a-macbook-pro">Set-up (on a Macbook Pro)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sphinx-terminal">01 - Sphinx Terminal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#github-terminal">02 - Github Terminal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">03 - Sphinx Terminal</a></li>
@@ -100,9 +100,9 @@
 <li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
@@ -150,7 +150,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>My Totally Unofficial Git Help Page</li>
+      <li>Git Help Page (not official!)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,15 +169,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="my-totally-unofficial-git-help-page">
-<h1>My Totally Unofficial Git Help Page<a class="headerlink" href="#my-totally-unofficial-git-help-page" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-help-page-not-official">
+<h1>Git Help Page (not official!)<a class="headerlink" href="#git-help-page-not-official" title="Permalink to this headline">¶</a></h1>
 <p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.</p>
 <p>The process here outlines the approach I took to get my GitPages up and working for projects I’ve got on github as well as other stuff, like this document. Git is its own complex process and I tend to forget commands and how to approach stuff and so, I wrote down the first go that worked here. I’m sure there are better ways of doing this.</p>
-<p>Update 19.01.25:
-To be honest, I’m pretty sure there’s a better way, and will be testing it soon. And update these pages.</p>
-<p>Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
-<div class="section" id="mac-set-up">
-<h2>Mac set-up<a class="headerlink" href="#mac-set-up" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Update 19.01.25:</dt><dd><p>To be honest, I’m pretty sure there’s a better way, and will be testing it soon. And update these pages.</p>
+</dd>
+<dt>Update 18.11.17:</dt><dd><p>Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
+</dd>
+</dl>
+<div class="section" id="set-up-on-a-macbook-pro">
+<h2>Set-up (on a Macbook Pro)<a class="headerlink" href="#set-up-on-a-macbook-pro" title="Permalink to this headline">¶</a></h2>
 <p>On my Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.</p>
 <p>Using as an example a document called “KeysToLife”, the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
 <div class="section" id="sphinx-terminal">

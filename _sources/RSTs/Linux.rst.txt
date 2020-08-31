@@ -3,6 +3,7 @@ Linux Tips
 ##########
 
 
+***************
 Grub-Customizer
 ***************
 
@@ -13,6 +14,8 @@ Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customize
 needed for the picture to actually take.
 
 
+
+******************
 Command Line Tools
 ******************
 
@@ -54,6 +57,7 @@ From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spo
 
 
 
+****************
 Kivy and PyCharm
 ****************
 
@@ -96,13 +100,14 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
 
 
 
-.. image:: ../images/Flou02.png
+.. image:: ../images/flou02.png
     :align: center
     :width: 273px
 
 
 
 
+*************************
 Brackets in Mint (Ubuntu)
 *************************
 
