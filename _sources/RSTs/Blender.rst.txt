@@ -46,3 +46,104 @@ and select the super key to move or resize windows:
 
 .. image:: ../images/altrtclick02.png
 
+
+
+The Viewer Node
+***************
+
+To get one in the Material Node Editor, you have to activate the Node Wrangler add-on, then you can use Ctrl+Shift+LMB (clicking on the header of the node) to create a temporary Viewer Node.
+
+Shit+RightClick+Drag to add a reroute.
+
+
+ErinDale's Knit Texture
+***********************
+
+YouTube::
+
+    https://www.youtube.com/watch?v=GBIXU9BlyXg
+
+Shortcuts::
+
+    SHIFT+A: Add menu
+    SHIFT+D: Duplicate node
+    CTRL+SHIFT+D: Duplicate with connected inputs
+    CTRL+H: Hide unused node sockets
+    H: Minimise selected node
+    M: Mute selected node
+    CTRL+J: Frame selected nodes
+    CTRL+G: Group selected nodes
+    SHIFT+TAB: Turn on snapping
+    CTRL+SPACE: Maximise work area
+    G: Grab (especially useful when trying to move reroutes)
+    CTRL+X: Dissolve node
+    CTRL+Right Click: Cut noodle
+    SHIFT+Right Click: Add reroute
+    D+Left Click: Draw annotation
+    D+Right Click: Erase annotation
+    CTRL+Drag a slider to snap
+    SHIFT+Drag a slider for fine adjustments
+
+Nodes Used
+
+INPUT::
+
+    -Texture Coordinate
+    -Value
+
+SHADER::
+
+    -Principled BSDF
+
+TEXTURE::
+
+    -Image Texture
+    -Noise Texture
+    -Wave Texture
+    -White Noise
+
+COLOUR::
+
+    -Hue/Saturation
+    -Invert
+    -MixRGB
+      +Mix
+      +Multiply
+      +Colour Burn
+      +Soft Light
+      +Linear Light
+      +Hue
+
+VECTOR::
+
+    -Displacement
+    -Mapping
+
+CONVERTER::
+
+    -Blackbody
+    -ColorRamp
+    -CombineXYZ
+    -Math
+      +Add
+      +Multiply
+      +Divide
+      +Pingpong
+      +Less Than
+      +Greater Than
+    -SeparateXYZ
+    -Vector Math
+      +Add
+      +Subtract
+      +Divide
+      +Length
+      +Scale
+      +Snap
+      +Fraction
+
+
+Baking Diffuse and Normal Maps
+******************************
+
+
+

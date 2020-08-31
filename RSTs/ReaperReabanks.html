@@ -94,10 +94,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">A Discussion on Reabanks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#how-they-work">How They Work</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jason-lyon-s-approach">Jason Lyon’s Approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#jason-s-notes">Jason’s notes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gpo5-css-khb-cwc-ks-orchestral-template-v5">GPO5+CSS+KHB+CWC KS ORCHESTRAL TEMPLATE v5</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#jason-s-notes">Jason’s notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-libraries">THE LIBRARIES</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#garritan-personal-orchestra-5">GARRITAN PERSONAL ORCHESTRA 5</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cinematic-studio-strings">CINEMATIC STUDIO STRINGS</a></li>
@@ -120,9 +117,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#version-0-3-0-notes">Version 0.3.0 Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing">Installing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upgrading">Upgrading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#new-features">New Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#minor-enhancements">Minor Enhancements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bug-fixes">Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cc-actions">CC Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#originally-posted-by-daeavelwyn">Originally Posted by daeavelwyn</a></li>
 </ul>
 </li>
 </ul>
@@ -457,235 +457,487 @@ Bank 17 5 GPO5 - Woods
 </pre></div>
 </div>
 <p>And then, for the Cinewind and Kirk Hunter libraries:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//----------------------------------------------------------------------------
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> //----------------------------------------------------------------------------
 
-// KIRK HUNTER CONCERT BRASS 2
-//
+ // KIRK HUNTER CONCERT BRASS 2
+ //
 
-//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Fr Horn&quot;
-Bank 18 1 KH - FrHn
+ //! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Fr Horn&quot;
+ Bank 18 1 KH - FrHn
 
-//! c=long i=legato o=note:85
-1 sustain
-//! c=long i=legato-slurred o=note:89
-2 adagio
-//! c=short i=marcato o=note:86
-54 acc pp
-//! c=short i=marcato o=note:87
-54 acc mf
-//! c=short i=marcato o=note:88
-54 acc ff
-//! c=short i=staccato o=note:90
-59 stacc
+ //! c=long i=legato o=note:85
+ 1 sustain
+ //! c=long i=legato-slurred o=note:89
+ 2 adagio
+ //! c=short i=marcato o=note:86
+ 54 acc pp
+ //! c=short i=marcato o=note:87
+ 54 acc mf
+ //! c=short i=marcato o=note:88
+ 54 acc ff
+ //! c=short i=staccato o=note:90
+ 59 stacc
 
-//! c=short-dark i=rip o=note:23
-100 rip
+ //! c=short-dark i=rip o=note:23
+ 100 rip
 
-//! c=fx g=2 i=fx o=note:30
-106 solo
-//! c=fx g=2 i=fx o=note:29
-107 a2
-//! c=fx g=2 i=fx o=note:28
-108 a4
-//! c=fx g=2 i=fx o-note:27
-109 a8
+ //! c=fx g=2 i=fx o=note:30
+ 106 solo
+ //! c=fx g=2 i=fx o=note:29
+ 107 a2
+ //! c=fx g=2 i=fx o=note:28
+ 108 a4
+ //! c=fx g=2 i=fx o-note:27
+ 109 a8
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tpt&quot;
+ Bank 18 2 KH - Tpt
+
+ //! c=long i=legato o=note:25
+ 1 sustain
+ //! c=long i=legato-slurred o=note:29
+ 2 adagio
+ //! c=short i=marcato o=note:26
+ 54 acc pp
+ //! c=short i=marcato o=note:27
+ 54 acc mf
+ //! c=short i=marcato o=note:28
+ 54 acc ff
+ //! c=short i=staccato o=note:30
+ 40 stacc
+
+ //! c=short-dark i=rip o=note:23
+ 100 rip
+
+ //! c=fx g=2 i=fx o=note:42
+ 106 solo
+ //! c=fx g=2 i=fx o=note:41
+ 107 a2
+ //! c=fx g=2 i=fx o=note:40
+ 108 a4
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tbn&quot;
+ Bank 18 3 KH - Tbn
+
+ //! c=long i=legato o=note:85
+ 1 sustain
+ //! c=long i=legato-slurred o=note:89
+ 2 adagio
+ //! c=short i=marcato o=note:86
+ 54 acc pp
+ //! c=short i=marcato o=note:87
+ 54 acc mf
+ //! c=short i=marcato o=note:88
+ 54 acc ff
+ //! c=short i=staccato o=note:90
+ 40 stacc
+
+ //! c=short-dark i=rip o=note:23
+ 100 rip
+
+ //! c=fx g=2 i=fx o=note:30
+ 106 solo
+ //! c=fx g=2 i=fx o=note:29
+ 107 a2
+ //! c=fx g=2 i=fx o=note:28
+ 108 a4
+ //! c=fx g=2 i=fx o-note:27
+ 109 a8
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tuba&quot;
+ Bank 18 4 KH - Tuba
+
+ //! c=long i=legato o=note:85
+ 1 sustain
+ //! c=long i=legato-slurred o=note:89
+ 2 adagio
+ //! c=short i=marcato o=note:86
+ 54 acc pp
+ //! c=short i=marcato o=note:87
+ 54 acc mf
+ //! c=short i=marcato o=note:88
+ 54 acc ff
+ //! c=short i=staccato o=note:90
+ 40 stacc
+
+ //----------------------------------------------------------------------------
+
+ // CineWinds Core
+ //
+
+ //! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Piccolo&quot;
+ Bank 19 1 CWC - Piccolo
+
+ //! c=long i=legato o=note:36
+ 1 sustain
+ //! c=short i=marcato-quarter o=note:41
+ 52 marc
+ //! c=short i=tenuto-eighth o=note:40
+ 50 ten
+ //! c=short i=staccato o=note:38
+ 40 stacc
+ //! c=long i=trill-min2 o=note:43
+ 70 tr m2
+ //! c=long i=trill-maj2 o=note:45
+ 71 tr M2
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Flt&quot;
+ Bank 19 2 CWC - Flt
+
+ //! c=long i=legato o=note:36
+ 1 sustain
+ //! c=short i=marcato-quarter o=note:41
+ 52 marc
+ //! c=short i=tenuto-eighth o=note:40
+ 50 ten
+ //! c=short i=staccato o=note:38
+ 40 stacc
+ //! c=long i=trill-min2 o=note:43
+ 70 tr m2
+ //! c=long i=trill-maj2 o=note:45
+ 71 tr M2
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Oboe&quot;
+ Bank 19 3 CWC - Oboe
+
+ //! c=long i=legato o=note:36
+ 1 sustain
+ //! c=short i=marcato-quarter o=note:41
+ 52 marc
+ //! c=short i=tenuto-eighth o=note:40
+ 50 ten
+ //! c=short i=staccato o=note:38
+ 40 stacc
+ //! c=long i=trill-min2 o=note:43
+ 70 tr m2
+ //! c=long i=trill-maj2 o=note:45
+ 71 tr M2
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Clnt&quot;
+ Bank 19 4 CWC - Clnt
+
+ //! c=long i=legato o=note:24
+ 1 sustain
+ //! c=short i=marcato-quarter o=note:29
+ 52 marc
+ //! c=short i=tenuto-eighth o=note:28
+ 50 ten
+ //! c=short i=staccato o=note:26
+ 40 stacc
+ //! c=long i=trill-min2 o=note:31
+ 70 tr m2
+ //! c=long i=trill-maj2 o=note:33
+ 71 tr M2
+
+ //----------------------------------------------------------------------------
+
+ //! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Bassn&quot;
+ Bank 19 5 CWC - Bassn
+
+ //! c=long i=legato o=note:12
+ 1 sustain
+ //! c=short i=marcato-quarter o=note:17
+ 52 marc
+ //! c=short i=tenuto-eighth o=note:16
+ 50 ten
+ //! c=short i=staccato o=note:14
+ 40 stacc
+ //! c=long i=trill-min2 o=note:19
+ 70 tr m2
+ //! c=long i=trill-maj2 o=note:21
+ 71 tr M2
+
+
+ //----------------------------------------------------------------------------
+
+ // KIRK HUNTER CONCERT BRASS LEGACY
+ //
+
+ //! g=&quot;Kirk Hunter/Concert Brass Legacy&quot; n=&quot;KH Brass Ens&quot;
+ Bank 20 1 KH - Brass Ens
+
+ //! c=long i=legato o=note:97
+ 1 sustain
+ //! c=long i=legato-slurred o=note:101
+ 20 adagio
+ //! c=long i=legato-slurred o=note:98
+ 21 allegro
+ //! c=long i=legato-slurred o=note:99
+ 28 vivo
+ //! c=long i=sfz o=note:102
+ 49 sfz
+ //! c=short i=marcato o=note:100
+ 52 marc
+ //! c=short i=staccato o=note:103
+ 40 staccato
+ //! c=long i=con-sord o=note:104
+ 7 con sord
+ //! c=long i=note-whole o=note:106
+ 109 senza sord
+
+
+
+ //----------------------------------------------------------------------------
+ //----------------XSample/Strings score ----------------
+
+ //! g=&quot;XSample/strings&quot; n=&quot;strings score&quot;
+ Bank 02 1 Strings score
+
+ //! c=legato i=vibrato g=3 o=cc:00,00
+ 00 vibrato cc1
+
+ //! c=legato i=legato-vibrato g=3 o=cc:00,01
+ 01 senza vibrato cc1
+
+ //! c=default i=vibrato-con-sord g=3 o=cc:00,02
+ 02 vibrato con sord. cc1
+
+ //! c=default i=legato-vibrato g=3 o=cc:00,03
+ 03 senza vibrato con sord. cc1
+
+ //! c=long i=tremolo g=3 o=cc:00,04
+ 04 tremolo cc1
+
+ //! c=long i=harmonics g=3 o=cc:00,05
+ 05 harmonics cc1
+
+ //! c=short i=spiccato g=3 o=cc:00,06
+ 06 spiccato velocity
+
+ //! c=short i=marcato-quarter g=3 o=cc:00,07
+ 07 marcato velocity
+
+ //! c=textured i=pizz g=3 o=cc:00,08
+ 08 pizz. velocity
+
+ //! c=textured i=pizz-bartok g=3 o=cc:00,09
+ 09 pizz. bartok velocity
+
+ //! c=textured i=col-legno g=3 o=cc:00,10
+ 10 col legno velocity
+
+ //! c=fx i=fx g=3 o=cc:00,11
+ 11 finger velocity
+
+ //! c=fx i=note-sixteenth g=3 o=cc:00,12
+ 12 sul pont. short velocity (C-b, V-c)
+
+ //! c=fx i=sul-pont g=3 o=cc:00,13
+ 13 sul pont. cc1
+
+ //! c=fx i=tremolo-sul-pont g=3 o=cc:00,14
+ 14 sul pont. tremolo cc1
+
+ //! c=fx i=tremolo-harmonics g=3 o=cc:00,15
+ 15 harmonics tremolo cc1
+
+ //! c=fx i=legato-gliss g=3 o=cc:00,16
+ 16 harmonics gliss. cc1
+
+ //! c=default i=legato-gliss g=3 o=cc:00,17
+ 17 harmonics gliss. con sord. cc1
+
+ //! c=fx i=tremolo-harmonics-a g=3 o=cc:00,18
+ 18 harmonics gliss. tremolo cc1
+
+ //! c=default i=tremolo-harmonics-a g=3 o=cc:00,19
+ 19 harmonics gliss. tremolo con sord. cc1 (C-b)
+
+ //! c=fx i=legato-gliss g=3 o=cc:00,20
+ 20 harmonics gliss. artificial cc1 (V-no, V-la)
+
+ //! c=fx i=run-major g=3 o=cc:00,21
+ 21 glissandi cc1 (V-c)
+
+ //! c=default i=run-major g=3 o=cc:00,22
+ 22 glissandi con sord. cc1 (V-c)
+
+ //! c=fx i=run-major g=3 o=cc:00,23
+ 23 short gliss. cc1 (C-b)
+
 
 //----------------------------------------------------------------------------
+ //----------------OT Berlin Orchestra Inspire
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;01-1 Full Orchestra Multi&quot;
+ Bank 12 1 BOI Full Orchestra Multi
+ //! c=long i=note-whole o=note:5
+ 1 sustain
+ //! c=short i=staccato o=note:6
+ 40 staccato
+ //! c=fx i=fx o=note:7
+ 62 fx
 
-//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tpt&quot;
-Bank 18 2 KH - Tpt
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;02-1 Strings Whole Ensemble Multi&quot;
+ Bank 12 2 BOI Strings Whole Ensemble Multi
+ //! c=long i=note-whole o=note:5
+ 1 sustain immediate
+ //! c=long i=note-whole o=note:6
+ 2 sustain soft
+ //! c=short i=spiccato o=note:7
+ 42 spiccato
+ //! c=short-light i=pizz o=note:8
+ 56 pizz
+ //! c=long i=tremolo o=note:9
+ 11 tremolo
+ //! c=long-light i=con-sord g=2 o=cc:16,127
+ 7 con sordino on
+ //! c=long-light i=con-sord g=2 o=cc:16,0
+ 6 con sordino off
 
-//! c=long i=legato o=note:25
-1 sustain
-//! c=long i=legato-slurred o=note:29
-2 adagio
-//! c=short i=marcato o=note:26
-54 acc pp
-//! c=short i=marcato o=note:27
-54 acc mf
-//! c=short i=marcato o=note:28
-54 acc ff
-//! c=short i=staccato o=note:30
-40 stacc
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;02-2 First Chairs Whole Ensemble Multi&quot;
+ Bank 12 3 BOI First Chairs Whole Ensemble Multi
+ //! c=long i=note-whole o=note:24
+ 1 sustain
+ //! c=short i=spiccato o=note:25
+ 42 spiccato
+ //! c=long-light i=con-sord g=2 o=cc:16,127
+ 7 con sordino on
+ //! c=long-light i=con-sord g=2 o=cc:16,0
+ 6 con sordino off
 
-//! c=short-dark i=rip o=note:23
-100 rip
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;02-3 High Strings 8va Multi&quot;
+ Bank 12 4 BOI High Strings 8va Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=spiccato o=note:25
+ 42 spiccato
+ //! c=long-light i=con-sord g=2 o=cc:16,127
+ 7 con sordino on
+ //! c=long-light i=con-sord g=2 o=cc:16,0
+ 6 con sordino off
 
-//! c=fx g=2 i=fx o=note:42
-106 solo
-//! c=fx g=2 i=fx o=note:41
-107 a2
-//! c=fx g=2 i=fx o=note:40
-108 a4
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;02-4 Low Strings 8va Multi&quot;
+ Bank 12 5 BOI Low Strings 8va Multi
+ //! c=legato i=legato o=note:96
+ 20 legato
+ //! c=short i=spiccato o=note:97
+ 42 spiccato
+ //! c=short-light i=pizz o=note:98
+ 56 pizz
+ //! c=long-light i=con-sord g=2 o=cc:16,127
+ 7 con sordino on
+ //! c=long-light i=con-sord g=2 o=cc:16,0
+ 6 con sordino off
 
-//----------------------------------------------------------------------------
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;02-5 Violins I &amp; II Multi&quot;
+ Bank 12 6 BOI Violins I &amp; II Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=spiccato o=note:25
+ 42 spiccato
+ //! c=long-light i=con-sord g=2 o=cc:16,127
+ 7 con sordino on
+ //! c=long-light i=con-sord g=2 o=cc:16,0
+ 6 con sordino off
 
-//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tbn&quot;
-Bank 18 3 KH - Tbn
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-1 Brass Whole Ensemble Multi&quot;
+ Bank 12 7 BOI Brass Whole Ensemble Multi
+ //! c=long i=note-whole o=note:96
+ 1 sustain immediate
+ //! c=long i=note-whole o=note:97
+ 2 sustain soft
+ //! c=short i=staccato o=note:98
+ 40 staccato
+ //! c=long i=marcato o=note:99
+ 9 marcato
 
-//! c=long i=legato o=note:85
-1 sustain
-//! c=long i=legato-slurred o=note:89
-2 adagio
-//! c=short i=marcato o=note:86
-54 acc pp
-//! c=short i=marcato o=note:87
-54 acc mf
-//! c=short i=marcato o=note:88
-54 acc ff
-//! c=short i=staccato o=note:90
-40 stacc
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-2 Brass Muted Ensemble Multi&quot;
+ Bank 12 8 BOI Brass Muted Ensemble Multi
+ //! c=long i=note-whole o=note:96
+ 1 sustain
+ //! c=short i=staccato o=note:97
+ 40 staccato
 
-//! c=short-dark i=rip o=note:23
-100 rip
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-3 Trumpet &amp; Horns 8va Multi&quot;
+ Bank 12 9 BOI Trumpet &amp; Horns 8va Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=staccato o=note:25
+ 40 staccato
+ //! c=long i=marcato o=note:26
+ 9 marcato
 
-//! c=fx g=2 i=fx o=note:30
-106 solo
-//! c=fx g=2 i=fx o=note:29
-107 a2
-//! c=fx g=2 i=fx o=note:28
-108 a4
-//! c=fx g=2 i=fx o-note:27
-109 a8
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-4 Trombones &amp; Tuba 8va Multi&quot;
+ Bank 12 10 BOI Trombones &amp; Tuba 8va Multi
+ //! c=long i=note-whole o=note:96
+ 1 sustain
+ //! c=short i=staccato o=note:97
+ 40 staccato
+ //! c=long i=marcato o=note:98
+ 9 marcato
 
-//----------------------------------------------------------------------------
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-5 Solo Horn Multi&quot;
+ Bank 12 11 BOI Solo Horn Multi
+ //! c=legato i=legato o=note:96
+ 20 legato
+ //! c=short i=staccato o=note:97
+ 40 staccato
 
-//! g=&quot;Kirk Hunter/Concert Brass 2&quot; n=&quot;KH Tuba&quot;
-Bank 18 4 KH - Tuba
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;03-6 Solo Trumpet Multi&quot;
+ Bank 12 12 BOI Solo Trumpet Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=long i=note-whole o=note:25
+ 1 sustain vibrato
+ //! c=short i=staccato o=note:26
+ 40 staccato
 
-//! c=long i=legato o=note:85
-1 sustain
-//! c=long i=legato-slurred o=note:89
-2 adagio
-//! c=short i=marcato o=note:86
-54 acc pp
-//! c=short i=marcato o=note:87
-54 acc mf
-//! c=short i=marcato o=note:88
-54 acc ff
-//! c=short i=staccato o=note:90
-40 stacc
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;04-1 Woodwinds Whole Ensemble Multi&quot;
+ Bank 12 13 BOI Woodwinds Whole Ensemble Multi
+ //! c=long i=note-whole o=note:5
+ 1 sustain
+ //! c=short i=staccato o=note:6
+ 40 staccato
+ //! c=long i=trill o=note:7
+ 70 trill half tone
+ //! c=long i=trill o=note:8
+ 71 trill full tone
 
-//----------------------------------------------------------------------------
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;04-2 Flutes &amp; Clarinets 8va Multi&quot;
+ Bank 12 14 BOI Flutes &amp; Clarinets 8va Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=long i=note-whole o=note:25
+ 1 sustain vibrato
+ //! c=short i=staccato o=note:26
+ 40 staccato
+ //! c=long i=trill o=note:27
+ 70 trill half tone
+ //! c=long i=trill o=note:28
+ 71 trill full tone
 
-// CineWinds Core
-//
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;04-3 Bassoons &amp; Clarinets 8va Multi&quot;
+ Bank 12 15 BOI Bassoons &amp; Clarinets 8va Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=staccato o=note:25
+ 40 staccato
 
-//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Piccolo&quot;
-Bank 19 1 CWC - Piccolo
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;04-4 Solo Flute Multi&quot;
+ Bank 12 16 BOI Solo Flute Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=staccato o=note:25
+ 40 staccato
 
-//! c=long i=legato o=note:36
-1 sustain
-//! c=short i=marcato-quarter o=note:41
-52 marc
-//! c=short i=tenuto-eighth o=note:40
-50 ten
-//! c=short i=staccato o=note:38
-40 stacc
-//! c=long i=trill-min2 o=note:43
-70 tr m2
-//! c=long i=trill-maj2 o=note:45
-71 tr M2
-
-//----------------------------------------------------------------------------
-
-//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Flt&quot;
-Bank 19 2 CWC - Flt
-
-//! c=long i=legato o=note:36
-1 sustain
-//! c=short i=marcato-quarter o=note:41
-52 marc
-//! c=short i=tenuto-eighth o=note:40
-50 ten
-//! c=short i=staccato o=note:38
-40 stacc
-//! c=long i=trill-min2 o=note:43
-70 tr m2
-//! c=long i=trill-maj2 o=note:45
-71 tr M2
-
-//----------------------------------------------------------------------------
-
-//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Oboe&quot;
-Bank 19 3 CWC - Oboe
-
-//! c=long i=legato o=note:36
-1 sustain
-//! c=short i=marcato-quarter o=note:41
-52 marc
-//! c=short i=tenuto-eighth o=note:40
-50 ten
-//! c=short i=staccato o=note:38
-40 stacc
-//! c=long i=trill-min2 o=note:43
-70 tr m2
-//! c=long i=trill-maj2 o=note:45
-71 tr M2
-
-//----------------------------------------------------------------------------
-
-//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Clnt&quot;
-Bank 19 4 CWC - Clnt
-
-//! c=long i=legato o=note:24
-1 sustain
-//! c=short i=marcato-quarter o=note:29
-52 marc
-//! c=short i=tenuto-eighth o=note:28
-50 ten
-//! c=short i=staccato o=note:26
-40 stacc
-//! c=long i=trill-min2 o=note:31
-70 tr m2
-//! c=long i=trill-maj2 o=note:33
-71 tr M2
-
-//----------------------------------------------------------------------------
-
-//! g=&quot;Cinesamples/Cinewinds Core&quot; n=&quot;CWC Bassn&quot;
-Bank 19 5 CWC - Bassn
-
-//! c=long i=legato o=note:12
-1 sustain
-//! c=short i=marcato-quarter o=note:17
-52 marc
-//! c=short i=tenuto-eighth o=note:16
-50 ten
-//! c=short i=staccato o=note:14
-40 stacc
-//! c=long i=trill-min2 o=note:19
-70 tr m2
-//! c=long i=trill-maj2 o=note:21
-71 tr M2
-
-
-//----------------------------------------------------------------------------
-
-// KIRK HUNTER CONCERT BRASS LEGACY
-//
-
-//! g=&quot;Kirk Hunter/Concert Brass Legacy&quot; n=&quot;KH Brass Ens&quot;
-Bank 20 1 KH - Brass Ens
-
-//! c=long i=legato o=note:97
-1 sustain
-//! c=long i=legato-slurred o=note:101
-20 adagio
-//! c=long i=legato-slurred o=note:98
-21 allegro
-//! c=long i=legato-slurred o=note:99
-28 vivo
-//! c=long i=sfz o=note:102
-49 sfz
-//! c=short i=marcato o=note:100
-52 marc
-//! c=short i=staccato o=note:103
-40 staccato
-//! c=long i=con-sord o=note:104
-7 con sord
-//! c=long i=note-whole o=note:106
-109 senza sord
+ //! g=&quot;Orchestral Tools/Inspire&quot; n=&quot;04-5 Solo Clarinet Multi&quot;
+ Bank 12 17 BOI Solo Clarinet Multi
+ //! c=legato i=legato o=note:24
+ 20 legato
+ //! c=short i=staccato o=note:25
+ 40 staccato
 </pre></div>
 </div>
 </div>
@@ -693,20 +945,7 @@ Bank 20 1 KH - Brass Ens
 <h2>Jason’s notes<a class="headerlink" href="#jason-s-notes" title="Permalink to this headline">¶</a></h2>
 <p>I’ve finally fixed my MIDI-chasing issue, and I thought I’d share the fruits of my labours. The attached template uses GPO5 as a basis and augments it with CSS, Kirk Hunter Concert Brass 2 and CineWinds Core.</p>
 <p>It’s unlikely most people will have precisely all of those, of course. You could always delete the tracks pertaining to the ones you don’t. Or you could substitute in ones you do, but then you’ll have to do some work on the MIDI note names and Reaticulate banks. The former task is boring rather than difficult and the latter isn’t half as terrifying as it first seems.</p>
-<p>I hope people will get some kind of use out of this, even if they just pick up on some of the methodology.</p>
-<ul class="simple">
-<li><ul>
-<li><ul>
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="section" id="gpo5-css-khb-cwc-ks-orchestral-template-v5">
-<h3>GPO5+CSS+KHB+CWC KS ORCHESTRAL TEMPLATE v5<a class="headerlink" href="#gpo5-css-khb-cwc-ks-orchestral-template-v5" title="Permalink to this headline">¶</a></h3>
-<p>Reaticulate Version - this is a mid to late Romantic-era orchestra, not a kitchen sink epic job.</p>
-</div>
+<p>I hope people will get some kind of use out of this, even if they just pick up on some of the methodology. The whole enchilada is: GPO5+CSS+KHB+CWC KS ORCHESTRAL TEMPLATE v5 … Reaticulate Version - this is a mid to late Romantic-era orchestra, not a kitchen sink epic job.</p>
 </div>
 <div class="section" id="the-libraries">
 <h2>THE LIBRARIES<a class="headerlink" href="#the-libraries" title="Permalink to this headline">¶</a></h2>
@@ -793,13 +1032,15 @@ Bank 20 1 KH - Brass Ens
 </div></blockquote>
 <p>The script requires ALL the addons. SWS, js (Julian Sader), and ultraschall.</p>
 <p>I think that’s about it. If anyone uses this, let me know, especially if you find any bugs.</p>
-<p>cheers!
-Attached Files
-File Type: lua  convertVSTpresetsToReaticulateBank.lua (9.9 KB, 72 views)
-__________________
-eric moon
-Very Stable Genius
-<a class="reference external" href="https://gogolab.com/">https://gogolab.com/</a></p>
+<p>cheers!</p>
+<p>Posted by:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>eric moon</p></li>
+<li><p>Very Stable Genius</p></li>
+<li><p><a class="reference external" href="https://gogolab.com/">GogoLab</a></p></li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="writing-these-banks">
 <h2>Writing these Banks<a class="headerlink" href="#writing-these-banks" title="Permalink to this headline">¶</a></h2>
@@ -821,16 +1062,14 @@ Very Stable Genius
 </div>
 <p>See the difference? The latter one says “when you activate the long articulation, send CC 32 value 1 on the default channel” while your bank won’t do anything when you click the articulation.</p>
 <p>I appreciate this can be a bit confusing. You might hold off for the GUI that will be coming to make your own banks. It will make this sort of thing a lot easier.</p>
-<p>Edit: Ah, I misunderstood your problem (well, it will be your first problem, considering you’re still missing the output events ) which is that your bank definition starts with “BANK” (uppercase) instead of “Bank”. If Reaper accepts BANK, I consider it a bug in Reaticulate. I’ll check that and fix it if so. Meanwhile, you can just change BANK to Bank and it should show up in the menu.</p>
+<p>Edit: Ah, I misunderstood your problem. Still, it will be your first problem, considering you’re still missing the output events. The problem here is that your bank definition starts with “BANK” (uppercase) instead of “Bank”. If Reaper accepts BANK, I consider it a bug in Reaticulate. I’ll check that and fix it if so. Meanwhile, you can just change BANK to Bank and it should show up in the menu.</p>
 <p>Edit 2: and fixed in the just-released 0.3.0.</p>
 </div>
 </div>
 <div class="section" id="version-0-3-0-notes">
 <h2>Version 0.3.0 Notes<a class="headerlink" href="#version-0-3-0-notes" title="Permalink to this headline">¶</a></h2>
 <p>I’ve just promoted the last prerelease (plus a couple small tweaks) to version 0.3.0.</p>
-<p>This release of Reaticulate focuses on general usability improvements and knocking down those little workflow irritations. Apart from that, there are quite a number of internal structural changes that you don’t see, but will help pave the way for future releases.</p>
-<p>Eh?
-Reaticulate is an articulation management system for REAPER. Check the website for the skinny.</p>
+<p>This release of Reaticulate focuses on general usability improvements and knocking down those little workflow irritations. Apart from that, there are quite a number of internal structural changes that you don’t see, but will help pave the way for future releases. Reaticulate is an articulation management system for REAPER. Check the website for the skinny.</p>
 <div class="section" id="installing">
 <h3>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h3>
 <p>If you’re a new user (not upgrading), just follow these installation instructions.</p>
@@ -839,10 +1078,6 @@ Reaticulate is an articulation management system for REAPER. Check the website f
 <h3>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h3>
 <p>For those of you on the release track, you should eventually receive the update, but you can force it by following these instructions. Those using the prerelease track will receive this update as well, plus of course all the prereleases leading up to 0.4.0.</p>
 <p>Here are the changes since 0.2.0:</p>
-</div>
-<div class="section" id="new-features">
-<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
-<p>Here are the new features:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Articulations</span> <span class="n">are</span> <span class="n">now</span> <span class="n">fed</span> <span class="n">back</span> <span class="n">to</span> <span class="n">control</span> <span class="n">surface</span> <span class="p">(</span><span class="c1">#48)</span>
 <span class="n">CC0</span><span class="o">/</span><span class="mi">32</span> <span class="n">bank</span> <span class="n">select</span> <span class="n">indicates</span> <span class="n">bank</span> <span class="k">for</span> <span class="n">articulation</span>
 <span class="n">Articulations</span> <span class="n">can</span> <span class="n">be</span> <span class="n">expressed</span> <span class="n">either</span> <span class="k">as</span> <span class="n">native</span> <span class="n">program</span> <span class="n">change</span> <span class="n">events</span> <span class="ow">or</span> <span class="n">custom</span> <span class="n">CC</span> <span class="n">events</span>
@@ -873,17 +1108,17 @@ Minor cosmetic improvements with drag-and-drop to reorder banks on the track con
 <div class="section" id="bug-fixes">
 <h3>Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permalink to this headline">¶</a></h3>
 <p>Fixed regression in control surface feedback when reopening a project
-Force control surface update on track selection (workaround for <a class="reference external" href="https://forum.cockos.com/showthread.php?p=2077098">https://forum.cockos.com/showthread.php?p=2077098</a>)
+Force control surface update on track selection (workaround for <a class="reference external" href="https://forum.cockos.com/showthread.php?p=2077098">Force control</a>)
 Ensure articulations on same MIDI tick as notes are processed before the notes (#53)
 Other minor fixes</p>
-<p><strong>********S
-CC Actions
-********</strong></p>
-<p>Quote:
-Originally Posted by daeavelwyn View Post
-I’ve tried “Activate selected articulation on default channel” but it just do nothing…I guess it’s mainly because I don’t understand (yet …) how this script works.
-The usage documentation might be of help here. In particular the section on actions.</p>
-<p>The “activate selected articulation” action isn’t intended to be binded to a CC. That’s a discrete action that activates an articulation that’s been selected with one of the “Select” actions. These actions support a workflow where you use a control surface to scroll through the list of articulations and activate one based on the current selection.</p>
+</div>
+</div>
+<div class="section" id="cc-actions">
+<h2>CC Actions<a class="headerlink" href="#cc-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="originally-posted-by-daeavelwyn">
+<h3>Originally Posted by daeavelwyn<a class="headerlink" href="#originally-posted-by-daeavelwyn" title="Permalink to this headline">¶</a></h3>
+<p>I’ve tried “Activate selected articulation on default channel” but it just does nothing… I guess it’s mainly because I don’t understand (yet) how this script works. The usage documentation might be of help here, in particular the section on actions.</p>
+<p>The “activate selected articulation” action isn’t intended to be bound to a CC. That’s a discrete action that activates an articulation that’s been selected with one of the “Select” actions. These actions support a workflow where you use a control surface to scroll through the list of articulations and activate one based on the current selection.</p>
 <p>If you want to trigger specific articulations from your controller, I think the action you’ll want to use is “Activate articulation by CC on default channel.” The docs I linked to say a bit more about that.</p>
 </div>
 </div>
