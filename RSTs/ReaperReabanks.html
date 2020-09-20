@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,43 +11,47 @@
   
 
   
-  
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Reaticulate - Reabanks Development" href="ReaperReaticulate.html" />
     <link rel="prev" title="Reaper" href="ReaperApp.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> Help Yourself
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Help Yourself
           
 
           
@@ -71,6 +74,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -125,6 +129,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#originally-posted-by-daeavelwyn">Originally Posted by daeavelwyn</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#channels-in-reaticulate">Channels in Reaticulate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Originally Posted by daeavelwyn</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lsbs-for-msbs-limit">LSBs for MSBs Limit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#originally-posted-by-reaktor-dave">Originally Posted by Reaktor:[Dave]</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
@@ -135,6 +147,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -173,7 +186,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>A Discussion on Reabanks</li>
     
@@ -1122,6 +1135,48 @@ Other minor fixes</p>
 <p>If you want to trigger specific articulations from your controller, I think the action you’ll want to use is “Activate articulation by CC on default channel.” The docs I linked to say a bit more about that.</p>
 </div>
 </div>
+<div class="section" id="channels-in-reaticulate">
+<h2>Channels in Reaticulate<a class="headerlink" href="#channels-in-reaticulate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Originally Posted by daeavelwyn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><em>Is there a way to assign a channel for every CC message / keyswitch ? I’d like reaticulate to listen only on channel 16. Is it possible to assign this as a global parameter and how?</em></p>
+<p>You mean on the output events that Reaticulate sends when an articulation is activated? This can be done either at the track level, by assigning the destination channel of the bank to channel 16, or at the bank level, by hardcoding the output events’ destination channel to specifically to channel 16, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">=</span><span class="n">note</span><span class="o">@</span><span class="mi">16</span><span class="p">:</span><span class="mi">23</span>
+</pre></div>
+</div>
+<p>In terms of only responding to program changes on channel 16 (if that’s maybe what you meant) you can do this in the track configuration to specify the source channel to be channel 16 instead of omni.</p>
+<p>Remeber… Reaper chases all CCs and program changes based on the point that playback begins. This is one of the main disadvantages of using note-based keyswitches in your MIDI items. Reaticulate uses program changes because a) you get proper chasing for free, and b) you can see the names of the articulations in the MIDI editor by adding the Bank/Program Select lane.</p>
+</div>
+</div>
+<div class="section" id="lsbs-for-msbs-limit">
+<h2>LSBs for MSBs Limit<a class="headerlink" href="#lsbs-for-msbs-limit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="originally-posted-by-reaktor-dave">
+<h3>Originally Posted by Reaktor:[Dave]<a class="headerlink" href="#originally-posted-by-reaktor-dave" title="Permalink to this headline">¶</a></h3>
+<p><em>The website mentions which sounds like reaticulate is using one single reabank file. That seems to limit the use of reaticulate to 128 libraries, doesn’t it?</em></p>
+<p>Each MSB has 128 LSBs. So the limit for the number of user banks is actually 64*128=8192.</p>
+<p>Based on the current roadmap, this will be coming in 0.6. A rough sketch of the roadmap is:</p>
+<blockquote>
+<div><p>0.4: major internal overhaul (reworking how communication between the main app and per-track JSFX is done) to allow for more sophisticated features in the future. Plus a few extra features, including support for multiple buses. Currently available on the pre-release track, and should be GA in a week or so (pending user feedback).</p>
+<p>0.5: another big design change where we move away from MSB/LSB being the unique identifier for banks, instead assigning a proper MSB/LSB for the bank (since Reaper needs it) dynamically. This will allow easier sharing of banks between users. Not much else is going in this release as just this part alone is big enough. Depending on how tricky that is, should be out late Nov/early Dec.</p>
+<p>0.6: the GUI for bank editing will be included in this release. Depending on how many regressions I need to fix from 0.4/0.5, and how much free time the Christmas season affords me, this will be out somewhere between late Dec and early Feb 2020. Hopefully. It’s a big work item.</p>
+<p>0.7: a few other odds and ends and here is when I’ll start calling Reaticulate “beta”. That said, even through the alpha releases I’ve been paying quite a lot of attention to backward compatibility so I’m effectively already treating it like a beta.</p>
+<p>0.8: polish and stabilization and likely a few user-requested features that crop up in the interim. This could be the last release before 1.0.</p>
+</div></blockquote>
+<p>Two things threaten the current roadmap: 1. the potential release of the mythical Reaper 6.0 which may introduce native articulation maps, at which point I’ll need to figure out how best to integrate with that (or if integration even makes sense), 2. unexpected life events that compromise my free time.</p>
+<p>Reaticulate triggers articulation changes based on the combination of program number and source MIDI channel. The JSFX itself doesn’t actually know there are different banks assigned to a track, it’s just programmed to take some action on receipt of a program change on some MIDI channel.</p>
+<p>When you have two banks with conflicting program numbers, as you do, the way you can resolve this conflict in Reaticulate is to assign them to different source channels. This means the JSFX on the track can distinguish between program 1 on channel 1 and program 1 on channel 2.</p>
+<p>So having the SS Violins Test bank assigned to source channel 2 means that when you insert articulations from that bank, it should insert the program change on channel 2. (In contrast, if you picked Omni, it uses the channel of the selected notes, or the default channel that’s highlighted in Reaticulate’s GUI if no notes are selected. But with an explicit assignment to source channel 2, program changes are channel 2.)</p>
+<p>Reaticulate’s routing works by directing all MIDI data on the same channel the program change arrived on to the destination channel dictated by the articulation. The 4 notes following the program change on channel 2 are still on channel 1, so this means they will route according to the previous program change on channel 1.</p>
+<p>The reason for this design (programs on source channel N control routing for future events on channel N) is that allows using the same bank on multiple channels (loading separate instances of the patch in your instrument on different channels) for layering purposes, say a divisi line.</p>
+<p>But now here’s the bug: when you selected the second set of 4 notes at 1:39 and right-clicked to insert the articulation, the bug is that Reaticulate used the source channel of the selected notes – which is fine when the bank is mapped into the track as source=omni – and not channel 2 as it should have, which the bank was explicitly assigned to.</p>
+<p>This meant the program change 1 was received on channel 1, which applied to the HS Violins patch instead.</p>
+<p>So I’ll fix the insertion bug, but that doesn’t actually help your use case.</p>
+<p>Within the context of Reaticulate’s current behavior, there are two solutions (once I fix the bug):
+Assign the second set of 4 notes to channel 2. In fact, I may consider doing that automatically when you select the notes and insert the articulation assigned to a specific source channel. (This may be a bit too magical though. I’m on the fence.)
+Choose program numbers that don’t overlap between HS Violins and SS Violins. Then you can assign the banks both to channel 1 (or just Omni) and things will work the way you expected. The obvious problem here is that you kind of need to know ahead of time which patches you’re likely to double up on the same track, so as to avoid any program number collisions between them. This makes option 1 the more robust choice, even if it’s a little less convenient.</p>
+<p>I’ll think about whether or not I can feasibly fix this design so that the JSFX understands program 1 on channel 1 from bank X is actually different than program 1 on channel 1 from bank Y. I appreciate the current behavior violates the Principle of Least Astonishment (as evidenced by your confusion) but there are actually good reasons for the design. The constraints that fed into that design may be a bit different now, so I’ll have another think about it. Meanwhile, options 1 or 2 above are the way to go with the current version</p>
+</div>
+</div>
 </div>
 
 
@@ -1135,7 +1190,7 @@ Other minor fixes</p>
         <a href="ReaperReaticulate.html" class="btn btn-neutral float-right" title="Reaticulate - Reabanks Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ReaperApp.html" class="btn btn-neutral" title="Reaper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ReaperApp.html" class="btn btn-neutral float-left" title="Reaper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1144,11 +1199,19 @@ Other minor fixes</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018, Robyn Hahn
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -1160,27 +1223,16 @@ Other minor fixes</p>
   </div>
   
 
-
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

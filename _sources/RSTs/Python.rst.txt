@@ -112,27 +112,42 @@ Installed gspread and oauth2client via pip3::
     pip3 install gspread oauth2client
     
 
-Project: Netflix Download
-=========================
+***************************
+Incompatible Python Version
+***************************
 
-Extract links to video/audio for direct download, and get thumbnail, info about uploader, likes, etc.
+Sphinx failed to run after doing a brew upgrade, which installed Python3.8.5. Sphinx failed to find 3.7. StackOverflow gave the following advice.
 
+Consider installing pyenv with Homebrew on macOS::
 
-Header Parameters
-RapidAPI Project
+  brew update
+  brew install pyenv
 
-X-RapidAPI-Host
-STRING
-getvideo.p.rapidapi.com
-REQUIRED
-X-RapidAPI-Key
-STRING
-af87ff4fd4msh044a9ed78894f46p11bbb3jsnc2f0bece1f36
-REQUIRED
+Clone the repository to to get the latest version of pyenv::
 
-Required Parameters
-url
-STRING
-https://www.youtube.com/watch?v=nfWlot6h_JM
-REQUIRED
-URL of video/audio page
+  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+Define your environment variables::
+
+  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+
+Restart your shell so the path changes take effect::
+
+  exec "$SHELL"
+
+Verify the installation and check the available python versions::
+
+  pyenv install --list
+
+Install the required python version::
+
+  pyenv install 3.7
+
+Set it as your global version after installation::
+
+  pyenv global 3.7
+
+Verify your current python version the system is using::
+
+    python3 --version
