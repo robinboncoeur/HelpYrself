@@ -23,6 +23,7 @@ Can't remember? Help Yourself
    RSTs/ReaperApp.rst
    RSTs/ReaperReabanks.rst
    RSTs/ReaperReaticulate.rst
+   RSTs/Samyang.rst
    RSTs/Video.rst
    RSTs/Windoze.rst
 
