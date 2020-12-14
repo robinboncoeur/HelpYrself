@@ -15,6 +15,7 @@ Can't remember? Help Yourself
    RSTs/Composition.rst
    RSTs/Excel.rst
    RSTs/Git.rst
+   RSTs/GreatIdeas.rst
    RSTs/LaTeX.rst
    RSTs/Linux.rst
    RSTs/Mac.rst

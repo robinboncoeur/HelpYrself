@@ -22,6 +22,14 @@ Inline images
 .. image:: http://www.tightbytes.com/Music/CReinecke/CReinecke1890.jpg
 
 
+Inline Video
+============
+
+This is the code::
+
+    .. embedded-video:: SeoW3YNo3Zs
+
+
 
 Creating Dotpoints
 ==================
@@ -64,3 +72,65 @@ or, for Windows:
    E:\\MyRuntime\\runtime\\textures\\VendorName\\ImagesFolder\\Character\\
 
 
+
+***********
+Citizenship
+***********
+
+Ceremony: Australian citizenship pledge
+=======================================
+
+All Australian citizens should understand what it means to be a citizen. It is a critical part of building our nation.
+
+Most people make the Australian citizenship pledge at a citizenship ceremony. You might hear people call it the 'pledge of commitment'.
+
+Making the pledge is a public commitment to Australia. It means that you are accepting the responsibilities and privileges of citizenship.
+
+If you learn the meaning behind the pledge, you will begin to understand what Australian citizenship means.
+
+You can choose between 2 versions of the pledge. One mentions God and the other does not.
+
+Pledge 1
+========
+
+  From this time forward, under God,
+  I pledge my loyalty to Australia and its people,
+  whose democratic beliefs I share,
+  whose rights and liberties I respect, and
+  whose laws I will uphold and obey.
+
+Pledge 2
+========
+
+  From this time forward,
+  I pledge my loyalty to Australia and its people,
+  whose democratic beliefs I share,
+  whose rights and liberties I respect, and
+  whose laws I will uphold and obey.
+
+Advance Australia Fair
+======================
+
+Modified by the National Australia Day Council, these lyrics were officially adopted in April 1984, as follows:
+
+Australians all let us rejoice,
+For we are young and free;
+We've golden soil and wealth for toil;
+Our home is girt by sea;
+Our land abounds in nature's gifts
+Of beauty rich and rare;
+In history's page, let every stage
+Advance Australia Fair.
+In joyful strains then let us sing,
+Advance Australia Fair.
+
+Beneath our radiant Southern Cross
+We'll toil with hearts and hands;
+To make this Commonwealth of ours
+Renowned of all the lands;
+For those who've come across the seas
+We've boundless plains to share;
+With courage let us all combine
+To Advance Australia Fair.
+In joyful strains then let us sing,
+Advance Australia Fair.

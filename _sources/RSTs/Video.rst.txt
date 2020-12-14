@@ -76,3 +76,20 @@ How to display a Video
 
     <iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe>
 
+
+***************
+YouTube-DL tips
+***************
+
+172
+
+In a shell, & is a special character, advising the shell to start everything up to the & as a process in the background. To avoid this behavior, you can put the URL in quotes. See the youtube-dl FAQ for more information.
+
+Also beware of -citk. With the exception of -i, these options make little sense. See the youtube-dl FAQ for more information. Even -f mp4 looks very strange.
+
+So what you want is:
+
+youtube-dl -i -f mp4 --yes-playlist 'https://www.youtube.com/watch?v=7Vy8970q0Xc&list=PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2'
+Alternatively, you can just use the playlist ID:
+
+youtube-dl -i PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2
