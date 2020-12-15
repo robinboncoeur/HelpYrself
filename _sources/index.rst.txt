@@ -20,11 +20,13 @@ Can't remember? Help Yourself
    RSTs/Linux.rst
    RSTs/Mac.rst
    RSTs/Musescore.rst
+   RSTs/Permaculture.rst
    RSTs/Python.rst
    RSTs/ReaperApp.rst
    RSTs/ReaperReabanks.rst
    RSTs/ReaperReaticulate.rst
    RSTs/Samyang.rst
+   
    RSTs/Video.rst
    RSTs/Windoze.rst
 
