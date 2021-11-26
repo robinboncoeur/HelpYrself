@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mac Pointers" href="Mac.html" />
+    <link rel="next" title="Mac Pointers" href="MacAdv.html" />
     <link rel="prev" title="LaTeX, Memoir and Bookbinding" href="LaTeX.html" /> 
 </head>
 
@@ -89,15 +89,26 @@
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#samba-sharing-linux-mint-20">Samba Sharing - Linux Mint 20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-install-samba">Step 1: Install Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-configure-samba-share">Step 2: Configure Samba share</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-configure-secure-samba-share">Step 3: Configure Secure Samba Share</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-configure-samba-client">Step 4: Configure Samba client</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#command-line-tools">Command Line Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clear-cache">Clear Cache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#removing-spotify">Removing Spotify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-your-path">View your PATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-your-path">Set your PATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-your-path-permanently">Set your PATH permanently</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#clear-cache">Clear Cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removing-spotify">Removing Spotify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#brackets-in-mint-ubuntu">Brackets in Mint (Ubuntu)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#method-1-install-brackets-using-snap">Method 1: Install Brackets using Snap</a></li>
@@ -108,12 +119,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Mac.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
@@ -183,6 +197,172 @@
             
   <div class="section" id="linux-tips">
 <h1>Linux Tips<a class="headerlink" href="#linux-tips" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="samba-sharing-linux-mint-20">
+<h2>Samba Sharing - Linux Mint 20<a class="headerlink" href="#samba-sharing-linux-mint-20" title="Permalink to this headline">¶</a></h2>
+<p>By Lorna Chepkoech - September 2, 2020</p>
+<p>In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be Samba server.</p>
+<div class="section" id="step-1-install-samba">
+<h3>Step 1: Install Samba<a class="headerlink" href="#step-1-install-samba" title="Permalink to this headline">¶</a></h3>
+<p>We start by installing required samba packages on Linux Mint 20. This is done using apt command line package manager:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">samba</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-configure-samba-share">
+<h3>Step 2: Configure Samba share<a class="headerlink" href="#step-2-configure-samba-share" title="Permalink to this headline">¶</a></h3>
+<p>Samba configuration file is located in /etc/samba/smb.conf. Any changes made to this file requires Samba daemon to be restarted. Let’s start by creating a directory to be shared with Samba. The directory must exist before it can be configured in smb.conf. Let’s create one under /home and allow it to be readable and writable by all users:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /home/share
+$ sudo chmod 777 /home/share
+</pre></div>
+</div>
+<p>Now open Samba configuration file to make the necessary changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /etc/samba/smb.conf
+</pre></div>
+</div>
+<p>Ensure you have the content as shown under global settings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">global</span><span class="p">]</span>
+
+<span class="c1"># Configure correct UTP</span>
+ <span class="n">unix</span> <span class="n">charset</span> <span class="o">=</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+<span class="c1"># Change this to the workgroup/NT-domain name your Samba server will be part of</span>
+  <span class="n">workgroup</span> <span class="o">=</span> <span class="n">WORKGROUP</span>
+  <span class="n">server</span> <span class="nb">min</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">NT1</span>
+  <span class="n">ntlm</span> <span class="n">auth</span> <span class="o">=</span> <span class="n">yes</span>
+  <span class="c1">#interfaces = 127.0.0.0/8 eth0</span>
+  <span class="n">bind</span> <span class="n">interfaces</span> <span class="n">only</span> <span class="o">=</span> <span class="n">yes</span>
+</pre></div>
+</div>
+<p>Set share configuration at the end:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Docs</span><span class="p">]</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span>
+  <span class="n">writable</span> <span class="o">=</span> <span class="n">yes</span>
+  <span class="n">guest</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">yes</span>
+  <span class="n">guest</span> <span class="n">only</span> <span class="o">=</span> <span class="n">yes</span>
+  <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0777</span>
+  <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0777</span>
+</pre></div>
+</div>
+<p>Configuration details:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Docs – Samba share name</p></li>
+<li><p>path = /home/share – Directory to share</p></li>
+<li><p>guest ok = yes – Turn on guest share</p></li>
+<li><p>guest only = yes – All protected as guests</p></li>
+<li><p>writable = yes – Set share directory as writable</p></li>
+<li><p>create mode = 0777 &amp; directory mode = 0777 – Allow access to all</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="step-3-configure-secure-samba-share">
+<h3>Step 3: Configure Secure Samba Share<a class="headerlink" href="#step-3-configure-secure-samba-share" title="Permalink to this headline">¶</a></h3>
+<p>Give group ownership to Samba shared directory to sambashare group:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo chgrp sambashare /home/share
+</pre></div>
+</div>
+<p>Create samba share user, replacing user1 with your user name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo useradd -M -d /home/share/user1 -s /usr/sbin/nologin -G sambashare user1
+$ sudo mkdir /home/share/user1
+$ sudo chown user1:sambashare /home/share/user1
+$ sudo chmod 2770 /home/share/user1
+$ sudo smbpasswd -a user1
+$ sudo smbpasswd -e user1
+</pre></div>
+</div>
+<p>We created a user’s home directory inside Samba share parent directory and set ownership to the samba share group. To create another user:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo useradd -M -d /home/share/smbadmin -s /usr/sbin/nologin -G sambashare smbadmin
+$ sudo mkdir /home/share/smbadmin
+$ sudo smbpasswd -a smbadmin
+$ sudo smbpasswd -e smbadmin
+$ sudo chown smbadmin:sambashare /home/share/smbadmin
+$ sudo chmod 2770 /home/share/smbadmin
+</pre></div>
+</div>
+<p><strong>Configure secure sambashare</strong></p>
+<p>Open samba configuration file and add the following contents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /etc/samba/smb.conf
+</pre></div>
+</div>
+<p>Add the following content at the end of the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user1</span><span class="p">]</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">user1</span>
+<span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
+<span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
+<span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@user1</span> <span class="nd">@sambashare</span>
+<span class="p">[</span><span class="n">smbadmin</span><span class="p">]</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">smbadmin</span>
+<span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
+<span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
+<span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@smbadmin</span> <span class="nd">@sambashare</span>
+</pre></div>
+</div>
+<p>Save the file and restart Samba daemon:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo systemctl restart smbd nmbd
+</pre></div>
+</div>
+<p>Allow Samba through the firewall:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo ufw allow samba
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-4-configure-samba-client">
+<h3>Step 4: Configure Samba client<a class="headerlink" href="#step-4-configure-samba-client" title="Permalink to this headline">¶</a></h3>
+<p>To be able to access Samba share directory from another machine, we need to install Samba client. I am going install Samba client on Elementary OS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">samba</span><span class="o">-</span><span class="n">client</span> <span class="n">cifs</span><span class="o">-</span><span class="n">utils</span>
+</pre></div>
+</div>
+<p>To access Samba share temporarily, run this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ smbclient //sambaserver-ip/share-dir -U sambauser
+</pre></div>
+</div>
+<p>For example in my case:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ smbclient //192.168.100.77/user1 -U user1
+</pre></div>
+</div>
+<p>Mount the Samba share to a directory for permanent access:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /mounts/shares
+$ sudo mount -t cifs -o username=user1 //192.168.100.77/user1 ~/mounts/shares
+</pre></div>
+</div>
+<p>Check if the directory is mounted on the client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ df -h
+</pre></div>
+</div>
+<p>Output should be as shown:</p>
+<p>[Image here: samba-file-sharing-example.png]</p>
+<p>To enable persistent mount even on reboot, mount the samba share in fstab file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /etc/fstab
+</pre></div>
+</div>
+<p>Add the following line depending on your mount point:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">100.77</span><span class="o">/</span><span class="n">user1</span>  <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">shares</span> <span class="n">cifs</span> <span class="n">credentials</span><span class="o">=/.</span><span class="n">sambacreds</span> <span class="mi">0</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Save the file and exit the create the credentials file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /.sambacreds
+</pre></div>
+</div>
+<p>Add the credentials information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="p">:</span> <span class="n">user1</span>
+<span class="n">password</span><span class="p">:</span> <span class="n">yourpassword</span>
+<span class="n">domain</span><span class="p">:</span> <span class="n">WORKGROUP</span>
+</pre></div>
+</div>
+<p>Confirm if mounted:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /mnt/shares
+$ sudo mount -a
+$ df -hT | grep cifs
+//192.168.100.77/user1 cifs      20G  14G  6.3G  69% /mnt/shares
+</pre></div>
+</div>
+<p>You have successfully set up Samba file share on Linux Mint 20 and mount the shared directory on a client.</p>
+</div>
+</div>
 <div class="section" id="grub-customizer">
 <h2>Grub-Customizer<a class="headerlink" href="#grub-customizer" title="Permalink to this headline">¶</a></h2>
 <p>Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by <a class="reference external" href="https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer">Daniel Richter</a> is quite nice but somehow doesn’t fully work for me… it is missing a step:</p>
@@ -204,9 +384,53 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">export</span> <span class="n">PATH</span>
 </pre></div>
 </div>
+<p>Being able to edit your $PATH is an important skill for any beginning POSIX user, whether you use Linux, BSD, or macOS.</p>
+<p>When you type a command into the command prompt in Linux, or in other Linux-like operating systems, all you’re doing is telling it to run a program. Even simple commands, like ls, mkdir, rm, and others are just small programs that usually live inside a directory on your computer called /usr/bin. There are other places on your system that commonly hold executable programs as well; some common ones include /usr/local/bin, /usr/local/sbin, and /usr/sbin. Which programs live where, and why, is beyond the scope of this article, but know that an executable program can live practically anywhere on your computer: it doesn’t have to be limited to one of these directories.</p>
+<p>When you type a command into your Linux shell, it doesn’t look in every directory to see if there’s a program by that name. It only looks to the ones you specify. How does it know to look in the directories mentioned above? It’s simple: They are a part of an environment variable, called $PATH, which your shell checks in order to know where to look.</p>
+</div>
+<div class="section" id="view-your-path">
+<h3>View your PATH<a class="headerlink" href="#view-your-path" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes, you may wish to install programs into other locations on your computer, but be able to execute them easily without specifying their exact location. You can do this easily by adding a directory to your $PATH. To see what’s in your $PATH right now, type this into a terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $PATH
+</pre></div>
+</div>
+<p>You’ll probably see the directories mentioned above, as well as perhaps some others, and they are all separated by colons. Now let’s add another directory to the list.</p>
+</div>
+<div class="section" id="set-your-path">
+<h3>Set your PATH<a class="headerlink" href="#set-your-path" title="Permalink to this headline">¶</a></h3>
+<p>Let’s say you wrote a little shell script called hello.sh and have it located in a directory called /place/with/the/file. This script provides some useful function to all of the files in your current directory, that you’d like to be able to execute no matter what directory you’re in.</p>
+<p>Simply add /place/with/the/file to the $PATH variable with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=$PATH:/place/with/the/file
+</pre></div>
+</div>
+<p>You should now be able to execute the script anywhere on your system by just typing in its name, without having to include the full path as you type it.</p>
+</div>
+<div class="section" id="set-your-path-permanently">
+<h3>Set your PATH permanently<a class="headerlink" href="#set-your-path-permanently" title="Permalink to this headline">¶</a></h3>
+<p>But what happens if you restart your computer or create a new terminal instance? Your addition to the path is gone! This is by design. The variable $PATH is set by your shell every time it launches, but you can set it so that it always includes your new path with every new shell you open. The exact way to do this depends on which shell you’re running.</p>
+<p>Not sure which shell you’re running? If you’re using pretty much any common Linux distribution, and haven’t changed the defaults, chances are you’re running Bash. But you can confirm this with a simple command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $0
+</pre></div>
+</div>
+<p>That’s the “echo” command followed by a dollar sign ($) and a zero. $0 represents the zeroth segment of a command (in the command echo $0, the word “echo” therefore maps to $1), or in other words, the thing running your command. Usually this is the Bash shell, although there are others, including Dash, Zsh, Tcsh, Ksh, and Fish.</p>
+<p>For Bash, you simply need to add the line from above, export PATH=$PATH:/place/with/the/file, to the appropriate file that will be read when your shell launches. There are a few different places where you could conceivably set the variable name: potentially in a file called ~/.bash_profile, ~/.bashrc, or ~/.profile. The difference between these files is (primarily) when they get read by the shell. If you’re not sure where to put it, ~/.bashrc is a good choice.</p>
+<p>For other shells, you’ll want to find the appropriate place to set a configuration at start time; ksh configuration is typically found in ~/.kshrc, zsh uses ~/.zshrc. Check your shell’s documentation to find what file it uses.</p>
+<p>This is a simple answer, and there are more quirks and details worth learning. Like most everything in Linux, there is more than one way to do things, and you may find other answers which better meet the needs of your situation or the peculiarities of your Linux distribution. Happy hacking, and good luck, wherever your $PATH may take you.</p>
+<p>This article was originally published in June 2017 and has been updated with additional information by the editor.</p>
+<p>On the Mac, press [Shift][Cmd][.] to view hiiden files, then in the home folder find .bash_profile file. Open, and you should see this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYENV_ROOT=&quot;$HOME/.pyenv&quot;
+export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;
+export PYENV_ROOT=&quot;$HOME/.pyenv&quot;
+export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;
+export PATH=&quot;/usr/local/opt/sphinx-doc/bin:$PATH&quot;
+export PATH=&quot;/usr/local/Cellar/python@3.9/3.9.2_1/Frameworks/Python.framework/Versions/3.9/bin:$PATH&quot;
+export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="clear-cache">
-<h3>Clear Cache<a class="headerlink" href="#clear-cache" title="Permalink to this headline">¶</a></h3>
+<h2>Clear Cache<a class="headerlink" href="#clear-cache" title="Permalink to this headline">¶</a></h2>
 <p>Type this exactly - dangerous command!:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">lists</span><span class="o">/*</span> <span class="o">-</span><span class="n">vf</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
@@ -214,13 +438,12 @@
 </div>
 </div>
 <div class="section" id="removing-spotify">
-<h3>Removing Spotify<a class="headerlink" href="#removing-spotify" title="Permalink to this headline">¶</a></h3>
+<h2>Removing Spotify<a class="headerlink" href="#removing-spotify" title="Permalink to this headline">¶</a></h2>
 <p>From <a class="reference external" href="https://askubuntu.com/questions/491476/how-to-uninstall-spotify">StackExchange</a>, use this command to uninstall Spotify. The culprit is the spotify-client:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">purge</span> <span class="n">spotify</span><span class="o">-</span><span class="n">client</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Flou02.png"><img alt="../_images/Flou02.png" class="align-center" src="../_images/Flou02.png" style="width: 273px;" /></a>
-</div>
 </div>
 <div class="section" id="kivy-and-pycharm">
 <h2>Kivy and PyCharm<a class="headerlink" href="#kivy-and-pycharm" title="Permalink to this headline">¶</a></h2>
@@ -326,7 +549,7 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Mac.html" class="btn btn-neutral float-right" title="Mac Pointers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="MacAdv.html" class="btn btn-neutral float-right" title="Mac Pointers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="LaTeX.html" class="btn btn-neutral float-left" title="LaTeX, Memoir and Bookbinding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
