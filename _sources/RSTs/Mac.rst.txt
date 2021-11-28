@@ -1,0 +1,194 @@
+############
+Mac Pointers
+############
+
+
+*********************
+Toggling Hidden Files
+*********************
+
+Make sure a folder is actually active, then press [Shift] [Command] [.]
+
+
+
+***************************
+Slow Boot after SSD Upgrade
+***************************
+
+**Question**:
+
+My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD::
+
+    Verified and repaired disk permissions.
+
+    Resterted. Boot up time about 1 minute 20 seconds.
+
+    Shut down.
+
+    Reset PRAM.
+
+    Boot up time about 1 minute.
+
+    Restarted. Boot up time about 43 minutes.
+
+I have no idea what to do.
+
+**Answer**:
+
+The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs::
+
+    1. Go to System Preferences -> Startup Disk
+
+    2. Click on the bottom left Lock tu unlock the changes
+
+    3. Select Macintosh HD (it's likely to be the only on the list)
+
+    4. Click 'Restart...'
+
+Be patient: the restart can take a few minutes.
+
+
+************
+Screen Shots
+************
+
+Easy enough to obtain. For the whole screen::
+
+    [Shift][Command][3]
+
+or for the active window::
+
+    [Shift][Command][4]
+
+To change the type of image that gets saved, open Terminal and enter::
+
+    defaults write com.apple.screencapture type png
+
+The last string can be changed to jpg, tiff or even pdf.
+
+
+
+*******************
+Where is This File?
+*******************
+
+To quickly find the fully-qualified path to a file, open a copy of terminal and drop the file onto it.
+
+
+
+*********************
+Saving YouTube Videos
+*********************
+
+You will need Python for this: I use Python3. You will need to install PyTube, which you can get `here <https://github.com/nficano/pytube>`_ or `in the ReadTheDocs page <https://python-pytube.readthedocs.io/en/latest/user/install.html>`_. Keep that first address, as you may need to update PyTube.
+
+The script to download a file is the following::
+
+    #!/usr/local/bin/python3
+    # PyTuber02.py
+    # Simplify importing YouTube videos with pytube
+    from pytube import YouTube
+    # import sys
+
+    # sFile = sys.argv[1]
+    sFile = input("Enter YouTube URL: ")
+
+    if len(sFile) == 0:
+        print("No file link passed: nothing to do")
+    else:
+        YouTube(sFile).streams.first().download()
+
+I've got the script saved in the Movies folder, and call it this way::
+
+    ~/Movies/PyTuber02.py
+
+in Terminal, from anywhere that I might have 'cd-d' to, then copy and past the URL of the video I wish to download. No dependency on SaveFro.net or other browser helpers anymore.
+
+However, it's not a perfect solution... not because of the solution but because YouTube keeps moving the goalposts. Recently (err, today) tried to download a file::
+
+    Enter YouTube URL: https://www.youtube.com/watch?v=YFRFgRm1BYE
+
+and got::
+
+    Traceback (most recent call last):
+      File "/Users/robinhahn/Movies/PyTuber02.py", line 13, in <module>
+        YouTube(sFile).streams.first().download()
+      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 88, in __init__
+        self.prefetch_init()
+      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 97, in prefetch_init
+        self.init()
+      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 133, in init
+        mixins.apply_signature(self.player_config_args, fmt, self.js)
+      File "/usr/local/lib/python3.7/site-packages/pytube/mixins.py", line 49, in apply_signature
+        signature = cipher.get_signature(js, stream['s'])
+      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 245, in get_signature
+        tplan = get_transform_plan(js)
+      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 64, in get_transform_plan
+        name = re.escape(get_initial_function_name(js))
+      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 40, in get_initial_function_name
+        return regex_search(pattern, js, group=1)
+      File "/usr/local/lib/python3.7/site-packages/pytube/helpers.py", line 65, in regex_search
+        .format(pattern=pattern),
+    pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
+
+Here's where the Issues page on github is useful: apparently the regex had been tweaked chez YouTube, which caused the script to fail. You'll find details on the `Issues page <https://github.com/nficano/pytube/issues>`_ on pending fixes to the problem.
+
+Eventually: fortunately, the developer keeps a close eye on it.
+
+In the meantime, to pip-install directly from the original project::
+
+    pip install git+https://github.com/nficano/pytube.git
+
+Seems that one needs to fix cypher.py from time to time. One such regex string would be::
+
+    r'\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\('
+
+
+
+***************************
+Make a Py Script Executable
+***************************
+
+Make sure you have::
+
+    #!/usr/local/bin/python3
+
+at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
+
+    chmod +x -/path/NameOfScript.py
+    
+
+
+**********************************
+Make a file executable in Terminal
+**********************************
+
+Shell scripts must be executable files in order to run. You can use the chmod command to indicate that the text file is executable (that is, its contents can be run as a shell script). In the Terminal app  on your Mac, use the cd command to move into the directory that contains the file you want to make executable. For example::
+
+    cd YourScriptDirectory
+
+Enter the chmod command. For example::
+
+    chmod 755 YourScriptName.sh
+
+After making the shell script file executable, you can run it by entering its pathname::
+
+    ~/Documents/Dev/YourScriptName.sh
+
+or::
+
+    cd ~/Documents/Dev/ 
+    ./YourScriptName.sh
+
+
+
+Clone My VDMK
+=============
+
+Last login: Fri Nov 22 06:58:35 on ttys000
+Robins-MBP:VirtualBox VMs robinhahn$ VBoxManage clonehd --format vdi "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vmdk" "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vdi"
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+Clone medium created in format 'vdi'. UUID: 34fd4231-0eb6-4d35-94ed-89a4ef1331a3
+Robins-MBP:VirtualBox VMs robinhahn$ 
+
+<a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/IMG_4333.JPG" id="1998992764" class="has-link" dm_dont_rewrite_url="false" href="https://www.tightbytes.com" file="false" data-link-url="https://www.tightbytes.com" target="_blank" style="background-image: url(&quot;https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1280w.JPG&quot;);"><img irh="" irw="" alt="" data-src="https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1920w.JPG" id="1637023030" onerror="handleImageLoadError(this)"></a>

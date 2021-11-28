@@ -1,0 +1,1703 @@
+Last login: Thu Mar  4 08:07:34 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Robins-MacBook-Pro:Movies robinhahn$ cd ..
+Robins-MacBook-Pro:~ robinhahn$ pip install kivy[full] kivy-examples
+Collecting kivy[full]
+  Downloading Kivy-2.0.0-cp38-cp38-macosx_10_14_x86_64.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (7.1 MB)
+     |████████████████████████████████| 7.1 MB 7.0 MB/s 
+Collecting kivy-examples
+  Downloading Kivy_examples-2.0.0-py2.py3-none-any.whl (9.2 MB)
+     |████████████████████████████████| 9.2 MB 6.0 MB/s 
+Collecting Kivy-Garden>=0.1.4
+  Downloading kivy-garden-0.1.4.tar.gz (6.8 kB)
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/site-packages (from kivy-examples) (2.6.1)
+Requirement already satisfied: docutils in /usr/local/lib/python3.8/site-packages (from kivy-examples) (0.16)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/site-packages (from Kivy-Garden>=0.1.4->kivy-examples) (2.24.0)
+Collecting ffpyplayer
+  Downloading ffpyplayer-4.3.2-cp38-cp38-macosx_10_9_x86_64.macosx_10_9_intel.macosx_10_10_intel.macosx_10_10_x86_64.whl (26.9 MB)
+     |████████████████████████████████| 26.9 MB 6.8 MB/s 
+Collecting pillow
+  Downloading Pillow-8.1.1-cp38-cp38-macosx_10_10_x86_64.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 6.5 MB/s 
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2020.6.20)
+Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (3.0.4)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (1.25.10)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2.10)
+Building wheels for collected packages: Kivy-Garden
+  Building wheel for Kivy-Garden (setup.py) ... done
+  Created wheel for Kivy-Garden: filename=Kivy_Garden-0.1.4-py3-none-any.whl size=4531 sha256=2b6115ddfcafbbc8d410758ebf54ceb3b860f69fb2edcf03a10ca442f43ac866
+  Stored in directory: /Users/robinhahn/Library/Caches/pip/wheels/d2/72/1a/9ddd17f00755707937caa350616965fb3330a6270425f397e6
+Successfully built Kivy-Garden
+Installing collected packages: Kivy-Garden, pillow, kivy, ffpyplayer, kivy-examples
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/usr/local/share/kivy-examples/3Drendering/main.py'
+Consider using the `--user` option or check the permissions.
+
+Robins-MacBook-Pro:~ robinhahn$ pip install kivy[full] kivy-examples --user
+Requirement already satisfied: kivy[full] in /usr/local/lib/python3.8/site-packages (2.0.0)
+Requirement already satisfied: kivy-examples in /usr/local/lib/python3.8/site-packages (2.0.0)
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/site-packages (from kivy-examples) (2.6.1)
+Requirement already satisfied: docutils in /usr/local/lib/python3.8/site-packages (from kivy-examples) (0.16)
+Requirement already satisfied: Kivy-Garden>=0.1.4 in /usr/local/lib/python3.8/site-packages (from kivy-examples) (0.1.4)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/site-packages (from Kivy-Garden>=0.1.4->kivy-examples) (2.24.0)
+Requirement already satisfied: ffpyplayer in /usr/local/lib/python3.8/site-packages (from kivy[full]) (4.3.2)
+Requirement already satisfied: pillow in /usr/local/lib/python3.8/site-packages (from kivy[full]) (8.1.1)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (1.25.10)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2020.6.20)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2.10)
+Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (3.0.4)
+Robins-MacBook-Pro:~ robinhahn$ 
+  [Restored 4 Mar 2021 at 9:12:20 am]
+Last login: Thu Mar  4 09:12:20 on ttys000
+Restored session: Thu  4 Mar 2021 09:11:38 AEST
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Robins-MacBook-Pro:~ robinhahn$ kivy
+-bash: kivy: command not found
+Robins-MacBook-Pro:~ robinhahn$ python kivy_venv/share/kivy-examples/demo/showcase/main.py
+/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'kivy_venv/share/kivy-examples/demo/showcase/main.py': [Errno 2] No such file or directory
+Robins-MacBook-Pro:~ robinhahn$ pip uninstall kivy[full] kivy-examples --user
+
+Usage:   
+  pip uninstall [options] <package> ...
+  pip uninstall [options] -r <requirements file> ...
+
+no such option: --user
+Robins-MacBook-Pro:~ robinhahn$ pip uninstall kivy[full] kivy-examples
+Found existing installation: Kivy 2.0.0
+Uninstalling Kivy-2.0.0:
+  Would remove:
+    /usr/local/lib/python3.8/site-packages/Kivy-2.0.0.dist-info/*
+    /usr/local/lib/python3.8/site-packages/kivy/*
+Proceed (y/n)? y
+  Successfully uninstalled Kivy-2.0.0
+Found existing installation: Kivy-examples 2.0.0
+Uninstalling Kivy-examples-2.0.0:
+  Would remove:
+    /usr/local/lib/python3.8/site-packages/Kivy_examples-2.0.0.dist-info/*
+Proceed (y/n)? y
+  Successfully uninstalled Kivy-examples-2.0.0
+Robins-MacBook-Pro:~ robinhahn$ pip install kivy[full] kivy-examples --user
+Collecting kivy[full]
+  Using cached Kivy-2.0.0-cp38-cp38-macosx_10_14_x86_64.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (7.1 MB)
+Collecting kivy-examples
+  Using cached Kivy_examples-2.0.0-py2.py3-none-any.whl (9.2 MB)
+Requirement already satisfied: Kivy-Garden>=0.1.4 in /usr/local/lib/python3.8/site-packages (from kivy-examples) (0.1.4)
+Requirement already satisfied: docutils in /usr/local/lib/python3.8/site-packages (from kivy-examples) (0.16)
+Requirement already satisfied: pygments in /usr/local/lib/python3.8/site-packages (from kivy-examples) (2.6.1)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/site-packages (from Kivy-Garden>=0.1.4->kivy-examples) (2.24.0)
+Requirement already satisfied: ffpyplayer in /usr/local/lib/python3.8/site-packages (from kivy[full]) (4.3.2)
+Requirement already satisfied: pillow in /usr/local/lib/python3.8/site-packages (from kivy[full]) (8.1.1)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (1.25.10)
+Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2.10)
+Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (3.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests->Kivy-Garden>=0.1.4->kivy-examples) (2020.6.20)
+Installing collected packages: kivy, kivy-examples
+Successfully installed kivy-2.0.0 kivy-examples-2.0.0
+Robins-MacBook-Pro:~ robinhahn$ python kivy_venv/share/kivy-examples/demo/showcase/main.py
+/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'kivy_venv/share/kivy-examples/demo/showcase/main.py': [Errno 2] No such file or directory
+Robins-MacBook-Pro:~ robinhahn$ python --version
+Python 2.7.16
+Robins-MacBook-Pro:~ robinhahn$ pip uninstall kivy[full] kivy-examples
+Found existing installation: Kivy 2.0.0
+Uninstalling Kivy-2.0.0:
+  Would remove:
+    /Users/robinhahn/Library/Python/3.8/lib/python/site-packages/Kivy-2.0.0.dist-info/*
+    /Users/robinhahn/Library/Python/3.8/lib/python/site-packages/kivy/*
+Proceed (y/n)? y
+  Successfully uninstalled Kivy-2.0.0
+Found existing installation: Kivy-examples 2.0.0
+Uninstalling Kivy-examples-2.0.0:
+  Would remove:
+    /Users/robinhahn/Library/Python/3.8/lib/python/site-packages/Kivy_examples-2.0.0.dist-info/*
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/3Drendering/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/3Drendering/monkey.obj
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/3Drendering/objloader.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/3Drendering/simple.glsl
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/RST_Editor/editor.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/RST_Editor/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/compass/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/compass/compass.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/compass/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/compass/needle.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/compass/rose.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/takepicture/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/takepicture/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/takepicture/shadow32.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/android/takepicture/takepicture.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/animation/animate.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_suite.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_suite_data/testkvdir.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_with_build.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_with_config.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_with_kv.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/app_with_kv_in_template1.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/template1/test.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/test.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/application/testkvfile.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/async/asyncio_advanced.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/async/asyncio_basic.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/async/trio_advanced.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/async/trio_basic.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12908_sweet_trip_mm_clap_hi.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12909_sweet_trip_mm_clap_lo.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12910_sweet_trip_mm_clap_mid.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12911_sweet_trip_mm_hat_cl.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12913_sweet_trip_mm_kick_hi.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12914_sweet_trip_mm_kick_lo.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12915_sweet_trip_mm_kick_mid.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12916_sweet_trip_mm_kwik_mod_01.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12917_sweet_trip_mm_kwik_mod_02.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12918_sweet_trip_mm_kwik_mod_03.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12919_sweet_trip_mm_kwik_mod_04.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12920_sweet_trip_mm_kwik_mod_05.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12921_sweet_trip_mm_kwik_mod_06.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12922_sweet_trip_mm_kwik_mod_07.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12923_sweet_trip_mm_metal_clave.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12925_sweet_trip_mm_sweep_x.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12926_sweet_trip_mm_sweep_y.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/12927_sweet_trip_mm_sweep_z.wav
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/audio.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/audio/pitch.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/camera/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/bezier.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/canvas_stress.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/circle.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/fbo_canvas.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/kiwi.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/lines.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/lines_extended.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/mesh.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/mesh_manipulation.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/mtexture1.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/mtexture2.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/multitexture.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/repeat_texture.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/rotation.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/rounded_rectangle.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/scale.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/stencil_canvas.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/tesselate.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/texture.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/canvas/texture_example_image.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/container/kv/1.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/container/kv/2.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/container/kv/3.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/container/kv/root.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/container/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/cover/cover_image.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/cover/cover_video.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/camera_puzzle.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/AnchorLayoutContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/BoxLayoutContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/ButtonContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/CheckBoxContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/FileChooserContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/FloatLayoutContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/GridLayoutContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/LabelContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/MediaContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/PlaygroundContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/PopupContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/ProgressBarContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/RestContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/ScatterContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/SelectorsContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/StackLayoutContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/container_kvs/TextContainer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/kivycatalog.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/kivycatalog/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/gesturedatabase.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/gesturedatabase.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/helpers.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/historymanager.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/historymanager.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/multistroke.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/settings.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/multistroke/settings.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/images/Bubbles.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/images/Ill1.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/images/Wall.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/images/faust_github.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/pictures.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/pictures/shadow32.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/shadereditor/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/shadereditor/shadereditor.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/README.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/background.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/faust_github.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/icons/README
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/icons/bug.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/icons/chevron-left.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/icons/chevron-right.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/accordions.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/bubbles.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/buttons.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/carousel.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/checkboxes.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/codeinput.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/dropdown.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/filechoosers.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/popups.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/progressbar.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/rstdocument.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/scatter.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/screenmanager.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/sliders.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/spinner.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/splitter.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/switches.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/tabbedpanel + layouts.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/textinputs.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/data/screens/togglebutton.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/showcase/showcase.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/README.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/icon.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/particle.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/demo/touchtracer/touchtracer.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/frameworks/twisted/echo_client_app.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/frameworks/twisted/echo_server_app.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/frameworks/twisted/twistd_app.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/gestures/gesture_board.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/gestures/my_gestures.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/designwithkv/controller.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/designwithkv/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/1_skeleton.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/2_print_touch.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/3_draw_ellipse.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/4_draw_line.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/5_random_colors.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/firstwidget/6_button.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/guide/quickstart/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/includes/button.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/includes/layout.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/includes/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/includes/test.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/keyboard/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/keyboard/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/keyboard/numeric.json
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kinect/README.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kinect/kinectviewer.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_button.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_camera.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_fbo.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_layout.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_logo.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_scatter.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_stencil.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/app_video.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/builder_template.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/ids/id_in_kv/id_in_kv.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/ids/id_in_kv/test.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/ids/kv_and_py/kv_and_py.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/ids/kv_and_py/test.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/kivy.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/kv/kvrun.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/clipboard.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/imagesave.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/joystick.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/multiple_dropfile.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/on_textedit_event.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/shapecollisions.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/shapedwindow.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/two_panes.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/miscellaneous/urlrequest.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/settings/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/settings/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/plasma.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/plasma.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/rotated.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/rotated.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/shadertree.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/shadertree.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/shader/tex3.jpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/benchmark.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/cloud.svg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/main-smaa.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/music.svg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/ship.svg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/sun.svg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/svg/tiger.svg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/text/pango_demo.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/notes/final/data/icon.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/notes/final/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/notes/final/note.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step1/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step1/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step2/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step2/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step3/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step3/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step4/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step4/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step5/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/tutorials/pong/steps/step5/pong.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/accordion_1.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/actionbar.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/asyncimage.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/boxlayout_poshint.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/bubble_test.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/camera.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/carousel_buttons.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/cityCC0.mpg
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/cityCC0.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/codeinput.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/codeinputtest.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/colorpicker.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/colorusage.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/compound_selection.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/customcollide.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/effectwidget.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/effectwidget2.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/effectwidget3_advanced.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/fbowidget.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/focus_behavior.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/image_mipmap.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/keyboardlistener.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/label_mipmap.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/label_sizing.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/label_text_size.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/label_with_markup.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/lang_dynamic_classes.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/pagelayout.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/popup_with_kv.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/basic_data.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/infinite_scrolling.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/key_viewclass.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/messenger.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/pull_to_refresh.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/recycleview/rv_animate_items.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/rstexample.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/scatter.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/scatter.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/screenmanager.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/scrollview.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/scrollview.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/android.txt
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/bird.zip
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/button_white.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/button_white_animated.zip
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/cube.zip
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/info.png
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/info.zip
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/data/images/simple_cv_joint_animated.gif
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/main.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/main.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/sequenced_images/uix/*
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/settings.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/shorten_text.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/spinner.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/splitter.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/tabbed_panel_showcase.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/tabbedpanel.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/textalign.kv
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/textalign.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/textinput.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/unicode_textinput.py
+    /Users/robinhahn/Library/Python/3.8/share/kivy-examples/widgets/videoplayer.py
+Proceed (y/n)? y
+  Successfully uninstalled Kivy-examples-2.0.0
+Robins-MacBook-Pro:~ robinhahn$ brew install kivy
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+aerc                     gitql                    libxaw3d                 rain
+aida-header              giza                     libxcb                   rdkit
+aliddns                  glab                     libxcomposite            regipy
+alsa-lib                 go@1.15                  libxcursor               richmd
+ansible@2.9              gofumpt                  libxdamage               rm-improved
+arturo                   gojq                     libxdmcp                 rtl_433
+asroute                  googletest               libxext                  rttr
+atkmm@2.28               gopls                    libxfixes                ruby@2.7
+attr                     goredo                   libxfont                 rustscan
+aws-console              gosec                    libxft                   saml2aws
+aws-rotate-key           gost                     libxi                    server-go
+bandit                   gping                    libxinerama              showkey
+bas55                    grokj2k                  libxkbfile               shtools
+bit-git                  grokmirror               libxml++@4               snap
+blaze                    gtkmm4                   libxml++@5               spack
+box2d                    h2spec                   libxmu                   sqlc
+bpython                  halide                   libxp                    strace
+bpytop                   hblock                   libxpm                   structurizr-cli
+cairomm@1.14             heppdt2                  libxrandr                t-rec
+cargo-audit              hexo                     libxrender               taskwarrior-tui
+cargo-edit               htmltest                 libxres                  tctl
+cargo-watch              httpx                    libxscrnsaver            tendermint
+cfn-flip                 indicators               libxshmfence             terracognita
+cfn-format               infracost                libxt                    terraform@0.13
+chars                    inframap                 libxtst                  terrascan
+checkov                  ioctl                    libxv                    tfsec
+cherrytree               isl@0.18                 libxvmc                  tgenv
+clang-format@8           isort                    libxxf86dga              thrax
+clash                    jpeg-xl                  libxxf86vm               tm
+cloudflare-wrangler      jql                      linux-headers            trec_eval
+cloudformation-guard     json5                    logswan                  tree-sitter
+coin3d                   k3sup                    lp_solve                 truffle
+commitizen               kcgi                     lua@5.3                  trunk
+condure                  keptn                    luajit-openresty         utf8cpp
+counterfeiter            khiva                    luv                      util-macros
+cpplint                  ko                       magic_enum               v2ray
+crane                    kube-linter              markdownlint-cli         vc
+crcany                   kubecm                   massdns                  vint
+crispy-doom              kubergrunt               matplotplusplus          vitess
+croc                     kubevela                 md4c                     vivid
+curlie                   lab                      mermaid-cli              vsh
+cvs-fast-export          ladspa-sdk               mesa-glu                 vtk@8.2
+dasel                    latino                   mockery                  vulture
+datalad                  leaf                     mpdecimal                waffle
+dbdeployer               libaio                   msc-generator            wangle
+device-mapper            libbsd                   muffet                   wayland
+diskonaut                libcap                   name-that-hash           wayland-protocols
+dnsx                     libcap-ng                ncspot                   webify
+docui                    libdmx                   nicotine-plus            x86_64-elf-gdb
+dog                      libdrm                   node@14                  xbitmaps
+dotenv-linter            libfontenc               nuclei                   xcb-proto
+dotnet                   libfs                    oakc                     xcb-util
+dprint                   libfuse                  ocaml-zarith             xcb-util-cursor
+driftctl                 libgccjit                open-adventure           xcb-util-image
+dstask                   libhandy                 openalpr                 xcb-util-keysyms
+duf                      libice                   openfst                  xcb-util-renderutil
+easy-rsa                 libirecovery             openjdk@8                xcb-util-wm
+efm-langserver           libmd                    openmama                 xcbeautify
+envoy                    libmnl                   or-tools                 xcinfo
+evernote2md              libnetfilter-queue       ormolu                   xcprojectlint
+f3d                      libnfnetlink             osmcoastline             xdpyinfo
+fizz                     libnsl                   overdrive                xinput
+fleet-cli                libpciaccess             ox                       xkeyboardconfig
+flit                     libpinyin                parliament               xorgproto
+flow-cli                 libpipeline              pcalc                    xorgrgb
+flux                     libprelude               pdftilecut               xterm
+fnm                      libpthread-stubs         pdm                      xtrans
+font-util                librttopo                phive                    yh
+foreman                  libseccomp               php@7.4                  ykdl
+forge                    libslirp                 pickle                   youtube-dlc
+fpart                    libsm                    pkger                    youtubedr
+gallery-dl               libtirpc                 postgresql@12            yq@3
+gcalcli                  libva                    projectm                 yubikey-agent
+gdu                      libvdpau                 prometheus-cpp           zsh-async
+geph4                    libvnc                   protoc-gen-go-grpc       zsh-you-should-use
+ghc@9                    libx11                   ptpython
+git-hound                libxau                   pyside@2
+gitlint                  libxaw                   python@3.9
+==> Updated Formulae
+Updated 4948 formulae.
+==> Renamed Formulae
+glibmm@2.64 -> glibmm@2.66        ht-rust -> xh                     prest -> prestd
+gst-validate -> gst-devtools      now-cli -> vercel-cli             qt5 -> qt@5
+gtk+4 -> gtk4                     pangomm@2.42 -> pangomm@2.46
+==> Deleted Formulae
+avian                    fmsx                     mysql-connector-c++@1.1  unp64
+boost@1.55               geant4                   ori                      unrar
+boost@1.59               gobby                    pgplot                   woboq_codebrowser
+confluent-platform       godep                    rmtrash                  xspin
+curl-openssl             llvm@6                   scw@1                    xu4
+dtrx                     meson-internal           stlviewer
+==> New Casks
+7777                                               mtgaprotracker
+abyssoft-teleport                                  mubu
+accordance                                         multi
+aio-creator-neo                                    munkiadmin
+ajour                                              mxsrvs
+aldente                                            napari
+aleo-studio                                        nault
+amazon-workdocs-drive                              naver-whale
+anka-build-cloud-controller-and-registry           neat-reader
+anka-build-cloud-registry                          niftyman
+anka-virtualization                                nosql-workbench
+astah-uml                                          nota
+atemosc                                            nova
+atomic-wallet                                      nuage
+audiogridder-plugin                                obs-ndi
+audiogridder-server                                obs-websocket
+aural                                              okta-advanced-server-access
+avast-secure-browser                               opera-gx
+banksiagui                                         operator
+berrycast                                          opgg
+bigsur-cache-cleaner                               osculator
+binance                                            oss-browser
+blackhole-16ch                                     output-factory
+blackhole-2ch                                      padloc
+bleunlock                                          parsify
+bluesnooze                                         pathephone
+bluewallet                                         pdf-reader-pro
+bome-network                                       perimeter81
+boost-note                                         phd2
+box-tools                                          photosrevive
+brewlet                                            pibar
+cakebrewjs                                         pictogram
+canva                                              pika
+caramba-switcher                                   pitch
+cernbox                                            pixelorama
+cinco                                              pokemon-trading-card-game-online
+circuitjs1                                         pomatez
+cisco-jabber                                       pragli
+classicftp                                         prezi-video
+clicker-for-netflix                                privatus
+clocker                                            protoio-overflow
+cloudflare-warp                                    ptpwebcam
+cog                                                pushplaylabs-sidekick
+coin-wallet                                        qit
+colorwell                                          querypie
+convert3dgui                                       radicle-upstream
+copytranslator                                     ray
+coscreen                                           raycast
+craft                                              raze
+curiosity                                          reamp
+curseforge                                         recaf
+daedalus-catalyst                                  redream
+ddnet                                              remote-wake-up
+deadbeef                                           repoz
+decloner                                           retroactive
+deltachat                                          rhino
+deskreen                                           ripme
+desktoppr                                          rotki
+deviceinfo                                         s3stat-setup
+digital                                            scrapp
+displays                                           sengi
+ditto                                              shearwater-cloud
+dockmate                                           signet
+dropbox-passwords                                  silicon
+duckstation                                        silicon-info
+duoshao                                            silnite
+dyalog                                             sitesucker-pro
+electricbinary                                     sky-ticket
+epoccam                                            slippi-dolphin
+eudic-es                                           smultron
+eul                                                snapmotion
+ev3-classroom                                      snipy
+exifcleaner                                        solar2d
+f-bar                                              space-saver
+fastclicker                                        spaceman
+fawkes                                             spark-ar-studio
+flrig                                              spitfire-audio
+font-smoothing-adjuster                            spotter
+forticlient-vpn                                    spyder
+freesurfer                                         starsector
+fspy                                               start
+futubull                                           stashcat
+fvim                                               stems
+gactions                                           stringz
+gather                                             superslicer
+gdat                                               syncalicious
+gluemotion                                         syncsettings
+google-drive                                       teamviewermeeting
+gotomeeting                                        techsmith-capture
+grid                                               tenable-nessus-agent
+happymac                                           tencent-docs
+helo                                               tetrio
+home-assistant                                     textbuddy
+hoststool                                          the-archive
+hot                                                the-unofficial-homestuck-collection
+ibm-aspera-connect                                 tigerjython
+iconset                                            time-to-leave
+imarisviewer                                       tmnotifier
+imdone                                             toggl-track
+imobie-m1-app-checker                              tradingview
+infinity                                           trojanx
+intellidock                                        tunein
+jellybeansoup-netflix                              twilioquest
+jetbrains-space                                    twitterrific
+kekaexternalhelper                                 twobird
+kieler                                             tyme
+kiwi-for-gmail                                     ultdata
+klogg                                              unclack
+koodo-reader                                       unity-appletv-support-for-editor
+kryoflux                                           unity-linux-il2cpp-support-for-editor
+kyokan-bob                                         unity-linux-support-for-editor
+lightform                                          unity-macos-il2cpp-support-for-editor
+lightkey                                           utm
+little-navmap                                      videofusion
+locationsimulator                                  vidl
+lofi                                               vine-server
+logicalshift-zoom                                  vofa-plus
+loni-pipeline                                      wannianli
+lunar-client                                       waterfox-classic
+lx-music                                           webex
+macdroid                                           webull
+macfuse                                            winx-hd-video-converter
+macx-video                                         wolfram-engine
+maczip                                             wombat
+marathon-infinity                                  wowup
+marathon2                                          xattred
+mathinspector                                      xcodes
+mechvibes                                          xournal-plus-plus
+medibangpaintpro                                   yesplaymusic
+megax                                              yggdrasil
+melonds                                            youtube-downloader
+memory-clean-3                                     yuna
+messenger                                          yuque
+metaimage                                          zbuc-imgur
+mic-drop                                           zecwallet-lite
+miniforge                                          zeitgeist
+mmhmm                                              zoom-outlook-plugin
+modern-csv                                         zulufx
+mongodb-realm-studio                               zy-player
+==> Updated Casks
+Updated 3154 casks.
+==> Deleted Casks
+0xed                                               kiwi-for-g-suite
+aliwangwang                                        kode54-cog
+anka-flow                                          levelator
+anvil                                              lightpaper
+arrayfire                                          manuscripts
+aspera-connect                                     master-password
+barxtemp                                           mega
+blackhole                                          megahertz-knotes
+blizz                                              mongodb-compass-community
+box-edit                                           monogame
+brogue                                             near-lock
+canary                                             nosql-workbench-for-amazon-dynamodb
+catalina-cache-cleaner                             noteplan
+chicken                                            odio
+cisdem-pdftoolkit                                  oni
+clashxr                                            openxcom
+coronasdk                                          phiewer
+daedalus                                           pins
+delta                                              project-slippi-dolphin
+disablemonitor                                     protonmail-unofficial
+djay-pro                                           racket-cs
+docear                                             realm-studio
+doly                                               rhinoceros
+eventstore                                         ring
+evom                                               ringtones
+ezip                                               ripit
+facebook-ios-sdk                                   scaleft
+fractal-bot                                        simplecap
+futuniuniu                                         softu2f
+gfortran                                           station
+ghost                                              tagalicious
+gifs                                               teamspeak-client
+google-hangouts                                    toggl
+hand-mirror                                        waterfox-current
+hockey                                             webex-teams
+imgur                                              xact
+irip                                               yandexradio
+java                                               yyets
+jeromelebel-mongohub                               zoomin
+jing                                               zoomus-outlook-plugin
+kekadefaultapp
+
+==> Searching for similarly named formulae...
+Error: No similarly named formulae found.
+Error: No available formula or cask with the name "kivy".
+==> Searching for a previously deleted formula (in the last month)...
+Warning: homebrew/core is shallow clone. To get its complete history, run:
+  git -C "$(brew --repo homebrew/core)" fetch --unshallow
+
+Error: No previously deleted formula found.
+==> Searching taps on GitHub...
+Robins-MacBook-Pro:~ robinhahn$ brew reinstall --build-bottle gstreamer gst-plugins-{base,good,bad,ugly}
+Usage: brew reinstall [options] formula|cask [...]
+
+Uninstall and then reinstall a formula or cask using the same options it was
+originally installed with, plus any appended options specific to a formula.
+
+Unless HOMEBREW_NO_INSTALL_CLEANUP is set, brew cleanup will then be run for
+the reinstalled formulae or, every 30 days, for all formulae.
+
+  -d, --debug                      If brewing fails, open an interactive
+                                   debugging session with access to IRB or a
+                                   shell inside the temporary build directory.
+  -f, --force                      Install without checking for previously
+                                   installed keg-only or non-migrated
+                                   versions.
+  -v, --verbose                    Print the verification and postinstall
+                                   steps.
+      --formula, --formulae        Treat all named arguments as formulae.
+  -s, --build-from-source          Compile formula from source even if a
+                                   bottle is available.
+  -i, --interactive                Download and patch formula, then open a
+                                   shell. This allows the user to run
+                                   ./configure --help and otherwise
+                                   determine how to turn the software package
+                                   into a Homebrew package.
+      --force-bottle               Install from a bottle if it exists for the
+                                   current or newest version of macOS, even if
+                                   it would not normally be used for
+                                   installation.
+      --keep-tmp                   Retain the temporary files created during
+                                   installation.
+      --display-times              Print install times for each formula at the
+                                   end of the run.
+      --cask, --casks              Treat all named arguments as casks.
+      --[no-]binaries              Disable/enable linking of helper
+                                   executables (default: enabled).
+      --require-sha                Require all casks to have a checksum.
+      --[no-]quarantine            Disable/enable quarantining of downloads
+                                   (default: enabled).
+      --skip-cask-deps             Skip installing cask dependencies.
+      --appdir                     Target location for Applications (default:
+                                   /Applications).
+      --colorpickerdir             Target location for Color Pickers (default:
+                                   ~/Library/ColorPickers).
+      --prefpanedir                Target location for Preference Panes
+                                   (default: ~/Library/PreferencePanes).
+      --qlplugindir                Target location for QuickLook Plugins
+                                   (default: ~/Library/QuickLook).
+      --mdimporterdir              Target location for Spotlight Plugins
+                                   (default: ~/Library/Spotlight).
+      --dictionarydir              Target location for Dictionaries (default:
+                                   ~/Library/Dictionaries).
+      --fontdir                    Target location for Fonts (default:
+                                   ~/Library/Fonts).
+      --servicedir                 Target location for Services (default:
+                                   ~/Library/Services).
+      --input-methoddir            Target location for Input Methods (default:
+                                   ~/Library/Input Methods).
+      --internet-plugindir         Target location for Internet Plugins
+                                   (default: ~/Library/Internet Plug-Ins).
+      --audio-unit-plugindir       Target location for Audio Unit Plugins
+                                   (default:
+                                   ~/Library/Audio/Plug-Ins/Components).
+      --vst-plugindir              Target location for VST Plugins (default:
+                                   ~/Library/Audio/Plug-Ins/VST).
+      --vst3-plugindir             Target location for VST3 Plugins (default:
+                                   ~/Library/Audio/Plug-Ins/VST3).
+      --screen-saverdir            Target location for Screen Savers (default:
+                                   ~/Library/Screen Savers).
+      --language                   Comma-separated list of language codes to
+                                   prefer for cask installation. The first
+                                   matching language is used, otherwise it
+                                   reverts to the cask's default language. The
+                                   default value is the language of your
+                                   system.
+  -q, --quiet                      Make some output more quiet.
+  -h, --help                       Show this message.
+Error: invalid option: --build-bottle
+Robins-MacBook-Pro:~ robinhahn$ brew install nginx passenger
+Error: 
+  homebrew-core is a shallow clone.
+  homebrew-cask is a shallow clone.
+To `brew update`, first run:
+  git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
+  git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
+These commands may take a few minutes to run due to the large size of the repositories.
+This restriction has been made on GitHub's request because updating shallow
+clones is an extremely expensive operation due to the tree layout and traffic of
+Homebrew/homebrew-core and Homebrew/homebrew-cask. We don't do this for you
+automatically to avoid repeatedly performing an expensive unshallow operation in
+CI systems (which should instead be fixed to not use shallow clones). Sorry for
+the inconvenience!
+==> Downloading https://homebrew.bintray.com/bottles/openssl%401.1-1.1.1j.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/ecfbca86c18eb819222ae13aa2e4148d89c9dc15e1172545352b6fcf29
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/nginx-1.19.7.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/fc191b16f7d7c25c289a014240cf93b45a3d24f991e0b38c4b65beec62
+######################################################################## 100.0%
+==> Installing dependencies for nginx: openssl@1.1
+==> Installing nginx dependency: openssl@1.1
+==> Pouring openssl@1.1-1.1.1j.catalina.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/openssl@1.1/1.1.1j: 8,071 files, 18.5MB
+==> Installing nginx
+==> Pouring nginx-1.19.7.catalina.bottle.tar.gz
+==> Caveats
+Docroot is: /usr/local/var/www
+
+The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /usr/local/etc/nginx/servers/.
+
+To have launchd start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  nginx
+==> Summary
+🍺  /usr/local/Cellar/nginx/1.19.7: 25 files, 2.2MB
+==> `brew cleanup` has not been run in 30 days, running now...
+Removing: /Users/robinhahn/Library/Caches/Homebrew/aom--2.0.0.mojave.bottle.1.tar.gz... (5.5MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/autoconf--2.69.mojave.bottle.4.tar.gz... (874.7KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/bdw-gc--8.0.4.mojave.bottle.tar.gz... (506.3KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/cairo--1.16.0_3.mojave.bottle.tar.gz... (1.6MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/dav1d--0.7.1.mojave.bottle.tar.gz... (534.9KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/ffmpeg--4.3.1.mojave.bottle.tar.gz... (22.0MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/freetype--2.10.2.mojave.bottle.tar.gz... (894.6KB)
+Removing: /usr/local/Cellar/fribidi/1.0.9... (67 files, 600.4KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/fribidi--1.0.10.mojave.bottle.tar.gz... (129.1KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/gdbm--1.18.1_1.mojave.bottle.tar.gz... (203.3KB)
+Removing: /usr/local/Cellar/gettext/0.20.1... (1,899 files, 18.5MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/gettext--0.21.mojave.bottle.tar.gz... (8.6MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/glib--2.64.5.mojave.bottle.tar.gz... (4.4MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/gnutls--3.6.14.mojave.bottle.1.tar.gz... (3.1MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/gobject-introspection--1.64.1_2.mojave.bottle.tar.gz... (1.7MB)
+Removing: /usr/local/Cellar/graphite2/1.3.13... (18 files, 232KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/graphite2--1.3.14.mojave.bottle.tar.gz... (92.8KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/guile--3.0.4.mojave.bottle.1.tar.gz... (11.5MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/harfbuzz--2.7.2.mojave.bottle.tar.gz... (1.9MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/icu4c--67.1.mojave.bottle.tar.gz... (26.8MB)
+Removing: /usr/local/Cellar/leptonica/1.79.0... (51 files, 5.9MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/leptonica--1.80.0.mojave.bottle.tar.gz... (2.4MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libbluray--1.2.0.mojave.bottle.tar.gz... (1MB)
+Removing: /usr/local/Cellar/libevent/2.1.11_1... (1,063 files, 5MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libevent--2.1.12.mojave.bottle.tar.gz... (681KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libffi--3.3.mojave.bottle.tar.gz... (159.6KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libsndfile--1.0.29pre2_1.mojave.bottle.tar.gz... (614.2KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libtool--2.4.6_2.mojave.bottle.tar.gz... (1010.6KB)
+Removing: /usr/local/Cellar/libvorbis/1.3.6... (157 files, 2.3MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libvorbis--1.3.7.mojave.bottle.tar.gz... (576.5KB)
+Removing: /usr/local/Cellar/libvpx/1.8.2... (17 files, 3MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/libvpx--1.9.0.mojave.bottle.tar.gz... (1MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/little-cms2--2.11.mojave.bottle.tar.gz... (381.7KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/nettle--3.6.mojave.bottle.tar.gz... (857.9KB)
+Removing: /usr/local/Cellar/openssl@1.1/1.1.1g... (8,059 files, 18MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/openssl@1.1--1.1.1g.mojave.bottle.tar.gz... (5.3MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/p11-kit--0.23.20_1.mojave.bottle.tar.gz... (699.3KB)
+Removing: /usr/local/Cellar/pixman/0.38.4... (13 files, 1.3MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/pixman--0.40.0.mojave.bottle.tar.gz... (495.6KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/pkg-config--0.29.2_3.mojave.bottle.tar.gz... (234.2KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/pyenv--1.2.20.mojave.bottle.tar.gz... (637.6KB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/python@3.8--3.8.5.mojave.bottle.tar.gz... (16.6MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/rav1e--0.3.3.mojave.bottle.tar.gz... (12.2MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/sqlite--3.33.0.mojave.bottle.tar.gz... (2.0MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/srt--1.4.1.mojave.bottle.tar.gz... (1.4MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/unbound--1.11.0.mojave.bottle.tar.gz... (2.6MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/wget--1.20.3_2.mojave.bottle.tar.gz... (1.4MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/x264--r3011.mojave.bottle.1.tar.gz... (2.3MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/x265--3.4.mojave.bottle.1.tar.gz... (4.9MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/portable-ruby-2.6.3_1.yosemite.bottle.tar.gz... (9.1MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/portable-ruby-2.6.3_2.yosemite.bottle.tar.gz... (9.1MB)
+Removing: /Users/robinhahn/Library/Caches/Homebrew/sphinx-doc--3.2.0.mojave.bottle.tar.gz... (14.9MB)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/pyenv... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/pkg-config... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libtool... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/wget... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/ffmpeg... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/little-cms2... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/nettle... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/pixman... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/gdbm... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/freetype... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libvorbis... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/bdw-gc... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/icu4c... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/harfbuzz... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libbluray... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/glib... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/aom... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/graphite2... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/srt... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/cairo... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/sqlite... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/gobject-introspection... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/fribidi... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libvpx... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/gettext... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/sphinx-doc... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/dav1d... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/autoconf... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/rav1e... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libevent... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/leptonica... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/x264... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/x265... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/unbound... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/guile... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libsndfile... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/p11-kit... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/libffi... (64B)
+Removing: /Users/robinhahn/Library/Logs/Homebrew/gnutls... (64B)
+Pruned 1 symbolic links and 6 directories from /usr/local
+==> Downloading https://homebrew.bintray.com/bottles/passenger-6.0.7_4.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/26afbf17291bac20ae5ab266ef524fb12c2501840241c70b129ec96efd
+######################################################################## 100.0%
+==> Pouring passenger-6.0.7_4.catalina.bottle.tar.gz
+==> Caveats
+To activate Phusion Passenger for Nginx, run:
+  brew install nginx
+And add the following to /usr/local/etc/nginx/nginx.conf at the top scope (outside http{}):
+  load_module /usr/local/opt/passenger/libexec/modules/ngx_http_passenger_module.so;
+And add the following to /usr/local/etc/nginx/nginx.conf in the http scope:
+  passenger_root /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini;
+  passenger_ruby /usr/bin/ruby;
+
+To activate Phusion Passenger for Apache, create /etc/apache2/other/passenger.conf:
+  LoadModule passenger_module /usr/local/opt/passenger/libexec/buildout/apache2/mod_passenger.so
+  PassengerRoot /usr/local/opt/passenger/libexec/src/ruby_supportlib/phusion_passenger/locations.ini
+  PassengerDefaultRuby /usr/bin/ruby
+==> Summary
+🍺  /usr/local/Cellar/passenger/6.0.7_4: 4,567 files, 257.2MB
+==> Upgrading 12 dependents:
+cairo 1.16.0_3 -> 1.16.0_5, glib 2.64.5 -> 2.66.7, gnutls 3.6.14 -> 3.6.15, gobject-introspection 1.64.1_2 -> 1.66.1_1, harfbuzz 2.7.2 -> 2.7.4_1, libass 0.14.0_1 -> 0.15.0, python@3.8 3.8.5 -> 3.8.8_1, ffmpeg 4.3.1 -> 4.3.2, pyenv 1.2.20 -> 1.2.23, srt 1.4.1 -> 1.4.2, unbound 1.11.0 -> 1.13.1, wget 1.20.3_2 -> 1.21.1
+==> Upgrading python@3.8 3.8.5 -> 3.8.8_1 
+==> Downloading https://homebrew.bintray.com/bottles/mpdecimal-2.5.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/1a8314428019cec85756be0ea10bc4703cd754ef78a4cb560ddcc559af
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/readline-8.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/fe4de019cf549376a7743dcb0c86db8a08ca2b6d0dd2f8cb796dd7cf97
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.34.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/7e04c1fcd0294ec7625e43eea05714d8bb4d15d24675c99484f1403fdc
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/tcl-tk-8.6.11_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/f4027cdfd4d797d769b027f13b53e0ad714b47cd94fa02f550ff140329
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/python%403.8-3.8.8_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/898ace209da0f175407aad47f4076bb8a3ba40b9d3ef8480ad93abf733
+######################################################################## 100.0%
+==> Installing dependencies for python@3.8: mpdecimal, readline, sqlite and tcl-tk
+==> Installing python@3.8 dependency: mpdecimal
+==> Pouring mpdecimal-2.5.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/mpdecimal/2.5.1: 71 files, 2.1MB
+==> Installing python@3.8 dependency: readline
+==> Pouring readline-8.1.catalina.bottle.tar.gz
+==> Caveats
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides BSD libedit.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+For pkg-config to find readline you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/readline/8.1: 48 files, 1.6MB
+==> Installing python@3.8 dependency: sqlite
+==> Pouring sqlite-3.34.0.catalina.bottle.tar.gz
+==> Caveats
+sqlite is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have sqlite first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+For pkg-config to find sqlite you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.34.0: 11 files, 4.1MB
+==> Installing python@3.8 dependency: tcl-tk
+==> Pouring tcl-tk-8.6.11_1.catalina.bottle.tar.gz
+==> Caveats
+tcl-tk is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have tcl-tk first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/tcl-tk/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find tcl-tk you may need to set:
+  export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+  export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
+For pkg-config to find tcl-tk you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/tcl-tk/8.6.11_1: 3,041 files, 51.6MB
+==> Installing python@3.8
+==> Pouring python@3.8-3.8.8_1.catalina.bottle.tar.gz
+==> /usr/local/Cellar/python@3.8/3.8.8_1/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-sc
+==> /usr/local/Cellar/python@3.8/3.8.8_1/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-sc
+Last 15 lines from /Users/robinhahn/Library/Logs/Homebrew/python@3.8/post_install.02.python3:
+copying src/pip/_vendor/urllib3/packages/ssl_match_hostname/__init__.py -> build/lib/pip/_vendor/urllib3/packages/ssl_match_hostname
+copying src/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py -> build/lib/pip/_vendor/urllib3/packages/ssl_match_hostname
+creating build/lib/pip/_vendor/resolvelib/compat
+copying src/pip/_vendor/resolvelib/compat/__init__.py -> build/lib/pip/_vendor/resolvelib/compat
+copying src/pip/_vendor/resolvelib/compat/collections_abc.py -> build/lib/pip/_vendor/resolvelib/compat
+copying src/pip/_vendor/vendor.txt -> build/lib/pip/_vendor
+copying src/pip/_vendor/distlib/t32.exe -> build/lib/pip/_vendor/distlib
+copying src/pip/_vendor/distlib/t64.exe -> build/lib/pip/_vendor/distlib
+copying src/pip/_vendor/distlib/w32.exe -> build/lib/pip/_vendor/distlib
+copying src/pip/_vendor/distlib/w64.exe -> build/lib/pip/_vendor/distlib
+copying src/pip/_vendor/certifi/cacert.pem -> build/lib/pip/_vendor/certifi
+copying src/pip/_vendor/distlib/_backport/sysconfig.cfg -> build/lib/pip/_vendor/distlib/_backport
+running install_lib
+copying build/lib/pip/_internal/configuration.py -> /usr/local/lib/python3.8/site-packages/pip/_internal
+error: could not delete '/usr/local/lib/python3.8/site-packages/pip/_internal/configuration.py': Permission denied
+Warning: The post-install step did not complete successfully
+You can try again using:
+  brew postinstall python@3.8
+==> Caveats
+Python has been installed as
+  /usr/local/opt/python@3.8/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python@3.8/libexec/bin
+
+You can install Python packages with
+  /usr/local/opt/python@3.8/bin/pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.8/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+
+python@3.8 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have python@3.8 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/python@3.8/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find python@3.8 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
+
+For pkg-config to find python@3.8 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/python@3.8/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/python@3.8/3.8.8_1: 4,351 files, 71.2MB
+Removing: /usr/local/Cellar/python@3.8/3.8.5... (4,513 files, 69.1MB)
+Error: Directory not empty @ dir_s_rmdir - /usr/local/Cellar/python@3.8/3.8.5
+Robins-MacBook-Pro:~ robinhahn$ brew reinstall --build-bottle gstreamer gst-plugins-{base,good,bad,ugly}
+Usage: brew reinstall [options] formula|cask [...]
+
+Uninstall and then reinstall a formula or cask using the same options it was
+originally installed with, plus any appended options specific to a formula.
+
+Unless HOMEBREW_NO_INSTALL_CLEANUP is set, brew cleanup will then be run for
+the reinstalled formulae or, every 30 days, for all formulae.
+
+  -d, --debug                      If brewing fails, open an interactive
+                                   debugging session with access to IRB or a
+                                   shell inside the temporary build directory.
+  -f, --force                      Install without checking for previously
+                                   installed keg-only or non-migrated
+                                   versions.
+  -v, --verbose                    Print the verification and postinstall
+                                   steps.
+      --formula, --formulae        Treat all named arguments as formulae.
+  -s, --build-from-source          Compile formula from source even if a
+                                   bottle is available.
+  -i, --interactive                Download and patch formula, then open a
+                                   shell. This allows the user to run
+                                   ./configure --help and otherwise
+                                   determine how to turn the software package
+                                   into a Homebrew package.
+      --force-bottle               Install from a bottle if it exists for the
+                                   current or newest version of macOS, even if
+                                   it would not normally be used for
+                                   installation.
+      --keep-tmp                   Retain the temporary files created during
+                                   installation.
+      --display-times              Print install times for each formula at the
+                                   end of the run.
+      --cask, --casks              Treat all named arguments as casks.
+      --[no-]binaries              Disable/enable linking of helper
+                                   executables (default: enabled).
+      --require-sha                Require all casks to have a checksum.
+      --[no-]quarantine            Disable/enable quarantining of downloads
+                                   (default: enabled).
+      --skip-cask-deps             Skip installing cask dependencies.
+      --appdir                     Target location for Applications (default:
+                                   /Applications).
+      --colorpickerdir             Target location for Color Pickers (default:
+                                   ~/Library/ColorPickers).
+      --prefpanedir                Target location for Preference Panes
+                                   (default: ~/Library/PreferencePanes).
+      --qlplugindir                Target location for QuickLook Plugins
+                                   (default: ~/Library/QuickLook).
+      --mdimporterdir              Target location for Spotlight Plugins
+                                   (default: ~/Library/Spotlight).
+      --dictionarydir              Target location for Dictionaries (default:
+                                   ~/Library/Dictionaries).
+      --fontdir                    Target location for Fonts (default:
+                                   ~/Library/Fonts).
+      --servicedir                 Target location for Services (default:
+                                   ~/Library/Services).
+      --input-methoddir            Target location for Input Methods (default:
+                                   ~/Library/Input Methods).
+      --internet-plugindir         Target location for Internet Plugins
+                                   (default: ~/Library/Internet Plug-Ins).
+      --audio-unit-plugindir       Target location for Audio Unit Plugins
+                                   (default:
+                                   ~/Library/Audio/Plug-Ins/Components).
+      --vst-plugindir              Target location for VST Plugins (default:
+                                   ~/Library/Audio/Plug-Ins/VST).
+      --vst3-plugindir             Target location for VST3 Plugins (default:
+                                   ~/Library/Audio/Plug-Ins/VST3).
+      --screen-saverdir            Target location for Screen Savers (default:
+                                   ~/Library/Screen Savers).
+      --language                   Comma-separated list of language codes to
+                                   prefer for cask installation. The first
+                                   matching language is used, otherwise it
+                                   reverts to the cask's default language. The
+                                   default value is the language of your
+                                   system.
+  -q, --quiet                      Make some output more quiet.
+  -h, --help                       Show this message.
+Error: invalid option: --build-bottle
+Robins-MacBook-Pro:~ robinhahn$ brew uninstall nginx passenger
+Uninstalling /usr/local/Cellar/nginx/1.19.7... (25 files, 2.2MB)
+
+Warning: The following nginx configuration files have not been removed!
+If desired, remove them manually with `rm -rf`:
+  /usr/local/etc/nginx
+  /usr/local/etc/nginx/fastcgi.conf
+  /usr/local/etc/nginx/fastcgi.conf.default
+  /usr/local/etc/nginx/fastcgi_params
+  /usr/local/etc/nginx/fastcgi_params.default
+  /usr/local/etc/nginx/koi-utf
+  /usr/local/etc/nginx/koi-win
+  /usr/local/etc/nginx/mime.types
+  /usr/local/etc/nginx/mime.types.default
+  /usr/local/etc/nginx/nginx.conf
+  /usr/local/etc/nginx/nginx.conf.default
+  /usr/local/etc/nginx/scgi_params
+  /usr/local/etc/nginx/scgi_params.default
+  /usr/local/etc/nginx/uwsgi_params
+  /usr/local/etc/nginx/uwsgi_params.default
+  /usr/local/etc/nginx/win-utf
+Uninstalling /usr/local/Cellar/passenger/6.0.7_4... (4,567 files, 257.2MB)
+Robins-MacBook-Pro:~ robinhahn$ pip uninstall kivy[full] kivy-examples
+WARNING: Skipping kivy as it is not installed.
+WARNING: Skipping kivy-examples as it is not installed.
+Robins-MacBook-Pro:~ robinhahn$ curl -O -L https://xxx/Kivy-2.0.0-python3.8.dmg
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: xxx
+Robins-MacBook-Pro:~ robinhahn$ curl -O -L https://kivy.org/Kivy-2.0.0-python3.8.dmg
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   162  100   162    0     0    177      0 --:--:-- --:--:-- --:--:--   177
+Robins-MacBook-Pro:~ robinhahn$ ./Applications/Kivy
+-bash: ./Applications/Kivy: No such file or directory
+Robins-MacBook-Pro:~ robinhahn$ ls
+AllBooks			FixReaper.txt			Pictures
+AllHelp				Google Drive			Public
+Applications			Kivy-2.0.0			PyProg
+Calibre Library			Kivy-2.0.0-python3.8.dmg	VirtualBox VMs
+Continuata			Kivy-2.0.0.tar.gz		Voices
+Desktop				Kivy.dmg			Zoho Docs
+Documents			Library				blenderkit_data
+Downloads			Movies				iCloud Drive (Archive)
+Dropbox				Music				midiyodi.xml
+Robins-MacBook-Pro:~ robinhahn$ cd ./Applications
+Robins-MacBook-Pro:Applications robinhahn$ ls
+Chrome Apps.localized
+Robins-MacBook-Pro:Applications robinhahn$ cd ..
+Robins-MacBook-Pro:~ robinhahn$ curl -O -L https://kivy.org/Kivy-2.0.0-python3.8.dmg
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   162  100   162    0     0    175      0 --:--:-- --:--:-- --:--:--   175
+Robins-MacBook-Pro:~ robinhahn$ brew install python3
+Error: 
+  homebrew-core is a shallow clone.
+  homebrew-cask is a shallow clone.
+To `brew update`, first run:
+  git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
+  git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
+These commands may take a few minutes to run due to the large size of the repositories.
+This restriction has been made on GitHub's request because updating shallow
+clones is an extremely expensive operation due to the tree layout and traffic of
+Homebrew/homebrew-core and Homebrew/homebrew-cask. We don't do this for you
+automatically to avoid repeatedly performing an expensive unshallow operation in
+CI systems (which should instead be fixed to not use shallow clones). Sorry for
+the inconvenience!
+==> Downloading https://homebrew.bintray.com/bottles/python%403.9-3.9.2_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/65c25cb1486cbda7ce41ce05b3e22a68095b41d50956bda1c9c6eec2dc
+######################################################################## 100.0%
+==> Pouring python@3.9-3.9.2_1.catalina.bottle.tar.gz
+Unlinking /usr/local/Cellar/python@3.8/3.8.8_1... 21 symlinks removed.
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink bin/pip3
+Target /usr/local/bin/pip3
+already exists. You may want to remove it:
+  rm '/usr/local/bin/pip3'
+
+To force the link and overwrite all conflicting files:
+  brew link --overwrite python@3.9
+
+To list all files that would be deleted:
+  brew link --overwrite --dry-run python@3.9
+
+Possible conflicting files are:
+/usr/local/bin/pip3
+==> /usr/local/Cellar/python@3.9/3.9.2_1/bin/python3 -m ensurepip
+==> /usr/local/Cellar/python@3.9/3.9.2_1/bin/pip3 install -v --global-option=--no-user-cfg --install-option=--force -
+==> /usr/local/Cellar/python@3.9/3.9.2_1/bin/pip3 wheel --wheel-dir=/usr/local/Cellar/python@3.9/3.9.2_1/Frameworks/P
+==> Caveats
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python@3.9/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.9/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> Summary
+🍺  /usr/local/Cellar/python@3.9/3.9.2_1: 3,935 files, 65.9MB
+==> Upgrading 1 dependent:
+libass 0.14.0_1 -> 0.15.0
+==> Upgrading libass 0.14.0_1 -> 0.15.0 
+==> Downloading https://homebrew.bintray.com/bottles/freetype-2.10.4.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/b4e7683ae202c49280024faac4ac7437e690cb5dd83edb806fac368bc2
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libffi-3.3_2.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/glib-2.66.7.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/fd6f45492b3a5a51683a231f4b07bd5c9b460892c4b1be580915ff7aed
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libpthread-stubs-0.4.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/xorgproto-2021.3.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/386eeca1a9111911f47672b5902a1cc4d7327de7564086b356b5061d05
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libxau-1.0.9.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libxdmcp-1.1.3.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libxcb-1.14_1.catalina.bottle.1.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/7f40d617b2092e9dc4fed78b032a1cde7658b813b26bcabb349770cd6c
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libx11-1.7.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/59b7a9aa7a99a4f7257617558c71b1ca0ccf34f065dda785a3616b3c5e
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libxext-1.3.4.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libxrender-0.9.10.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/cairo-1.16.0_5.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/4a117545953b9784f78db8261c03d71a1ae7af836dcd995abe7e6d710c
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/gobject-introspection-1.66.1_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/3e85468a3324cb560775e024c6fd52212af73994898b381faff9aad5ba
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/icu4c-68.2.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/fdc2f15705175478dc16607f2d457c0667758e2580beefd67d4d33feed
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/harfbuzz-2.7.4_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/9144906c46cc32dacfd8bc130f85ce5490d71548afd91177501eae5184
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libass-0.15.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/427b18a8c9c8c5331553c0e814bf4e4c6f965cc53715d89a0ad3ba66b8
+######################################################################## 100.0%
+==> Installing dependencies for libass: freetype, libffi, glib, libpthread-stubs, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, cairo, gobject-introspection, icu4c and harfbuzz
+==> Installing libass dependency: freetype
+==> Pouring freetype-2.10.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/freetype/2.10.4: 64 files, 2.3MB
+==> Installing libass dependency: libffi
+==> Pouring libffi-3.3_2.catalina.bottle.tar.gz
+==> Caveats
+libffi is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+  export CPPFLAGS="-I/usr/local/opt/libffi/include"
+
+For pkg-config to find libffi you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/libffi/3.3_2: 17 files, 540.5KB
+==> Installing libass dependency: glib
+==> Pouring glib-2.66.7.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/glib/2.66.7: 441 files, 20.8MB
+==> Installing libass dependency: libpthread-stubs
+==> Pouring libpthread-stubs-0.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libpthread-stubs/0.4: 5 files, 6.6KB
+==> Installing libass dependency: xorgproto
+==> Pouring xorgproto-2021.3.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/xorgproto/2021.3: 264 files, 3.9MB
+==> Installing libass dependency: libxau
+==> Pouring libxau-1.0.9.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libxau/1.0.9: 20 files, 117.5KB
+==> Installing libass dependency: libxdmcp
+==> Pouring libxdmcp-1.1.3.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libxdmcp/1.1.3: 11 files, 125.2KB
+==> Installing libass dependency: libxcb
+==> Pouring libxcb-1.14_1.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/libxcb/1.14_1: 2,452 files, 6.9MB
+==> Installing libass dependency: libx11
+==> Pouring libx11-1.7.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libx11/1.7.0: 1,055 files, 7MB
+==> Installing libass dependency: libxext
+==> Pouring libxext-1.3.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libxext/1.3.4: 87 files, 420.4KB
+==> Installing libass dependency: libxrender
+==> Pouring libxrender-0.9.10.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libxrender/0.9.10: 12 files, 169.5KB
+==> Installing libass dependency: cairo
+==> Pouring cairo-1.16.0_5.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/cairo/1.16.0_5: 126 files, 6.3MB
+==> Installing libass dependency: gobject-introspection
+==> Pouring gobject-introspection-1.66.1_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/gobject-introspection/1.66.1_1: 191 files, 12.7MB
+==> Installing libass dependency: icu4c
+==> Pouring icu4c-68.2.catalina.bottle.tar.gz
+==> Caveats
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+For pkg-config to find icu4c you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+==> Summary
+🍺  /usr/local/Cellar/icu4c/68.2: 259 files, 72.5MB
+==> Installing libass dependency: harfbuzz
+==> Pouring harfbuzz-2.7.4_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/harfbuzz/2.7.4_1: 68 files, 6.7MB
+==> Installing libass
+==> Pouring libass-0.15.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libass/0.15.0: 10 files, 570.8KB
+Removing: /usr/local/Cellar/libass/0.14.0_1... (10 files, 509.1KB)
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents found!
+==> Caveats
+==> python@3.9
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python@3.9/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.9/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> libffi
+libffi is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+  export CPPFLAGS="-I/usr/local/opt/libffi/include"
+
+For pkg-config to find libffi you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
+==> icu4c
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.zshrc
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+For pkg-config to find icu4c you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+Robins-MacBook-Pro:~ robinhahn$ 
+
+
+
+Robins-MacBook-Pro:~ robinhahn$ brew reinstall --force-bottle sdl2 sdl2_image sdl2_ttf sdl2_mixer
+==> Downloading https://homebrew.bintray.com/bottles/sdl2-2.0.14_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/d6ae3300160c5bb495b78a5c5c0fc995f9e797e9cdd4b04ef77d59d45d2d694d?respons
+######################################################################## 100.0%
+==> Reinstalling sdl2 
+==> Pouring sdl2-2.0.14_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/sdl2/2.0.14_1: 91 files, 5MB
+==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.2.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/208176ae2c5642eb0dff7c97d7b011d6b1d6317be4242db1e54bbb92609f758b?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/webp-1.2.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/dc30946a7cf3bee45f279a2886d54d7b5c3d7253ba4e0728d49341d26573ed14?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/sdl2_image-2.0.5.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Reinstalling sdl2_image 
+==> Installing dependencies for sdl2_image: libtiff and webp
+==> Installing sdl2_image dependency: libtiff
+==> Pouring libtiff-4.2.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.2.0: 248 files, 4.4MB
+==> Installing sdl2_image dependency: webp
+==> Pouring webp-1.2.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/webp/1.2.0: 39 files, 2.4MB
+==> Installing sdl2_image
+==> Pouring sdl2_image-2.0.5.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/sdl2_image/2.0.5: 10 files, 285.0KB
+==> Downloading https://homebrew.bintray.com/bottles/sdl2_ttf-2.0.15.catalina.bottle.1.tar.gz
+######################################################################## 100.0%
+==> Reinstalling sdl2_ttf 
+==> Pouring sdl2_ttf-2.0.15.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/sdl2_ttf/2.0.15: 10 files, 79.1KB
+==> Downloading https://homebrew.bintray.com/bottles/libmodplug-0.8.9.0.catalina.bottle.1.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/sdl2_mixer-2.0.4.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Reinstalling sdl2_mixer 
+==> Installing dependencies for sdl2_mixer: libmodplug
+==> Installing sdl2_mixer dependency: libmodplug
+==> Pouring libmodplug-0.8.9.0.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/libmodplug/0.8.9.0: 15 files, 338.1KB
+==> Installing sdl2_mixer
+==> Pouring sdl2_mixer-2.0.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/sdl2_mixer/2.0.4: 10 files, 313.9KB
+==> Upgrading 3 dependents:
+little-cms2 2.11 -> 2.12, openjpeg 2.3.1 -> 2.4.0, ffmpeg 4.3.1 -> 4.3.2
+==> Upgrading little-cms2 2.11 -> 2.12 
+==> Downloading https://homebrew.bintray.com/bottles/little-cms2-2.12.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/0f782fa69d2e12e9c1765df4ae1b7bd87143402aa1840d483092f3b74f89ae19?respons
+######################################################################## 100.0%
+==> Pouring little-cms2-2.12.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/little-cms2/2.12: 21 files, 1.3MB
+Removing: /usr/local/Cellar/little-cms2/2.11... (21 files, 1MB)
+Removing: /usr/local/Cellar/little-cms2/2.9... (18 files, 1MB)
+==> Upgrading openjpeg 2.3.1 -> 2.4.0 
+==> Downloading https://homebrew.bintray.com/bottles/openjpeg-2.4.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/80426609c75b98ee0ee394e9017bb621dc73dd2d6f60d0c851f6940d0b268676?respons
+######################################################################## 100.0%
+==> Pouring openjpeg-2.4.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/openjpeg/2.4.0: 522 files, 13.3MB
+Removing: /usr/local/Cellar/openjpeg/2.3.1... (516 files, 12.8MB)
+==> Upgrading ffmpeg 4.3.1 -> 4.3.2 
+==> Downloading https://homebrew.bintray.com/bottles/aom-2.0.2.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/0cad1d09aafe134daa8e24f5e346fd2766171f637b31894be22f9a80dcbbb770?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/dav1d-0.8.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/3dfee035e136d79127501d4a22c169ab4b0a832a5300591a0145c075220bac91?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/gmp-6.2.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/35e9f82d80708ae8dea2d6b0646dcd86d692321b96effaa76b7fad4d6cffa5be?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/bdw-gc-8.0.4_2.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/73a3a75a47a0007a772fe229f11bc0710988af6a8603c56a0f7fae3d9a317149?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/guile-3.0.5.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/18a97a127b757c021f8f3b7257306cac30efd055d1bde8cee88874d62b72d8b0?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libtasn1-4.16.0_1.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/nettle-3.7.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/9504cb3a8dc7a70dc118635d5af2b79bd1dbda75db8ecc17ef6988b50933d633?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/p11-kit-0.23.22.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/d02045826811eeb8475b535be7331c0770fdc930d1ac1be86796af81141e8592?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/c-ares-1.17.1.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/jemalloc-5.2.1_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/b1b211e5bead798c236d478dd74310a97a7b59470f607b608c07222648b08bf5?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libev-4.33.catalina.bottle.tar.gz
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/nghttp2-1.43.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/5db5819e321f04b2301165cc267913ceacb161faa0504f4e067e074a101871b8?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/unbound-1.13.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/0276d7a615cdd250ce1764a708c9e031c9c814f7d2c1a0f7aeb9d08166875af6?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/gnutls-3.6.15.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/513407ec28ac63623dbc05ac6880d59cf7c082827687dfda7d0f065232151878?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libbluray-1.2.1.catalina.bottle.1.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/8d2dbe765f837608676970568fe081ba91c12af436c2812c2224e4a878692e86?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/rav1e-0.4.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/3931f7d8519ad401b6b59de5b4a0973f6b38125f1f5dc080db9975a56852f657?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libsndfile-1.0.31.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/671a3cc9c7dafd89cbaffeccf4de826262c144184bf5779320c236e87e7636cc?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/rubberband-1.9.0.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/4598d98fb8994cd6545f5858a38beae10b43968317b53ec0916542d95355f27c?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/srt-1.4.2.catalina.bottle.1.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/7056a06ce6405fe33266d528e6a8aa295e1a3db6780f23627494610a7f31f8fc?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/x264-r3048.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/2f3a1318610548a1eae131141dace544594da35d11753dfdd9dc3b6f81c08801?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/x265-3.4_2.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/c7be7296406476bf93e13580eab209646680bafaa5fb46d31cf491ef3e3f0a25?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/libsodium-1.0.18_1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/db372521cd0b1861a5b578bee22426f3a1f4f7cb3c382be1f842da4715dc65bd?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/zeromq-4.3.4.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/64bdc5d8d6cc656f1a086157bdbe565f658996f93e8d65af2ad222d80b23aa08?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/zimg-3.0.1.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/1b86d04d346e073a6f1f10de4df32d8ed38639589ab557f1ca926df3710cf7bf?respons
+######################################################################## 100.0%
+==> Downloading https://homebrew.bintray.com/bottles/ffmpeg-4.3.2.catalina.bottle.tar.gz
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/ed0fc90c66b35c84a904ba01ab3e37c31a0c63a64889b2ab99718288d52404e4?respons
+######################################################################## 100.0%
+==> Installing dependencies for ffmpeg: aom, dav1d, gmp, bdw-gc, guile, libtasn1, nettle, p11-kit, c-ares, jemalloc, libev, nghttp2, unbound, gnutls, libbluray, rav1e, libsndfile, rubberband, srt, x264, x265, libsodium, zeromq and zimg
+==> Installing ffmpeg dependency: aom
+==> Pouring aom-2.0.2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/aom/2.0.2: 22 files, 11.5MB
+==> Installing ffmpeg dependency: dav1d
+==> Pouring dav1d-0.8.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/dav1d/0.8.1: 15 files, 1.5MB
+==> Installing ffmpeg dependency: gmp
+==> Pouring gmp-6.2.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/gmp/6.2.1: 21 files, 3.3MB
+==> Installing ffmpeg dependency: bdw-gc
+==> Pouring bdw-gc-8.0.4_2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/bdw-gc/8.0.4_2: 69 files, 1.6MB
+==> Installing ffmpeg dependency: guile
+==> Pouring guile-3.0.5.catalina.bottle.tar.gz
+==> Caveats
+Guile libraries can now be installed here:
+    Source files: /usr/local/share/guile/site/3.0
+  Compiled files: /usr/local/lib/guile/3.0/site-ccache
+      Extensions: /usr/local/lib/guile/3.0/extensions
+
+Add the following to your .bashrc or equivalent:
+  export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+  export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+  export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+==> Summary
+🍺  /usr/local/Cellar/guile/3.0.5: 834 files, 56.8MB
+==> Installing ffmpeg dependency: libtasn1
+==> Pouring libtasn1-4.16.0_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libtasn1/4.16.0_1: 60 files, 536.0KB
+==> Installing ffmpeg dependency: nettle
+==> Pouring nettle-3.7.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/nettle/3.7.1: 89 files, 2.7MB
+==> Installing ffmpeg dependency: p11-kit
+==> Pouring p11-kit-0.23.22.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/p11-kit/0.23.22: 63 files, 3MB
+==> Installing ffmpeg dependency: c-ares
+==> Pouring c-ares-1.17.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/c-ares/1.17.1: 85 files, 672.3KB
+==> Installing ffmpeg dependency: jemalloc
+==> Pouring jemalloc-5.2.1_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/jemalloc/5.2.1_1: 16 files, 2MB
+==> Installing ffmpeg dependency: libev
+==> Pouring libev-4.33.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libev/4.33: 12 files, 454.7KB
+==> Installing ffmpeg dependency: nghttp2
+==> Pouring nghttp2-1.43.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/nghttp2/1.43.0: 24 files, 2.8MB
+==> Installing ffmpeg dependency: unbound
+==> Pouring unbound-1.13.1.catalina.bottle.tar.gz
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink sbin/unbound
+/usr/local/sbin is not writable.
+
+You can try again using:
+  brew link unbound
+==> Caveats
+To have launchd start unbound now and restart at startup:
+  sudo brew services start unbound
+==> Summary
+🍺  /usr/local/Cellar/unbound/1.13.1: 57 files, 5.4MB
+==> Installing ffmpeg dependency: gnutls
+==> Pouring gnutls-3.6.15.catalina.bottle.tar.gz
+==> Caveats
+If you are going to use the Guile bindings you will need to add the following
+to your .bashrc or equivalent in order for Guile to find the TLS certificates
+database:
+  export GUILE_TLS_CERTIFICATE_DIRECTORY=/usr/local/etc/gnutls/
+==> Summary
+🍺  /usr/local/Cellar/gnutls/3.6.15: 1,250 files, 10.8MB
+==> Installing ffmpeg dependency: libbluray
+==> Pouring libbluray-1.2.1.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/libbluray/1.2.1: 21 files, 928.9KB
+==> Installing ffmpeg dependency: rav1e
+==> Pouring rav1e-0.4.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/rav1e/0.4.0: 13 files, 61.9MB
+==> Installing ffmpeg dependency: libsndfile
+==> Pouring libsndfile-1.0.31.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libsndfile/1.0.31: 49 files, 1.8MB
+==> Installing ffmpeg dependency: rubberband
+==> Pouring rubberband-1.9.0.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/rubberband/1.9.0: 12 files, 525.2KB
+==> Installing ffmpeg dependency: srt
+==> Pouring srt-1.4.2.catalina.bottle.1.tar.gz
+🍺  /usr/local/Cellar/srt/1.4.2: 20 files, 3.9MB
+==> Installing ffmpeg dependency: x264
+==> Pouring x264-r3048.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/x264/r3048: 11 files, 5.7MB
+==> Installing ffmpeg dependency: x265
+==> Pouring x265-3.4_2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/x265/3.4_2: 11 files, 35.8MB
+==> Installing ffmpeg dependency: libsodium
+==> Pouring libsodium-1.0.18_1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/libsodium/1.0.18_1: 73 files, 1012.8KB
+==> Installing ffmpeg dependency: zeromq
+==> Pouring zeromq-4.3.4.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/zeromq/4.3.4: 83 files, 6.0MB
+==> Installing ffmpeg dependency: zimg
+==> Pouring zimg-3.0.1.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/zimg/3.0.1: 27 files, 2.2MB
+==> Installing ffmpeg
+==> Pouring ffmpeg-4.3.2.catalina.bottle.tar.gz
+🍺  /usr/local/Cellar/ffmpeg/4.3.2: 274 files, 51.1MB
+Removing: /usr/local/Cellar/ffmpeg/4.3.1... (299 files, 60.5MB)
+==> Checking for dependents of upgraded formulae...
+==> No broken dependents found!
+==> Caveats
+==> guile
+Guile libraries can now be installed here:
+    Source files: /usr/local/share/guile/site/3.0
+  Compiled files: /usr/local/lib/guile/3.0/site-ccache
+      Extensions: /usr/local/lib/guile/3.0/extensions
+
+Add the following to your .bashrc or equivalent:
+  export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+  export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+  export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
+==> unbound
+To have launchd start unbound now and restart at startup:
+  sudo brew services start unbound
+==> gnutls
+If you are going to use the Guile bindings you will need to add the following
+to your .bashrc or equivalent in order for Guile to find the TLS certificates
+database:
+  export GUILE_TLS_CERTIFICATE_DIRECTORY=/usr/local/etc/gnutls/
+  
+  
+  export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin

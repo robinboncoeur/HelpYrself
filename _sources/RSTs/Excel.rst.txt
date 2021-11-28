@@ -1,0 +1,359 @@
+###################
+Excel 2016 VBA Apps
+###################
+
+
+*****************************
+Excel Apps - Living Documents
+*****************************
+
+Project Updates
+===============
+
+18.11.15 - I currently have two VBA-based apps I wrote for Queen Elizabeth II Jubilee Hospital in Coopers Plains, QLD. I intend to maintain those apps, which will include:
+
+   * fixing bugs that testing had not revealed
+   
+   * adding features as requested
+   
+   * data management
+   
+These apps are CallSheet and AssetMgr. In order to remotely fix bugs, I'm looking at the following strategy:
+
+   * have users avail themselves of the issues section of the app's GitHub page
+   
+   * identify and eradicate bugs, then test the latest version of the app in my possession
+   
+   * publish the code on the GitHub page
+   
+   * have the user insert the fixed code into their version of the app
+   
+The last part of the strategy will need to be assessed for feasibility, as a lot will depend on the end-user's willingness to dig into the code side of the app. This is a significant variable to consider.
+
+
+19.01.23 - In working with these documents, I've noticed that there is some commonality of code. Those snippets will be the code I will publish first.
+
+This is not elegant, optimal code by any means... but it works. If any user happens on these pages and decides it might be worth "Helping Yrself" to, by all means feel free, but remember, you get what you pay for. It it breaks, you get to keep both pieces. :)
+
+
+
+.. image:: ../images/flou02.png
+    :align: center
+    :width: 273px
+
+
+
+*******************
+A Gentle VBA Primer
+*******************
+
+The VBE
+=======
+
+The apps Asset Manager and CallSheet work the way they do because they use code to perform the tasks. That code is written in a special 'flavour' of the BASIC language for Excel called 'Visual Basic for Applications' (VBA), which is provided by Microsoft in most if not all of their Office products, for automation. VBA is most commonly used for 'macros', which combines multiple commands into one by Office users, but also provides the ability to create forms to help manage tasks that would otherwise be tedious to carry out on a spreadsheet, for example.
+
+In order to write or edit VBA code or forms, a VBA editor has been provided, called the 'VBE'.
+
+In Excel 2016 for Windows, this can be accessed with [Alt] [F11]... on the Mac, with [fn] [Alt] [F11].
+
+
+Code Modules
+============
+
+In the VBE, code is saved in modules, the names of which are visible under the project browser. In order to view code associated with a form, you open the Forms folder by clicking on the [+] and then, right-clicking on the form name and selecting "View Code". Double-clicking the name of the form will bring up a graphical view of the form itself. (On the Mac in Excel 2016, forms are neither viewable nor can they be edited, although the code can be.)
+
+The code is essentially a collection of procedures or functions containing calls to other procedures and functions. A "call" is basically an instruction for that function or procedure (labelled 'sub', for 'subroutine', *I think*) to "run", or execute. 
+
+The difference between a 'function' and 'procedure' is minimal: essentially a function can return a value, where a procedure just performs a task without returning anything. What do I mean by 'return'? For example below is an example of a function. You can tell it's a function by the way it's defined - 'Public Function AddNumbers' and by the fact that after the closing parenthesis you can see what type of value is being returned... in this case, an Integer:
+
+.. code-block:: vbnet
+
+    Public Function nAddNumbers(nNum1 as Integer, nNum2 as Integer) as Integer
+      AddNumbers = nNum1 + nNum2
+    End Function
+
+can be called with:
+
+.. code-block:: vbnet
+
+    nMyNumber = nAddNumbers(45, 25)
+
+which will result in the variable nMyNumber acquiring the value of 70, which was **returned** by nAddNumbers().
+
+The code also includes variables or properties whose values are either being read, checked or assigned. See the section following this one for a description of a variable.
+
+At the top of the code module page is the statement "Option Explicit". This tells Visual Basic to make sure every variable has been initialised (using the Dim statement) at the beginning of a procedure, or in the top section of the module where public variables or properties are declared. This helps prevent **some** errors from happening during code execution, because the compiler will spit the dummy when you first run the code.
+
+Each form has its own code module. There is also a general code module that contains common code used by all the form code modules. The one for Asset Manager is called "MdlE".
+
+
+
+
+.. _xl_Variables:
+
+Variables and Properties
+========================
+
+TutorialsPoint define variables as "... a named memory location used to hold a value that can be changed during the script execution." The reason for using a variable is that you can have this named address (the variable name) in memory (RAM) containing data that you can access from within your software to read or change as circumstances require. This allows for cleaner, simpler code to write and maintain.
+
+Variable have a specific type: 
+
+    * strings - letters or numeric characters with which no math is to be performed
+    
+    * numbers - integers (whole numbers) or doubles (can have decimal values)
+    
+    * booleans - True or False
+
+There are other types, but these are the main ones. I try to preface the name of my variables with a single character denoting the type, although I haven't been very consistent with this approach, nor even with how I use the prefix. For example, my integers **should** probably be prefaced with an 'i', but as a hold-over from my FoxPro days I use the letter 'n'. Anyway, the 's' in the variable name 'sImagePath' indicates the value will be a string that will define the path to the image.
+
+A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment, although it's on the cards. The other thing that these products **do** make use of is this: a property allows external access (that is, external to where it was declared) from other modules or forms as though the property was a public field, while allowing the class that owns that property (like a form, for example) to keep control of the data.
+
+One could use global variables, which are defined under the 'Option Explicit' at the top of the module, but my experience with them has been that while they should be available to the entire form and all subforms, they are a lot less reliable to use than form properties. YMMV, of course.
+
+
+
+.. image:: ../images/flou02.png
+    :align: center
+    :width: 273px
+
+
+
+********************
+Common Code Snippets
+********************
+
+nRecCount()
+===========
+
+A very basic worksheet record count tool: it assumes all records are contiguous::
+
+    TypeDescr..: integer RecordCount()
+    Accepts....: (str) worksheet name, (int) column to count
+    Returns....: record count
+
+The code?
+
+.. code-block:: vbnet
+
+    Public Function nRecCount(sSheet As String, _
+                              nColN As Integer) As Integer
+    Dim sSavSheet As String
+      sSavSheet = ActiveSheet.Name
+      With Application.Worksheets(sSheet)
+        On Error Resume Next
+        .Select: nRecCount = WorksheetFunction.CountA(Columns(nColN))
+      End With
+      Application.Worksheets(sSavSheet).Select
+    End Function
+
+**This is now obsolete**. The better approach takes place within the code that needs to know what the record count of your range is, so you use a "Range" object thus:
+
+.. code-block:: vbnet
+  
+  Public Sub SomeSub(dVal as Double)
+    Dim rRng as Range
+    Dim dRecCount as Double
+
+    Set rRng = WkStName.Range("A1").CurrentRegion
+    dRecCount = rRng.Rows.Count  ' Probably will not need this anymore anyway
+
+    With WkStName
+      ' Process stuff here
+    End With
+
+    Set rRng = Nothing
+  End Sub
+
+
+stp()
+=====
+
+Only because I'm too lazy to type "Trim(Str(" in front of numbers I want to convert to strings.
+
+.. code-block:: vbnet
+
+    Public Function stp(nNum As Integer) As String
+      stp = Trim(Str(nNum))
+    End Function
+
+
+Buttons Resizing on their Own
+=============================
+
+... when you don't want them to, like on a worksheet, for instance.
+
+Open C:\Users\<yourusername>\AppData\Roaming\Microsoft\Excel (AppData may be a hidden folder).  Delete any files starting in XL<hexnumber> and ending in .xlsb or xlb.  These files are created when you use two monitors of different resolutions or use a projector and save the file under a different resolution.  Deleting them solves then font shrinking problem and the button resizing issue as well. 
+
+Do not close the workbook with the activeX controls as the current worksheet, because if reopening the workbook on a different resolution monitor, they would be off if the activeX controls were on the opening worksheet. Opening the workbook with no activeX controls on the active worksheet would have no effect on activeX controls on other worksheets.
+
+Proposed as answer by `Erik Live Monday, January 7, 2013 12:36 PM <https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?referrer=https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?forum=exceldev>`_
+
+
+The Current 'Help' Solution
+===========================
+
+I wanted to make sure that at least the very basics of help for CallSheet and Asset Manager were easily accessible to users. I decided that this Sphinx-Doc method was the easiest for me to learn how to use, and to maintain, even remotely.
+
+Unfortunately, I have yet to sort out how to get control-specific help to work, but the Excel tooltip can at least offer a name of the control, which users can then search for in the Help file. In any event, Help can be accessed via a button on all forms and - in CallSheet - from the main sheet.
+
+First, the methods fired by clicking the Help button.
+
+.. code-block:: vbnet
+
+    Private Sub CmdeqHelp_Click()
+       Call Me.DoHelp
+    End Sub
+
+which calls:
+
+.. code-block:: vbnet
+
+    Public Sub DoHelp()
+      If Not MdlE.bHtmlHelp(Me.sHelpURL, "EquipMain.html") Then MdlE.sHTMLError
+    End Sub
+
+To break down the DoHelp() procedure, DoHelp() calls a function on the MdlE code module that sends back (returns) either a True or a False: True if the help file could be opened and read, False if not. "MdlE" is a code module that holds mostly functions common to all the forms and sheets in the workbook.
+
+The "If Not" part of this statement is what checks which value is being returned: so if a True is being returned by bHtmlHelp(), then the sHTMLError procedure is called (executed). If a False is returned, an error message about being unable to find the Help files is displayed.
+
+bHtmlHelp() is being sent two parameters or arguments. A parameter is anything within the "(" and the ")" - it's basically a value that will be used by the funtion - in this case: bHtmlHelp() - which value is set somewhere else in the program.
+
+The first value - Me.sHelpURL - is set up in the Userform_Activate(). It holds a string value: the path to the Help files - for example: "Users/robyn/Dev/VBA/AssetMgr". Notice the "Me." before the "sHelpURL"... any value-holding variable with a "Me." prefix means that that variable is actually a property of "Me", which in this case is the form. Besides properties, "Me" can also have methods (procedures or functions).
+
+Properties versus global variables are discussed up in the :ref:`xl_Variables` section.
+
+The second parameter that is being passed is a string - anything between "" is a string - and this string tells the bHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.
+
+bHtmlHelp() opens the Help file. Here is the whole function group... first, the actual bHtmlHelp() function:
+
+.. code-block:: vbnet
+
+    Public Function bHtmlHelp(sHelpPath As String, Optional sTopic As String) As Boolean
+      Dim sValidHelpURL As String, sLocalHelpURL As String, sChk As String
+
+      ' check first if help is on same folder as the App; if not, go to
+      '  the default - hard-coded - network help folder
+      sLocalHelpURL = sHelpPath
+      sChk = sLocalHelpURL & "index.html"
+      If bFileExists(sChk) Then
+        sValidHelpURL = sLocalHelpURL
+        bHtmlHelp = True
+      Else
+        sChk = "G:\Theatre\RecoveryCN\AssetMgr\amHelp\index.html"
+        If bFileExists(sChk) Then
+          sValidHelpURL = "G:\Theatre\RecoveryCN\AssetMgr\amHelp\"
+          bHtmlHelp = True
+        Else
+          bHtmlHelp = False
+          Exit Function
+        End If
+      End If
+
+      ' open specific page
+      If Len(sTopic & vbNullString) = 0 Then
+        sValidHelpURL = sValidHelpURL & "index.html"
+      Else
+        sValidHelpURL = sValidHelpURL & "RSTs\" & sTopic
+      End If
+
+      If Not OpenInIE(sValidHelpURL) Then
+        bHtmlHelp = False
+        Exit Function
+      End If
+    End Function
+
+I'll be the first to admit the logic in this function is - to put it nicely - suboptimal. The 'return' logic should be together in the same are of the code: it's a bit hard to follow what exactly is happening, as this function sort-of organically grew (as opposed to being properly **designed**).
+
+Anyway, it works.
+
+This function checks if the file exists... a discrete process that can be used by other parts of the software:
+
+.. code-block:: vbnet
+
+    '=================================================================
+    '  Does File Exist? (boolean)
+    '  Accepts: fully-qualified path\name string
+    '  Returns: boolean (True if exists)
+    '===========================================
+    Public Function bFileExists(cFullName As String) As Boolean
+      On Error GoTo EarlyExit
+      If Not Dir(cFullName) = vbNullString Then bFileExists = True
+
+    EarlyExit:
+      On Error GoTo 0
+      ' bFileExists = False (default is false, so superfluous statement)
+    End Function
+
+Finally, this one opens the help file in Microsoft's Internet Explorer:
+
+.. code-block:: vbnet
+
+    Public Function OpenInIE(sURL As String) As Boolean
+    Dim ieDoc As Object, ieTable As Object, clip As DataObject
+    Dim i As Long, URL As String, IE As Object, objElement As Object, objCollection As Object
+
+       'Create InternetExplorer Object
+       Set IE = CreateObject("InternetExplorer.Application")
+
+      'Set IE.Visible = True to make IE visible, or False for IE to run in the background
+       IE.Visible = True
+
+       'Navigate to URL
+       IE.Navigate sURL
+
+       'Unload IE
+       Set IE = Nothing
+       Set objElement = Nothing
+       Set objCollection = Nothing
+       OpenInIE = True
+    End Function
+
+Note: *I recently (2019.01.16) had to change the target browser from Firefox to IE, because as Qld Health migrated to Windows 10, Firefox was no longer a thing, and help ceased to work. In retrospect, I should have allowed opening in IE if Firefox was no longer available. This is an example of poor coding decision-making*.
+
+Finally, the function that generates the error message if the help files aren't where they are expected to be:
+
+.. code-block:: vbnet
+
+    Public Function sHTMLError(Optional sCond As String)
+      MsgBox "Help not available. Please notify Developer.", _
+                vbCritical, "Help not Found"
+    End Function
+
+
+
+And then...
+===========
+
+Saving a solution for a driving 2-column dropdown... set it up this way::
+
+    .CboEqType.ColumnHeads = False: .CboEqType.ColumnCount = 2
+    .CboEqType.ColumnWidths = "140;3"
+    .CboEqType.RowSource = "=Meta!A1:B" & cRowCnt
+    .CboEqType.TextColumn = 1: .CboEqType.BoundColumn = 1
+
+
+
+****************************
+The Tax Worksheet Conundrums
+****************************
+
+Intro
+=====
+
+Sort of starting this note-taking in the middle of development instead of at the outset. The Checking account data presents significant challenges in terms of finding a tructure way of identifying entries in order to code them. At this point (07.03.2019) it's all being done manually.
+
+Credit card entries are to be reviewed next, but codifying them is currently working well.
+
+
+Overview
+========
+
+The checking account entries are not consistent in structure, thus rules have been developed in the MetaDefs sheet. Roughly, the approach runs in a Do While which will continue if the string suffix is "~C", waits for a "~D" suffix (Done) to end loop:
+
+    1. The first pass: look for 1st 10 chars in col-Y. There will be a 2nd pass.
+    2. Truncate the entry by the value in col-Z, return to Do While
+    3. The second pass: look for 1st 4 chars in col-AC. Check in col-AF for "Y".
+    4. If col-AF is a "Y", truncate entry by value in col-AD, else use code in col-AE.
+    5. The third pass: look for 1st 4 chars in col-AG. Check in col-AJ for "Y".
+    6. If col-AJ is a "Y", truncate entry by value in col-AH, else use code in col-AI.
+    7. The fourth pass: look for entire string in col-AK. Col-AN wil have code.

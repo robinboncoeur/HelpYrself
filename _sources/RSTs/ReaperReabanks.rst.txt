@@ -1,0 +1,1087 @@
+########################
+A Discussion on Reabanks
+########################
+
+
+*************
+How They Work
+*************
+
+The reabank file should look something like this when you've finished editing. Here's what I've come up with for Embertone's Fischer Viola::
+
+    //----------------------------------
+    //! g="Embertone/Fischer Viola" n="Fischer Viola"
+    //! m="Embertone Fischer Viola 1.0"
+    Bank 37 10 Embertone - Viola
+    //! c=textured i=vibrato g=2 n="default vibrato" o=note:27
+    27 vib default
+    //! c=textured i=vibrato g=2 n="progressive vibrato" o=note:28
+    28 vib prog
+    //! c=textured i=vibrato g=2 n="open string vibrato" o=note:29
+    29 vib open
+    //! c=textured i=vibrato g=2 n="gentle vibrato" o=note:30
+    30 vib gentle
+    //! c=textured i=vibrato g=2 n="passionate vibrato" o=note:31
+    31 vib passion
+    //! c=default i=note-whole g=3 n="sord/sul off" o=note:43/note:42
+    43 sord-sul off
+    //! c=default i=con-sord g=3 n="con sord" o=note:41/note:43
+    41 con sord
+    //! c=default i=sul-pont g=3 n="sul pont" o=note:42/note:44
+    44 sul pont
+    //! c=default i=sul-tasto g=3 n="sul tasto" o=note:42/note:45
+    45 sul tasto
+    //! c=default i=sul-pont g=3 n="sul pont/con sord" o=note:41/note:44
+    48 cs sul pont
+    //! c=default i=sul-tasto g=3 n="sul tasto/con sord" o=note:41/note:45
+    49 cs sul tasto
+    //! c=fx i=bow-up g=4 n="color on" o=note:33
+    33 color on
+    //! c=fx i=bow-down g=4 n="color off" o=note:34
+    34 color off
+    //! c=long i=note-whole o=note:36
+    36 sustain
+    //! c=short i=staccato o=note:38
+    38 staccato
+    //! c=short i=pizz o=note:39
+    39 pizz
+    //! c=short-dark i=tremolo o=note:40
+    40 tremolo
+    //----------------------------------
+
+
+*********************
+Jason Lyon's Approach
+*********************
+
+This reabank is for the Garritan Personal Orchestra::
+
+    // GPO5 MOST USED
+    //
+
+    //! g="Garritan/GPO5" n="GPO Violins"
+    Bank 16 1 GPO5 - Violins
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:36
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:36
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:36
+    1 sustain
+    //! c=long i=legato-bowed2 o=note:38
+    21 auto alt
+    //! c=long i=bow-up o=note:39
+    108 upbow
+    //! c=long i=bow-down o=note:40
+    107 dwnbow
+    //! c=short-light i=pizz o=note:41
+    56 pizz
+    //! c=long-dark i=tremolo o=note:43
+    11 trem
+    //! c=long i=trill-min2 o=note:45
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:47
+    71 tr M2
+
+    //! c=long-light i=con-sord o=note:37
+    7 sust cs
+    //! c=long-light i=tremolo-con-sord o=note:42
+    12 trem cs
+    //! c=long-light i=trill-min2 o=note:44
+    44 tr m2 cs
+    //! c=long-light i=trill-maj2 o=note:46
+    46 tr M2 cs
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Violas"
+    Bank 16 2 GPO5 - Violas
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:36
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:36
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:36
+    1 sustain
+    //! c=long i=legato-bowed2 o=note:38
+    21 auto alt
+    //! c=long i=bow-up o=note:39
+    108 upbow
+    //! c=long i=bow-down o=note:40
+    107 dwnbow
+    //! c=short-light i=pizz o=note:41
+    56 pizz
+    //! c=long-dark i=tremolo o=note:43
+    11 trem
+    //! c=long i=trill-min2 o=note:45
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:47
+    71 tr M2
+
+    //! c=long-light i=con-sord o=note:37
+    7 sus cs
+    //! c=long-light i=tremolo-con-sord o=note:42
+    12 trem cs
+    //! c=long-light i=trill-min2 o=note:44
+    44 tr m2 cs
+    //! c=long-light i=trill-maj2 o=note:46
+    46 tr M2 cs
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Cellos"
+    Bank 16 3 GPO5 - Cellos
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:24
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:24
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:24
+    1 sustain
+    //! c=long i=legato-bowed2 o=note:26
+    21 auto alt
+    //! c=long i=bow-up o=note:27
+    108 upbow
+    //! c=long i=bow-down o=note:28
+    107 dwnbow
+    //! c=short-light i=pizz o=note:29
+    56 pizz
+    //! c=long-dark i=tremolo o=note:31
+    11 trem
+    //! c=long i=trill-min2 o=note:33
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:35
+    71 tr M2
+
+    //! c=long-light i=con-sord o=note:25
+    7 sus cs
+    //! c=long-light i=tremolo-con-sord o=note:30
+    12 trem cs
+    //! c=long-light i=trill-min2 o=note:32
+    44 tr m2 cs
+    //! c=long-light i=trill-maj2 o=note:34
+    46 tr M2 cs
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Basses"
+    Bank 16 4 GPO5 - Basses
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:12
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:12
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:12
+    1 sustain
+    //! c=long i=legato-bowed2 o=note:14
+    21 auto alt
+    //! c=long i=bow-up o=note:15
+    108 upbow
+    //! c=long i=bow-down o=note:16
+    107 dwnbow
+    //! c=short-light i=pizz o=note:17
+    56 pizz
+    //! c=long-dark i=tremolo o=note:19
+    11 trem
+
+    //! c=long-light i=con-sord o=note:13
+    7 sus cs
+    //! c=long-light i=tremolo-con-sord o=note:18
+    12 trem cs
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO FrHn"
+    Bank 17 1 GPO5 - FHn
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:24
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:24
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:24
+    1 sustain
+    //! c=long-light i=con-sord o=note:26
+    7 mute
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Tpt"
+    Bank 17 2 GPO5 - Tpt
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:48
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:48
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:48
+    1 sustain
+    //! c=long-light i=con-sord o=note:50
+    7 mute
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Tbn"
+    Bank 17 3 GPO5 - Tbn
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:12
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:12
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:12
+    1 sustain
+    //! c=short i=marcato o=note:14
+    55 marc
+    //! c=short i=staccato o=note:16
+    59 stacc
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Tuba"
+    Bank 17 4 GPO5 - Tuba
+
+    //! c=legato i=legato g=2 o=cc:102,64/note:12
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0/note:12
+    19 leg off
+
+    //! c=long i=legato-slurred o=note:12
+    1 sustain
+    //! c=short i=marcato o=note:14
+    55 marc
+    //! c=short i=staccato o=note:16
+    59 stacc
+
+    //----------------------------------------------------------------------------
+
+    //! g="Garritan/GPO5" n="GPO Woods"
+    Bank 17 5 GPO5 - Woods
+
+    //! c=legato i=legato g=2 o=cc:102,64
+    20 leg on
+    //! c=legato i=note-whole g=2 o=cc:102,0
+    19 leg off
+
+And then, for the Cinewind and Kirk Hunter libraries::
+
+    //----------------------------------------------------------------------------
+
+    // KIRK HUNTER CONCERT BRASS 2
+    //
+
+    //! g="Kirk Hunter/Concert Brass 2" n="KH Fr Horn"
+    Bank 18 1 KH - FrHn
+
+    //! c=long i=legato o=note:85
+    1 sustain
+    //! c=long i=legato-slurred o=note:89
+    2 adagio
+    //! c=short i=marcato o=note:86
+    54 acc pp
+    //! c=short i=marcato o=note:87
+    54 acc mf
+    //! c=short i=marcato o=note:88
+    54 acc ff
+    //! c=short i=staccato o=note:90
+    59 stacc
+
+    //! c=short-dark i=rip o=note:23
+    100 rip
+
+    //! c=fx g=2 i=fx o=note:30
+    106 solo
+    //! c=fx g=2 i=fx o=note:29
+    107 a2
+    //! c=fx g=2 i=fx o=note:28
+    108 a4
+    //! c=fx g=2 i=fx o-note:27
+    109 a8
+
+    //----------------------------------------------------------------------------
+
+    //! g="Kirk Hunter/Concert Brass 2" n="KH Tpt"
+    Bank 18 2 KH - Tpt
+
+    //! c=long i=legato o=note:25
+    1 sustain
+    //! c=long i=legato-slurred o=note:29
+    2 adagio
+    //! c=short i=marcato o=note:26
+    54 acc pp
+    //! c=short i=marcato o=note:27
+    54 acc mf
+    //! c=short i=marcato o=note:28
+    54 acc ff
+    //! c=short i=staccato o=note:30
+    40 stacc
+
+    //! c=short-dark i=rip o=note:23
+    100 rip
+
+    //! c=fx g=2 i=fx o=note:42
+    106 solo
+    //! c=fx g=2 i=fx o=note:41
+    107 a2
+    //! c=fx g=2 i=fx o=note:40
+    108 a4
+
+    //----------------------------------------------------------------------------
+
+    //! g="Kirk Hunter/Concert Brass 2" n="KH Tbn"
+    Bank 18 3 KH - Tbn
+
+    //! c=long i=legato o=note:85
+    1 sustain
+    //! c=long i=legato-slurred o=note:89
+    2 adagio
+    //! c=short i=marcato o=note:86
+    54 acc pp
+    //! c=short i=marcato o=note:87
+    54 acc mf
+    //! c=short i=marcato o=note:88
+    54 acc ff
+    //! c=short i=staccato o=note:90
+    40 stacc
+
+    //! c=short-dark i=rip o=note:23
+    100 rip
+
+    //! c=fx g=2 i=fx o=note:30
+    106 solo
+    //! c=fx g=2 i=fx o=note:29
+    107 a2
+    //! c=fx g=2 i=fx o=note:28
+    108 a4
+    //! c=fx g=2 i=fx o-note:27
+    109 a8
+
+    //----------------------------------------------------------------------------
+
+    //! g="Kirk Hunter/Concert Brass 2" n="KH Tuba"
+    Bank 18 4 KH - Tuba
+
+    //! c=long i=legato o=note:85
+    1 sustain
+    //! c=long i=legato-slurred o=note:89
+    2 adagio
+    //! c=short i=marcato o=note:86
+    54 acc pp
+    //! c=short i=marcato o=note:87
+    54 acc mf
+    //! c=short i=marcato o=note:88
+    54 acc ff
+    //! c=short i=staccato o=note:90
+    40 stacc
+
+    //----------------------------------------------------------------------------
+
+    // CineWinds Core
+    //
+
+    //! g="Cinesamples/Cinewinds Core" n="CWC Piccolo"
+    Bank 19 1 CWC - Piccolo
+
+    //! c=long i=legato o=note:36
+    1 sustain
+    //! c=short i=marcato-quarter o=note:41
+    52 marc
+    //! c=short i=tenuto-eighth o=note:40
+    50 ten
+    //! c=short i=staccato o=note:38
+    40 stacc
+    //! c=long i=trill-min2 o=note:43
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:45
+    71 tr M2
+
+    //----------------------------------------------------------------------------
+
+    //! g="Cinesamples/Cinewinds Core" n="CWC Flt"
+    Bank 19 2 CWC - Flt
+
+    //! c=long i=legato o=note:36
+    1 sustain
+    //! c=short i=marcato-quarter o=note:41
+    52 marc
+    //! c=short i=tenuto-eighth o=note:40
+    50 ten
+    //! c=short i=staccato o=note:38
+    40 stacc
+    //! c=long i=trill-min2 o=note:43
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:45
+    71 tr M2
+
+    //----------------------------------------------------------------------------
+
+    //! g="Cinesamples/Cinewinds Core" n="CWC Oboe"
+    Bank 19 3 CWC - Oboe
+
+    //! c=long i=legato o=note:36
+    1 sustain
+    //! c=short i=marcato-quarter o=note:41
+    52 marc
+    //! c=short i=tenuto-eighth o=note:40
+    50 ten
+    //! c=short i=staccato o=note:38
+    40 stacc
+    //! c=long i=trill-min2 o=note:43
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:45
+    71 tr M2
+
+    //----------------------------------------------------------------------------
+
+    //! g="Cinesamples/Cinewinds Core" n="CWC Clnt"
+    Bank 19 4 CWC - Clnt
+
+    //! c=long i=legato o=note:24
+    1 sustain
+    //! c=short i=marcato-quarter o=note:29
+    52 marc
+    //! c=short i=tenuto-eighth o=note:28
+    50 ten
+    //! c=short i=staccato o=note:26
+    40 stacc
+    //! c=long i=trill-min2 o=note:31
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:33
+    71 tr M2
+
+    //----------------------------------------------------------------------------
+
+    //! g="Cinesamples/Cinewinds Core" n="CWC Bassn"
+    Bank 19 5 CWC - Bassn
+
+    //! c=long i=legato o=note:12
+    1 sustain
+    //! c=short i=marcato-quarter o=note:17
+    52 marc
+    //! c=short i=tenuto-eighth o=note:16
+    50 ten
+    //! c=short i=staccato o=note:14
+    40 stacc
+    //! c=long i=trill-min2 o=note:19
+    70 tr m2
+    //! c=long i=trill-maj2 o=note:21
+    71 tr M2
+
+
+    //----------------------------------------------------------------------------
+
+    // KIRK HUNTER CONCERT BRASS LEGACY
+    //
+
+    //! g="Kirk Hunter/Concert Brass Legacy" n="KH Brass Ens"
+    Bank 20 1 KH - Brass Ens
+
+    //! c=long i=legato o=note:97
+    1 sustain
+    //! c=long i=legato-slurred o=note:101
+    20 adagio
+    //! c=long i=legato-slurred o=note:98
+    21 allegro
+    //! c=long i=legato-slurred o=note:99
+    28 vivo
+    //! c=long i=sfz o=note:102
+    49 sfz
+    //! c=short i=marcato o=note:100
+    52 marc
+    //! c=short i=staccato o=note:103
+    40 staccato
+    //! c=long i=con-sord o=note:104
+    7 con sord
+    //! c=long i=note-whole o=note:106
+    109 senza sord
+
+
+
+    //----------------------------------------------------------------------------    
+    //----------------XSample/Strings score ----------------
+
+    //! g="XSample/strings" n="strings score"
+    Bank 02 1 Strings score
+
+    //! c=legato i=vibrato g=3 o=cc:00,00
+    00 vibrato cc1
+
+    //! c=legato i=legato-vibrato g=3 o=cc:00,01
+    01 senza vibrato cc1
+
+    //! c=default i=vibrato-con-sord g=3 o=cc:00,02
+    02 vibrato con sord. cc1
+
+    //! c=default i=legato-vibrato g=3 o=cc:00,03
+    03 senza vibrato con sord. cc1
+
+    //! c=long i=tremolo g=3 o=cc:00,04
+    04 tremolo cc1
+
+    //! c=long i=harmonics g=3 o=cc:00,05
+    05 harmonics cc1
+
+    //! c=short i=spiccato g=3 o=cc:00,06
+    06 spiccato velocity
+
+    //! c=short i=marcato-quarter g=3 o=cc:00,07
+    07 marcato velocity
+
+    //! c=textured i=pizz g=3 o=cc:00,08
+    08 pizz. velocity
+
+    //! c=textured i=pizz-bartok g=3 o=cc:00,09
+    09 pizz. bartok velocity
+
+    //! c=textured i=col-legno g=3 o=cc:00,10
+    10 col legno velocity
+
+    //! c=fx i=fx g=3 o=cc:00,11
+    11 finger velocity
+
+    //! c=fx i=note-sixteenth g=3 o=cc:00,12
+    12 sul pont. short velocity (C-b, V-c)
+
+    //! c=fx i=sul-pont g=3 o=cc:00,13
+    13 sul pont. cc1
+
+    //! c=fx i=tremolo-sul-pont g=3 o=cc:00,14
+    14 sul pont. tremolo cc1
+
+    //! c=fx i=tremolo-harmonics g=3 o=cc:00,15
+    15 harmonics tremolo cc1
+
+    //! c=fx i=legato-gliss g=3 o=cc:00,16
+    16 harmonics gliss. cc1
+
+    //! c=default i=legato-gliss g=3 o=cc:00,17
+    17 harmonics gliss. con sord. cc1
+
+    //! c=fx i=tremolo-harmonics-a g=3 o=cc:00,18
+    18 harmonics gliss. tremolo cc1
+
+    //! c=default i=tremolo-harmonics-a g=3 o=cc:00,19
+    19 harmonics gliss. tremolo con sord. cc1 (C-b)
+
+    //! c=fx i=legato-gliss g=3 o=cc:00,20
+    20 harmonics gliss. artificial cc1 (V-no, V-la)
+
+    //! c=fx i=run-major g=3 o=cc:00,21
+    21 glissandi cc1 (V-c)
+
+    //! c=default i=run-major g=3 o=cc:00,22
+    22 glissandi con sord. cc1 (V-c)
+
+    //! c=fx i=run-major g=3 o=cc:00,23
+    23 short gliss. cc1 (C-b)
+
+
+   //----------------------------------------------------------------------------    
+    //----------------OT Berlin Orchestra Inspire
+    //! g="Orchestral Tools/Inspire" n="01-1 Full Orchestra Multi"
+    Bank 12 1 BOI Full Orchestra Multi
+    //! c=long i=note-whole o=note:5
+    1 sustain
+    //! c=short i=staccato o=note:6
+    40 staccato
+    //! c=fx i=fx o=note:7
+    62 fx
+
+    //! g="Orchestral Tools/Inspire" n="02-1 Strings Whole Ensemble Multi"
+    Bank 12 2 BOI Strings Whole Ensemble Multi
+    //! c=long i=note-whole o=note:5
+    1 sustain immediate
+    //! c=long i=note-whole o=note:6
+    2 sustain soft
+    //! c=short i=spiccato o=note:7
+    42 spiccato
+    //! c=short-light i=pizz o=note:8
+    56 pizz
+    //! c=long i=tremolo o=note:9
+    11 tremolo
+    //! c=long-light i=con-sord g=2 o=cc:16,127
+    7 con sordino on
+    //! c=long-light i=con-sord g=2 o=cc:16,0
+    6 con sordino off
+
+    //! g="Orchestral Tools/Inspire" n="02-2 First Chairs Whole Ensemble Multi"
+    Bank 12 3 BOI First Chairs Whole Ensemble Multi
+    //! c=long i=note-whole o=note:24
+    1 sustain
+    //! c=short i=spiccato o=note:25
+    42 spiccato
+    //! c=long-light i=con-sord g=2 o=cc:16,127
+    7 con sordino on
+    //! c=long-light i=con-sord g=2 o=cc:16,0
+    6 con sordino off
+
+    //! g="Orchestral Tools/Inspire" n="02-3 High Strings 8va Multi"
+    Bank 12 4 BOI High Strings 8va Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=spiccato o=note:25
+    42 spiccato
+    //! c=long-light i=con-sord g=2 o=cc:16,127
+    7 con sordino on
+    //! c=long-light i=con-sord g=2 o=cc:16,0
+    6 con sordino off
+
+    //! g="Orchestral Tools/Inspire" n="02-4 Low Strings 8va Multi"
+    Bank 12 5 BOI Low Strings 8va Multi
+    //! c=legato i=legato o=note:96
+    20 legato
+    //! c=short i=spiccato o=note:97
+    42 spiccato
+    //! c=short-light i=pizz o=note:98
+    56 pizz
+    //! c=long-light i=con-sord g=2 o=cc:16,127
+    7 con sordino on
+    //! c=long-light i=con-sord g=2 o=cc:16,0
+    6 con sordino off
+
+    //! g="Orchestral Tools/Inspire" n="02-5 Violins I & II Multi"
+    Bank 12 6 BOI Violins I & II Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=spiccato o=note:25
+    42 spiccato
+    //! c=long-light i=con-sord g=2 o=cc:16,127
+    7 con sordino on
+    //! c=long-light i=con-sord g=2 o=cc:16,0
+    6 con sordino off
+
+    //! g="Orchestral Tools/Inspire" n="03-1 Brass Whole Ensemble Multi"
+    Bank 12 7 BOI Brass Whole Ensemble Multi
+    //! c=long i=note-whole o=note:96
+    1 sustain immediate
+    //! c=long i=note-whole o=note:97
+    2 sustain soft
+    //! c=short i=staccato o=note:98
+    40 staccato
+    //! c=long i=marcato o=note:99
+    9 marcato
+
+    //! g="Orchestral Tools/Inspire" n="03-2 Brass Muted Ensemble Multi"
+    Bank 12 8 BOI Brass Muted Ensemble Multi
+    //! c=long i=note-whole o=note:96
+    1 sustain
+    //! c=short i=staccato o=note:97
+    40 staccato
+
+    //! g="Orchestral Tools/Inspire" n="03-3 Trumpet & Horns 8va Multi"
+    Bank 12 9 BOI Trumpet & Horns 8va Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=staccato o=note:25
+    40 staccato
+    //! c=long i=marcato o=note:26
+    9 marcato
+
+    //! g="Orchestral Tools/Inspire" n="03-4 Trombones & Tuba 8va Multi"
+    Bank 12 10 BOI Trombones & Tuba 8va Multi
+    //! c=long i=note-whole o=note:96
+    1 sustain
+    //! c=short i=staccato o=note:97
+    40 staccato
+    //! c=long i=marcato o=note:98
+    9 marcato
+
+    //! g="Orchestral Tools/Inspire" n="03-5 Solo Horn Multi"
+    Bank 12 11 BOI Solo Horn Multi
+    //! c=legato i=legato o=note:96
+    20 legato
+    //! c=short i=staccato o=note:97
+    40 staccato
+
+    //! g="Orchestral Tools/Inspire" n="03-6 Solo Trumpet Multi"
+    Bank 12 12 BOI Solo Trumpet Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=long i=note-whole o=note:25
+    1 sustain vibrato
+    //! c=short i=staccato o=note:26
+    40 staccato
+
+    //! g="Orchestral Tools/Inspire" n="04-1 Woodwinds Whole Ensemble Multi"
+    Bank 12 13 BOI Woodwinds Whole Ensemble Multi
+    //! c=long i=note-whole o=note:5
+    1 sustain
+    //! c=short i=staccato o=note:6
+    40 staccato
+    //! c=long i=trill o=note:7
+    70 trill half tone
+    //! c=long i=trill o=note:8
+    71 trill full tone
+
+    //! g="Orchestral Tools/Inspire" n="04-2 Flutes & Clarinets 8va Multi"
+    Bank 12 14 BOI Flutes & Clarinets 8va Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=long i=note-whole o=note:25
+    1 sustain vibrato
+    //! c=short i=staccato o=note:26
+    40 staccato
+    //! c=long i=trill o=note:27
+    70 trill half tone
+    //! c=long i=trill o=note:28
+    71 trill full tone
+
+    //! g="Orchestral Tools/Inspire" n="04-3 Bassoons & Clarinets 8va Multi"
+    Bank 12 15 BOI Bassoons & Clarinets 8va Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=staccato o=note:25
+    40 staccato
+
+    //! g="Orchestral Tools/Inspire" n="04-4 Solo Flute Multi"
+    Bank 12 16 BOI Solo Flute Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=staccato o=note:25
+    40 staccato
+
+    //! g="Orchestral Tools/Inspire" n="04-5 Solo Clarinet Multi"
+    Bank 12 17 BOI Solo Clarinet Multi
+    //! c=legato i=legato o=note:24
+    20 legato
+    //! c=short i=staccato o=note:25
+    40 staccato
+
+
+
+
+*************
+Jason's notes
+*************
+
+I've finally fixed my MIDI-chasing issue, and I thought I'd share the fruits of my labours. The attached template uses GPO5 as a basis and augments it with CSS, Kirk Hunter Concert Brass 2 and CineWinds Core.
+
+It's unlikely most people will have precisely all of those, of course. You could always delete the tracks pertaining to the ones you don't. Or you could substitute in ones you do, but then you'll have to do some work on the MIDI note names and Reaticulate banks. The former task is boring rather than difficult and the latter isn't half as terrifying as it first seems.
+
+I hope people will get some kind of use out of this, even if they just pick up on some of the methodology. The whole enchilada is: GPO5+CSS+KHB+CWC KS ORCHESTRAL TEMPLATE v5 ... Reaticulate Version - this is a mid to late Romantic-era orchestra, not a kitchen sink epic job.
+
+
+
+*************
+THE LIBRARIES
+*************
+
+GARRITAN PERSONAL ORCHESTRA 5
+=============================
+
+GPO is limited by modern standards (for instance the legato and portamento are scripted not sampled, and most instruments have vibrato baked in) but you can't fault it on sheer value. It's more a "concertish" sound than a "filmic" one, but it makes a very good bedrock for any project. Meat and potatoes, and its auto handling of long-short is very intuitive. It also fills in a lot of less common auxiliaries.
+
+It involves quite a few compromises, but it's comprehensive, practical and has a minimal hit to resources. It's ideal for sketching and even full productions, especially if you really get under the hood.
+
+CINEMATIC STUDIO STRINGS
+========================
+
+CSS is a more advanced string library, allowing for more natural sounding sampled legato (among many other things). Its inclusion here is primarily for layering purposes. The workhorse legato and articulation approach of GPO5 can be augmented by doubling the GPO MIDI content in the nested CSS MIDI tracks, creating an overlay for far more realistic performance, as well as variety of tone and more density.
+
+I've used the older Classic Legato patches since they seem to combine with other libraries with less angst over timing.
+
+CSS has generally brighter and more aggressive performances (a little more in the "filmic" direction). Experimenting with the relative feeds of GPO and CSS (from the purple "container" tracks - see below) can give interesting and different results. For instance, to stay "concertish", dial in just enough of CSS to give the increased realism. To get brighter and tighter, alter the balance more in favour of CSS. You could of course simply mute out one or the other entirely.
+
+I find the CSS basses "cut" and "dig" a little too much in this context, so they aren't included.
+
+KIRK HUNTER CONCERT BRASS 2
+===========================
+
+All instruments but the bass trombone are doubled in nested tracks. As opposed to the string sections, I feel these are best used as either/or, but I suppose you could double up (or more) your brass up if you wished.
+
+Again, the advantage to using these samples is primarily for more sophisticated legato handling and much greater control over articulations. KHCB is brighter and punchier than GPO, but not enough to trouble the overall balance too much.
+
+CINEWINDS CORE
+==============
+
+All major woods are doubled in nested tracks. Again these can be either/or/and. The advantages are the same as with KHCB. Again, this library is punchier than GPO, but combines well with it.
+
+REATICULATION & KEYSWITCHES
+===========================
+
+Jason Tackaberry's solution to articulation management - flexible, visually appealing and auto-chasing. You'll need to add the packaged text file to the Reaticulate file in REAPER/Data.
+
+This version of the template retains the default KS mapping for all libraries. I've left them in the MIDI Editor as named notes - they can be useful for translating previous projects to Reaticulate. You can use traditional KSes in conjunction with Reaticulate, but the former won't always chase properly.
+
+In general, if you want to simply copy over MIDI items from one library track to another you'll probably have to do some editing. It shouldn't be too bad if you use Reatic events though - all but the most unusual map across different sample players, using Spitfire's UACC standard.
+
+THE TEMPLATE
+============
+
+The layout philosophy is simple - when you're above the line (track panel) you're a musician, when you're below (mixer panel) you're an engineer.
+
+The template compromises total flexibility in favour of what I've found to be practical workflow. For instance, it's better to control instrument volume in MIDI by sample cross-fades rather than volume, so envelopes for audio tracks aren't displayed.
+
+T C P
+-----
+
+The Track Panel Master at the top (the real Master) is acting as a sort of "Conductor" track, with visible control over global tempo and volume envelopes.
+
+The MIDI tracks have preroll items in them to send setup info to the VSTis. These items also include MIDI note name info to display only in-range notes and KSes for each library in MIDI Editor.
+
+The top control lane clearly displays Reatic bank and program changes. The Editor windows also include cc lanes for cc2 vibrato (where applicable), cc20 portamento (for GPO instruments only), mod wheel and velocity. You can add many more lanes for detailed control, but I've found these are the most frequently used.
+
+Every available instrument is displayed by default, but they can be hidden or deleted if you wish. All Kontakt libraries are pre-purged, so a clean load should come in at a little under 8GB.
+
+The sections are laid out in traditional score order, but you can move them around. (Note that the MIDI tracks above and Audio tracks below are different entities, so you'll need to hide, delete or move them in both panels.)
+
+M C P
+-----
+
+The "MASTER FX" track serves as the mix master and contains flat-set EQ and multiband compressor. (The top Master track has the final say over volume, however.) While you can put FX on the Master, this seems to have a bad effect on CPU usage on some systems and "premastering" like this won't hurt anyway.
+
+The five blue section tracks labelled "CTRL" (in blue) simply bulk-handle the M, S and fader trim controls of all section audio tracks. The summed audio outputs of all instruments in each section are displayed for visual monitoring purposes.
+
+The audio track M, S and R controls are master-slaved to the related MIDI tracks. The audio tracks themselves are record-disabled to prevent inadvertent doubling.
+
+The individual instrument audio tracks contain instances of ReaPitch randomly knocked a few cents sharp and flat (helps with realism and phasing). Second rank instruments (woods and FHs) also have a slight high EQ cut, Third rank instruments (other brass and percussion) have a slightly stronger high EQ cut.
+
+There are three reverbs - Room, Preverb Rank 2 and Preverb Rank 3 (in black). The instrument tracks are bussed in combination to these to create spacial depth in combination with the per-track EQ cuts.
+
+The "engine room" is the VSTi "container" tracks (in purple). Instruments are banked here, set to auto-legato, centred and dry. Relative output from all "container" tracks can be faded to taste.
+
+There is an extra "container" track called GPOFrontDesks. This receives MIDI from the GPO VlnsI, VlnsII, Vlas and Cellos tracks and outputs small sections. It can be faded up to add a little variety and bite to the strings.
+
+All instruments are sent mono except the General Percussion and String Sections. The strings, although stereo, are centred so you can pan your sections in-DAW while retaining their individual spreads.
+
+All FX used are stock REAPER ones, for maximum compatibility. You can swap in your favourites, of course.
+
+Comments, suggestions and bug reports to:
+
+    - jasonalyon@hotmail.com
+    - 01/03/18
+
+
+
+**************
+And Dex Opines
+**************
+
+I like having different articulations on different midi channels. I have hotkeys set up to change all selected notes to a given midi channel, and I find it quicker to just select the notes whose articulations I want to change and hit a hotkey than drawing a keyswitch command or futzing with a cc command.
+
+Set up track templates for your instruments you use all the time. (Select any number of tracks, right click, save as track template.) Then you can pull them into any new track when you need them. This is easier on resources than setting up a complete template and is considerably less intimidating as well. I found myself paralyzed for a couple of weeks at one point thinking about how exactly I wanted to set up a full template for writing the kind of music I like to write, until I discovered the power of track templates. I never set up a complete template and I don't think I ever will. It's much easier to use track templates for your major instruments and then pull in other instruments from scratch as you need them. Eventually you'll get your primary track templates pretty well mixed with one another, and it will be pretty straightforward to mix new instruments into the bunch as needed.
+
+Seriously, I can't recommend track templates enough.
+
+
+
+*********************************************
+Default Using Reaticulate for Program Changes
+*********************************************
+
+Okay. I may be the only one to use it (and indeed there are a few features that are definitely specific to my workflow) but here is a script I've built to write to the reaticulate reabank file, so as to interface with reaticulate for selecting program changes. I think it shouldn't interfere with regular use of reaticulate, but you may have to insure you don't get multiple banks with the same MSB and LSB.... But if you just want to use reaticulate for preset selection, you shouldn't ever have to edit the reabank file.
+
+Basically, you need to open the fx window for the vst you want to select presets for (not the fx chain window, you have to double-click on the fx entry and top its window, or you'll get an error!) and run the action.
+
+A window pops up. Here is the full field information:
+
+    Bank Name: This is just whatever you want to call this bank. Often the VST name, but doesn't need to be.
+
+    New Bank [yes or no]: Are you creating a new bank, or overwriting an old one? If you are overwriting, make sure your bank name text matches an existing bank, or you'll get a completely inscrutible error.
+
+    Bank Color [#0x0x0x]: This script will color all the elements in a bank the same. I use the bank color to make sure I'm changing the presets of the correct track.
+
+    Plugin Category [integer 1 to 4]: Mine are 1=Kontakt,2=Reaktor,3=Other Insts,4=Other FX. You can use whatever scheme you like, but there's only support for 4 categories currently. This becomes the bank MSB. The LSBs are incremented automatically. If you want to avoid conflicts with regular reaticulate banks, just avoid the first 4 MSBs.
+
+    Preset Type [rpl or vst]: Do you want the user RPL's, or the built-in VST preset list supplied by increasingly-fewer fx designers?
+
+    Filter by Start Text: If you have a ton of presets for an instrument like, say, Kontakt, you can name them with a category first, like 'PNO-Vienna Grand'. Then if you put 'PNO-' in this field, only those presets that start with that text will be put in the bank, and the filter text itself will be removed. It's pretty painless to open the .ini for the vst in a text editor and add prefix categories to all your presets in one go...
+
+    Alphabetize? [yes or no]: If you have presets in a specific order, you may not want this, but I think it's pretty helpful. Be warned that if you have 2 presets with the same name (possible in Reaktor) you'll only get one entry.
+
+    Empty?: Some VST program lists get padded with empty presets, to fill a bank of 128. In Reaktor these are named '<empty>' and in Guitar Rig they are called 'no sound'. Put that text in this field, and those presets will not be linked.
+
+
+The script requires ALL the addons. SWS, js (Julian Sader), and ultraschall.
+
+I think that's about it. If anyone uses this, let me know, especially if you find any bugs.
+
+cheers!
+
+Posted by:
+
+    - eric moon
+    - Very Stable Genius
+    - `GogoLab <https://gogolab.com/>`_
+
+
+
+*******************
+Writing these Banks
+*******************
+
+Originally Posted by jeranx
+===========================
+
+*Yes, I did overwrite the file, I've just clean it and rename properly. I did paste my code into the Reaticulate.reabank. And nothing works.*
+
+Looking at your screenshot here, I suppose the reason why nothing works is that your articulations have no output events (o=blah,blah) defined. So when you click on them, nothing will happen because you've not assigned any behavior to them.
+
+So for example while you have:
+
+Code::
+
+    //! c=long i=long
+    1 long
+
+If you compare with one of the factory banks for Spitfire patches (which require the patches be set to UACC mode):
+
+Code::
+
+    //! c=long i=note-whole o=cc:32,1
+    1 long
+
+See the difference? The latter one says "when you activate the long articulation, send CC 32 value 1 on the default channel" while your bank won't do anything when you click the articulation.
+
+I appreciate this can be a bit confusing. You might hold off for the GUI that will be coming to make your own banks. It will make this sort of thing a lot easier.
+
+
+Edit: Ah, I misunderstood your problem. Still, it will be your first problem, considering you're still missing the output events. The problem here is that your bank definition starts with "BANK" (uppercase) instead of "Bank". If Reaper accepts BANK, I consider it a bug in Reaticulate. I'll check that and fix it if so. Meanwhile, you can just change BANK to Bank and it should show up in the menu.
+
+Edit 2: and fixed in the just-released 0.3.0.
+
+
+*******************
+Version 0.3.0 Notes
+*******************
+
+I've just promoted the last prerelease (plus a couple small tweaks) to version 0.3.0.
+
+This release of Reaticulate focuses on general usability improvements and knocking down those little workflow irritations. Apart from that, there are quite a number of internal structural changes that you don't see, but will help pave the way for future releases. Reaticulate is an articulation management system for REAPER. Check the website for the skinny.
+
+
+Installing
+==========
+
+If you're a new user (not upgrading), just follow these installation instructions.
+
+Upgrading
+=========
+
+For those of you on the release track, you should eventually receive the update, but you can force it by following these instructions. Those using the prerelease track will receive this update as well, plus of course all the prereleases leading up to 0.4.0.
+
+Here are the changes since 0.2.0::
+
+    Articulations are now fed back to control surface (#48)
+    CC0/32 bank select indicates bank for articulation
+    Articulations can be expressed either as native program change events or custom CC events
+    When the js_ReaScriptAPI extension is installed (strongly recommended but not required):
+    You can now pin the Reaticulate window when floating
+    Some new actions and features become available
+    Much improved focusing behavior
+    New action "Focus articulation filter" (which works best when the js_ReaScriptAPI extension is installed)
+    New action "Activate articulation slot number by CC on default channel" which can be used to activate articulations based on their position in the bank list (#58)
+    New action "Insert last activated articulation into MIDI item on default channel" to insert the last activated articulation into MIDI item at edit cursor (same behavior as right clicking the articulation)
+    New option "Track section follows focused FX window" (with associated toggle action) (requires js_ReaScriptAPI extension)
+    New option "Track selection follows MIDI editor target item" (with associated toggle action)
+    This is most conveniently paired with the "Options: MIDI track list/media item lane selection is linked to editability"
+    New action "Select last selected track"
+    Various new actions to select but not activate articulations, plus an action to activate currently selected articulation (#59)
+    Running the action to activate currently selected articulation twice in rapid succession will cause it to insert into MIDI item
+    On pages that scroll, scrollbars will appear when the mouse hovers toward the right edge
+
+
+Minor Enhancements
+==================
+
+Added a new "Behaviors" section on Settings page
+Activating an articulation now scrolls it into view in the GUI (#50)
+Improved First Run experience (especially for portable Reaper installations) (#46)
+Minor cosmetic improvements with drag-and-drop to reorder banks on the track configuration page
+
+Bug Fixes
+=========
+
+Fixed regression in control surface feedback when reopening a project
+Force control surface update on track selection (workaround for `Force control <https://forum.cockos.com/showthread.php?p=2077098>`_)
+Ensure articulations on same MIDI tick as notes are processed before the notes (#53)
+Other minor fixes
+
+
+**********
+CC Actions
+**********
+
+Originally Posted by daeavelwyn
+===============================
+
+I've tried "Activate selected articulation on default channel" but it just does nothing... I guess it's mainly because I don't understand (yet) how this script works. The usage documentation might be of help here, in particular the section on actions.
+
+The "activate selected articulation" action isn't intended to be bound to a CC. That's a discrete action that activates an articulation that's been selected with one of the "Select" actions. These actions support a workflow where you use a control surface to scroll through the list of articulations and activate one based on the current selection.
+
+If you want to trigger specific articulations from your controller, I think the action you'll want to use is "Activate articulation by CC on default channel." The docs I linked to say a bit more about that.
+
+
+***********************
+Channels in Reaticulate
+***********************
+
+Originally Posted by daeavelwyn
+===============================
+
+*Is there a way to assign a channel for every CC message / keyswitch ? I'd like reaticulate to listen only on channel 16. Is it possible to assign this as a global parameter and how?*
+
+You mean on the output events that Reaticulate sends when an articulation is activated? This can be done either at the track level, by assigning the destination channel of the bank to channel 16, or at the bank level, by hardcoding the output events' destination channel to specifically to channel 16, e.g.::
+
+    o=note@16:23
+
+In terms of only responding to program changes on channel 16 (if that's maybe what you meant) you can do this in the track configuration to specify the source channel to be channel 16 instead of omni.
+
+Remeber... Reaper chases all CCs and program changes based on the point that playback begins. This is one of the main disadvantages of using note-based keyswitches in your MIDI items. Reaticulate uses program changes because a) you get proper chasing for free, and b) you can see the names of the articulations in the MIDI editor by adding the Bank/Program Select lane.
+
+
+
+*******************
+LSBs for MSBs Limit
+*******************
+
+Originally Posted by Reaktor:[Dave]
+===================================
+
+*The website mentions which sounds like reaticulate is using one single reabank file. That seems to limit the use of reaticulate to 128 libraries, doesn't it?*
+
+Each MSB has 128 LSBs. So the limit for the number of user banks is actually 64*128=8192.
+
+
+Jason Tackaberry's Roadmap for Reaticulate
+******************************************
+
+Based on the current roadmap, this will be coming in 0.6. A rough sketch of the roadmap is:
+
+    0.4: major internal overhaul (reworking how communication between the main app and per-track JSFX is done) to allow for more sophisticated features in the future. Plus a few extra features, including support for multiple buses. Currently available on the pre-release track, and should be GA in a week or so (pending user feedback).
+
+    0.5: another big design change where we move away from MSB/LSB being the unique identifier for banks, instead assigning a proper MSB/LSB for the bank (since Reaper needs it) dynamically. This will allow easier sharing of banks between users. Not much else is going in this release as just this part alone is big enough. Depending on how tricky that is, should be out late Nov/early Dec.
+
+    0.6: the GUI for bank editing will be included in this release. Depending on how many regressions I need to fix from 0.4/0.5, and how much free time the Christmas season affords me, this will be out somewhere between late Dec and early Feb 2020. Hopefully. It's a big work item. 
+
+    0.7: a few other odds and ends and here is when I'll start calling Reaticulate "beta". That said, even through the alpha releases I've been paying quite a lot of attention to backward compatibility so I'm effectively already treating it like a beta. 
+
+    0.8: polish and stabilization and likely a few user-requested features that crop up in the interim. This could be the last release before 1.0.
+
+Two things threaten the current roadmap: 1. the potential release of the mythical Reaper 6.0 which may introduce native articulation maps, at which point I'll need to figure out how best to integrate with that (or if integration even makes sense), 2. unexpected life events that compromise my free time. 
+
+Reaticulate triggers articulation changes based on the combination of program number and source MIDI channel. The JSFX itself doesn't actually know there are different banks assigned to a track, it's just programmed to take some action on receipt of a program change on some MIDI channel.
+
+When you have two banks with conflicting program numbers, as you do, the way you can resolve this conflict in Reaticulate is to assign them to different source channels. This means the JSFX on the track can distinguish between program 1 on channel 1 and program 1 on channel 2.
+
+So having the SS Violins Test bank assigned to source channel 2 means that when you insert articulations from that bank, it should insert the program change on channel 2. (In contrast, if you picked Omni, it uses the channel of the selected notes, or the default channel that's highlighted in Reaticulate's GUI if no notes are selected. But with an explicit assignment to source channel 2, program changes are channel 2.)
+
+Reaticulate's routing works by directing all MIDI data on the same channel the program change arrived on to the destination channel dictated by the articulation. The 4 notes following the program change on channel 2 are still on channel 1, so this means they will route according to the previous program change on channel 1.
+
+The reason for this design (programs on source channel N control routing for future events on channel N) is that allows using the same bank on multiple channels (loading separate instances of the patch in your instrument on different channels) for layering purposes, say a divisi line.
+
+But now here's the bug: when you selected the second set of 4 notes at 1:39 and right-clicked to insert the articulation, the bug is that Reaticulate used the source channel of the selected notes -- which is fine when the bank is mapped into the track as source=omni -- and not channel 2 as it should have, which the bank was explicitly assigned to.
+
+This meant the program change 1 was received on channel 1, which applied to the HS Violins patch instead.
+
+So I'll fix the insertion bug, but that doesn't actually help your use case.
+
+Within the context of Reaticulate's current behavior, there are two solutions (once I fix the bug):
+Assign the second set of 4 notes to channel 2. In fact, I may consider doing that automatically when you select the notes and insert the articulation assigned to a specific source channel. (This may be a bit too magical though. I'm on the fence.)
+Choose program numbers that don't overlap between HS Violins and SS Violins. Then you can assign the banks both to channel 1 (or just Omni) and things will work the way you expected. The obvious problem here is that you kind of need to know ahead of time which patches you're likely to double up on the same track, so as to avoid any program number collisions between them. This makes option 1 the more robust choice, even if it's a little less convenient.
+
+I'll think about whether or not I can feasibly fix this design so that the JSFX understands program 1 on channel 1 from bank X is actually different than program 1 on channel 1 from bank Y. I appreciate the current behavior violates the Principle of Least Astonishment (as evidenced by your confusion) but there are actually good reasons for the design. The constraints that fed into that design may be a bit different now, so I'll have another think about it. Meanwhile, options 1 or 2 above are the way to go with the current version

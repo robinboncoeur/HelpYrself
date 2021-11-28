@@ -1,0 +1,29 @@
+####################
+Resources and Videos
+####################
+
+
+**************
+Writing Melody
+**************
+
+
+
+***************
+Writing Harmony
+***************
+
+
+*****************
+Fixing Musescores
+*****************
+
+If a file is corrupted, you may get:
+
+    Bar 19, stave 8 incomplete. Expected: 4/4; Found: 9/8
+    Bar 22, stave 8 incomplete. Expected: 4/4; Found: 12/8
+    Bar 22, stave 10 incomplete. Expected: 4/4; Found: 13/8
+    
+Just go to that measure
+
+

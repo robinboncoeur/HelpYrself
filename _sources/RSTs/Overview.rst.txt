@@ -1,0 +1,12 @@
+##########################
+An Overview to Composition
+##########################
+
+
+*****************
+Why this Document
+*****************
+
+I need this... no one else actually does. Well, some may find it useful, but that seems doubtful, at this juncture. It's basically a memory-jog / "ah-yeah, that's how it went" / little black notebook sort of thing.
+
+That's it. Hopefully, when it gets fleshed out a bit, it may actually be a bit more organised.

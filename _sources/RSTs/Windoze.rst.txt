@@ -1,0 +1,35 @@
+####################
+Reluctantly, Windows
+####################
+
+**********************
+Which Updates to Avoid
+**********************
+
+...depends on how paranoid you want to be about MS invading your privacy, and how much you're prepared to put up with having Windows 10 forced on you. (Oh, and also thirdly, wanting to get away with using a pirated version of Windows, or at least one that won't activate as genuine, which isn't always the same thing)...
+
+So... If you don't want Windows 10, you're best off avoiding these::
+
+    KB2952664
+    KB2976978
+    KB2977759
+    KB2990214
+    KB3021917
+    KB3044374
+    KB3035583
+    KB3139929
+    KB3150513
+
+as they're all Windows 10 preparation updates. If you're worried about being spied upon, I'd give these a miss::
+
+    KB3021917
+    KB3022345
+    KB3068708
+    KB3075249
+    KB3080149
+    KB3081954
+
+as they bring Windows 7 "telemetry" stuff into line with Windows 10 (this is info that gets phoned-home from your copy of Windows back to Microsoft).
+
+KB971033, if it hasn't been finally retreated. Same for KB2505438... have to hide them on installs as these two will kill Windows activation.
+

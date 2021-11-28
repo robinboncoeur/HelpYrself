@@ -3,12 +3,30 @@ Python3, Pip and Kivy3
 ######################
 
 
+*********
+Key Links
+*********
+
+Try to save Chrome memory real estate.
+
+	* `99 Python Programs for Beginners <https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j>`_
+	* 
+
+
+
+
+
+
 ************
 Pip Installs
 ************
 
+======
 PyTube
 ======
+
+Note on 29 Nov 2021: *Now using yt-dlp*
+
 
 To install the latest source directly from github using pip, type this in your command line::
 
@@ -19,6 +37,7 @@ Usually a good idea to upgrade pip while you're at it::
     pip install --upgrade pip
 
 
+===================
 PyTube Regex Errors
 ===================
 
@@ -48,6 +67,7 @@ to get a lot of cruft, and this::
 Patched the files 03 Mar, 2019 and voila, success!
 
 
+========================
 PyCharm and Kivy Install
 ========================
 
@@ -112,42 +132,400 @@ Installed gspread and oauth2client via pip3::
     pip3 install gspread oauth2client
     
 
-***************************
-Incompatible Python Version
-***************************
+*******************
+Kivy 2.0.0 Pointers
+*******************
 
-Sphinx failed to run after doing a brew upgrade, which installed Python3.8.5. Sphinx failed to find 3.7. StackOverflow gave the following advice.
+===================
+Positioning Widgets
+===================
 
-Consider installing pyenv with Homebrew on macOS::
+Iif you want to scale a widget which is not inside a layout, you use the properties size, width and height. 
 
-  brew update
-  brew install pyenv
+If you want to position such a widget, you should use the pos property. All these properties use fixed numbers of pixels.
 
-Clone the repository to to get the latest version of pyenv::
+If you want to scale a widget inside a layout, you should use one of the following properties:: 
 
-  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  -  size_hint
+  -  size_hint_x
+  -  size_hint_y
 
-Define your environment variables::
+They are used with proportions rather than fixed numbers of pixels, so the value you assign to them should be between 0 and 1.
 
-  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+If you want to position a widget inside a layout, you use the pos_hint property, to which you assign a dictionary with one or more of the following properties::
 
-Restart your shell so the path changes take effect::
+  -  x
+  - center_x
+  - right 
+  - (for horizontal positioning)
+  
+  - y
+  - center_y
+  - top 
+  - (for vertical positioning)
 
-  exec "$SHELL"
+The values are proportions, so they should be in a range from 0 to 1. Those proportions may be outside the range from 0 to 1 for when you want the widget - or part of it - to be outside the visible program window.
 
-Verify the installation and check the available python versions::
+Using the x, center_x, right, y, center_y and top Properties Outside Layouts - here’s the code::
 
-  pyenv install --list
+    # File name: main.py
 
-Install the required python version::
+    import kivy
+    from kivy.app import App
+    from kivy.uix.button import Button
+    from kivy.uix.widget import Widget
 
-  pyenv install 3.7
+    class MyCustomButton(Button):
+        pass
 
-Set it as your global version after installation::
+    class MyCustomWidget(Widget):
+        pass
 
-  pyenv global 3.7
+    class HelloWorldApp(App):
+        def build(self):
+            return MyCustomWidget()
 
-Verify your current python version the system is using::
+    if __name__ == '__main__':
+        HelloWorldApp().run()
 
-    python3 --version
+...and...::
+
+
+    # File name: helloworld.kv
+
+    <MyCustomButton>:
+        size: 120, 40
+        color: .7, .6, .4, 1
+
+    <MyCustomWidget>: 
+        TextInput:
+            hint_text: 'Type Something'
+            pos: root.x + 20, root.top - self.height - 20
+            size: 300, 40
+        MyCustomButton:
+            text: 'Press Me'
+            pos: root.x + 20, root.y + 20
+        MyCustomButton:
+            text: 'Press Me Too'
+            pos: root.right - self.width - 20, root.y + 20
+
+Rewriting the kv::
+
+    <MyCustomButton>:
+        size: 120, 40
+        color: .7, .6, .4, 1
+
+    <MyCustomWidget>: 
+        TextInput:
+            hint_text: 'Type Something'
+            x: 20
+            y: 400
+            size: 300, 40
+        MyCustomButton:
+            text: 'Press Me'
+            center_x: 60
+            center_y: 20
+        MyCustomButton:
+            text: 'Press Me Too'
+            right: 300
+            top: 20
+
+
+The pos property is usually used for widgets, not for layouts. However you can use it for a layout if you need fixed numbers of pixels. Then, however, you must remember to not use pos_hint or otherwise it will override pos.
+
+You can also use the size, width and height properties for scaling in layouts. You must remember, however, to set size_hint, size_hint_x or size_hint_y (for size, width and height respectively) to None. In case of size_hint you should actually set it to (None, None). Otherwise it won’t take effect::
+
+    # File name: helloworld.kv
+
+    <FloatLayout>:     
+        Button:
+            text: 'Button 1' 
+            pos: 20, 50    
+            size_hint: None, None 
+            size: 200, 20 
+
+        Button:
+            text: 'Button 2'
+            pos: 500, 500
+            size_hint: None, None
+            size: 200, 20 
+
+
+=======
+Layouts
+=======
+
+We’ve been using only the **FloatLayout** so far. The positioning and sizing properties do not behave in the same way in all the layouts. Sometimes their behavior is not what you expect. This is why it’s easier to combine the existing layouts and embed them one into another so that we can reach our goal instead of using the properties described before. You can use both properties and combining layouts into larger hierarchies, but the latter is usually more intuitive than the former, especially in less trivial projects. We’re going to use both techniques.
+
+**RelativeLayout** works pretty much like FloatLayout and the difference will be clear only later when we embed it in another layout. Here’s a simple example with a RelativeLayout and just one button in it. The button should be positioned at the fixed coordinates 0, 0 and occupy about a third of the available space in both horizontal and vertical direction::
+
+    import kivy
+    from kivy.app import App
+
+    # We must import the RelativeLayout class.
+    from kivy.uix.relativelayout import RelativeLayout
+
+    class HelloWorldApp(App):
+        def build(self):
+            # We're going to use the RelativeLayout now.
+            return RelativeLayout()
+
+    if __name__ == '__main__':
+        HelloWorldApp().run()
+    
+
+    # File name: helloworld.kv
+    <RelativeLayout>:     
+        Button:
+            text: 'Button' 
+            size_hint: .3, .3
+            pos: 0, 0 
+
+With a **GridLayout** we must set the number of either rows or columns. The two properties that we use for that are rows and cols. Then the available space will be filled in gradually so that the predefined number of rows or columns is maintained::
+
+    # File name: helloworld.kv
+
+    <GridLayout>: 
+        # We need two rows.
+        rows: 2
+
+        # And now come the buttons.    
+        Button:
+            text: 'Button 1' 
+            size_hint: None, None
+            size: 200, 50
+
+        Button:
+            text: 'Button 2' 
+            size_hint: None, None
+            size: 200, 50
+
+        Button:
+            text: 'Button 3' 
+            size_hint: None, None
+            size: 200, 50
+
+        Button:
+            text: 'Button 4' 
+            size_hint: None, None
+            size: 200, 50
+
+        Button:
+            text: 'Button 5' 
+            size_hint: None, None
+            size: 200, 50
+
+
+I set size_hint to (None, None) in order to have fixed numbers for pixels, each button being 200 x 50 pixels. You notice is that the code is very repetitive. If you now wanted to change the size of the button, you’d have to do it five times. So, let’s rewrite the code so that we avoid this repetitiveness. You already saw how to do it when we were talking about custom widgets. This time we’ll do it for the original button, because all the buttons in our example should be the same. Here’s the refactored and thus simplified code::
+
+    # File name: helloworld.kv
+
+    # Let's put all the shared stuff here.
+    <Button>:
+        size_hint: None, None
+        size: 200, 50
+
+    <GridLayout>: 
+        # We need two rows.
+        rows: 2
+
+        # And here are the buttons with just the properties that are different
+        # for each button.    
+        Button:
+            text: 'Button 1'
+
+        Button:
+            text: 'Button 2' 
+
+        Button:
+            text: 'Button 3' 
+
+        Button:
+            text: 'Button 4' 
+
+        Button:
+            text: 'Button 5' 
+
+The **BoxLayout** is a very common layout - imagine it as a GridLayout with just one row or one column. If you want all the elements to be positioned in one row, you should set the orientation property to ‘horizontal’, or just leave it out altogether as this is the default value. If you want the elements to be in a column, you should set orientation to ‘vertical’::
+
+    import kivy
+    from kivy.app import App
+
+    # We must import the BoxLayout class.
+    from kivy.uix.boxlayout import BoxLayout
+
+    class HelloWorldApp(App):
+        def build(self):
+            # We're going to use the BoxLayout now.
+            return BoxLayout()
+
+    if __name__ == '__main__':
+        HelloWorldApp().run()
+        
+        
+    # File name: helloworld.kv
+
+    <Button>:
+        size_hint: None, None
+
+        # Let's make the buttons slightly shorter so that they all
+        # fit in one row.
+        size: 100, 50
+
+    <BoxLayout>: 
+        # The buttons should be in a row.
+        orientation: 'horizontal'  # this is the optional default value
+
+        Button:
+            text: 'Button 1'
+
+        Button:
+            text: 'Button 2' 
+
+        Button:
+            text: 'Button 3' 
+
+        Button:
+            text: 'Button 4' 
+
+        Button:
+            text: 'Button 5' 
+
+Use **AnchorLayout** to anchor widgets in particular positions, like at the top or bottom, or on one of the sides. It lends itself well to create menus. The two properties used with this layout are anchor_x and anchor_y::
+
+    import kivy
+    from kivy.app import App
+
+    # We must import the AnchorLayout class.
+    from kivy.uix.anchorlayout import AnchorLayout
+
+    class HelloWorldApp(App):
+        def build(self):
+            # We're going to use the AnchorLayout now.
+            return AnchorLayout()
+
+    if __name__ == '__main__':
+        HelloWorldApp().run()
+
+    # File name: helloworld.kv
+
+    <Button>:
+        size_hint: None, None
+
+        # Let's make the button smaller again.
+        size: 100, 50
+
+    <AnchorLayout>: 
+        # Let's position the button in the upper right corner.
+        anchor_x: 'right'
+        anchor_y: 'top'  
+
+        Button:
+            text: 'Button'
+
+One adds just one button here because otherwise the buttons would be on top of one another and only the last one would be visible unless we changed the sizes of some of them. This layout is more practical if you want to position a custom widget, or even more if you want to position another embedded layout. For example, you can imagine making a menu consisting of 5 labels positioned in a row inside a BoxLayout and then position the whole menu inside the AnchorLayout.
+
+
+================
+Embedded Layouts
+================
+
+The FloatLayout and the RelativeLayout are pretty similar. The difference is that with the FloatLayout the coordinates are not relative to the position of the layout, whereas with RelativeLayout they are. Let us use a GridLayout and embed four other layouts in it, two FloatLayouts and two RelativeLayouts::
+
+    import kivy
+    from kivy.app import App
+
+    # We need a GridLayout to embed the other layouts into.
+    from kivy.uix.gridlayout import GridLayout
+
+    class HelloWorldApp(App):
+        def build(self):
+            return GridLayout()
+
+    if __name__ == '__main__':
+        HelloWorldApp().run()
+
+    # File name: helloworld.kv
+
+    <Button>:
+        size_hint: None, None
+        size: 100, 50
+
+    <GridLayout>: 
+        # Let's create a GridLayout with 2 rows
+        rows: 2
+
+        # Let's add two FloatLayouts and two RelativeLayouts to the GridLayout
+        # with two buttons in each of them. To make things clear the buttons in 
+        # the FloatLayouts will have a text starting with 'F' and the buttons in
+        # the RelativeLayouts with 'R'.  
+
+        # FloatLayout 1
+        FloatLayout: 
+            Button:
+                text: 'F1a'
+                pos: 0, 0
+            Button:
+                text: 'F1b'
+                pos: 200, 200
+
+        # RelativeLayout 1
+        RelativeLayout:
+            Button:
+                text: 'R1a'
+                pos: 0, 0
+            Button:
+                text: 'R1b'
+                pos: 100, 50
+
+        # RelativeLayout 2
+        RelativeLayout:
+            Button:
+                text: 'R2a'
+                pos: 100, 50
+            Button:
+                text: 'R2b'
+                pos: 100, 100
+
+        # FloatLayout 2
+        FloatLayout:
+            Button:
+                text: 'F2a'
+                pos: 200, 100
+            Button:
+                text: 'F2b'
+                pos: 200, 150
+
+Have a look at the two buttons, F1a and R1a. They both have the coordinates 0, 0. The former is relative to the whole window, though, whereas the latter is relative to the layout it’s in, so RelativeLayout 1.
+
+
+=====================
+Context vs Coordinate
+=====================
+
+Let’s now make the rectangle red. All you have to do is add the Color context instruction with the rgba property. The value for the red color is (1, 0, 0, 1) ::
+
+    # File name: test.kv
+
+    <TestLayout>:
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 1
+            Rectangle:
+                pos: self.x + 50, self.y + 50
+                size: 500, 100
+
+When you run the app, the rectangle should be red, which it is. But if you put the Color context instruction after the Rectangle vertex instruction, it stays white. That’s because context instructions change the whole coordinate space context. If you change the color at a given point, the change will be only visible from that moment on and will continue to be visible until another change occurs. So, when we put the Color instruction before the Rectangle instruction, we changed the color property for the whole coordinate space and then we drew the Rectangle in this changed context. That’s why the rectangle was red. In the other example, we first drew the rectangle and only then changed the coordinate space context, that’s why the rectangle remained white.
+
+So, if you want the rectangle to be red, make sure the Color instruction precedes the Rectangle instruction.
+
+=========================
+Adding an Image to Canvas
+=========================
+
+In order to add an image, we need some shape to draw it on, like a rectangle. In this case it doesn’t really matter whether we first draw the rectangle with the image and then the rounded rectangle or the other way around, because the two graphical elements don’t overlap anywhere. However, it would matter if for example the rectangle with the image were bigger. Just to keep things orderly, let’s add the rectangle with the image before the instructions that are already there. Let’s just make sure the rectangle has the same position and size as the BoxLayout it’s drawn on. The image that you are going to need is called ‘all slugs.png’ and it’s in the assets folder.
+
+If we were to run the program at this point, the image of the slugs would be very crisp with vivid colors. As you look at the final version of the screen, you can see that the colors are somewhat faded. We could have handled this in an image editor before we even added the asset to the assets folder, but we can still do it here, so, as it seems to be easier and faster to do than the former, let’s do it. If you change the alpha value, the transparency and thus vividness of the image will change. To make this happen, we’ll add another Color instruction before the Rectangle instruction and set the color to (1, 1, 1, .4).
+
+The ‘all slugs.png’ image has a transparent background so the only parts of it that can be influenced the new color are the silhouettes of the slugs.
+

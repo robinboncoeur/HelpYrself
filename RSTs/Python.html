@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python3, Pip and Kivy3 &mdash; Help Yourself 0.01 documentation</title>
+  <title>Python3, Pip and Kivy3 &mdash; Help Yourself 0.02 documentation</title>
   
 
   
@@ -96,17 +96,27 @@
 <li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python3, Pip and Kivy3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#key-links">Key Links</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pytube">PyTube</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pytube-regex-errors">PyTube Regex Errors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#brackets-install-in-linux-mint">Brackets Install in Linux Mint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#running-imported-modules-in-kivy">Running imported Modules in Kivy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#kivy-kv-file-python">Kivy kv file Python…</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#project-roster-app">Project: Roster App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#brackets-install-in-linux-mint">Brackets Install in Linux Mint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-imported-modules-in-kivy">Running imported Modules in Kivy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kivy-kv-file-python">Kivy kv file Python…</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project-roster-app">Project: Roster App</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#kivy-2-0-0-pointers">Kivy 2.0.0 Pointers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kivy-2-0-0-pointers">Kivy 2.0.0 Pointers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#positioning-widgets">Positioning Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layouts">Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedded-layouts">Embedded Layouts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-vs-coordinate">Context vs Coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-an-image-to-canvas">Adding an Image to Canvas</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
@@ -183,10 +193,21 @@
             
   <div class="section" id="python3-pip-and-kivy3">
 <h1>Python3, Pip and Kivy3<a class="headerlink" href="#python3-pip-and-kivy3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="key-links">
+<h2>Key Links<a class="headerlink" href="#key-links" title="Permalink to this headline">¶</a></h2>
+<p>Try to save Chrome memory real estate.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j">99 Python Programs for Beginners</a></p></li>
+<li></li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="pip-installs">
 <h2>Pip Installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pytube">
 <h3>PyTube<a class="headerlink" href="#pytube" title="Permalink to this headline">¶</a></h3>
+<p>Note on 29 Nov 2021: <em>Now using yt-dlp</em></p>
 <p>To install the latest source directly from github using pip, type this in your command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nficano</span><span class="o">/</span><span class="n">pytube</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
@@ -236,13 +257,12 @@
 </div></blockquote>
 <p>An important <a class="reference external" href="http://kivy.org/docs/installation/installation-linux.html#ubuntu-12-04-with-python-2-7">link</a> for Python 2x was included. The user went on to say that “the code builds and runs, but does not display in Python. I will edit this answer if I fix that, but this should at least get you started.”</p>
 <p>Note: <em>PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.</em></p>
-</div>
 <div class="section" id="brackets-install-in-linux-mint">
-<h3>Brackets Install in Linux Mint<a class="headerlink" href="#brackets-install-in-linux-mint" title="Permalink to this headline">¶</a></h3>
+<h4>Brackets Install in Linux Mint<a class="headerlink" href="#brackets-install-in-linux-mint" title="Permalink to this headline">¶</a></h4>
 <p>A no-brainer. For Windows, Mac or Linux, just get onto <a class="reference external" href="http://brackets.io">Brackets.io</a>: it will automatically offer the download for your host OS. In Mint, download the .deb and install.</p>
 </div>
 <div class="section" id="running-imported-modules-in-kivy">
-<h3>Running imported Modules in Kivy<a class="headerlink" href="#running-imported-modules-in-kivy" title="Permalink to this headline">¶</a></h3>
+<h4>Running imported Modules in Kivy<a class="headerlink" href="#running-imported-modules-in-kivy" title="Permalink to this headline">¶</a></h4>
 <p>A simple pip install doesn’t seem to expose pip-installed modules to Kivy. You actually have to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kivy3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">oauth2client</span>
 
@@ -254,7 +274,7 @@
 <p>to get Kivy to see them.</p>
 </div>
 <div class="section" id="kivy-kv-file-python">
-<h3>Kivy kv file Python…<a class="headerlink" href="#kivy-kv-file-python" title="Permalink to this headline">¶</a></h3>
+<h4>Kivy kv file Python…<a class="headerlink" href="#kivy-kv-file-python" title="Permalink to this headline">¶</a></h4>
 <p>… <strong>syntax highlighting</strong></p>
 <p>Create a brackets.json file with the following code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">code</span> <span class="n">to</span> <span class="n">follow</span><span class="p">)</span>
@@ -262,7 +282,7 @@
 </div>
 </div>
 <div class="section" id="project-roster-app">
-<h3>Project: Roster App<a class="headerlink" href="#project-roster-app" title="Permalink to this headline">¶</a></h3>
+<h4>Project: Roster App<a class="headerlink" href="#project-roster-app" title="Permalink to this headline">¶</a></h4>
 <p>Name of application:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosterapp21s9453</span>
 </pre></div>
@@ -278,8 +298,11 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="kivy-2-0-0-pointers">
 <h2>Kivy 2.0.0 Pointers<a class="headerlink" href="#kivy-2-0-0-pointers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="positioning-widgets">
+<h3>Positioning Widgets<a class="headerlink" href="#positioning-widgets" title="Permalink to this headline">¶</a></h3>
 <p>Iif you want to scale a widget which is not inside a layout, you use the properties size, width and height.</p>
 <p>If you want to position such a widget, you should use the pos property. All these properties use fixed numbers of pixels.</p>
 <p>If you want to scale a widget inside a layout, you should use one of the following properties:</p>
@@ -383,6 +406,9 @@
         <span class="n">size</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="layouts">
+<h3>Layouts<a class="headerlink" href="#layouts" title="Permalink to this headline">¶</a></h3>
 <p>We’ve been using only the <strong>FloatLayout</strong> so far. The positioning and sizing properties do not behave in the same way in all the layouts. Sometimes their behavior is not what you expect. This is why it’s easier to combine the existing layouts and embed them one into another so that we can reach our goal instead of using the properties described before. You can use both properties and combining layouts into larger hierarchies, but the latter is usually more intuitive than the former, especially in less trivial projects. We’re going to use both techniques.</p>
 <p><strong>RelativeLayout</strong> works pretty much like FloatLayout and the difference will be clear only later when we embed it in another layout. Here’s a simple example with a RelativeLayout and just one button in it. The button should be positioned at the fixed coordinates 0, 0 and occupy about a third of the available space in both horizontal and vertical direction:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kivy</span>
@@ -550,6 +576,9 @@
 </pre></div>
 </div>
 <p>One adds just one button here because otherwise the buttons would be on top of one another and only the last one would be visible unless we changed the sizes of some of them. This layout is more practical if you want to position a custom widget, or even more if you want to position another embedded layout. For example, you can imagine making a menu consisting of 5 labels positioned in a row inside a BoxLayout and then position the whole menu inside the AnchorLayout.</p>
+</div>
+<div class="section" id="embedded-layouts">
+<h3>Embedded Layouts<a class="headerlink" href="#embedded-layouts" title="Permalink to this headline">¶</a></h3>
 <p>The FloatLayout and the RelativeLayout are pretty similar. The difference is that with the FloatLayout the coordinates are not relative to the position of the layout, whereas with RelativeLayout they are. Let us use a GridLayout and embed four other layouts in it, two FloatLayouts and two RelativeLayouts:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kivy</span>
 <span class="kn">from</span> <span class="nn">kivy.app</span> <span class="kn">import</span> <span class="n">App</span>
@@ -617,6 +646,9 @@
 </pre></div>
 </div>
 <p>Have a look at the two buttons, F1a and R1a. They both have the coordinates 0, 0. The former is relative to the whole window, though, whereas the latter is relative to the layout it’s in, so RelativeLayout 1.</p>
+</div>
+<div class="section" id="context-vs-coordinate">
+<h3>Context vs Coordinate<a class="headerlink" href="#context-vs-coordinate" title="Permalink to this headline">¶</a></h3>
 <p>Let’s now make the rectangle red. All you have to do is add the Color context instruction with the rgba property. The value for the red color is (1, 0, 0, 1)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># File name: test.kv</span>
 
@@ -631,13 +663,13 @@
 </div>
 <p>When you run the app, the rectangle should be red, which it is. But if you put the Color context instruction after the Rectangle vertex instruction, it stays white. That’s because context instructions change the whole coordinate space context. If you change the color at a given point, the change will be only visible from that moment on and will continue to be visible until another change occurs. So, when we put the Color instruction before the Rectangle instruction, we changed the color property for the whole coordinate space and then we drew the Rectangle in this changed context. That’s why the rectangle was red. In the other example, we first drew the rectangle and only then changed the coordinate space context, that’s why the rectangle remained white.</p>
 <p>So, if you want the rectangle to be red, make sure the Color instruction precedes the Rectangle instruction.</p>
+</div>
+<div class="section" id="adding-an-image-to-canvas">
+<h3>Adding an Image to Canvas<a class="headerlink" href="#adding-an-image-to-canvas" title="Permalink to this headline">¶</a></h3>
 <p>In order to add an image, we need some shape to draw it on, like a rectangle. In this case it doesn’t really matter whether we first draw the rectangle with the image and then the rounded rectangle or the other way around, because the two graphical elements don’t overlap anywhere. However, it would matter if for example the rectangle with the image were bigger. Just to keep things orderly, let’s add the rectangle with the image before the instructions that are already there. Let’s just make sure the rectangle has the same position and size as the BoxLayout it’s drawn on. The image that you are going to need is called ‘all slugs.png’ and it’s in the assets folder.</p>
 <p>If we were to run the program at this point, the image of the slugs would be very crisp with vivid colors. As you look at the final version of the screen, you can see that the colors are somewhat faded. We could have handled this in an image editor before we even added the asset to the assets folder, but we can still do it here, so, as it seems to be easier and faster to do than the former, let’s do it. If you change the alpha value, the transparency and thus vividness of the image will change. To make this happen, we’ll add another Color instruction before the Rectangle instruction and set the color to (1, 1, 1, .4).</p>
 <p>The ‘all slugs.png’ image has a transparent background so the only parts of it that can be influenced the new color are the silhouettes of the slugs.</p>
-<p>CNC SurgiNet and SAA
-Digital Metro North
-<a class="reference external" href="mailto:Sarah&#46;Stirling&#37;&#52;&#48;health&#46;qld&#46;gov&#46;au">Sarah<span>&#46;</span>Stirling<span>&#64;</span>health<span>&#46;</span>qld<span>&#46;</span>gov<span>&#46;</span>au</a>
-0457 124 120</p>
+</div>
 </div>
 </div>
 
