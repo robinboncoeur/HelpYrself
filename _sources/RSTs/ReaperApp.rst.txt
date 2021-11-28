@@ -6,6 +6,8 @@ Reaper
 Behaviour
 *********
 
+`Reaper Toolkit <https://reapertoolkit.dev/manual/tutorial.html>`_
+
 ****************
 Links Management
 ****************

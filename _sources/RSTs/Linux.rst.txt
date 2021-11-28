@@ -405,3 +405,5 @@ Suggested reads
 
 `How To Install Visual Studio Code On Ubuntu <https://itsfoss.com/install-visual-studio-code-ubuntu/>`_
 
+
+`Installing a HP Driver in Linux <https://tutorialforlinux.com/2021/02/25/step-by-step-hp-printer-ubuntu-21-04-installation/2/>`_
