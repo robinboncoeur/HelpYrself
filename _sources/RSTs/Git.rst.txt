@@ -13,7 +13,7 @@ Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I've done some t
 The process here outlines the approach I took to get my GitPages up and working for projects I've got on github as well as other stuff, like this document. Git is its own complex process and I tend to forget commands and how to approach stuff and so, I wrote down the first go that worked here. I'm sure there are better ways of doing this.
 
 Update 21.11.28:
-  Am now doing everything on my Mac via Github-Desktop. When I couldn't resolve the gh-pages for HelpYrself, I deleted that branch in the browser, which allowed pushing to origin.
+  Am now doing everything on my Mac via Github-Desktop. Need to learn how to do it properly, but the kludge approach is: when I couldn't resolve the gh-pages for HelpYrself, I deleted that branch in the browser, which allowed pushing to origin.
 
 Update 19.01.25:
   To be honest, I'm pretty sure there's a better way, and will be testing it soon. And update these pages.
