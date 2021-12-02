@@ -52,32 +52,24 @@ Slow Boot after SSD Upgrade
 
 **Question**:
 
-My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD::
+My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD.
 
-    Verified and repaired disk permissions.
+    * Verified and repaired disk permissions.
+    * Restarted. Boot up time about 1 minute 20 seconds.
+    * Shut down.
+    * Reset PRAM.
+    * Boot up time about 1 minute.
+    * Restarted. Boot up time about 43 minutes.
 
-    Restarted. Boot up time about 1 minute 20 seconds.
-
-    Shut down.
-
-    Reset PRAM.
-
-    Boot up time about 1 minute.
-
-    Restarted. Boot up time about 43 minutes.
-
-I have no idea what to do.
+Didn't work.
 
 **Answer**:
 
-The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs::
+The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs:
 
     1. Go to System Preferences -> Startup Disk
-
     2. Click on the bottom left Lock tu unlock the changes
-
     3. Select Macintosh HD (it's likely to be the only on the list)
-
     4. Click 'Restart...'
 
 Be patient: the restart can take a few minutes.
