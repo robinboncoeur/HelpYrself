@@ -97,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python3, Pip and Kivy3</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#key-links">Key Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-py-script-executable">Make a Py Script Executable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pytube">PyTube</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pytube-regex-errors">PyTube Regex Errors</a></li>
@@ -202,6 +203,17 @@
 <li></li>
 </ul>
 </div></blockquote>
+</div>
+<div class="section" id="make-a-py-script-executable">
+<h2>Make a Py Script Executable<a class="headerlink" href="#make-a-py-script-executable" title="Permalink to this headline">¶</a></h2>
+<p>Make sure you have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/local/bin/python3</span>
+</pre></div>
+</div>
+<p>at the top of the script (for Python3 scripts). Then, in Terminal, issue a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">-/</span><span class="n">path</span><span class="o">/</span><span class="n">NameOfScript</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="pip-installs">
 <h2>Pip Installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>

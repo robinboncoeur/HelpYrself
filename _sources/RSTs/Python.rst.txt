@@ -14,8 +14,18 @@ Try to save Chrome memory real estate.
 
 
 
+***************************
+Make a Py Script Executable
+***************************
 
+Make sure you have::
 
+    #!/usr/local/bin/python3
+
+at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
+
+    chmod +x -/path/NameOfScript.py
+ 
 
 ************
 Pip Installs
