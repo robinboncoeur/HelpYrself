@@ -10,6 +10,41 @@ Toggling Hidden Files
 Make sure a folder is actually active, then press [Shift] [Command] [.]
 
 
+***********************
+Cloning An SSD on a Mac
+***********************
+
+Disk Utility has always been able to create clones, although the app refers to the process as Restore, as in restoring data from a source drive to a target drive. The restore function isn't just for drives. It will work with just about any storage device that you can mount to your Mac, including disk images, hard drives, SSDs, and USB flash drives.
+
+**How Restore Works**
+
+The Restore function in Disk Utility uses a block copy function that can speed up the copy process. It also makes an almost exact copy of the source device. What "almost exact" means is that a block copy moves everything in a data block from one device to the other. The results are almost an exact copy of the original. A file copy copies the data file by file. While the information remains the same, the location of the file on the source and destination devices will likely be different.
+
+Using a block copy is faster, but it does have some limits that affect when it can be used, the most important being that copying block by block requires that both the source and destination devices be first unmounted from your Mac. This ensures that block data doesn't change during the copy process. Don’t worry, though; you don’t have to do the unmounting. Disk Utility’s Restore function takes care of that for you. But it does mean that neither the source nor the destination can be in use when you use the Restore capabilities.
+
+**To Restore a Non-Startup Volume**
+
+You can’t use the Restore function on the current startup drive, or any drive that has files in use. If you need to clone your startup drive, you can make use of either your Mac's Recovery HD volume or any drive that has a bootable copy of OS X installed.
+
+	1. Launch Disk Utility, located at /Applications/Utilities.
+	2. The Disk Utility app will open, displaying a single window divided into three spaces: a toolbar, a sidebar showing currently mounted drives and volumes, and an info pane, showing information about the currently selected device in the sidebar.
+	3. In the sidebar, select the volume to which you want to copy/clone data. The volume you select will be the destination drive for the Restore operation.
+	4. Select Restore from Disk Utility’s Edit menu.
+	5. A sheet will drop down, asking you to select from a drop-down menu the source device to use for the Restore process. The sheet will also warn you that the volume you selected as the destination will be erased, and its data will be replaced with data from the source volume.
+	6. Use the drop-down menu next to the "Restore from" text to select a source volume, and then click the Restore button.
+	7. The Restore process will begin. A new drop-down sheet will display a status bar indicating how far along in the Restore process you are. You can also see detailed information by clicking the Show Details disclosure triangle - although there's really not much there. Note: *this process takes a long time (hours) especially if the source is via usb... we're talking hours!*
+	8. Once the Restore process is complete, the drop-down sheet’s Done button will become available. Click Done to close the Restore sheet.
+	
+
+**Restore Using a Startup Drive**
+
+When you use the Restore function, both the destination and the source must be able to be unmounted. Your startup drive can't be active if you want to restore it. Instead, you can start your Mac from another volume that contains a bootable version of the Mac OS. The one you use can be any volume attached to your Mac, including a USB flash drive, an external, or the Recovery HD volume.
+
+A complete step-by-step guide is available in `Use the Recovery HD Volume to Reinstall OS X or Troubleshoot Mac Problems <https://www.lifewire.com/use-recovery-hd-volume-to-reinstall-os-x-2259971>`_.
+
+
+
+
 
 ***************************
 Slow Boot after SSD Upgrade
