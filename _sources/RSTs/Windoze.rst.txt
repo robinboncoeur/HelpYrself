@@ -33,3 +33,14 @@ as they bring Windows 7 "telemetry" stuff into line with Windows 10 (this is inf
 
 KB971033, if it hasn't been finally retreated. Same for KB2505438... have to hide them on installs as these two will kill Windows activation.
 
+
+***********************
+Upgrade - OEM to Retail
+***********************
+
+Upgraded my Vbox install of Win7 to retail, purchased on 08-Dec-2021 from PCSalesOnline.com for AUD$37.11. Converted the OEM licence in cmd (run as admin):
+
+	SLUI 3
+	
+brings up a GUI to enter the new activation code. Done. Hope I can upgrade to Win10 now.
+

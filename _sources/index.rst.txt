@@ -28,6 +28,7 @@ Can't remember? Help Yourself
    RSTs/Samyang.rst
    RSTs/Thoughts.rst
    RSTs/Video.rst
+   RSTs/Virtualbox.rst
    RSTs/Windoze.rst
 
 
