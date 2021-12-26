@@ -14,19 +14,54 @@ Writing Harmony
 ***************
 
 
-*****************
-Fixing Musescores
-*****************
+*******************************
+Musescore Composers Suggestions
+*******************************
 
-If a file is corrupted, you may get:
+Good on ya, mate. I noticed you have a classical approach to material and rhythm (which is fine). There is a baroque-ish type intensity with those busy 16th note patterns against the monolithic chords.
 
-    Bar 19, stave 8 incomplete. Expected: 4/4; Found: 9/8
-    Bar 22, stave 8 incomplete. Expected: 4/4; Found: 12/8
-    Bar 22, stave 10 incomplete. Expected: 4/4; Found: 13/8
-    
-Just go to that measure
+I know that you are taking a step by step approach to orchestrating.
 
+With that said I think you'll find better blends when you pair your winds.
 
+From your arrangements I think you'll know how.
+
+After all, there are many composer styles to look into - as long as you match it with your material.
+
+For example, (assuming you still want this type of input) in this style there is straight-forward doubling.
+
+You have ended up with several simultaneous bass lines (between Cb, vc, trbn, bsn) in several places.
+
+The uniformity of bass line at m 26 sounds more solid, though you do not need the vla on that line.
+
+The stylistic solution would be divide into 4 parts:
+
+	Fl,Ob, Cl, Bsn 
+	
+	double 
+	
+	Vln 1, Vln2, Cla and CB/VC. 
+	
+You can reinforce certain lines intermittently with brass (as you did in m29 etc).
+
+This would result in "clarity of line", important especially in this style.
+
+You have done well to break up the texture now and then.
+
+By the way, all recommend (including `Thomas Goss, an online favorite of many
+<https://orchestrationonline.com/bio/>`_) to not have a key signature with horns in F.
+
+Usually the horns and trumpets, cornets do not have a key signature.
+
+I've been away a while and now I'm getting caught up.
+
+I put some new NP renditions up which might support your opinion of NP.
+
+I've heard they're waffling a bit on NP support, or it may come later than sooner. Don't know.
+
+Good work.
+
+Penne Vodka (Joe DiRienzo, New York)
 
 *********
 Key Links

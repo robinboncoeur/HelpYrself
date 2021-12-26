@@ -3,12 +3,35 @@ Great Ideas
 ###########
 
 
+******
+Health
+******
+
+=============================================
+Alzheimers and Medicine's Approach to Disease
+=============================================
+
+`Dr Robert Lustig and Dr Dale Bredesen discuss their experiences and findings <https://youtu.be/3LbsmS5TJXA?t=52>`_.
+
+Takeaways:
+
+	1. Alzheimers can be reversed. Not a disease, a syndrome.
+		a. Genetic component: APOE e4 allele (most common)
+		b. Amyloid PET scan will reveal amyloid plaques collecting in the brain. Tau proteins malfunction and stick together to form neurofibrillary tangles. These tangles are associated with the abnormal brain functions seen in Alzheimer's disease. According to Bredesen, the amyloid buildup is a response to various toxins*.
+		c. Typical treatment: amyloid drug trial. Can make matters worse.
+
+
+
+
+
+
+
 *****************
 Home Improvements
 *****************
 
 
-
+=====
 Sheds
 =====
 
@@ -116,6 +139,7 @@ Potential Purchases
 
 
 
+======================
 For the 4650dn Printer
 ======================
 
@@ -142,15 +166,24 @@ Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour Laser
 
 
 
+=====================
 Refurbish Printer Mob
 =====================
 
 `MenuDIRECTNINE <https://au.directnine.com//>`_
 
 
+=====================
 Refurbish Printer Mob
 =====================
 
 `MenuDIRECTNINE <https://au.directnine.com//>`_
 
+
+
+
+
+Dear [Mr., Ms. or Mrs. Manager's last name],
+
+I am submitting my formal resignation effective [date] from my [position or title] at [company name]. I am resigning with short notice due to [reason] and I hope you accept my apologies for supplying this letter on short notice.
 
