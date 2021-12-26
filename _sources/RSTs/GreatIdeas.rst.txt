@@ -11,7 +11,14 @@ Health
 Alzheimers and Medicine's Approach to Disease
 =============================================
 
-`Dr Robert Lustig and Dr Dale Bredesen discuss their experiences and findings <https://youtu.be/3LbsmS5TJXA?t=52>`_.
+Dr Robert Lustig and Dr Dale Bredesen discuss their experiences and findings.
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://youtu.be/3LbsmS5TJXA?t=52" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr style="height:4px;border-width:0;color:gray;background-color:gray">
+ 
 
 Takeaways:
 
