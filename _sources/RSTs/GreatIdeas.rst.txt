@@ -15,7 +15,7 @@ Dr Robert Lustig and Dr Dale Bredesen discuss their experiences and findings.
 
 .. raw:: html
    
-   <iframe width="560" height="315" src="https://www.youtube.com/watch?v=3LbsmS5TJXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/3LbsmS5TJXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
  
@@ -24,14 +24,36 @@ Takeaways:
 
 	1. Alzheimers can be reversed. Not a disease, a syndrome.
 		a. Genetic component: APOE e4 allele (most common)
-		b. Amyloid PET scan will reveal amyloid plaques collecting in the brain. Tau proteins malfunction and stick together to form neurofibrillary tangles. These tangles are associated with the abnormal brain functions seen in Alzheimer's disease. According to Bredesen, the amyloid buildup is a response to various toxins*.
+		b. Amyloid PET scan will reveal amyloid plaques collecting in the brain. Tau proteins malfunction and stick together to form neurofibrillary tangles. These tangles are associated with the abnormal brain functions seen in Alzheimer's disease. According to Bredesen, the amyloid buildup is a response to various metabolic and other toxins[a], including micotoxins (including molds in homes).
 		c. Typical treatment: amyloid drug trial. Can make matters worse.
+		d. The disease process must be evaluated on multiple bases: biologically, toxicologically, genetically, etc. No one answer will resolve the issue... and it's different for each individual.
+
+	2. Four basic causes for this neurological degenerative process
+		a. Anything that causes ongoing inflammation (pathogens / leaky gut / poor oral microbiome)
+		b. Anything thst is toxic (organic or inorganic toxins)
+		c. Energetics (must support the brain, including oxygenation, mitochondrial function, ketones)
+		d. Trophic support (regenerative growth: exercise, B vitamins)
+
+	3. Eight subcellular pathologies contributing to chronic disease
+		a. glycation
+		b. oxidative stress (reactive oxygen species)
+		c. mitochondrial dysfunction
+		d. insulin resistance
+		e. membrane instability
+		f. inflammation
+		g. methylation
+		h. autophagy
+		
+	4. Insulin resistance is top of that list, contributes to all four pathogical processes in Alzheimers
+		a. inflammation due to non-enzymatic glycation of protein
+		b. insulin resistance-related toxicity
+		c. trophic processes (brain cell regeneration) *requires* insulin: neurons need insulin as a growth factor, pathology which goes from synapto-plastic state (making new neurons) to a synapto-clastic state (protective signalling driving amyloid-precursor proteins, which is part of the protective mechanism / innate immune response) 
+		
 
 
 
 
-
-
+https://www.youtube.com/watch?v=5QzttAUKcfw
 
 *****************
 Home Improvements
