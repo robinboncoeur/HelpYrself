@@ -1,61 +1,8 @@
-###########
-Great Ideas
-###########
+#####
+Links
+#####
 
 
-******
-Health
-******
-
-=============================================
-Alzheimers and Medicine's Approach to Disease
-=============================================
-
-Dr Robert Lustig and Dr Dale Bredesen discuss their experiences and findings.
-
-.. raw:: html
-   
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/3LbsmS5TJXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
- 
-
-Takeaways:
-
-	1. Alzheimers can be reversed. Not a disease, a syndrome.
-		a. Genetic component: APOE e4 allele (most common)
-		b. Amyloid PET scan will reveal amyloid plaques collecting in the brain. Tau proteins malfunction and stick together to form neurofibrillary tangles. These tangles are associated with the abnormal brain functions seen in Alzheimer's disease. According to Bredesen, the amyloid buildup is a response to various metabolic and other toxins[a], including micotoxins (including molds in homes).
-		c. Typical treatment: amyloid drug trial. Can make matters worse.
-		d. The disease process must be evaluated on multiple bases: biologically, toxicologically, genetically, etc. No one answer will resolve the issue... and it's different for each individual.
-
-	2. Four basic causes for this neurological degenerative process
-		a. Anything that causes ongoing inflammation (pathogens / leaky gut / poor oral microbiome)
-		b. Anything thst is toxic (organic or inorganic toxins)
-		c. Energetics (must support the brain, including oxygenation, mitochondrial function, ketones)
-		d. Trophic support (regenerative growth: exercise, B vitamins)
-
-	3. Eight subcellular pathologies contributing to chronic disease
-		a. glycation
-		b. oxidative stress (reactive oxygen species)
-		c. mitochondrial dysfunction
-		d. insulin resistance
-		e. membrane instability
-		f. inflammation
-		g. methylation
-		h. autophagy
-		
-	4. Insulin resistance is top of that list, contributes to all four pathogical processes in Alzheimers
-		a. inflammation due to non-enzymatic glycation of protein
-		b. insulin resistance-related toxicity
-		c. trophic processes (brain cell regeneration) *requires* insulin: neurons need insulin as a growth factor, pathology which goes from synapto-plastic state (making new neurons) to a synapto-clastic state (protective signalling driving amyloid-precursor proteins, which is part of the protective mechanism / innate immune response)
-		
-	5. Alzheimers is a neurological degenerative disease that is a deficiency disease borne of excess
-		
-
-
-
-
-https://www.youtube.com/watch?v=5QzttAUKcfw
 
 *****************
 Home Improvements
@@ -168,13 +115,9 @@ The narrow format make the this ideal for use in covered locations like carpark 
 Potential Purchases
 *******************
 
-
-
 ======================
 For the 4650dn Printer
 ======================
-
-**Cheap Sheds**
 
 `4 Pack HP C9720A-C9723A (641A) Compatible Toner Cartridges [1BK,1C,1M,1Y] for Color LaserJet 4650 printer <https://www.inkstation.com.au/4-pack-hp-c9720ac9723a-641a-compatible-toner-cartridges-1bk-1c-1m-1y-p-2663.html?prt=3417&gclid=CjwKCAiA7dKMBhBCEiwAO_crFDuMdam1L-_UbL8SLASBMkVdTCfh3Q81WkwpoCjXMPihvT475egrTxoCXbYQAvD_BwE>`_
 
@@ -190,10 +133,7 @@ Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour Laser
 1 x Q9722A Yellow Compatible Toner Cartridge 8,000 page yield.
 
 
-
 `HP PRINTER TRANSFER KIT Q3675A FOR COLOR LASERJET 4650, 4650DN ($365.59) <https://www.thetelecomshop.com/au/hp-printer-transfer-kit-q3675a-for-color-laserjet-4650-4650dn?gclid=CjwKCAiA7dKMBhBCEiwAO_crFHYsTGNhsIF9KOl3F8loEz-FU3WIYiD1uS1KTlTWQafq_FDVZHVxDxoC67sQAvD_BwE>`_
-
-
 
 
 
@@ -213,4 +153,45 @@ Hyundai Antenna Replacement
 Barton Capalaba Hyundai
 Antenna assemply
 $217 on CC
-purchase ref# 35042
+Purchased on 05.01.2022, ref# 35042
+
+
+
+*************************
+Excellent Random YouTubes
+*************************
+
+Awesome Websites
+
+https://www.youtube.com/watch?v=TxLy90NdNG4
+
+
+
+***************
+Random Websites
+***************
+
+This `person does not exist <https://thispersondoesnotexist.com/>`_.
+
+My `TradePub book download history <https://solo.tradepub.com/?pt=myacct&page=history>`_.
+
+Robert Lustig's recommendation: `Sugar Science site <http://sugarscience.ucsf.edu/>`_.
+
+Find a business `by ABN (sort-of) <https://www.abcdiamond.com.au/who-is-snh-holdings-pty-ltd-coorparoo/>`_.
+
+Rescinding your `US citizenship <https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Loss-US-Nationality-Foreign-State.html>`_.
+
+Advice About Possible Loss of U.S. Nationality and Seeking Public Office in a Foreign State
+A U.S. national’s employment, after attaining the age of 18, with the government of a foreign country or a political subdivision thereof is a potentially expatriating act pursuant to Section 349(a)(4) of the Immigration and Nationality Act if the individual is a citizen of that foreign country or takes an oath of allegiance to that country in connection with such employment. Such employment, however, will result in one's expatriation only if done voluntarily with the intention of relinquishing U.S. citizenship. Running for foreign office, even foreign head of state, is not a potentially expatriating act; only accepting, serving in, or performing the duties of a foreign office are potentially expatriating as described above.  
+
+The Department has adopted an administrative presumption that U.S. nationals intend to retain their U.S. citizenship when they naturalize as nationals of a foreign state, declare their allegiance to a foreign state, or accept non-policy level employment with a foreign government. See 22 CFR 50.40(a); see also 7 FAM 1200 (additionally applying the presumption to serving as an officer in the military forces of a foreign state not engaged in hostilities against the United States). Questions concerning whether a foreign government position is a policy level position should be referred to the Office of Legal Affairs for Overseas Citizens Services.
+
+U.S. nationals employed in non-policy level positions with foreign governments are not required to take any action to retain their U.S. nationality if they wish to retain it because the Department presumes that U.S. nationals employed in such positions do not have the requisite intent to relinquish their U.S. nationality. An individual who is employed in a non-policy level position will only lose his/her U.S. nationality if he or she establishes clearly and credibly, by a preponderance of the evidence, an intent to relinquish U.S. nationality upon assuming or serving in such foreign government employment. 
+
+In cases where U.S. nationals are employed in policy-level positions, the Department of State will seek to ascertain the individual's intent to retain or relinquish his or her U.S. nationality upon accepting the policy level position with a foreign government. An individual assuming such a position who wishes to retain U.S. nationality should state clearly to the Department or post that he or she intended to retain U.S. nationality. An individual assuming such a position who wishes to relinquish U.S. nationality may come to Post and follow the required steps to complete the Certificate of Loss of Nationality application process.
+
+Cases involving service of a U.S. national as a foreign head of state, head of government, or foreign minister raise complex questions of international law and are reviewed by the Department on a case by case basis. Serving as a foreign head of state/government or foreign minister may affect the level of immunity from U.S. jurisdiction that a dual national may be afforded. All such cases should be referred to the Office of the Assistant Legal Adviser for Consular Affairs.
+
+
+
+
