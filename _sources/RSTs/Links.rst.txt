@@ -179,6 +179,135 @@ Robert Lustig's recommendation: `Sugar Science site <http://sugarscience.ucsf.ed
 
 Find a business `by ABN (sort-of) <https://www.abcdiamond.com.au/who-is-snh-holdings-pty-ltd-coorparoo/>`_.
 
+
+*******************
+Wishing to Purchase
+*******************
+
+=================
+Printer Cartridge
+=================
+
+Replacing cartidges for `the HP2055dn <https://www.inkstation.com.au/login>`_
+
+
+======
+Bamboo
+======
+
+Local vendor, `Lagoon View Nursery <http://www.lagoonviewnursery.com.au/cheapplants/default.aspx>`_ - here's a `fact sheet by Burke's backyard <https://www.burkesbackyard.com.au/fact-sheets/in-the-garden/other/clumping-bamboo/>`_.
+
+======================
+More Garden Shed Ideas
+======================
+
+On ebay, `Garden Shed <https://www.ebay.com.au/itm/184820955636?hash=item2b082ff9f4:g:nNQAAOSwLBlglP8k>`_
+
+Simply Sheds: `Space Saver <https://www.simplysheds.com.au/spacesaver-garden-shed-3m-x-1.52m-double-door-in-monument.html>`_
+
+============
+For my a1278
+============
+
+I was considering `a used Logic Board <https://www.ebay.com.au/itm/255196859446?hash=item3b6aeb0c36:g:~YUAAOSwECBhd6nf>`_. Ended up buying `new <https://www.ebay.com.au/itm/133782964197>`_ from `MacParts <https://www.ebay.com.au/usr/macp_8026?_trksid=p2047675.m3561.l2559>`_ - hope I won't regret this. My last logicboard purchase did not go well.
+
+===========
+For the GH5
+===========
+
+To really be a serious videographer, colour grading is essential. `VLog upgrade <https://www.digitalcamerawarehouse.com.au/panasonic-lumix-gh4agh5afz2500-vlog-firmware-update-dmw-sfu1>`_
+
+========================
+Audio Expression Control
+========================
+
+In order to fine-manage expression CC, ` TouchOSC <https://hexler.net/touchosc>`_ - 
+
+**Brand-new app. Brand-new powerful editor.**
+
+We've listened for the past 10 years and we've re-written the application from the ground up - with speed, features and usability in mind. A GPU-powered, fast and advanced integrated editor is part of TouchOSC on all platforms - create the most complex of control layouts with ease and precision.
+
+**Cross-Platform. We mean it.**
+
+TouchOSC runs EVERYWHERE! From the phone in your pocket to your iTablet Pro™. From a Raspberry Pi to a Windows touch-screen workstation. We support all major operating systems and architectures and the full feature set is available across all versions. We support Windows / macOS / Linux / iOS / Android natively on multiple chips and bits.
+
+**MIDI, OSC and more.**
+
+TouchOSC supports sending and receiving any number of MIDI and OSC messages on many connections simultaneously. On top of OSC over UDP & TCP, we support every type of wired & wireless MIDI connection your device can offer, including MIDI over USB on iOS and Android.
+
+**Cross-Network. Synchronized editing.**
+
+Multiple instances of TouchOSC can be connected on the network for synchronized editing. Use the precision of your desktop's mouse and keyboard for fine-grained, detailed editing - test-drive and preview in real-time on all connected touch-screen devices at the same time.
+
+**Scripting and local messages.**
+
+A lightweight and fast scripting engine allows deep access to all aspects of your controller and enables limitless customization and interactivity. For less complex tasks we've added local messages - simply wire up controls to transmit or display values; no need to break out the big (code) guns. Easy.
+
+**This is only the beginning.**
+
+We've supported and updated TouchOSC Mk1 for more than 10 years at this point, without ever charging for an upgrade, and we're planning to do the same for this new version. We've already got a whole bunch of features cooking that were just not quite ready yet. There is so much more to come... and here's a `guide to get up to speed. <https://timcorpus.net/index.php/2021/11/16/ultimate-guide-to-touch-osc-part-1-2/>`_
+
+
+
+
+
+
+
+****************
+Other Tech Sites
+****************
+
+Need a VPN? Consider `NordVPN <https://nordvpn.com/nordvpn-birthday-site/>`_.
+
+=============
+Win10 Debloat
+=============
+
+`Chris Titus Tech's DeBloat <https://github.com/ChrisTitusTech/win10script>`_
+
+
+
+===================
+Pelcan Static Pages
+===================
+
+`Status Web Page - Pelican <https://docs.getpelican.com/en/latest/settings.html>`_
+
+
+`More on Pelican <https://www.thedigitalcatonline.com/blog/2021/03/25/how-to-write-a-pelican-theme-for-your-static-website/>`_
+
+
+`Pelican Themes <https://docs.getpelican.com/en/latest/pelican-themes.html>`_
+
+
+`Pelican CONF sample <https://github.com/molivier/nest>`_
+
+
+`QuickStart with Pelican <https://www.kappawingman.com/posts/webdev/2020/06/25/quickstart-pelican-ssg/>`_
+
+
+`Move from Wordpress to Pelican <https://www.brettwitty.net/how-to-move-to-pelican.html>`_
+
+
+`Pelican and Python <https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html>`_
+
+
+
+========
+VBA Tips
+========
+
+`Dropdown in a Cell <https://www.get-digital-help.com/run-a-macro-from-a-drop-down-list-vba/>`_
+
+
+
+
+
+********************
+US Citizenship Stuff
+********************
+
+
 Rescinding your `US citizenship <https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Loss-US-Nationality-Foreign-State.html>`_.
 
 Advice About Possible Loss of U.S. Nationality and Seeking Public Office in a Foreign State
@@ -191,6 +320,8 @@ U.S. nationals employed in non-policy level positions with foreign governments a
 In cases where U.S. nationals are employed in policy-level positions, the Department of State will seek to ascertain the individual's intent to retain or relinquish his or her U.S. nationality upon accepting the policy level position with a foreign government. An individual assuming such a position who wishes to retain U.S. nationality should state clearly to the Department or post that he or she intended to retain U.S. nationality. An individual assuming such a position who wishes to relinquish U.S. nationality may come to Post and follow the required steps to complete the Certificate of Loss of Nationality application process.
 
 Cases involving service of a U.S. national as a foreign head of state, head of government, or foreign minister raise complex questions of international law and are reviewed by the Department on a case by case basis. Serving as a foreign head of state/government or foreign minister may affect the level of immunity from U.S. jurisdiction that a dual national may be afforded. All such cases should be referred to the Office of the Assistant Legal Adviser for Consular Affairs.
+
+`Republican <https://m.dailykos.com/stories/2018/10/23/1806673/-Republican-Sexual-Predators-Abusers-and-Enablers-Pt-1>`_.
 
 
 

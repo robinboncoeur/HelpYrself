@@ -214,3 +214,53 @@ Barton Capalaba Hyundai
 Antenna assemply
 $217 on CC
 purchase ref# 35042
+
+
+
+===============
+SQLite3 Queries
+===============
+The Groceries by Month::
+
+	SELECT sum (TransAmt) as negative FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'   (did not select date range correctly)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND strftime('%d/%m/%Y', TransDate) BETWEEN '01/01/2020' AND '31/01/2020'   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND date(TransDate) BETWEEN date('2020-01-01') AND date('2020-01-31')   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-01-31'    (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND Date(TransDate) BETWEEN '2020-01-01' AND '2020-01-31'   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate < '31/12/2017' ORDER BY TransDate   (Sort-of)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ORDER BY TransDate (YES!! but because I changed the date format - prior to importing to SQLite - to 'yyyy-mm-dd')
+	
+	SELECT sum(TransAmt) 
+	FROM Transactions 
+	WHERE TransCode = 'DLXPG' 
+	AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ($-706.75)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY TransDate
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2021-01-01' AND '2021-12-31' ORDER BY TransDate
+	
+	
+
+
+
+
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
