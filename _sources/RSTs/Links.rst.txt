@@ -221,7 +221,7 @@ To really be a serious videographer, colour grading is essential. `VLog upgrade 
 Audio Expression Control
 ========================
 
-In order to fine-manage expression CC, ` TouchOSC <https://hexler.net/touchosc>`_ - 
+In order to fine-manage expression CC, `TouchOSC <https://hexler.net/touchosc>`_!
 
 **Brand-new app. Brand-new powerful editor.**
 
@@ -245,7 +245,7 @@ A lightweight and fast scripting engine allows deep access to all aspects of you
 
 **This is only the beginning.**
 
-We've supported and updated TouchOSC Mk1 for more than 10 years at this point, without ever charging for an upgrade, and we're planning to do the same for this new version. We've already got a whole bunch of features cooking that were just not quite ready yet. There is so much more to come... and here's a `guide to get up to speed. <https://timcorpus.net/index.php/2021/11/16/ultimate-guide-to-touch-osc-part-1-2/>`_
+We've supported and updated TouchOSC Mk1 for more than 10 years at this point, without ever charging for an upgrade, and we're planning to do the same for this new version. We've already got a whole bunch of features cooking that were just not quite ready yet. There is so much more to come... and here's a `guide to get up to speed <https://timcorpus.net/index.php/2021/11/16/ultimate-guide-to-touch-osc-part-1-2>`_.
 
 
 
