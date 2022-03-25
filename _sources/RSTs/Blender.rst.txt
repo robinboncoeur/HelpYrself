@@ -27,7 +27,7 @@ Reviewing Script Installation Instructions
 Keeping Blender Happy
 *********************
 
-
+=============================
 The Alt-Right-Click Conundrum
 =============================
 
@@ -50,22 +50,21 @@ and select the super key to move or resize windows:
 
 
 
-***************
+===============
 The Viewer Node
-***************
+===============
 
 To get one in the Material Node Editor, you have to activate the Node Wrangler add-on, then you can use Ctrl+Shift+LMB (clicking on the header of the node) to create a temporary Viewer Node.
 
 Shit+RightClick+Drag to add a reroute.
 
 
-***********************
+
+=======================
 ErinDale's Knit Texture
-***********************
+=======================
 
-YouTube::
-
-    https://www.youtube.com/watch?v=GBIXU9BlyXg
+You can find this on `YouTube <https://www.youtube.com/watch?v=GBIXU9BlyXg>`_.
 
 Shortcuts::
 
@@ -150,6 +149,8 @@ CONVERTER::
 Baking Diffuse and Normal Maps
 ******************************
 
+
+=================================
 METHOD 1 – BAKING FROM THE SHADER
 =================================
 
@@ -224,7 +225,7 @@ In the bake settings we can then select ‘Emit’ as our bake type and then as 
 
 Note: *Something to keep in mind is that the rendering process for the Emit pass (and several other passes for that matter (but not the normal pass!)) will take the render samples into account. So since we only need one sample for the emit shader to give us everything we need, to save needlessly wasting baking time we can set that down to just 1 pass in our render sampling settings.*
 
-
+=====================================
 METHOD 2 – BAKING FROM ANOTHER OBJECT
 =====================================
 
@@ -251,4 +252,24 @@ It may feel like we’ve covered a lot, I think we should congratulate ourselves
   - When set to non-color in the image editor color space, the color space setting of the image node in the shader editor can be ignored. This maybe a little buggy though so keep an eye on this.
   - If you want the most data of all saving into your image texture then use an openEXR format (Float Full) – Sometimes you can save a lot of space if you try a lossy codec such as Pxr24.
   - If relying heavily on bump nodes in Eevee and find there is a lot of undesirable sparkly/jaggedness to the animation then try swapping the bump map out for a normal map.
+
+
+
+*******************
+Links to Cool Sites
+*******************
+
+
+`PolyHaven - free textures <https://polyhaven.com/a/rocks_ground_01>`_
+
+Opacity tutorial at `KatsBits <https://www.katsbits.com/codex/opacity/>`_
+
+Alpha `transparency <https://artisticrender.com/how-to-use-alpha-transparent-textures-in-blender/>`_ textures 
+
+All sorts of great `tutorials <https://artisticrender.com/>`_ at Artistic Render
+
+
+
+
+
 

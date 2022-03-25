@@ -116,8 +116,9 @@
 <h1>Linux Tips<a class="headerlink" href="#linux-tips" title="Permalink to this headline"></a></h1>
 <div class="section" id="samba-sharing-linux-mint-20">
 <h2>Samba Sharing - Linux Mint 20<a class="headerlink" href="#samba-sharing-linux-mint-20" title="Permalink to this headline"></a></h2>
-<p>By <a class="reference external" href="https://techviewleo.com/install-and-configure-samba-file-sharing-on-linux-mint/">Lorna Chepkoech - September 2, 2020</a></p>
-<p>In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be Samba server.</p>
+<p>Originall written by <a class="reference external" href="https://techviewleo.com/install-and-configure-samba-file-sharing-on-linux-mint/">Lorna Chepkoech - September 2, 2020</a></p>
+<p>Modded by me to suit my install.</p>
+<p>In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be a Samba server.</p>
 <div class="section" id="step-1-install-samba">
 <h3>Step 1: Install Samba<a class="headerlink" href="#step-1-install-samba" title="Permalink to this headline"></a></h3>
 <p>We start by installing required samba packages on Linux Mint 20. This is done using apt command line package manager:</p>
@@ -128,22 +129,22 @@
 </div>
 <div class="section" id="step-2-configure-samba-share">
 <h3>Step 2: Configure Samba share<a class="headerlink" href="#step-2-configure-samba-share" title="Permalink to this headline"></a></h3>
-<p>Samba configuration file is located in /etc/samba/smb.conf. Any changes made to this file requires Samba daemon to be restarted. Let’s start by creating a directory to be shared with Samba. The directory must exist before it can be configured in smb.conf. Let’s create one under /home and allow it to be readable and writable by all users:</p>
+<p>Samba configuration file is located in the <strong>/etc/samba/smb.conf</strong> file. Any changes made to this file requires Samba daemon to be restarted. Let’s start by creating a directory to be shared with Samba. The directory must exist before it can be configured in smb.conf. Let’s create one under /home and allow it to be readable and writable by all users:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /home/share
 $ sudo chmod 777 /home/share
 </pre></div>
 </div>
 <p>Now open Samba configuration file to make the necessary changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /etc/samba/smb.conf
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo xed /etc/samba/smb.conf
 </pre></div>
 </div>
 <p>Ensure you have the content as shown under global settings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">global</span><span class="p">]</span>
 
 <span class="c1"># Configure correct UTP</span>
- <span class="n">unix</span> <span class="n">charset</span> <span class="o">=</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+  <span class="n">unix</span> <span class="n">charset</span> <span class="o">=</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
 <span class="c1"># Change this to the workgroup/NT-domain name your Samba server will be part of</span>
-  <span class="n">workgroup</span> <span class="o">=</span> <span class="n">WORKGROUP</span>
+  <span class="n">workgroup</span> <span class="o">=</span> <span class="n">TelstraDB7FAC</span>
   <span class="n">server</span> <span class="nb">min</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">NT1</span>
   <span class="n">ntlm</span> <span class="n">auth</span> <span class="o">=</span> <span class="n">yes</span>
   <span class="c1">#interfaces = 127.0.0.0/8 eth0</span>
@@ -179,12 +180,12 @@ $ sudo chmod 777 /home/share
 </pre></div>
 </div>
 <p>Create samba share user, replacing user1 with your user name:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo useradd -M -d /home/share/user1 -s /usr/sbin/nologin -G sambashare user1
-$ sudo mkdir /home/share/user1
-$ sudo chown user1:sambashare /home/share/user1
-$ sudo chmod 2770 /home/share/user1
-$ sudo smbpasswd -a user1
-$ sudo smbpasswd -e user1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo useradd -M -d /home/share/$USER -s /usr/sbin/nologin -G sambashare $USER
+$ sudo mkdir /home/share/$USER
+$ sudo chown $USER:sambashare /home/share/$USER
+$ sudo chmod 2770 /home/share/$USER
+$ sudo smbpasswd -a $USER
+$ sudo smbpasswd -e $USER
 </pre></div>
 </div>
 <p>We created a user’s home directory inside Samba share parent directory and set ownership to the samba share group. To create another user:</p>
@@ -198,24 +199,24 @@ $ sudo chmod 2770 /home/share/smbadmin
 </div>
 <p><strong>Configure secure sambashare</strong></p>
 <p>Open samba configuration file and add the following contents:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim /etc/samba/smb.conf
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo xed /etc/samba/smb.conf
 </pre></div>
 </div>
 <p>Add the following content at the end of the file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user1</span><span class="p">]</span>
-<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">user1</span>
-<span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
-<span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
-<span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
-<span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
-<span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@user1</span> <span class="nd">@sambashare</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">robyn</span><span class="p">]</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">robyn</span>
+  <span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
+  <span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
+  <span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
+  <span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
+  <span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@robyn</span> <span class="nd">@sambashare</span>
 <span class="p">[</span><span class="n">smbadmin</span><span class="p">]</span>
-<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">smbadmin</span>
-<span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
-<span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
-<span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
-<span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
-<span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@smbadmin</span> <span class="nd">@sambashare</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">smbadmin</span>
+  <span class="n">readonly</span> <span class="o">=</span> <span class="n">no</span>
+  <span class="n">Browseable</span> <span class="o">=</span> <span class="n">no</span>
+  <span class="n">force</span> <span class="n">create</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">0660</span>
+  <span class="n">force</span> <span class="n">directory</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">2770</span>
+  <span class="n">valid</span> <span class="n">user</span> <span class="o">=</span> <span class="nd">@smbadmin</span> <span class="nd">@sambashare</span>
 </pre></div>
 </div>
 <p>Save the file and restart Samba daemon:</p>
@@ -238,12 +239,12 @@ $ sudo chmod 2770 /home/share/smbadmin
 </pre></div>
 </div>
 <p>For example in my case:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ smbclient //192.168.100.77/user1 -U user1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ smbclient //192.168.100.77/$USER -U $USER
 </pre></div>
 </div>
 <p>Mount the Samba share to a directory for permanent access:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /mounts/shares
-$ sudo mount -t cifs -o username=user1 //192.168.100.77/user1 ~/mounts/shares
+$ sudo mount -t cifs -o username=$USER //192.168.100.77/$USER ~/mounts/shares
 </pre></div>
 </div>
 <p>Check if the directory is mounted on the client:</p>
@@ -257,7 +258,7 @@ $ sudo mount -t cifs -o username=user1 //192.168.100.77/user1 ~/mounts/shares
 </pre></div>
 </div>
 <p>Add the following line depending on your mount point:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="mf">192.168.100.77</span><span class="o">/</span><span class="n">user1</span>  <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">shares</span> <span class="n">cifs</span> <span class="n">credentials</span><span class="o">=/.</span><span class="n">sambacreds</span> <span class="mi">0</span> <span class="mi">0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//192.168.100.77/$USER  /mnt/shares cifs credentials=/.sambacreds 0 0
 </pre></div>
 </div>
 <p>Save the file and exit the create the credentials file:</p>
@@ -265,16 +266,16 @@ $ sudo mount -t cifs -o username=user1 //192.168.100.77/user1 ~/mounts/shares
 </pre></div>
 </div>
 <p>Add the credentials information:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="p">:</span> <span class="n">user1</span>
-<span class="n">password</span><span class="p">:</span> <span class="n">yourpassword</span>
-<span class="n">domain</span><span class="p">:</span> <span class="n">WORKGROUP</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="p">:</span> <span class="n">robyn</span>
+<span class="n">password</span><span class="p">:</span> <span class="n">mypasswd</span>
+<span class="n">domain</span><span class="p">:</span> <span class="n">TelstraDB7FAC</span>
 </pre></div>
 </div>
 <p>Confirm if mounted:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir -p /mnt/shares
 $ sudo mount -a
 $ df -hT | grep cifs
-//192.168.100.77/user1 cifs      20G  14G  6.3G  69% /mnt/shares
+//192.168.0.133/robyn cifs      20G  14G  6.3G  69% /mnt/shares
 </pre></div>
 </div>
 <p>You have successfully set up Samba file share on Linux Mint 20 and mount the shared directory on a client.</p>

@@ -6,9 +6,11 @@ Linux Tips
 Samba Sharing - Linux Mint 20
 *****************************
 
-By `Lorna Chepkoech - September 2, 2020 <https://techviewleo.com/install-and-configure-samba-file-sharing-on-linux-mint/>`_ 
+Originall written by `Lorna Chepkoech - September 2, 2020 <https://techviewleo.com/install-and-configure-samba-file-sharing-on-linux-mint/>`_ 
 
-In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be Samba server.
+Modded by me to suit my install.
+
+In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be a Samba server.
 
 
 Step 1: Install Samba
@@ -23,23 +25,23 @@ We start by installing required samba packages on Linux Mint 20. This is done us
 Step 2: Configure Samba share
 =============================
 
-Samba configuration file is located in /etc/samba/smb.conf. Any changes made to this file requires Samba daemon to be restarted. Let’s start by creating a directory to be shared with Samba. The directory must exist before it can be configured in smb.conf. Let’s create one under /home and allow it to be readable and writable by all users::
+Samba configuration file is located in the **/etc/samba/smb.conf** file. Any changes made to this file requires Samba daemon to be restarted. Let’s start by creating a directory to be shared with Samba. The directory must exist before it can be configured in smb.conf. Let’s create one under /home and allow it to be readable and writable by all users::
 
 	$ sudo mkdir -p /home/share
 	$ sudo chmod 777 /home/share
 
 Now open Samba configuration file to make the necessary changes::
 
-	$ sudo vim /etc/samba/smb.conf
+	$ sudo xed /etc/samba/smb.conf
 
 Ensure you have the content as shown under global settings::
 
 	[global] 
 
 	# Configure correct UTP 
-	 unix charset = UTF-8 
+	  unix charset = UTF-8 
 	# Change this to the workgroup/NT-domain name your Samba server will be part of 
-	  workgroup = WORKGROUP 
+	  workgroup = TelstraDB7FAC
 	  server min protocol = NT1
 	  ntlm auth = yes
 	  #interfaces = 127.0.0.0/8 eth0 
@@ -74,12 +76,12 @@ Give group ownership to Samba shared directory to sambashare group::
 
 Create samba share user, replacing user1 with your user name::
 
-	$ sudo useradd -M -d /home/share/user1 -s /usr/sbin/nologin -G sambashare user1
-	$ sudo mkdir /home/share/user1
-	$ sudo chown user1:sambashare /home/share/user1
-	$ sudo chmod 2770 /home/share/user1
-	$ sudo smbpasswd -a user1
-	$ sudo smbpasswd -e user1
+	$ sudo useradd -M -d /home/share/$USER -s /usr/sbin/nologin -G sambashare $USER
+	$ sudo mkdir /home/share/$USER
+	$ sudo chown $USER:sambashare /home/share/$USER
+	$ sudo chmod 2770 /home/share/$USER
+	$ sudo smbpasswd -a $USER
+	$ sudo smbpasswd -e $USER
 
 We created a user’s home directory inside Samba share parent directory and set ownership to the samba share group. To create another user::
 
@@ -94,24 +96,24 @@ We created a user’s home directory inside Samba share parent directory and set
 
 Open samba configuration file and add the following contents::
 
-	$ sudo vim /etc/samba/smb.conf
+	$ sudo xed /etc/samba/smb.conf
 
 Add the following content at the end of the file::
 
-	[user1]
-	path = /home/share/user1
-	readonly = no
-	Browseable = no
-	force create mode = 0660
-	force directory mode = 2770
-	valid user = @user1 @sambashare
+	[robyn]
+	  path = /home/share/robyn
+	  readonly = no
+	  Browseable = no
+	  force create mode = 0660
+	  force directory mode = 2770
+	  valid user = @robyn @sambashare
 	[smbadmin]
-	path = /home/share/smbadmin
-	readonly = no
-	Browseable = no
-	force create mode = 0660
-	force directory mode = 2770
-	valid user = @smbadmin @sambashare
+	  path = /home/share/smbadmin
+	  readonly = no
+	  Browseable = no
+	  force create mode = 0660
+	  force directory mode = 2770
+	  valid user = @smbadmin @sambashare
 
 Save the file and restart Samba daemon::
 
@@ -136,12 +138,12 @@ To access Samba share temporarily, run this command::
 
 For example in my case::
 
-	$ smbclient //192.168.100.77/user1 -U user1
+	$ smbclient //192.168.100.77/$USER -U $USER
 
 Mount the Samba share to a directory for permanent access::
 
 	$ sudo mkdir -p /mounts/shares
-	$ sudo mount -t cifs -o username=user1 //192.168.100.77/user1 ~/mounts/shares
+	$ sudo mount -t cifs -o username=$USER //192.168.100.77/$USER ~/mounts/shares
 
 Check if the directory is mounted on the client::
 
@@ -157,7 +159,7 @@ To enable persistent mount even on reboot, mount the samba share in fstab file::
 
 Add the following line depending on your mount point::
 
-	//192.168.100.77/user1  /mnt/shares cifs credentials=/.sambacreds 0 0
+	//192.168.100.77/$USER  /mnt/shares cifs credentials=/.sambacreds 0 0
 
 Save the file and exit the create the credentials file::
 
@@ -165,16 +167,16 @@ Save the file and exit the create the credentials file::
 
 Add the credentials information::
 
-	username: user1
-	password: yourpassword
-	domain: WORKGROUP
+	username: robyn
+	password: mypasswd
+	domain: TelstraDB7FAC
 
 Confirm if mounted::
 
 	$ sudo mkdir -p /mnt/shares 
 	$ sudo mount -a 
 	$ df -hT | grep cifs
-	//192.168.100.77/user1 cifs      20G  14G  6.3G  69% /mnt/shares
+	//192.168.0.133/robyn cifs      20G  14G  6.3G  69% /mnt/shares
 
 You have successfully set up Samba file share on Linux Mint 20 and mount the shared directory on a client.
 
