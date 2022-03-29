@@ -239,6 +239,16 @@ $217 on CC
 purchase ref# 35042
 
 
+==========================
+Rust Removal from Anything
+==========================
+
+From the `SawmillCreek.org Forum <https://sawmillcreek.org/showthread.php?155155-Discoloring-with-Vinegar&s=86a63445fa4dd7aab00783f01314e8b6>`_:
+
+The black or gray residue is a very nice thing to have. It is a form of iron oxide, or rust. It is however different from red rust as it does not expand cracks and promote further rust. It does however, and here is the big thing, **add a bit of resistance to rust**. It makes a somewhat self-healing layer of protection. The only reason you would not want that coating is if you have a cosmetic need for shiny.
+
+You may have seen this greyish flat finish on an old kitchen knife. It is a classic old time method of steel protection.
+
 
 ===============
 SQLite3 Queries

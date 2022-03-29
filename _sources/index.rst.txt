@@ -12,6 +12,7 @@ Can't remember? Help Yourself
 
    RSTs/Intro.rst
    RSTs/Blender.rst
+   RSTs/BlenderRigTute.rst
    RSTs/Composition.rst
    RSTs/Excel.rst
    RSTs/Git.rst
