@@ -55,6 +55,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Rigging 3D Figures in Blender</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#first-a-simple-approach">First: A Simple Approach</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#import-and-prep-work">Import and Prep Work</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setting-up-and-rigging">Setting Up and Rigging</a></li>
 </ul>
@@ -97,8 +98,13 @@
 <h1>Rigging 3D Figures in Blender<a class="headerlink" href="#rigging-3d-figures-in-blender" title="Permalink to this headline"></a></h1>
 <div class="section" id="first-a-simple-approach">
 <h2>First: A Simple Approach<a class="headerlink" href="#first-a-simple-approach" title="Permalink to this headline"></a></h2>
-<p>To start off with: <strong>a caveat</strong>. <em>This is not a definitive tutorial on rigging in Blender. This approach worked for me, and includes a few tips on how to overcome unexpected pitfalls. Your mileage may vary.</em> I have gone over this road too many times to count, with a ton of failures to show for it. The tools have become a bit easier to use, in the meantime, and the elusive satisfaction of a successful rigging has finally arrived. This document is to help others avoid some of the issues I ran into. A great video to watch on the suject is this one:</p>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h3>
+<p>To start off with: <strong>a caveat</strong>. <em>This is not a definitive tutorial on rigging in Blender. This approach worked for me, and includes a few tips on how to overcome unexpected pitfalls. Your mileage may vary.</em></p>
+<p>I have gone over this road too many times to count, with a ton of failures to show for it. The tools have become a bit easier to use, in the meantime, and the elusive satisfaction of a successful rigging has finally arrived. This document is to help others avoid some of the issues I ran into. A great video to watch on the suject - from which I drew my inspiration for this tutorial - is this one:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9q5I3cyYS2Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>For this tutorial, may I suggest you go to <a class="reference external" href="https://www.cgtrader.com/free-3d-models/character/woman/girl-in-shorts-e56bd72f-0b8e-43e9-b251-a6bbb5ce976b">CG Trader</a> to download a free humanoid mesh, preferably one that is not rigged already. There are some good figures at CGTrader, some free and others at a ranges of prices.  The description claims the figure is rigged, but it is probably for 3DsMax, not Blender. You can also use a Poser figure, or indeed any humanoid figure saved in OBJ format.</p>
+<p>By the way, I sometimes assume a certain amount of Blender knowledge, which may not be a good thing. If you wish more detail on certain points or see any corrections that need making, please leave me a note in my <a class="reference external" href="https://github.com/robinboncoeur/mygitblender/issues">Github Issues page</a>.</p>
+</div>
 <div class="section" id="import-and-prep-work">
 <h3>Import and Prep Work<a class="headerlink" href="#import-and-prep-work" title="Permalink to this headline"></a></h3>
 <p><strong>Download and Unarchive - Organise</strong></p>
@@ -126,10 +132,48 @@
 <p>The cursor needs to be at the “World Origin”. Press [Shift] [S] to bring up this pie menu:</p>
 <img alt="../_images/006CursorToWOrigin.png" src="../_images/006CursorToWOrigin.png" />
 <p>Select ‘Cursor to World Origin. The cursor should be between the feet of the figure, which is where imported OBJs generally land.</p>
+<p><strong>Remove ‘Doubles’</strong></p>
+<p>Applying your rig will fail if vertices that occupy the same space are detected. Note: <em>in the case of Poser figures, I have removed thousands</em>.</p>
+<p>For the sake of simplicity, I hide any part of the scene that I am not immediately working on:</p>
+<img alt="../_images/007HideInViewpt.png" src="../_images/007HideInViewpt.png" />
+<p>[TAB] into Edit mode, check that you are in vertex mode (not face or edge), press [A] to select all vertices and from Mesh:</p>
+<img alt="../_images/008MBDistance.png" src="../_images/008MBDistance.png" />
+<p>On this figure, you’ll see a brief notification that 90 vertices were removed:</p>
+<img alt="../_images/009Removed90V.png" src="../_images/009Removed90V.png" />
+<p>The figure is now ready to accept a rig. Save your .blend file.</p>
+<p>In order to make it a bit easier to go back to a previous step, I tend to do ‘Save As’ at ‘milestone’ points of the project: i.e., points where I’m satisfied all has gone well up to then and that would be a good start-over point in case things go to custard. So, I’ll name my file ‘GShortsPose01.blend’: the only thing that’s key here is the number.</p>
 </div>
 <div class="section" id="setting-up-and-rigging">
 <h3>Setting Up and Rigging<a class="headerlink" href="#setting-up-and-rigging" title="Permalink to this headline"></a></h3>
-<p>Start with the Basic Human (MetaRig) until these steps become more familiar.</p>
+<p>This tutorial recommends you start with the Basic Human (MetaRig), just until these steps become more familiar. Note: <em>the rigging process itself is fairly labour-intensive and you would hate to have gone through hours of adjusting the rig only to have the whole thing go down the gurgler because of something that got missed. Happens more often than not</em>.</p>
+<p><strong>Load the Rig - Get It ready</strong></p>
+<p>Press [Shift] [A] and select Armature -&gt; Basic -&gt; Basic Human (Meta-Rig):</p>
+<img alt="../_images/010BasicHuman.png" src="../_images/010BasicHuman.png" />
+<p>I’ve scaled up the rig so that the shoulder/clavicle bones are roughly here:</p>
+<img alt="../_images/011ScaledTo.png" src="../_images/011ScaledTo.png" />
+<p>Scaling for this figure is not a trivial endeavour. A quick way to get the rig close to her size is to press [S] and type 100. Then press [S] again and scale down to the desired height/size.</p>
+<p>Note the scale of the rig:</p>
+<img alt="../_images/012ReviewScale.png" src="../_images/012ReviewScale.png" />
+<p>To set the values to 1, press [Ctrl] [A], and select ‘Scale’.</p>
+<p>Notice that a lot of the rig is hidden in the figure. You will want it to <em>seem</em> like it’s always in front of the figure:</p>
+<img alt="../_images/013ShowInFront.png" src="../_images/013ShowInFront.png" />
+<p>Now is a good time to save. Typically, I’ll start ‘versioning’ here, so I can go back if I need to:</p>
+<img alt="../_images/014SaveAsVers.png" src="../_images/014SaveAsVers.png" />
+<p>When you ‘Save As…’, Blender will display the current file name with a red background. Click on the plus [+] will increment your filename… then just click [Save As].</p>
+<p><strong>Start Rigging</strong></p>
+<p>With the rig selected, press [TAB] to enter edit mode. To cut your work in half, click on the ‘X’ above the Transform tool box:</p>
+<img alt="../_images/015RigMirror.png" src="../_images/015RigMirror.png" />
+<p>Note: <em>the ‘X’ is only visible - and tickable - in edit mode</em>.</p>
+<p>This tutorial will not go into great detail on - or pretend to be a definitive source for - the finer points of rigging. What follows is just what I do. I try to keep things as “anatomically correct” in terms of having the rig sort-of play the role of the spine in order for deformations to look as natural as possible. I’m open to suggestions on improving this approach:</p>
+<img alt="../_images/016HeadSpine.png" src="../_images/016HeadSpine.png" />
+<img alt="../_images/017LegFront.png" src="../_images/017LegFront.png" />
+<img alt="../_images/018LegSide.png" src="../_images/018LegSide.png" />
+<img alt="../_images/019Shoulder.png" src="../_images/019Shoulder.png" />
+<p>Once you’re happy with the rig adjustments, [TAB] out of Edit Mode. Here, I would do an incremental Save (GShortsPose03.blend).</p>
+<p>In the Object Data Properties panel for the metarig, press the [Generate Rig] button:</p>
+<img alt="../_images/020GenerateRig.png" src="../_images/020GenerateRig.png" />
+<p>which results in:</p>
+<img alt="../_images/021NewRigHandles.png" src="../_images/021NewRigHandles.png" />
 </div>
 </div>
 </div>
