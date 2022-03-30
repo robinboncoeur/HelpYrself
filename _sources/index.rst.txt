@@ -25,7 +25,8 @@ Can't remember? Help Yourself
    RSTs/Python.rst
    RSTs/ReaperApp.rst
    RSTs/ReaperReabanks.rst
-   RSTs/RigTute.rst
+   RSTs/RigT01.rst
+   RSTs/RigT02.rst
    RSTs/ReaperReaticulate.rst
    RSTs/Samyang.rst
    RSTs/Thoughts.rst

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part 2 - Rigging a Figure in Blender &mdash; Help Yourself 0.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reaticulate - Reabanks Development" href="ReaperReaticulate.html" />
+    <link rel="prev" title="Part 1 - Rigging a Figure in Blender" href="RigT01.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Help Yourself
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RigT01.html">Part 1 - Rigging a Figure in Blender</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Part 2 - Rigging a Figure in Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prepping-for-parenting">Prepping for Parenting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-and-prep-work">Import and Prep Work</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtualbox.html">Oracle’s VirtualBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Part 2 - Rigging a Figure in Blender</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/RSTs/RigT02.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="part-2-rigging-a-figure-in-blender">
+<h1>Part 2 - Rigging a Figure in Blender<a class="headerlink" href="#part-2-rigging-a-figure-in-blender" title="Permalink to this headline"></a></h1>
+<div class="section" id="prepping-for-parenting">
+<h2>Prepping for Parenting<a class="headerlink" href="#prepping-for-parenting" title="Permalink to this headline"></a></h2>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="import-and-prep-work">
+<h3>Import and Prep Work<a class="headerlink" href="#import-and-prep-work" title="Permalink to this headline"></a></h3>
+<blockquote>
+<div><img alt="../_images/021NewRigHandles.png" src="../_images/021NewRigHandles.png" />
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="RigT01.html" class="btn btn-neutral float-left" title="Part 1 - Rigging a Figure in Blender" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ReaperReaticulate.html" class="btn btn-neutral float-right" title="Reaticulate - Reabanks Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, Robyn Hahn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
