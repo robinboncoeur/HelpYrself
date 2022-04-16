@@ -2,23 +2,25 @@
 Reaper
 ######
 
-
+*********
 Behaviour
 *********
 
+`Reaper Toolkit <https://reapertoolkit.dev/manual/tutorial.html>`_
 
+****************
 Links Management
 ****************
 
 Mac users, please refer to the `Mac user help <http://blender.stackexchange.com/questions/6173/where-does-console-output-go>`_ page.
 
-
+*******
 Folders
 *******
 
 To identify where the various files are located, choose Show REAPER resource path in explorer/ finder from the Options menu.
 
-
+****
 MIDI
 ****
 

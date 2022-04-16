@@ -19,14 +19,13 @@ Can't remember? Help Yourself
    RSTs/LaTeX.rst
    RSTs/Links.rst
    RSTs/Linux.rst
-   RSTs/MacAdv.rst
-   RSTs/MacRep.rst
+   RSTs/MacAdvice.rst
    RSTs/Musescore.rst
    RSTs/Python.rst
-   RSTs/ReaperApp.rst
-   RSTs/ReaperReabanks.rst
+   RSTs/Reabanks.rst
+   RSTs/Reaper.rst
+   RSTs/Reaticulate.rst
    RSTs/RiggingFigures.rst
-   RSTs/ReaperReaticulate.rst
    RSTs/Samyang.rst
    RSTs/Thoughts.rst
    RSTs/Video.rst

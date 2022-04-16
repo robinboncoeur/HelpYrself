@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reaticulate - Reabanks Development &mdash; Help Yourself 0.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rigging a Figure in Blender" href="RiggingFigures.html" />
+    <link rel="prev" title="Reaper" href="Reaper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Help Yourself
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html">Mac Pointers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html#mac-repairs">Mac Repairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reaticulate - Reabanks Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-definitions">Add Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tackaberry-s-reaticulate-page">Tackaberry’s Reaticulate Page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reaticulate-notations-for-reabank-files">Reaticulate Notations for Reabank files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anatomy-of-a-standard-reabank-file">Anatomy of a standard Reabank file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reaticulate-notations">Reaticulate notations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes-for-bank-lines">Attributes for Bank Lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes-for-program-lines">Attributes for Program Lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#program-numbers">Program Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-events-specification">Output Events Specification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-event-examples">Output Event Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#multiple-notes">Multiple notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-channel-routing">Simple channel routing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#one-off-layering">One-off layering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#non-latching-latching-articulation-keyswitches">Non-latching / latching articulation keyswitches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contextual-articulations-based-on-state-of-other-groups">Contextual articulations based on state of other groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#articulation-colors">Articulation Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#articulation-icons">Articulation Icons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tack-s-addendae-on-the-thread">Tack’s Addendae On the Thread</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#post-172">Post 172</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-181">Note 181</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-185">Note 185</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-226">Note 226</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-236">Note 236</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-246-and-250">Notes 246 and 250</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note-290">Note 290</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Note 290</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jason-lyon-note-on-his-template">Jason Lyon Note on his Template</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-reabanks">The Reabanks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reatic-version-with-ens-sketch-tracks">Reatic Version with Ens Sketch Tracks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#garritan-personal-orchestra-5">Garritan Personal Orchestra 5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinematic-studio-strings">Cinematic Studio Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kirk-hunter-concert-brass-2">Kirk Hunter Concert Brass 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cinewinds-core">Cinewinds Core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pianoteq-stage">Pianoteq Stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reaticulation">Reaticulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-template">The Template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#track-control-panel-tcp">Track Control Panel (TCP)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#master-control-panel">Master Control Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sketches-section">Sketches Section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#general-mixing-and-mastering">General Mixing and Mastering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#finally">Finally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RiggingFigures.html">Rigging a Figure in Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtualbox.html">Oracle’s VirtualBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Reaticulate - Reabanks Development</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/RSTs/Reaticulate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="reaticulate-reabanks-development">
+<h1>Reaticulate - Reabanks Development<a class="headerlink" href="#reaticulate-reabanks-development" title="Permalink to this headline"></a></h1>
+<div class="section" id="add-definitions">
+<h2>Add Definitions<a class="headerlink" href="#add-definitions" title="Permalink to this headline"></a></h2>
+<p>Massive still ToDo phase, here. For now:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Unzip</span>
+
+<span class="o">*</span> <span class="n">Open</span> <span class="n">Reaper</span>
+
+<span class="o">*</span> <span class="n">To</span> <span class="n">install</span> <span class="n">the</span> <span class="n">script</span><span class="p">:</span>
+
+   <span class="mf">1.</span>
+
+   <span class="mf">2.</span>
+
+   <span class="mf">3.</span>
+
+   <span class="mf">4.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tackaberry-s-reaticulate-page">
+<h2>Tackaberry’s Reaticulate Page<a class="headerlink" href="#tackaberry-s-reaticulate-page" title="Permalink to this headline"></a></h2>
+<div class="section" id="reaticulate-notations-for-reabank-files">
+<h3>Reaticulate Notations for Reabank files<a class="headerlink" href="#reaticulate-notations-for-reabank-files" title="Permalink to this headline"></a></h3>
+<p>Note: <em>In the alpha preview of Reaticulate, there is no GUI for creating custom banks. It’ll come, but for now, you’ll need to understand the nitty gritty on this page.</em></p>
+<p>Reaticulate directly manages REAPER’s assigned global Reabank file, which it dynamically assembles from both the distributed factory banks and your own custom banks. Relative to REAPER’s resource directory (which you can find by invoking the REAPER action “Show REAPER Resource path”), these files are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Factory banks: Scripts/Reaticulate/Reaticulate-factory.reabank</p></li>
+<li><p>User banks: Data/Reaticulate.reabank</p></li>
+</ul>
+</div></blockquote>
+<p>(Reaticulate combines these files into a file it manages called Data/Reaticulate-tmp*.reabank. You’ll never edit this file directly, but it’s what Reaticulate feeds back to REAPER to use as the default reabank file.)</p>
+<img alt="../_images/reaBankEdit.png" src="../_images/reaBankEdit.png" />
+<p>Note: <em>You can take a look at the factory banks for inspiration, but if you want to start slinging your own custom articulation banks, the easiest way is to click the pencil button at the top of the UI and open the file in your editor. Clicking this will create the file if necessary before opening the editor. Open in Default App will launch whatever application you’ve associated with .reabank files.</em></p>
+<p><strong>Once you save changes to the file, click the reload button (next to the pencil) to force Reaticulate to pick up the changes.</strong></p>
+</div>
+<div class="section" id="anatomy-of-a-standard-reabank-file">
+<h3>Anatomy of a standard Reabank file<a class="headerlink" href="#anatomy-of-a-standard-reabank-file" title="Permalink to this headline"></a></h3>
+<p>Let’s take a look at the normal REAPER reabank file. The standard format is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bank</span> <span class="o">&lt;</span><span class="n">MSB</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">LSB</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Bank</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">program</span> <span class="n">number</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">articulation</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bank</span> <span class="mi">65</span> <span class="mi">1</span> <span class="n">Spitfire</span> <span class="n">Symphonic</span> <span class="n">Brass</span> <span class="o">-</span> <span class="n">Horn</span> <span class="n">Solo</span>
+<span class="mi">20</span> <span class="n">legato</span>
+<span class="mi">1</span> <span class="n">long</span>
+<span class="mi">52</span> <span class="n">marcato</span>
+<span class="mi">50</span> <span class="n">tenuto</span>
+<span class="mi">40</span> <span class="n">staccato</span>
+<span class="mi">100</span> <span class="n">rip</span>
+<span class="mi">101</span> <span class="n">fall</span>
+<span class="mi">70</span> <span class="n">trill</span> <span class="n">m2</span>
+<span class="mi">71</span> <span class="n">trill</span> <span class="n">M2</span>
+</pre></div>
+</div>
+<p>The two numbers on the Bank line indicate the MSB and LSB of the MIDI bank. These values are between 0 and 127 and are somewhat arbitrary, as long as the pair is unique to the REAPER instance. Following that is an arbitrary name for the bank.</p>
+<p>Note: <em>User banks must use MSBs from 0 to 63. MSB of 64 and above are reserved for factory banks.</em></p>
+<p>Each subsequent line (until the next Bank line) specifies the programs for the bank. The number is the MIDI Program Change event number. Although the program numbers are arbitary and don’t influence any specific behavior, some form of standardization is recommended because this allows using the Reaticulate_Activate articulation by CC actions to trigger a given articulation - or at least its closest approximation - from a control surface, tablet, etc., no matter the underlying instrument. So, for example, by consistently using program 42 to map to spiccato, or some similar very short articulation, you could have a control surface send CC value 42 - via a CC number of your choice bound to the Activate Articulation action - to set spiccato, no matter what track is selected.</p>
+<p>Note: <em>Reaticulate’s factory banks will conform as closely as possible to Spitfire’s UACC specification.</em></p>
+<p>The description is, in our case, the name of the articulation.</p>
+</div>
+<div class="section" id="reaticulate-notations">
+<h3>Reaticulate notations<a class="headerlink" href="#reaticulate-notations" title="Permalink to this headline"></a></h3>
+<p>Reaticulate extends Reabank files by adding special notations on lines starting with <strong>//!</strong></p>
+<p>Let’s revisit the above example bank, now notated for Reaticulate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! g=&quot;Spitfire/Symphonic Brass&quot; n=&quot;Horn Solo&quot;
+//! m=&quot;Set patch to UACC&quot;
+Bank 65 1 SSB - Horn Solo
+//! c=legato i=legato o=cc:32,20
+20 legato
+//! c=long i=note-whole o=cc:32,1
+1 long
+//! c=short i=marcato-quarter o=cc:32,52
+52 marcato
+//! c=short i=tenuto-eighth o=cc:32,50
+50 tenuto
+//! c=short i=staccato o=cc:32,40
+40 staccato
+//! c=short-dark i=rip o=cc:32,100
+100 rip
+//! c=short-dark i=rip-downward o=cc:32,101
+101 fall
+//! c=long i=trill-min2 o=cc:32,70
+70 trill m2
+//! c=long i=trill-maj2 o=cc:32,71
+71 trill M2
+</pre></div>
+</div>
+<p>… and how this bank looks in the GUI:</p>
+<img alt="../_images/reaBank-HornSolo.png" src="../_images/reaBank-HornSolo.png" />
+<p>Notated attributes take the form:</p>
+<blockquote>
+<div><p>name=value (or name=”value” if the value contains spaces)</p>
+</div></blockquote>
+<p>…and are separated by whitespace. The line(s) prefixed with //! immediately preceding the uncommented line will annotate it with the supplied attributes.</p>
+<p>When an articulation is triggered, Reaticulate will emit the MIDI output events defined by the o attribute: <em>one or more output events that describe the action taken when the articulation is triggered</em>. Consider this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=legato i=legato o=cc:32,20
+20 legato
+</pre></div>
+</div>
+<p>In that example, each articulation sends a single MIDI event: CC 32 with a value defined by the second argument. The expectation for this factory bank is that the Spitfire Horns Solo patch be set to UACC, a feature of the patch itself.</p>
+</div>
+<div class="section" id="attributes-for-bank-lines">
+<h3>Attributes for Bank Lines<a class="headerlink" href="#attributes-for-bank-lines" title="Permalink to this headline"></a></h3>
+<p>These are the supported attributes for Bank lines. Attributes are optional unless specifically marked as required.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>g (required)</p></td>
+<td><div class="line-block">
+<div class="line">Group name separated by slashes. Used to build a menu hierarchy for the bank.</div>
+<div class="line">Generally should be Vendor/Product.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>n</p></td>
+<td><div class="line-block">
+<div class="line">The name of the patch the bank describes. If not specified, uses the Reabank name.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>clone</p></td>
+<td><div class="line-block">
+<div class="line">Clones the articulations from the referenced bank, specified as a fully qualified</div>
+<div class="line">bank name - i.e., the groupname/bankname format - to the current bank which contains</div>
+<div class="line">the clone attribute. The cloned articulations will appear after any articulations explicitly</div>
+<div class="line">defined in the current bank.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>off</p></td>
+<td><div class="line-block">
+<div class="line">For articulations with note-hold outputs, this defines the ‘default program’ when no</div>
+<div class="line">note-hold articulation is active. The GUI will show this program as active when a manually</div>
+<div class="line">triggered note-hold keyswitch is released. When this articulation is explicitly activated</div>
+<div class="line">via Reaticulate, it will cause any active note-hold articulation to be released.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>f</p></td>
+<td><div class="line-block">
+<div class="line">Default articulation flags. Most can be overridden per articulation. Is a comma-</div>
+<div class="line">delimited list of one or more of the options below. Any option can be prefixed with ! to</div>
+<div class="line">negate it.</div>
+<div class="line">- chase: Chase CCs when target MIDI channel changes. (Default)</div>
+<div class="line">- antihang: Prevent note hanging when a note is released</div>
+<div class="line-block">
+<div class="line">on a different channel than it’s pressed. (Default)</div>
+</div>
+<div class="line">- antihangcc: Similar to antihang, but prevents the note</div>
+<div class="line-block">
+<div class="line">from hanging due to sustain pedal or breath control (CC 2 and 64).</div>
+<div class="line">In other words, it ensures sustain release or breath</div>
+<div class="line">off is sent to the channel where the ringing note was</div>
+<div class="line">struck, regardless of the current routing. (Default)</div>
+</div>
+<div class="line">- nobank: Blocks the bank select messages generated by</div>
+<div class="line-block">
+<div class="line">Reaticulate from hitting the downstream FX. (Default - bank level only)</div>
+</div>
+<div class="line">- toggle: Triggering the articulation when it’s active</div>
+<div class="line-block">
+<div class="line">will deactivate it. It will still emit the output events</div>
+<div class="line">but the UI will indicate the articulation as off if it was previously on.</div>
+</div>
+<div class="line">- hidden: Articulation will not be visible in the UI.</div>
+<div class="line-block">
+<div class="line">When defined at the bank level instead of a specific</div>
+<div class="line">articulation, the bank will not be available to add to</div>
+<div class="line">tracks, however any existing references to the bank</div>
+<div class="line">(e.g. in existing projects) will continue to work.</div>
+</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>chase</p></td>
+<td><div class="line-block">
+<div class="line">Comma-delimited list of CCs (or CC ranges) that should be chased when CC chasing</div>
+<div class="line">is enabled for an articulation (as is default). For example: 1,2,5,11-21,92-120.</div>
+<div class="line">(Default: 1,2,11,64-69)</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>m</p></td>
+<td><div class="line-block">
+<div class="line">A custom message displayed in the track configuration page and optionally the main</div>
+<div class="line">articulation list screen. This usually provides some special instructions about how to</div>
+<div class="line">configure the virtual instrument to be compatible with the bank, or other performance details.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes-for-program-lines">
+<h3>Attributes for Program Lines<a class="headerlink" href="#attributes-for-program-lines" title="Permalink to this headline"></a></h3>
+<p>Programs can be decorated with these attributes:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>i (required)</p></td>
+<td><p>} Articulation icon name. See Articulation Icons section for possible names.</p></td>
+</tr>
+<tr class="row-odd"><td><p>n</p></td>
+<td><div class="line-block">
+<div class="line">Overrides the articulation name for display in the articulation list in the Reaticulate</div>
+<div class="line">UI. Program events as seen in the MIDI editor will use the program name specified on</div>
+<div class="line">the uncommented line.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>c</p></td>
+<td><div class="line-block">
+<div class="line">Color for the articulation button. Either the name of a color (see Articulation Colors</div>
+<div class="line">section) or an HTML hex-style color in the form #rrggbb.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>f</p></td>
+<td><div class="line-block">
+<div class="line">Articulation flags as defined above. (Overrides the defaults set at the bank level.)</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>g</p></td>
+<td><div class="line-block">
+<div class="line">A group number between 1 and 4 (defaults to 1 if not specified). Only one articulation</div>
+<div class="line">within a group may be active at a time. For consistency, it is recommended that you use</div>
+<div class="line">group 1 for the main set of articulations.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>o</p></td>
+<td><div class="line-block">
+<div class="line">One or more output events that describe the action taken when the articulation</div>
+<div class="line">is triggered. With o, things get fun. See the Output Events section for the gory details.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>spacer</p></td>
+<td><div class="line-block">
+<div class="line">Inserts some padding above the articulation when displayed in Reaticulate’s</div>
+<div class="line">main articulation list screen. The value is a number that controls the amount of padding</div>
+<div class="line">but generally a value of 1 will provide a sufficient visual separation.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>transpose</p></td>
+<td><div class="line-block">
+<div class="line">A value between -127 and 127 which defines how many pitches incoming notes</div>
+<div class="line">should be transposed after the articulation is activated.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>velocity</p></td>
+<td><div class="line-block">
+<div class="line">A multiplier between 0.00 and 10.00 (up to 2 decimals of precision) that will be</div>
+<div class="line">applied to incoming note velocities. The note-off velocity (if it exists – it’s quite</div>
+<div class="line">rare) will also be multiplied by this value.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>pitchrange</p></td>
+<td><div class="line-block">
+<div class="line">A value in the form min-max defining the lower and upper limits that incoming</div>
+<div class="line">note pitch numbers will be clamped to. For example a value of 40-70 will force all notes</div>
+<div class="line">with pitch values below 40 to be 40, and values above 70 to be 70.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>velrange</p></td>
+<td><div class="line-block">
+<div class="line">A value in the form min-max defining the lower and upper limits that incoming</div>
+<div class="line">note velocities will be clamped to. For example a value of 32-64 will force all notes</div>
+<div class="line">with velocities below 32 to be 32, and velocities above 64 to be 64.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="program-numbers">
+<h3>Program Numbers<a class="headerlink" href="#program-numbers" title="Permalink to this headline"></a></h3>
+<p>Although the program numbers are arbitary and don’t influence any specific behavior, some form of standardization is recommended because this allows using the Reaticulate_Activate articulation by CC actions to trigger a given articulation (or at least its closest approximation) from a control surface, tablet, etc., no matter the underlying instrument.</p>
+<p>Note: <em>Reaticulate’s factory banks will conform as closely as possible to Spitfire’s UACC specification.</em></p>
+<p>So, for example, by consistently using program 42 to map to spiccato, or some similar very short articulation, you could have a control surface send CC value 42 (via a CC number of your choice bound to the Activate Articulation action) to set spiccato, no matter what track is selected.</p>
+</div>
+<div class="section" id="output-events-specification">
+<h3>Output Events Specification<a class="headerlink" href="#output-events-specification" title="Permalink to this headline"></a></h3>
+<p>Note: <em>This section is a bit nerdy. It’s quite necessary to understand to build your own banks, but don’t worry, there are some more approachable examples later.</em></p>
+<p>Programs can trigger up to 16 output events, specified by the o attribute, which ultimately describe the articulation’s behaviour.</p>
+<p>Output events can be used to send a MIDI event to the virtual instrument to cause the underlying patch to change articulations, or even just to set up routing to some destination MIDI channel. Or both: you can have a program send a MIDI event to a specific channel, and subsequently performed MIDI will be routed to that channel.</p>
+<p>Multiple output events are separated by a / (forward slash) where each individual output event roughly takes the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="nd">@channel</span><span class="p">:</span><span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span>
+</pre></div>
+</div>
+<p><strong>(no whitespace allowed)</strong></p>
+<p>A more formal specification for a single output event would look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">-</span><span class="p">][</span><span class="nb">type</span><span class="p">][</span><span class="nd">@channel</span><span class="p">[</span><span class="o">.</span><span class="n">bus</span><span class="p">]][:</span><span class="n">arg1</span><span class="p">[,</span><span class="n">arg2</span><span class="p">]][</span><span class="o">%</span><span class="n">filter_program</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>…where elements enclosed in square brackets are optional, and where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Output events prefixed with the minus sign [ - ] don’t affect the routing of future MIDI events. Otherwise, if channels are not prefixed this way then any future user-generated MIDI event will be routed to this channel when the articulation is activated.</p></li>
+<li><p>type defines the type of output event (see below), e.g. note, cc, etc.</p></li>
+<li><p>&#64;channel specifies the destination MIDI channel of the output event and, unless type is prefixed with -, it implies subsequent MIDI events will also be routed to that destination channel. When channel is not specified, the destination channel will be dictated by the destination channel the defined by the user when the bank was configured on the track. (See the usage page for more information on source and destination channels.) Alternatively, a special channel value of - will direct the output event to the destination(s) setup by the previously activated articulation.</p></li>
+<li><p>.bus specifies the destination bus of the output event and subsequent incoming events when the articulation is activated. bus is a value between 1 and 16. As with the channel, if not specified the default bus will be dictated by the destination bus for the bank’s track configuration. If the bus is defined but not the channel (e.g. &#64;.4) then then the default channel will be used but the bus will be overridden. If you use Reaticulate’s MIDI controller feedback feature, you won’t be able to assign bus 16 as this bus is used by the feedback feature internally.</p></li>
+<li><p>arg1 and arg2 depend on the type</p></li>
+<li><p>%filter_program if defined will only emit the output event if the specified program number filter_program is currently active on the same channel in another group. This allows the state of other groups to modify the output events emitted by the articulation. For example, you might have an articulation group that specifies normal attack vs hard attack with different programs. A single sustain articulation could then emit different keyswitches depending on whether the normal or hard attack is selected in the group.</p></li>
+</ul>
+</div></blockquote>
+<p>Possible output event types are:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>program</p></td>
+<td><div class="line-block">
+<div class="line">Program change message.</div>
+<div class="line">arg1 indicates the program number</div>
+<div class="line">arg2 can be omitted</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>cc</p></td>
+<td><div class="line-block">
+<div class="line">A CC event, with arg1 indicating the CC number and arg2 defining the CC value</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>note</p></td>
+<td><div class="line-block">
+<div class="line">A sequence of note-on and note-off events, where arg1 defines the note number and arg2</div>
+<div class="line">indicates note-on velocity. arg2 is optional and if not specified the default velocity is 127.</div>
+<div class="line">(It is not possible to specify the note-off velocity, however. This is a seldom-used feature</div>
+<div class="line">of MIDI.)</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>note-hold</p></td>
+<td><div class="line-block">
+<div class="line">A note-on event, where arg1 and arg2 are according to the note type. The</div>
+<div class="line">corresponding note-off event is deferred until the next articulation is activated. This</div>
+<div class="line">is useful with patches that use non-latching keyswitches.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>pitch</p></td>
+<td><div class="line-block">
+<div class="line">A pitch bend event, where arg1 is the 14-bit pitch bend value between -8192 and</div>
+<div class="line">8192 and arg2 is not used.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>art</p></td>
+<td><div class="line-block">
+<div class="line">Activate another articulation in the same bank, with arg1 being the articulation program</div>
+<div class="line">number and arg2 is omitted. This can be used to create composite articulations. For example,</div>
+<div class="line">if you have articulation groups for con sordino/senza sordino and legato/non-legato, you</div>
+<div class="line">could have another composite articulation for non-legato sustain con sordino that references</div>
+<div class="line">the articulations in the other groups.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Be aware that if multiple note output events are specified for a given articulation, all note-on events will be sent before any note-off event. This means as far as the target patch is concerned the notes will be simultaneously pressed. This is also true for note-hold events, except that of course in that case all the necessary note-off events will be deferred until the next articulation.</p>
+<p>The type can also be empty, specifying just &#64;channel, in which case the action of the articulation will just be to set up routing to the destination channel specified, with no MIDI event emitted.</p>
+<p>Alternatively, if the type is prefixed with a - sign (e.g. -note) then the output event is emitted but routing of subsequent user MIDI events to the output event’s destination channel will not be done. This can be useful for example to send control events to listeners on other channels. If all the output events for the articulation are prefixed this way, then the destination channel routing setup by the previous articulation won’t be altered.</p>
+</div>
+<div class="section" id="output-event-examples">
+<h3>Output Event Examples<a class="headerlink" href="#output-event-examples" title="Permalink to this headline"></a></h3>
+<p>Ok, with the technicals out of the way, here are some examples.</p>
+<div class="section" id="multiple-notes">
+<h4>Multiple notes<a class="headerlink" href="#multiple-notes" title="Permalink to this headline"></a></h4>
+<p>This one from Cinematic Studio Strings sends 3 separate notes at specific velocities to set sordino and legato in addition to the sustains patch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=long-light i=con-sord o=note:12/note:22,1/note:23,127
+7 con sordino
+</pre></div>
+</div>
+</div>
+<div class="section" id="simple-channel-routing">
+<h4>Simple channel routing<a class="headerlink" href="#simple-channel-routing" title="Permalink to this headline"></a></h4>
+<p>A generic example where we have 3 individual articulation patches on 3 separate MIDI channels and we want to do simple routing only: no keyswitches needed by the underlying virtual instrument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=legato i=legato o=@1
+20 legato
+//! c=long i=note-whole o=@2
+1 sustains
+//! c=short i=staccato o=@3
+40 staccato
+</pre></div>
+</div>
+</div>
+<div class="section" id="one-off-layering">
+<h4>One-off layering<a class="headerlink" href="#one-off-layering" title="Permalink to this headline"></a></h4>
+<p>Here’s another one from Cinematic Studio Strings, setting up spiccato without sordino. The twist is the “beefy spiccato” program, where we are setting CSS as with spiccato but also layering it with another patch on channel 2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=short i=spiccato o=note:17,1/note:23,1
+42 spiccato
+//! c=short-dark i=spiccato o=note:17,1/note:23,1/@2
+44 beefy spiccato
+</pre></div>
+</div>
+</div>
+<div class="section" id="non-latching-latching-articulation-keyswitches">
+<h4>Non-latching / latching articulation keyswitches<a class="headerlink" href="#non-latching-latching-articulation-keyswitches" title="Permalink to this headline"></a></h4>
+<p>Now for a more sophisticated example: an excerpt from the Bohemian violin bank. This instrument controls legato by a single note toggle keyswitch (hitting the same note repeatedly toggles legato), so this is in its own group.</p>
+<p>Most of the articulations in the Bohemian are only active while the note is held, and once the note is released, it defaults back to an intelligent, adaptive mode which VirHamonic calls the Performer. So the trick here is to specify an off program for the bank (we arbitrarily choose 0) which describes the default mode of the Bohemian when no articulations are explicitly chosen.</p>
+<p>Finally, the last 3 programs define the Performer styles, and unlike the others, these ones are latching keyswitches, so we use the note type for these:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! g=&quot;VirHarmonic/Bohemian Violin&quot; n=&quot;Expansion 1&quot; off=0
+Bank 42 7 Bohemian Violin Exp1
+//! c=long-dark i=note-whole g=2 f=toggle o=note:35
+35 chords
+
+//! spacer=1
+//! c=long-light i=phrase
+0 performer
+//! c=long i=note-half o=note-hold:24
+24 arc
+//! c=long-light i=legato-bowed2 o=note-hold:41
+41 rebow
+
+//! spacer=1
+//! c=fx i=phrase g=3 o=note:48
+48 improv
+//! c=fx i=phrase g=3 o=note:49
+49 czardas
+//! c=fx i=phrase g=3 o=note:50
+50 emotive
+</pre></div>
+</div>
+<p>This example also uses the spacer attribute to provide a visual separation between the groups.</p>
+</div>
+<div class="section" id="contextual-articulations-based-on-state-of-other-groups">
+<h4>Contextual articulations based on state of other groups<a class="headerlink" href="#contextual-articulations-based-on-state-of-other-groups" title="Permalink to this headline"></a></h4>
+<p>Suppose a trumpet library offered a number of different articulations with different types of mutes (no mute, straight mute, or harmon mute), with each variant being available under a different patch.</p>
+<p>The obvious approach would be to create different articulations for each of the normal vs hard attack variants. This is a perfectly cromulent strategy to be sure, but by using filter programs you could move the hard/normal attack flag to a group and use only a single program for each articulation even if it offers all three variants.</p>
+<p>Here we we have the three different patches for the different mute types on different MIDI channels. A single articulation definition can route to the appropriate patch depending on which mute articulation is selected:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! c=long i=note-whole g=2
+120 unmuted
+//! c=long-light i=stopped g=2
+121 straight mute
+//! c=long-light i=stopped g=2
+122 harmon mute
+
+//! c=long i=note-whole o=note@1:24%120/note@2:24%121/note@3:24%122
+1 long
+//! c=short i=staccato o=note@1:27%120/note@2:27%121/note@3:27%122
+40 staccato
+//! c=short i=marcato-quarter o=note@1:28%120/note@2:28%121/note@3:28%122
+52 marcato
+</pre></div>
+</div>
+<p>This bank uses programs 120-122 to define the different mute types. Notice there aren’t any output events with these articulations – they don’t actually emit any outputs directly, but rather they influence the output events emitted by the long and staccato articulations.</p>
+<p>Changing one of the mute types will retrigger long or staccato (whichever is selected) and cause the appropriate output event to be emitted for the new mute type.</p>
+</div>
+</div>
+<div class="section" id="articulation-colors">
+<h3>Articulation Colors<a class="headerlink" href="#articulation-colors" title="Permalink to this headline"></a></h3>
+<p>The c program attribute defines the color of the button for the articulation, which is either a HTML color code or one of the predefined names. When c isn’t specified, then the default color is used.</p>
+<p>This image shows the available names and their out-of-the-box colors:</p>
+<img alt="../_images/reaArtColors.png" src="../_images/reaArtColors.png" />
+<p>(The icons shown are just for demonstration purposes. The color selection has no bearing on the icon. That’s defined by the i attribute.)</p>
+<p>The factory banks use the light variants for articulations played more softly or subdued than normale, for example con sordino, sul tasto, or harmonics. The dark variants are used for grittier, distorted, or louder articulations, such as sul ponticello or Bartok pizzicato.</p>
+<p>These color names can be overridden by specifying a color attribute anywhere in your user Reabank file (path #2 listed at the top of this page), whose value is a comma-delimited list of name=#hexcode items. For example, this line overrides the default and fx colors:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//! colors=fx=#00ff00,default=#ff00ff
+</pre></div>
+</div>
+</div>
+<div class="section" id="articulation-icons">
+<h3>Articulation Icons<a class="headerlink" href="#articulation-icons" title="Permalink to this headline"></a></h3>
+<p>Here are the current icon names that may be assigned to the i attribute:</p>
+<img alt="../_images/reaArtIconsB.png" src="../_images/reaArtIconsB.png" />
+</div>
+</div>
+<div class="section" id="tack-s-addendae-on-the-thread">
+<h2>Tack’s Addendae On the Thread<a class="headerlink" href="#tack-s-addendae-on-the-thread" title="Permalink to this headline"></a></h2>
+<div class="section" id="post-172">
+<h3>Post 172<a class="headerlink" href="#post-172" title="Permalink to this headline"></a></h3>
+<p>At risk of only adding to the confusion, I’ll try to clarify the design of Reaticulate a bit in case it can help you reason through things like this.</p>
+<p>So you have a bunch of tracks on which you’ve added the Reaticulate FX at the top of the FX chain. The purpose of this FX is to translate Program Change MIDI events into whatever output events the VSTis later in the FX chain need to receive to control them. Reaticulate (hopefully) provides a convenient enough interface to insert these program events into MIDI items (stepwise or during live recording).</p>
+<p>The main “process” of Reaticulate (the long-running plugin that presents the GUI) is responsible for programming the JSFX on each track according to the bank(s) you have assigned per track. It transfers the details of the the banks the user has selected for the track, on which channels, all the banks’ articulations, their flags (Should the articulation chase CCs? Should it attempt to avoid note-hanging? etc.), and all the output events to the JSFX. Then when the JSFX receives a program event on some channel, it knows how to respond to it.</p>
+<p>When you create your own user banks by editing the Reaticulate.reabank file (and eventually there will be a built-in GUI to build banks so you won’t have to edit that file directly), you need to click the reload button at the top of the Reaticulate GUI to cause Reaticulate to rediscover the changes.</p>
+<p>This “rediscovery” does a few things:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>It combines all the factory banks and all the user banks into one big bank file (and strips out all of Reaticulate’s custom markup) into DataReaticulate-tmp&lt;#&gt;.reabank (where &lt;#&gt; is just some monotonically increasing number).</p></li>
+<li><p>It modifies Reaper’s .ini file to update the MIDI default bank file to this new tmp reabank file.</p></li>
+<li><p>It does some other tricks to smack Reaper upside the head so that it takes notice of this new config change.</p></li>
+<li><p>On the currently selected track, it clears and reprograms the Reaticulate JSFX to sync any changes that may have been made to the banks on that trick.</p></li>
+</ol>
+</div></blockquote>
+<p>Afterward, when selecting new tracks in the project, if Reaticulate notices the compiled bank version (that &lt;#&gt; above) reported by the track’s Reaticulate JSFX is different than the latest version, then it will also reprogram the JSFX to ensure it’s kept in sync with the latest bank changes.</p>
+<p>So at the end of the day, if you’re modifying that Reaticulate.reabank file but not clicking that refresh button in the Reaticulate UI, Reaper won’t know about the changes you made. If you then manually insert a program event in the MIDI editor, indeed, Reaper won’t know how to resolve the program number into its name so it will report the bank/program number. I think this maybe is what happened from your description?</p>
+<p>I suppose most users wouldn’t run into that problem because the way to insert a program event is by clicking an articulation in Reaticulate’s UI. And if Reaticulate is able to present the articulation in the UI, it’s because it refreshed the reabank file and discovered them, in which case it would have ensured Reaper itself knows about those changes.</p>
+</div>
+<div class="section" id="note-181">
+<h3>Note 181<a class="headerlink" href="#note-181" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by sveinpetter::</dt><dd><p>The GUI in Trillian shows the Key Select and sounds good, but the Key Select ends up as Type PC with the Value of the note. Not as Type Note. When recording to Midi.
+Sorry for all my Edits … When playing back the midi file, the PC Values triggers Key Select OK. Hhmm.</p>
+</dd>
+</dl>
+<p>Reaticulate inserts program changes into the MIDI item, but those program changes are then translated as they pass through the Reaticulate JSFX on your FX chain so that the downstream VSTi receives the output events you configured for the articulation. (Notes, in this case.)</p>
+</div>
+<div class="section" id="note-185">
+<h3>Note 185<a class="headerlink" href="#note-185" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by pceniza::</dt><dd><p>From my understanding on tack’s website you must use between bank msb 0-63 for user banks. However, does this mean you can only use up to 63 banks?</p>
+</dd>
+</dl>
+<p>Keep in mind a bank is described by the pair of MSB and LSB. Each MSB can have 0-127 LSBs. So you have a lot more space than 64 banks.</p>
+<p>Recommend you avoid MSB and LSB 0 just because there are sometimes interesting edge cases. So that gives you space for 63*127=8001 banks. Should be safe.</p>
+<p>MSB/LSB assignment will eventually be handled by the bank editor GUI and will be invisible to the user (unless they poke into advanced settings) so I haven’t made a lot of effort to simplify this.</p>
+<p>You may find values above 127 <em>appear</em> work for both MSB and LSB in that the program lane in the MIDI editor resolves the numbers into text. (I seem to recall noticing this.) But the MIDI spec is clear that these are 7 bit values. So even if, for example, by some quirk of Reaper’s internal processing you’re able to pass 8 bit values for MSB and LSB (0-255) to the JSFX, Reaticulate’s JSFX definitely interprets these as 7 bit values and in many places masks off other bits. So MSB/LSB above 127 will definitely fail.</p>
+</div>
+<div class="section" id="note-226">
+<h3>Note 226<a class="headerlink" href="#note-226" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by thevisi0nary::</dt><dd><p>Say I have one kontakt instance, channel 1 is Symphonic Strings standard articulations, and channel 2 is decorative. Is there a way to have a separate channel for each one as I switch between channels?</p>
+</dd>
+</dl>
+<p>Assuming you’re referring to Spitfire here, these patches can actually coexist on the same channel. You just need to set the patches to “Locked to UACC.” (This is required if you use the factory banks, anyway.) So you don’t need to use separate MIDI channels for this example, and in the Reaticulate config for the track you can set the source channel of both to Omni.</p>
+<p>Now supposing we were talking about a different library where the two patches you mentioned clearly conflicted with one another such that you were forced to put them on different channels – for example, because they used the same keyswitches and couldn’t be reassigned to avoid the conflict. So in Kontakt, you had the standard patch set to channel 1, and the decorative patch set to channel 2.</p>
+<p>You actually have two options:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>You do everything in channel 1 (for example) and let Reaticulate reroute to Kontakt on channel 1 or channel 2 depending on which articulation you have activated. In other words, let Reaticulate abstract away the details about which channel the Kontakt patches are set to and just do all your performance on a single channel. This is the easiest and most obvious way, but it only works as long as there’s no overlap in the program numbers between the two banks.</p></li>
+<li><p>You explicitly change MIDI channels in Reaper based on the articulation you want to activate (standard vs decorative). You need to keep track yourself of which bank is on which channel before you activate the articulation. This is more awkward than #1, but it would be necessary if you had the same program number listed in both banks: in this case Reaticulate can’t know which one you want, so you need to disambiguate it by sending the program change on the right channel.</p></li>
+</ol>
+</div></blockquote>
+<p>So in Reaticulate’s track settings, for #1, you just set the source channel to Omni for both banks, and the target channel will be either 1 or 2 depending how the patch is set in Kontakt.</p>
+<p>Meanwhile, for #2, you set the source channel to either 1 or 2 (depending on how they’re assigned in Kontakt) and then you can set the target channel to the same (1 or 2), or just leave it set to Source, which just means that program changes coming in on channel 1 get routed to Kontakt on channel 1, and program changes on channel 2 get routed to Kontakt on channel 2.</p>
+<p>Clear as mud? Hopefully you can just set your Spitfire patches to UACC and call it a day.</p>
+</div>
+<div class="section" id="note-236">
+<h3>Note 236<a class="headerlink" href="#note-236" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by PrimeEagle::</dt><dd><p>Is there a way to change the volume/velocity when changing articulations, for example to make pizzicato quieter than arco?</p>
+</dd>
+</dl>
+<p>Assuming your VI responds to CC7, you could chain a CC7 event to the articulation’s output event list to set the appropriate volume.</p>
+<p>Some patches, such as those from Spitfire, allow CC11 to control the volume for all articulations (including shorts), so this would probably be preferable to CC7.</p>
+</div>
+<div class="section" id="notes-246-and-250">
+<h3>Notes 246 and 250<a class="headerlink" href="#notes-246-and-250" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by G-Sun::</dt><dd><p>But, this seems wrong (my file)…
+Code: o=&#64;2 o=cc:20,1
+What’s the correct syntax?</p>
+</dd>
+</dl>
+<p>Multiple output events are separated by a / (forward slash) where each individual output event roughly takes the form <a class="reference external" href="mailto:type&#37;&#52;&#48;channel">type<span>&#64;</span>channel</a>:arg1,arg2 (no whitespace allowed). So you would need:</p>
+<dl class="simple">
+<dt>Code::</dt><dd><p><a class="reference external" href="mailto:o=&#37;&#52;&#48;2/cc">o=<span>&#64;</span>2/cc</a>:20,1</p>
+</dd>
+</dl>
+<p>But note as written that CC will go to the default channel. If you actually want to send it to channel 2 and route subsequent events there, this is actually what you want…</p>
+<dl class="simple">
+<dt>Code::</dt><dd><p>o=cc&#64;2:20,1</p>
+</dd>
+<dt>Posted by G-Sun::</dt><dd><p>Got it working by both by setting source to ch2 and coded as above. Will use setting source, as it seems more flexible.</p>
+</dd>
+</dl>
+<p>Source relates to where your originating MIDI events are expected to come in on. If you don’t care about that then set Source to Omni. Setting the Destination channel to “Source” is fine (and what I’d do) if you’re explicitly defining the target channels in the banks.</p>
+<p>In other words, with “o=cc&#64;2:20,1” you can set the bank to Source=Omni and Target=Source no problem because you’re dictating the target channel right in the articulation definition.</p>
+<p>Or, if you wanted the bank itself to be agnostic to the target channel, you could choose not to define the target channel in the output events (“o=cc:20,1”) and then use Source=Omni and Target=2.</p>
+<dl class="simple">
+<dt>Posted by G-Sun::</dt><dd><p>Is the reabank-file limited to 128 Program lines articulations? I got some errors on same numbering, although it should be different &lt;LSB&gt; and Bank name.</p>
+</dd>
+</dl>
+<p>Right, the warning you’re talking about is probably because you have conflicting program numbers between multiple banks loaded in on the same track?</p>
+<p>This conflict happens when you have the same program numbers on the same source channels. If you have two banks, both defining e.g. program 1, and both set to the same Source channel (whether Omni or some specific number), the way Reaticulate works right now it can’t differentiate between them, because it only looks at the program numbers and not the bank select events that precedes it.</p>
+<p>Right now the workaround is to use different source channels for the banks. This means your performance MIDI needs to be on different source channels.</p>
+<p>Addressing this properly requires some pretty drastic design changes unfortunately.</p>
+</div>
+<div class="section" id="note-290">
+<h3>Note 290<a class="headerlink" href="#note-290" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Posted by Arthur McArthur::</dt><dd><p>One thing I noticed is that if I have more than one track selected and I change articulations, that articulation gets pushed to all tracks that are record armed. Is that expected? Would it be possible for the articulation to only be passed to the selected track(s)?</p>
+</dd>
+</dl>
+<p>That’s the expected behavior, yeah. When you click on an articulation, it emits the MIDI program change event, and Reaper will route that message to all record-armed tracks.</p>
+<p>I feel like this actually makes more sense than just targeting selected tracks, because the articulation change is an element of a MIDI performance. So if I change an articulation and then play a note, I would expect those two things to go to the same tracks.</p>
+<p>In any case that behaviour isn’t configurable. Although it technically could target only selected tracks (not easily though), I feel like that’s even more confusing than sending to all record-armed tracks – if anything, shouldn’t it only target the last touched track that the Reaticulate GUI is showing current banks for?</p>
+<p>Does anyone else find the current behavior counter-intuitive? If so, how would you expect it to work?</p>
+</div>
+<div class="section" id="id1">
+<h3>Note 290<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+</div>
+</div>
+<div class="section" id="jason-lyon-note-on-his-template">
+<h2>Jason Lyon Note on his Template<a class="headerlink" href="#jason-lyon-note-on-his-template" title="Permalink to this headline"></a></h2>
+<div class="section" id="the-reabanks">
+<h3>The Reabanks<a class="headerlink" href="#the-reabanks" title="Permalink to this headline"></a></h3>
+<div class="section" id="reatic-version-with-ens-sketch-tracks">
+<h4>Reatic Version with Ens Sketch Tracks<a class="headerlink" href="#reatic-version-with-ens-sketch-tracks" title="Permalink to this headline"></a></h4>
+<p>This is a mid to late Romantic-era orchestra, not a kitchen sink epic job.</p>
+</div>
+<div class="section" id="garritan-personal-orchestra-5">
+<h4>Garritan Personal Orchestra 5<a class="headerlink" href="#garritan-personal-orchestra-5" title="Permalink to this headline"></a></h4>
+<p>GPO is limited by modern standards (for instance the legato and portamento are scripted not sampled) but you can’t fault it on sheer value. It’s more a “concertish” sound than a “filmic” one, but it makes a very good bedrock for any project.</p>
+<p>It involves quite a few compromises, but it’s comprehensive, practical, durable and has a minimal hit to resources. It’s ideal for sketching and even full productions, especially if you really get under the hood. It’s used here as the “meat and potatoes” element of the template.</p>
+</div>
+<div class="section" id="cinematic-studio-strings">
+<h4>Cinematic Studio Strings<a class="headerlink" href="#cinematic-studio-strings" title="Permalink to this headline"></a></h4>
+<p>CSS is a more advanced string library, allowing for more natural sounding sampled legato (among many other things). Its inclusion here is primarily for layering purposes. The workhorse legato approach of GPO5 can be augmented by doubling the GPO MIDI content in the nested CSS MIDI tracks, creating an overlay for far more realistic performance, as well as variety of tone and more density.</p>
+<p>I’ve used the older Classic Legato patches since they seem to blend with less angst.</p>
+<p>CSS has generally brighter and more aggressive performances (a little more in the “filmic” direction). Experimenting with the relative feeds of GPO and CSS can give interesting and different results. For instance, to stay “concertish”, dial in just enough of CSS to give the increased realism. To get brighter and tighter, alter the balance more in favour of CSS. You could of course simply mute out one or the other entirely.</p>
+<p>CSS Solo Vlns, Vla and Cello are included.</p>
+</div>
+<div class="section" id="kirk-hunter-concert-brass-2">
+<h4>Kirk Hunter Concert Brass 2<a class="headerlink" href="#kirk-hunter-concert-brass-2" title="Permalink to this headline"></a></h4>
+<p>All instruments but the bass trombone are doubled in nested tracks. As opposed to the strings sections, I feel these are best used as either/or, but I suppose you could double your brass up if you wished.</p>
+<p>Again, the advantage to using these samples is primarily for more sophisticated legato handling, as well as much greater control over articulations. KHB is brighter and punchier than GPO, but not enough to trouble the overall balance too much.</p>
+</div>
+<div class="section" id="cinewinds-core">
+<h4>Cinewinds Core<a class="headerlink" href="#cinewinds-core" title="Permalink to this headline"></a></h4>
+<p>All major woods are doubled in nested tracks. Again these can be either/or/and. The advantages are the same as with KHB. Again, this library is punchier than GPO, but combines well with it.</p>
+</div>
+<div class="section" id="pianoteq-stage">
+<h4>Pianoteq Stage<a class="headerlink" href="#pianoteq-stage" title="Permalink to this headline"></a></h4>
+<p>Acoustically modelled piano, set by default to Steinway D.</p>
+</div>
+<div class="section" id="reaticulation">
+<h4>Reaticulation<a class="headerlink" href="#reaticulation" title="Permalink to this headline"></a></h4>
+<p>Jason Tackaberry’s solution to articulation management. Flexible, visually appealing and auto-chasing. You’ll need to add my text file to the Reaticulate file in REAPER/Data. NB: <em>This version of the template retains the default KS mapping for all libraries. If you want to simply copy over MIDI items you’ll have to do some editing work.</em></p>
+</div>
+</div>
+<div class="section" id="the-template">
+<h3>The Template<a class="headerlink" href="#the-template" title="Permalink to this headline"></a></h3>
+<p>The layout philosophy is simple - when you’re above the line (track panel) you’re a musician, when you’re below (mixer panel) you’re an engineer.</p>
+<p>The template compromises total flexibility in favour of what I’ve found to be practical workflow. For instance, it’s better to control instrument volume in MIDI by sample cross-fades rather than volume envelopes. Thus envelopes for audio tracks aren’t displayed.</p>
+<div class="section" id="track-control-panel-tcp">
+<h4>Track Control Panel (TCP)<a class="headerlink" href="#track-control-panel-tcp" title="Permalink to this headline"></a></h4>
+<p>The Track Panel Master (the real Master) is acting as a sort of “Conductor” track, with visible control over global tempo and volume envelopes.</p>
+<p>The MIDI tracks have preroll items in them to send setup info to the VSTis. These items also include MIDI note name info to display only in-range notes and KSes in MIDI Editor. The Editor windows also include cc lanes for cc2 vibrato, cc20 portamento (for GPO instruments only), mod wheel and velocity. You can add many more lanes for detailed control, but I’ve found these are the most frequently used.</p>
+<p>Every available instrument is displayed by default, but they can be hidden or deleted if you wish. The sections are laid out in traditional score order, but you can move them around. (Note that the MIDI tracks above and Audio tracks below are different entities, so you’ll need to hide, delete or move them in both panels.)</p>
+</div>
+<div class="section" id="master-control-panel">
+<h4>Master Control Panel<a class="headerlink" href="#master-control-panel" title="Permalink to this headline"></a></h4>
+<p>The “MASTER FX” track serves as the mix master and contains EQ, multiband compressor and limiter. (The top Master track has the final say over volume though).</p>
+<p>The five blue section tracks labelled “SUB” simply bulk-handle the M, S and fader controls of all section audio tracks. The summed audio output of all instruments in each section are displayed for visual monitoring purposes.</p>
+<p>The audio track M, S and R controls are master-slaved to the related MIDI tracks. The audio tracks themselves are record-disabled to prevent inadvertent doubling.</p>
+<p>The individual instrument audio tracks contain instances of ReaPitch randomly knocked a few cents sharp and flat. Second rank instruments (woods and FHs) also have a slight high EQ cut, Third rank instruments (other brass and percussion) have a slightly stronger high EQ cut.</p>
+<p>There are three reverbs - Room, Preverb Rank 2 and Preverb Rank 3 (in black). The instrument tracks are bussed in combination to these to create spacial depth in combination with the per-track EQ cuts.</p>
+<p>The reverb busses all have their own slight EQ low roll-off to help combat mud.</p>
+<p>The “engine room” is the VSTi “container” tracks (in purple). Instruments are banked here, set to auto-legato, centred and dry. Relative output from all “container” tracks can be faded to taste.</p>
+<p>There is an extra “container” track called GPOFrontDesks. This receives MIDI from the GPO VlnsI, VlnsII, Vlas and Cellos tracks and outputs small sections. It can be faded up to add a little variety and bite to the strings.</p>
+<p>All instruments are sent mono except the General Percussion and String Sections. The strings, although stereo, are centred so you can pan your sections in-Daw while retaining their individual spreads.</p>
+<p>All FX used are stock REAPER ones, for maximum compatibility.You can swap in your favourites, of course.</p>
+</div>
+<div class="section" id="sketches-section">
+<h4>Sketches Section<a class="headerlink" href="#sketches-section" title="Permalink to this headline"></a></h4>
+<p>CWC, KH Legacy and CSS ensemble tracks for sketching generic wood, brass and string chords or lines. Articulations are available.</p>
+</div>
+<div class="section" id="general-mixing-and-mastering">
+<h4>General Mixing and Mastering<a class="headerlink" href="#general-mixing-and-mastering" title="Permalink to this headline"></a></h4>
+<p>The emphasis of the template all the way through the signal chain until the SUB busses is on achieving a natural sounding mix. Each of the SUB busses contains a flat-set EQ in case you get naughty buildups.</p>
+<p>The MASTER FX (or premaster) has the potential to start straying from mxiing into mastering territory. The EQ, band compressor and limiter are all very gently set to provide a littlle more idea of how it’s all going to eventually sound while you’re composing and mixing. Obviously if you’re going to be sending your mix to be mastered by someone else you should disable the FX chain on this channel before sending the file(s).</p>
+</div>
+<div class="section" id="finally">
+<h4>Finally<a class="headerlink" href="#finally" title="Permalink to this headline"></a></h4>
+<p>Comments, suggestions and bug reports to:
+<a class="reference external" href="mailto:jasonalyon&#37;&#52;&#48;hotmail&#46;com">jasonalyon<span>&#64;</span>hotmail<span>&#46;</span>com</a>
+27/03/18</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Reaper.html" class="btn btn-neutral float-left" title="Reaper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="RiggingFigures.html" class="btn btn-neutral float-right" title="Rigging a Figure in Blender" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, Robyn Hahn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
