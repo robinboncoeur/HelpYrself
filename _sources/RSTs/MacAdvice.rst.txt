@@ -1,120 +1,26 @@
-############
-Mac Pointers
-############
+##########################
+Mac Tips, How-Tos and More
+##########################
 
-
-*********************
-Toggling Hidden Files
-*********************
-
-Make sure a folder is actually active, then press [Shift] [Command] [.]
-
-
-***********************
-Cloning An SSD on a Mac
-***********************
-
-Disk Utility has always been able to create clones, although the app refers to the process as Restore, as in restoring data from a source drive to a target drive. The restore function isn't just for drives. It will work with just about any storage device that you can mount to your Mac, including disk images, hard drives, SSDs, and USB flash drives.
-
-**How Restore Works**
-
-The Restore function in Disk Utility uses a block copy function that can speed up the copy process. It also makes an almost exact copy of the source device. What "almost exact" means is that a block copy moves everything in a data block from one device to the other. The results are almost an exact copy of the original. A file copy copies the data file by file. While the information remains the same, the location of the file on the source and destination devices will likely be different.
-
-Using a block copy is faster, but it does have some limits that affect when it can be used, the most important being that copying block by block requires that both the source and destination devices be first unmounted from your Mac. This ensures that block data doesn't change during the copy process. Don’t worry, though; you don’t have to do the unmounting. Disk Utility’s Restore function takes care of that for you. But it does mean that neither the source nor the destination can be in use when you use the Restore capabilities.
-
-**To Restore a Non-Startup Volume**
-
-You can’t use the Restore function on the current startup drive, or any drive that has files in use. If you need to clone your startup drive, you can make use of either your Mac's Recovery HD volume or any drive that has a bootable copy of OS X installed.
-
-	1. Launch Disk Utility, located at /Applications/Utilities.
-	2. The Disk Utility app will open, displaying a single window divided into three spaces: a toolbar, a sidebar showing currently mounted drives and volumes, and an info pane, showing information about the currently selected device in the sidebar.
-	3. In the sidebar, select the volume to which you want to copy/clone data. The volume you select will be the destination drive for the Restore operation.
-	4. Select Restore from Disk Utility’s Edit menu.
-	5. A sheet will drop down, asking you to select from a drop-down menu the source device to use for the Restore process. The sheet will also warn you that the volume you selected as the destination will be erased, and its data will be replaced with data from the source volume.
-	6. Use the drop-down menu next to the "Restore from" text to select a source volume, and then click the Restore button.
-	7. The Restore process will begin. A new drop-down sheet will display a status bar indicating how far along in the Restore process you are. You can also see detailed information by clicking the Show Details disclosure triangle - although there's really not much there. Note: *this process takes a long time (hours) especially if the source is via usb... we're talking hours!*
-	8. Once the Restore process is complete, the drop-down sheet’s Done button will become available. Click Done to close the Restore sheet.
-	
-
-**Restore Using a Startup Drive**
-
-When you use the Restore function, both the destination and the source must be able to be unmounted. Your startup drive can't be active if you want to restore it. Instead, you can start your Mac from another volume that contains a bootable version of the Mac OS. The one you use can be any volume attached to your Mac, including a USB flash drive, an external, or the Recovery HD volume.
-
-A complete step-by-step guide is available in `Use the Recovery HD Volume to Reinstall OS X or Troubleshoot Mac Problems <https://www.lifewire.com/use-recovery-hd-volume-to-reinstall-os-x-2259971>`_.
-
-
-
-
-
-***************************
-Slow Boot after SSD Upgrade
-***************************
-
-**Question**:
-
-My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD.
-
-    * Verified and repaired disk permissions.
-    * Restarted. Boot up time about 1 minute 20 seconds.
-    * Shut down.
-    * Reset PRAM.
-    * Boot up time about 1 minute.
-    * Restarted. Boot up time about 43 minutes.
-
-Didn't work.
-
-**Answer**:
-
-The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs:
-
-    1. Go to System Preferences -> Startup Disk
-    2. Click on the bottom left Lock tu unlock the changes
-    3. Select Macintosh HD (it's likely to be the only on the list)
-    4. Click 'Restart...'
-
-Be patient: the restart can take a few minutes.
 
 ********************
-Key Links to Support
+Basic Tip and Tricks
 ********************
 
+
 ===============
-OS Installation
+Screen Captures
 ===============
 
-How to make a `Bootable USB for MacOS <https://support.apple.com/en-us/HT201372>`_.
-
-Install Catalina on `Apple- unsupported models <http://dosdude1.com/catalina/>`_ using the DOSDude solution. Here's the video:
-
-.. raw:: html
-   
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-======
-Repair 
-======
-
-Look up your Mac's specs on `EveryMac.com <https://everymac.com/ultimate-mac-lookup/>`_ using the serial number. Additionally, some `iMac-specific information <https://everymac.com/systems/apple/imac/imac-aluminum-faq/imac-intel-aluminum-processor-upgrade-instructions.html>`_. `iFixit's take on repairing iMacs <https://www.ifixit.com/Search?doctype=guide&query=iMac>`_. This link::
-
-	https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Early+2011+Logic+Board+Replacement/5154
-	
-is valid but Sphinx doesn't care for it - copy and paste this into the browser to see iFixit's solutions to repairing the 2011 Macbook Pro.
-
-
-************
-Screen Shots
-************
-
-Easy enough to obtain. For the whole screen::
+For the whole screen::
 
     [Shift][Command][3]
 
-or for the active window::
+or for a part of it::
 
     [Shift][Command][4]
 
-To change the type of image that gets saved, open Terminal and enter::
+You'll get a rectangular outliner to define what you want capturing. To change the type of image that gets saved (default is .png), open Terminal and enter::
 
     defaults write com.apple.screencapture type png
 
@@ -122,100 +28,25 @@ The last string can be changed to jpg, tiff or even pdf.
 
 
 
-*******************
-Where is This File?
-*******************
+======================
+Toggle File Visibility
+======================
 
-To quickly find the fully-qualified path to a file, open a copy of terminal and drop the file onto it.
-
-
-
-*********************
-Saving YouTube Videos
-*********************
-
-You will need Python for this: I use Python3. You will need to install PyTube, which you can get `here <https://github.com/nficano/pytube>`_ or `in the ReadTheDocs page <https://python-pytube.readthedocs.io/en/latest/user/install.html>`_. Keep that first address, as you may need to update PyTube.
-
-The script to download a file is the following::
-
-    #!/usr/local/bin/python3
-    # PyTuber02.py
-    # Simplify importing YouTube videos with pytube
-    from pytube import YouTube
-    # import sys
-
-    # sFile = sys.argv[1]
-    sFile = input("Enter YouTube URL: ")
-
-    if len(sFile) == 0:
-        print("No file link passed: nothing to do")
-    else:
-        YouTube(sFile).streams.first().download()
-
-I've got the script saved in the Movies folder, and call it this way::
-
-    ~/Movies/PyTuber02.py
-
-in Terminal, from anywhere that I might have 'cd-d' to, then copy and past the URL of the video I wish to download. No dependency on SaveFro.net or other browser helpers anymore.
-
-However, it's not a perfect solution... not because of the solution but because YouTube keeps moving the goalposts. Recently (err, today) tried to download a file::
-
-    Enter YouTube URL: https://www.youtube.com/watch?v=YFRFgRm1BYE
-
-and got::
-
-    Traceback (most recent call last):
-      File "/Users/robinhahn/Movies/PyTuber02.py", line 13, in <module>
-        YouTube(sFile).streams.first().download()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 88, in __init__
-        self.prefetch_init()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 97, in prefetch_init
-        self.init()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 133, in init
-        mixins.apply_signature(self.player_config_args, fmt, self.js)
-      File "/usr/local/lib/python3.7/site-packages/pytube/mixins.py", line 49, in apply_signature
-        signature = cipher.get_signature(js, stream['s'])
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 245, in get_signature
-        tplan = get_transform_plan(js)
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 64, in get_transform_plan
-        name = re.escape(get_initial_function_name(js))
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 40, in get_initial_function_name
-        return regex_search(pattern, js, group=1)
-      File "/usr/local/lib/python3.7/site-packages/pytube/helpers.py", line 65, in regex_search
-        .format(pattern=pattern),
-    pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
-
-Here's where the Issues page on github is useful: apparently the regex had been tweaked chez YouTube, which caused the script to fail. You'll find details on the `Issues page <https://github.com/nficano/pytube/issues>`_ on pending fixes to the problem.
-
-Eventually: fortunately, the developer keeps a close eye on it.
-
-In the meantime, to pip-install directly from the original project::
-
-    pip install git+https://github.com/nficano/pytube.git
-
-Seems that one needs to fix cypher.py from time to time. One such regex string would be::
-
-    r'\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\('
+Make sure a folder is actually active, then press [Shift] [Command] [.]
 
 
 
-***************************
-Make a Py Script Executable
-***************************
+======================
+Get the Path to a File
+======================
 
-Make sure you have::
-
-    #!/usr/local/bin/python3
-
-at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
-
-    chmod +x -/path/NameOfScript.py
-    
+To quickly find the **fully-qualified path** to a file, open a copy of terminal and drop the file onto it.
 
 
-**********************************
-Make a file executable in Terminal
-**********************************
+
+========================
+Make a Script Executable
+========================
 
 Shell scripts must be executable files in order to run. You can use the chmod command to indicate that the text file is executable (that is, its contents can be run as a shell script). In the Terminal app  on your Mac, use the cd command to move into the directory that contains the file you want to make executable. For example::
 
@@ -235,25 +66,24 @@ or::
     ./YourScriptName.sh
 
 
-=============
-Clone My VDMK
-=============
 
-This is for a VM in VirtualBox::
+===========================
+Make a Py Script Executable
+===========================
 
-	Last login: Fri Nov 22 06:58:35 on ttys000
-	Robins-MBP:VirtualBox VMs robinhahn$ VBoxManage clonehd --format vdi "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vmdk" "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vdi"
-	0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-	Clone medium created in format 'vdi'. UUID: 34fd4231-0eb6-4d35-94ed-89a4ef1331a3
-	Robins-MBP:VirtualBox VMs robinhahn$ 
+Make sure you have::
 
-	<a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/IMG_4333.JPG" id="1998992764" class="has-link" dm_dont_rewrite_url="false" href="https://www.tightbytes.com" file="false" data-link-url="https://www.tightbytes.com" target="_blank" style="background-image: url(&quot;https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1280w.JPG&quot;);"><img irh="" irw="" alt="" data-src="https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1920w.JPG" id="1637023030" onerror="handleImageLoadError(this)"></a>
+    #!/usr/local/bin/python3
+
+at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
+
+    chmod +x -/path/NameOfScript.py
+    
 
 
-
-**********
+===========
 Networking
-**********
+===========
 
 `Configuring Linux Mint for Networking <https://linuxhint.com/network-configuration-linux-mint/>`_
 
@@ -265,31 +95,14 @@ Networking
 
 `Sharing Windows, Linux and Macs on a Network <https://www.howtogeek.com/191116/how-to-share-files-between-windows-mac-and-linux-pcs-on-a-network/>`_
 
-**********
-Other Tech
-**********
-
-`NewerTech <https://www.newertech.com/tech_support/manuals/mac/clon_data.php>`_
-
-
-`CTPC <https://ctpc.biz/>`_
-
-
-`Server On The Move <https://www.serveronthemove.com.au/collections/arduino>`_
-
-
-`Grady Hillhouse Garduino <https://github.com/gradyh/GradyHillhouseGarduino>`_
-
-
-`Octo Parts <https://octopart.com/>`_
 
 
 
-*************
-Update yt-dlp
-*************
+===============================
+Save Online Videos with: yt-dlp
+===============================
 
-Do a::
+You will need Homebrew installed. Then, do a::
 
 	brew install yt-dlp
 	brew link --overwrite yt-dlp
@@ -333,18 +146,180 @@ Possible conflicting files are:
 
 
 
-###########
-Mac Repairs
-###########
 
-
-*************
-Crucial Sites
-*************
+**********************
+Advanced Software Work
+**********************
 
 =======================
-Key Devices for Repairs
+Cloning An SSD on a Mac
 =======================
+
+Disk Utility has always been able to create clones, although the app refers to the process as Restore, as in restoring data from a source drive to a target drive. The restore function isn't just for drives. It will work with just about any storage device that you can mount to your Mac, including disk images, hard drives, SSDs, and USB flash drives.
+
+**How Restore Works**
+
+The Restore function in Disk Utility uses a block copy function that can speed up the copy process. It also makes an almost exact copy of the source device. What "almost exact" means is that a block copy moves everything in a data block from one device to the other. The results are almost an exact copy of the original. A file copy copies the data file by file. While the information remains the same, the location of the file on the source and destination devices will likely be different.
+
+Using a block copy is faster, but it does have some limits that affect when it can be used, the most important being that copying block by block requires that both the source and destination devices be first unmounted from your Mac. This ensures that block data doesn't change during the copy process. Don’t worry, though; you don’t have to do the unmounting. Disk Utility’s Restore function takes care of that for you. But it does mean that neither the source nor the destination can be in use when you use the Restore capabilities.
+
+**To Restore a Non-Startup Volume**
+
+You can’t use the Restore function on the current startup drive, or any drive that has files in use. If you need to clone your startup drive, you can make use of either your Mac's Recovery HD volume or any drive that has a bootable copy of OS X installed.
+
+	1. Launch Disk Utility, located at /Applications/Utilities.
+	2. The Disk Utility app will open, displaying a single window divided into three spaces: a toolbar, a sidebar showing currently mounted drives and volumes, and an info pane, showing information about the currently selected device in the sidebar.
+	3. In the sidebar, select the volume to which you want to copy/clone data. The volume you select will be the destination drive for the Restore operation.
+	4. Select Restore from Disk Utility’s Edit menu.
+	5. A sheet will drop down, asking you to select from a drop-down menu the source device to use for the Restore process. The sheet will also warn you that the volume you selected as the destination will be erased, and its data will be replaced with data from the source volume.
+	6. Use the drop-down menu next to the "Restore from" text to select a source volume, and then click the Restore button.
+	7. The Restore process will begin. A new drop-down sheet will display a status bar indicating how far along in the Restore process you are. You can also see detailed information by clicking the Show Details disclosure triangle - although there's really not much there. Note: *this process takes a long time (hours) especially if the source is via usb... we're talking hours!*
+	8. Once the Restore process is complete, the drop-down sheet’s Done button will become available. Click Done to close the Restore sheet.
+	
+
+**Restore Using a Startup Drive**
+
+When you use the Restore function, both the destination and the source must be able to be unmounted. Your startup drive can't be active if you want to restore it. Instead, you can start your Mac from another volume that contains a bootable version of the Mac OS. The one you use can be any volume attached to your Mac, including a USB flash drive, an external, or the Recovery HD volume.
+
+A complete step-by-step guide is available in `Use the Recovery HD Volume to Reinstall OS X or Troubleshoot Mac Problems <https://www.lifewire.com/use-recovery-hd-volume-to-reinstall-os-x-2259971>`_.
+
+
+
+===========================
+Slow Boot after SSD Upgrade
+===========================
+
+**Question**:
+
+My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD.
+
+    * Verified and repaired disk permissions.
+    * Restarted. Boot up time about 1 minute 20 seconds.
+    * Shut down.
+    * Reset PRAM.
+    * Boot up time about 1 minute.
+    * Restarted. Boot up time about 43 minutes.
+
+Didn't work.
+
+**Answer**:
+
+The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs:
+
+    1. Go to System Preferences -> Startup Disk
+    2. Click on the bottom left Lock tu unlock the changes
+    3. Select Macintosh HD (it's likely to be the only on the list)
+    4. Click 'Restart...'
+
+Be patient: the restart can take a few minutes.
+
+
+
+===============
+OS Installation
+===============
+
+How to make a `Bootable USB for MacOS <https://support.apple.com/en-us/HT201372>`_.
+
+Install Catalina on `Apple- unsupported models <http://dosdude1.com/catalina/>`_ using the DOSDude solution. Here's the video:
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+*******************************
+Hardware Repair and Replacement
+*******************************
+
+====================
+Prior to Any Repairs 
+====================
+
+Look up your **exact** Mac's specs on `EveryMac.com <https://everymac.com/ultimate-mac-lookup/>`_ using the serial number. This can be found under Mac Menu (Apple left-hand corner) "About This Mac" -> Serial Number, or for macbooks, on the bottom cover.
+
+Additionally, some `iMac-specific information <https://everymac.com/systems/apple/imac/imac-aluminum-faq/imac-intel-aluminum-processor-upgrade-instructions.html>`_. `iFixit's take on repairing iMacs <https://www.ifixit.com/Search?doctype=guide&query=iMac>`_. This link::
+
+	https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Early+2011+Logic+Board+Replacement/5154
+	
+is valid but Sphinx doesn't care for it - copy and paste this into the browser to see iFixit's solutions to repairing the 2011 Macbook Pro.
+
+
+
+====================================
+Replacing a Battery in a Macbook Pro
+====================================
+
+Note: *these instruction are mostly from the iFixit site*:
+
+	https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Mid+2012+Battery+Replacement/10365
+
+Remove the bottom case. There are ten screws:
+
+	* Three 14.4 mm Phillips #00 screws
+
+	* Three 3.5 mm Phillips #00 screws
+
+	* Four 3.5 mm shouldered Phillips #00 screws
+
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery1.png
+
+Pry the bottom off with your fingers at the vents.
+
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery2.png
+
+
+I've included paperwork, a screwdriver for the battery screws (they're tri-point) and the screws. Remove all this before sliding in the battery. It only goes in one way:
+
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery3.png
+
+Attach the following two screws:
+
+	* One 5.6 mm Tri-point screw
+
+	* One 13 mm Tri-point screw
+	
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery4.png
+
+Note that the longer one goes near the battery connector to the logic board.
+
+Connect the battery connector to the logic board.
+
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery3.png
+
+Replac the bottom with the vents towards the back (where the screen hinges to the laptop) and screw the bottom in place as shown:
+
+..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery1.png
+
+Note: *when replacing the small screws, align them perpendicular to the slight curvature of the case (they don't go straight down)*.
+
+When installing a new battery, you should calibrate it after installation in order to maximise its lifespan:
+
+	* Charge it to 100%, and then keep charging it for at least 2 more hours.
+	
+	* Unplug and use it normally to drain the battery. When you see the low battery warning, save your work, and keep your laptop on until it goes to sleep due to low battery.
+	
+	* Wait at least 5 hours, then charge your laptop uninterrupted to 100%.
+
+If you notice any unusual behavior or problems after installing your new battery, you may need to reset your MacBook's SMC.
+
+
+
+
+
+
+
+
+
+
+
+====================
+Repair Support Sites
+====================
 
 Stereo Trinocular Microscope
 
@@ -356,7 +331,7 @@ Those links will probably change. Bad idea to buy on Amazon, their terms are pox
 	* `AmScope 20X Widefield Stereo Microscope w Boom Arm Stand & LED Incident Light <https://www.ebay.com.au/itm/143531477249>`_
 
 
-Other stuff
+Other stuff:
 
 	* `PCB Etching Kit <https://www.jaycar.com.au/pcb-etching-kit/p/HG9990>`_
 	* `PCB Design software for Linux <https://www.kicad.org/download/linux-mint/>`_
@@ -376,211 +351,16 @@ Other stuff
 	* `Change startup disk on Mac <https://support.apple.com/en-au/guide/mac-help/mchlp1034/mac>`_
 	* `Download full MacOS installers from CLI <https://osxdaily.com/2020/04/13/how-download-full-macos-installer-terminal/>`_
 	* `Download previous MacOS versions via App Store <https://support.apple.com/en-au/HT201372>`_
+	* `Paul Daniels page <https://www.rossmanngroup.com/macbook-repair-in-australia/>`_
+	* `NewerTech <https://www.newertech.com/tech_support/manuals/mac/clon_data.php>`_
+	* `Server On The Move <https://www.serveronthemove.com.au/collections/arduino>`_
+	* `Grady Hillhouse Garduino <https://github.com/gradyh/GradyHillhouseGarduino>`_
+	* `Octo Parts <https://octopart.com/>`_
+	* `CTPC <https://ctpc.biz/>`_
 
-	
 
 
 
 
 
-=================
-Key Repair People
-=================
 
-From Rossmann Repair Group...
-
-* `Paul Daniels page <https://www.rossmanngroup.com/macbook-repair-in-australia/>`_
-
-
-
-============================
-Mac Info / Repair & Software
-============================
-
-`Peyman's a1286 early 2011 <https://www.betterbatt.com.au/s/laptop-battery/apple/macbook-pro-15-4-a1286-early-2011-/bblb-1486/>`_
-
-
-
-
-
-***************************
-Slow Boot after SSD Upgrade
-***************************
-
-**Question**:
-
-My MacBook Pro extremely slow after SSD Upgrade. I upgraded the standard hard drive to a SSD. I cloned the factory drive to the SSD using Super Duper. After cloning the HDD to the SSD I installed it and turned it on. It booted up but not quite as quickly as I would expect for an SSD::
-
-    Verified and repaired disk permissions.
-
-    Resterted. Boot up time about 1 minute 20 seconds.
-
-    Shut down.
-
-    Reset PRAM.
-
-    Boot up time about 1 minute.
-
-    Restarted. Boot up time about 43 minutes.
-
-I have no idea what to do.
-
-**Answer**:
-
-The startup disk setting is pointing to a disk that's no longer in your system. Most probably the OS can't find it and is waiting for it to spin up: it won't try the new SSD until a timeout occurs::
-
-    1. Go to System Preferences -> Startup Disk
-
-    2. Click on the bottom left Lock tu unlock the changes
-
-    3. Select Macintosh HD (it's likely to be the only on the list)
-
-    4. Click 'Restart...'
-
-Be patient: the restart can take a few minutes.
-
-
-************
-Screen Shots
-************
-
-Easy enough to obtain. For the whole screen::
-
-    [Shift][Command][3]
-
-or for the active window::
-
-    [Shift][Command][4]
-
-To change the type of image that gets saved, open Terminal and enter::
-
-    defaults write com.apple.screencapture type png
-
-The last string can be changed to jpg, tiff or even pdf.
-
-
-
-*******************
-Where is This File?
-*******************
-
-To quickly find the fully-qualified path to a file, open a copy of terminal and drop the file onto it.
-
-
-
-*********************
-Saving YouTube Videos
-*********************
-
-You will need Python for this: I use Python3. You will need to install PyTube, which you can get `here <https://github.com/nficano/pytube>`_ or `in the ReadTheDocs page <https://python-pytube.readthedocs.io/en/latest/user/install.html>`_. Keep that first address, as you may need to update PyTube.
-
-The script to download a file is the following::
-
-    #!/usr/local/bin/python3
-    # PyTuber02.py
-    # Simplify importing YouTube videos with pytube
-    from pytube import YouTube
-    # import sys
-
-    # sFile = sys.argv[1]
-    sFile = input("Enter YouTube URL: ")
-
-    if len(sFile) == 0:
-        print("No file link passed: nothing to do")
-    else:
-        YouTube(sFile).streams.first().download()
-
-I've got the script saved in the Movies folder, and call it this way::
-
-    ~/Movies/PyTuber02.py
-
-in Terminal, from anywhere that I might have 'cd-d' to, then copy and past the URL of the video I wish to download. No dependency on SaveFro.net or other browser helpers anymore.
-
-However, it's not a perfect solution... not because of the solution but because YouTube keeps moving the goalposts. Recently (err, today) tried to download a file::
-
-    Enter YouTube URL: https://www.youtube.com/watch?v=YFRFgRm1BYE
-
-and got::
-
-    Traceback (most recent call last):
-      File "/Users/robinhahn/Movies/PyTuber02.py", line 13, in <module>
-        YouTube(sFile).streams.first().download()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 88, in __init__
-        self.prefetch_init()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 97, in prefetch_init
-        self.init()
-      File "/usr/local/lib/python3.7/site-packages/pytube/__main__.py", line 133, in init
-        mixins.apply_signature(self.player_config_args, fmt, self.js)
-      File "/usr/local/lib/python3.7/site-packages/pytube/mixins.py", line 49, in apply_signature
-        signature = cipher.get_signature(js, stream['s'])
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 245, in get_signature
-        tplan = get_transform_plan(js)
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 64, in get_transform_plan
-        name = re.escape(get_initial_function_name(js))
-      File "/usr/local/lib/python3.7/site-packages/pytube/cipher.py", line 40, in get_initial_function_name
-        return regex_search(pattern, js, group=1)
-      File "/usr/local/lib/python3.7/site-packages/pytube/helpers.py", line 65, in regex_search
-        .format(pattern=pattern),
-    pytube.exceptions.RegexMatchError: regex pattern (\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\() had zero matches
-
-Here's where the Issues page on github is useful: apparently the regex had been tweaked chez YouTube, which caused the script to fail. You'll find details on the `Issues page <https://github.com/nficano/pytube/issues>`_ on pending fixes to the problem.
-
-Eventually: fortunately, the developer keeps a close eye on it.
-
-In the meantime, to pip-install directly from the original project::
-
-    pip install git+https://github.com/nficano/pytube.git
-
-Seems that one needs to fix cypher.py from time to time. One such regex string would be::
-
-    r'\bc\s*&&\s*d\.set\([^,]+\s*,\s*\([^)]*\)\s*\(\s*(?P<sig>[a-zA-Z0-9$]+)\('
-
-
-
-***************************
-Make a Py Script Executable
-***************************
-
-Make sure you have::
-
-    #!/usr/local/bin/python3
-
-at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
-
-    chmod +x -/path/NameOfScript.py
-    
-
-
-**********************************
-Make a file executable in Terminal
-**********************************
-
-Shell scripts must be executable files in order to run. You can use the chmod command to indicate that the text file is executable (that is, its contents can be run as a shell script). In the Terminal app  on your Mac, use the cd command to move into the directory that contains the file you want to make executable. For example::
-
-    cd YourScriptDirectory
-
-Enter the chmod command. For example::
-
-    chmod 755 YourScriptName.sh
-
-After making the shell script file executable, you can run it by entering its pathname::
-
-    ~/Documents/Dev/YourScriptName.sh
-
-or::
-
-    cd ~/Documents/Dev/ 
-    ./YourScriptName.sh
-
-
-=============
-Clone My VDMK
-=============
-
-Last login: Fri Nov 22 06:58:35 on ttys000
-Robins-MBP:VirtualBox VMs robinhahn$ VBoxManage clonehd --format vdi "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vmdk" "/Users/robinhahn/VirtualBox VMs/Win7_Office2016/Win7_Office2016-disk1.vdi"
-0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
-Clone medium created in format 'vdi'. UUID: 34fd4231-0eb6-4d35-94ed-89a4ef1331a3
-Robins-MBP:VirtualBox VMs robinhahn$ 
-
-<a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/IMG_4333.JPG" id="1998992764" class="has-link" dm_dont_rewrite_url="false" href="https://www.tightbytes.com" file="false" data-link-url="https://www.tightbytes.com" target="_blank" style="background-image: url(&quot;https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1280w.JPG&quot;);"><img irh="" irw="" alt="" data-src="https://lirp-cdn.multiscreensite.com/e52d6f72/dms3rep/multi/opt/IMG_4333-1920w.JPG" id="1637023030" onerror="handleImageLoadError(this)"></a>
