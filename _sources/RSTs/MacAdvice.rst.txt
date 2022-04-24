@@ -289,7 +289,7 @@ Note that the longer one goes near the battery connector to the logic board.
 
 Connect the battery connector to the logic board.
 
-.. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery3.png
+.. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery5.png
 
 Replac the bottom with the vents towards the back (where the screen hinges to the laptop) and screw the bottom in place as shown:
 
