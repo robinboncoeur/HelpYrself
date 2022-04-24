@@ -55,7 +55,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#make-a-script-executable">Make a Script Executable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#make-a-py-script-executable">Make a Py Script Executable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#networking">Networking</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#save-online-videos-with-yt-dlp">Save Online Videos with: yt-dlp</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced-software-work">Advanced Software Work</a><ul>
@@ -73,7 +72,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python and Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
@@ -174,40 +173,6 @@
 <p><a class="reference external" href="https://blog.storagecraft.com/install-lamp-server-linux-mint-18-command/">LAMP Server in Linux Mint</a></p>
 <p><a class="reference external" href="https://www.how2shout.com/linux/install-samba-on-linux-mint-to-share-files-with-windows/">Samba File Sharing</a></p>
 <p><a class="reference external" href="https://www.howtogeek.com/191116/how-to-share-files-between-windows-mac-and-linux-pcs-on-a-network/">Sharing Windows, Linux and Macs on a Network</a></p>
-</div>
-<div class="section" id="save-online-videos-with-yt-dlp">
-<h3>Save Online Videos with: yt-dlp<a class="headerlink" href="#save-online-videos-with-yt-dlp" title="Permalink to this headline"></a></h3>
-<p>You will need Homebrew installed. Then, do a:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
-<span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
-</pre></div>
-</div>
-<p>because:</p>
-<blockquote>
-<div><p>Pouring yt-dlp–2022.2.4.catalina.bottle.tar.gz</p>
-<p>Error: The <cite>brew link</cite> step did not complete successfully</p>
-<p>The formula built, but is not symlinked into /usr/local</p>
-<p>Could not symlink bin/yt-dlp</p>
-</div></blockquote>
-<p>Target /usr/local/bin/yt-dlp already exists. You may want to remove it:</p>
-<blockquote>
-<div><p>rm ‘/usr/local/bin/yt-dlp’</p>
-</div></blockquote>
-<p>To force the link and overwrite all conflicting files:</p>
-<blockquote>
-<div><p>brew link –overwrite yt-dlp</p>
-</div></blockquote>
-<p>To list all files that would be deleted:</p>
-<blockquote>
-<div><p>brew link –overwrite –dry-run yt-dlp</p>
-</div></blockquote>
-<p>Possible conflicting files are:</p>
-<blockquote>
-<div><p>/usr/local/bin/yt-dlp</p>
-<p>/usr/local/share/fish/vendor_completions.d/yt-dlp.fish</p>
-<p>/usr/local/share/man/man1/yt-dlp.1</p>
-<p>/usr/local/share/zsh/site-functions/_yt-dlp</p>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="advanced-software-work">

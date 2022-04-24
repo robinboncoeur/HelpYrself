@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python3, Pip and Kivy3 &mdash; Help Yourself 0.02 documentation</title>
+  <title>Python and Programming &mdash; Help Yourself 0.02 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,7 +17,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reaper" href="ReaperApp.html" />
+    <link rel="next" title="A Discussion on Reabanks" href="Reabanks.html" />
     <link rel="prev" title="Published on Musescore" href="Musescore.html" /> 
 </head>
 
@@ -45,27 +45,20 @@
 <li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Randome Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html">Mac Tips, How-Tos and More</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Python3, Pip and Kivy3</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#key-links">Key Links</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-py-script-executable">Make a Py Script Executable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pytube">PyTube</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pytube-regex-errors">PyTube Regex Errors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#brackets-install-in-linux-mint">Brackets Install in Linux Mint</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#running-imported-modules-in-kivy">Running imported Modules in Kivy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#kivy-kv-file-python">Kivy kv file Python…</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#project-roster-app">Project: Roster App</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python and Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installs">Installs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#brackets-install-in-linux-mint">Brackets Install in Linux Mint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-online-videos-with-yt-dlp">Save Online Videos with yt-dlp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-py-script-executable">Make a Py Script Executable</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#kivy-2-0-0-pointers">Kivy 2.0.0 Pointers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-imported-modules-in-kivy">Running imported Modules in Kivy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#positioning-widgets">Positioning Widgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#layouts">Layouts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#embedded-layouts">Embedded Layouts</a></li>
@@ -73,11 +66,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#adding-an-image-to-canvas">Adding an Image to Canvas</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#sqllite3">SQLLite3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#useful-queries">Useful Queries</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-links">Key Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaticulate.html">Reaticulate - Reabanks Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RiggingFigures.html">Rigging a Figure in Blender</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
@@ -99,7 +98,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Python3, Pip and Kivy3</li>
+      <li>Python and Programming</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/RSTs/Python.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -109,20 +108,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="python3-pip-and-kivy3">
-<h1>Python3, Pip and Kivy3<a class="headerlink" href="#python3-pip-and-kivy3" title="Permalink to this headline"></a></h1>
-<div class="section" id="key-links">
-<h2>Key Links<a class="headerlink" href="#key-links" title="Permalink to this headline"></a></h2>
-<p>Try to save Chrome memory real estate.</p>
+  <div class="section" id="python-and-programming">
+<h1>Python and Programming<a class="headerlink" href="#python-and-programming" title="Permalink to this headline"></a></h1>
+<div class="section" id="installs">
+<h2>Installs<a class="headerlink" href="#installs" title="Permalink to this headline"></a></h2>
+<div class="section" id="brackets-install-in-linux-mint">
+<h3>Brackets Install in Linux Mint<a class="headerlink" href="#brackets-install-in-linux-mint" title="Permalink to this headline"></a></h3>
+<p>A no-brainer. For Windows, Mac or Linux, just get onto <a class="reference external" href="http://brackets.io">Brackets.io</a>: it will automatically offer the download for your host OS. In Mint, download the .deb and install.</p>
+</div>
+<div class="section" id="save-online-videos-with-yt-dlp">
+<h3>Save Online Videos with yt-dlp<a class="headerlink" href="#save-online-videos-with-yt-dlp" title="Permalink to this headline"></a></h3>
+<p>You will need Homebrew installed. Then, do a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
+<span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
+</pre></div>
+</div>
+<p>because:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j">99 Python Programs for Beginners</a></p></li>
-<li></li>
+<li><p>Pouring yt-dlp–2022.2.4.catalina.bottle.tar.gz</p></li>
+<li><p>Error: The <cite>brew link</cite> step did not complete successfully</p></li>
+<li><p>The formula built, but is not symlinked into /usr/local</p></li>
+<li><p>Could not symlink bin/yt-dlp</p></li>
+</ul>
+</div></blockquote>
+<p>Target /usr/local/bin/yt-dlp already exists. You may want to remove it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="s1">&#39;/usr/local/bin/yt-dlp&#39;</span>
+</pre></div>
+</div>
+<p>To force the link and overwrite all conflicting files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
+</pre></div>
+</div>
+<p>To list all files that would be deleted:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
+</pre></div>
+</div>
+<p>Possible conflicting files are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>/usr/local/bin/yt-dlp</p></li>
+<li><p>/usr/local/share/fish/vendor_completions.d/yt-dlp.fish</p></li>
+<li><p>/usr/local/share/man/man1/yt-dlp.1</p></li>
+<li><p>/usr/local/share/zsh/site-functions/_yt-dlp</p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="make-a-py-script-executable">
-<h2>Make a Py Script Executable<a class="headerlink" href="#make-a-py-script-executable" title="Permalink to this headline"></a></h2>
+<h3>Make a Py Script Executable<a class="headerlink" href="#make-a-py-script-executable" title="Permalink to this headline"></a></h3>
 <p>Make sure you have:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/local/bin/python3</span>
 </pre></div>
@@ -132,47 +165,9 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="pip-installs">
-<h2>Pip Installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline"></a></h2>
-<div class="section" id="pytube">
-<h3>PyTube<a class="headerlink" href="#pytube" title="Permalink to this headline"></a></h3>
-<p>Note on 29 Nov 2021: <em>Now using yt-dlp</em></p>
-<p>To install the latest source directly from github using pip, type this in your command line:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nficano</span><span class="o">/</span><span class="n">pytube</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
 </div>
-<p>Usually a good idea to upgrade pip while you’re at it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="pytube-regex-errors">
-<h3>PyTube Regex Errors<a class="headerlink" href="#pytube-regex-errors" title="Permalink to this headline"></a></h3>
-<p>The fix was published 19 Jan, 2019 on the <a class="reference external" href="https://github.com/nficano/pytube/issues/353#issuecomment-455116197">Github issues page</a>. It essentially involved patching cypher.py and helpers.py. Now, to find those files on my Mac: not trivial. Finally invoked “find”:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">iname</span> <span class="s2">&quot;*.py&quot;</span>
-</pre></div>
-</div>
-<p>to get a lot of cruft, and this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">__main__</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">captions</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">cipher</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">cli</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">compat</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">playlist</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">exceptions</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">extract</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">helpers</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">itags</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">logging</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">mixins</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">query</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">request</span><span class="o">.</span><span class="n">py</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pytube</span><span class="o">/</span><span class="n">streams</span><span class="o">.</span><span class="n">py</span>
-</pre></div>
-</div>
-<p>Patched the files 03 Mar, 2019 and voila, success!</p>
-</div>
+<div class="section" id="kivy-2-0-0-pointers">
+<h2>Kivy 2.0.0 Pointers<a class="headerlink" href="#kivy-2-0-0-pointers" title="Permalink to this headline"></a></h2>
 <div class="section" id="pycharm-and-kivy-install">
 <h3>PyCharm and Kivy Install<a class="headerlink" href="#pycharm-and-kivy-install" title="Permalink to this headline"></a></h3>
 <p>To explore: in Ubuntu 12.04, one user solved it this way:</p>
@@ -186,50 +181,19 @@
 </div></blockquote>
 <p>An important <a class="reference external" href="http://kivy.org/docs/installation/installation-linux.html#ubuntu-12-04-with-python-2-7">link</a> for Python 2x was included. The user went on to say that “the code builds and runs, but does not display in Python. I will edit this answer if I fix that, but this should at least get you started.”</p>
 <p>Note: <em>PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.</em></p>
-<div class="section" id="brackets-install-in-linux-mint">
-<h4>Brackets Install in Linux Mint<a class="headerlink" href="#brackets-install-in-linux-mint" title="Permalink to this headline"></a></h4>
-<p>A no-brainer. For Windows, Mac or Linux, just get onto <a class="reference external" href="http://brackets.io">Brackets.io</a>: it will automatically offer the download for your host OS. In Mint, download the .deb and install.</p>
 </div>
 <div class="section" id="running-imported-modules-in-kivy">
-<h4>Running imported Modules in Kivy<a class="headerlink" href="#running-imported-modules-in-kivy" title="Permalink to this headline"></a></h4>
+<h3>Running imported Modules in Kivy<a class="headerlink" href="#running-imported-modules-in-kivy" title="Permalink to this headline"></a></h3>
 <p>A simple pip install doesn’t seem to expose pip-installed modules to Kivy. You actually have to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kivy3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">oauth2client</span>
-
-<span class="ow">or</span>
-
-<span class="n">kivy3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip3</span> <span class="n">install</span> <span class="n">gspread</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kivy3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip3</span> <span class="n">install</span> <span class="n">gspread</span>
 </pre></div>
 </div>
 <p>to get Kivy to see them.</p>
 </div>
-<div class="section" id="kivy-kv-file-python">
-<h4>Kivy kv file Python…<a class="headerlink" href="#kivy-kv-file-python" title="Permalink to this headline"></a></h4>
-<p>… <strong>syntax highlighting</strong></p>
-<p>Create a brackets.json file with the following code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">code</span> <span class="n">to</span> <span class="n">follow</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="project-roster-app">
-<h4>Project: Roster App<a class="headerlink" href="#project-roster-app" title="Permalink to this headline"></a></h4>
-<p>Name of application:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosterapp21s9453</span>
-</pre></div>
-</div>
-<p>Credentials set up <a class="reference external" href="https://console.developers.google.com/apis/credentials?showWizardSurvey=true&amp;project=rosterapp21s9453">here</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://console.developers.google.com/apis/credentials?showWizardSurvey=true&amp;project=rosterapp21s9453
-</pre></div>
-</div>
-<p>In google drive, set things up to be able to access with Python <a class="reference external" href="https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html">this way</a>.</p>
-<p>Installed gspread and oauth2client via pip3:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">gspread</span> <span class="n">oauth2client</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="kivy-2-0-0-pointers">
-<h2>Kivy 2.0.0 Pointers<a class="headerlink" href="#kivy-2-0-0-pointers" title="Permalink to this headline"></a></h2>
 <div class="section" id="positioning-widgets">
 <h3>Positioning Widgets<a class="headerlink" href="#positioning-widgets" title="Permalink to this headline"></a></h3>
 <p>Iif you want to scale a widget which is not inside a layout, you use the properties size, width and height.</p>
@@ -600,6 +564,49 @@
 <p>The ‘all slugs.png’ image has a transparent background so the only parts of it that can be influenced the new color are the silhouettes of the slugs.</p>
 </div>
 </div>
+<div class="section" id="sqllite3">
+<h2>SQLLite3<a class="headerlink" href="#sqllite3" title="Permalink to this headline"></a></h2>
+<div class="section" id="useful-queries">
+<h3>Useful Queries<a class="headerlink" href="#useful-queries" title="Permalink to this headline"></a></h3>
+<p>The Groceries by Month:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT sum (TransAmt) as negative FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;01/01/2020&#39; AND &#39;31/01/2020&#39;
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;01/01/2020&#39; AND &#39;31/01/2020&#39;   (did not select date range correctly)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND strftime(&#39;%d/%m/%Y&#39;, TransDate) BETWEEN &#39;01/01/2020&#39; AND &#39;31/01/2020&#39;   (Nope)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND date(TransDate) BETWEEN date(&#39;2020-01-01&#39;) AND date(&#39;2020-01-31&#39;)   (Nope)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;2020-01-01&#39; AND &#39;2020-01-31&#39;    (Nope)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND Date(TransDate) BETWEEN &#39;2020-01-01&#39; AND &#39;2020-01-31&#39;   (Nope)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate &lt; &#39;31/12/2017&#39; ORDER BY TransDate   (Sort-of)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;2017-12-01&#39; AND &#39;2017-12-31&#39; ORDER BY TransDate (YES!! but because I changed the date format - prior to importing to SQLite - to &#39;yyyy-mm-dd&#39;)
+
+SELECT sum(TransAmt)
+FROM Transactions
+WHERE TransCode = &#39;DLXPG&#39;
+AND TransDate BETWEEN &#39;2017-12-01&#39; AND &#39;2017-12-31&#39; ($-706.75)
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;2020-01-01&#39; AND &#39;2020-12-31&#39; ORDER BY TransDate
+
+SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = &#39;DLXPG&#39; AND TransDate BETWEEN &#39;2021-01-01&#39; AND &#39;2021-12-31&#39; ORDER BY TransDate
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="key-links">
+<h2>Key Links<a class="headerlink" href="#key-links" title="Permalink to this headline"></a></h2>
+<p>Try to save Chrome memory real estate.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j">99 Python Programs for Beginners</a></p></li>
+<li></li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -607,7 +614,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Musescore.html" class="btn btn-neutral float-left" title="Published on Musescore" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ReaperApp.html" class="btn btn-neutral float-right" title="Reaper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Reabanks.html" class="btn btn-neutral float-right" title="A Discussion on Reabanks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

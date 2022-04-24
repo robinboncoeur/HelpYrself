@@ -1,22 +1,63 @@
 ######################
-Python3, Pip and Kivy3
+Python and Programming
 ######################
 
+********
+Installs
+********
 
-*********
-Key Links
-*********
+==============================
+Brackets Install in Linux Mint
+==============================
 
-Try to save Chrome memory real estate.
-
-	* `99 Python Programs for Beginners <https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j>`_
-	* 
+A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
 
 
 
-***************************
+==============================
+Save Online Videos with yt-dlp
+==============================
+
+You will need Homebrew installed. Then, do a::
+
+	brew install yt-dlp
+	brew link --overwrite yt-dlp
+	
+because:
+
+	* Pouring yt-dlp--2022.2.4.catalina.bottle.tar.gz
+	* Error: The `brew link` step did not complete successfully
+	* The formula built, but is not symlinked into /usr/local
+	* Could not symlink bin/yt-dlp
+	
+
+Target /usr/local/bin/yt-dlp already exists. You may want to remove it::
+
+	rm '/usr/local/bin/yt-dlp'
+
+
+To force the link and overwrite all conflicting files::
+
+	brew link --overwrite yt-dlp
+
+
+To list all files that would be deleted::
+
+	brew link --overwrite --dry-run yt-dlp
+
+
+Possible conflicting files are:
+
+	* /usr/local/bin/yt-dlp
+	* /usr/local/share/fish/vendor_completions.d/yt-dlp.fish
+	* /usr/local/share/man/man1/yt-dlp.1
+	* /usr/local/share/zsh/site-functions/_yt-dlp
+
+
+
+===========================
 Make a Py Script Executable
-***************************
+===========================
 
 Make sure you have::
 
@@ -25,57 +66,15 @@ Make sure you have::
 at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
 
     chmod +x -/path/NameOfScript.py
- 
-
-************
-Pip Installs
-************
-
-======
-PyTube
-======
-
-Note on 29 Nov 2021: *Now using yt-dlp*
 
 
-To install the latest source directly from github using pip, type this in your command line::
-
-    pip install git+https://github.com/nficano/pytube.git
-
-Usually a good idea to upgrade pip while you're at it::
-
-    pip install --upgrade pip
 
 
-===================
-PyTube Regex Errors
-===================
+   
 
-The fix was published 19 Jan, 2019 on the `Github issues page <https://github.com/nficano/pytube/issues/353#issuecomment-455116197>`_. It essentially involved patching cypher.py and helpers.py. Now, to find those files on my Mac: not trivial. Finally invoked "find"::
-
-    sudo find / -iname "*.py"
-
-to get a lot of cruft, and this::
-
-    /usr/local/lib/python3.7/site-packages/pytube/__main__.py
-    /usr/local/lib/python3.7/site-packages/pytube/captions.py
-    /usr/local/lib/python3.7/site-packages/pytube/cipher.py
-    /usr/local/lib/python3.7/site-packages/pytube/cli.py
-    /usr/local/lib/python3.7/site-packages/pytube/compat.py
-    /usr/local/lib/python3.7/site-packages/pytube/contrib/__init__.py
-    /usr/local/lib/python3.7/site-packages/pytube/contrib/playlist.py
-    /usr/local/lib/python3.7/site-packages/pytube/exceptions.py
-    /usr/local/lib/python3.7/site-packages/pytube/extract.py
-    /usr/local/lib/python3.7/site-packages/pytube/helpers.py
-    /usr/local/lib/python3.7/site-packages/pytube/itags.py
-    /usr/local/lib/python3.7/site-packages/pytube/logging.py
-    /usr/local/lib/python3.7/site-packages/pytube/mixins.py
-    /usr/local/lib/python3.7/site-packages/pytube/query.py
-    /usr/local/lib/python3.7/site-packages/pytube/request.py
-    /usr/local/lib/python3.7/site-packages/pytube/streams.py
-
-Patched the files 03 Mar, 2019 and voila, success!
-
+*******************
+Kivy 2.0.0 Pointers
+*******************
 
 ========================
 PyCharm and Kivy Install
@@ -93,13 +92,8 @@ An important `link <http://kivy.org/docs/installation/installation-linux.html#ub
 Note: *PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.*
 
 
-Brackets Install in Linux Mint
-==============================
 
-
-A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
-
-
+================================
 Running imported Modules in Kivy
 ================================
 
@@ -107,44 +101,13 @@ A simple pip install doesn't seem to expose pip-installed modules to Kivy. You a
 
     kivy3 -m pip install oauth2client
 
-    or
+or::
 
     kivy3 -m pip3 install gspread
 
 to get Kivy to see them.
 
 
-Kivy kv file Python...
-======================
-
-... **syntax highlighting**
-
-Create a brackets.json file with the following code::
-
-    (code to follow)
-    
-
-Project: Roster App
-===================
-
-Name of application::
-
-    rosterapp21s9453
-
-Credentials set up `here <https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453>`_ :: 
-
-    https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453
-
-In google drive, set things up to be able to access with Python `this way <https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html>`_.
-
-Installed gspread and oauth2client via pip3::
-
-    pip3 install gspread oauth2client
-    
-
-*******************
-Kivy 2.0.0 Pointers
-*******************
 
 ===================
 Positioning Widgets
@@ -509,6 +472,7 @@ The FloatLayout and the RelativeLayout are pretty similar. The difference is tha
 Have a look at the two buttons, F1a and R1a. They both have the coordinates 0, 0. The former is relative to the whole window, though, whereas the latter is relative to the layout it’s in, so RelativeLayout 1.
 
 
+
 =====================
 Context vs Coordinate
 =====================
@@ -529,6 +493,8 @@ When you run the app, the rectangle should be red, which it is. But if you put t
 
 So, if you want the rectangle to be red, make sure the Color instruction precedes the Rectangle instruction.
 
+
+
 =========================
 Adding an Image to Canvas
 =========================
@@ -539,3 +505,53 @@ If we were to run the program at this point, the image of the slugs would be ver
 
 The ‘all slugs.png’ image has a transparent background so the only parts of it that can be influenced the new color are the silhouettes of the slugs.
 
+
+
+
+********
+SQLLite3
+********
+
+==============
+Useful Queries
+==============
+
+The Groceries by Month::
+
+	SELECT sum (TransAmt) as negative FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'   (did not select date range correctly)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND strftime('%d/%m/%Y', TransDate) BETWEEN '01/01/2020' AND '31/01/2020'   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND date(TransDate) BETWEEN date('2020-01-01') AND date('2020-01-31')   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-01-31'    (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND Date(TransDate) BETWEEN '2020-01-01' AND '2020-01-31'   (Nope)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate < '31/12/2017' ORDER BY TransDate   (Sort-of)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ORDER BY TransDate (YES!! but because I changed the date format - prior to importing to SQLite - to 'yyyy-mm-dd')
+	
+	SELECT sum(TransAmt) 
+	FROM Transactions 
+	WHERE TransCode = 'DLXPG' 
+	AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ($-706.75)
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY TransDate
+	
+	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2021-01-01' AND '2021-12-31' ORDER BY TransDate
+	
+	
+
+
+
+*********
+Key Links
+*********
+
+Try to save Chrome memory real estate.
+
+	* `99 Python Programs for Beginners <https://dev.to/rrtutors/99-python-programs-for-beginners-3k1j>`_
+	* 
