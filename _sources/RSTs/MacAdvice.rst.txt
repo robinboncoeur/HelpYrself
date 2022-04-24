@@ -266,16 +266,16 @@ Remove the bottom case. There are ten screws:
 
 	* Four 3.5 mm shouldered Phillips #00 screws
 
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery1.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery1.png
 
 Pry the bottom off with your fingers at the vents.
 
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery2.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery2.png
 
 
 I've included paperwork, a screwdriver for the battery screws (they're tri-point) and the screws. Remove all this before sliding in the battery. It only goes in one way:
 
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery3.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery3.png
 
 Attach the following two screws:
 
@@ -283,17 +283,17 @@ Attach the following two screws:
 
 	* One 13 mm Tri-point screw
 	
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery4.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery4.png
 
 Note that the longer one goes near the battery connector to the logic board.
 
 Connect the battery connector to the logic board.
 
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery3.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery3.png
 
 Replac the bottom with the vents towards the back (where the screen hinges to the laptop) and screw the bottom in place as shown:
 
-..image:: https://www.tightbytes.com/images/projects/macrepairs/Ac-Battery1.png
+..image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery1.png
 
 Note: *when replacing the small screws, align them perpendicular to the slight curvature of the case (they don't go straight down)*.
 
