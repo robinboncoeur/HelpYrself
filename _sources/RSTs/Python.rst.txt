@@ -69,8 +69,12 @@ at the top of the script (for Python3 scripts). Then, in Terminal, issue a::
 
 
 
-
+.. raw:: html
    
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
 
 *******************
 Kivy 2.0.0 Pointers
@@ -504,6 +508,12 @@ In order to add an image, we need some shape to draw it on, like a rectangle. In
 If we were to run the program at this point, the image of the slugs would be very crisp with vivid colors. As you look at the final version of the screen, you can see that the colors are somewhat faded. We could have handled this in an image editor before we even added the asset to the assets folder, but we can still do it here, so, as it seems to be easier and faster to do than the former, let’s do it. If you change the alpha value, the transparency and thus vividness of the image will change. To make this happen, we’ll add another Color instruction before the Rectangle instruction and set the color to (1, 1, 1, .4).
 
 The ‘all slugs.png’ image has a transparent background so the only parts of it that can be influenced the new color are the silhouettes of the slugs.
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 

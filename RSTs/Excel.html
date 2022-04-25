@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Git Help Page (not official!)" href="Git.html" />
-    <link rel="prev" title="Resources and Videos" href="Composition.html" /> 
+    <link rel="prev" title="Composition" href="Composition.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,9 +38,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Excel 2016 VBA Apps</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#excel-apps-living-documents">Excel Apps - Living Documents</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#project-updates">Project Updates</a></li>
@@ -68,21 +68,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Random Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Virtualbox.html">Oracle’s VirtualBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python and Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
@@ -180,8 +175,7 @@
 <p>There are other types, but these are the main ones. I try to preface the name of my variables with a single character denoting the type, although I haven’t been very consistent with this approach, nor even with how I use the prefix. For example, my integers <strong>should</strong> probably be prefaced with an ‘i’, but as a hold-over from my FoxPro days I use the letter ‘n’. Anyway, the ‘s’ in the variable name ‘sImagePath’ indicates the value will be a string that will define the path to the image.</p>
 <p>A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment, although it’s on the cards. The other thing that these products <strong>do</strong> make use of is this: a property allows external access (that is, external to where it was declared) from other modules or forms as though the property was a public field, while allowing the class that owns that property (like a form, for example) to keep control of the data.</p>
 <p>One could use global variables, which are defined under the ‘Option Explicit’ at the top of the module, but my experience with them has been that while they should be available to the entire form and all subforms, they are a lot less reliable to use than form properties. YMMV, of course.</p>
-<a class="reference internal image-reference" href="../_images/flou02.png"><img alt="../_images/flou02.png" class="align-center" src="../_images/flou02.png" style="width: 273px;" /></a>
-</div>
+<hr style="height:4px;border-width:0;color:gray;background-color:gray"></div>
 </div>
 <div class="section" id="common-code-snippets">
 <h2>Common Code Snippets<a class="headerlink" href="#common-code-snippets" title="Permalink to this headline"></a></h2>
@@ -355,7 +349,7 @@
 <span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">TextColumn</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span> <span class="o">.</span><span class="n">CboEqType</span><span class="o">.</span><span class="n">BoundColumn</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
-</div>
+<hr style="height:4px;border-width:0;color:gray;background-color:gray"></div>
 </div>
 <div class="section" id="the-tax-worksheet-conundrums">
 <h2>The Tax Worksheet Conundrums<a class="headerlink" href="#the-tax-worksheet-conundrums" title="Permalink to this headline"></a></h2>
@@ -386,7 +380,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Composition.html" class="btn btn-neutral float-left" title="Resources and Videos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Composition.html" class="btn btn-neutral float-left" title="Composition" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="Git.html" class="btn btn-neutral float-right" title="Git Help Page (not official!)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

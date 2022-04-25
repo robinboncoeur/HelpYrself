@@ -1,0 +1,144 @@
+################
+About HelpYrself
+################
+
+******************************
+A Quick Note on why HelpYrself
+******************************
+
+I'm getting old and forgetful and keep reinventing the wheel, searching for answers that I'd already dealt with not all that long ago.
+
+Hence, this document. I'm even reminding myself how to do certain things in Sphinx, which is the tool I use to create this document.
+
+As in all things open source, we tend to create solutions to "scratch our own itch". If anyone else finds it useful, fantastic. However, as with anything published, information can become dated, no-longer-relevant or, because the goal-posts have moved, just plain wrong. Consider this when using this information.
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+*************************************
+Reminders [to Myself] of Sphinx Stuff
+*************************************
+
+=============
+Inline images
+=============
+
+For externally-stored images (most will be stored on Tightbytes, for my pages)::
+
+	* .. image:: http://www.tightbytes.com/Music/CReinecke/CReinecke1890.jpg
+
+and for those stored with the data files::
+
+	* .. image:: ../images/blAltRtClick01.png
+
+
+
+==============
+Embedded Video
+==============
+
+This code::
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/123xxxXXXyZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+Should have 11 characters::
+
+	3LbsmS5TJXA
+	123xxxXXXyZ
+
+
+
+==============
+Embedded Audio
+==============
+
+This code::
+
+	.. raw:: html
+
+		<audio controls="controls">
+		  <source src="http://tightbytes.com/music/Sketches/Sketch11.mp3" type="audio/wav">
+		  Your browser does not support the <code>audio</code> element. 
+		</audio>
+
+...produces:
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch11.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+
+
+==================
+Creating Dotpoints
+==================
+
+Once you've decided:
+
+  * Select A.
+
+  * Select B. 
+
+  * To identify C.
+
+  * Finally, click on D.
+
+
+Note: *setting things to italics like this makes more impact - these have yielded reasonable results. You will almost certainly find better settings, which is the whole point of sharing this*.
+
+
+
+================
+Links Management
+================
+
+Here's a typical example of embedding a link: Blender-for-Mac users, please refer to the `Mac user help <http://blender.stackexchange.com/questions/6173/where-does-console-output-go>`_ page.
+
+
+
+===============
+Another Example
+===============
+
+As you can see from the example, an example of a fully-qualified path for Linux would be:
+
+   /home/robyn/Documents/Blender/Projects/AllTextures/AllSkin/Antonia/
+
+or, for the Mac:
+
+   /Volumes/500GB/Blender/Projects/AllTextures/AllSkin/Antonia/
+
+or, for Windows:
+
+   E:\\MyRuntime\\runtime\\textures\\VendorName\\ImagesFolder\\Character\\
+
+
+
+==========================
+Horizontal Separator Lines
+==========================
+
+The code is this (minus the '*')::
+
+	* .. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+...which produces this:
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">

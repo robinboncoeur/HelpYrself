@@ -7,6 +7,7 @@ Excel 2016 VBA Apps
 Excel Apps - Living Documents
 *****************************
 
+===============
 Project Updates
 ===============
 
@@ -43,10 +44,12 @@ This is not elegant, optimal code by any means... but it works. If any user happ
 
 
 
+
 *******************
 A Gentle VBA Primer
 *******************
 
+=======
 The VBE
 =======
 
@@ -57,6 +60,8 @@ In order to write or edit VBA code or forms, a VBA editor has been provided, cal
 In Excel 2016 for Windows, this can be accessed with [Alt] [F11]... on the Mac, with [fn] [Alt] [F11].
 
 
+
+============
 Code Modules
 ============
 
@@ -91,6 +96,7 @@ Each form has its own code module. There is also a general code module that cont
 
 .. _xl_Variables:
 
+========================
 Variables and Properties
 ========================
 
@@ -112,9 +118,10 @@ One could use global variables, which are defined under the 'Option Explicit' at
 
 
 
-.. image:: ../images/flou02.png
-    :align: center
-    :width: 273px
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
 
 
 
@@ -122,6 +129,7 @@ One could use global variables, which are defined under the 'Option Explicit' at
 Common Code Snippets
 ********************
 
+===========
 nRecCount()
 ===========
 
@@ -165,6 +173,8 @@ The code?
   End Sub
 
 
+
+=====
 stp()
 =====
 
@@ -177,6 +187,8 @@ Only because I'm too lazy to type "Trim(Str(" in front of numbers I want to conv
     End Function
 
 
+
+=============================
 Buttons Resizing on their Own
 =============================
 
@@ -189,6 +201,8 @@ Do not close the workbook with the activeX controls as the current worksheet, be
 Proposed as answer by `Erik Live Monday, January 7, 2013 12:36 PM <https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?referrer=https://social.msdn.microsoft.com/Forums/office/en-US/1bfa01c3-27b7-4faf-9e28-345b1f98fd8e/excel-command-button-caption-text-shrinks-till-too-small-to-read?forum=exceldev>`_
 
 
+
+===========================
 The Current 'Help' Solution
 ===========================
 
@@ -321,6 +335,7 @@ Finally, the function that generates the error message if the help files aren't 
 
 
 
+===========
 And then...
 ===========
 
@@ -333,10 +348,18 @@ Saving a solution for a driving 2-column dropdown... set it up this way::
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ****************************
 The Tax Worksheet Conundrums
 ****************************
 
+=====
 Intro
 =====
 
@@ -345,6 +368,8 @@ Sort of starting this note-taking in the middle of development instead of at the
 Credit card entries are to be reviewed next, but codifying them is currently working well.
 
 
+
+========
 Overview
 ========
 

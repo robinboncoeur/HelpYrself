@@ -32,6 +32,8 @@ On my Mac, in the main user folder - sort-of like the "Home/Username" folder in 
 Using as an example a document called "KeysToLife", the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
 
+
+====================
 01 - Sphinx Terminal
 ====================
 
@@ -84,6 +86,8 @@ Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easi
 Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. 
 
 
+
+====================
 02 - Github Terminal
 ====================
 
@@ -117,6 +121,8 @@ Next::
 At this point, the folder is clean. 
 
 
+
+====================
 03 - Sphinx Terminal
 ====================
 
@@ -127,6 +133,8 @@ Run a preliminary::
 to check for errors and to put the first lot of files for git to stage and put up in your repository's gh-pages.
 
 
+
+====================
 04 - Github Terminal
 ====================
 
@@ -140,7 +148,9 @@ Run::
    
 On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
 
-   
+
+
+============
 From then on
 ============
 

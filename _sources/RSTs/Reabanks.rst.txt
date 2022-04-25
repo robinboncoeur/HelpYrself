@@ -2,6 +2,7 @@
 A Discussion on Reabanks
 ########################
 
+Note: **Reaticulate** *for `Reaper <https://reaper.fm>`_ has undergone a tremendous overhaul and so most of what's on this page is now less than accurate or indeed irrelevant*.
 
 *************
 How They Work

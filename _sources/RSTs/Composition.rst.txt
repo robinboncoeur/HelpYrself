@@ -1,38 +1,148 @@
-####################
-Resources and Videos
-####################
+###########
+Composition
+###########
+
+**********************
+Published on Musescore
+**********************
+
+==============
+Original Works
+==============
+
+Below are links to musical sketches, in reverse chronological order. I wrote these to sort-of get an idea how instruments interact, and what they do at different points of the register. For example, a trumpet playing in a higher register is going to have a completely different effect than one playing in the lower registers.
+
+Also, asking a trumpet player to play softly in a higher register is going to be met with some raised left eyebrows and twitching upper lips. This brings up what we can do in a DAW / music notation software versus reality: sure, you can dial down the trumpet playing a high C, but it's not going to sound very realistic.
+
+**Sketch 11 - 'La Gioconda'**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch11.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
 
 
-**************
-Writing Melody
-**************
+**Sketch 10**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch10.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 9 - 'A Metaphor of Chooks'**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch09.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 8 - 'Reflections'**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch08.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 7 - 'Souffle des Arbres'**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch07.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 6**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch06.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 5**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch05.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 4**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch04.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 3**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch03.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 2**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch02.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sketch 1**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/Sketches/Sketch01.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+**Sac A Dos - (Backpack)**
+
+.. raw:: html
+
+    <audio controls="controls">
+      <source src="http://tightbytes.com/music/SacADos/SacADos.mp3" type="audio/wav">
+      Your browser does not support the <code>audio</code> element. 
+    </audio>
+
+
+"Sometimes, the magic works, sometimes it doesn't." 
+Chief Dan George, from the film "Little Big Man".
 
 
 
-***************
-Writing Harmony
-***************
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
 
 
 *******************************
 Musescore Composers Suggestions
 *******************************
 
-Good on ya, mate. I noticed you have a classical approach to material and rhythm (which is fine). There is a baroque-ish type intensity with those busy 16th note patterns against the monolithic chords.
+Good on ya, mate. I noticed you have a classical approach to material and rhythm (which is fine). There is a baroque-ish type intensity with those busy 16th note patterns against the monolithic chords. I know that you are taking a step by step approach to orchestrating. With that said I think you'll find better blends when you pair your winds.
 
-I know that you are taking a step by step approach to orchestrating.
-
-With that said I think you'll find better blends when you pair your winds.
-
-From your arrangements I think you'll know how.
-
-After all, there are many composer styles to look into - as long as you match it with your material.
-
-For example, (assuming you still want this type of input) in this style there is straight-forward doubling.
-
-You have ended up with several simultaneous bass lines (between Cb, vc, trbn, bsn) in several places.
-
-The uniformity of bass line at m 26 sounds more solid, though you do not need the vla on that line.
+From your arrangements I think you'll know how. After all, there are many composer styles to look into - as long as you match it with your material. For example, (assuming you still want this type of input) in this style there is straight-forward doubling. You have ended up with several simultaneous bass lines (between Cb, vc, trbn, bsn) in several places. The uniformity of bass line at m 26 sounds more solid, though you do not need the vla on that line.
 
 The stylistic solution would be divide into 4 parts:
 
@@ -42,26 +152,23 @@ The stylistic solution would be divide into 4 parts:
 	
 	Vln 1, Vln2, Cla and CB/VC. 
 	
-You can reinforce certain lines intermittently with brass (as you did in m29 etc).
+You can reinforce certain lines intermittently with brass (as you did in m29 etc). This would result in "clarity of line", important especially in this style. You have done well to break up the texture now and then. By the way, all recommend (including `Thomas Goss, an online favorite of many <https://orchestrationonline.com/bio/>`_) to not have a key signature with horns in F. Usually the horns and trumpets, cornets do not have a key signature.
 
-This would result in "clarity of line", important especially in this style.
-
-You have done well to break up the texture now and then.
-
-By the way, all recommend (including `Thomas Goss, an online favorite of many
-<https://orchestrationonline.com/bio/>`_) to not have a key signature with horns in F.
-
-Usually the horns and trumpets, cornets do not have a key signature.
-
-I've been away a while and now I'm getting caught up.
-
-I put some new NP renditions up which might support your opinion of NP.
-
-I've heard they're waffling a bit on NP support, or it may come later than sooner. Don't know.
+I've been away a while and now I'm getting caught up. I put some new NP renditions up which might support your opinion of NP. I've heard they're waffling a bit on NP support, or it may come later than sooner. Don't know.
 
 Good work.
 
 Penne Vodka (Joe DiRienzo, New York)
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 
 *********
 Key Links

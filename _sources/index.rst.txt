@@ -10,26 +10,20 @@ Can't remember? Help Yourself
    :maxdepth: 3
    :caption: Contents:
 
-   RSTs/Intro.rst
+   RSTs/About.rst
    RSTs/Blender.rst
    RSTs/Composition.rst
    RSTs/Excel.rst
    RSTs/Git.rst
-   RSTs/GreatIdeas.rst
+   RSTs/Ideas.rst
    RSTs/LaTeX.rst
    RSTs/Links.rst
    RSTs/Linux.rst
    RSTs/MacAdvice.rst
-   RSTs/Musescore.rst
    RSTs/Python.rst
-   RSTs/Reabanks.rst
    RSTs/Reaper.rst
-   RSTs/Reaticulate.rst
-   RSTs/RiggingFigures.rst
-   RSTs/Samyang.rst
-   RSTs/Thoughts.rst
+   RSTs/Rigging.rst
    RSTs/Video.rst
-   RSTs/Virtualbox.rst
    RSTs/Windoze.rst
 
 

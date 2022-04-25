@@ -2,11 +2,9 @@
 Random Useful Links
 ###################
 
-
 *****************
 Home Improvements
 *****************
-
 
 =====
 Sheds
@@ -104,9 +102,12 @@ The narrow format make the this ideal for use in covered locations like carpark 
     • Assembly Video
     • Home Delivery Available
 
+
+
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
 
 
 
@@ -166,6 +167,13 @@ https://www.youtube.com/watch?v=TxLy90NdNG4
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ***************
 Random Websites
 ***************
@@ -179,6 +187,14 @@ Robert Lustig's recommendation: `Sugar Science site <http://sugarscience.ucsf.ed
 Find a business `by ABN (sort-of) <https://www.abcdiamond.com.au/who-is-snh-holdings-pty-ltd-coorparoo/>`_.
 
 
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 *******************
 Wishing to Purchase
 *******************
@@ -190,11 +206,14 @@ Printer Cartridge
 Replacing cartidges for `the HP2055dn <https://www.inkstation.com.au/login>`_
 
 
+
 ======
 Bamboo
 ======
 
 Local vendor, `Lagoon View Nursery <http://www.lagoonviewnursery.com.au/cheapplants/default.aspx>`_ - here's a `fact sheet by Burke's backyard <https://www.burkesbackyard.com.au/fact-sheets/in-the-garden/other/clumping-bamboo/>`_.
+
+
 
 ======================
 More Garden Shed Ideas
@@ -204,17 +223,23 @@ On ebay, `Garden Shed <https://www.ebay.com.au/itm/184820955636?hash=item2b082ff
 
 Simply Sheds: `Space Saver <https://www.simplysheds.com.au/spacesaver-garden-shed-3m-x-1.52m-double-door-in-monument.html>`_
 
+
+
 ============
 For my a1278
 ============
 
 I was considering `a used Logic Board <https://www.ebay.com.au/itm/255196859446?hash=item3b6aeb0c36:g:~YUAAOSwECBhd6nf>`_. Ended up buying `new <https://www.ebay.com.au/itm/133782964197>`_ from `MacParts <https://www.ebay.com.au/usr/macp_8026?_trksid=p2047675.m3561.l2559>`_ - hope I won't regret this. My last logicboard purchase did not go well.
 
+
+
 ===========
 For the GH5
 ===========
 
 To really be a serious videographer, colour grading is essential. `VLog upgrade <https://www.digitalcamerawarehouse.com.au/panasonic-lumix-gh4agh5afz2500-vlog-firmware-update-dmw-sfu1>`_
+
+
 
 ========================
 Audio Expression Control
@@ -248,6 +273,9 @@ We've supported and updated TouchOSC Mk1 for more than 10 years at this point, w
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 
@@ -257,6 +285,8 @@ Other Tech Sites
 ****************
 
 Need a VPN? Consider `NordVPN <https://nordvpn.com/nordvpn-birthday-site/>`_.
+
+
 
 =============
 Win10 Debloat
@@ -298,6 +328,11 @@ VBA Tips
 
 `Dropdown in a Cell <https://www.get-digital-help.com/run-a-macro-from-a-drop-down-list-vba/>`_
 
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 

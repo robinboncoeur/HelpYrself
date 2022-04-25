@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video Processing &mdash; Help Yourself 0.02 documentation</title>
+  <title>Video &mdash; Help Yourself 0.02 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Oracle’s VirtualBox" href="Virtualbox.html" />
-    <link rel="prev" title="Thoughts on Current Events" href="Thoughts.html" /> 
+    <link rel="next" title="Reluctantly, Windows" href="Windoze.html" />
+    <link rel="prev" title="Rigging a Figure in Blender" href="Rigging.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,34 +38,32 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Random Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Video Processing</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python and Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Video</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ffmpeg">FFMPEG</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#concatenating-files">Concatenating Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embed-a-video-in-sphinx">Embed a Video in Sphinx</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-display-a-video">How to display a Video</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#youtube-dl-tips">YouTube-DL tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-notes">Hardware Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#samyang-t1-5-24mm">Samyang T1.5 24mm</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Virtualbox.html">Oracle’s VirtualBox</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
 </ul>
 
@@ -83,7 +81,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Video Processing</li>
+      <li>Video</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/RSTs/Video.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,8 +91,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="video-processing">
-<h1>Video Processing<a class="headerlink" href="#video-processing" title="Permalink to this headline"></a></h1>
+  <div class="section" id="video">
+<h1>Video<a class="headerlink" href="#video" title="Permalink to this headline"></a></h1>
 <div class="section" id="ffmpeg">
 <h2>FFMPEG<a class="headerlink" href="#ffmpeg" title="Permalink to this headline"></a></h2>
 <p>These scripts allow commandline processing of audio and video files. FFMPEG must be installed on your PC and accessible from the commandline processor.</p>
@@ -148,21 +146,37 @@ $ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="how-to-display-a-video">
-<h2>How to display a Video<a class="headerlink" href="#how-to-display-a-video" title="Permalink to this headline"></a></h2>
+<div class="section" id="embed-a-video-in-sphinx">
+<h3>Embed a Video in Sphinx<a class="headerlink" href="#embed-a-video-in-sphinx" title="Permalink to this headline"></a></h3>
 <p><strong>Template for displaying a video in Sphinx</strong></p>
 <img alt="http://www.mysite.com/mypath/myimage.png" src="http://www.mysite.com/mypath/myimage.png" />
-<iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe></div>
-<div class="section" id="youtube-dl-tips">
-<h2>YouTube-DL tips<a class="headerlink" href="#youtube-dl-tips" title="Permalink to this headline"></a></h2>
-<p>172</p>
-<p>In a shell, &amp; is a special character, advising the shell to start everything up to the &amp; as a process in the background. To avoid this behavior, you can put the URL in quotes. See the youtube-dl FAQ for more information.</p>
-<p>Also beware of -citk. With the exception of -i, these options make little sense. See the youtube-dl FAQ for more information. Even -f mp4 looks very strange.</p>
-<p>So what you want is:</p>
-<p>youtube-dl -i -f mp4 –yes-playlist ‘<a class="reference external" href="https://www.youtube.com/watch?v=7Vy8970q0Xc&amp;list=PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2">https://www.youtube.com/watch?v=7Vy8970q0Xc&amp;list=PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2</a>’
-Alternatively, you can just use the playlist ID:</p>
-<p>youtube-dl -i PLwJ2VKmefmxpUJEGB1ff6yUZ5Zd7Gegn2</p>
+<iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe><hr style="height:4px;border-width:0;color:gray;background-color:gray"></div>
+</div>
+<div class="section" id="hardware-notes">
+<h2>Hardware Notes<a class="headerlink" href="#hardware-notes" title="Permalink to this headline"></a></h2>
+<div class="section" id="samyang-t1-5-24mm">
+<h3>Samyang T1.5 24mm<a class="headerlink" href="#samyang-t1-5-24mm" title="Permalink to this headline"></a></h3>
+<p><strong>Description</strong></p>
+<p>Samyang’s <strong>24mm T1.5 VDSLR II ED AS IF UMC</strong> is a wide angle manual focus cine lens designed for full frame and smaller sensor sizes and is known for its beautiful bokeh. It has been carefully engineered for professional film and video work, with the focus gear ring allowing the use of follow focus systems.</p>
+<p>The decoupled aperture changes quietly and smoothly via a second gear ring.</p>
+<p>The T number of 1.5 refers to the actual light transmission, while distance scales are marked on both sides of the lens to allow easy and precise control. This lens features 13 elements in 12 groups, including 4 extra low dispersion (ED) and 2 glass aspherical elements (ASP). These combine to minimise colour aberration and produce exceptional image quality with high contrast. Samyang’s Ultra Multi Coating (UMC) technology optimises light transmission and minimises flare and ghosting. A detachable petal-shaped lens hood is supplied.</p>
+<p><strong>Features</strong></p>
+<p>Core Specifications:</p>
+<blockquote>
+<div><p>Image Sensor size: Full frame 35mm
+Focal length: 24mm
+Aperture range: T1.5 - 22 (stepless, with gearing)
+Filter size: 77mm
+Angle of view: 84.1 degrees (full-frame), 61.8 degrees (APS-C sensor), 47.6 degrees (Micro 4/3)
+Minimum focus distance: 0.25m
+Focus type: manual focus (with gearing)
+Number of diaphragm blades: 8
+Lens construction: 13 elements in 12 groups (4 ED, 2 Glass Aspherical)
+Dimensions (max): 83mm Dia x 123.8mm L
+Net Weight: 615g
+Country of Origin: Korea</p>
+</div></blockquote>
+</div>
 </div>
 </div>
 
@@ -170,8 +184,8 @@ Alternatively, you can just use the playlist ID:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Thoughts.html" class="btn btn-neutral float-left" title="Thoughts on Current Events" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Virtualbox.html" class="btn btn-neutral float-right" title="Oracle’s VirtualBox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Rigging.html" class="btn btn-neutral float-left" title="Rigging a Figure in Blender" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Windoze.html" class="btn btn-neutral float-right" title="Reluctantly, Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

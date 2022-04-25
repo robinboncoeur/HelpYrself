@@ -145,13 +145,20 @@ CONVERTER::
       +Fraction
 
 
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ******************************
 Baking Diffuse and Normal Maps
 ******************************
 
-
 =================================
-METHOD 1 – BAKING FROM THE SHADER
+METHOD 1 – Baking From the Shader
 =================================
 
 First let’s take a look at what is probably the simplest. Here I’ve got a simple 2D plane, on that plane is a whole network of procedural textures such as noise texture nodes working together to create the height map going into the bump node for this shader.
@@ -225,8 +232,10 @@ In the bake settings we can then select ‘Emit’ as our bake type and then as 
 
 Note: *Something to keep in mind is that the rendering process for the Emit pass (and several other passes for that matter (but not the normal pass!)) will take the render samples into account. So since we only need one sample for the emit shader to give us everything we need, to save needlessly wasting baking time we can set that down to just 1 pass in our render sampling settings.*
 
+
+
 =====================================
-METHOD 2 – BAKING FROM ANOTHER OBJECT
+METHOD 2 – Baking From Another Object
 =====================================
 
 The first 2 steps are the same as baking from the shader. So see above for more details.
@@ -255,10 +264,16 @@ It may feel like we’ve covered a lot, I think we should congratulate ourselves
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 *******************
 Links to Cool Sites
 *******************
-
 
 `PolyHaven - free textures <https://polyhaven.com/a/rocks_ground_01>`_
 

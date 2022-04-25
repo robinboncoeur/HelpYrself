@@ -2,11 +2,9 @@
 Mac Tips, How-Tos and More
 ##########################
 
-
 ********************
 Basic Tip and Tricks
 ********************
-
 
 ===============
 Screen Captures
@@ -94,6 +92,8 @@ Networking
 `Samba File Sharing <https://www.how2shout.com/linux/install-samba-on-linux-mint-to-share-files-with-windows/>`_
 
 `Sharing Windows, Linux and Macs on a Network <https://www.howtogeek.com/191116/how-to-share-files-between-windows-mac-and-linux-pcs-on-a-network/>`_
+
+
 
 .. raw:: html
    
@@ -184,10 +184,10 @@ Install Catalina on `Apple- unsupported models <http://dosdude1.com/catalina/>`_
    <iframe width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
-
 
 
 

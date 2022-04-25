@@ -17,7 +17,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Oracle’s VirtualBox" href="Virtualbox.html" /> 
+    <link rel="prev" title="Video" href="Video.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,30 +37,29 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Composition.html">Resources and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Git.html">Git Help Page (not official!)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GreatIdeas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Links.html">Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Random Useful Links</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacAdv.html">Mac Pointers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MacRep.html">Mac Repairs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Musescore.html">Published on Musescore</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python3, Pip and Kivy3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperApp.html">Reaper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReabanks.html">A Discussion on Reabanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ReaperReaticulate.html">Reaticulate - Reabanks Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Samyang.html">Samyang T1.5 24mm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Thoughts.html">Thoughts on Current Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Virtualbox.html">Oracle’s VirtualBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MacAdvice.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python and Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reabanks.html">A Discussion on Reabanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reluctantly, Windows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#which-updates-to-avoid">Which Updates to Avoid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#upgrade-oem-to-retail">Upgrade - OEM to Retail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vba-custom-popup">VBA-Custom Popup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oracle-s-virtualbox">Oracle’s VirtualBox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#avoiding-win10-deactivation">Avoiding Win10 Deactivation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -276,13 +275,24 @@ purchase ref# 35042</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="oracle-s-virtualbox">
+<h2>Oracle’s VirtualBox<a class="headerlink" href="#oracle-s-virtualbox" title="Permalink to this headline"></a></h2>
+<div class="section" id="avoiding-win10-deactivation">
+<h3>Avoiding Win10 Deactivation<a class="headerlink" href="#avoiding-win10-deactivation" title="Permalink to this headline"></a></h3>
+<p><strong>Background</strong></p>
+<p>On December 2nd, I purchased a Windows 10 Pro licence to create a fresh install of Windows in VirtualBox on my Mac. I got the system all the way I wanted it including activation and removing all the cruft with a Windows debloat script by Chris Titus, then did an export.</p>
+<p>To test that everything wortked fine, I deleted the existing install then imported the OVA… and found that Win10 had lost its activation.</p>
+<p><strong>Research</strong></p>
+<p>Looking on StackExchange revealed that the culprit was a changing set of UUIDs. The commenter was using VMWare so he was referencing .VMX files. The analog to that appears to be the .VBOX file in your current install.</p>
+</div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Virtualbox.html" class="btn btn-neutral float-left" title="Oracle’s VirtualBox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Video.html" class="btn btn-neutral float-left" title="Video" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

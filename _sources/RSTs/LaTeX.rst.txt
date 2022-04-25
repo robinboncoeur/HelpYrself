@@ -15,16 +15,27 @@ But I discovered LaTeX (pronounced "Lah-Tek") has an elegant book-making solutio
 Still, there's a lot of crucial stuff in those videos. So, one of the next workflows to fleshing out these "HelpYrself" pages is taking dictation from the videos.
 
 
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ************
 Book Binding
 ************
 
+==========
 Signatures
 ==========
 
 Number of pages to a signature: 4. Here's the `video to watch <https://www.youtube.com/watch?v=9O4kFTOEh6k>`_ to get clear on the kettle-stitch technique.
 
 
+
+======================
 Print-ready Signatures
 ======================
 
@@ -255,6 +266,9 @@ For different folding you only need to write once the beginning of the impositio
 
     java -cp /path...to/Multivalent.jar tool.pdf.Impose -dim 2x1 -paper 29.7x21cm -layout "16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9" file.pdf 
 
+
+
+=========
 Book Glue
 =========
 
@@ -262,9 +276,10 @@ PVA is best: poly-vinyl acetate. Need to find it online.
 
 
 
-.. image:: ../images/flou02.png
-    :align: center
-    :width: 273px
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
 
 
 
@@ -275,7 +290,7 @@ LaTeX Tips - How-Tos
 
 LaTeX is pronounced Lah-Tek. Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.
 
-
+==================
 Forced page-breaks
 ==================
 
@@ -284,6 +299,8 @@ To force a pagebreak::
     \pagebreak
 
 
+
+===================
 Hyperlinks in LaTeX
 ===================
 
@@ -305,6 +322,7 @@ Then::
 
 
 
+===================
 Dot-points in LaTeX
 ===================
 
@@ -334,6 +352,7 @@ And that's the name of *that* tune.
 
 
 
+=============
 Insert images
 =============
 
@@ -351,6 +370,7 @@ and for a centred image::
 
 
 
+==================
 No chapter numbers
 ==================
 
@@ -367,10 +387,9 @@ You might want `to read this <http://tug.org/pracjourn/2008-2/madsen/>`_.
 
 
 
-
+================================
 Memoir: No Paragraph Indentation
 ================================
-
 
 From `StackExchange (247135) <https://tex.stackexchange.com/questions/247135/how-to-stop-indenting-paragraphs-in-memoir>`_: how to do this is described in Section 8.1.1 of the manual (memman) for memoir by setting \parindent to 0em. This can be done by, for example, perhaps::
 
@@ -379,6 +398,8 @@ From `StackExchange (247135) <https://tex.stackexchange.com/questions/247135/how
 The manual also suggests setting \parskip to a positive length to give some vertical space between paragraphs. However, consider what happens when a non-indented paragraph ends at a page break and the last line is full. The following non-indented paragraph will start at the top of the next page; the reader will assume that the two paragraphs are actually just one. In general, typographers dislike this style of paragraphing except when they can have manual control of the layout of each page.
 
 
+
+===============
 Macro-Expansion
 ===============
 
@@ -411,6 +432,8 @@ Note, *it's not a perfectly painless approach: LaTeX expects numbers at certain 
 Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.
 
 
+
+=====
 Books
 =====
 
@@ -418,9 +441,9 @@ Two tools exist for printing signatures: Booklet and \pdfpages.
 
 
 
-.. image:: ../images/Flou02.png
-    :align: center
-    :width: 273px
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 

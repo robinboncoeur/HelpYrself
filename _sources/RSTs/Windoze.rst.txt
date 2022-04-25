@@ -208,28 +208,21 @@ Value Selection: This menu option is assigned the macro "Cbm_Value_Select", whic
 
 
 
+*******************
+Oracle's VirtualBox
+*******************
 
+===========================
+Avoiding Win10 Deactivation
+===========================
 
+**Background**
 
+On December 2nd, I purchased a Windows 10 Pro licence to create a fresh install of Windows in VirtualBox on my Mac. I got the system all the way I wanted it including activation and removing all the cruft with a Windows debloat script by Chris Titus, then did an export.
 
+To test that everything wortked fine, I deleted the existing install then imported the OVA... and found that Win10 had lost its activation.
 
+**Research**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Looking on StackExchange revealed that the culprit was a changing set of UUIDs. The commenter was using VMWare so he was referencing .VMX files. The analog to that appears to be the .VBOX file in your current install.
 
