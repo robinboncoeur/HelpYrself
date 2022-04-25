@@ -1,6 +1,6 @@
-###################
-Random Useful Links
-###################
+############################
+Links - You Might Need Them!
+############################
 
 *****************
 Home Improvements
@@ -34,7 +34,7 @@ Bonuses:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 **ForestWest**
@@ -58,7 +58,7 @@ Garden Shed BM667 Features:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 **EasyShed**
@@ -80,7 +80,7 @@ EasyShed features include:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 
@@ -145,7 +145,6 @@ Refurbish Printer Mob
 
 
 
-
 ===========================
 Hyundai Antenna Replacement
 ===========================
@@ -154,16 +153,6 @@ Barton Capalaba Hyundai
 Antenna assemply
 $217 on CC
 Purchased on 05.01.2022, ref# 35042
-
-
-
-*************************
-Excellent Random YouTubes
-*************************
-
-Awesome Websites
-
-https://www.youtube.com/watch?v=TxLy90NdNG4
 
 
 
@@ -177,6 +166,12 @@ https://www.youtube.com/watch?v=TxLy90NdNG4
 ***************
 Random Websites
 ***************
+
+Awesome Websites: 
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/TxLy90NdNG4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This `person does not exist <https://thispersondoesnotexist.com/>`_.
 

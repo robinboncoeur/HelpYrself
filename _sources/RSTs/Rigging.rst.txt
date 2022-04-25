@@ -121,11 +121,16 @@ In order to make it a bit easier to go back to a previous step, I tend to do 'Sa
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ********************************
 Loading / Adjusting the Armature
 ********************************
-
-
 
 =================
 Load the Armature
@@ -161,6 +166,7 @@ Now is a good time to save. Typically, I'll start 'versioning' here, so I can go
 .. image:: ../images/014SaveAsVers.png
 
 When you 'Save As...', Blender will display the current file name with a red background. Click on the plus [+] will increment your filename... then just click [Save As].
+
 
 
 ===================
@@ -210,7 +216,6 @@ Prepping for Parenting
 ==========================
 Declutter / View New Bones
 ==========================
-
 
 **Hide the Original MetaRig**
 
@@ -337,7 +342,6 @@ What working with the Erogenesis figures brought to light is that the V4 figure 
 This is possibly where I ran into grief when I tried to rig. The mesh, already dense, was now a lot denser, and, according to Nathan on that `same page <https://blender.stackexchange.com/questions/15964/heat-weighting-failed-to-find-solution-for-one-or-more-bones>`_, scale for high-density mesh can be an issue. So, I scaled up my figure ten-fold ([S] 10) and did the rigging process again. It worked, sort-of but not really: some of the control thingies now don't actually move the corresponding body part.
 
 So, we'll see.
-
 
 Hope this document proves useful to someone.
 

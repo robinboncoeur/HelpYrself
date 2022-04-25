@@ -1,27 +1,6 @@
-##############################
-Blender Tips I Keep Forgetting
-##############################
-
-
-******************************************
-Reviewing Script Installation Instructions
-******************************************
-
-   * Unzip (de-archive) the FigureShaders-master.zip file
-
-   * Open Blender
-
-   * To install the FigureShader script:
-
-      1. File -> User Preferences -> Add-Ons tab
-
-      2. At the bottom of this dialogue, click on Install From File...
-
-      3. Navigate to where you downloaded the zip file and select the **make_shaders.zip file**, within the unzipped folder FigureShaders folder. Click 'Install from File...'
-
-      4. Browse your add-ons - click on 'User' under 'Categories' - and find the add-on. It is called 'Material: Shaders for Imported Figures'. Tick the box on the right to activate it. **(If this does not appear, check in the scripts/addons/ folder for the existence of a make_shaders folder, and that all these files are within that folder).**
-
-
+############
+Blender Tips
+############
 
 *********************
 Keeping Blender Happy
@@ -270,7 +249,6 @@ It may feel like we’ve covered a lot, I think we should congratulate ourselves
 
 
 
-
 *******************
 Links to Cool Sites
 *******************
@@ -286,5 +264,23 @@ All sorts of great `tutorials <https://artisticrender.com/>`_ at Artistic Render
 Free female mesh at `CG Trader <https://www.cgtrader.com/free-3d-models/character/woman/girl-in-shorts-e56bd72f-0b8e-43e9-b251-a6bbb5ce976b>`_ to rig in Blender. Tutorial to be developed...
 
 
+
+******************************
+Old Stuff: Script Installation
+******************************
+
+   * Unzip (de-archive) the FigureShaders-master.zip file
+
+   * Open Blender
+
+   * To install the FigureShader script:
+
+      1. File -> User Preferences -> Add-Ons tab
+
+      2. At the bottom of this dialogue, click on Install From File...
+
+      3. Navigate to where you downloaded the zip file and select the **make_shaders.zip file**, within the unzipped folder FigureShaders folder. Click 'Install from File...'
+
+      4. Browse your add-ons - click on 'User' under 'Categories' - and find the add-on. It is called 'Material: Shaders for Imported Figures'. Tick the box on the right to activate it. **(If this does not appear, check in the scripts/addons/ folder for the existence of a make_shaders folder, and that all these files are within that folder).**
 
 

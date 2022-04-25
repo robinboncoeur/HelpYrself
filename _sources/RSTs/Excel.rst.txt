@@ -2,7 +2,6 @@
 Excel 2016 VBA Apps
 ###################
 
-
 *****************************
 Excel Apps - Living Documents
 *****************************
@@ -38,9 +37,9 @@ This is not elegant, optimal code by any means... but it works. If any user happ
 
 
 
-.. image:: ../images/flou02.png
-    :align: center
-    :width: 273px
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 

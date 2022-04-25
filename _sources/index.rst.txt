@@ -19,7 +19,7 @@ Can't remember? Help Yourself
    RSTs/LaTeX.rst
    RSTs/Links.rst
    RSTs/Linux.rst
-   RSTs/MacAdvice.rst
+   RSTs/Macs.rst
    RSTs/Python.rst
    RSTs/Reaper.rst
    RSTs/Rigging.rst

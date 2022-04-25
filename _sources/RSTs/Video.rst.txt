@@ -76,6 +76,8 @@ Embed a Video in Sphinx
 
     <iframe width="640" height="360" src="http://www.mysite.com/mypath/myvideo.mp4" frameborder="0" allowfullscreen></iframe>
 
+
+
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">

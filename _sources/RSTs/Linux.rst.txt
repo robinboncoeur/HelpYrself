@@ -1,6 +1,6 @@
-##########
-Linux Tips
-##########
+################
+Linux Power User
+################
 
 *****************************
 Samba Sharing - Linux Mint 20
@@ -13,6 +13,8 @@ Modded by me to suit my install.
 In this guide, we are going to show Linux users how to install and configure Samba for sharing files on Linux Mint 20. Samba is an open-source implementation of the Server Message Block (SMB) and Common Internet File System (CIFS) protocols that provides file and print services between clients across various operating systems. Samba makes it possible to share files between Linux and Windows operating systems. In our case here, Linux Mint 20 will be a Samba server.
 
 
+
+=====================
 Step 1: Install Samba
 =====================
 
@@ -22,6 +24,8 @@ We start by installing required samba packages on Linux Mint 20. This is done us
 	sudo apt-get -y install samba
 
 
+
+=============================
 Step 2: Configure Samba share
 =============================
 
@@ -67,6 +71,8 @@ Configuration details:
 	* create mode = 0777 & directory mode = 0777 – Allow access to all
 
 
+
+====================================
 Step 3: Configure Secure Samba Share
 ====================================
 
@@ -125,6 +131,7 @@ Allow Samba through the firewall::
 
 
 
+==============================
 Step 4: Configure Samba client
 ==============================
 
@@ -181,6 +188,14 @@ Confirm if mounted::
 You have successfully set up Samba file share on Linux Mint 20 and mount the shared directory on a client.
 
 
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ***************
 Grub-Customizer
 ***************
@@ -193,10 +208,18 @@ needed for the picture to actually take.
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ******************
 Command Line Tools
 ******************
 
+=============
 Updating PATH
 =============
 
@@ -218,6 +241,8 @@ When you type a command into the command prompt in Linux, or in other Linux-like
 When you type a command into your Linux shell, it doesn't look in every directory to see if there's a program by that name. It only looks to the ones you specify. How does it know to look in the directories mentioned above? It's simple: They are a part of an environment variable, called $PATH, which your shell checks in order to know where to look.
 
 
+
+==============
 View your PATH
 ==============
 
@@ -228,6 +253,8 @@ Sometimes, you may wish to install programs into other locations on your compute
 You'll probably see the directories mentioned above, as well as perhaps some others, and they are all separated by colons. Now let's add another directory to the list.
 
 
+
+=============
 Set your PATH
 =============
 
@@ -240,6 +267,8 @@ Simply add /place/with/the/file to the $PATH variable with the following command
 You should now be able to execute the script anywhere on your system by just typing in its name, without having to include the full path as you type it.
 
 
+
+=========================
 Set your PATH permanently
 =========================
 
@@ -271,6 +300,13 @@ On the Mac, press [Shift][Cmd][.] to view hiiden files, then in the home folder 
 
 
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ***********
 Clear Cache
 ***********
@@ -279,6 +315,14 @@ Type this exactly - dangerous command!::
 
     sudo rm /var/lib/apt/lists/* -vf
     sudo apt-get update
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
 
 
 ****************
@@ -292,6 +336,13 @@ From `StackExchange <https://askubuntu.com/questions/491476/how-to-uninstall-spo
 .. image:: ../images/Flou02.png
     :align: center
     :width: 273px
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
 
 
 
@@ -337,10 +388,9 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
 
 
 
-
-.. image:: ../images/flou02.png
-    :align: center
-    :width: 273px
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 
@@ -352,6 +402,8 @@ Brackets in Mint (Ubuntu)
 Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from `It's FOSS <https://itsfoss.com/install-brackets-ubuntu/>`_.
 
 
+
+=====================================
 Method 1: Install Brackets using Snap
 =====================================
 
@@ -378,8 +430,11 @@ This can be rectified by adding --classic::
     sudo snap install brackets --classic
 
 
+
+====================================
 Method 2: Install Brackets using PPA 
 ====================================
+
 ... **in Ubuntu and Linux Mint** (*Not recommended*)
 
 Note: *This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.*
@@ -391,8 +446,11 @@ Open a terminal and use the following commands to install Brackets via the unoff
     sudo apt-get install brackets
 
 
+
+============================================
 Method 3: Install Brackets using DEB package
 ============================================
+
 ... **or source code** 
 
 If you do not like PPAs, you can get the .deb installation files from the link below. You will also get the source code of the latest version here:
@@ -402,6 +460,8 @@ If you do not like PPAs, you can get the .deb installation files from the link b
 These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.
 
 
+
+===============
 Suggested reads
 ===============
 
@@ -409,3 +469,4 @@ Suggested reads
 
 
 `Installing a HP Driver in Linux <https://tutorialforlinux.com/2021/02/25/step-by-step-hp-printer-ubuntu-21-04-installation/2/>`_
+

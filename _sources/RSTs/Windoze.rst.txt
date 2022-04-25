@@ -34,6 +34,14 @@ as they bring Windows 7 "telemetry" stuff into line with Windows 10 (this is inf
 KB971033, if it hasn't been finally retreated. Same for KB2505438... have to hide them on installs as these two will kill Windows activation.
 
 
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
 ***********************
 Upgrade - OEM to Retail
 ***********************
@@ -52,6 +60,15 @@ Barton Capalaba Hyundai
 Antenna assemply
 $217 on CC
 purchase ref# 35042
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
 
 
 ****************
@@ -205,6 +222,13 @@ Value Selection: This menu option is assigned the macro "Cbm_Value_Select", whic
 	   'Call MyFunction by value using the active cell, E6.
 	   ActiveCell.Value = MyFunction(rng)
 	End Sub
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
 
 
 
