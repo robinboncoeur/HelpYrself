@@ -52,16 +52,23 @@ Takeaways:
 	5. Alzheimers is a neurological degenerative disease that is a deficiency disease borne of excess
 		
 
+Also:
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/5QzttAUKcfw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
 
-https://www.youtube.com/watch?v=5QzttAUKcfw
+*******
+Cooking
+*******
 
-=========
-Food Tips
-=========
-
-***Add Garlic Last**
+===============
+Add Garlic Last
+===============
 
 If you enjoy trying new dishes with bold, delicious flavors, you might have noticed a pattern: recipes rarely tell you to toss garlic in a dish first. But why is that?
 
@@ -83,6 +90,28 @@ The next time you’re tempted to add your garlic first because you think it’l
 *****************
 Home Improvements
 *****************
+
+===========================
+Hyundai Antenna Replacement
+===========================
+
+Barton Capalaba Hyundai
+Antenna assemply
+$217 on CC
+purchase ref# 35042
+
+
+==========================
+Blue-ing: Rust Replacement
+==========================
+
+From the `SawmillCreek.org Forum <https://sawmillcreek.org/showthread.php?155155-Discoloring-with-Vinegar&s=86a63445fa4dd7aab00783f01314e8b6>`_:
+
+The black or gray residue is a very nice thing to have. It is a form of iron oxide, or rust. It is however different from red rust as it does not expand cracks and promote further rust. It does however, and here is the big thing, **add a bit of resistance to rust**. It makes a somewhat self-healing layer of protection. The only reason you would not want that coating is if you have a cosmetic need for shiny.
+
+You may have seen this greyish flat finish on an old kitchen knife. It is a classic old time method of steel protection.
+
+
 
 
 =====
@@ -197,8 +226,6 @@ Potential Purchases
 For the 4650dn Printer
 ======================
 
-**Cheap Sheds**
-
 `4 Pack HP C9720A-C9723A (641A) Compatible Toner Cartridges [1BK,1C,1M,1Y] for Color LaserJet 4650 printer <https://www.inkstation.com.au/4-pack-hp-c9720ac9723a-641a-compatible-toner-cartridges-1bk-1c-1m-1y-p-2663.html?prt=3417&gclid=CjwKCAiA7dKMBhBCEiwAO_crFDuMdam1L-_UbL8SLASBMkVdTCfh3Q81WkwpoCjXMPihvT475egrTxoCXbYQAvD_BwE>`_
 
 Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour LaserJet 4650dtn, Colour LaserJet 4650hdn, Colour LaserJet 4650n, Colour LaserJet 4600dn, Colour LaserJet 4600hdn, Colour LaserJet 4600dtn, Colour LaserJet 4600dn, Color LaserJet 4600n, Color LaserJet 4610
@@ -229,58 +256,6 @@ Refurbish Printer Mob
 
 
 
-===========================
-Hyundai Antenna Replacement
-===========================
-
-Barton Capalaba Hyundai
-Antenna assemply
-$217 on CC
-purchase ref# 35042
-
-
-==========================
-Rust Removal from Anything
-==========================
-
-From the `SawmillCreek.org Forum <https://sawmillcreek.org/showthread.php?155155-Discoloring-with-Vinegar&s=86a63445fa4dd7aab00783f01314e8b6>`_:
-
-The black or gray residue is a very nice thing to have. It is a form of iron oxide, or rust. It is however different from red rust as it does not expand cracks and promote further rust. It does however, and here is the big thing, **add a bit of resistance to rust**. It makes a somewhat self-healing layer of protection. The only reason you would not want that coating is if you have a cosmetic need for shiny.
-
-You may have seen this greyish flat finish on an old kitchen knife. It is a classic old time method of steel protection.
-
-
-===============
-SQLite3 Queries
-===============
-The Groceries by Month::
-
-	SELECT sum (TransAmt) as negative FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '01/01/2020' AND '31/01/2020'   (did not select date range correctly)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND strftime('%d/%m/%Y', TransDate) BETWEEN '01/01/2020' AND '31/01/2020'   (Nope)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND date(TransDate) BETWEEN date('2020-01-01') AND date('2020-01-31')   (Nope)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-01-31'    (Nope)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND Date(TransDate) BETWEEN '2020-01-01' AND '2020-01-31'   (Nope)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate < '31/12/2017' ORDER BY TransDate   (Sort-of)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ORDER BY TransDate (YES!! but because I changed the date format - prior to importing to SQLite - to 'yyyy-mm-dd')
-	
-	SELECT sum(TransAmt) 
-	FROM Transactions 
-	WHERE TransCode = 'DLXPG' 
-	AND TransDate BETWEEN '2017-12-01' AND '2017-12-31' ($-706.75)
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2020-01-01' AND '2020-12-31' ORDER BY TransDate
-	
-	SELECT TransDate, TransAmt, TransDesc FROM Transactions WHERE TransCode = 'DLXPG' AND TransDate BETWEEN '2021-01-01' AND '2021-12-31' ORDER BY TransDate
-	
-	
 
 
 
