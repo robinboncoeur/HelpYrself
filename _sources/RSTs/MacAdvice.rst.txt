@@ -202,11 +202,13 @@ Prior to Any Repairs
 
 Look up your **exact** Mac's specs on `EveryMac.com <https://everymac.com/ultimate-mac-lookup/>`_ using the serial number. This can be found under Mac Menu (Apple left-hand corner) "About This Mac" -> Serial Number, or for macbooks, on the bottom cover.
 
-Additionally, some `iMac-specific information <https://everymac.com/systems/apple/imac/imac-aluminum-faq/imac-intel-aluminum-processor-upgrade-instructions.html>`_. `iFixit's take on repairing iMacs <https://www.ifixit.com/Search?doctype=guide&query=iMac>`_. This link::
+Additionally, some `iMac-specific information <https://everymac.com/systems/apple/imac/imac-aluminum-faq/imac-intel-aluminum-processor-upgrade-instructions.html>`_.
+
+For repairs, I recommend `iFixit for repairing iMacs <https://www.ifixit.com/Search?doctype=guide&query=iMac>`_. For example, use this link::
 
 	https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Early+2011+Logic+Board+Replacement/5154
 	
-is valid but Sphinx doesn't care for it - copy and paste this into the browser to see iFixit's solutions to repairing the 2011 Macbook Pro.
+- copy and paste this into the browser - to see iFixit's solutions to repairing the 2011 Macbook Pro.
 
 
 
@@ -214,11 +216,11 @@ is valid but Sphinx doesn't care for it - copy and paste this into the browser t
 Replacing a Battery in a Macbook Pro
 ====================================
 
-Note: *these instruction are mostly from the iFixit site*:
+Note: *these instructions are mostly from the iFixit site*::
 
 	https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Mid+2012+Battery+Replacement/10365
 
-Remove the bottom case. There are ten screws:
+Place the macbook face down on some paper towels or flat soft cloth. Do this on a table in a well-lit room. 'Flat' is important, because if you do this in your lap, besides risking the loss of those *teeny-tiny* screws, as you put the bottom back on it can distort - I know from experience, happened to **ME**! Remove the bottom case. I've included the screwdriver for these ten screws in the longish box in the Macbook box - the one with the hole in it. You will need to remove:
 
 	* Three 14.4 mm Phillips #00 screws
 
@@ -233,7 +235,7 @@ Pry the bottom off with your fingers at the vents.
 .. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery2.png
 
 
-I've included paperwork, a screwdriver for the battery screws (they're tri-point) and the screws. Remove all this before sliding in the battery. It only goes in one way:
+I've included paperwork, a screwdriver for the battery screws (they're tri-point) and the screws in a ziplock bag. Remove all this before sliding in the battery. It only goes in one way:
 
 .. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery3.png
 
@@ -245,13 +247,13 @@ Attach the following two screws:
 	
 .. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery4.png
 
-Note that the longer one goes near the battery connector to the logic board.
+Note: *the longer one goes near the battery connector to the logic board. You may need to slightly adjust the battery a bit for the screw to "take"*.
 
 Connect the battery connector to the logic board.
 
 .. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery5.png
 
-Replac the bottom with the vents towards the back (where the screen hinges to the laptop) and screw the bottom in place as shown:
+Replace the bottom with the vents towards the back (where the screen hinges to the laptop) and screw the bottom in place as shown:
 
 .. image:: https://www.tightbytes.com/images/projects/macrepair/Ac-Battery1.png
 
