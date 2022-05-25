@@ -166,7 +166,7 @@ Penne Vodka (Joe DiRienzo, New York)
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
-
+`Seventh Sam Realticulate Page <https://seventhsam.com/music>`_.
 
 
 
@@ -187,4 +187,4 @@ AdmiralBumblebee's `Reaper Scripts <https://www.admiralbumblebee.com/ReaperScrip
 How to use `Reaticulate <https://seventhsam.com/blog/blog/how-to-use-reaticulate-to-manage-your-sample-library-articulations>`_
 
 
-
+Mark Gotham's free `Orchestrating from Piano Tutorial <https://viva.pressbooks.pub/openmusictheory/chapter/transcription-from-piano/>`_.

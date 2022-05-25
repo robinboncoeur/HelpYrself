@@ -107,6 +107,18 @@ Networking
 Advanced Software Work
 **********************
 
+==============================
+Formatting a USB Drive to GUID
+==============================
+
+When I try to erase and format a USB drive from the MBR to GUID I can not find a way to do that. The partition button is grayed out and I'm stuck.
+
+To format a drive using Disk Utility first be sure you see the entire drive. In Disk Utility menu bar the last icon on the left "View" set to "All Devices". Then choose your entire drive (Uppermost, unindented icon). Format Mac OS (Extended) GUID Partition Disk. Erase.
+
+
+
+
+
 =======================
 Cloning An SSD on a Mac
 =======================

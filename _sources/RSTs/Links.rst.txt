@@ -187,6 +187,8 @@ Find a business `by ABN (sort-of) <https://www.abcdiamond.com.au/who-is-snh-hold
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
+`GlobalEconomy.com <https://www.theglobaleconomy.com/rankings/human_rights_rule_law_index/>`_.
+
 
 
 
@@ -350,7 +352,120 @@ In cases where U.S. nationals are employed in policy-level positions, the Depart
 
 Cases involving service of a U.S. national as a foreign head of state, head of government, or foreign minister raise complex questions of international law and are reviewed by the Department on a case by case basis. Serving as a foreign head of state/government or foreign minister may affect the level of immunity from U.S. jurisdiction that a dual national may be afforded. All such cases should be referred to the Office of the Assistant Legal Adviser for Consular Affairs.
 
-`Republican <https://m.dailykos.com/stories/2018/10/23/1806673/-Republican-Sexual-Predators-Abusers-and-Enablers-Pt-1>`_.
+
+
+
+********
+Thoughts
+********
+
+=================
+Gun Control in Oz
+=================
+
+Here's why this is effective: `the statistics bear it out <https://www.vox.com/policy-and-politics/2018/5/11/17345214/australia-mass-shooting-margaret-river-osmington>`_.
+
+
+
+=========================
+Is This An Ideal Morality
+=========================
+
+Looking at those`Republican moralisers <https://m.dailykos.com/stories/2018/10/23/1806673/-Republican-Sexual-Predators-Abusers-and-Enablers-Pt-1>`_ with a bit of irony. Je ne suis pas qualifié pour soigner les fous.
+
+
+
+******
+Health
+******
+
+Avoid real carbs with `Shirataki noodles <https://drbeckyfitness.com/shirataki-low-carb-noodles-the-answer-to-pasta-cravings/>`_. Here's a `great recipe <https://www.wholesomeyum.com/shirataki-noodles/>`_.
+
+Dr Becky's `five food fails for weight loss <https://drbeckyfitness.com/5-low-carb-food-fails-that-prevent-weight-loss/>`_.
+
+Really awesome `Taco Seasoning you can make yourself <https://www.allrecipes.com/recipe/46653/taco-seasoning-i/>`_.
+
+Dr Becky's `Alternate Day Fasting approach <https://drbeckyfitness.com/500-Calorie-ADFV/>`_.
+
+Twenty-one `fat-burning foods <https://www.goodto.com/wellbeing/diets-exercise/fat-burning-foods-612987>`_.
+
+
+
+************
+All Projects
+************
+
+`Captain Plugins Epic <https://mixedinkey.com/get-captain-epic/?vipcode=8K78122539687705L&c=e39&utm_medium=email&utm_campaign=Captain%20Plugins%20Epic%20Free%20Upgrade&utm_content=Captain%20Plugins%20Epic%20Free%20Upgrade+CID_46a015e4d234c494f5af63357d7eb393&utm_source=CampaignMonitor&utm_term=Download%20Your%20Free%20Upgrade>`_.
+
+`Focus Gear Ring <https://www.amazon.com.au/s?k=TILTA+TILTAING+Seamless+TA-FGR+0.8+MOD+Focus+Gear+Ring&crid=X47SPQZJSQ2Z&sprefix=tilta+tiltaing+seamless+ta-fgr+0.8+mod+focus+gear+ring%2Caps%2C579&ref=nb_sb_noss>`_.
+
+`How to build a narrow shed <https://www.pinterest.com.au/pin/603060206362472286/>`_ suitable for the smaller backyard or garden.
+
+`Paul's Sheds <https://paulssheds.com/collections/all>`_.
+
+`How to Get Lumber for Free or Cheap <https://www.lifehacker.com.au/2021/10/how-to-get-lumber-for-free-or-cheap/>`_.
+
+`Free video stock footage <https://au.oberlo.com/blog/free-stock-video-websites>`_.
+
+Like `thisd one <https://pixabay.com/videos/search/coffee/>`_.
+
+
+
+****************
+All Techie Sites
+****************
+
+`My computer science course <https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0>`_. `Main lecture page <https://video.cs50.io/URrzmoIyqLw?screen=jHZVEq21njk&start=5803>`_.
+
+`IFixIt <https://www.ifixit.com/Device/MacBook_Pro_13%22_Unibody_Mid_2012>`_. Replacing the battery on the `Macbook 2012 13" <https://www.ifixit.com/Guide/MacBook+Pro+13-Inch+Unibody+Mid+2012+Battery+Replacement/10365>`_.
+
+`EveryCircuit.com <https://everycircuit.com/app?wasm>`_.
+
+macOS `Catalina Patcher <http://dosdude1.com/catalina/>`_ by DosDude1. (https://www.youtube.com/watch?v=tZ6TomIhqcY)
+
+Sphinx Read-The-Docs: 
+	* ReST `reStructuredText Directives <https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions>`_
+	* Adding `Custom CSS or JavaScript to Sphinx Documentation <https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html>`_
+	* Customising `themes <https://jareddillard.com/blog/common-ways-to-customize-sphinx-themes.html>`_
+	* Sublime and `RtD <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html>`_
+	
+
+Geodesic `Cricket 12 <http://gaboats.com/boats/cricket12.html>`_ boatbuiling plans. Very light cartopper.
+
+RestoWipe `headlight lens cleaner <https://buyrestowipe.com/tools/restowipe-au.php?affId=6E36D38A&c1=au&c2=placement&gclid=CjwKCAjwx46TBhBhEiwArA_DjNp6MPBBdB64hKQtillrFqFuvVekUEpmg1xjPpkLLI5D7cPGp7FG6RoCrDAQAvD_BwE>`_.
+
+Linux, Ubuntu and `Docker <https://www.linuxandubuntu.com/home/what-is-docker-container>`_. How to `set up a local web server <https://www.linuxandubuntu.com/home/how-to-setup-a-web-server-and-host-website-on-your-own-linux-computer>`_.
+
+May need this for `my VM <https://www.gkeys24.com/spring-sale.html?gk=gk220427>`_.
+
+Installing `Android on an unsupported device <https://linustechtips.com/topic/1215680-help-with-installing-android-10-on-an-unsupported-device/>`_. `ROMs for that <https://forum.xda-developers.com/c/samsung.11975/>`_.
+
+Likely a `better replacement battery <https://batteryexpert.com.au/MacBook+Pro+13+inch+A1278+2012/apple-macbook-pro-13-inch-a1278-2012-replacement-battery.html?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNI9qLv8T3jvBA8SeER3USfL3YRzoDdF6KNrByScdW0_O4oK8gdIb_RoCXgsQAvD_BwE>`_ than from BetterBatt. Or `perhaps this too <https://www.ebay.com.au/itm/265019795037?hash=item3db469265d:g:RjMAAOSwbklhpdjR>`_.
+
+`Narrowboats <https://midlandmallard.com/Boats/>`_.
+
+
+
+
+*********
+Key Sites
+*********
+
+`Bible <https://www.biblegateway.com/passage/?search=Revelation%203&version=NASB>`_.
+
+`My Siteground Account <https://my.siteground.com/>`_.
+
+`My GitHub <https://github.com/robinboncoeur/Projects>`_.
+
+`BOM Mt Stapylton <http://www.bom.gov.au/products/IDR663.loop.shtml>`_.
+
+`My mapped route <https://www.mappedometer.com/?maproute=862896>`_.
+
+`Emojis <https://getemoji.com/>`_.
+
+`My Kindle Reader on Amazon <https://read.amazon.com.au/reader?asin=B0049U414S&ref_=kwl_kr_iv_rec_1&language=en-AU>`_
+
+
 
 
 
