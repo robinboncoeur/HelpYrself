@@ -2,7 +2,7 @@
 Blender Tips I Keep Forgetting
 ##############################
 
-
+******************************************
 Reviewing Script Installation Instructions
 ******************************************
 

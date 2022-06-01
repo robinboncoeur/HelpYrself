@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-English" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Tips &mdash; Help Yourself 0.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mac Tips, How-Tos and More" href="Macs.html" />
+    <link rel="prev" title="Links - You Might Need Them!" href="Links.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Help Yourself
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Links - You Might Need Them!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brackets-in-mint-ubuntu">Brackets in Mint (Ubuntu)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1-install-brackets-using-snap">Method 1: Install Brackets using Snap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2-install-brackets-using-ppa">Method 2: Install Brackets using PPA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-3-install-brackets-using-deb-package">Method 3: Install Brackets using DEB package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suggested-reads">Suggested reads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Linux Tips</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/RSTs/Linux.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linux-tips">
+<h1>Linux Tips<a class="headerlink" href="#linux-tips" title="Permalink to this heading"></a></h1>
+<section id="grub-customizer">
+<h2>Grub-Customizer<a class="headerlink" href="#grub-customizer" title="Permalink to this heading"></a></h2>
+<p>Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by <a class="reference external" href="https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer">Daniel Richter</a> is quite nice but somehow doesn’t fully work for me… it is missing a step:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">grub</span>
+</pre></div>
+</div>
+<p>needed for the picture to actually take.</p>
+</section>
+<section id="updating-path">
+<h2>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this heading"></a></h2>
+<p>In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span>
+</pre></div>
+</div>
+<p>So you can just open up this file as root and add whatever you want.</p>
+<p>For Immediate results, Run (try as normal user and root):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">export</span> <span class="n">PATH</span>
+</pre></div>
+</div>
+</section>
+<section id="kivy-and-pycharm">
+<h2>Kivy and PyCharm<a class="headerlink" href="#kivy-and-pycharm" title="Permalink to this heading"></a></h2>
+<p>Kivy Virtual Environment Installation using PyCharm</p>
+<p>Assumption</p>
+<p>Assuming virtualenv or/and virtualenvwrapper already installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span> <span class="n">virtualenvwrapper</span>
+</pre></div>
+</div>
+<p>Launch PyCharm. Then:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Click File</p></li>
+<li><p>Click Settings</p></li>
+<li><p>Click project Interpreter</p></li>
+<li><p>Click cogwheel next to the Project Interpreter field, and choose Add…</p></li>
+<li><p>New environment is the default selection.</p></li>
+<li><p>Type kivyinstall for the Location e.g. /home/iam/.virtualenvs/kivyinstall</p></li>
+<li><p>Select Base interpreter (Python 3.5, or Python 2.7) from the drop down</p></li>
+<li><p>Do not select the Inherit global site-packages check-box.</p></li>
+<li><p>Select the Make available to all projects check-box, if needed.</p></li>
+<li><p>Click OK</p></li>
+</ul>
+</div></blockquote>
+<p>After pip and setuptools have been installed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>click + beside the column heading, Latest.</p></li>
+<li><p>Type cython in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Select Specify version check-box to load version 0.25.2 which is compatible to Kivy version 1.10.0</p></li>
+<li><p>Click Install Package button.</p></li>
+<li><p>After cython 0.25.2 version installed successfully, type kivy in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Click Install Package</p></li>
+</ul>
+</div></blockquote>
+<p>After kivy installed successfully, create a new project.
+Opened a new project. If kivyinstall did not appear in the expanded External Libraries:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>click File » Settings… » Project Interpreter</p></li>
+<li><p>select Python…(kivyinstall) e.g. Python 3.5 (kivyinstall)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="brackets-in-mint-ubuntu">
+<h2>Brackets in Mint (Ubuntu)<a class="headerlink" href="#brackets-in-mint-ubuntu" title="Permalink to this heading"></a></h2>
+<p>Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from <a class="reference external" href="https://itsfoss.com/install-brackets-ubuntu/">It’s FOSS</a>.</p>
+<section id="method-1-install-brackets-using-snap">
+<h3>Method 1: Install Brackets using Snap<a class="headerlink" href="#method-1-install-brackets-using-snap" title="Permalink to this heading"></a></h3>
+<p>To install Snap, enter the following in Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">snapd</span>
+</pre></div>
+</div>
+<p>Starting Ubuntu 16.04, Brackets is available as a Snap app. You can also find it in the Software Center and install it from there in a few clicks for Ubuntu 16.04 and higher versions.</p>
+<p>If you want to install via the command line, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging. First, make sure you have snapd daemon installed on your system. Use the command below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snap</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Once you have made sure that snapd is installed on your Linux system, install Brackets with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span>
+</pre></div>
+</div>
+<p>In mint, an error occurred with the above command:</p>
+<blockquote>
+<div><p>This revision of snap “brackets” was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk</p>
+</div></blockquote>
+<p>This can be rectified by adding –classic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span> <span class="o">--</span><span class="n">classic</span>
+</pre></div>
+</div>
+</section>
+<section id="method-2-install-brackets-using-ppa">
+<h3>Method 2: Install Brackets using PPA<a class="headerlink" href="#method-2-install-brackets-using-ppa" title="Permalink to this heading"></a></h3>
+<p>… <strong>in Ubuntu and Linux Mint</strong> (<em>Not recommended</em>)</p>
+<p>Note: <em>This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.</em></p>
+<p>Open a terminal and use the following commands to install Brackets via the unofficial PPA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">webupd8team</span><span class="o">/</span><span class="n">brackets</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">brackets</span>
+</pre></div>
+</div>
+</section>
+<section id="method-3-install-brackets-using-deb-package">
+<h3>Method 3: Install Brackets using DEB package<a class="headerlink" href="#method-3-install-brackets-using-deb-package" title="Permalink to this heading"></a></h3>
+<p>… <strong>or source code</strong></p>
+<p>If you do not like PPAs, you can get the .deb installation files from the link below. You will also get the source code of the latest version here:</p>
+<p><a class="reference external" href="https://github.com/adobe/brackets/releases">Download Brackets Editor</a></p>
+<p>These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.</p>
+</section>
+<section id="suggested-reads">
+<h3>Suggested reads<a class="headerlink" href="#suggested-reads" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://itsfoss.com/install-visual-studio-code-ubuntu/">How To Install Visual Studio Code On Ubuntu</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Links.html" class="btn btn-neutral float-left" title="Links - You Might Need Them!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Macs.html" class="btn btn-neutral float-right" title="Mac Tips, How-Tos and More" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, Robyn Hahn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

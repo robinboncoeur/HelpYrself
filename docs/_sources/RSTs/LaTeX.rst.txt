@@ -1,0 +1,840 @@
+#############################
+LaTeX, Memoir and Bookbinding
+#############################
+
+******************
+LaTeX and Learning
+******************
+
+From a learning perspective, I'm a bit challenged. I'll sit through tutorials for a while but if I don't see a practical application to some instruction, the ability to retain the information learned suffers.
+
+For example: one of the key abilities of LaTeX is to insert math formulae into the body of a text. For mathematicians and math students and math hobbyists and - I'm sure - a whole slew of other folk: crucial information.
+
+But I discovered LaTeX (pronounced "Lah-Tek") has an elegant book-making solution, far superior to Word or any of the booklet apps one can find and pay for. So, I got stuck into learning how to use a very powerful book-publishing template called "Memoir". Again, the youtubers put a lot of effort into supporting the maths folk and only gave a glancing nod to the novelists.
+
+Still, there's a lot of crucial stuff in those videos. So, one of the next workflows to fleshing out these "HelpYrself" pages is taking dictation from the videos.
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+************
+Book Binding
+************
+
+==========
+Signatures
+==========
+
+Number of pages to a signature: 4. Here's the `video to watch <https://www.youtube.com/watch?v=9O4kFTOEh6k>`_ to get clear on the kettle-stitch technique.
+
+
+
+======================
+Print-ready Signatures
+======================
+
+From StackExchange, `Dingo writes <https://superuser.com/questions/690065/how-to-print-pdf-for-book-like-binding>`_:
+
+Folding together 8 pages at once for binding in center of any group, means put 4 sheets containing 2 pages for any side (front / back) so to have a particular printing order
+
+The first thing we need to know is the total number of pages needed as an integer multiple of the number of signatures we have chosen (8 in our case) ot the last signature will be not one in-octavo and this can cause problems in binding
+
+So, instead of 500 pages we need 504 pages (504/8 is 63 signatures; each composed by 8 pages) that will be juxtaposed at 2 by two like in your diagram:
+
+.. image:: ../images/tex16pg_Sig.png
+
+Now, the imposition order for 504 pages that you want fold in files of 8 pages, will be:
+
+=== === === === === === === ===
+ 1   2   3   4   5   6   7   8
+=== === === === === === === ===
+  8   1   2   7   6   3   4   5
+ 16   9  10  15  14  11  12  13
+ 24  17  18  23  22  19  20  21
+ 32  25  26  31  30  27  28  29
+ 40  33  34  39  38  35  36  37
+ 48  41  42  47  46  43  44  45
+ 56  49  50  55  54  51  52  53
+ 64  57  58  63  62  59  60  61
+ 72  65  66  71  70  67  68  69
+ 80  73  74  79  78  75  76  77
+ 88  81  82  87  86  83  84  85
+ 96  89  90  95  94  91  92  93
+104  97  98 103 102  99 100 101
+112 105 106 111 110 107 108 109
+120 113 114 119 118 115 116 117
+128 121 122 127 126 123 124 125
+136 129 130 135 134 131 132 133
+144 137 138 143 142 139 140 141
+152 145 146 151 150 147 148 149
+160 153 154 159 158 155 156 157
+168 161 162 167 166 163 164 165
+176 169 170 175 174 171 172 173
+184 177 178 183 182 179 180 181
+192 185 186 191 190 187 188 189
+200 193 194 199 198 195 196 197
+208 201 202 207 206 203 204 205
+216 209 210 215 214 211 212 213
+224 217 218 223 222 219 220 221
+232 225 226 231 230 227 228 229
+240 233 234 239 238 235 236 237
+248 241 242 247 246 243 244 245
+256 249 250 255 254 251 252 253
+264 257 258 263 262 259 260 261
+272 265 266 271 270 267 268 269
+280 273 274 279 278 275 276 277
+288 281 282 287 286 283 284 285
+296 289 290 295 294 291 292 293
+304 297 298 303 302 299 300 301
+312 305 306 311 310 307 308 309
+320 313 314 319 318 315 316 317
+328 321 322 327 326 323 324 325
+336 329 330 335 334 331 332 333
+344 337 338 343 342 339 340 341
+352 345 346 351 350 347 348 349
+360 353 354 359 358 355 356 357
+368 361 362 367 366 363 364 365
+376 369 370 375 374 371 372 373
+384 377 378 383 382 379 380 381
+392 385 386 391 390 387 388 389
+400 393 394 399 398 395 396 397
+408 401 402 407 406 403 404 405
+416 409 410 415 414 411 412 413
+424 417 418 423 422 419 420 421
+432 425 426 431 430 427 428 429
+440 433 434 439 438 435 436 437
+448 441 442 447 446 443 444 445
+456 449 450 455 454 451 452 453
+464 457 458 463 462 459 460 461
+472 465 466 471 470 467 468 469
+480 473 474 479 478 475 476 477
+488 481 482 487 486 483 484 485
+496 489 490 495 494 491 492 493
+504 497 498 503 502 499 500 501
+=== === === === === === === ===
+
+
+So, organsed by signature number:
+
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| Sig |   c1 |  c2 |  c3 |  c4 |  c5 |  c6 |  c7 |  c8 |
++=====+======+=====+=====+=====+=====+=====+=====+=====+
+|  1  |   8  |   1 |   2 |   7 |   6 |   3 |   4 |   5 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  2  |  16  |   9 |  10 |  15 |  14 |  11 |  12 |  13 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  3  |  24  |  17 |  18 |  23 |  22 |  19 |  20 |  21 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  4  |  32  |  25 |  26 |  31 |  30 |  27 |  28 |  29 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  5  |  40  |  33 |  34 |  39 |  38 |  35 |  36 |  37 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  6  |  48  |  41 |  42 |  47 |  46 |  43 |  44 |  45 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  7  |  56  |  49 |  50 |  55 |  54 |  51 |  52 |  53 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  8  |  64  |  57 |  58 |  63 |  62 |  59 |  60 |  61 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+|  9  |  72  |  65 |  66 |  71 |  70 |  67 |  68 |  69 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 10  |  80  |  73 |  74 |  79 |  78 |  75 |  76 |  77 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 11  |  88  |  81 |  82 |  87 |  86 |  83 |  84 |  85 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 12  |  96  |  89 |  90 |  95 |  94 |  91 |  92 |  93 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 13  | 104  |  97 |  98 | 103 | 102 |  99 | 100 | 101 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 14  | 112  | 105 | 106 | 111 | 110 | 107 | 108 | 109 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 15  | 120  | 113 | 114 | 119 | 118 | 115 | 116 | 117 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 16  | 128  | 121 | 122 | 127 | 126 | 123 | 124 | 125 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 17  | 136  | 129 | 130 | 135 | 134 | 131 | 132 | 133 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 18  | 144  | 137 | 138 | 143 | 142 | 139 | 140 | 141 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 19  | 152  | 145 | 146 | 151 | 150 | 147 | 148 | 149 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 20  | 160  | 153 | 154 | 159 | 158 | 155 | 156 | 157 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 21  | 168  | 161 | 162 | 167 | 166 | 163 | 164 | 165 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 22  | 176  | 169 | 170 | 175 | 174 | 171 | 172 | 173 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 23  | 184  | 177 | 178 | 183 | 182 | 179 | 180 | 181 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 24  | 192  | 185 | 186 | 191 | 190 | 187 | 188 | 189 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 25  | 200  | 193 | 194 | 199 | 198 | 195 | 196 | 197 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 26  | 208  | 201 | 202 | 207 | 206 | 203 | 204 | 205 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 27  | 216  | 209 | 210 | 215 | 214 | 211 | 212 | 213 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 28  | 224  | 217 | 218 | 223 | 222 | 219 | 220 | 221 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 29  | 232  | 225 | 226 | 231 | 230 | 227 | 228 | 229 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 30  | 240  | 233 | 234 | 239 | 238 | 235 | 236 | 237 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 31  | 248  | 241 | 242 | 247 | 246 | 243 | 244 | 245 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 32  | 256  | 249 | 250 | 255 | 254 | 251 | 252 | 253 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 33  | 264  | 257 | 258 | 263 | 262 | 259 | 260 | 261 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 34  | 272  | 265 | 266 | 271 | 270 | 267 | 268 | 269 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 35  | 280  | 273 | 274 | 279 | 278 | 275 | 276 | 277 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 36  | 288  | 281 | 282 | 287 | 286 | 283 | 284 | 285 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 37  | 296  | 289 | 290 | 295 | 294 | 291 | 292 | 293 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 38  | 304  | 297 | 298 | 303 | 302 | 299 | 300 | 301 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 39  | 312  | 305 | 306 | 311 | 310 | 307 | 308 | 309 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 40  | 320  | 313 | 314 | 319 | 318 | 315 | 316 | 317 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 41  | 328  | 321 | 322 | 327 | 326 | 323 | 324 | 325 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 42  | 336  | 329 | 330 | 335 | 334 | 331 | 332 | 333 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 43  | 344  | 337 | 338 | 343 | 342 | 339 | 340 | 341 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 44  | 352  | 345 | 346 | 351 | 350 | 347 | 348 | 349 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 45  | 360  | 353 | 354 | 359 | 358 | 355 | 356 | 357 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 46  | 368  | 361 | 362 | 367 | 366 | 363 | 364 | 365 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 47  | 376  | 369 | 370 | 375 | 374 | 371 | 372 | 373 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 48  | 384  | 377 | 378 | 383 | 382 | 379 | 380 | 381 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 49  | 392  | 385 | 386 | 391 | 390 | 387 | 388 | 389 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 50  | 400  | 393 | 394 | 399 | 398 | 395 | 396 | 397 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 51  | 408  | 401 | 402 | 407 | 406 | 403 | 404 | 405 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 52  | 416  | 409 | 410 | 415 | 414 | 411 | 412 | 413 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 53  | 424  | 417 | 418 | 423 | 422 | 419 | 420 | 421 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 54  | 432  | 425 | 426 | 431 | 430 | 427 | 428 | 429 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 55  | 440  | 433 | 434 | 439 | 438 | 435 | 436 | 437 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 56  | 448  | 441 | 442 | 447 | 446 | 443 | 444 | 445 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 57  | 456  | 449 | 450 | 455 | 454 | 451 | 452 | 453 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 58  | 464  | 457 | 458 | 463 | 462 | 459 | 460 | 461 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 59  | 472  | 465 | 466 | 471 | 470 | 467 | 468 | 469 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 60  | 480  | 473 | 474 | 479 | 478 | 475 | 476 | 477 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 61  | 488  | 481 | 482 | 487 | 486 | 483 | 484 | 485 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 62  | 496  | 489 | 490 | 495 | 494 | 491 | 492 | 493 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+| 63  | 504  | 497 | 498 | 503 | 502 | 499 | 500 | 501 |
++-----+------+-----+-----+-----+-----+-----+-----+-----+
+
+You don't need to manually add the convenient number of pages to your multipage PDF file in order to have an integer multiple of signatures you've chosen, you can automatically calculate and perform imposition with:
+
+    `Multivalent.jar <https://sourceforge.net/projects/multivalent/files/>`_ (latest freeware version with tools inside)
+
+Example CLI::
+
+    java -cp /path...to/Multivalent.jar tool.pdf.Impose -dim 2x1 -paper 29.7x21cm -layout "8,1,2,7,6,3,4,5" file.pdf
+
+The -paper switch is settled to 29.7x21cm assuming your page has size A5, you can easily change this value according your needs, by doubling the width of your page
+
+For different folding you only need to write once the beginning of the imposition sequence that Multivalent will take as a model for other groups of pages. So, for folding 16 pages, you'll write::
+
+    java -cp /path...to/Multivalent.jar tool.pdf.Impose -dim 2x1 -paper 29.7x21cm -layout "16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9" file.pdf 
+
+
+
+=========
+Book Glue
+=========
+
+PVA is best: poly-vinyl acetate. Need to find it online.
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+
+********************
+LaTeX Tips - How-Tos
+********************
+
+LaTeX is pronounced Lah-Tek. Currently working on converting the devotional pages to PDF and then, to a book, using the Memoir template.
+
+==================
+Forced page-breaks
+==================
+
+To force a pagebreak::
+
+    \pagebreak
+
+
+
+===================
+Hyperlinks in LaTeX
+===================
+
+Add the hyperref package to your preamble::
+
+    \usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+Then::
+
+    Links will show up in a colored box which will be invisible when you print it.
+    
+    Use \href{URL}{DESCRIPTION} to add a link with description.
+    
+    Use \url{URL} to add a link without a description.
+
+
+
+===================
+Dot-points in LaTeX
+===================
+
+Uses the package::
+
+    \usepackage{enumitem}
+
+and then, optionally numbers, letters or character::
+
+    \begin{document}
+    Some text goes here.
+
+    \begin{itemize}
+       \item This is top level item with a certain bullet.
+
+       \begin{itemize}
+         \item Line with a 'sub bullet'.
+         \item Another line with a 'sub bullet'.
+       \end{itemize}
+
+       \item Back to main bullet list.
+
+    \end{itemize}
+    \end{document}
+
+And that's the name of *that* tune.
+
+
+
+=============
+Insert images
+=============
+
+Have the graphicx package installed 
+
+    \usepackage{graphicx}
+
+and for a centred image::
+
+    \begin{center}
+    \includegraphics[width=50mm]{./images/Flourish02.png}
+    \end{center}
+
+...centers an image of a flourish on a page.
+
+
+
+==================
+No chapter numbers
+==================
+
+The proper memoir way of doing this::
+
+    \addtopsmarks{headings}{}{
+      \createmark{chapter}{left}{nonumber}{}{}
+    }
+    \pagestyle{headings} % activate changes
+
+There is no need to try to figure out how the internals work or that sort of thing.
+
+You might want `to read this <http://tug.org/pracjourn/2008-2/madsen/>`_.
+
+
+
+================================
+Memoir: No Paragraph Indentation
+================================
+
+From `StackExchange (247135) <https://tex.stackexchange.com/questions/247135/how-to-stop-indenting-paragraphs-in-memoir>`_: how to do this is described in Section 8.1.1 of the manual (memman) for memoir by setting \parindent to 0em. This can be done by, for example, perhaps::
+
+    \setlength{\parindent}{0em}
+    
+The manual also suggests setting \parskip to a positive length to give some vertical space between paragraphs. However, consider what happens when a non-indented paragraph ends at a page break and the last line is full. The following non-indented paragraph will start at the top of the next page; the reader will assume that the two paragraphs are actually just one. In general, typographers dislike this style of paragraphing except when they can have manual control of the layout of each page.
+
+
+
+===============
+Macro-Expansion
+===============
+
+Not sure if this is even the correct termminology for this process, but what I was hoping to accomplish was to lump multiple commands (any commands preceeded by a "\\") into one command. Easier said than done. Tried the::
+
+    \newcommand{\commandname}{\thecommands\torun}
+
+approach first, but reading on TeX.StackExchange site revealed that \\newcommand can quite frequently spit the dummy. And then I found \\def. Or, for really complex commands::
+
+    \long\def\nameofcommand{
+      \groupsof
+      \ltxcommands
+    }
+
+which works a treat. for example, this paints a flourish on the bottom of a page, and issues a pagebreak::
+
+    \long\def\imgnp{
+      \begin{center}
+      \includegraphics[scale=.6]{Flourish02.png}
+      \end{center}
+      \pagebreak
+    }
+
+Note, *it's not a perfectly painless approach: LaTeX expects numbers at certain places and won't accept anything else. For example, what would normally execute on the docuemtn itself*::
+
+    \includegraphics[scale=50mm]{./images/Flourish02.png}
+
+*i.e., "scale=50mm" had to be translates to a float*.
+
+Still this works well, overall. Next thing to lean is how to pass this UDF parameters. Spent literally hours just to nut this wee bit out, but I want to do parameters next.
+
+
+
+=====
+Books
+=====
+
+Two tools exist for printing signatures: Booklet and \pdfpages.
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+****************
+Sample Templates
+****************
+
+Chapter Style 01::
+
+    \makechapterstyle{standard}{
+      \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{\vspace*{\beforechapskip}}
+      \renewcommand{\chapnamefont}{\centering\normalfont\Large}
+      \renewcommand{\printchaptername}{\chapnamefont \@chapapp}
+      \renewcommand{\chapternamenum}{\space}
+      \renewcommand{\chapnumfont}{\normalfont\Large}
+      \renewcommand{\printchapternum}{\chapnumfont \thechapter}
+      \renewcommand{\afterchapternum}{\par\nobreak\vskip \midchapskip}
+      \renewcommand{\printchapternonum}{\vspace*{\midchapskip}\vspace*{5mm}}
+      \renewcommand{\chaptitlefont}{\centering\bfseries\LARGE}
+      \renewcommand{\printchaptertitle}[1]{\chaptitlefont ##1}
+      \renewcommand{\afterchaptertitle}{\par\nobreak\vskip \afterchapskip}
+    }
+    \makeatother
+
+    \chapterstyle{standard}
+
+    \setsecheadstyle{\normalfont\large\bfseries}
+    \setsubsecheadstyle{\normalfont\normalsize\bfseries}
+    \setparaheadstyle{\normalfont\normalsize\bfseries}
+    \setparaindent{0pt}\setafterparaskip{0pt}
+
+
+Chapter Style 02::
+
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+
+
+Full Settings for a memoir document (book), saved in a .sty file, 01::
+
+    % The following statement is actually in the main .tex file, at the
+    % top:
+    %
+    %     \documentclass[a5paper, 11pt, onecolumn, openany]{memoir}
+    %
+    % The subsequent code is contained (saved) in a FileName.sty
+    % file, and is referenced in the FileName.tex file using:
+    %
+    %     \usepackage{FileName}
+    %
+    
+
+    %-------------------------------------------------------------
+    %     PACKAGES 
+    %-------------------------------------------------------------
+    \usepackage[utf8]{inputenc} % If utf8 encoding
+    \usepackage[T1]{fontenc}    %
+    \usepackage[english]{babel} % English please
+    \usepackage[final]{microtype} % Less badboxes
+    \usepackage{kpfonts} %Font
+    \usepackage{graphicx} % Include figures
+    \usepackage{afterpage}% for "\afterpage"
+    \usepackage{xcolor}
+    \usepackage{pagecolor}
+
+    %-------------------------------------------------------------
+    %     PAGE LAYOUT 
+    %-------------------------------------------------------------
+
+    \setlrmarginsandblock{0.12\paperwidth}{*}{1} % Left and right margin
+    \setulmarginsandblock{0.15\paperwidth}{*}{1}  % Upper and lower margin
+    \checkandfixthelayout
+
+    %-------------------------------------------------------------
+    %     SECTIONAL DIVISIONS
+    %-------------------------------------------------------------
+
+    % \maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+    % \setsecnumdepth{subsection}
+
+    \makeatletter
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+    \makeatother
+
+    %-------------------------------------------------------------
+    %     FLOATS AND CAPTIONS
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    %     ABSTRACT
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % HEADER AND FOOTER 
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % NEW COMMANDS
+    %-------------------------------------------------------------
+
+    %-------------------------------------------------------------
+    % TABLE OF CONTENTS
+    %-------------------------------------------------------------
+    \maxtocdepth{subsection}
+    \settocdepth{subsection}
+    \AtEndDocument{\addtocontents{toc}{\par}}
+
+    %-------------------------------------------------------------
+    % INTERNAL HYPERLINKS
+    %-------------------------------------------------------------
+    \usepackage{hyperref}   % Internal hyperlinks
+    \hypersetup{
+    pdfborder={0 0 0},      % No borders around internal hyperlinks
+    pdfauthor={Good News Unlimited} % author
+    }
+    \usepackage{memhfixc}   %
+    \setsecnumformat{}
+    \def\sectionmark#1{\markboth{#1}{#1}}
+    \renewcommand{\rmdefault}{ptm}
+
+
+    %-------------------------------------------------------------
+    %                  THE TITLE
+    %-------------------------------------------------------------
+    \usepackage{titlesec}  %needs recent version of »titlesec«
+    \usepackage{xcolor}
+
+    \newlength\drop
+    \newcommand*{\titleKtL}{%
+      \thispagestyle{empty}
+      \begingroup% Keys to Life
+      \drop = 0.1\textheight
+      \vspace*{\baselineskip}
+      \vfill
+      \hbox{%
+        \hspace*{0.2\textwidth}%
+        \rule{1pt}{\dimexpr\textheight-28pt\relax}%
+        \hspace*{0.05\textwidth}%
+        \parbox[b]{0.75\textwidth}{
+          \vbox{%
+            \vspace{\drop}
+            {\noindent\HUGE\bfseries True\\[0.5\baselineskip]
+            Keys to Life}\\[2\baselineskip]
+            {\Large\itshape Writings by Ford, Gonzalez and others}\\[.37\baselineskip]
+            {\Large Good New Unlimited}\par
+            \vspace{0.5\textheight}
+            {\noindent Offered as PDF and Print}\\[\baselineskip]
+          }% end of vbox
+        }% end of parbox
+      }% end of hbox
+    \vfill
+    \null
+    \endgroup}
+
+    %  REPLACES:
+    %\title{\HUGE\textbf{True Keys to Life}}
+    %\author{\Large\textbf{Writings by Ford, Gonzalez and others}}
+    %\date{\Large{\today}}
+    %  OR
+    %\author{Good News Unlimited}
+    %\title{True Keys to Life}
+    % Update font of \title.
+    %\pretitle{\begin{center}\HUGE\sffamily}
+
+    %-------------------------------------------------------------
+    %                THE DOCUMENT
+    %-------------------------------------------------------------
+    \begin{document}
+
+    \frontmatter
+    %\maketitle
+    \titleKtL
+
+    \begin{abstract}
+
+
+Title Template 03::
+
+    \newcommand*{\titleAT}{
+      \begingroup  % Anatomy of a Typeface
+      \FSfont{5bp} % FontSite Bergamo (Bembo)
+      \drop=0.1\textheight
+      \vspace*{\drop}
+      \rule{\textwidth}{1pt}\par
+      \vspace{2pt}\vspace{-\baselineskip}
+      \rule{\textwidth}{0.4pt}\par
+      \vspace{0.5\drop}
+      \centering
+      \textcolor{Red}{
+        {\FSfont{5ml} % FontSite Mona Lisa
+        \Huge THE BOOK}\\[0.5\baselineskip]
+        {\FSfont{5ml}
+        \Large OF}\\[0.75\baselineskip]
+        {\FSfont{5ml}
+        \Huge CONUNDRUMS}}\par
+        \vspace{0.25\drop}
+        \rule{0.3\textwidth}{0.4pt}\par
+        \vspace{\drop}
+        {\Large \scshape The Author}\par
+        \vfill
+        {\large \textcolor{Red}{\plogo}}\\[0.5\baselineskip]
+        {\large\scshape the publisher}\par
+        \vspace*{\drop}
+      \endgroup}
+
+
+Sample Document Beginning::
+
+    \documentclass[a5paper, 11pt, onecolumn, openany]{memoir}
+
+    %-------------------------------------------------------------
+    %     PACKAGES 
+    %-------------------------------------------------------------
+    \usepackage[utf8]{inputenc} % If utf8 encoding
+    \usepackage[T1]{fontenc}    %
+    \usepackage[english]{babel} % English please
+    \usepackage[final]{microtype} % Less badboxes
+    \usepackage{kpfonts} %Font
+    \usepackage{graphicx} % Include figures
+    \usepackage{afterpage}% for "\afterpage"
+    \usepackage{xcolor}
+    \usepackage{pagecolor}
+
+    %-------------------------------------------------------------
+    %     PAGE LAYOUT 
+    %-------------------------------------------------------------
+    \setlrmarginsandblock{0.12\paperwidth}{*}{1} % Left and right margin
+    \setulmarginsandblock{0.15\paperwidth}{*}{1}  % Upper and lower margin
+    \checkandfixthelayout
+
+    %-------------------------------------------------------------
+    %     SECTIONAL DIVISIONS
+    %-------------------------------------------------------------
+    \maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+    \setsecnumdepth{subsection}
+
+    \makeatletter
+    \makechapterstyle{bringhurst}{%
+    \setlength{\parindent}{0pt}
+      \abnormalparskip{.5\baselineskip}
+      \setlength{\beforechapskip}{0\baselineskip}
+      \setlength{\midchapskip}{.5\baselineskip}
+      \setlength{\afterchapskip}{3\baselineskip}
+      \renewcommand{\chapterheadstart}{}
+    \renewcommand{\printchaptername}{}
+      \renewcommand{\chapternamenum}{}
+      \renewcommand{\printchapternum}{}
+      \renewcommand{\afterchapternum}{}
+      \renewcommand{\printchaptertitle}[1]{%
+        \raggedright\Large\scshape\MakeLowercase{##1}}
+      \renewcommand{\afterchaptertitle}{%
+        \vskip\onelineskip \hrule\vskip\onelineskip}
+    }
+    \chapterstyle{bringhurst}
+    \makeatother
+
+    %-------------------------------------------------------------
+    % TABLE OF CONTENTS
+    %-------------------------------------------------------------
+    \maxtocdepth{subsection}
+    \settocdepth{subsection}
+    \AtEndDocument{\addtocontents{toc}{\par}}
+
+    %-------------------------------------------------------------
+    % INTERNAL HYPERLINKS
+    %-------------------------------------------------------------
+    \usepackage{hyperref}   % Internal hyperlinks
+    \hypersetup{
+    pdfborder={0 0 0},      % No borders around internal hyperlinks
+    pdfauthor={Good News Unlimited} % author
+    }
+    \usepackage{memhfixc}
+    \setsecnumformat{}
+    \def\sectionmark#1{\markboth{#1}{#1}}
+    \renewcommand{\rmdefault}{ptm}
+
+    %-------------------------------------------------------------
+    %                  THE TITLE
+    %-------------------------------------------------------------
+    \usepackage{titlesec}  %needs recent version of »titlesec«
+    \usepackage{xcolor}
+
+    \newlength\drop
+    \newcommand*{\titleKtL}{%
+    \thispagestyle{empty}
+    \begingroup% Keys to Life
+    \drop = 0.1\textheight
+    \vspace*{\baselineskip}
+    \vfill
+    \hbox{%
+    \hspace*{0.2\textwidth}%
+    \rule{1pt}{\dimexpr\textheight-28pt\relax}%
+    \hspace*{0.05\textwidth}%
+    \parbox[b]{0.75\textwidth}{
+    \vbox{%
+    \vspace{\drop}
+    {\noindent\HUGE\bfseries True\\[0.5\baselineskip]
+    Keys to Life}\\[2\baselineskip]
+    {\Large\itshape Writings by Ford, Gonzalez and others}\\[.37\baselineskip]
+    {\Large Good New Unlimited}\par
+    \vspace{0.5\textheight}
+    {\noindent Offered as PDF and Print}\\[\baselineskip]
+    }% end of vbox
+    }% end of parbox
+    }% end of hbox
+    \vfill
+    \null
+    \endgroup}
+
+
+    %-------------------------------------------------------------
+    %                    THE DOCUMENT
+    %-------------------------------------------------------------
+    %\author{Good News Unlimited}
+    %\title{True Keys to Life}
+    % Update font of \title.
+    %\pretitle{\begin{center}\HUGE\sffamily}
+
+    \begin{document}
+
+    \frontmatter
+    %\maketitle
+    \pagestyle{empty}
+    \titleKtL
+    \clearpage
+
+    \begin{abstract}
+    The news that travels quickly ...
+
+    In other words, when \underline{instead} ...
+    \end{abstract}
+
+    \clearpage
+
+    \tableofcontents*
+
+    \clearpage
+
+    \chapter{Introduction}
+
+    I feel quite blessed to receive ...
+
+    The text in this document are saved ...
+
+    I am quite certain ...
+
+    \mainmatter
+
+    \chapter{The Gospel Message}
+
+    \section{The Gospel is for Free}
+
+    \textit{Blessed are the poor in spirit}. - Matthew 5:3
+
+    True religion is the union of the heart with God. It is not being a member of a denomination, or simply being baptized. All these ...
+
+
