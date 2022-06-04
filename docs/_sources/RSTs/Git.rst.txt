@@ -7,6 +7,7 @@ Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I'll do some tes
 Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I'm saving them in this document.
 
 
+*****************
 01 - Local set-up
 *****************
 
@@ -15,12 +16,39 @@ On my Mac, in the main user folder - sort-of like the "Home/Username" folder in 
 Using as an example a document called "KeysToLife", the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
 
-02 - Sphinx Terminal
-********************
+***********
+02 - Sphinx
+***********
+
+==============
+Sphinx Install
+==============
+
+Tried installing sphinx via Homebrew. **make html** wouldn't work, so I uninstalled and tried::
+
+    python3 -m pip install sphinx
+    
+**make html** still wouldn't work, so figured it was a path issue. Located sphinx-build::
+
+    which sphinx-build
+
+Added the current python3 path to .profile::
+
+    export PATH="/Users/robyn/Library/Python/3.8/bin/:$PATH"
+    
+Now, **make html** works. Additionally added my main theme::
+
+    pip3 install -U sphinx-rtd-theme
+    
+
+
+=======================
+New Sphinx Document Set
+=======================
 
 In the first terminal, run::
 
-   cd AllHelp/KeysToLife
+   cd AllHelp/NewDocsSet
    
    sphinx-quickstart
    
@@ -30,7 +58,23 @@ In the list of prompts, it will ask whether to separate source from build: I hav
 
 In order to have the build end up in the right place, I have the following entry in the Makefile::
 
-   BUILDDIR      = /Users/robinhahn/AllHelp/GitPages/KeysToLife
+   BUILDDIR      = /Users/robyn/AllHelp/GitPages/KeysToLife/docs/
+   
+Also, change the following::
+
+	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+    ...to...
+	
+    @$(SPHINXBUILD) -b help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+This allows the github-pages to find the source for the pages in the /main/docs/ folder in your repository.
+
+
+
+=========
+index.rst
+=========
 
 In the newly created index.rst, change the title of the header as desired, then add the pages in the RSTs folder so that index.rst refllects what's in the RSTs folder::
    
@@ -64,87 +108,10 @@ Modify the conf.py for sphinx to use the ReadTheDocs template, which I find easi
         'titles_only': False
     }
 
-Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding and editing your files to the RSTs folder, edit your index.rst to include all these files. 
+Make sure to remove an indenting copying and pasting this last configuration text might introduce, as python sees indenting as a means of marking blocks of code. After adding your files to the RSTs folder and editing them, include them in your index.rst.
 
+Newest sphinx-build version (5.0) requires a language::
 
-03 - Github Terminal
-********************
+    language = 'en-English'
 
-Online, at Github, in your github account, set up a new repository. This will have a URL::
-
-   git@github.com:{myAccount}/KeysToLife
-
-Locally, in the git terminal, navigate to::
-
-   cd AllHelp/GitPages/KeysToLife
-   
-   git init
-   
-Note: 
-   *Not sure if this git init-ed .git folder is a keeper, as it will not be used to upload files. However, this is how I set up the initial html folder, which needs to have a .git folder, as this is the working folder from whence files will be staged and uploaded to the GitPages.*
-   
-Next::
-
-   git clone git@github.com:{myAccount}/KeysToLife.git html
-
-   cd html
-   
-   git init
-   
-   git symbolic-ref HEAD refs/heads/gh-pages
-   
-   rm .git/index
-   
-   git clean -fdx
-   
-At this point, the folder is clean. 
-
-
-04 - Sphinx Terminal
-********************
-
-Run a preliminary::
-
-   make html 
-   
-to check for errors and to put the first lot of files for git to stage and put up in your repository's gh-pages.
-
-
-05 - Github Terminal
-********************
-
-Run::
-
-   git add -A
-   
-   git commit -am "committing help"
-   
-   git push origin gh-pages
-   
-On Github, go to that repository and click on the settings icon (right-most). Halfway down is the GitPages section. Click on the URL for the pages and your new website should display.
-
-   
-06 - From then on
-*****************
-
-In the Sphinx Terminal - cd AllHelp/KeysToLife::
-
-   make html
-
-In the GitPages Terminal - cd AllHelp/GitPages/KeysToLife/html::
-   
-   git add -A
-   
-   git commit -am "update note xxxx"
-   
-   git push origin gh-pages
-   
-Read, rinse, repeat. Terminal saves previous commands, so:
-
-  * up-arrow three times, hit enter
-  
-  * up-arrow three times, edit comment, hit enter
-  
-  * up-arrow three times, hit enter
-
-Easy-peasy.
+Note: previous CLI approach to github and git now done in Github Desktop. Just to much easier!

@@ -2,7 +2,7 @@
 Python including Pip
 ####################
 
-
+************
 Pip Installs
 ************
 
@@ -11,6 +11,8 @@ For PyTube, to install the latest source directly from github using pip, type th
     pip install git+https://github.com/nficano/pytube.git
 
 
+
+========================
 PyCharm and Kivy Install
 ========================
 
@@ -26,6 +28,8 @@ An important `link <http://kivy.org/docs/installation/installation-linux.html#ub
 Note: *PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.*
 
 
+
+===================
 Brackets Install...
 ===================
 ... **in Linux Mint**
@@ -33,6 +37,8 @@ Brackets Install...
 A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
 
 
+
+======================
 Kivy kv file Python...
 ======================
 ... **syntax highlighting**
@@ -42,6 +48,8 @@ Create a brackets.json file with the following code::
     (code to follow)
     
 
+
+===================
 Project: Roster App
 ===================
 

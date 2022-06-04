@@ -94,16 +94,6 @@ The next time you’re tempted to add your garlic first because you think it’l
 Home Improvements
 *****************
 
-===========================
-Hyundai Antenna Replacement
-===========================
-
-Barton Capalaba Hyundai
-Antenna assemply
-$217 on CC
-purchase ref# 35042
-
-
 ==========================
 Blue-ing: Rust Replacement
 ==========================
@@ -115,6 +105,10 @@ The black or gray residue is a very nice thing to have. It is a form of iron oxi
 You may have seen this greyish flat finish on an old kitchen knife. It is a classic old time method of steel protection.
 
 
+
+*****************
+Home Improvements
+*****************
 
 =====
 Sheds
@@ -144,7 +138,7 @@ Bonuses:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 **ForestWest**
@@ -168,7 +162,7 @@ Garden Shed BM667 Features:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 **EasyShed**
@@ -190,7 +184,7 @@ EasyShed features include:
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
 
@@ -213,10 +207,64 @@ The narrow format make the this ideal for use in covered locations like carpark 
     • Home Delivery Available
 
 
+On ebay, `Garden Shed <https://www.ebay.com.au/itm/184820955636?hash=item2b082ff9f4:g:nNQAAOSwLBlglP8k>`_
+
+Simply Sheds: `Space Saver <https://www.simplysheds.com.au/spacesaver-garden-shed-3m-x-1.52m-double-door-in-monument.html>`_
+
+`How to build a narrow shed <https://www.pinterest.com.au/pin/603060206362472286/>`_ suitable for the smaller backyard or garden.
+
+`Paul's Sheds <https://paulssheds.com/collections/all>`_.
+
+`How to Get Lumber for Free or Cheap <https://www.lifehacker.com.au/2021/10/how-to-get-lumber-for-free-or-cheap/>`_.
+
+
+
 
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+********************
+US Citizenship Stuff
+********************
+
+
+Rescinding your `US citizenship <https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Loss-US-Nationality-Foreign-State.html>`_.
+
+Advice About Possible Loss of U.S. Nationality and Seeking Public Office in a Foreign State
+A U.S. national’s employment, after attaining the age of 18, with the government of a foreign country or a political subdivision thereof is a potentially expatriating act pursuant to Section 349(a)(4) of the Immigration and Nationality Act if the individual is a citizen of that foreign country or takes an oath of allegiance to that country in connection with such employment. Such employment, however, will result in one's expatriation only if done voluntarily with the intention of relinquishing U.S. citizenship. Running for foreign office, even foreign head of state, is not a potentially expatriating act; only accepting, serving in, or performing the duties of a foreign office are potentially expatriating as described above.  
+
+The Department has adopted an administrative presumption that U.S. nationals intend to retain their U.S. citizenship when they naturalize as nationals of a foreign state, declare their allegiance to a foreign state, or accept non-policy level employment with a foreign government. See 22 CFR 50.40(a); see also 7 FAM 1200 (additionally applying the presumption to serving as an officer in the military forces of a foreign state not engaged in hostilities against the United States). Questions concerning whether a foreign government position is a policy level position should be referred to the Office of Legal Affairs for Overseas Citizens Services.
+
+U.S. nationals employed in non-policy level positions with foreign governments are not required to take any action to retain their U.S. nationality if they wish to retain it because the Department presumes that U.S. nationals employed in such positions do not have the requisite intent to relinquish their U.S. nationality. An individual who is employed in a non-policy level position will only lose his/her U.S. nationality if he or she establishes clearly and credibly, by a preponderance of the evidence, an intent to relinquish U.S. nationality upon assuming or serving in such foreign government employment. 
+
+In cases where U.S. nationals are employed in policy-level positions, the Department of State will seek to ascertain the individual's intent to retain or relinquish his or her U.S. nationality upon accepting the policy level position with a foreign government. An individual assuming such a position who wishes to retain U.S. nationality should state clearly to the Department or post that he or she intended to retain U.S. nationality. An individual assuming such a position who wishes to relinquish U.S. nationality may come to Post and follow the required steps to complete the Certificate of Loss of Nationality application process.
+
+Cases involving service of a U.S. national as a foreign head of state, head of government, or foreign minister raise complex questions of international law and are reviewed by the Department on a case by case basis. Serving as a foreign head of state/government or foreign minister may affect the level of immunity from U.S. jurisdiction that a dual national may be afforded. All such cases should be referred to the Office of the Assistant Legal Adviser for Consular Affairs.
+
+
+
+
+********
+Thoughts
+********
+
+=================
+Gun Control in Oz
+=================
+
+Here's why this is effective... `the statistics bear it out <https://www.vox.com/policy-and-politics/2018/5/11/17345214/australia-mass-shooting-margaret-river-osmington>`_.
+
+
+
+=========================
+Is This An Ideal Morality
+=========================
+
+Looking at those `Republican moralisers <https://m.dailykos.com/stories/2018/10/23/1806673/-Republican-Sexual-Predators-Abusers-and-Enablers-Pt-1>`_ with a bit of irony. Je ne suis pas qualifié pour soigner les fous.
 
 
 
@@ -243,17 +291,11 @@ Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour Laser
 1 x Q9722A Yellow Compatible Toner Cartridge 8,000 page yield.
 
 
-
 `HP PRINTER TRANSFER KIT Q3675A FOR COLOR LASERJET 4650, 4650DN ($365.59) <https://www.thetelecomshop.com/au/hp-printer-transfer-kit-q3675a-for-color-laserjet-4650-4650dn?gclid=CjwKCAiA7dKMBhBCEiwAO_crFHYsTGNhsIF9KOl3F8loEz-FU3WIYiD1uS1KTlTWQafq_FDVZHVxDxoC67sQAvD_BwE>`_
 
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
-=====================
-Refurbish Printer Mob
-=====================
 
-`MenuDIRECTNINE <https://au.directnine.com//>`_
-
-`Aesthetics <https://lavinialingerie.com/>`_.
-
-“For my thoughts are not your thoughts, neither are your ways my ways. . . . As the heavens are higher than the earth, so are my ways higher than your ways and my thoughts than your thoughts” Isaiah 55:8-9

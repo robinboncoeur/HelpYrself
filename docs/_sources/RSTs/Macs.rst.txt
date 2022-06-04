@@ -323,10 +323,3 @@ Other stuff:
 	* `Grady Hillhouse Garduino <https://github.com/gradyh/GradyHillhouseGarduino>`_
 	* `Octo Parts <https://octopart.com/>`_
 	* `CTPC <https://ctpc.biz/>`_
-
-
-
-
-
-
-

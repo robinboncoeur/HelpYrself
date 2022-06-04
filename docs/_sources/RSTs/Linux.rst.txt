@@ -3,6 +3,7 @@ Linux Tips
 ##########
 
 
+***************
 Grub-Customizer
 ***************
 
@@ -13,6 +14,9 @@ Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customize
 needed for the picture to actually take.
 
 
+
+
+*************
 Updating PATH
 *************
 
@@ -27,6 +31,9 @@ For Immediate results, Run (try as normal user and root)::
     source /etc/environment && export PATH
 
 
+
+
+****************
 Kivy and PyCharm
 ****************
 
@@ -67,12 +74,17 @@ Opened a new project. If kivyinstall did not appear in the expanded External Lib
     * select Python...(kivyinstall) e.g. Python 3.5 (kivyinstall)
 
 
+
+
+*************************
 Brackets in Mint (Ubuntu)
 *************************
 
 Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from `It's FOSS <https://itsfoss.com/install-brackets-ubuntu/>`_.
 
 
+
+=====================================
 Method 1: Install Brackets using Snap
 =====================================
 
@@ -99,6 +111,8 @@ This can be rectified by adding --classic::
     sudo snap install brackets --classic
 
 
+
+====================================
 Method 2: Install Brackets using PPA 
 ====================================
 ... **in Ubuntu and Linux Mint** (*Not recommended*)
@@ -112,6 +126,8 @@ Open a terminal and use the following commands to install Brackets via the unoff
     sudo apt-get install brackets
 
 
+
+============================================
 Method 3: Install Brackets using DEB package
 ============================================
 ... **or source code** 
@@ -123,6 +139,8 @@ If you do not like PPAs, you can get the .deb installation files from the link b
 These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.
 
 
+
+===============
 Suggested reads
 ===============
 
