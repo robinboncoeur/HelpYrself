@@ -44,7 +44,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">A Bit of Git, mostly Sphinx Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Links.html">Links - You Might Need Them!</a></li>
@@ -52,6 +52,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python including Pip</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pip-installs">Pip Installs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#yt-dlp-stuff-to-know">yt-dlp - Stuff to Know</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pytube">PyTube</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pycharm-and-kivy-install">PyCharm and Kivy Install</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#brackets-install">Brackets Install…</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#kivy-kv-file-python">Kivy kv file Python…</a></li>
@@ -94,10 +96,25 @@
 <h1>Python including Pip<a class="headerlink" href="#python-including-pip" title="Permalink to this heading"></a></h1>
 <section id="pip-installs">
 <h2>Pip Installs<a class="headerlink" href="#pip-installs" title="Permalink to this heading"></a></h2>
+<section id="yt-dlp-stuff-to-know">
+<h3>yt-dlp - Stuff to Know<a class="headerlink" href="#yt-dlp-stuff-to-know" title="Permalink to this heading"></a></h3>
+<p>To download/install <strong>or</strong> update:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">yt</span><span class="o">-</span><span class="n">dlp</span>
+</pre></div>
+</div>
+<p>When you get this <strong>ERROR: Did not get any data blocks</strong> invoke:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yt-dlp --list-formats https://www.youtube.com/watch?v=NameOfFile
+</pre></div>
+</div>
+<p>See which one will allow download. Youmay end up with a .3gp file.</p>
+</section>
+<section id="pytube">
+<h3>PyTube<a class="headerlink" href="#pytube" title="Permalink to this heading"></a></h3>
 <p>For PyTube, to install the latest source directly from github using pip, type this in your command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nficano</span><span class="o">/</span><span class="n">pytube</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
+</section>
 <section id="pycharm-and-kivy-install">
 <h3>PyCharm and Kivy Install<a class="headerlink" href="#pycharm-and-kivy-install" title="Permalink to this heading"></a></h3>
 <p>To explore: in Ubuntu 12.04, one user solved it this way:</p>

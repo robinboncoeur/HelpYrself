@@ -6,6 +6,24 @@ Python including Pip
 Pip Installs
 ************
 
+======================
+yt-dlp - Stuff to Know
+======================
+
+To download/install **or** update::
+
+	pip3 install yt-dlp
+	
+When you get this **ERROR: Did not get any data blocks** invoke::
+
+	yt-dlp --list-formats https://www.youtube.com/watch?v=NameOfFile
+
+See which one will allow download. Youmay end up with a .3gp file.
+
+======
+PyTube
+======
+
 For PyTube, to install the latest source directly from github using pip, type this in your command line::
 
     pip install git+https://github.com/nficano/pytube.git

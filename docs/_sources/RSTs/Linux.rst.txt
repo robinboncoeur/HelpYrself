@@ -2,6 +2,17 @@
 Linux Tips
 ##########
 
+****************
+Quick Web Server
+****************
+
+In Terminal::
+
+    python3 -m http.server 7050
+    
+...where "7050" is an arbitrary port number.
+
+
 
 ***************
 Grub-Customizer

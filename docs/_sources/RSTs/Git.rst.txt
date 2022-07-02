@@ -1,30 +1,35 @@
-###################################
-My Totally Unofficial Git Help Page
-###################################
+#################################
+A Bit of Git, mostly Sphinx Notes
+#################################
 
 Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I'll do some testing of this process as I've already encountered issues I couldn't explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.
 
-Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I'm saving them in this document.
+Update 18.11.17: Using `KeysToLife <https://robinboncoeur.github.io/KeysToLife/index.html>`_ as my test app. `KeysToLife <https://robinboncoeur.github.io/KeysToLife/index.html>`_ is a collection of emailed devotionals that are worth reading more than just once, so I'm saving them in this document.
 
 
 *****************
-01 - Local set-up
+01 - Github Setup
 *****************
 
 On my Mac, in the main user folder - sort-of like the "Home/Username" folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product's users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.
 
 Using as an example a document called "KeysToLife", the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.
 
+I now use `Github Desktop <https://desktop.github.com/>`_ which makes the process infinitely simpler, particularly when I stuff things up: it suggests solutions, which the commandline approach doesn't do.
+
+
 
 ***********
 02 - Sphinx
 ***********
 
+Note: *this Sphinx section updated, with the following notes, on 2022.06.05*
+
 ==============
 Sphinx Install
 ==============
 
-Tried installing sphinx via Homebrew. **make html** wouldn't work, so I uninstalled and tried::
+Tried installing Sphinx via Homebrew. **make html** wouldn't work, so I uninstalled and tried::
 
     python3 -m pip install sphinx
     

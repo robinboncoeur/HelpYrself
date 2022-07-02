@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Totally Unofficial Git Help Page &mdash; Help Yourself 0.02 documentation</title>
+  <title>A Bit of Git, mostly Sphinx Notes &mdash; Help Yourself 0.02 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -44,8 +44,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">My Totally Unofficial Git Help Page</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#local-set-up">01 - Local set-up</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">A Bit of Git, mostly Sphinx Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github-setup">01 - Github Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sphinx">02 - Sphinx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sphinx-install">Sphinx Install</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#new-sphinx-document-set">New Sphinx Document Set</a></li>
@@ -80,7 +80,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>My Totally Unofficial Git Help Page</li>
+      <li>A Bit of Git, mostly Sphinx Notes</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/RSTs/Git.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -90,20 +90,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="my-totally-unofficial-git-help-page">
-<h1>My Totally Unofficial Git Help Page<a class="headerlink" href="#my-totally-unofficial-git-help-page" title="Permalink to this heading"></a></h1>
+  <section id="a-bit-of-git-mostly-sphinx-notes">
+<h1>A Bit of Git, mostly Sphinx Notes<a class="headerlink" href="#a-bit-of-git-mostly-sphinx-notes" title="Permalink to this heading"></a></h1>
 <p>Stuff on here sort-of works, sort-of. I wrote this in Nov 2018. I’ll do some testing of this process as I’ve already encountered issues I couldn’t explain when I cerated this set of documents called HelpYrself. If it works for you, great. However, YMMV.</p>
-<p>Update 18.11.17: Using KeysToLife as my test app. KeysToLife is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
-<section id="local-set-up">
-<h2>01 - Local set-up<a class="headerlink" href="#local-set-up" title="Permalink to this heading"></a></h2>
+<p>Update 18.11.17: Using <a class="reference external" href="https://robinboncoeur.github.io/KeysToLife/index.html">KeysToLife</a> as my test app. <a class="reference external" href="https://robinboncoeur.github.io/KeysToLife/index.html">KeysToLife</a> is a collection of emailed devotionals that are worth reading more than just once, so I’m saving them in this document.</p>
+<section id="github-setup">
+<h2>01 - Github Setup<a class="headerlink" href="#github-setup" title="Permalink to this heading"></a></h2>
 <p>On my Mac, in the main user folder - sort-of like the “Home/Username” folder in Linux - there is an AllHelp folder containing subfolders for each product, as well as a folder in AllHelp/GitPages, where all build files end up. If a new product’s users would benefit from some sort of help system for that product, the product get a folder in that AllHelp folder. Any product with users will have a repository for that product on GitHub.</p>
 <p>Using as an example a document called “KeysToLife”, the following approach more-or-less seems to get the job done. You will need two instances of Terminal running: one for Sphinx to build html from .rst files, the other, to talk to github.</p>
+<p>I now use <a class="reference external" href="https://desktop.github.com/">Github Desktop</a> which makes the process infinitely simpler, particularly when I stuff things up: it suggests solutions, which the commandline approach doesn’t do.</p>
 </section>
 <section id="sphinx">
 <h2>02 - Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this heading"></a></h2>
+<p>Note: <em>this Sphinx section updated, with the following notes, on 2022.06.05</em></p>
 <section id="sphinx-install">
 <h3>Sphinx Install<a class="headerlink" href="#sphinx-install" title="Permalink to this heading"></a></h3>
-<p>Tried installing sphinx via Homebrew. <strong>make html</strong> wouldn’t work, so I uninstalled and tried:</p>
+<p>Tried installing Sphinx via Homebrew. <strong>make html</strong> wouldn’t work, so I uninstalled and tried:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
 </pre></div>
 </div>

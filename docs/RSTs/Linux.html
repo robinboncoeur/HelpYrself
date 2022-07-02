@@ -44,11 +44,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Git.html">My Totally Unofficial Git Help Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">A Bit of Git, mostly Sphinx Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Links.html">Links - You Might Need Them!</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-web-server">Quick Web Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#grub-customizer">Grub-Customizer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
@@ -95,6 +96,14 @@
              
   <section id="linux-tips">
 <h1>Linux Tips<a class="headerlink" href="#linux-tips" title="Permalink to this heading"></a></h1>
+<section id="quick-web-server">
+<h2>Quick Web Server<a class="headerlink" href="#quick-web-server" title="Permalink to this heading"></a></h2>
+<p>In Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">7050</span>
+</pre></div>
+</div>
+<p>…where “7050” is an arbitrary port number.</p>
+</section>
 <section id="grub-customizer">
 <h2>Grub-Customizer<a class="headerlink" href="#grub-customizer" title="Permalink to this heading"></a></h2>
 <p>Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by <a class="reference external" href="https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer">Daniel Richter</a> is quite nice but somehow doesn’t fully work for me… it is missing a step:</p>
