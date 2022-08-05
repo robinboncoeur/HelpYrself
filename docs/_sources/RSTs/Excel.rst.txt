@@ -48,6 +48,14 @@ This is not elegant, optimal code by any means... but it works. If any user happ
 A Gentle VBA Primer
 *******************
 
+===========================
+Removing 'Ghost' Worksheets
+===========================
+
+The only way to get rid of the ghost worksheets is to save the workbook as an xlsx, close the workbook open up the xlsx, copy over the worksheet code and modules and save out the xlsm. Of course this only corrects the problem until the next occurrence.
+
+
+
 =======
 The VBE
 =======

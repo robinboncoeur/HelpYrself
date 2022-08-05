@@ -297,5 +297,23 @@ Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour Laser
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
+************
+Adding Notes
+************
+
+To Dan Ezekiel::
+
+	Good day Dan,
+	Just wanted to say thank you for all the beautiful music (and your thoughts) that you share on your pages. I find your lyrical works very inspiring: besides striking resonate chords, they keep encouraging me to go back to 'writing' little musical efforts. As a now-retired nurse (I just hit 70), I do have more time to devote not just to spending time in Musescore, but also get get a better grasp on harmonic theory. However, I'm an extremely lazy (read: "not much of a consistent self-starter") student of theory, which I'm sure reflects in what I write. So, I guess step one should be to - as we say here in Australia - 'pull the finger out' and get serious about getting some of the basics down. I have been following Thomas Goss and his YouTube offerings but I think his teachings are more 'medical school' when I should be doing 'pre-med'. If you had any suggestions or ideas, I'd be ever so grateful for them. 
+	I am writing a piece - a sort of 'tone poem' that's slowly emerging, actually - but there's definitely weak areas and it's a long ways from being done. It plods a bit at first, and probably doesn't score high on originality, along with a score (no pun intended) of other issues. I was patterning my writing after a lesser-known but, to me at least, brilliant composer: Alice Mary Smith. I think her first symphony in C minor (https://www.youtube.com/watch?v=-gGoCshxfPI) - well, the first movement, anyway - is a simply amazing work. Something to aspire to. My little effort is a lot more pedestrian: (https://www.tightbytes.com/music/Sketches/WIPs/Sketch13bf-wip.mp3)
+	Again, lots to fix, flesh out, clean up, and yet to write.
+	Thank you again for reading this, Dan. Just wanted to thank you again personally for being such an inspiration and so generous with your music.
+	Kind regards,
+	Robyn
+
+Physio complaint detail form (Redland Bay Physio)::
+
+	Lower back pain, radiating into the gluteus and lateral left calf almost at the ankle. I've had persistent pain in L4-5 region radiating L5 left side for the past two weeks when lying in bed or standing, less when walking and relieved by sitting. CT-scan on Friday revealed minor upper lumbar scoliosis convex right leading to disc space narrowing right side L3-4 and particularly L4-5, with mild degenerative anterolisthesis of L5 on S1. Dr Budge concluded the lower back pain may relate to severe facet arthropathy at L4-5 and L5-S1, with potential impingement of the L5 nerve root at the subarticular recess by a left central disc extrusion L4-5. I'll bring in the full report tomorrow for your perusal.
+	The injury is likely an old one, as the symptoms are not unfamiliar, incurred during my 40-odd years of nursing. My recent works around the house, which involved shoveling rocky, wet dirt, pushing a heavy wheelbarrow and lifting heavy timber served to cause a flareup of the symptoms, which have not subsided despite cessation of those activities.
 
 
