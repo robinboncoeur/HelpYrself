@@ -117,6 +117,26 @@ To format a drive using Disk Utility first be sure you see the entire drive. In 
 
 
 
+=========
+Reset SMC
+=========
+
+
+An SMC or System Management Controller Reset can fix various power related issues, such as a piece of hardware not functioning correctly. Here's how to reset the SMC on notebooks with non-removable batteries:
+
+	Shut down your Mac.
+	Press and hold Shift, Control, and Option on the left side of the keyboard. At the same time, press the power button.
+	Hold for 10 seconds.
+	Release the keys and then turn on your Mac.
+
+
+===================
+Reset NVRAM or PRAM
+===================
+
+Shut down your Mac, then turn it on and immediately press and hold these four keys together: Option, Command, P, and R. You can release the keys after about 20 seconds, during which your Mac might appear to restart.
+
+
 
 
 =======================
