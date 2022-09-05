@@ -138,6 +138,26 @@ Shut down your Mac, then turn it on and immediately press and hold these four ke
 
 
 
+===============================
+CLI Make Bootable ElCapitan USB
+===============================
+
+Rename USB drive to elcapitan
+
+In Terminal::
+
+	sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/elcapitan --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app
+
+
+
+==========================
+Shut Down Mac During Setup
+==========================
+
+How to Turn Mac off at Set up Screen
+If you want to leave the Mac in an out-of-box state, don't continue with the setup of your system. Instead, press Command-Q to shut down the Mac. When the new owner turns on the Mac, the Setup Assistant will guide them through the setup process.
+
+
 
 =======================
 Cloning An SSD on a Mac
@@ -300,6 +320,43 @@ When installing a new battery, you should calibrate it after installation in ord
 	* Wait at least 5 hours, then charge your laptop uninterrupted to 100%.
 
 If you notice any unusual behavior or problems after installing your new battery, you may need to reset your MacBook's SMC.
+
+
+
+===========================================
+2011 a1386 Unibody 15" Keyboard replacement
+===========================================
+
+No guide details this task on iFixit. In the comments section, **VikingShips** wrote:
+	
+	It's a pain in the butt. There are two plastic shields, both with some sort of circuitry on them so you have to be very careful and methodical here. Then there are about 75 VERY tiny screws holding the actual keyboard in place. I changed it because I had a couple of extra bodies laying around, and the body I wanted had a half dozen dead keys. I actually succeeded and the LED lights actually worked afterwards! I was amazed. It took me a good couple of hours to complete. Don't try it unless you have a lot of patience, time, and a magnifying headset of some sort.
+
+I replied:
+
+	@VikingShips -- I had the same problem: several keys were not working. 	(Side note: it appears that iFixit doesn't provide a teardown guide with images for the actual keyboard replacement. It should be doable as I was able to purchase a replacement keyboard on ebay... happy for someone to point me to a tutorial I may have missed on this task.)
+
+	Careful, patient and methodical is absolutely right: the **key** skill to removing the backlight shield from the keyboard itself whilst not damaging the circuitry. I found that starting with the normal iFixit spudger near the keyboard connector to the logic board and working my way under the actual backlight layer with a wider plastic prying tool (like what you'd use for an iPhone) allowed you to pry away the adhering bits holding the backlight to the keyboard. Special care is needed where the black cover of the backlight is stuck down to the keyboard circuitry (battery side of the keyboard), probably the most delicate operation of this task.
+
+	I had to remove the bracket holding down the antenna cables (there was just one long #00 Phillips screw). This bracket also holds down what appears to be the speaker wire - it had a special holder bit I'll need to put back when I replace this bracket.
+
+	The keyboard cable for the power button is stuck down - careful prying with the spudger will be useful here. Two very short #00 Phillips screws hold the oval aluminium plate covering the power button.
+	The keyboard screws appear to be very tiny #000 Phillips-head ones. 75 of them. A magnifying glass of sorts is extremely helpful, here.
+	
+Currently, my work area. I have my own little office which I've sort-of made into a film studio / composition retreat / Mac repair station / multipurpose office.
+
+Here's the main logic board from that 2011 Macbook I'm working on:
+
+.. image:: https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-15.jpg
+
+I've organised the gnat-sized keyboard screws into little groups. Yep, 75 of them. Around the logic board I've placed the screws that hold it in place: no guess-work.
+
+.. image:: https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-16.jpg
+
+The fans and other bits...
+
+.. image:: https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-17.jpg
+
+...and generally, my work area.
 
 
 

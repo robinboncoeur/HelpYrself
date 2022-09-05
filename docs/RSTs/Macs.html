@@ -63,6 +63,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#formatting-a-usb-drive-to-guid">Formatting a USB Drive to GUID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reset-smc">Reset SMC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reset-nvram-or-pram">Reset NVRAM or PRAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli-make-bootable-elcapitan-usb">CLI Make Bootable ElCapitan USB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shut-down-mac-during-setup">Shut Down Mac During Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cloning-an-ssd-on-a-mac">Cloning An SSD on a Mac</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#slow-boot-after-ssd-upgrade">Slow Boot after SSD Upgrade</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#os-installation">OS Installation</a></li>
@@ -71,6 +73,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#hardware-repair-and-replacement">Hardware Repair and Replacement</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prior-to-any-repairs">Prior to Any Repairs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#replacing-a-battery-in-a-macbook-pro">Replacing a Battery in a Macbook Pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a1386-unibody-15-keyboard-replacement">2011 a1386 Unibody 15” Keyboard replacement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#repair-support-sites">Repair Support Sites</a></li>
 </ul>
 </li>
@@ -195,6 +198,19 @@ Release the keys and then turn on your Mac.</p>
 <h3>Reset NVRAM or PRAM<a class="headerlink" href="#reset-nvram-or-pram" title="Permalink to this heading"></a></h3>
 <p>Shut down your Mac, then turn it on and immediately press and hold these four keys together: Option, Command, P, and R. You can release the keys after about 20 seconds, during which your Mac might appear to restart.</p>
 </section>
+<section id="cli-make-bootable-elcapitan-usb">
+<h3>CLI Make Bootable ElCapitan USB<a class="headerlink" href="#cli-make-bootable-elcapitan-usb" title="Permalink to this heading"></a></h3>
+<p>Rename USB drive to elcapitan</p>
+<p>In Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">Install</span>\ <span class="n">OS</span>\ <span class="n">X</span>\ <span class="n">El</span>\ <span class="n">Capitan</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Resources</span><span class="o">/</span><span class="n">createinstallmedia</span> <span class="o">--</span><span class="n">volume</span> <span class="o">/</span><span class="n">Volumes</span><span class="o">/</span><span class="n">elcapitan</span> <span class="o">--</span><span class="n">applicationpath</span> <span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">Install</span>\ <span class="n">OS</span>\ <span class="n">X</span>\ <span class="n">El</span>\ <span class="n">Capitan</span><span class="o">.</span><span class="n">app</span>
+</pre></div>
+</div>
+</section>
+<section id="shut-down-mac-during-setup">
+<h3>Shut Down Mac During Setup<a class="headerlink" href="#shut-down-mac-during-setup" title="Permalink to this heading"></a></h3>
+<p>How to Turn Mac off at Set up Screen
+If you want to leave the Mac in an out-of-box state, don’t continue with the setup of your system. Instead, press Command-Q to shut down the Mac. When the new owner turns on the Mac, the Setup Assistant will guide them through the setup process.</p>
+</section>
 <section id="cloning-an-ssd-on-a-mac">
 <h3>Cloning An SSD on a Mac<a class="headerlink" href="#cloning-an-ssd-on-a-mac" title="Permalink to this heading"></a></h3>
 <p>Disk Utility has always been able to create clones, although the app refers to the process as Restore, as in restoring data from a source drive to a target drive. The restore function isn’t just for drives. It will work with just about any storage device that you can mount to your Mac, including disk images, hard drives, SSDs, and USB flash drives.</p>
@@ -308,6 +324,29 @@ Release the keys and then turn on your Mac.</p>
 </ul>
 </div></blockquote>
 <p>If you notice any unusual behavior or problems after installing your new battery, you may need to reset your MacBook’s SMC.</p>
+</section>
+<section id="a1386-unibody-15-keyboard-replacement">
+<h3>2011 a1386 Unibody 15” Keyboard replacement<a class="headerlink" href="#a1386-unibody-15-keyboard-replacement" title="Permalink to this heading"></a></h3>
+<p>No guide details this task on iFixit. In the comments section, <strong>VikingShips</strong> wrote:</p>
+<blockquote>
+<div><p>It’s a pain in the butt. There are two plastic shields, both with some sort of circuitry on them so you have to be very careful and methodical here. Then there are about 75 VERY tiny screws holding the actual keyboard in place. I changed it because I had a couple of extra bodies laying around, and the body I wanted had a half dozen dead keys. I actually succeeded and the LED lights actually worked afterwards! I was amazed. It took me a good couple of hours to complete. Don’t try it unless you have a lot of patience, time, and a magnifying headset of some sort.</p>
+</div></blockquote>
+<p>I replied:</p>
+<blockquote>
+<div><p>&#64;VikingShips – I had the same problem: several keys were not working.  (Side note: it appears that iFixit doesn’t provide a teardown guide with images for the actual keyboard replacement. It should be doable as I was able to purchase a replacement keyboard on ebay… happy for someone to point me to a tutorial I may have missed on this task.)</p>
+<p>Careful, patient and methodical is absolutely right: the <strong>key</strong> skill to removing the backlight shield from the keyboard itself whilst not damaging the circuitry. I found that starting with the normal iFixit spudger near the keyboard connector to the logic board and working my way under the actual backlight layer with a wider plastic prying tool (like what you’d use for an iPhone) allowed you to pry away the adhering bits holding the backlight to the keyboard. Special care is needed where the black cover of the backlight is stuck down to the keyboard circuitry (battery side of the keyboard), probably the most delicate operation of this task.</p>
+<p>I had to remove the bracket holding down the antenna cables (there was just one long #00 Phillips screw). This bracket also holds down what appears to be the speaker wire - it had a special holder bit I’ll need to put back when I replace this bracket.</p>
+<p>The keyboard cable for the power button is stuck down - careful prying with the spudger will be useful here. Two very short #00 Phillips screws hold the oval aluminium plate covering the power button.
+The keyboard screws appear to be very tiny #000 Phillips-head ones. 75 of them. A magnifying glass of sorts is extremely helpful, here.</p>
+</div></blockquote>
+<p>Currently, my work area. I have my own little office which I’ve sort-of made into a film studio / composition retreat / Mac repair station / multipurpose office.</p>
+<p>Here’s the main logic board from that 2011 Macbook I’m working on:</p>
+<img alt="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-15.jpg" src="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-15.jpg" />
+<p>I’ve organised the gnat-sized keyboard screws into little groups. Yep, 75 of them. Around the logic board I’ve placed the screws that hold it in place: no guess-work.</p>
+<img alt="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-16.jpg" src="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-16.jpg" />
+<p>The fans and other bits…</p>
+<img alt="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-17.jpg" src="https://www.tightbytes.com/images/projects/macrepair/Ad-2011MBP-17.jpg" />
+<p>…and generally, my work area.</p>
 </section>
 <section id="repair-support-sites">
 <h3>Repair Support Sites<a class="headerlink" href="#repair-support-sites" title="Permalink to this heading"></a></h3>
