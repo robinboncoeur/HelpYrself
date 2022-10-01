@@ -25,6 +25,12 @@ As in all things open source, we tend to create solutions to "scratch our own it
 Reminders [to Myself] of Sphinx Stuff
 *************************************
 
+============
+Sphinx Links
+============
+
+Can be found here: `Cross Referencing With Sphinx <https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html>`_.
+
 =============
 Inline images
 =============

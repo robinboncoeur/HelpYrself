@@ -58,13 +58,38 @@ For booking `Ave Maria appontments >https://www.hotdoc.com.au/medical-centres/re
 
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 
 Midlands Canal `Boat Hire <https://midlandmallard.com/>`_.
 
 
+.. raw:: html
+   
+   <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+
 Frer Three-Part Brain Training By Jim Kwik. `How To Learn Faster & Remember Names <https://kwiklearning.com/online-courses/>`_.
+
+.. raw:: html
+   
+   <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+
+**Excellenbt Knife Sharpening**
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Yk3IcKUtp8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+How to `Download Twitter Videos <https://www.downloadtwittervideo.com/#TaskResults>`_.
+
+
+
 
 *******************
 Wishing to Purchase
@@ -87,6 +112,12 @@ Local vendor, `Lagoon View Nursery <http://www.lagoonviewnursery.com.au/cheappla
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+==========
+Windows 10
+==========
+
+`CD keys <https://www.gkeys24.com/spring-sale.html?gk=gk220427>`_.
 
 
 
@@ -203,6 +234,9 @@ Likely a `better replacement battery <https://batteryexpert.com.au/MacBook+Pro+1
 
 
 Need a VPN? Consider `NordVPN <https://nordvpn.com/nordvpn-birthday-site/>`_.
+
+A SQLite3 tutorial on `SELECT <https://www.sqlitetutorial.net/?s=SELECT>`_.
+
 
 
 

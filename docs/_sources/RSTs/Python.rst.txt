@@ -85,3 +85,26 @@ Installed gspread and oauth2client via pip3::
 
     pip3 install gspread oauth2client
     
+
+
+
+**********************
+Python Video Tutorials
+**********************
+
+======================
+Corey Schafer's Series
+======================
+
+`Link to YouTube series <https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7>`_.
+
+
+
+======================
+Mouse vs Python Series
+======================
+
+`Python 101 <https://www.youtube.com/watch?v=k0zZcnZHYAo&list=PLN0iJDXT7K2u3xVle4-9N1_DLqIh0sfys>`_.
+
+
+

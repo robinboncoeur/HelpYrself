@@ -37,6 +37,15 @@ This is not elegant, optimal code by any means... but it works. If any user happ
 
 
 
+===========
+Excel Links
+===========
+
+Range, on `Excel Macro Mastery <https://excelmacromastery.com/excel-vba-range-cells/>`_.
+
+CurrentRegion, on `Automate Excel <https://www.automateexcel.com/vba/current-region/>`_.
+
+
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
