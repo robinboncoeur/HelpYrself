@@ -19,7 +19,14 @@ As in all things open source, we tend to create solutions to "scratch our own it
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
+Danielle - - Lisa / Max
 
+
+If the solar system was brought about by an accidental collision, lision, then the appearance of organic life on this planet was also an accident, and the whole evolution of Man was an accident too. If so, then all our present thoughts are mere accidents - the accidental by-product of the movement of atoms. And this holds for the thoughts of the materialists and astronomers as well as for anyone else's. But if their thoughts - i.e., of Materialism and Astronomy - are merely accidental by-products, why should we believe them to be true? I see no reason for believing that one accident should be able to give me a correct account of all the other accidents. It's like expecting that the accidental shape taken by the splash when you upset a milk-jug should give you a correct account of how the jug was made and why it was upset.
+
+C. S. Lewis. God in the Dock: Essays on Theology and Ethics (Kindle Locations 563-569). Kindle Edition. 
+
+Principles of Orchestration
 
 *************************************
 Reminders [to Myself] of Sphinx Stuff
@@ -148,3 +155,6 @@ The code is this (minus the '*')::
 .. raw:: html
    
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+d509da-ej355r screen replacement

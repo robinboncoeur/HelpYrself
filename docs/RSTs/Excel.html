@@ -60,6 +60,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nreccount">nRecCount()</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stp">stp()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac-excel-inputbox-choices">Mac Excel Inputbox Choices</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#buttons-resizing-on-their-own">Buttons Resizing on their Own</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-current-help-solution">The Current ‘Help’ Solution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#and-then">And then…</a></li>
@@ -235,6 +236,25 @@
 <div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">stp</span><span class="p">(</span><span class="n">nNum</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
 <span class="w">  </span><span class="n">stp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trim</span><span class="p">(</span><span class="n">Str</span><span class="p">(</span><span class="n">nNum</span><span class="p">))</span><span class="w"></span>
 <span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="mac-excel-inputbox-choices">
+<h3>Mac Excel Inputbox Choices<a class="headerlink" href="#mac-excel-inputbox-choices" title="Permalink to this heading"></a></h3>
+<p>Since Excel for Mac doesn’t support userforms, here’s an inputbox that accepts one of three inputs.</p>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">aRunMe</span><span class="p">()</span><span class="w"></span>
+<span class="k">Dim</span><span class="w"> </span><span class="n">sPk</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
+<span class="w">  </span><span class="n">sPk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">InputBox</span><span class="p">(</span><span class="s">&quot;Enter B for Brass, W for Woodwinds, S for Strings):  &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Select A, B or C&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">:</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="c">&#39;If Not sPk Then Exit Sub</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">Select</span><span class="w"> </span><span class="k">Case</span><span class="w"> </span><span class="n">UCase</span><span class="p">(</span><span class="n">sPk</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSB&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSS&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;W&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSW&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="k">Else</span><span class="w"></span>
+<span class="w">          </span><span class="n">MsgBox</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Enter a valid letter...&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">Select</span><span class="w"></span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

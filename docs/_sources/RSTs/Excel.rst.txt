@@ -203,6 +203,29 @@ Only because I'm too lazy to type "Trim(Str(" in front of numbers I want to conv
     End Function
 
 
+==========================
+Mac Excel Inputbox Choices
+==========================
+
+Since Excel for Mac doesn't support userforms, here's an inputbox that accepts one of three inputs.
+
+.. code-block:: vbnet
+
+	Public Sub aRunMe()
+	Dim sPk As String
+	  sPk = Application.InputBox("Enter B for Brass, W for Woodwinds, S for Strings):  ", "Select A, B or C", Type:=2)
+	  'If Not sPk Then Exit Sub
+
+	  Select Case UCase(sPk)
+		Case Is = "B": Call bSplitOrJoin("shtSSB")
+		Case Is = "S": Call bSplitOrJoin("shtSSS")
+		Case Is = "W": Call bSplitOrJoin("shtSSW")
+		Case Else
+		  MsgBox ("Enter a valid letter...")
+	  End Select
+	End Sub
+
+
 
 =============================
 Buttons Resizing on their Own
