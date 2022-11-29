@@ -130,6 +130,15 @@
 </pre></div>
 </div>
 <p>The last string can be changed to jpg, tiff or even pdf.</p>
+<p>Allowing an App to Run</p>
+<p>Use this script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xattr</span> <span class="o">-</span><span class="n">d</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">quarantine</span> <span class="o">~/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">vst</span><span class="o">/</span><span class="n">CoolVST</span><span class="o">.</span><span class="n">vst</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>For SWS you can fix it by running this from Terminal.app as well::</dt><dd><p>xattr -d com.apple.quarantine ~/Library/ApplicationSupport/REAPER/UserPlugins/reaper_sws_extension.dylib</p>
+</dd>
+</dl>
 </section>
 <section id="toggle-file-visibility">
 <h3>Toggle File Visibility<a class="headerlink" href="#toggle-file-visibility" title="Permalink to this heading"></a></h3>

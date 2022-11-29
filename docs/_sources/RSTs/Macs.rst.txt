@@ -25,6 +25,15 @@ You'll get a rectangular outliner to define what you want capturing. To change t
 The last string can be changed to jpg, tiff or even pdf.
 
 
+Allowing an App to Run
+
+Use this script::
+
+	xattr -d com.apple.quarantine ~/path/to/vst/CoolVST.vst
+
+
+For SWS you can fix it by running this from Terminal.app as well::
+	xattr -d com.apple.quarantine ~/Library/Application\ Support/REAPER/UserPlugins/reaper_sws_extension.dylib
 
 ======================
 Toggle File Visibility
