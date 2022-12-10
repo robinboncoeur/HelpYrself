@@ -34,7 +34,7 @@ If you can stand my rambling, I've done a video to cover the features and operat
 
 I see in your picture, below the piano roll, the articulations are displayed. Can I draw in the articulation I want below the piano roll or do I have to record my key switch selections to get them to appear there?
 
-**[A]**
+**[A-Tack]**
 
 You can step record them, as long as step input is enabled in the MIDI editor. At that point, after clicking on one of the articulation buttons or triggering one of the "activate articulation" actions (e.g. from a tablet running TouchOSC, or whatever), it will insert the articulation at the edit cursor position, or replace an existing program event if one is currently selected in the MIDI editor.
 
@@ -46,7 +46,9 @@ See 1:28 in the video for a demonstration.
 
 With your Reaticulate plugin, can I still do something like that, where I can copy MIDI notes from one instrument to another and also copy your articulations from one instrument to another? I would imagine that would be 2 separate copy operations. One for the MIDI notes, one for the articulation changes.
 
-[A] Two separate select actions anyway (you'll need to shift-select the program change events after you select the notes), and then you can copy and paste them both at once.
+**[A-Tack]** 
+
+Two separate select actions anyway (you'll need to shift-select the program change events after you select the notes), and then you can copy and paste them both at once.
 
 Unlike with CCs, Reaper doesn't have a mode to automatically select program changes underneath selected notes. I plan to investigate the possibility of adding a feature to have Reaticulate optionally do this (tracked here), so you get a similar behavior to CCs.
 
@@ -57,7 +59,9 @@ Unlike with CCs, Reaper doesn't have a mode to automatically select program chan
 
 When I compose, I like to perform the notes using a general purpose articulation (a short attack with sustain) and then I go back afterwards and draw in the key switch notes I want for each note or group of notes. C2 might be sustain, E2 for staccato, F2 for pizzicato for example.
 
-[A] Oh, related, I also intend to add an action to scan MIDI items and convert manually triggered keyswitches to program events (and that one is tracked here).
+**[A-Tack]** 
+
+Oh, related, I also intend to add an action to scan MIDI items and convert manually triggered keyswitches to program events (and that one is tracked here).
 
 So you could do your live performing as described, trigger the action, and it'll convert all the keyswitch notes (C2, E2, etc) to program changes for easy visibility in the MIDI Editor. Then you can go back over them and massage via step input.
 
@@ -70,7 +74,7 @@ I thought I'd mention in case it wasn't clear: to have the program changes show 
 
 A .lua which can sync between these events could do the trick, as an early experimentation field. I mean sync from notation to reaticulate events.
 
-[A]
+**[A-Tack]**
 
 It could work as an experiment. In practice the number of articulations available to us in many of these orchestral libraries vastly exceeds the built-in articulations, but we could extend it with custom notation events.
 
@@ -87,7 +91,7 @@ Hopefully that's fixed by the time articulation maps lands. In the meanwhile, I 
 
 Anyway I have a doubt: my templates consist on instances of Kontakt, inside each of them I have 16 tracks, First I tried out using it in the Kontakt track, and them in each of the 16 tracks. Maybe I am wrong but I see that you are using just Kontakt instances without tracks inside. Is this the best way to use Reaticulate? Should I change my templates to use Reaticulate efficiently?
 
-[A]
+**[A-Tack]**
 
 I don't think it should matter which approach you go with. I prefer to have a separate Kontakt instance per track for various reasons (simplified routing; sharing audio FX, automation, and MIDI on the same track; better compatibility with disabled tracks; reduced overall track count) but it should work either way. With the Kontakt Group approach you described, you'd still install the RFX (Reaticulate FX) on each of the 16 tracks and set up the track bank(s) according to how you have the patches arranged in the Kontakt instance on the relevant channel used by that track. I'll double check that works as expected later tonight.
 
@@ -98,7 +102,7 @@ I don't think it should matter which approach you go with. I prefer to have a se
 
 Another question, I may be missing something obvious but is there a way to add the articulations to the track other than recording while clicking them (or step recording them)?
 
-[A]
+**[A-Tack]**
 
 There are a number of "activate articulation" actions. Open the actions list and search for Reaticulate to find them.
 
@@ -113,7 +117,7 @@ When you trigger these actions with the MIDI editor open and step input enabled,
 
 I'm not 100% sure if I got this right, but I think the numbers in front of the articulation represent the program change number, which can be triggered by a MIDI controller / Lemur / TouchOSC.
 
-[A]
+**[A-Tack]**
 
 Reaper can't step record program events unfortunately (or at least it didn't when I tried last year). So the right way to trigger an articulation is through one of the actions I mentioned earlier (or by clicking on the articulation button in the GUI, but that's not always the most practical approach).
 
@@ -146,7 +150,7 @@ Other key points: articulation names are lower case (except to differentiate bet
 
 Or should this sort of functionality (not really articulation) remain outside banks aimed at inclusion in the factory banks?
 
-[A]
+**[A-Tack]**
 
 Oh, no, it definitely belongs. Vibrato styles certainly qualify as articulation (perhaps even more traditionally correct compared to the way we tend to use it with VIs these days?). The goal of the bank should be to make the patch usable entirely via Reaticulate.
 
@@ -201,7 +205,7 @@ Maybe this does argue for something more precisely specified than what UACC is o
 
 The problem with doing so many combination programs as you stated above so that there is not a whole lot of different controls to be applied at one time, (the most clear example for me is Legato/ non-legato switch) is that if you make out all the combinations so as to take care of the multiple output (with notes and ccs to match) you end up with twice as many programs.
 
-[A]
+**[A-Tack]**
 
 And that's with just legato on/off. Throw in con sordino on/off, or, say in the case of Embertone's Friendlander, sul ponticello on/off (since it's implemented through convolution), and you have a combinatorial explosion of permutations.
 
@@ -217,7 +221,7 @@ I'm warming up to the idea. There's a gap in Reaticulate's functionality that I'
 Now, one of the powers I like in your solution is that you have given us 10 actions ready to go straight to the articulation one wants, this in combination with another layer of abstraction seems to make the most sense to me.
 And that took some doing. 
 
-[A]
+**[A-Tack]**
 
 Early incarnations of Reaticulate defined the type of output event at the bank level (e.g. note, CC and which CC number, destination channel number) and then used the program number to signify the value for the output event (e.g. if the bank's output type was note, then program 42 would send note 42). I had a minor breakthrough that made me realize I could allow for multiple specific output events for each individual program. This does allow for some great flexibility, as you point out.
 
@@ -227,7 +231,7 @@ Early incarnations of Reaticulate defined the type of output event at the bank l
 
 Still, as I said is one more layer and more work on the user, but let's not forget that these options are there to use.
 
-[A] 
+**[A-Tack]** 
 
 Yes, of course I'm agonizing about exactly how the factory banks should work, but the user is free to do whatever suits their specific workflow and preferences. I like the idea of leveraging Web Remote, and I'm interested to see what users cook up there.
 
@@ -238,7 +242,7 @@ Yes, of course I'm agonizing about exactly how the factory banks should work, bu
 
 Maybe the message has to do with the Kontakt factory banks, in fact SSS V1 Core and V1 Decorative share an articulation (both have Sul Pont) and both patches sound at the same time when selected with this concrete articulation, no idea.
 
-[A]
+**[A-Tack]**
 
 This is exactly the reason for the warning. It's safe to ignore in this case. I've committed a fix for that (as it was reported over on The Sound Board) and it'll be in the next release.
 
@@ -255,7 +259,9 @@ The same issue applies with Albion ONE Strings being on the same channel as SSS.
 
 for some reason the Reabank files don't seem to match any of my libraries (all Spitfire), any idea why that would be the case?
 
-[A] Make sure you set the patches to "Locked to UACC". (The little note field for each of the Spitfire banks says "Set patch to UACC", and in general that message will give patch configuration information if relevant.)
+**[A-Tack]** 
+
+Make sure you set the patches to "Locked to UACC". (The little note field for each of the Spitfire banks says "Set patch to UACC", and in general that message will give patch configuration information if relevant.)
 
 The factory banks using Spitfire send UACC (CC32) events to trigger articulations, not the out-of-box note-based keyswitches.
 
@@ -271,7 +277,7 @@ Forum Page 3
 
 On another issue, any problems found with chasing the art switches? Still a problem in CB and never really addressed.
 
-[A]
+**[A-Tack]**
 
 Reaper will chase program changes on transport play (or on scrub preview MIDI in the piano roll), and since program changes are the basis of articulations with Reaticulate, they'll be chased.
 
@@ -284,7 +290,7 @@ The main limitation is that you would expect each articulation in each group to 
 
 I'd like to control the articulation changes in Track envelopes rather than MIDI lanes.
 
-[A]
+**[A-Tack]**
 
 Not really very easily achieved I'm afraid. The Reaticulate JSFX isn't intended to be controlled through automation.
 
@@ -299,7 +305,7 @@ I'm afraid I never envisioned using Reaticulate this way, so its most basic assu
 
 They seem to work for the most part, except that by default neither On or Off is selected. Is there a way to either specify a default, or have it automatically sync to whatever is chosen by default in the VST?
 
-[A]
+**[A-Tack]**
 
 There is no way to have it sync backwards from the VSTi, no. It'd be possible to include a new default flag which you can set on a given program, but in practice this is only really an issue on the initial configuration of the track. Once the track is configured (in your project template, or even a track template) then the last selected program will be remembered.
 
@@ -310,7 +316,7 @@ There is no way to have it sync backwards from the VSTi, no. It'd be possible to
 
 a) Is this line space and case sensitive?
 
-[A]
+**[A-Tack]**
 
 Bank and program names are not case sensitive. By convention in the factory banks, the bank name is title cased, using human-readable abbreviations for the library name (e.g. SCS for Spitfire Chamber Strings) and the full name for the patch the bank describes. Meanwhile, program names are lower case, where some common terms are abbreviated if necessary to reduce length.
 
@@ -323,7 +329,7 @@ For your own custom banks you're free to use whatever you want. The names can be
 
 b) I randomly picked up 32-1 interval for Bank MSB & LSB. What is the importance of this and how should I determine what numbers will go there? It isn't quite clear to me despite I watched the instructional video and looked through the documentation on the web.
 
-[A]
+**[A-Tack]**
 
 At some point Reaticulate will come with a GUI to create and manage banks, and it will choose an unused bank number for automatically. But absent that, yes, I can see how it'd be confusing.
 
@@ -337,7 +343,7 @@ The only requirement is that the two numbers (MSB/LSB combination) are unique fo
 
 Can I use 32-1 for another sample library or another instrument? Would this cause conflicts? Or, should I use 32-2 as values for another instrument in the same sample library?
 
-[A]
+**[A-Tack]**
 
 Bank numbers need to be unique for your installation. So you'd need to use 32-2 for the second instrument, otherwise it would indeed conflict with the first.
 
@@ -348,7 +354,7 @@ Bank numbers need to be unique for your installation. So you'd need to use 32-2 
 
 What is the best way to handle this? If I do a different bank for each instrument, it doesn't switch all the following notes to the new MIDI channel. Any suggestions?
 
-[A]
+**[A-Tack]**
 
 Whether consolidated in a single large bank, or split out into separate banks (as with the factory library, which tends to have one bank per patch), ultimately you can't duplicate program numbers on a given channel lest you have a conflict (e.g. if you have program 42 listed multiple times and you activate program 42, it can't know which articulation you intend to activate).
 
@@ -376,7 +382,7 @@ Forum Page 4
 
 Any chance of having more than 4 groups? I've come across some instruments that need up to 6, but when making user banks that are multis, the required number could be 3-4 times that.
 
-[A]
+**[A-Tack]**
 
 This is much harder than you think it should be. Increasing it above 4 to even 6 requires a major overhaul of how this information is transferred from the JSFX to the controlling Lua script (the UI). I know how to do it (via a kludge I dare not speak further on), and probably will do said overhaul for other reasons, but even then there are performance implications to raising the number of groups. If I raise the limit, I might go to 8, but I can't see going to 20 or higher.
 
@@ -387,7 +393,7 @@ This is much harder than you think it should be. Increasing it above 4 to even 6
 
 I wish we were able to manage articulation in the main TCP arrange window.
 
-[A]
+**[A-Tack]**
 
 I do plan to make it possible to insert articulations by (probably middle-)clicking on the articulations in the UI from the arrange view. But this isn't exactly what you're looking for, which is more of a complete way to view/edit articulation changes from the arrange view. I'm not quite sure how best to do this, as envelopes clearly aren't suitable. If there's no existing Reaper UI construct to leverage, I don't see myself building an entirely different UI for it, which ultimately, as a Lua script, probably wouldn't work that well anyway.
 
@@ -398,7 +404,7 @@ I do plan to make it possible to insert articulations by (probably middle-)click
 
 If Reaper doesn't support multiple program changes simultaneously, though, then I'm not really sure how to approach it. That situation would likely necessitate not sending the articulation as a program change at all, but just as a chord made up of the keyswitch notes directly.
 
-[A]
+**[A-Tack]**
 
 Reaper doesn't support multiple program changes simultaneously, no. It will only chase the last program change on a given MIDI channel. We already run into this limitation with groups, where even though a bank can have up to 4 groups with independent articulations, only the last program in the last group for that channel will be chased.
 
@@ -417,7 +423,7 @@ I have problem to understand what are then numbers with the technique name?
 	1 legato
 	1 = program change?
 
-[A]
+**[A-Tack]**
 
 Yes, those are program numbers.
 
@@ -427,7 +433,7 @@ Yes, those are program numbers.
 
 If yes how to not use program changes? I use libraries where I don't use program changes for changing articulation.
 
-[A]
+**[A-Tack]**
 
 The basic unit of articulation in Reaticulate is the program change, but this doesn't mean that's what your libraries have to use. Reaticulate translates program changes into arbitrary MIDI events to control the libraries. I call these "output events". It's documented `here <http://reaticulate.com/reabank.html>`_.
 
@@ -441,7 +447,7 @@ If I wrote only
 
 I got error after refresh Reaticulate.
 
-[A] 
+**[A-Tack]** 
 
 Yes, that's not syntactically valid for .reabank files.
 
@@ -451,7 +457,7 @@ Yes, that's not syntactically valid for .reabank files.
 
 2. can Reaticulate create arpegio effects? For example I create chord and when arpegio is used, it deley each higher or lower notes.
 
-[A]
+**[A-Tack]**
 
 No, that's not really a problem Reaticulate tries to solve.
 
@@ -461,7 +467,7 @@ No, that's not really a problem Reaticulate tries to solve.
 
 3. can Reaticlate follow notation articulations and dynamics(crescendos and descrescendos too)?
 
-[A]
+**[A-Tack]**
 
 It can't follow notation yet. I'm waiting to see whatever becomes of articulation maps before I do anything related to notation.
 
@@ -472,7 +478,7 @@ It can't follow notation yet. I'm waiting to see whatever becomes of articulatio
 
 Problem is solved. The bank has to communicate with the sample library itself, and then it displays the bank names properly in the midi editor upon reloading the reaper session. The reason I didn't figure this out sooner is that I was experimenting with newly made banks before actually connecting them to the sample library instruments.
 
-[A]
+**[A-Tack]**
 
 At risk of only adding to the confusion, I'll try to clarify the design of Reaticulate a bit in case it can help you reason through things like this.
 
@@ -508,7 +514,7 @@ Long winded, sorry, but maybe it'll be helpful to someone.
 The GUI in Trillian shows the Key Select and sounds good, but the Key Select ends up as Type PC with the Value of the note. Not as Type Note. When recording to Midi.
 Sorry for all my Edits ... When playing back the midi file, the PC Values triggers Key Select OK. Hhmm.
 
-[A]
+**[A-Tack]**
 
 Reaticulate inserts program changes into the MIDI item, but those program changes are then translated as they pass through the Reaticulate JSFX on your FX chain so that the downstream VSTi receives the output events you configured for the articulation. (Notes, in this case.)
 
@@ -560,7 +566,7 @@ Bug fixes:
 
 By the way...was hoping to simply select several notes in a passage, and make them all Staccato, with a single click...but I couldn't get it to do that.
 
-[A]
+**[A-Tack]**
 
 The program change MIDI events Reaticulate inserts into the MIDI item are decoupled from the notes themselves. This means the articulation change isn't really a property of the notes, but more about the edit cursor position.
 
@@ -577,7 +583,7 @@ Some people actually prefer it this way. I know of at least one Cubase user who 
 
 Say I have one kontakt instance, channel 1 is Symphonic Strings standard articulations, and channel 2 is decorative. Is there a way to have a separate channel for each one as I switch between channels?
 
-[A]
+**[A-Tack]**
 
 Assuming you're referring to Spitfire here, these patches can actually coexist on the same channel. You just need to set the patches to "Locked to UACC." (This is required if you use the factory banks, anyway.) So you don't need to use separate MIDI channels for this example, and in the Reaticulate config for the track you can set the source channel of both to Omni.
 
@@ -603,7 +609,7 @@ Clear as mud? Hopefully you can just set your Spitfire patches to UACC and call 
 
 Is there a way to change the volume/velocity when changing articulations, for example to make pizzicato quieter than arco?
 
-[A]
+**[A-Tack]**
 
 Assuming your VI responds to CC7, you could chain a CC7 event to the articulation's output event list to set the appropriate volume. Some patches, such as those from Spitfire, allow CC11 to control the volume for all articulations (including shorts), so this would probably be preferable to CC7.
 
@@ -623,7 +629,7 @@ But, this seems wrong (my file):
 
 What's the correct syntax?
 
-[A]
+**[A-Tack]**
 
 From the docs: *Multiple output events are separated by a / (forward slash) where each individual output event roughly takes the form*: 
 
@@ -643,7 +649,7 @@ But note as written that CC will go to the *default channel*. If you actually wa
 
 Got it working by both by setting source to ch2 and coded as above. Will use setting source, as it seems more flexible.
 
-[A]
+**[A-Tack]**
 
 Source relates to where your originating MIDI events are expected to come in on. If you don't care about that then set Source to Omni. Setting the Destination channel to "Source" is fine (and what I'd do) if you're explicitly defining the target channels in the banks.
 
@@ -657,7 +663,7 @@ Or, if you wanted the bank itself to be agnostic to the target channel, you coul
 
 Is the reabank-file limited to 128 Program lines articulations? I got some errors on same numbering, although it should be different <LSB> and Bank name.
 
-[A]
+**[A-Tack]**
 
 Right, the warning you're talking about is probably because you have conflicting program numbers between multiple banks loaded in on the same track?
 
@@ -674,7 +680,7 @@ Addressing this properly requires some pretty drastic design changes unfortunate
 For toggles-switches: Can I assign note-on and note-off message?
 Or do I then need 2 entries, one for on, another for off. (It's a legato-switch).
 
-[A]
+**[A-Tack]**
 
 No, a toggle sends the same MIDI event each time you trigger it, it just changes its visual state in the UI. An example of this is the Bohemian violin's chord on/off toggle, where you send the same note to toggle it on and off.
 
@@ -684,7 +690,7 @@ No, a toggle sends the same MIDI event each time you trigger it, it just changes
 
 Is there no way to comment in the bank-files now?
 
-[A]
+**[A-Tack]**
 
 Yes, comment the normal way.:
 
@@ -704,7 +710,7 @@ Forum Page 8
 
 One thing I noticed is that if I have more than one track selected and I change articulations, that articulation gets pushed to all tracks that are record armed. Is that expected? Would it be possible for the articulation to only be passed to the selected track(s)?
 
-[A]
+**[A-Tack]**
 
 That's the expected behavior, yeah. When you click on an articulation, it emits the MIDI program change event, and Reaper will route that message to all record-armed tracks.
 
@@ -721,7 +727,7 @@ Does anyone else find the current behavior counter-intuitive? If so, how would y
 
 Is there a way to stack articulations in midi channel switching? With a Ctrl+click would open more midi channels.
 
-[A]
+**[A-Tack]**
 
 This could technically work the way you described but only for the multi scenario like you're using, and, more problematically, it wouldn't work during recording or playback, because you can't "layer" program change messages.
 
@@ -739,7 +745,7 @@ I can't think of a good way around this when using program changes the way Reati
 
 Is there a way to have Reaticulate change midi bus to have more than 16 midi channels available per track?
 
-[A]
+**[A-Tack]**
 
 Not without some sort of support from the VSTi. Someone had a similar question in the context of Kontakt, whether it was possible to address all 4 ports within Kontakt (ports A-D).
 
@@ -768,7 +774,7 @@ Do you think this would translate well to what you're trying to accomplish with 
 
 I'm probably missing something because, well, I'm stupid. But in the including actions, is there an action to select a specific articulation slot 1-16 for groups 1-4? I see an action for next and previous articulation but not for a specific slot.
 
-[A]
+**[A-Tack]**
 
 So the first misconception is that there are articulation slots 1-16. Reaticulate works differently than something like BRSO Articulate in that it isn't channel-based, but rather program-number based. This means that you could define a bank that had up to 128 different articulations. For your custom banks the choice of program number is up to you, but the factory banks follow (to the extent possible) the numbering defined in Spitfire's UACC standard. Arbitrary, but it was at least something to base some consistency on.
 

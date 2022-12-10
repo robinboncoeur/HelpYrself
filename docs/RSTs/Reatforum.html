@@ -170,27 +170,29 @@ Free and open source</p>
 <section id="q-pbattersby">
 <h3>[Q] pbattersby<a class="headerlink" href="#q-pbattersby" title="Permalink to this heading"></a></h3>
 <p>I see in your picture, below the piano roll, the articulations are displayed. Can I draw in the articulation I want below the piano roll or do I have to record my key switch selections to get them to appear there?</p>
-<p><strong>[A]</strong></p>
+<p><strong>[A-Tack]</strong></p>
 <p>You can step record them, as long as step input is enabled in the MIDI editor. At that point, after clicking on one of the articulation buttons or triggering one of the “activate articulation” actions (e.g. from a tablet running TouchOSC, or whatever), it will insert the articulation at the edit cursor position, or replace an existing program event if one is currently selected in the MIDI editor.</p>
 <p>See 1:28 in the video for a demonstration.</p>
 </section>
 <section id="id1">
 <h3>[Q] pbattersby<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>With your Reaticulate plugin, can I still do something like that, where I can copy MIDI notes from one instrument to another and also copy your articulations from one instrument to another? I would imagine that would be 2 separate copy operations. One for the MIDI notes, one for the articulation changes.</p>
-<p>[A] Two separate select actions anyway (you’ll need to shift-select the program change events after you select the notes), and then you can copy and paste them both at once.</p>
+<p><strong>[A-Tack]</strong></p>
+<p>Two separate select actions anyway (you’ll need to shift-select the program change events after you select the notes), and then you can copy and paste them both at once.</p>
 <p>Unlike with CCs, Reaper doesn’t have a mode to automatically select program changes underneath selected notes. I plan to investigate the possibility of adding a feature to have Reaticulate optionally do this (tracked here), so you get a similar behavior to CCs.</p>
 </section>
 <section id="id2">
 <h3>[Q] pbattersby<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>When I compose, I like to perform the notes using a general purpose articulation (a short attack with sustain) and then I go back afterwards and draw in the key switch notes I want for each note or group of notes. C2 might be sustain, E2 for staccato, F2 for pizzicato for example.</p>
-<p>[A] Oh, related, I also intend to add an action to scan MIDI items and convert manually triggered keyswitches to program events (and that one is tracked here).</p>
+<p><strong>[A-Tack]</strong></p>
+<p>Oh, related, I also intend to add an action to scan MIDI items and convert manually triggered keyswitches to program events (and that one is tracked here).</p>
 <p>So you could do your live performing as described, trigger the action, and it’ll convert all the keyswitch notes (C2, E2, etc) to program changes for easy visibility in the MIDI Editor. Then you can go back over them and massage via step input.</p>
 <p>I thought I’d mention in case it wasn’t clear: to have the program changes show in the MIDI editor, just add a lane that’s set to “Bank/Program Select”.</p>
 </section>
 <section id="q-tone">
 <h3>[Q] TonE<a class="headerlink" href="#q-tone" title="Permalink to this heading"></a></h3>
 <p>A .lua which can sync between these events could do the trick, as an early experimentation field. I mean sync from notation to reaticulate events.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>It could work as an experiment. In practice the number of articulations available to us in many of these orchestral libraries vastly exceeds the built-in articulations, but we could extend it with custom notation events.</p>
 <p>Ideally, in fact, these notation events could be used directly to trigger articulation changes in the underlying patches (translated by the Reaticulate JSFX as it currently does for program changes).</p>
 <p>The problem though is that the articulation (or other custom notation) events seem to be sent after the notes they decorate, not before.</p>
@@ -199,13 +201,13 @@ Free and open source</p>
 <section id="q-vagalume">
 <h3>[Q] Vagalume<a class="headerlink" href="#q-vagalume" title="Permalink to this heading"></a></h3>
 <p>Anyway I have a doubt: my templates consist on instances of Kontakt, inside each of them I have 16 tracks, First I tried out using it in the Kontakt track, and them in each of the 16 tracks. Maybe I am wrong but I see that you are using just Kontakt instances without tracks inside. Is this the best way to use Reaticulate? Should I change my templates to use Reaticulate efficiently?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>I don’t think it should matter which approach you go with. I prefer to have a separate Kontakt instance per track for various reasons (simplified routing; sharing audio FX, automation, and MIDI on the same track; better compatibility with disabled tracks; reduced overall track count) but it should work either way. With the Kontakt Group approach you described, you’d still install the RFX (Reaticulate FX) on each of the 16 tracks and set up the track bank(s) according to how you have the patches arranged in the Kontakt instance on the relevant channel used by that track. I’ll double check that works as expected later tonight.</p>
 </section>
 <section id="q-gmgmgm">
 <h3>[Q] gmgmgm<a class="headerlink" href="#q-gmgmgm" title="Permalink to this heading"></a></h3>
 <p>Another question, I may be missing something obvious but is there a way to add the articulations to the track other than recording while clicking them (or step recording them)?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>There are a number of “activate articulation” actions. Open the actions list and search for Reaticulate to find them.</p>
 <p>I also demonstrated a few in the video: actions for next/previous articulation (which I use from my control surface), an action to scroll through the list (to use via an encoder say, or the mousewheel if you prefer), and also actions to activate articulations by specific program number, which you could do from e.g. a tablet.</p>
 <p>When you trigger these actions with the MIDI editor open and step input enabled, then they will be inserted in the MIDI item. Otherwise, they should be captured via live recording. Or, if not recording or step-inputting, you can of course activate them just for ad hoc use.</p>
@@ -213,7 +215,7 @@ Free and open source</p>
 <section id="q-stevie">
 <h3>[Q] _Stevie_<a class="headerlink" href="#q-stevie" title="Permalink to this heading"></a></h3>
 <p>I’m not 100% sure if I got this right, but I think the numbers in front of the articulation represent the program change number, which can be triggered by a MIDI controller / Lemur / TouchOSC.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Reaper can’t step record program events unfortunately (or at least it didn’t when I tried last year). So the right way to trigger an articulation is through one of the actions I mentioned earlier (or by clicking on the articulation button in the GUI, but that’s not always the most practical approach).</p>
 </section>
 </section>
@@ -233,7 +235,7 @@ Free and open source</p>
 <section id="id3">
 <h3>[Q] gmgmgm<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>Or should this sort of functionality (not really articulation) remain outside banks aimed at inclusion in the factory banks?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Oh, no, it definitely belongs. Vibrato styles certainly qualify as articulation (perhaps even more traditionally correct compared to the way we tend to use it with VIs these days?). The goal of the bank should be to make the patch usable entirely via Reaticulate.</p>
 <p>It really is a judgment call. For those programs that aren’t clear cut, I match them as best as I can, and if it’s completely in left field, yeah, pick either an unassigned program, or an uncommon program if you run out.</p>
 <p>The ones I personally feel are more important to get right:</p>
@@ -271,7 +273,7 @@ Free and open source</p>
 <section id="q-benigno">
 <h3>[Q] benigno<a class="headerlink" href="#q-benigno" title="Permalink to this heading"></a></h3>
 <p>The problem with doing so many combination programs as you stated above so that there is not a whole lot of different controls to be applied at one time, (the most clear example for me is Legato/ non-legato switch) is that if you make out all the combinations so as to take care of the multiple output (with notes and ccs to match) you end up with twice as many programs.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>And that’s with just legato on/off. Throw in con sordino on/off, or, say in the case of Embertone’s Friendlander, sul ponticello on/off (since it’s implemented through convolution), and you have a combinatorial explosion of permutations.</p>
 <p>I think, though, there is a good reason to provide some consistency for a set of very common articulations for the sketching use-case. A strict set of programs which will emit all the necessary output events to get the patch into exactly the state defined by the program (e.g. program 1: non-legato long sustains senza sordino), that Just Work no matter what track is selected. All other programs, although perhaps still adhering to UACC if there’s a reasonable match, are more lax in that they don’t take extra care to set those things like sordino, legato, etc.</p>
 <p>I’m warming up to the idea. There’s a gap in Reaticulate’s functionality that I’d need to close, which is that if a program emits an output event to set, say, legato off, and there is another specific “legato off” program in another group mapped to that output event, Reaticulate won’t realize it should activate that program in the other group. That should be easily fixed, and then it would allow these “all inclusive” programs to co-exist with the more narrowly defined programs that more closely align with the patch’s true behavior.</p>
@@ -280,19 +282,19 @@ Free and open source</p>
 <h3>[Q] benigno<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <p>Now, one of the powers I like in your solution is that you have given us 10 actions ready to go straight to the articulation one wants, this in combination with another layer of abstraction seems to make the most sense to me.
 And that took some doing.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Early incarnations of Reaticulate defined the type of output event at the bank level (e.g. note, CC and which CC number, destination channel number) and then used the program number to signify the value for the output event (e.g. if the bank’s output type was note, then program 42 would send note 42). I had a minor breakthrough that made me realize I could allow for multiple specific output events for each individual program. This does allow for some great flexibility, as you point out.</p>
 </section>
 <section id="id5">
 <h3>[Q] benigno<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <p>Still, as I said is one more layer and more work on the user, but let’s not forget that these options are there to use.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Yes, of course I’m agonizing about exactly how the factory banks should work, but the user is free to do whatever suits their specific workflow and preferences. I like the idea of leveraging Web Remote, and I’m interested to see what users cook up there.</p>
 </section>
 <section id="id6">
 <h3>[Q] Vagalume<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
 <p>Maybe the message has to do with the Kontakt factory banks, in fact SSS V1 Core and V1 Decorative share an articulation (both have Sul Pont) and both patches sound at the same time when selected with this concrete articulation, no idea.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>This is exactly the reason for the warning. It’s safe to ignore in this case. I’ve committed a fix for that (as it was reported over on The Sound Board) and it’ll be in the next release.</p>
 <p>As for the Masse conflict, this is expected as these patches definitely do conflict (the patches themselves use the same UACC numbers and so they conflict). The only way to deal with this is to put them on different channels in Kontakt, and use dedicated source and destination channels in the Reaticulate bank configuration.</p>
 <p>For example, Strings on source and destination channel 1, and Brass on source and destination channel 2 (with the Kontakt patches assigned accordingly). But then you would need to switch your controller to the appropriate channel as well. (I think perhaps the UX could be improved there.)</p>
@@ -301,7 +303,8 @@ And that took some doing.</p>
 <section id="q-swiiscompos">
 <h3>[Q] swiiscompos<a class="headerlink" href="#q-swiiscompos" title="Permalink to this heading"></a></h3>
 <p>for some reason the Reabank files don’t seem to match any of my libraries (all Spitfire), any idea why that would be the case?</p>
-<p>[A] Make sure you set the patches to “Locked to UACC”. (The little note field for each of the Spitfire banks says “Set patch to UACC”, and in general that message will give patch configuration information if relevant.)</p>
+<p><strong>[A-Tack]</strong></p>
+<p>Make sure you set the patches to “Locked to UACC”. (The little note field for each of the Spitfire banks says “Set patch to UACC”, and in general that message will give patch configuration information if relevant.)</p>
 <p>The factory banks using Spitfire send UACC (CC32) events to trigger articulations, not the out-of-box note-based keyswitches.</p>
 </section>
 </section>
@@ -310,14 +313,14 @@ And that took some doing.</p>
 <section id="q-dynamick">
 <h3>[Q] DynamicK<a class="headerlink" href="#q-dynamick" title="Permalink to this heading"></a></h3>
 <p>On another issue, any problems found with chasing the art switches? Still a problem in CB and never really addressed.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Reaper will chase program changes on transport play (or on scrub preview MIDI in the piano roll), and since program changes are the basis of articulations with Reaticulate, they’ll be chased.</p>
 <p>The main limitation is that you would expect each articulation in each group to be chased, however groups are an organization layer within Reaticulate that Reaper doesn’t understand. Consequently Reaper can only chase the last program change just before the play head, regardless of which group it might be in.</p>
 </section>
 <section id="q-symbolic">
 <h3>[Q] SymboliC<a class="headerlink" href="#q-symbolic" title="Permalink to this heading"></a></h3>
 <p>I’d like to control the articulation changes in Track envelopes rather than MIDI lanes.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Not really very easily achieved I’m afraid. The Reaticulate JSFX isn’t intended to be controlled through automation.</p>
 <p>You could theoretically insert ReaControlMIDI before Reaticulate and enable it for Bank/Program select on the channel of your choice. Then you could automate ReaControlMIDI by adding the Program number as an envelope. However this would be very cumbersome to use, because the automation point values don’t translate 1:1 with program numbers, and nor is it compatible with any of Reaticulates activate program actions.</p>
 <p>I’m afraid I never envisioned using Reaticulate this way, so its most basic assumptions are rather incompatible with envelopes.</p>
@@ -325,7 +328,7 @@ And that took some doing.</p>
 <section id="q-primeeagle">
 <h3>[Q] PrimeEagle<a class="headerlink" href="#q-primeeagle" title="Permalink to this heading"></a></h3>
 <p>They seem to work for the most part, except that by default neither On or Off is selected. Is there a way to either specify a default, or have it automatically sync to whatever is chosen by default in the VST?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>There is no way to have it sync backwards from the VSTi, no. It’d be possible to include a new default flag which you can set on a given program, but in practice this is only really an issue on the initial configuration of the track. Once the track is configured (in your project template, or even a track template) then the last selected program will be remembered.</p>
 </section>
 <section id="id7">
@@ -333,7 +336,7 @@ And that took some doing.</p>
 <ol class="loweralpha simple">
 <li><p>Is this line space and case sensitive?</p></li>
 </ol>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Bank and program names are not case sensitive. By convention in the factory banks, the bank name is title cased, using human-readable abbreviations for the library name (e.g. SCS for Spitfire Chamber Strings) and the full name for the patch the bank describes. Meanwhile, program names are lower case, where some common terms are abbreviated if necessary to reduce length.</p>
 <p>For your own custom banks you’re free to use whatever you want. The names can be changed after-the-fact without breaking anything. In terms of spaces, the program and bank names can have arbitrarily many spaces.</p>
 </section>
@@ -342,7 +345,7 @@ And that took some doing.</p>
 <ol class="loweralpha simple" start="2">
 <li><p>I randomly picked up 32-1 interval for Bank MSB &amp; LSB. What is the importance of this and how should I determine what numbers will go there? It isn’t quite clear to me despite I watched the instructional video and looked through the documentation on the web.</p></li>
 </ol>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>At some point Reaticulate will come with a GUI to create and manage banks, and it will choose an unused bank number for automatically. But absent that, yes, I can see how it’d be confusing.</p>
 <p>The only requirement is that the two numbers (MSB/LSB combination) are unique for your Reaper installation. MSB 64 and above are reserved for factory banks and are allocated by me. I’d suggest avoiding value 0 for your custom bank and program numbers, just to side step possible corner cases. So, for your custom banks, you could start at 1-1 if you like, and work upward.
 …I’m guessing the use of LSB=0 has hit one of those aforementioned corner cases…  By specification it should be allowed, but I’m not surprised if there’s a bug there. Meanwhile just avoid 0 values for bank and program numbers.</p>
@@ -350,13 +353,13 @@ And that took some doing.</p>
 <section id="id9">
 <h3>[Q] SymboliC<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
 <p>Can I use 32-1 for another sample library or another instrument? Would this cause conflicts? Or, should I use 32-2 as values for another instrument in the same sample library?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Bank numbers need to be unique for your installation. So you’d need to use 32-2 for the second instrument, otherwise it would indeed conflict with the first.</p>
 </section>
 <section id="id10">
 <h3>[Q] PrimeEagle<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
 <p>What is the best way to handle this? If I do a different bank for each instrument, it doesn’t switch all the following notes to the new MIDI channel. Any suggestions?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Whether consolidated in a single large bank, or split out into separate banks (as with the factory library, which tends to have one bank per patch), ultimately you can’t duplicate program numbers on a given channel lest you have a conflict (e.g. if you have program 42 listed multiple times and you activate program 42, it can’t know which articulation you intend to activate).</p>
 <p>Apart from splitting out into multiple tracks, the only way around this problem is to break things out into different source MIDI channels. Then in the track configuration page, you’d use a specific source channel instead of omni. This means you can have up to 16*128=2048 different programs on a given track – 128 per MIDI channel – but it comes with the added complexity of having to juggle MIDI channels as you input MIDI data. If you have any other ideas on how to overcome that limitation, I’d be curious. (from page 4) I should clarify this, because it’s non-obvious: Reaticulate largely ignores the bank changes. The only use of the bank MSB/LSB is so the program name comes up correctly in the MIDI editor.</p>
 <p>Technically if the bank change was taken into account, you could have conflicting program numbers as long as they appeared in different banks. The bank change would disambiguate the program conflict.</p>
@@ -371,19 +374,19 @@ And that took some doing.</p>
 <section id="id11">
 <h3>[Q] PrimeEagle<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
 <p>Any chance of having more than 4 groups? I’ve come across some instruments that need up to 6, but when making user banks that are multis, the required number could be 3-4 times that.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>This is much harder than you think it should be. Increasing it above 4 to even 6 requires a major overhaul of how this information is transferred from the JSFX to the controlling Lua script (the UI). I know how to do it (via a kludge I dare not speak further on), and probably will do said overhaul for other reasons, but even then there are performance implications to raising the number of groups. If I raise the limit, I might go to 8, but I can’t see going to 20 or higher.</p>
 </section>
 <section id="id12">
 <h3>[Q] SymboliC<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
 <p>I wish we were able to manage articulation in the main TCP arrange window.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>I do plan to make it possible to insert articulations by (probably middle-)clicking on the articulations in the UI from the arrange view. But this isn’t exactly what you’re looking for, which is more of a complete way to view/edit articulation changes from the arrange view. I’m not quite sure how best to do this, as envelopes clearly aren’t suitable. If there’s no existing Reaper UI construct to leverage, I don’t see myself building an entirely different UI for it, which ultimately, as a Lua script, probably wouldn’t work that well anyway.</p>
 </section>
 <section id="id13">
 <h3>[Q] PrimeEagle<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
 <p>If Reaper doesn’t support multiple program changes simultaneously, though, then I’m not really sure how to approach it. That situation would likely necessitate not sending the articulation as a program change at all, but just as a chord made up of the keyswitch notes directly.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Reaper doesn’t support multiple program changes simultaneously, no. It will only chase the last program change on a given MIDI channel. We already run into this limitation with groups, where even though a bank can have up to 4 groups with independent articulations, only the last program in the last group for that channel will be chased.</p>
 <p>So, we must live with those limitations.</p>
 <p>To address your problem, I’m thinking about two new output event types: one that’s a more extreme version of note-hold – maybe call it note-pin or something – which, unlike the note-hold output type which simply defers the note-off event until the next program with a note or note-hold output event, will keep the pinned notes (within the given group) held until the presence of a note-clear output event, which would then send note-off events for all currently pinned notes in the group.</p>
@@ -396,13 +399,13 @@ And that took some doing.</p>
 1 = program change?</p>
 </dd>
 </dl>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Yes, those are program numbers.</p>
 </section>
 <section id="id14">
 <h3>[Q] Oberheim<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
 <p>If yes how to not use program changes? I use libraries where I don’t use program changes for changing articulation.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>The basic unit of articulation in Reaticulate is the program change, but this doesn’t mean that’s what your libraries have to use. Reaticulate translates program changes into arbitrary MIDI events to control the libraries. I call these “output events”. It’s documented <a class="reference external" href="http://reaticulate.com/reabank.html">here</a>.</p>
 </section>
 <section id="id15">
@@ -412,7 +415,7 @@ And that took some doing.</p>
 <div><p>legato</p>
 </div></blockquote>
 <p>I got error after refresh Reaticulate.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Yes, that’s not syntactically valid for .reabank files.</p>
 </section>
 <section id="id16">
@@ -420,7 +423,7 @@ And that took some doing.</p>
 <ol class="arabic simple" start="2">
 <li><p>can Reaticulate create arpegio effects? For example I create chord and when arpegio is used, it deley each higher or lower notes.</p></li>
 </ol>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>No, that’s not really a problem Reaticulate tries to solve.</p>
 </section>
 <section id="id17">
@@ -428,13 +431,13 @@ And that took some doing.</p>
 <ol class="arabic simple" start="3">
 <li><p>can Reaticlate follow notation articulations and dynamics(crescendos and descrescendos too)?</p></li>
 </ol>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>It can’t follow notation yet. I’m waiting to see whatever becomes of articulation maps before I do anything related to notation.</p>
 </section>
 <section id="q-thevisi0nary">
 <h3>[Q] thevisi0nary<a class="headerlink" href="#q-thevisi0nary" title="Permalink to this heading"></a></h3>
 <p>Problem is solved. The bank has to communicate with the sample library itself, and then it displays the bank names properly in the midi editor upon reloading the reaper session. The reason I didn’t figure this out sooner is that I was experimenting with newly made banks before actually connecting them to the sample library instruments.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>At risk of only adding to the confusion, I’ll try to clarify the design of Reaticulate a bit in case it can help you reason through things like this.</p>
 <p>So you have a bunch of tracks on which you’ve added the Reaticulate FX at the top of the FX chain. The purpose of this FX is to translate Program Change MIDI events into whatever output events the VSTis later in the FX chain need to receive to control them. Reaticulate (hopefully) provides a convenient enough interface to insert these program events into MIDI items (stepwise or during live recording).</p>
 <p>The main “process” of Reaticulate (the long-running plugin that presents the GUI) is responsible for programming the JSFX on each track according to the bank(s) you have assigned per track. It transfers the details of the the banks the user has selected for the track, on which channels, all the banks’ articulations, their flags (Should the articulation chase CCs? Should it attempt to avoid note-hanging? etc.), and all the output events to the JSFX. Then when the JSFX receives a program event on some channel, it knows how to respond to it.</p>
@@ -457,7 +460,7 @@ And that took some doing.</p>
 <h3>[Q] sveinpetter<a class="headerlink" href="#q-sveinpetter" title="Permalink to this heading"></a></h3>
 <p>The GUI in Trillian shows the Key Select and sounds good, but the Key Select ends up as Type PC with the Value of the note. Not as Type Note. When recording to Midi.
 Sorry for all my Edits … When playing back the midi file, the PC Values triggers Key Select OK. Hhmm.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Reaticulate inserts program changes into the MIDI item, but those program changes are then translated as they pass through the Reaticulate JSFX on your FX chain so that the downstream VSTi receives the output events you configured for the articulation. (Notes, in this case.)</p>
 </section>
 </section>
@@ -504,7 +507,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <section id="q-k8ch">
 <h3>[Q] K8ch<a class="headerlink" href="#q-k8ch" title="Permalink to this heading"></a></h3>
 <p>By the way…was hoping to simply select several notes in a passage, and make them all Staccato, with a single click…but I couldn’t get it to do that.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>The program change MIDI events Reaticulate inserts into the MIDI item are decoupled from the notes themselves. This means the articulation change isn’t really a property of the notes, but more about the edit cursor position.</p>
 <p>It’s similar to CCs in this way, where CCs used for performance are musically related to the notes above them but from a MIDI perspective they’re separate. Reaper has an option to auto-select CCs under a note when you select a note to help this a bit. It doesn’t do this with program changes. (It’s on my to-do list to have an option where Reaticulate will autoselect the closest previous program change when a note is selected to mimic this same sort of behavior.)</p>
 <p>Consequently, you manage your articulation changes (program change events) independently of the notes. You insert them at the edit cursor (right-clicking an articulation as of Reaticulate 0.2.0) and resposition them separately from notes.</p>
@@ -513,7 +516,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <section id="id18">
 <h3>[Q] thevisi0nary<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
 <p>Say I have one kontakt instance, channel 1 is Symphonic Strings standard articulations, and channel 2 is decorative. Is there a way to have a separate channel for each one as I switch between channels?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Assuming you’re referring to Spitfire here, these patches can actually coexist on the same channel. You just need to set the patches to “Locked to UACC.” (This is required if you use the factory banks, anyway.) So you don’t need to use separate MIDI channels for this example, and in the Reaticulate config for the track you can set the source channel of both to Omni.</p>
 <p>Now supposing we were talking about a different library where the two patches you mentioned clearly conflicted with one another such that you were forced to put them on different channels – for example, because they used the same keyswitches and couldn’t be reassigned to avoid the conflict. So in Kontakt, you had the standard patch set to channel 1, and the decorative patch set to channel 2.</p>
 <p>You actually have two options:</p>
@@ -530,7 +533,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <section id="id19">
 <h3>[Q] PrimeEagle<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
 <p>Is there a way to change the volume/velocity when changing articulations, for example to make pizzicato quieter than arco?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Assuming your VI responds to CC7, you could chain a CC7 event to the articulation’s output event list to set the appropriate volume. Some patches, such as those from Spitfire, allow CC11 to control the volume for all articulations (including shorts), so this would probably be preferable to CC7.</p>
 </section>
 </section>
@@ -543,7 +546,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <div><p>o=&#64;2 o=cc:20,1</p>
 </div></blockquote>
 <p>What’s the correct syntax?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>From the docs: <em>Multiple output events are separated by a / (forward slash) where each individual output event roughly takes the form</em>:</p>
 <blockquote>
 <div><p><a class="reference external" href="mailto:type&#37;&#52;&#48;channel">type<span>&#64;</span>channel</a>:arg1,arg2</p>
@@ -560,7 +563,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <section id="id20">
 <h3>[Q]G-Sun<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
 <p>Got it working by both by setting source to ch2 and coded as above. Will use setting source, as it seems more flexible.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Source relates to where your originating MIDI events are expected to come in on. If you don’t care about that then set Source to Omni. Setting the Destination channel to “Source” is fine (and what I’d do) if you’re explicitly defining the target channels in the banks.</p>
 <p>In other words with “o=cc&#64;2:20,1” you can set the bank to Source=Omni and Target=Source no problem because you’re dictating the target channel right in the articulation definition.</p>
 <p>Or, if you wanted the bank itself to be agnostic to the target channel, you could choose not to define the target channel in the output events (“o=cc:20,1”) and then use Source=Omni and Target=2. Not sure which one makes sense for your case, it’d depend on the library. You’ll feel it out I’m sure.</p>
@@ -568,7 +571,7 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <section id="id21">
 <h3>[Q] G-Sun<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
 <p>Is the reabank-file limited to 128 Program lines articulations? I got some errors on same numbering, although it should be different &lt;LSB&gt; and Bank name.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Right, the warning you’re talking about is probably because you have conflicting program numbers between multiple banks loaded in on the same track?</p>
 <p>This conflict happens when you have the same program numbers on the same source channels. If you have two banks, both defining e.g. program 1, and both set to the same Source channel (whether Omni or some specific number), the way Reaticulate works right now it can’t differentiate between them, because it only looks at the program numbers and not the bank select events that precedes it.</p>
 <p>Right now the workaround is to use different source channels for the banks. This means your performance MIDI needs to be on different source channels.</p>
@@ -578,13 +581,13 @@ Sorry for all my Edits … When playing back the midi file, the PC Values trigge
 <h3>[Q] G-Sun<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
 <p>For toggles-switches: Can I assign note-on and note-off message?
 Or do I then need 2 entries, one for on, another for off. (It’s a legato-switch).</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>No, a toggle sends the same MIDI event each time you trigger it, it just changes its visual state in the UI. An example of this is the Bohemian violin’s chord on/off toggle, where you send the same note to toggle it on and off.</p>
 </section>
 <section id="id23">
 <h3>[Q] G-Sun<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
 <p>Is there no way to comment in the bank-files now?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Yes, comment the normal way.:</p>
 <blockquote>
 <div><p>// comment</p>
@@ -597,7 +600,7 @@ Or do I then need 2 entries, one for on, another for off. (It’s a legato-switc
 <section id="q-arthur-mcarthur">
 <h3>[Q] Arthur McArthur<a class="headerlink" href="#q-arthur-mcarthur" title="Permalink to this heading"></a></h3>
 <p>One thing I noticed is that if I have more than one track selected and I change articulations, that articulation gets pushed to all tracks that are record armed. Is that expected? Would it be possible for the articulation to only be passed to the selected track(s)?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>That’s the expected behavior, yeah. When you click on an articulation, it emits the MIDI program change event, and Reaper will route that message to all record-armed tracks.</p>
 <p>I feel like this actually makes more sense than just targeting selected tracks, because the articulation change is an element of a MIDI performance. So if I change an articulation and then play a note, I would expect those two things to go to the same tracks.</p>
 <p>In any case that behaviour isn’t configurable. Although it technically could target only selected tracks (not easily though), I feel like that’s even more confusing than sending to all record-armed tracks – if anything, shouldn’t it only target the last touched track that the Reaticulate GUI is showing current banks for?</p>
@@ -606,7 +609,7 @@ Or do I then need 2 entries, one for on, another for off. (It’s a legato-switc
 <section id="q-fbeauvaisc">
 <h3>[Q] fbeauvaisc<a class="headerlink" href="#q-fbeauvaisc" title="Permalink to this heading"></a></h3>
 <p>Is there a way to stack articulations in midi channel switching? With a Ctrl+click would open more midi channels.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>This could technically work the way you described but only for the multi scenario like you’re using, and, more problematically, it wouldn’t work during recording or playback, because you can’t “layer” program change messages.</p>
 <p>So there are two possibilities here:</p>
 <blockquote>
@@ -620,7 +623,7 @@ Or do I then need 2 entries, one for on, another for off. (It’s a legato-switc
 <section id="id24">
 <h3>[Q] fbeauvaisc<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
 <p>Is there a way to have Reaticulate change midi bus to have more than 16 midi channels available per track?</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>Not without some sort of support from the VSTi. Someone had a similar question in the context of Kontakt, whether it was possible to address all 4 ports within Kontakt (ports A-D).</p>
 <p>I offered this solution which combines FlexRouter, a Kontakt multiscript, with Reaticulate to address up to 64 different channels.</p>
 <p>This theoretically would work with VEPro as well, but it only works with Kontakt.</p>
@@ -638,7 +641,7 @@ Or do I then need 2 entries, one for on, another for off. (It’s a legato-switc
 <section id="q-klangfarben">
 <h3>[Q] Klangfarben<a class="headerlink" href="#q-klangfarben" title="Permalink to this heading"></a></h3>
 <p>I’m probably missing something because, well, I’m stupid. But in the including actions, is there an action to select a specific articulation slot 1-16 for groups 1-4? I see an action for next and previous articulation but not for a specific slot.</p>
-<p>[A]</p>
+<p><strong>[A-Tack]</strong></p>
 <p>So the first misconception is that there are articulation slots 1-16. Reaticulate works differently than something like BRSO Articulate in that it isn’t channel-based, but rather program-number based. This means that you could define a bank that had up to 128 different articulations. For your custom banks the choice of program number is up to you, but the factory banks follow (to the extent possible) the numbering defined in Spitfire’s UACC standard. Arbitrary, but it was at least something to base some consistency on.</p>
 <p>Within a bank, program numbers must be distinct. This means you can’t use program 42 (or whatever) in group 1 and reuse it again in group 2. Consequently it doesn’t matter what group program 42 is in. If you want to activate that articulation, you use an action to do it (via one of the activate articulations by CC actions) and it’ll activate it regardless of which group it’s in.</p>
 <p>Actions to activate articulations are done by CC right now. Because there’s no good alternative – as I explain above in post 285, I would need a massive number of actions to cover all the program numbers and source channels and it makes it impractical. bHope that makes sense!</p>
