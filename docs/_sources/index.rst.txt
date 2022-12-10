@@ -22,6 +22,7 @@ Can't remember? Help Yourself
    RSTs/Macs.rst
    RSTs/Python.rst
    RSTs/Reaper.rst
+   RSTs/Reatforum.rst
    RSTs/Rigging.rst
    RSTs/Video.rst
    RSTs/Windoze.rst
