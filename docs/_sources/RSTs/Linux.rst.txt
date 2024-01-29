@@ -41,19 +41,25 @@ Key points to look at are the resolution - in this case 1920x1080 - and font, wh
 
 ...ensuring, of course, that the file and path actually exist.
 
-The next thing to look at is look in the /etcdefault/grub.d folder, which contain:
+The next thing to look at is look in the /etc/default/grub.d folder, which will hopefully contain the following files, or something similar:
 
     * 50_linuxmint.cfg
     * 63_mint-theme-2k.cfg
 
-The 63x file holds the key to which theme get sought after. BTW, when you invoke:
+In this case, the 63x file held the key to which theme is used by GRUB. If none of that sort of file exist, you might need to go to the Software Manager and load an alternate theme to the default, such as Grub2-theme-mint. Invoke:
 
     sudo update-grub
 
-...the files that are sourced to create grub are indicated.
+ and the missing files should appear. In that file (or one similar to it) are a two lines of interest:
+ 
+    GRUB_FONT="/boot/grub/fonts/UbuntuMono32.pf2"
+    GRUB_THEME="/boot/grub/themes/creek/theme.txt"
+ 
+The second line will tell **update-grub** where to find the theme. Save your changes and nvoke:
 
+    sudo update-grub
 
-needed for the picture to actually take.
+and you should be good.
 
 
 

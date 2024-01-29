@@ -132,19 +132,29 @@ GRUB_FONT=/boot/grub/fonts/unifont.pf2</p>
 </ul>
 </div></blockquote>
 <p>…ensuring, of course, that the file and path actually exist.</p>
-<p>The next thing to look at is look in the /etcdefault/grub.d folder, which contain:</p>
+<p>The next thing to look at is look in the /etc/default/grub.d folder, which will hopefully contain the following files, or something similar:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>50_linuxmint.cfg</p></li>
 <li><p>63_mint-theme-2k.cfg</p></li>
 </ul>
 </div></blockquote>
-<p>The 63x file holds the key to which theme get sought after. BTW, when you invoke:</p>
+<p>In this case, the 63x file held the key to which theme is used by GRUB. If none of that sort of file exist, you might need to go to the Software Manager and load an alternate theme to the default, such as Grub2-theme-mint. Invoke:</p>
+<blockquote>
+<div><blockquote>
+<div><p>sudo update-grub</p>
+</div></blockquote>
+<p>and the missing files should appear. In that file (or one similar to it) are a two lines of interest:</p>
+<blockquote>
+<div><p>GRUB_FONT=”/boot/grub/fonts/UbuntuMono32.pf2”
+GRUB_THEME=”/boot/grub/themes/creek/theme.txt”</p>
+</div></blockquote>
+</div></blockquote>
+<p>The second line will tell <strong>update-grub</strong> where to find the theme. Save your changes and nvoke:</p>
 <blockquote>
 <div><p>sudo update-grub</p>
 </div></blockquote>
-<p>…the files that are sourced to create grub are indicated.</p>
-<p>needed for the picture to actually take.</p>
+<p>and you should be good.</p>
 </section>
 <section id="updating-path">
 <h2>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this heading"></a></h2>
