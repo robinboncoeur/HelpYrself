@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en-English" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Excel 2016 VBA Apps &mdash; Help Yourself 0.02 documentation</title>
@@ -11,10 +11,9 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Help Yourself
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Help Yourself
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -55,6 +58,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#the-vbe">The VBE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#code-modules">Code Modules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#variables-and-properties">Variables and Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#callsheet-cell-dropdowns">CallSheet Cell Dropdowns</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#common-code-snippets">Common Code Snippets</a><ul>
@@ -81,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reatforum.html">Reaticulate Forum Discussion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
@@ -99,8 +104,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Excel 2016 VBA Apps</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Excel 2016 VBA Apps</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/RSTs/Excel.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -160,13 +165,13 @@
 <p>In the VBE, code is saved in modules, the names of which are visible under the project browser. In order to view code associated with a form, you open the Forms folder by clicking on the [+] and then, right-clicking on the form name and selecting “View Code”. Double-clicking the name of the form will bring up a graphical view of the form itself. (On the Mac in Excel 2016, forms are neither viewable nor can they be edited, although the code can be.)</p>
 <p>The code is essentially a collection of procedures or functions containing calls to other procedures and functions. A “call” is basically an instruction for that function or procedure (labelled ‘sub’, for ‘subroutine’, <em>I think</em>) to “run”, or execute.</p>
 <p>The difference between a ‘function’ and ‘procedure’ is minimal: essentially a function can return a value, where a procedure just performs a task without returning anything. What do I mean by ‘return’? For example below is an example of a function. You can tell it’s a function by the way it’s defined - ‘Public Function AddNumbers’ and by the fact that after the closing parenthesis you can see what type of value is being returned… in this case, an Integer:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">nAddNumbers</span><span class="p">(</span><span class="n">nNum1</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">nNum2</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span><span class="w"></span>
-<span class="w">  </span><span class="n">AddNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nNum1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nNum2</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">nAddNumbers</span><span class="p">(</span><span class="n">nNum1</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">nNum2</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Integer</span>
+<span class="w">  </span><span class="n">AddNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nNum1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nNum2</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 <p>can be called with:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">nMyNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nAddNumbers</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="n">nMyNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nAddNumbers</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>which will result in the variable nMyNumber acquiring the value of 70, which was <strong>returned</strong> by nAddNumbers().</p>
@@ -189,6 +194,15 @@
 <p>A property is functionally a bit like a variable in that it holds data, but it has several advantages. For one thing, you can embed error-checking right in the definition of the property, something that neither CallSheet or Asset Manager make use of at the moment, although it’s on the cards. The other thing that these products <strong>do</strong> make use of is this: a property allows external access (that is, external to where it was declared) from other modules or forms as though the property was a public field, while allowing the class that owns that property (like a form, for example) to keep control of the data.</p>
 <p>One could use global variables, which are defined under the ‘Option Explicit’ at the top of the module, but my experience with them has been that while they should be available to the entire form and all subforms, they are a lot less reliable to use than form properties. YMMV, of course.</p>
 <hr style="height:4px;border-width:0;color:gray;background-color:gray"></section>
+<section id="callsheet-cell-dropdowns">
+<h3>CallSheet Cell Dropdowns<a class="headerlink" href="#callsheet-cell-dropdowns" title="Permalink to this heading"></a></h3>
+<p>We are using staff name (LastName, FirstName) data stored on sheets “AN”, “PA” and “SS”, which represent specialties (anaesthetics, PACU and scrub-scout) to populate dropdowns on the main call sheet. On each sheet, the names are sorted in a Excel table - highlight the data, and press [CTRL] [T] to create the table.
+To allow automatic updating of the list to include new data, not only does the data have to come from named tables but under ‘Formulas’, with the table highlighted, one needs to do ‘Define Name’. Then with the cell selected, Data -&gt; Data Validation and in the source:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=</span><span class="n">DefinedName</span>
+</pre></div>
+</div>
+<p>Thus, when names are added or deleted, the dropdown will contain updated, complete lists.</p>
+</section>
 </section>
 <section id="common-code-snippets">
 <h2>Common Code Snippets<a class="headerlink" href="#common-code-snippets" title="Permalink to this heading"></a></h2>
@@ -201,60 +215,60 @@
 </pre></div>
 </div>
 <p>The code?</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">nRecCount</span><span class="p">(</span><span class="n">sSheet</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span>_<span class="w"></span>
-<span class="w">                          </span><span class="n">nColN</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="w"></span>
-<span class="k">Dim</span><span class="w"> </span><span class="n">sSavSheet</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
-<span class="w">  </span><span class="n">sSavSheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Name</span><span class="w"></span>
-<span class="w">  </span><span class="k">With</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSheet</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">Resume</span><span class="w"> </span><span class="k">Next</span><span class="w"></span>
-<span class="w">    </span><span class="p">.</span><span class="n">Select</span><span class="p">:</span><span class="w"> </span><span class="n">nRecCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WorksheetFunction</span><span class="p">.</span><span class="n">CountA</span><span class="p">(</span><span class="n">Columns</span><span class="p">(</span><span class="n">nColN</span><span class="p">))</span><span class="w"></span>
-<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">With</span><span class="w"></span>
-<span class="w">  </span><span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">).</span><span class="n">Select</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">nRecCount</span><span class="p">(</span><span class="n">sSheet</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span>_
+<span class="w">                          </span><span class="n">nColN</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span>
+<span class="k">Dim</span><span class="w"> </span><span class="n">sSavSheet</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<span class="w">  </span><span class="n">sSavSheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ActiveSheet</span><span class="p">.</span><span class="n">Name</span>
+<span class="w">  </span><span class="k">With</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSheet</span><span class="p">)</span>
+<span class="w">    </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">Resume</span><span class="w"> </span><span class="k">Next</span>
+<span class="w">    </span><span class="p">.</span><span class="n">Select</span><span class="p">:</span><span class="w"> </span><span class="n">nRecCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WorksheetFunction</span><span class="p">.</span><span class="n">CountA</span><span class="p">(</span><span class="n">Columns</span><span class="p">(</span><span class="n">nColN</span><span class="p">))</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">With</span>
+<span class="w">  </span><span class="n">Application</span><span class="p">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">sSavSheet</span><span class="p">).</span><span class="n">Select</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 <p><strong>This is now obsolete</strong>. The better approach takes place within the code that needs to know what the record count of your range is, so you use a “Range” object thus:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">SomeSub</span><span class="p">(</span><span class="n">dVal</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Range</span><span class="w"></span>
-<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">dRecCount</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Double</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">SomeSub</span><span class="p">(</span><span class="n">dVal</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span>
+<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Range</span>
+<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">dRecCount</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="kt">Double</span>
 
-<span class="w">  </span><span class="k">Set</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WkStName</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">CurrentRegion</span><span class="w"></span>
-<span class="w">  </span><span class="n">dRecCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rRng</span><span class="p">.</span><span class="n">Rows</span><span class="p">.</span><span class="n">Count</span><span class="w">  </span><span class="c">&#39; Probably will not need this anymore anyway</span><span class="w"></span>
+<span class="w">  </span><span class="k">Set</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WkStName</span><span class="p">.</span><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">CurrentRegion</span>
+<span class="w">  </span><span class="n">dRecCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rRng</span><span class="p">.</span><span class="n">Rows</span><span class="p">.</span><span class="n">Count</span><span class="w">  </span><span class="c">&#39; Probably will not need this anymore anyway</span>
 
-<span class="w">  </span><span class="k">With</span><span class="w"> </span><span class="n">WkStName</span><span class="w"></span>
-<span class="w">    </span><span class="c">&#39; Process stuff here</span><span class="w"></span>
-<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">With</span><span class="w"></span>
+<span class="w">  </span><span class="k">With</span><span class="w"> </span><span class="n">WkStName</span>
+<span class="w">    </span><span class="c">&#39; Process stuff here</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">With</span>
 
-<span class="w">  </span><span class="k">Set</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Sub</span><span class="w"></span>
+<span class="w">  </span><span class="k">Set</span><span class="w"> </span><span class="n">rRng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
 </section>
 <section id="stp">
 <h3>stp()<a class="headerlink" href="#stp" title="Permalink to this heading"></a></h3>
 <p>Only because I’m too lazy to type “Trim(Str(” in front of numbers I want to convert to strings.</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">stp</span><span class="p">(</span><span class="n">nNum</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
-<span class="w">  </span><span class="n">stp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trim</span><span class="p">(</span><span class="n">Str</span><span class="p">(</span><span class="n">nNum</span><span class="p">))</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">stp</span><span class="p">(</span><span class="n">nNum</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<span class="w">  </span><span class="n">stp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trim</span><span class="p">(</span><span class="n">Str</span><span class="p">(</span><span class="n">nNum</span><span class="p">))</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 </section>
 <section id="mac-excel-inputbox-choices">
 <h3>Mac Excel Inputbox Choices<a class="headerlink" href="#mac-excel-inputbox-choices" title="Permalink to this heading"></a></h3>
 <p>Since Excel for Mac doesn’t support userforms, here’s an inputbox that accepts one of three inputs.</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">aRunMe</span><span class="p">()</span><span class="w"></span>
-<span class="k">Dim</span><span class="w"> </span><span class="n">sPk</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
-<span class="w">  </span><span class="n">sPk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">InputBox</span><span class="p">(</span><span class="s">&quot;Enter B for Brass, W for Woodwinds, S for Strings):  &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Select A, B or C&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">:</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="c">&#39;If Not sPk Then Exit Sub</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">aRunMe</span><span class="p">()</span>
+<span class="k">Dim</span><span class="w"> </span><span class="n">sPk</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
+<span class="w">  </span><span class="n">sPk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">InputBox</span><span class="p">(</span><span class="s">&quot;Enter B for Brass, W for Woodwinds, S for Strings):  &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Select A, B or C&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Type</span><span class="p">:</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="c">&#39;If Not sPk Then Exit Sub</span>
 
-<span class="w">  </span><span class="k">Select</span><span class="w"> </span><span class="k">Case</span><span class="w"> </span><span class="n">UCase</span><span class="p">(</span><span class="n">sPk</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSB&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSS&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;W&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSW&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="k">Else</span><span class="w"></span>
-<span class="w">          </span><span class="n">MsgBox</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Enter a valid letter...&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">Select</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Sub</span><span class="w"></span>
+<span class="w">  </span><span class="k">Select</span><span class="w"> </span><span class="k">Case</span><span class="w"> </span><span class="n">UCase</span><span class="p">(</span><span class="n">sPk</span><span class="p">)</span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSB&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSS&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="ow">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;W&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">Call</span><span class="w"> </span><span class="n">bSplitOrJoin</span><span class="p">(</span><span class="s">&quot;shtSSW&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">Case</span><span class="w"> </span><span class="k">Else</span>
+<span class="w">          </span><span class="n">MsgBox</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Enter a valid letter...&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">Select</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
 </section>
@@ -270,15 +284,15 @@
 <p>I wanted to make sure that at least the very basics of help for CallSheet and Asset Manager were easily accessible to users. I decided that this Sphinx-Doc method was the easiest for me to learn how to use, and to maintain, even remotely.</p>
 <p>Unfortunately, I have yet to sort out how to get control-specific help to work, but the Excel tooltip can at least offer a name of the control, which users can then search for in the Help file. In any event, Help can be accessed via a button on all forms and - in CallSheet - from the main sheet.</p>
 <p>First, the methods fired by clicking the Help button.</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">CmdeqHelp_Click</span><span class="p">()</span><span class="w"></span>
-<span class="w">   </span><span class="k">Call</span><span class="w"> </span><span class="k">Me</span><span class="p">.</span><span class="n">DoHelp</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Sub</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Private</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">CmdeqHelp_Click</span><span class="p">()</span>
+<span class="w">   </span><span class="k">Call</span><span class="w"> </span><span class="k">Me</span><span class="p">.</span><span class="n">DoHelp</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
 <p>which calls:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">DoHelp</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">MdlE</span><span class="p">.</span><span class="n">bHtmlHelp</span><span class="p">(</span><span class="k">Me</span><span class="p">.</span><span class="n">sHelpURL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EquipMain.html&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">MdlE</span><span class="p">.</span><span class="n">sHTMLError</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Sub</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Sub</span><span class="w"> </span><span class="nf">DoHelp</span><span class="p">()</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">MdlE</span><span class="p">.</span><span class="n">bHtmlHelp</span><span class="p">(</span><span class="k">Me</span><span class="p">.</span><span class="n">sHelpURL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EquipMain.html&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">MdlE</span><span class="p">.</span><span class="n">sHTMLError</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
 <p>To break down the DoHelp() procedure, DoHelp() calls a function on the MdlE code module that sends back (returns) either a True or a False: True if the help file could be opened and read, False if not. “MdlE” is a code module that holds mostly functions common to all the forms and sheets in the workbook.</p>
@@ -288,87 +302,87 @@
 <p>Properties versus global variables are discussed up in the <a class="reference internal" href="#xl-variables"><span class="std std-ref">Variables and Properties</span></a> section.</p>
 <p>The second parameter that is being passed is a string - anything between “” is a string - and this string tells the bHtmlHelp() function that it is being called from the Main Equipment Form, and to open specific help for that form.</p>
 <p>bHtmlHelp() opens the Help file. Here is the whole function group… first, the actual bHtmlHelp() function:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">bHtmlHelp</span><span class="p">(</span><span class="n">sHelpPath</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="k">Optional</span><span class="w"> </span><span class="n">sTopic</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"></span>
-<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">sChk</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">bHtmlHelp</span><span class="p">(</span><span class="n">sHelpPath</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="k">Optional</span><span class="w"> </span><span class="n">sTopic</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span>
+<span class="w">  </span><span class="k">Dim</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">sChk</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span>
 
-<span class="w">  </span><span class="c">&#39; check first if help is on same folder as the App; if not, go to</span><span class="w"></span>
-<span class="w">  </span><span class="c">&#39;  the default - hard-coded - network help folder</span><span class="w"></span>
-<span class="w">  </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sHelpPath</span><span class="w"></span>
-<span class="w">  </span><span class="n">sChk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;index.html&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span><span class="w"></span>
-<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sLocalHelpURL</span><span class="w"></span>
-<span class="w">    </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
-<span class="w">  </span><span class="k">Else</span><span class="w"></span>
-<span class="w">    </span><span class="n">sChk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\index.html&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span><span class="w"></span>
-<span class="w">      </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
-<span class="w">    </span><span class="k">Else</span><span class="w"></span>
-<span class="w">      </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
-<span class="w">      </span><span class="k">Exit</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
-<span class="w">    </span><span class="nf">End</span><span class="w"> </span><span class="k">If</span><span class="w"></span>
-<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span><span class="w"></span>
+<span class="w">  </span><span class="c">&#39; check first if help is on same folder as the App; if not, go to</span>
+<span class="w">  </span><span class="c">&#39;  the default - hard-coded - network help folder</span>
+<span class="w">  </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sHelpPath</span>
+<span class="w">  </span><span class="n">sChk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sLocalHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;index.html&quot;</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sLocalHelpURL</span>
+<span class="w">    </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="w">  </span><span class="k">Else</span>
+<span class="w">    </span><span class="n">sChk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\index.html&quot;</span>
+<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">bFileExists</span><span class="p">(</span><span class="n">sChk</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">      </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;G:\Theatre\RecoveryCN\AssetMgr\amHelp\&quot;</span>
+<span class="w">      </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="w">    </span><span class="k">Else</span>
+<span class="w">      </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+<span class="w">      </span><span class="k">Exit</span><span class="w"> </span><span class="k">Function</span>
+<span class="w">    </span><span class="nf">End</span><span class="w"> </span><span class="k">If</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 
-<span class="w">  </span><span class="c">&#39; open specific page</span><span class="w"></span>
-<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">Len</span><span class="p">(</span><span class="n">sTopic</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">vbNullString</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">Then</span><span class="w"></span>
-<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;index.html&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="k">Else</span><span class="w"></span>
-<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;RSTs\&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sTopic</span><span class="w"></span>
-<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span><span class="w"></span>
+<span class="w">  </span><span class="c">&#39; open specific page</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">Len</span><span class="p">(</span><span class="n">sTopic</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">vbNullString</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;index.html&quot;</span>
+<span class="w">  </span><span class="k">Else</span>
+<span class="w">    </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sValidHelpURL</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot;RSTs\&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sTopic</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 
-<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">OpenInIE</span><span class="p">(</span><span class="n">sValidHelpURL</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span><span class="w"></span>
-<span class="w">    </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
-<span class="w">    </span><span class="k">Exit</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
-<span class="w">  </span><span class="nf">End</span><span class="w"> </span><span class="k">If</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">OpenInIE</span><span class="p">(</span><span class="n">sValidHelpURL</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">    </span><span class="n">bHtmlHelp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span>
+<span class="w">    </span><span class="k">Exit</span><span class="w"> </span><span class="k">Function</span>
+<span class="w">  </span><span class="nf">End</span><span class="w"> </span><span class="k">If</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 <p>I’ll be the first to admit the logic in this function is - to put it nicely - suboptimal. The ‘return’ logic should be together in the same are of the code: it’s a bit hard to follow what exactly is happening, as this function sort-of organically grew (as opposed to being properly <strong>designed</strong>).</p>
 <p>Anyway, it works.</p>
 <p>This function checks if the file exists… a discrete process that can be used by other parts of the software:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="c">&#39;=================================================================</span><span class="w"></span>
-<span class="c">&#39;  Does File Exist? (boolean)</span><span class="w"></span>
-<span class="c">&#39;  Accepts: fully-qualified path\name string</span><span class="w"></span>
-<span class="c">&#39;  Returns: boolean (True if exists)</span><span class="w"></span>
-<span class="c">&#39;===========================================</span><span class="w"></span>
-<span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">bFileExists</span><span class="p">(</span><span class="n">cFullName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"></span>
-<span class="w">  </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">GoTo</span><span class="w"> </span><span class="n">EarlyExit</span><span class="w"></span>
-<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">Dir</span><span class="p">(</span><span class="n">cFullName</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vbNullString</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">bFileExists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="c">&#39;=================================================================</span>
+<span class="c">&#39;  Does File Exist? (boolean)</span>
+<span class="c">&#39;  Accepts: fully-qualified path\name string</span>
+<span class="c">&#39;  Returns: boolean (True if exists)</span>
+<span class="c">&#39;===========================================</span>
+<span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">bFileExists</span><span class="p">(</span><span class="n">cFullName</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span>
+<span class="w">  </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">GoTo</span><span class="w"> </span><span class="n">EarlyExit</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">Dir</span><span class="p">(</span><span class="n">cFullName</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vbNullString</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">bFileExists</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
 
-<span class="n">EarlyExit</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">GoTo</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="w">  </span><span class="c">&#39; bFileExists = False (default is false, so superfluous statement)</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<span class="n">EarlyExit</span><span class="p">:</span>
+<span class="w">  </span><span class="k">On</span><span class="w"> </span><span class="k">Error</span><span class="w"> </span><span class="k">GoTo</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">  </span><span class="c">&#39; bFileExists = False (default is false, so superfluous statement)</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 <p>Finally, this one opens the help file in Microsoft’s Internet Explorer:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">OpenInIE</span><span class="p">(</span><span class="n">sURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"></span>
-<span class="k">Dim</span><span class="w"> </span><span class="n">ieDoc</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">ieTable</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">clip</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">DataObject</span><span class="w"></span>
-<span class="k">Dim</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">objElement</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">objCollection</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">OpenInIE</span><span class="p">(</span><span class="n">sURL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span>
+<span class="k">Dim</span><span class="w"> </span><span class="n">ieDoc</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">ieTable</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">clip</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="n">DataObject</span>
+<span class="k">Dim</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Long</span><span class="p">,</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">objElement</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span><span class="p">,</span><span class="w"> </span><span class="n">objCollection</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Object</span>
 
-<span class="w">   </span><span class="c">&#39;Create InternetExplorer Object</span><span class="w"></span>
-<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="p">(</span><span class="s">&quot;InternetExplorer.Application&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">&#39;Create InternetExplorer Object</span>
+<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateObject</span><span class="p">(</span><span class="s">&quot;InternetExplorer.Application&quot;</span><span class="p">)</span>
 
-<span class="w">  </span><span class="c">&#39;Set IE.Visible = True to make IE visible, or False for IE to run in the background</span><span class="w"></span>
-<span class="w">   </span><span class="n">IE</span><span class="p">.</span><span class="n">Visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
+<span class="w">  </span><span class="c">&#39;Set IE.Visible = True to make IE visible, or False for IE to run in the background</span>
+<span class="w">   </span><span class="n">IE</span><span class="p">.</span><span class="n">Visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
 
-<span class="w">   </span><span class="c">&#39;Navigate to URL</span><span class="w"></span>
-<span class="w">   </span><span class="n">IE</span><span class="p">.</span><span class="n">Navigate</span><span class="w"> </span><span class="n">sURL</span><span class="w"></span>
+<span class="w">   </span><span class="c">&#39;Navigate to URL</span>
+<span class="w">   </span><span class="n">IE</span><span class="p">.</span><span class="n">Navigate</span><span class="w"> </span><span class="n">sURL</span>
 
-<span class="w">   </span><span class="c">&#39;Unload IE</span><span class="w"></span>
-<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span><span class="w"></span>
-<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">objElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span><span class="w"></span>
-<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">objCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span><span class="w"></span>
-<span class="w">   </span><span class="n">OpenInIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<span class="w">   </span><span class="c">&#39;Unload IE</span>
+<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span>
+<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">objElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span>
+<span class="w">   </span><span class="k">Set</span><span class="w"> </span><span class="n">objCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Nothing</span>
+<span class="w">   </span><span class="n">OpenInIE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 <p>Note: <em>I recently (2019.01.16) had to change the target browser from Firefox to IE, because as Qld Health migrated to Windows 10, Firefox was no longer a thing, and help ceased to work. In retrospect, I should have allowed opening in IE if Firefox was no longer available. This is an example of poor coding decision-making</em>.</p>
 <p>Finally, the function that generates the error message if the help files aren’t where they are expected to be:</p>
-<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">sHTMLError</span><span class="p">(</span><span class="k">Optional</span><span class="w"> </span><span class="n">sCond</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">MsgBox</span><span class="w"> </span><span class="s">&quot;Help not available. Please notify Developer.&quot;</span><span class="p">,</span><span class="w"> </span>_<span class="w"></span>
-<span class="w">            </span><span class="n">vbCritical</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Help not Found&quot;</span><span class="w"></span>
-<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+<div class="highlight-vbnet notranslate"><div class="highlight"><pre><span></span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">sHTMLError</span><span class="p">(</span><span class="k">Optional</span><span class="w"> </span><span class="n">sCond</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
+<span class="w">  </span><span class="n">MsgBox</span><span class="w"> </span><span class="s">&quot;Help not available. Please notify Developer.&quot;</span><span class="p">,</span><span class="w"> </span>_
+<span class="w">            </span><span class="n">vbCritical</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Help not Found&quot;</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
 </pre></div>
 </div>
 </section>

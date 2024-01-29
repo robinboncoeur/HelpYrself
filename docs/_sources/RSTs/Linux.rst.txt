@@ -14,13 +14,44 @@ In Terminal::
 
 
 
-***************
-Grub-Customizer
-***************
+****************
+Grub-Customising
+****************
 
-Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by `Daniel Richter <https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer>`_ is quite nice but somehow doesn't fully work for me... it is missing a step::
+**Updated: 2024-01-21**
+
+Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by `Daniel Richter <https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer>`_ is quite nice but somehow doesn't work for me.
+
+So, to get GRUB2 to look decent, we need to first address /etc/default/grub - I've removed all the commented-out stuff so just the really important stuff remains:
+
+    GRUB_DEFAULT=0
+    GRUB_TIMEOUT_STYLE=hidden
+    GRUB_TIMEOUT=15
+    GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+    GRUB_CMDLINE_LINUX=""
+
+    GRUB_GFXMODE=1920x1080
+    GRUB_FONT=/boot/grub/fonts/unifont.pf2
+
+Key points to look at are the resolution - in this case 1920x1080 - and font, which lives in /boot/grub/fonts. So:
+
+    * change the resolution to read: **GRUB_GFXMODE=1920x1080**
+    * add the line: **GRUB_FONT=/boot/grub/fonts/unifont.pf2**
+
+...ensuring, of course, that the file and path actually exist.
+
+The next thing to look at is look in the /etcdefault/grub.d folder, which contain:
+
+    * 50_linuxmint.cfg
+    * 63_mint-theme-2k.cfg
+
+The 63x file holds the key to which theme get sought after. BTW, when you invoke:
 
     sudo update-grub
+
+...the files that are sourced to create grub are indicated.
+
 
 needed for the picture to actually take.
 

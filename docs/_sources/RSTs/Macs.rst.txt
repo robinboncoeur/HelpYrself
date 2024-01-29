@@ -369,6 +369,22 @@ The fans and other bits...
 
 
 
+===================
+Grub Menu Dual Boot
+===================
+
+Repair the Boot Process: After installation, you’ll likely find that your computer boots directly into Linux, with no option to choose macOS. This is because Grub may not recognize the macOS EFI boot process. But don’t panic, your macOS is still there, and we can make it accessible by installing an additional piece of software called rEFInd.
+
+First, boot into your Linux system. Then download and install rEFInd:
+
+sudo apt-add-repository ppa:rodsmith/refind
+sudo apt-get update
+sudo apt-get install refind
+This will add rEFInd to your EFI partition, which will be run before Grub when you boot your computer. rEFInd is able to recognize both macOS and Linux and will provide a boot menu for you to choose between them.
+
+And there you have it, a dual boot system with macOS and Linux! It’s a bit more complicated than setting up a dual boot with Windows and Linux, but with some patience, it’s certainly achievable.
+
+
 ====================
 Repair Support Sites
 ====================

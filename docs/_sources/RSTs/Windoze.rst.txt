@@ -69,6 +69,24 @@ purchase ref# 35042
 
 
 
+****************************
+Install - Convert MBR to GPT
+****************************
+
+**Converting to GPT format using Command Prompt in Windows Setup**:
+
+    * Power off the computer, and insert or connect the Windows installation DVD or USB drive.
+    * Power on the computer and tap F12 key until the One-Time Boot Menu appears.
+    * Select the Windows installation DVD or USB in the menu and press Enter key.
+    * From the Windows Setup screen, press Shift + F10 key to open a Command Prompt window.
+    * In the Command Prompt window, type **diskpart** and press [Enter] key.
+    * To identify the disk drive to reformat, type **list disk** and press [Enter] key.
+    * To select the drive and reformat it, type **select disk #** (substitute # with the disk number for example select disk 1) and press [Enter] key.
+    * Type **clean** and press [Enter] key.
+    * Type **convert gpt** and press [Enter] key.
+    * Type **exit** and press [Enter] key.
+    
+Close the Command Prompt window. If you are installing Windows, go to the Windows Setup process.
 
 
 ****************

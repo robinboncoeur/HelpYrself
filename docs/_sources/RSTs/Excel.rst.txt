@@ -139,6 +139,17 @@ One could use global variables, which are defined under the 'Option Explicit' at
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
 
 
+========================
+CallSheet Cell Dropdowns
+========================
+
+We are using staff name (LastName, FirstName) data stored on sheets "AN", "PA" and "SS", which represent specialties (anaesthetics, PACU and scrub-scout) to populate dropdowns on the main call sheet. On each sheet, the names are sorted in a Excel table - highlight the data, and press [CTRL] [T] to create the table.
+To allow automatic updating of the list to include new data, not only does the data have to come from named tables but under 'Formulas', with the table highlighted, one needs to do 'Define Name'. Then with the cell selected, Data -> Data Validation and in the source:: 
+
+	=DefinedName
+
+Thus, when names are added or deleted, the dropdown will contain updated, complete lists.
+
 
 
 ********************

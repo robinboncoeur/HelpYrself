@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en-English" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reluctantly, Windows &mdash; Help Yourself 0.02 documentation</title>
@@ -11,10 +11,9 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -28,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Help Yourself
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Help Yourself
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -52,11 +55,13 @@
 <li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reatforum.html">Reaticulate Forum Discussion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reluctantly, Windows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#which-updates-to-avoid">Which Updates to Avoid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#upgrade-oem-to-retail">Upgrade - OEM to Retail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-convert-mbr-to-gpt">Install - Convert MBR to GPT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vba-custom-popup">VBA-Custom Popup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oracle-s-virtualbox">Oracle’s VirtualBox</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#avoiding-win10-deactivation">Avoiding Win10 Deactivation</a></li>
@@ -79,8 +84,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Reluctantly, Windows</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Reluctantly, Windows</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/RSTs/Windoze.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -132,6 +137,25 @@ Antenna assemply
 $217 on CC
 purchase ref# 35042</p>
 <hr style="height:4px;border-width:0;color:gray;background-color:gray"></section>
+<section id="install-convert-mbr-to-gpt">
+<h2>Install - Convert MBR to GPT<a class="headerlink" href="#install-convert-mbr-to-gpt" title="Permalink to this heading"></a></h2>
+<p><strong>Converting to GPT format using Command Prompt in Windows Setup</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Power off the computer, and insert or connect the Windows installation DVD or USB drive.</p></li>
+<li><p>Power on the computer and tap F12 key until the One-Time Boot Menu appears.</p></li>
+<li><p>Select the Windows installation DVD or USB in the menu and press Enter key.</p></li>
+<li><p>From the Windows Setup screen, press Shift + F10 key to open a Command Prompt window.</p></li>
+<li><p>In the Command Prompt window, type <strong>diskpart</strong> and press [Enter] key.</p></li>
+<li><p>To identify the disk drive to reformat, type <strong>list disk</strong> and press [Enter] key.</p></li>
+<li><p>To select the drive and reformat it, type <strong>select disk #</strong> (substitute # with the disk number for example select disk 1) and press [Enter] key.</p></li>
+<li><p>Type <strong>clean</strong> and press [Enter] key.</p></li>
+<li><p>Type <strong>convert gpt</strong> and press [Enter] key.</p></li>
+<li><p>Type <strong>exit</strong> and press [Enter] key.</p></li>
+</ul>
+</div></blockquote>
+<p>Close the Command Prompt window. If you are installing Windows, go to the Windows Setup process.</p>
+</section>
 <section id="vba-custom-popup">
 <h2>VBA-Custom Popup<a class="headerlink" href="#vba-custom-popup" title="Permalink to this heading"></a></h2>
 <p>The following code example shows how to create a custom menu with four menu options, each of which calls a macro. Sample code provided by: Holy Macro! Books, Holy Macro! It’s 2,500 Excel VBA Examples.</p>
