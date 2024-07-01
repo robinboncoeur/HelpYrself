@@ -57,13 +57,16 @@ Also:
    
    <iframe width="560" height="315" src="https://www.youtube.com/embed/5QzttAUKcfw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+.. raw:: html
+   
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
 
 
 
-*******
-Cooking
-*******
+***************
+Food and Spices
+***************
 
 ===============
 Add Garlic Last
@@ -83,9 +86,281 @@ The next time you’re tempted to add your garlic first because you think it’l
 
 
 
+=======================
+Seasonings - HelloFresh
+=======================
+
+**All American Spice Blend:**
+
+  * 1 tbsp ground cumin
+  * 1 tbsp cayenne
+  * 1 tbsp onion powder
+  * 1 tbsp smoked paprika
+  * 2 tsp garlic powder
+  * 1 tsp ground coriander
+  * 1 tsp salt
+  * 1 tsp dried parsley
+  * .5 tsp black pepper
+  * .5 tsp dried mustard
+  * .5 tsp red pepper flakes
+  * .25 tsp ground allspice
+  * .125 tsp ground cloves
+
+**Berbere Spice Blend:**
+
+  * 3 part paprika
+  * 1 part cayenne
+  * .5 part ground coriander
+  * .25 part ground ginger
+  * .125 part ground cardamom
+  * .125 part ground fenugreek
+
+**Bold and Savory Steak Spice Blend:**
+
+  * 1 part red chili flake
+  * 1 part crushed coriander seed
+  * 2 parts crushed dill seed
+  * 3 parts crushed mustard seed
+  * 4 parts dried minced garlic
+  * 4 parts crushed black pepper
+
+**Blackening Spice Blend:**
+
+  * 3 tsp smoked paprika
+  * 1.5 tsp garlic powder
+  * .5 tsp white pepper
+  * .5 tsp black pepper
+  * .25 tsp thyme
+  * .25 tsp oregano
+  * .125 tsp low heat cayenne
+
+**Burger Spice Blend:**
+
+  * 1 Tbsp paprika
+  * 1.25 tsp salt
+  * 1 tsp ground black pepper
+  * .5 tsp garlic powder
+  * .5 tsp brown sugar
+  * .5 tsp onion powder
+  * .25 tsp cayenne
+
+**Cajun Spice Blend:**
+
+  * 2 part paprika
+  * 2 part onion powder
+  * 1 part garlic powder
+  * 1 part dried oregano
+  * 1 part dried thyme
+  * .5 part dried basil
+  * .5 part cayenne
+
+**Enchilada Spice Blend:**
+
+  * 1 tbsp. chili powder
+  * 1 tbsp. paprika
+  * 2 tsp. cumin
+  * 2 tsp. light brown sugar
+  * 2 tsp. kosher salt
+  * 1.5 tsp. onion powder
+  * 1.5 tsp. garlic powder
+  * 1.5 tsp. Mexican oregano
+  * 1 tsp. chipotle chili powder
+  * 1 tsp. ground coriander
+  * 1 tsp. black pepper
+  * .25 to .5 tsp. cayenne pepper
+
+**Fajita Spice Blend:**
+
+  * 1 part Salt
+  * 1 part Pepper
+  * 1 part Onion Powder
+  * 1 part Garlic Powder
+  * 1 part Paprika
+
+**Fajita Spice Blend (Alternative):**
+
+  * 4 parts paprika
+  * 1 part onion powder
+  * 1 part garlic powder
+  * 1 part chili powder
+  * 1 part cumin
+  * 1 part oregano
+
+**Fall Spice Blend:**
+
+  * 3 parts dried thyme
+  * 3 parts ground sage
+  * 2 parts garlic powder
+  * 1 part onion powder
+
+**Fry Seasoning:**
+
+  * 1 part garlic powder
+  * 1 part onion powder
+  * 1 part paprika
+
+**Herbes de Provence Blend:**
+
+  * 1 part savory
+  * 1 part thyme
+  * 1 part rosemary
+  * 1 part basil
+  * 1 part tarragon
+  * 1 part lavender flowers
+
+**Indian Spice Mix:**
+
+  * Gr. Coriander
+  * Gr. Cumin
+  * Gr. Mustard
+  * Gara Masala
+  * Tumeric
+  * salt
+  * pepper
+
+**Italian Seasoning Blend:**
+
+  * 1 part garlic powder
+  * 1 part oregano
+  * 1 part basil
+  * 1 part black pepper
+  * 1 part parsley
+
+**Meatloaf Seasoning:**
+
+  * 2 parts onion powder
+  * 2 parts garlic powder
+
+**Mediterranean Spice Blend:**
+
+  * 2 parts dried oregano
+  * 1 part dried mint
+  * 1 part sumac
+  * 1 part ground coriander
+
+**Mexican Spice Blend:**
+
+  * 2 parts chili powder
+  * 1 part oregano
+  * 1 part smoked paprika
+  * 1 part cumin
+
+**Moo Shu Spice Blend:**
+
+  * 1 part ground ginger
+  * 1 part garlic powder
+
+**Nan’s Seasoning (aka Grandma’s Seasoning):**
+
+  * 1 tsp paprika
+  * 1 tsp Sugar (*tip: use coconut sugar*)
+  * 0.5 tsp Sea salt
+  * 0.5 tsp Garlic powder (not salt)
+  * 0.5 tsp Onion powder (not salt)
+  * 0.5 tsp Black pepper or 0.25 tsp black pepper + 0.25 tsp turmeric
+
+**Shawarma Spice Blend:**
+
+  * 2 part tumeric
+  * 2 part cumin
+  * 1 part dried coriander
+  * 1 part garlic powder
+  * 1 part paprika
+  * .5 part ground allspice
+  * .5 part black pepper
+
+**Southwest Spice Blend:**
+
+  * 4 part garlic powder
+  * 2 part cumin
+  * 2 part chili powder
+
+**Smoky BBQ Seasoning:**
+
+  * 8 parts smoked paprika
+  * 6 parts granulated sugar
+  * 2 parts garlic powder
+  * 1 part dry mustard
+  * 1 part ground cumin
+  * 1 part ground ginger
+  * .5 part black pepper
+
+**Smoky Cinnamon Paprika Spice Blend:**
+
+  * 1 part ground cloves
+  * 8 parts onion powder
+  * 8 parts ground cinnamon
+  * 6 parts smoked paprika
+  * 16 parts mustard powder
+  * 24 parts sweet paprika
+  * 24 parts white granulated sugar
+
+**Steak Spice Blend:**
+
+  * 1 part red chili flakes
+  * 1 part crushed coriander seed
+  * 2 parts crushed dill seed
+  * 3 parts crushed mustard seed
+  * 4 parts dried minced garlic
+  * 4 parts crushed black pepper
+  * 3 parts kosher salt
+
+**Sweet Smoky BBQ Spice Blend:**
+
+  * 8 parts smoked paprika
+  * 6 parts sugar
+  * 2 parts garlic powder
+  * .5 part black pepper
+  * 1 part dry mustard
+  * 1 part cumin
+  * 1 part ground ginger
+
+**Thai Seven Spice Blend:**
+
+  * 2.5 tsp white sesame seeds
+  * 1 tsp chili flakes
+  * 1 tsp ground coriander
+  * 1 tsp onion powder
+  * .5 tsp garlic powder
+  * .5 tsp shrimp extract powder
+  * .25 tsp cinnamon
+  * .125 tsp low heat cayenne
+
+**Tunisian Spice Blend:**
+
+  * 4 parts ground caraway seed
+  * 4 parts ground coriander
+  * 4 parts smoked paprika
+  * 4 parts turmeric
+  * 4 parts chili powder
+  * 4 parts garlic powder
+  * 1 part cayenne pepper [7.5 k (hu)]
+  * 1 part cinnamon
+  * 1 part ground black pepper
+
+**Turkish Spice Blend:**
+
+  * 2 part cumin
+  * 2 part garlic powder
+  * 1 part ground coriander
+  * .25 part ground allspice
+  * .25 part chili flakes
+
+**Tuscan Heat Spice Blend:**
+
+  * 4 parts dried basil
+  * 2 parts dried rosemary
+  * 2 parts dried oregano
+  * 2 parts garlic powder
+  * 1 part cayenne pepper [7.5 k (hu)]
+  * 1 part ground fennel
+
+
+
+
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
 
 
 
@@ -106,123 +381,10 @@ You may have seen this greyish flat finish on an old kitchen knife. It is a clas
 
 
 
-*****************
-Home Improvements
-*****************
-
-=====
-Sheds
-=====
-
-**Cheap Sheds**
-
-`Medium Shed 2.8m x 1.07m x 1.8m in Zinc Steel [Flat Roof] <https://www.cheapsheds.com.au/cheap-sheds-medium-shed-2.8m-1.07m-1.8m-in-zinc-steel-flat-roof.html>`_
-
-$359.00
-
-Cheap Sheds BEST SELLER.  Australian Made. 4 Colours: Zinc, Rivergum, Slate Grey and Smooth Cream. Flat roof with wide double doors for a flexible storage solution. Delivery Australia wide. 15 years warranty.
-
-Key Features:
-
-    • 2.8m (wide) x 1.07m (deep) x 1.8m (height)
-    • Flat roof
-    • Double hinged door (1.325m)
-    • High quality steel
-    • Uses the Fasttrak Assembly System
-    • 15 years warranty
-
-Bonuses:
-
-    • FREE Masonry Anchors - to secure your Cheap Shed to the slab or foundation. Important for your safety and to keep the shed grounded.
-    • Our Post-Sale Service Promise - we will follow up your order till it’s been delivered and provide you tips for preparation while you wait as well as answer any questions about assembly.
 
 .. raw:: html
    
-   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-
-
-**ForestWest**
-
-`Garden Shed Tool Storage 1.94*1.21*1.82m <https://forestwest.com.au/products/garden-shed-tool-storage-1-94-1-21-1-82m?variant=31553760329825&currency=AUD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic>`_
-
-$246.00
-
-This Forestwest Garden Shed is made of high strength galvanized steel, it is strong, solid, corrosion-resistant and weather proof. It is designed with sloped roof for water run-off and bigger storage room. It has two sliding doors with smooth access for equipment easy in and out.
-
-The Overall Size is 1.94m*1.21*1.82m, with plenty room for tools and equipment. It also comes with two air vents for adequate ventilation. The storage shed needs no maintenance, it is the perfect shed for storage use.
-
-Garden Shed BM667 Features:
-
-    • Made of high strength galvanized steel
-    • Skillion roof
-    • Double sliding doors
-    • Two air vents
-    • Easy assembly with manual
-    • Durable frame, corrosion-resistant and weather proof
-
-.. raw:: html
-   
-   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-
-
-**EasyShed**
-
-`EASYSHED GARDEN SHED - 3.00M X 0.78M FLAT (SLIGHT ANGLE) <https://gardenshed.com.au/easyshed-3-00m-x-0-78m-flat-slightangle.html>`_
-
-$379.00
-
-EasyShed features include:
-
-    • Proudly 100% Australian Made and Owned.
-    • Exclusive range of 25 Colour Options.
-    • Manufactured from high tensile steel (0.35mm - thickest on the market).
-    • Easy-to-follow 5 Step Assembly® sequence
-    • EdgeSAFE® rolled safety edges
-    • Innovative ScrewSAFE® technology
-    • 100% recycled packaging. 
-    • Lifetime Warranty
-
-.. raw:: html
-   
-   <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-
-
-
-
-**YardSaver Sheds**
-
-`Yardsaver Slimline Shed F63-D (2105w x 1070d x 1800h) <https://www.oxworks.com.au/product/yardsaver-slimline-shed-f63-d/>`_
-
-$290.00
-
-The narrow format make the this ideal for use in covered locations like carpark buildings, garages and carports where you need secure storage and organisation and still need space for the car as well as outdoors to easily fit in the courtyard, or down the side of the house between the fence line. The extra wide double door entry allows uninhibited access:
-
-    • Proudly Australian Made
-    • 15 Year Structural Warranty
-    • High Tensile Australian Standard Steel
-    • Masonry Anchors Included
-    • Ready to Assembly Kit Garden Sheds
-    • Assembly instructions
-    • Assembly Video
-    • Home Delivery Available
-
-
-On ebay, `Garden Shed <https://www.ebay.com.au/itm/184820955636?hash=item2b082ff9f4:g:nNQAAOSwLBlglP8k>`_
-
-Simply Sheds: `Space Saver <https://www.simplysheds.com.au/spacesaver-garden-shed-3m-x-1.52m-double-door-in-monument.html>`_
-
-`How to build a narrow shed <https://www.pinterest.com.au/pin/603060206362472286/>`_ suitable for the smaller backyard or garden.
-
-`Paul's Sheds <https://paulssheds.com/collections/all>`_.
-
-`How to Get Lumber for Free or Cheap <https://www.lifehacker.com.au/2021/10/how-to-get-lumber-for-free-or-cheap/>`_.
-
-
-
-
-.. raw:: html
-   
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
 
 
 
@@ -244,6 +406,13 @@ U.S. nationals employed in non-policy level positions with foreign governments a
 In cases where U.S. nationals are employed in policy-level positions, the Department of State will seek to ascertain the individual's intent to retain or relinquish his or her U.S. nationality upon accepting the policy level position with a foreign government. An individual assuming such a position who wishes to retain U.S. nationality should state clearly to the Department or post that he or she intended to retain U.S. nationality. An individual assuming such a position who wishes to relinquish U.S. nationality may come to Post and follow the required steps to complete the Certificate of Loss of Nationality application process.
 
 Cases involving service of a U.S. national as a foreign head of state, head of government, or foreign minister raise complex questions of international law and are reviewed by the Department on a case by case basis. Serving as a foreign head of state/government or foreign minister may affect the level of immunity from U.S. jurisdiction that a dual national may be afforded. All such cases should be referred to the Office of the Assistant Legal Adviser for Consular Affairs.
+
+
+
+
+.. raw:: html
+   
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
 
 
 
@@ -270,7 +439,6 @@ Why America Sucks at Everything:
    <iframe width="560" height="315" src="https://www.youtube.com/embed/aNghg1Y-WIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
    <hr style="height:4px;border-width:0;color:gray;background-color:gray">
-
 
 
 
@@ -313,46 +481,33 @@ Nothing contained herein shall be deemed an admission of any fact of a waiver of
 
 
 
-*******************
-Potential Purchases
-*******************
-
-======================
-For the 4650dn Printer
-======================
-
-`4 Pack HP C9720A-C9723A (641A) Compatible Toner Cartridges [1BK,1C,1M,1Y] for Color LaserJet 4650 printer <https://www.inkstation.com.au/4-pack-hp-c9720ac9723a-641a-compatible-toner-cartridges-1bk-1c-1m-1y-p-2663.html?prt=3417&gclid=CjwKCAiA7dKMBhBCEiwAO_crFDuMdam1L-_UbL8SLASBMkVdTCfh3Q81WkwpoCjXMPihvT475egrTxoCXbYQAvD_BwE>`_
-
-Colour LaserJet 4600, Colour LaserJet 4650, Colour LaserJet 4650dn, Colour LaserJet 4650dtn, Colour LaserJet 4650hdn, Colour LaserJet 4650n, Colour LaserJet 4600dn, Colour LaserJet 4600hdn, Colour LaserJet 4600dtn, Colour LaserJet 4600dn, Color LaserJet 4600n, Color LaserJet 4610
-
-
-1 x Q9720A Black Compatible Toner Cartridge 9,000 page yield.
-
-1 x Q9721A Cyan Compatible Toner Cartridge 8,000 page yield.
-
-1 x Q9723A Magenta Compatible Toner Cartridge 8,000 page yield.
-
-1 x Q9722A Yellow Compatible Toner Cartridge 8,000 page yield.
-
-
-`HP PRINTER TRANSFER KIT Q3675A FOR COLOR LASERJET 4650, 4650DN ($365.59) <https://www.thetelecomshop.com/au/hp-printer-transfer-kit-q3675a-for-color-laserjet-4650-4650dn?gclid=CjwKCAiA7dKMBhBCEiwAO_crFHYsTGNhsIF9KOl3F8loEz-FU3WIYiD1uS1KTlTWQafq_FDVZHVxDxoC67sQAvD_BwE>`_
-
 .. raw:: html
    
-   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
+
+
+
+
+
+
+
 
 ************
 Adding Notes
 ************
 
-hrt4you.tumblr.com
-lovefeminization.blogspot.com
-https://womansbitch.tumblr.com/
-
 Physio complaint detail form (Redland Bay Physio)::
 
 	Lower back pain, radiating into the gluteus and lateral left calf almost at the ankle. I've had persistent pain in L4-5 region radiating L5 left side for the past two weeks when lying in bed or standing, less when walking and relieved by sitting. CT-scan on Friday revealed minor upper lumbar scoliosis convex right leading to disc space narrowing right side L3-4 and particularly L4-5, with mild degenerative anterolisthesis of L5 on S1. Dr Budge concluded the lower back pain may relate to severe facet arthropathy at L4-5 and L5-S1, with potential impingement of the L5 nerve root at the subarticular recess by a left central disc extrusion L4-5. I'll bring in the full report tomorrow for your perusal.
 	The injury is likely an old one, as the symptoms are not unfamiliar, incurred during my 40-odd years of nursing. My recent works around the house, which involved shoveling rocky, wet dirt, pushing a heavy wheelbarrow and lifting heavy timber served to cause a flareup of the symptoms, which have not subsided despite cessation of those activities.
+
+
+
+
+.. raw:: html
+   
+   <hr style="height:16px;border-width:0;color:gray;background-color:navy">
+
 
 
 
@@ -364,38 +519,36 @@ Some of the plots to overturn the election happened in secret. But don’t forge
 
 By Adam Serwer
 
-From:
-
-	https://www.theatlantic.com/ideas/archive/2021/09/five-ways-donald-trump-tried-coup/620157/
+From `The Atlantic <https://www.theatlantic.com/ideas/archive/2021/09/five-ways-donald-trump-tried-coup/620157/>`_.
 	
 
 Last year, John Eastman, whom CNN describes as an attorney working with Donald Trump’s legal team, wrote a preposterous memo outlining how then–Vice President Mike Pence could overturn the 2020 election by fiat or, failing that, throw the election to the House of Representatives, where Republicans could install Trump in office despite his loss to Joe Biden. The document, which was first reported by the Washington Post journalists Bob Woodward and Robert Costa in their new book, is a step-by-step plan to overthrow the government of the United States through a preposterous interpretation of legal procedure.
 
 Pence apparently took the idea seriously — so seriously, in fact, that, according to Woodward and Costa, former Vice President Dan Quayle had to talk him out of it. Prior to November, the possibility of Trump attempting a coup was seen as the deranged fever dream of crazed liberals. But as it turns out, Trump and his advisers had devised explicit plans for reversing Trump’s loss. Republican leaders deliberately stoked election conspiracy theories they knew to be false, in order to lay a political pretext for invalidating the results. Now, more than 10 months after the election, the country knows of at least five ways in which Trump attempted to retain power despite his defeat.
 
-1. Trump tried to pressure secretaries of state to not certify.
+1. **Trump tried to pressure secretaries of state to not certify**.
 
 Trump held early leads in vote counts in several states—not because he was ever actually ahead but because of discrepancies between when states count mail-in ballots and Election Day ballots. This so-called blue shift was written about long in advance of Election Day, and was partially the result of Trump’s own attacks on voting by mail. Nevertheless, Trump made this a key part of his election conspiracy theories (as many predicted he would), insisting that Democrats were somehow inserting fraudulent ballots into the vote count in the presidential election (something they apparently forgot to do in close House and Senate races, in which Democrats did worse than polls had anticipated). To help substantiate these falsehoods, the Trump campaign attempted to pressure secretaries of state to either not certify the results or “find” fraudulent ballots. In some states, spurred by the president’s fictions, pro-Trump mobs showed up at vote-counting sites and attempted to disrupt the proceedings.
 
-2. Trump tried to pressure state legislatures to overturn the results.
+2. **Trump tried to pressure state legislatures to overturn the results**.
 
 Trump personally attempted to coerce state legislators to overturn election results in a few states that voted for Biden, on the dubious legal theory that such legislatures could simply ignore the results of the popular vote in their own states. In Pennsylvania, Michigan, Arizona, and Georgia, Trump publicly urged Republican-controlled statehouses to “intervene to declare him the winner” and tweeted, “Hopefully the Courts and/or Legislatures will have the COURAGE to do what has to be done to maintain the integrity of our Elections, and the United States of America itself.” As my colleague Barton Gellman reported last year, the Trump campaign discussed “contingency plans to bypass election results and appoint loyal electors in battleground states where Republicans hold the legislative majority.”
 
 David A. Graham: Trump’s coup attempt didn’t start on January 6
 
-3. Trump tried to get the courts to overturn the results.
+3. **Trump tried to get the courts to overturn the results**.
 
 The embattled attorney general of Texas, Ken Paxton, filed an absurd lawsuit demanding that the Supreme Court void the election results in Wisconsin, Georgia, Michigan, and Pennsylvania, four states Biden won. The large majority of the Republican delegation in Congress, as well as nearly 20 Republican state attorneys general, supported this attempt to get the conservative-controlled Supreme Court to overturn the 2020 election results by fiat. The justices declined to crown Trump—but the amount of support this bid received from Republican elected officials is itself alarming.
 
 As part of this effort, we can include the baseless “Kraken” lawsuits, filled with conspiracy theories about vote changes. Trump attempted to coerce the Justice Department into providing him with a pretext to overturn the results, but his attorney general, Bill Barr, refused to do so. Had DOJ leadership acquiesced, it would have lent credibility to Trump’s other corrupt schemes to reverse his loss. In a meeting with the acting attorney general, Jeffrey Rosen, according to contemporaneous notes taken by Rosen’s deputy, Trump said, “Just say that the election was corrupt [and] leave the rest to me.”
 
-4. Trump tried to pressure Mike Pence to overturn the results.
+4. **Trump tried to pressure Mike Pence to overturn the results**.
 
 It is hard to pick the most ridiculous means of executing a coup, but insisting that the vice president has the power to unilaterally decide who won an election is up there. Trump publicly hounded Pence to reject the results prior to the traditionally ceremonial electoral-vote count in Congress, and Pence reportedly took that demand seriously enough to seek advice from Dan Quayle on the matter, “asking if there were any grounds to pause the certification because of ongoing legal challenges,” according to Costa and Woodward. That this got so far is profoundly disturbing, but even more disturbing is Eastman’s memo, which shows that the Trump team had thought very deliberately about how this scheme would work.
 
 According to the memo, Pence could refuse to certify the results in particular states, giving Trump more electoral votes than Biden, and Pence would declare Trump the victor. If Democrats objected (as surely they would), the vote would then go to the House. Because the Constitution gives one vote to each state in disputed presidential elections, and the Republicans were the majority in 26 of 50 state delegations, the Democratic House majority would be unable to prevent Republicans from throwing the election to Trump. The election-law expert Ned Foley writes that the scheme would likely not have prevailed, given the Democrats’ ability to prevent a joint session, but that seems almost beside the point, which is that a sitting president and vice president were considering how to keep themselves in power following an election they lost.
 
-5. When all else failed, Trump tried to get a mob to overturn the results.
+5. **When all else failed, Trump tried to get a mob to overturn the results**.
 
 At the rally prior to the vote count in Congress, Trump urged the crowd to act, saying, “If you don’t fight like hell, you’re not going to have a country anymore.” The explicit goal of the rally and subsequent riot was to pressure Congress, and Pence in particular, into overturning the election results. Trump told his followers, “If Mike Pence does the right thing, we win the election.”
 
@@ -413,6 +566,9 @@ If Trump had succeeded, many of those downplaying the former president’s actio
 
 At the core of these attempts is a dangerous ideology—the presumption that because Trump supporters represent “Real Americans”, the will of democratic majorities can be disregarded. This does not mean that the Republican Party is incapable of winning majorities, but that winning them is irrelevant to whether or not the party’s Trumpist faithful believe they are entitled to wield power. Win or lose, their claim to be the sole authentic inheritors of the American tradition means they are the only ones who can legitimately govern and are therefore justified in seizing power by any means. This is the modern incarnation of an old ideology, one that has justified excluding certain groups of Americans from the suffrage on the basis that their participation is an affront to the political process.
 
-American traditions of unfreedom always represent themselves as democracy’s protectors, rather than its undertakers, and this one is no different. If Biden were allowed to take office, Eastman insisted in a longer version of his memo, “we will have ceased to be a self-governing people.” The catastrophe is not only that Trump tried to overthrow an election. It is that so many Americans were cheering him on.
+American traditions of unfreedom always represent themselves as democracy’s protectors, rather than its undertakers, and this one is no different. If Biden were allowed to take office, Eastman insisted in a longer version of his memo, “we will have ceased to be a self-governing people.”
+
+**The catastrophe is not only that Trump tried to overthrow an election. It is that so many Americans were cheering him on.**
 
 Adam Serwer is a staff writer at The Atlantic.
+

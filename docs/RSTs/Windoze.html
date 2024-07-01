@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Video Processing" href="Video.html" /> 
+    <link rel="prev" title="Website Tips" href="Websites.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,7 +58,12 @@
 <li class="toctree-l1"><a class="reference internal" href="Reatforum.html">Reaticulate Forum Discussion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Rigging.html">Rigging a Figure in Blender</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Websites.html">Website Tips</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reluctantly, Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows-11">Windows 11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-vdis-win11">Cloning VDIs Win11</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#which-updates-to-avoid">Which Updates to Avoid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#upgrade-oem-to-retail">Upgrade - OEM to Retail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-convert-mbr-to-gpt">Install - Convert MBR to GPT</a></li>
@@ -67,6 +72,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#avoiding-win10-deactivation">Avoiding Win10 Deactivation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#art-ai-core-links">Art - AI - Core Links</a></li>
 </ul>
 </li>
 </ul>
@@ -97,6 +103,45 @@
              
   <section id="reluctantly-windows">
 <h1>Reluctantly, Windows<a class="headerlink" href="#reluctantly-windows" title="Permalink to this heading"></a></h1>
+<section id="windows-11">
+<h2>Windows 11<a class="headerlink" href="#windows-11" title="Permalink to this heading"></a></h2>
+<p>How to install Win11 on unsupported PC:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Download <a class="reference external" href="https://www.microsoft.com/software-download/windows11">the ISO</a></p></li>
+<li><p>Mount the ISO</p></li>
+<li><p>Change dir to that drive, e.g., <strong>f:</strong></p></li>
+<li><p><strong>cd sources</strong></p></li>
+<li><p><strong>setupprep.exe /product server</strong></p></li>
+<li><p>Proceed with install as normal</p></li>
+</ol>
+</div></blockquote>
+<p>This video explains it well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>&lt;iframe width=”560” height=”315” src=”<a class="reference external" href="https://www.youtube.com/embed/ug__CVQQQsc">https://www.youtube.com/embed/ug__CVQQQsc</a>” frameborder=”0” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture” allowfullscreen&gt;&lt;/iframe&gt;</p>
+<p>&lt;hr style=”height:4px;border-width:0;color:gray;background-color:gray”&gt;</p>
+</div></blockquote>
+<section id="cloning-vdis-win11">
+<h3>Cloning VDIs Win11<a class="headerlink" href="#cloning-vdis-win11" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> ~ % sudo Virtualbox</p>
+<p>Password:</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> ~ % VBoxManage clonehd Windows10.vdi clnWin10.vdi –format VDI –variant Standard</p>
+<p>VBoxManage: error: Could not find file for the medium ‘/Users/robyn/Windows10.vdi’ (VERR_FILE_NOT_FOUND)</p>
+<p>VBoxManage: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MediumWrap, interface IMedium, callee nsISupports</p>
+<p>VBoxManage: error: Context: “OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())” at line 201 of file VBoxManageDisk.cpp</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> ~ % cd ./Virtualbox VMs</p>
+<p>cd: string not in pwd: ./Virtualbox</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> ~ % cd ./”Virtualbox VMs”</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> Virtualbox VMs % cd Windows10</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> Windows10 % VBoxManage clonehd Windows10.vdi clnWin10.vdi –format VDI –variant Standard</p>
+<p>0%…10%…20%…30%…40%…50%…60%…70%…80%…90%…100%</p>
+<p>Clone medium created in format ‘VDI’. UUID: 639753b2-fd68-4640-be7e-9c2f8534f131</p>
+<p><a class="reference external" href="mailto:robyn&#37;&#52;&#48;Robyns-MBP">robyn<span>&#64;</span>Robyns-MBP</a> Windows10 %</p>
+</section>
+</section>
 <section id="which-updates-to-avoid">
 <h2>Which Updates to Avoid<a class="headerlink" href="#which-updates-to-avoid" title="Permalink to this heading"></a></h2>
 <p>…depends on how paranoid you want to be about MS invading your privacy, and how much you’re prepared to put up with having Windows 10 forced on you. (Oh, and also thirdly, wanting to get away with using a pirated version of Windows, or at least one that won’t activate as genuine, which isn’t always the same thing)…</p>
@@ -310,7 +355,27 @@ purchase ref# 35042</p>
 <p>To test that everything wortked fine, I deleted the existing install then imported the OVA… and found that Win10 had lost its activation.</p>
 <p><strong>Research</strong></p>
 <p>Looking on StackExchange revealed that the culprit was a changing set of UUIDs. The commenter was using VMWare so he was referencing .VMX files. The analog to that appears to be the .VBOX file in your current install.</p>
+<hr style="height:4px;border-width:0;color:gray;background-color:gray"></section>
 </section>
+<section id="art-ai-core-links">
+<h2>Art - AI - Core Links<a class="headerlink" href="#art-ai-core-links" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://openart.ai/workflows/matt3o/template-for-prompt-travel-openpose-controlnet/kYKv5sJWchSsujm0zOV0">https://openart.ai/workflows/matt3o/template-for-prompt-travel-openpose-controlnet/kYKv5sJWchSsujm0zOV0</a></p>
+<p><a class="reference external" href="https://stable-diffusion-art.com/realistic-people/">https://stable-diffusion-art.com/realistic-people/</a></p>
+<p><a class="reference external" href="https://stable-diffusion-art.com/models/">https://stable-diffusion-art.com/models/</a></p>
+<p><a class="reference external" href="https://medium.com/aimonks/use-this-simple-story-plotting-method-with-chatgpt-183b8e3f7aac">https://medium.com/aimonks/use-this-simple-story-plotting-method-with-chatgpt-183b8e3f7aac</a></p>
+<p><a class="reference external" href="https://medium.com/&#64;chiaracoetzee/generating-a-full-length-work-of-fiction-with-gpt-4-4052cfeddef3">https://medium.com/&#64;chiaracoetzee/generating-a-full-length-work-of-fiction-with-gpt-4-4052cfeddef3</a></p>
+<p><a class="reference external" href="https://www.amazon.com.au/T5-Daylight-Visible-1000nits-Operation/dp/B0BJPX517G/?th=1">https://www.amazon.com.au/T5-Daylight-Visible-1000nits-Operation/dp/B0BJPX517G/?th=1</a></p>
+<p><a class="reference external" href="https://www.reddit.com/r/comfyui/comments/1dap7lx/request_to_the_community_an_actual_node_wiki/">https://www.reddit.com/r/comfyui/comments/1dap7lx/request_to_the_community_an_actual_node_wiki/</a></p>
+<p><a class="reference external" href="https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet">https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet</a></p>
+<p><a class="reference external" href="https://www.reddit.com/r/StableDiffusion/comments/193hqkz/lora_training_directly_in_comfyui/">https://www.reddit.com/r/StableDiffusion/comments/193hqkz/lora_training_directly_in_comfyui/</a></p>
+<p><a class="reference external" href="https://boords.com/blog/how-to-write-a-film-synopsis">https://boords.com/blog/how-to-write-a-film-synopsis</a></p>
+<p><a class="reference external" href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home</a></p>
+<p><a class="reference external" href="https://www.mossy.earth/methodologies/rewilding-methodology">https://www.mossy.earth/methodologies/rewilding-methodology</a></p>
+<p><a class="reference external" href="https://www.wired.com/?redirectURL=%2F">https://www.wired.com/?redirectURL=%2F</a></p>
+<p><a class="reference external" href="https://www.amazon.com.au/Nicama-V2-Microphone-Smartphone-Cancelling/dp/B07J5QT23H">https://www.amazon.com.au/Nicama-V2-Microphone-Smartphone-Cancelling/dp/B07J5QT23H</a></p>
+<p><a class="reference external" href="https://www.amazon.com.au/Shutter-Control-Panasonic-Replaces-DMW-RSL1/dp/B07Q2Q5625/?th=1">https://www.amazon.com.au/Shutter-Control-Panasonic-Replaces-DMW-RSL1/dp/B07Q2Q5625/?th=1</a></p>
+<p><a class="reference external" href="https://forums.whirlpool.net.au/archive/38wkynz9">https://forums.whirlpool.net.au/archive/38wkynz9</a></p>
+<p><a class="reference external" href="https://www.ifixit.com/Wiki/Battery_Calibration">https://www.ifixit.com/Wiki/Battery_Calibration</a></p>
 </section>
 </section>
 
@@ -318,7 +383,7 @@ purchase ref# 35042</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Video.html" class="btn btn-neutral float-left" title="Video Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Websites.html" class="btn btn-neutral float-left" title="Website Tips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

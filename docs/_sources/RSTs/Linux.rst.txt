@@ -61,7 +61,7 @@ The second line will tell **update-grub** where to find the theme. Save your cha
 
 and you should be good.
 
-
+WHV5M3XPNX
 
 
 *************

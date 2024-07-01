@@ -1,0 +1,15 @@
+############
+Website Tips
+############
+
+************************
+Our Home Website-Fulcrum
+************************
+
+Some dotpoints:
+
+    * Currently hosted on the localhost of my i5 system
+    * Folder is var - www - html
+    * Compiled pages (in Sphinx) are copied there
+    
+To open, go to 

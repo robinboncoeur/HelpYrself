@@ -2,6 +2,60 @@
 Reluctantly, Windows
 ####################
 
+**********
+Windows 11
+**********
+
+How to install Win11 on unsupported PC: 
+
+    1. Download `the ISO <https://www.microsoft.com/software-download/windows11>`_
+    2. Mount the ISO
+    3. Change dir to that drive, e.g., **f:**
+    4. **cd sources**
+    5. **setupprep.exe /product server**
+    6. Proceed with install as normal
+
+This video explains it well::
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/ug__CVQQQsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+==================
+Cloning VDIs Win11
+==================
+
+robyn@Robyns-MBP ~ % sudo Virtualbox
+
+Password:
+
+robyn@Robyns-MBP ~ % VBoxManage clonehd Windows10.vdi clnWin10.vdi --format VDI --variant Standard
+
+VBoxManage: error: Could not find file for the medium '/Users/robyn/Windows10.vdi' (VERR_FILE_NOT_FOUND)
+
+VBoxManage: error: Details: code VBOX_E_FILE_ERROR (0x80bb0004), component MediumWrap, interface IMedium, callee nsISupports
+
+VBoxManage: error: Context: "OpenMedium(Bstr(pszFilenameOrUuid).raw(), enmDevType, enmAccessMode, fForceNewUuidOnOpen, pMedium.asOutParam())" at line 201 of file VBoxManageDisk.cpp
+
+robyn@Robyns-MBP ~ % cd ./Virtualbox VMs
+
+cd: string not in pwd: ./Virtualbox
+
+robyn@Robyns-MBP ~ % cd ./"Virtualbox VMs"
+
+robyn@Robyns-MBP Virtualbox VMs % cd Windows10
+
+robyn@Robyns-MBP Windows10 % VBoxManage clonehd Windows10.vdi clnWin10.vdi --format VDI --variant Standard
+
+0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+
+Clone medium created in format 'VDI'. UUID: 639753b2-fd68-4640-be7e-9c2f8534f131
+
+robyn@Robyns-MBP Windows10 % 
+
+
 **********************
 Which Updates to Avoid
 **********************
@@ -267,4 +321,81 @@ To test that everything wortked fine, I deleted the existing install then import
 **Research**
 
 Looking on StackExchange revealed that the culprit was a changing set of UUIDs. The commenter was using VMWare so he was referencing .VMX files. The analog to that appears to be the .VBOX file in your current install.
+
+
+
+
+
+.. raw:: html
+   
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+
+
+
+
+*********************
+Art - AI - Core Links
+*********************
+
+https://openart.ai/workflows/matt3o/template-for-prompt-travel-openpose-controlnet/kYKv5sJWchSsujm0zOV0
+
+
+https://stable-diffusion-art.com/realistic-people/
+
+
+https://stable-diffusion-art.com/models/
+
+
+https://medium.com/aimonks/use-this-simple-story-plotting-method-with-chatgpt-183b8e3f7aac
+
+
+https://medium.com/@chiaracoetzee/generating-a-full-length-work-of-fiction-with-gpt-4-4052cfeddef3
+
+
+https://www.amazon.com.au/T5-Daylight-Visible-1000nits-Operation/dp/B0BJPX517G/?th=1
+
+
+https://www.reddit.com/r/comfyui/comments/1dap7lx/request_to_the_community_an_actual_node_wiki/
+
+
+https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
+
+
+https://www.reddit.com/r/StableDiffusion/comments/193hqkz/lora_training_directly_in_comfyui/
+
+
+https://boords.com/blog/how-to-write-a-film-synopsis
+
+
+https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home
+
+
+https://www.mossy.earth/methodologies/rewilding-methodology
+
+
+https://www.wired.com/?redirectURL=%2F
+
+
+https://www.amazon.com.au/Nicama-V2-Microphone-Smartphone-Cancelling/dp/B07J5QT23H
+
+
+https://www.amazon.com.au/Shutter-Control-Panasonic-Replaces-DMW-RSL1/dp/B07Q2Q5625/?th=1
+
+
+https://forums.whirlpool.net.au/archive/38wkynz9
+
+
+https://www.ifixit.com/Wiki/Battery_Calibration
+
+
+
+
+
+
+
+
+
+
+
+
 

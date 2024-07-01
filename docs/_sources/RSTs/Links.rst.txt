@@ -307,4 +307,227 @@ VBA Tips
 
 
 
+==================
+Videos to Download
+==================
+
+-----
+Stays
+-----
+
+https://www.youtube.com/watch?v=9RZYtfP_QHY
+
+https://www.youtube.com/watch?v=6TqCxpHKEKY
+
+https://www.youtube.com/watch?v=BmZkJHr6JRU
+
+
+-------------
+and petticoat
+-------------
+
+https://www.youtube.com/watch?v=dhKk9bSLXbs
+
+
+--------
+Patterns
+--------
+
+http://www.elizabethancostume.net/custompat/
+
+https://blog.americanduchess.com/2016/05/18th-century-stays-boning-patterns.html
+
+
+------------
+Instructions
+------------
+
+https://rococoatelier.blogspot.com/2021/03/making-18th-century-stays-for-curvy.html
+
+https://theclosethistorian.blogspot.com/2013/06/stays-pattern-modifications-part-1.html
+
+
+-----
+Supir
+-----
+
+https://www.youtube.com/watch?v=WDGtHhE6sPY
+
+https://www.youtube.com/watch?v=-sqAKLodiwM
+
+https://www.youtube.com/watch?v=tA2_pBebOxA
+
+
+--------------------------------------------
+How to turn your Neighborhood into a Village
+--------------------------------------------
+
+https://www.youtube.com/watch?v=VoYZlyBHyQM
+
+
+--------------
+SDXL Lightning
+--------------
+
+https://civitai.com/models/351172/truetolifesdxl-lightning
+
+https://civitai.com/models/354130/epicrealismxl-lightning
+
+
+
+https://www.tightbytes.com/art/images/Cui/WkFl/Lake_00001.mp4
+
+
+-----------------------------
+Celine Sciamma - Petite Maman
+-----------------------------
+
+https://www.youtube.com/watch?v=PjVlf8QD9qM
+
+https://www.youtube.com/watch?v=aXGVGa3KMKA
+
+https://www.youtube.com/watch?v=gzb40RY-E6w
+
+https://www.youtube.com/watch?v=OKNo4vlDrvc
+
+https://www.youtube.com/watch?v=iCgy7jEg4VE
+
+https://www.youtube.com/watch?v=vXrVpuPGNVQ
+
+https://www.youtube.com/watch?v=UceeUaZhr5o
+
+https://www.youtube.com/watch?v=PmHsG_X63_c
+
+https://www.youtube.com/watch?v=7uJwY9Ir_L8
+
+https://www.youtube.com/watch?v=4xaTXKCTibs
+
+https://www.youtube.com/watch?v=3YeliXF9-LY
+
+https://www.youtube.com/watch?v=jqztCKdvVHU
+
+https://www.youtube.com/watch?v=0ttKVzbv0pQ
+
+https://www.youtube.com/watch?v=FTEwUs7l5qI
+
+https://www.youtube.com/watch?v=k6xg9mj70jw
+
+
+-------------------
+GIMP - Colour-match
+-------------------
+
+https://www.youtube.com/watch?v=w-6h7cxJEXI
+
+https://www.youtube.com/watch?v=EMAz8KktB5U
+
+https://www.youtube.com/watch?v=uVxjXZS62Pc
+
+https://www.youtube.com/watch?v=gmwZGC8UVHE
+
+
+-----------
+Composition
+-----------
+
+https://www.youtube.com/watch?v=GsFapnCvp7E
+
+https://www.youtube.com/watch?v=uCuTAwlCKkY
+
+https://www.youtube.com/watch?v=WfnrhWULV2U
+
+https://www.youtube.com/watch?v=b5PoTBOj7Xck
+
+
+------------
+Counterpoint
+------------
+
+1:1
+https://www.youtube.com/watch?v=b5PoTBOj7Xc
+
+2:1
+https://www.youtube.com/watch?v=pLkNK9Zvv9U
+
+3:1
+https://www.youtube.com/watch?v=TlG1A6C3I3E
+
+4:1
+https://www.youtube.com/watch?v=wpBMidt09DI
+
+
+
+-------------------------------
+Install Win11 on unsupported PC
+-------------------------------
+
+https://www.youtube.com/watch?v=rUXLAhYFTtc
+
+
+--------------------------------
+Left on Brisbane Composers Forum
+--------------------------------
+
+This post is mostly for the admins of this group. I write music - well, my flavour of it, anyway - but am not at all certain it qualifies as "new music". Indeed, my understanding of the term hovers over the styles of Arnold Scheonberg or even Philip Glass. My humble offering are far more pedestrian. They can be heard on the Musescore site: for example, here's a wee piece called "Metaphor of Chooks" that could easily be played by a youth orchestra: https://musescore.com/user/29275325/scores/7074271
+I guess my question is: am I on the right site? I'm going to surmise real composers actually congregate here. I'm actually hoping to learn how to write properly, and am studying 4-part harmony to that end, but I'm 71 so it's a bit slow-going, since I'm also a rather involved grandparent. I guess if this isn't the right group to be joining, someone might be so kind as to point me in the right direction. Thanks so much!
+
+
+===========================
+24-04-22 MBPro Chrome Links
+===========================
+
+-------------
+AI Stuff 2024
+-------------
+
+`Coursera.org <https://www.coursera.org/>`_
+
+`8 Courses to Master AI in 2024 <https://taaft.notion.site/8-Courses-to-Master-AI-in-2024-b891e080b4194e80bd5bbe34f9e91679>`_
+
+`Introduction to GPT4All <https://pub.towardsai.net/an-introduction-to-gpt4all-68ef7a477b4d>`_
+
+`GPT4All is the Local ChatGPT <https://www.kdnuggets.com/2023/06/gpt4all-local-chatgpt-documents-free.html>`_
+
+`GPT4All Python Generation <https://docs.gpt4all.io/gpt4all_python.html#gpt4all.gpt4all.GPT4All.retrieve_model>`_
+
+How to convert `HuggingFace model to GGUF <https://github.com/ggerganov/llama.cpp/discussions/2948>`_
+
+`AI Prompt Engineering Links <https://medium.com/artificial-lexicon>`_
+
+`More Prompt Engineering <https://flowgpt.com/prompt-engineering>`_
+
+`ComfyUI Examples <https://comfyanonymous.github.io/ComfyUI_examples/stable_cascade/>`_
+
+`SUPIR Stuff <https://flowt.ai/community/supir-v2-plugandplay-edition-n5acf-v>`_
+
+Matteo's `Comfy Dungeon <https://github.com/cubiq/Comfy_Dungeon>`_
+
+
+----------
+Home Stuff
+----------
+
+Home `Coffee Making <https://perfectdailygrind.com/2019/08/a-producers-guide-to-pruning-stumping-coffee-trees/>`_
+
+`Celine Sciamma <https://www.instagram.com/p/CvP8M69s-yG/?img_index=1>`_
+
+`Period Costume Making <https://www.scrooppatterns.com/products/augusta-stays-1775-1789>`_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -23,8 +23,8 @@ Can't remember? Help Yourself
    RSTs/Python.rst
    RSTs/Reaper.rst
    RSTs/Reatforum.rst
-   RSTs/Rigging.rst
    RSTs/Video.rst
+   RSTs/Websites.rst
    RSTs/Windoze.rst
 
 
