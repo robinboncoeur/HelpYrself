@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-English" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artificial Intelligence &mdash; Help Yourself 0.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Blender Tips I Keep Forgetting" href="Blender.html" />
+    <link rel="prev" title="About HelpYrself" href="About.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Help Yourself
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Artificial Intelligence</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements-for-deepseek-models">Requirements for DeepSeek models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verify-hardware-requirements">Verify Hardware Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-the-software-environment">Set Up the Software Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-the-model-weights">Download the Model Weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-model">Configure the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-model">Run the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#optimize-performance">Optimize Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-and-validate">Test and Validate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#run-deepseek-r1">Run DeepSeek R1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">A Bit of Git, mostly Sphinx Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Links - You Might Need Them!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Linux.html">Linux Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reatforum.html">Reaticulate Forum Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Websites.html">Website Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Artificial Intelligence</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/RSTs/AI.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="artificial-intelligence">
+<h1>Artificial Intelligence<a class="headerlink" href="#artificial-intelligence" title="Permalink to this heading"></a></h1>
+<p>Running a 7-billion parameter DeepSeek LLM locally requires significant computational resources and careful setup. Below are the steps you should follow:</p>
+<section id="requirements-for-deepseek-models">
+<h2>Requirements for DeepSeek models<a class="headerlink" href="#requirements-for-deepseek-models" title="Permalink to this heading"></a></h2>
+<section id="verify-hardware-requirements">
+<h3>Verify Hardware Requirements<a class="headerlink" href="#verify-hardware-requirements" title="Permalink to this heading"></a></h3>
+<p><strong>GPU</strong>: A high-end GPU with at least 24 GB of VRAM (e.g., NVIDIA A100, RTX 3090, or RTX 4090). Multiple GPUs may be required for larger models.</p>
+<p><strong>CPU</strong>: A multi-core processor (e.g., AMD Ryzen or Intel Xeon).</p>
+<p><strong>RAM</strong>: At least 64 GB of system memory.</p>
+<p><strong>Storage</strong>: SSD with sufficient space for the model weights (20-40 GB) and additional space for datasets and temporary files.</p>
+</section>
+<section id="set-up-the-software-environment">
+<h3>Set Up the Software Environment<a class="headerlink" href="#set-up-the-software-environment" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Operating System</strong>: Use a Linux-based system (e.g., Ubuntu 20.04) for better compatibility with deep learning frameworks.</p></li>
+<li><p><strong>Install Dependencies</strong>:</p>
+<ul class="simple">
+<li><p>Python 3.8 or later.</p></li>
+<li><p>CUDA and cuDNN (if using NVIDIA GPUs).</p></li>
+<li><p>PyTorch or TensorFlow (depending on the model’s framework).</p></li>
+<li><p>Install necessary Python libraries:
+<code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">pip</span> <span class="pre">install</span> <span class="pre">torch</span> <span class="pre">transformers</span> <span class="pre">accelerate</span>
+<span class="pre">`</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>DeepSeek LLM Code</strong>:</p>
+<ul class="simple">
+<li><p>Obtain the model weights and code from the official DeepSeek repository or authorized sources.</p></li>
+<li><p>Clone the repository:
+<code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/deepseek-ai/deepseek-llm.git</span>
+<span class="pre">cd</span> <span class="pre">deepseek-llm</span>
+<span class="pre">`</span></code></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="download-the-model-weights">
+<h3>Download the Model Weights<a class="headerlink" href="#download-the-model-weights" title="Permalink to this heading"></a></h3>
+<p>Download the 7-billion parameter model weights (checkpoints) from the official source.</p>
+<p>Ensure the weights are compatible with the framework (e.g., PyTorch or TensorFlow).</p>
+<p>Place the weights in the appropriate directory within the cloned repository.</p>
+</section>
+<section id="configure-the-model">
+<h3>Configure the Model<a class="headerlink" href="#configure-the-model" title="Permalink to this heading"></a></h3>
+<p>Modify the configuration files (e.g., <cite>config.json</cite>) to match your hardware setup.</p>
+<p>Adjust batch size and precision (e.g., FP16 or BF16) to fit within your GPU memory limits.</p>
+</section>
+<section id="run-the-model">
+<h3>Run the Model<a class="headerlink" href="#run-the-model" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Load the model using the provided scripts</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">AutoModelForCausalLM</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;path_to_model_weights&quot;</span><span class="p">)</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;path_to_model_weights&quot;</span><span class="p">)</span>
+
+<span class="n">input_text</span> <span class="o">=</span> <span class="s2">&quot;Your input text here&quot;</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">input_text</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">)</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Use the <cite>accelerate</cite> library for multi-GPU or distributed inference:</p></li>
+</ol>
+<blockquote>
+<div><p>accelerate launch inference_script.py</p>
+</div></blockquote>
+</section>
+<section id="optimize-performance">
+<h3>Optimize Performance<a class="headerlink" href="#optimize-performance" title="Permalink to this heading"></a></h3>
+<p>Use mixed precision (FP16/BF16) to reduce memory usage and speed up inference.</p>
+<p>Enable GPU acceleration and ensure CUDA is properly configured.</p>
+<p>For large models, consider model parallelism or offloading parts of the model to CPU.</p>
+</section>
+<section id="test-and-validate">
+<h3>Test and Validate<a class="headerlink" href="#test-and-validate" title="Permalink to this heading"></a></h3>
+<p>Run sample inputs to ensure the model is functioning correctly.</p>
+<p>Monitor GPU and CPU usage to identify bottlenecks.</p>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading"></a></h3>
+<p><strong>Out of Memory Errors</strong>: Reduce batch size or use gradient checkpointing.</p>
+<p><strong>Slow Performance</strong>: Ensure CUDA/cuDNN is properly installed and compatible with your GPU.</p>
+<p><strong>Model Not Loading</strong>: Verify the model weights and configuration files are correct.</p>
+</section>
+</section>
+<section id="run-deepseek-r1">
+<h2>Run DeepSeek R1<a class="headerlink" href="#run-deepseek-r1" title="Permalink to this heading"></a></h2>
+<p>Running it privately on your computer.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5kFV20LatL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr style="height:4px;border-width:0;color:gray;background-color:gray"></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="About.html" class="btn btn-neutral float-left" title="About HelpYrself" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Blender.html" class="btn btn-neutral float-right" title="Blender Tips I Keep Forgetting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, Robyn Hahn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+#######################
+Artificial Intelligence
+#######################
+
+Running a 7-billion parameter DeepSeek LLM locally requires significant computational resources and careful setup. Below are the steps you should follow:
+
+
+********************************
+Requirements for DeepSeek models
+********************************
+
+
+============================
+Verify Hardware Requirements
+============================
+
+**GPU**: A high-end GPU with at least 24 GB of VRAM (e.g., NVIDIA A100, RTX 3090, or RTX 4090). Multiple GPUs may be required for larger models.
+
+**CPU**: A multi-core processor (e.g., AMD Ryzen or Intel Xeon).
+
+**RAM**: At least 64 GB of system memory.
+
+**Storage**: SSD with sufficient space for the model weights (20-40 GB) and additional space for datasets and temporary files.
+
+
+===============================
+Set Up the Software Environment
+===============================
+
+1. **Operating System**: Use a Linux-based system (e.g., Ubuntu 20.04) for better compatibility with deep learning frameworks.
+
+2. **Install Dependencies**:
+   
+   - Python 3.8 or later.
+   - CUDA and cuDNN (if using NVIDIA GPUs).
+   - PyTorch or TensorFlow (depending on the model's framework).
+   - Install necessary Python libraries:
+     ```bash
+     pip install torch transformers accelerate
+     ```
+3. **DeepSeek LLM Code**:
+   
+   - Obtain the model weights and code from the official DeepSeek repository or authorized sources.
+   - Clone the repository:
+     ```bash
+     git clone https://github.com/deepseek-ai/deepseek-llm.git
+     cd deepseek-llm
+     ```
+
+==========================
+Download the Model Weights
+==========================
+
+Download the 7-billion parameter model weights (checkpoints) from the official source.
+
+Ensure the weights are compatible with the framework (e.g., PyTorch or TensorFlow).
+
+Place the weights in the appropriate directory within the cloned repository.
+
+
+===================
+Configure the Model
+===================
+
+Modify the configuration files (e.g., `config.json`) to match your hardware setup.
+
+Adjust batch size and precision (e.g., FP16 or BF16) to fit within your GPU memory limits.
+
+
+=============
+Run the Model
+=============
+
+1. Load the model using the provided scripts
+
+.. code-block:: python
+
+   from transformers import AutoModelForCausalLM, AutoTokenizer
+
+   model = AutoModelForCausalLM.from_pretrained("path_to_model_weights")
+   tokenizer = AutoTokenizer.from_pretrained("path_to_model_weights")
+
+   input_text = "Your input text here"
+   inputs = tokenizer(input_text, return_tensors="pt")
+   outputs = model.generate(**inputs)
+   print(tokenizer.decode(outputs[0]))
+   
+
+2. Use the `accelerate` library for multi-GPU or distributed inference:
+ 
+ accelerate launch inference_script.py
+
+
+
+====================
+Optimize Performance
+====================
+
+Use mixed precision (FP16/BF16) to reduce memory usage and speed up inference.
+
+Enable GPU acceleration and ensure CUDA is properly configured.
+
+For large models, consider model parallelism or offloading parts of the model to CPU.
+
+
+=================
+Test and Validate
+=================
+
+Run sample inputs to ensure the model is functioning correctly.
+
+Monitor GPU and CPU usage to identify bottlenecks.
+
+
+===============
+Troubleshooting
+===============
+
+**Out of Memory Errors**: Reduce batch size or use gradient checkpointing.
+
+**Slow Performance**: Ensure CUDA/cuDNN is properly installed and compatible with your GPU.
+
+**Model Not Loading**: Verify the model weights and configuration files are correct.
+
+
+***************
+Run DeepSeek R1
+***************
+
+Running it privately on your computer.
+
+.. raw:: html
+   
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/5kFV20LatL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   <hr style="height:4px;border-width:0;color:gray;background-color:gray">
+

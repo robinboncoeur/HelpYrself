@@ -74,7 +74,6 @@ That turns it off, you can check with the “link show” command from earlier. 
 
 
 
-
 ****************
 Grub-Customising
 ****************

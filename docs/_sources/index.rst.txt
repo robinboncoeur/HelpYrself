@@ -11,6 +11,7 @@ Can't remember? Help Yourself
    :caption: Contents:
 
    RSTs/About.rst
+   RSTs/AI.rst
    RSTs/Blender.rst
    RSTs/Composition.rst
    RSTs/Excel.rst
