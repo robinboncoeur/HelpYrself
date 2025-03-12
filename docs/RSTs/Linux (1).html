@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-English" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Tips &mdash; Help Yourself 0.02 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mac Tips, How-Tos and More" href="Macs.html" />
+    <link rel="prev" title="Links - You Might Need Them!" href="Links.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Help Yourself
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="About.html">About HelpYrself</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Blender.html">Blender Tips I Keep Forgetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Composition.html">Composition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Excel.html">Excel 2016 VBA Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git.html">A Bit of Git, mostly Sphinx Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ideas.html">Great Ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LaTeX.html">LaTeX, Memoir and Bookbinding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Links.html">Links - You Might Need Them!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-web-server">Quick Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networking-pointers">Networking Pointers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#releasing-renewing-your-ip-address">Releasing - Renewing Your IP Address</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resetting-network-settings">Resetting Network Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grub-customising">Grub-Customising</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-path">Updating PATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kivy-and-pycharm">Kivy and PyCharm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brackets-in-mint-ubuntu">Brackets in Mint (Ubuntu)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1-install-brackets-using-snap">Method 1: Install Brackets using Snap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2-install-brackets-using-ppa">Method 2: Install Brackets using PPA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-3-install-brackets-using-deb-package">Method 3: Install Brackets using DEB package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suggested-reads">Suggested reads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Macs.html">Mac Tips, How-Tos and More</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python.html">Python including Pip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reaper.html">Reaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reatforum.html">Reaticulate Forum Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Video.html">Video Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Websites.html">Website Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windoze.html">Reluctantly, Windows</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Help Yourself</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Linux Tips</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/RSTs/Linux.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linux-tips">
+<h1>Linux Tips<a class="headerlink" href="#linux-tips" title="Permalink to this heading"></a></h1>
+<section id="quick-web-server">
+<h2>Quick Web Server<a class="headerlink" href="#quick-web-server" title="Permalink to this heading"></a></h2>
+<p>In Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span> <span class="mi">7050</span>
+</pre></div>
+</div>
+<p>…where “7050” is an arbitrary port number.</p>
+</section>
+<section id="networking-pointers">
+<h2>Networking Pointers<a class="headerlink" href="#networking-pointers" title="Permalink to this heading"></a></h2>
+<section id="releasing-renewing-your-ip-address">
+<h3>Releasing - Renewing Your IP Address<a class="headerlink" href="#releasing-renewing-your-ip-address" title="Permalink to this heading"></a></h3>
+<p>Often when you’re having Wi-Fi issues, this is because there are issues with your IP address, the set of numbers that identifies your location online. The reasons for this can be any of dozens, but thankfully the fix is always the same, namely resetting your IP address.</p>
+<p>To do so, you first need to know your current IP address. You can do so using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">address</span>
+</pre></div>
+</div>
+<p>Alternatively, some Linux distros will allow you to do this within the desktop environment, check out our article on how to find your IP address in Ubuntu.</p>
+<p>Though it’s not necessary, you may want to take note of this IP address as after we’re done we need to check that it’s been changed.</p>
+<p>Next, we need to request a new IP address through your DHCP server. We have a full explainer on what DHCP is, but the short version is that it’s a protocol that handles IP assignments. It usually does this on a daily basis, so your network gets a new IP every 24 hours. What we’re going to do is ask if we can renew it now.</p>
+<p>To do so you need a program called dhclient, which is installed by default on Linux systems. Run it to find out what your system is running now, using the “verbose” command (-v) to make sure you get some output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dhclient</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>This lets you know what IP was requested (DHCPREQUEST) and when it will expire, in my case 40157 seconds from now, which is about 11 hours.</p>
+<p>Now, we need to release the IP address, which means we ask dhclient to trash it. This is done with the -r command, and I recommend you add another “verbose” command to see what’s happening:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dhclient</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">r</span>
+</pre></div>
+</div>
+<p>With that done, now request a new IP address, with the same command as before:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dhclient</span>
+</pre></div>
+</div>
+<p>Enjoy your new IP address.</p>
+</section>
+<section id="resetting-network-settings">
+<h3>Resetting Network Settings<a class="headerlink" href="#resetting-network-settings" title="Permalink to this heading"></a></h3>
+<p>Sometimes renewing the IP address isn’t enough, though. The next thing you can try is to reset your network interface entirely in the hope that whatever setting is causing the issue is returned to its default state.</p>
+<p>To do so, we’re going to use a program called ip. This is a very powerful tool that lets you control networking on your device. We have a full guide on using the ip command, though for now we only need three commands.</p>
+<p>The first is to show the interfaces present on your device. For that, type this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">link</span> <span class="n">show</span>
+</pre></div>
+</div>
+<p>You’ll get a list of interfaces. For most people it’s the second one (enp0s3 in my case), so let’s try resetting that first. To do so, you need to switch the interface off:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">link</span> <span class="nb">set</span> <span class="o">&lt;</span><span class="n">interface_name</span><span class="o">&gt;</span> <span class="n">down</span>
+</pre></div>
+</div>
+<p>That turns it off, you can check with the “link show” command from earlier. Now you can turn the interface back on again:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ip</span> <span class="n">link</span> <span class="nb">set</span> <span class="o">&lt;</span><span class="n">interface_name</span><span class="o">&gt;</span> <span class="n">up</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="grub-customising">
+<h2>Grub-Customising<a class="headerlink" href="#grub-customising" title="Permalink to this heading"></a></h2>
+<p><strong>Updated: 2024-01-21</strong></p>
+<p>Dual-boot systems use GRUB to allow booting to one OS or another. Grub-customizer by <a class="reference external" href="https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer">Daniel Richter</a> is quite nice but somehow doesn’t work for me.</p>
+<p>So, to get GRUB2 to look decent, we need to first address /etc/default/grub - I’ve removed all the commented-out stuff so just the really important stuff remains:</p>
+<blockquote>
+<div><p>GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=15
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”
+GRUB_CMDLINE_LINUX=””</p>
+<p>GRUB_GFXMODE=1920x1080
+GRUB_FONT=/boot/grub/fonts/unifont.pf2</p>
+</div></blockquote>
+<p>Key points to look at are the resolution - in this case 1920x1080 - and font, which lives in /boot/grub/fonts. So:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>change the resolution to read: <strong>GRUB_GFXMODE=1920x1080</strong></p></li>
+<li><p>add the line: <strong>GRUB_FONT=/boot/grub/fonts/unifont.pf2</strong></p></li>
+</ul>
+</div></blockquote>
+<p>…ensuring, of course, that the file and path actually exist.</p>
+<p>The next thing to look at is look in the /etc/default/grub.d folder, which will hopefully contain the following files, or something similar:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>50_linuxmint.cfg</p></li>
+<li><p>63_mint-theme-2k.cfg</p></li>
+</ul>
+</div></blockquote>
+<p>In this case, the 63x file held the key to which theme is used by GRUB. If none of that sort of file exist, you might need to go to the Software Manager and load an alternate theme to the default, such as Grub2-theme-mint. Invoke:</p>
+<blockquote>
+<div><blockquote>
+<div><p>sudo update-grub</p>
+</div></blockquote>
+<p>and the missing files should appear. In that file (or one similar to it) are a two lines of interest:</p>
+<blockquote>
+<div><p>GRUB_FONT=”/boot/grub/fonts/UbuntuMono32.pf2”
+GRUB_THEME=”/boot/grub/themes/creek/theme.txt”</p>
+</div></blockquote>
+</div></blockquote>
+<p>The second line will tell <strong>update-grub</strong> where to find the theme. Save your changes and nvoke:</p>
+<blockquote>
+<div><p>sudo update-grub</p>
+</div></blockquote>
+<p>and you should be good.</p>
+<p>WHV5M3XPNX</p>
+</section>
+<section id="updating-path">
+<h2>Updating PATH<a class="headerlink" href="#updating-path" title="Permalink to this heading"></a></h2>
+<p>In Ubuntu, edit /etc/environment. Its sole purpose is to store Environment Variables. Originally the $PATH variable is defined here. This is a paste from my /etc/environment file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span>
+</pre></div>
+</div>
+<p>So you can just open up this file as root and add whatever you want.</p>
+<p>For Immediate results, Run (try as normal user and root):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span> <span class="o">&amp;&amp;</span> <span class="n">export</span> <span class="n">PATH</span>
+</pre></div>
+</div>
+</section>
+<section id="kivy-and-pycharm">
+<h2>Kivy and PyCharm<a class="headerlink" href="#kivy-and-pycharm" title="Permalink to this heading"></a></h2>
+<p>Kivy Virtual Environment Installation using PyCharm</p>
+<p>Assumption</p>
+<p>Assuming virtualenv or/and virtualenvwrapper already installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span> <span class="n">virtualenvwrapper</span>
+</pre></div>
+</div>
+<p>Launch PyCharm. Then:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Click File</p></li>
+<li><p>Click Settings</p></li>
+<li><p>Click project Interpreter</p></li>
+<li><p>Click cogwheel next to the Project Interpreter field, and choose Add…</p></li>
+<li><p>New environment is the default selection.</p></li>
+<li><p>Type kivyinstall for the Location e.g. /home/iam/.virtualenvs/kivyinstall</p></li>
+<li><p>Select Base interpreter (Python 3.5, or Python 2.7) from the drop down</p></li>
+<li><p>Do not select the Inherit global site-packages check-box.</p></li>
+<li><p>Select the Make available to all projects check-box, if needed.</p></li>
+<li><p>Click OK</p></li>
+</ul>
+</div></blockquote>
+<p>After pip and setuptools have been installed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>click + beside the column heading, Latest.</p></li>
+<li><p>Type cython in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Select Specify version check-box to load version 0.25.2 which is compatible to Kivy version 1.10.0</p></li>
+<li><p>Click Install Package button.</p></li>
+<li><p>After cython 0.25.2 version installed successfully, type kivy in the search text input box under Available Packages Dialog.</p></li>
+<li><p>Click Install Package</p></li>
+</ul>
+</div></blockquote>
+<p>After kivy installed successfully, create a new project.
+Opened a new project. If kivyinstall did not appear in the expanded External Libraries:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>click File » Settings… » Project Interpreter</p></li>
+<li><p>select Python…(kivyinstall) e.g. Python 3.5 (kivyinstall)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="brackets-in-mint-ubuntu">
+<h2>Brackets in Mint (Ubuntu)<a class="headerlink" href="#brackets-in-mint-ubuntu" title="Permalink to this heading"></a></h2>
+<p>Since PyCharm and Kivy currently (18.12.27) has issues, going to have a go with Brackets, which works a treat on the Mac. The following installation pointers came from <a class="reference external" href="https://itsfoss.com/install-brackets-ubuntu/">It’s FOSS</a>.</p>
+<section id="method-1-install-brackets-using-snap">
+<h3>Method 1: Install Brackets using Snap<a class="headerlink" href="#method-1-install-brackets-using-snap" title="Permalink to this heading"></a></h3>
+<p>To install Snap, enter the following in Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">snapd</span>
+</pre></div>
+</div>
+<p>Starting Ubuntu 16.04, Brackets is available as a Snap app. You can also find it in the Software Center and install it from there in a few clicks for Ubuntu 16.04 and higher versions.</p>
+<p>If you want to install via the command line, you can use the Snap commands to install Brackets. This will work for all the Linux distributions that support Snap packaging. First, make sure you have snapd daemon installed on your system. Use the command below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snap</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Once you have made sure that snapd is installed on your Linux system, install Brackets with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span>
+</pre></div>
+</div>
+<p>In mint, an error occurred with the above command:</p>
+<blockquote>
+<div><p>This revision of snap “brackets” was published using classic confinement and thus may perform arbitrary system changes outside of the security sandbox that snaps are usually confined to, which may put your system at risk</p>
+</div></blockquote>
+<p>This can be rectified by adding –classic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">snap</span> <span class="n">install</span> <span class="n">brackets</span> <span class="o">--</span><span class="n">classic</span>
+</pre></div>
+</div>
+</section>
+<section id="method-2-install-brackets-using-ppa">
+<h3>Method 2: Install Brackets using PPA<a class="headerlink" href="#method-2-install-brackets-using-ppa" title="Permalink to this heading"></a></h3>
+<p>… <strong>in Ubuntu and Linux Mint</strong> (<em>Not recommended</em>)</p>
+<p>Note: <em>This method is redundant now. When Brackets was not officially available, the unofficial PPA provided an easy way to install Brackets on Ubuntu.</em></p>
+<p>Open a terminal and use the following commands to install Brackets via the unofficial PPA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">webupd8team</span><span class="o">/</span><span class="n">brackets</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">brackets</span>
+</pre></div>
+</div>
+</section>
+<section id="method-3-install-brackets-using-deb-package">
+<h3>Method 3: Install Brackets using DEB package<a class="headerlink" href="#method-3-install-brackets-using-deb-package" title="Permalink to this heading"></a></h3>
+<p>… <strong>or source code</strong></p>
+<p>If you do not like PPAs, you can get the .deb installation files from the link below. You will also get the source code of the latest version here:</p>
+<p><a class="reference external" href="https://github.com/adobe/brackets/releases">Download Brackets Editor</a></p>
+<p>These .deb binaries can be installed by double-clicking on it. It will be opened in Ubuntu Software Center by default. You can use a lighter alternative Gdebi as well.</p>
+</section>
+<section id="suggested-reads">
+<h3>Suggested reads<a class="headerlink" href="#suggested-reads" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://itsfoss.com/install-visual-studio-code-ubuntu/">How To Install Visual Studio Code On Ubuntu</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Links.html" class="btn btn-neutral float-left" title="Links - You Might Need Them!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Macs.html" class="btn btn-neutral float-right" title="Mac Tips, How-Tos and More" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, Robyn Hahn.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
