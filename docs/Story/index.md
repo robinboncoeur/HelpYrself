@@ -25,7 +25,7 @@ From DA:
 
 Note to AI Artists: be sure to check my Posts for tips and prompts and other cool stuff. More to come!!
 
-What is 'Celestes Girl'?
+What is 'Celeste's Girl'?
 
 Celeste's Girl is a story about being in a public space as a woman and the quiet maths women do to stay safe.
 
