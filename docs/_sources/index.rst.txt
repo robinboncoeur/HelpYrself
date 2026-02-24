@@ -17,6 +17,7 @@ Can't remember? Help Yourself
    RSTs/Excel.rst
    RSTs/Git.rst
    RSTs/Ideas.rst
+   RSTs/Ideas-Redux.rst
    RSTs/LaTeX.rst
    RSTs/Links.rst
    RSTs/Linux.rst
@@ -24,6 +25,7 @@ Can't remember? Help Yourself
    RSTs/Python.rst
    RSTs/Reaper.rst
    RSTs/Reatforum.rst
+   RSTs/Thoughts.rst
    RSTs/Video.rst
    RSTs/Websites.rst
    RSTs/Windoze.rst

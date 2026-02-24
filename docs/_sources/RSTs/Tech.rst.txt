@@ -1,172 +1,75 @@
-####################
-Python including Pip
-####################
-
-************
-Pip Installs
-************
-
-======================
-yt-dlp - Stuff to Know
-======================
-
-To download/install **or** update::
-
-	pip3 install yt-dlp
-	
-When you get this **ERROR: Did not get any data blocks** invoke::
-
-	yt-dlp --list-formats https://www.youtube.com/watch?v=NameOfFile
-
-See which one will allow download. Youmay end up with a .3gp file.
-
-======
-PyTube
-======
-
-For PyTube, to install the latest source directly from github using pip, type this in your command line::
-
-    pip install git+https://github.com/nficano/pytube.git
+Tech
+----
 
 
 
-========================
-PyCharm and Kivy Install
-========================
+I’ll recycle an answer I wrote for another question…just wrap the variable in an object and redefine __setattr__ like so:
 
-To explore: in Ubuntu 12.04, one user solved it this way:
+class ConstantBlock:
+"""
+A simple object that lets you set its attributes ONCE.
+Any further attempt to set an attribute results in a
+RuntimeError exception.
+"""
 
-    * Install CYTHON -- Do this First!
-    * Install the Python header files: sudo apt-get install python-dev
-    * Install KIVY: [sudo apt-get install Python-Kivy] or [sudo apt-get install python3-kivy]
-    * Install the kivy-examples: sudo apt-get install kivy-examples
-
-An important `link <http://kivy.org/docs/installation/installation-linux.html#ubuntu-12-04-with-python-2-7>`_ for Python 2x was included. The user went on to say that "the code builds and runs, but does not display in Python. I will edit this answer if I fix that, but this should at least get you started."
-
-Note: *PyCharm turned out to be a too-hard-basket editor to get working properly with Kivy, so I went with Brackets instead.*
-
-
-
-===================
-Brackets Install...
-===================
-... **in Linux Mint**
-
-A no-brainer. For Windows, Mac or Linux, just get onto `Brackets.io <http://brackets.io>`_: it will automatically offer the download for your host OS. In Mint, download the .deb and install.
+def __setattr__(self, name, value):
+  if name in self.__dict__:
+    raise RuntimeError("Can't set constant!")
+  else:
+    super().__setattr__(name, value)
 
 
 
-======================
-Kivy kv file Python...
-======================
-... **syntax highlighting**
+This also has the benefit that the variables you don’t want to change (i.e., constants) are prefaced with constant.
 
-Create a brackets.json file with the following code::
+from constance import ConstantBlock
+constants = ConstantBlock()
+constants.leave_this_alone = 123.456
+print(constants.leave_this_alone) # look...
 
-    (code to follow)
-    
+123.456
 
-
-===================
-Project: Roster App
-===================
-
-Name of application::
-
-    rosterapp21s9453
-
-Credentials set up `here <https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453>`_ :: 
-
-    https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=rosterapp21s9453
-
-In google drive, set things up to be able to access with Python `this way <https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html>`_.
-
-Installed gspread and oauth2client via pip3::
-
-    pip3 install gspread oauth2client
-    
-
-
-
-**********************
-Python Video Tutorials
-**********************
-
-======================
-Corey Schafer's Series
-======================
-
-`Link to YouTube series <https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7>`_.
-
-
-
-======================
-Mouse vs Python Series
-======================
-
-`Python 101 <https://www.youtube.com/watch?v=k0zZcnZHYAo&list=PLN0iJDXT7K2u3xVle4-9N1_DLqIh0sfys>`_.
+constants.leave_this_alone = 1 # ...but don't touch!
+Traceback (most recent call last):
+ File "<stdin>", line 1, in <module>
+ File "/Users/dws/DI/Python/constance.py", line 10, in __setattr__
+ raise RuntimeError("Can't set constant!")
+ RuntimeError: Can't set constant!
 
 
 
 
-*************************
-Replacing VBA with Python
-*************************
 
-=========================
-VBA 2 Python simple guide
-=========================
+
+
+
 
 As someone who has been working with Excel for many years, I know that the idea of learning things you can already do in Excel/VBA in a completely new environment like Python doesn’t sound so exciting. However, all the benefits that the Python environment offers make this worth it. For this reason, I came up with a useful and simple guide I wish I had when I switched from Excel to Python.
 
 In this article, we’ll use Python’s Pandas and Numpy library to replace many Excel functions you probably used in the past.
 
-Table of Contents:
-
-  1. The Dataset
-  
-  2. Sum, Average, Max, Min, Count
-
-    - Columns (e.g. sum a column)
-    
-    - Rows (e.g. sum a row)
-  
-  3. IF
-    
-    - Replace IF with np.where
-    
-    - Replace nested IF with np.select
-  
-  4. SumIf, CountIf, AverageIf
-    
-    - One condition (select a column with square brackets [ ] )
-    
-    - Two or more conditions::  (select columns and use & or | )
-  
-  5. Basic Data Cleaning
-    
-    - Change the case of text with .str.lower, .str.upper or .str.title
-    
-    - Extract text in a column with .str.extract
-    
-    - Identify whether a cell is empty with the .isnull method
-  
-  6. Vlookup
-    
-    - Find an element with .loc[ ]
-    
-    - Merge two tables with pd.merge or pd.concat
-  
-  7. Pivot Table
-    
-    - Use the .pivot_table method
-  
-  8. Replace Excel Graphs with Python’s Matplotlib or Seaborn
-
-
------------
+Table of Contents
+1. The Dataset
+2. Sum, Average, Max, Min, Count
+ - Columns (e.g. sum a column)
+ - Rows (e.g. sum a row)
+3. IF
+ - Replace IF with np.where
+ - Replace nested IF with np.select
+4. SumIf, CountIf, AverageIf
+ - One condition (select a column with square brackets [ ] )
+ - Two or more conditions (select columns and use & or |)
+5. Basic Data Cleaning
+ - Change the case of text with .str.lower, .str.upper or .str.title
+ - Extract text in a column with .str.extract
+ - Identify whether a cell is empty with the .isnull method
+6. Vlookup
+ - Find an element with .loc[ ]
+ - Merge two tables with pd.merge or pd.concat
+7. Pivot Table
+ - Use the .pivot_table method
+8. Replace Excel Graphs with Python’s Matplotlib or Seaborn
 The Dataset
------------
 
 In this guide, we’ll use an Excel file that has a .csv format, which is typically used when working with datasets. The dataset consists of the marks secured by students in various subjects and will help us easily switch from Excel spreadsheets to Python’s dataframes. You can download this data on Kaggle or on my Github (check the datasets folder).
 
@@ -185,11 +88,11 @@ df_excel
 Once we read this CSV file, we give it a name. In this case, I named it df_excel. df stands for dataframe and it’s the typical name given after reading a CSV file. After running the code below, we obtain the following output.
 
 
+Image by author
+
 This looks similar to an Excel spreadsheet, but in this format, it’ll be easier to wrangle the data. Now I’ll show you in Python how to do some common functions you probably used in Excel.
 
------------------------------
 Sum, Average, Max, Min, Count
------------------------------
 
 Excel’s popular functions can be easily replaced with Pandas methods. Let’s take a look.
 
@@ -234,10 +137,7 @@ In [2]: df_excel['gender'].value_counts()
 Out [2]: 
 female    518
 male      482
-
-----
---IF
-----
+IF
 
 We can easily replace Excel’s IF function by using Numpy.
 
@@ -253,18 +153,17 @@ Replace nested IF with np.select
 
 Let’s imagine we want to give grades from A to F based on the scores obtained. In this case, we have more than 2 values, so we use np.select()
 
-np.select() needs to arguments — a list of conditions and a list of values. A list in Python is represented by the square brackets [ ]::
+np.select() needs to arguments — a list of conditions and a list of values. A list in Python is represented by the square brackets [ ]
 
-  conditions = [
-      (df_excel['average']>=90),
-      (df_excel['average']>=80) & (df_excel['average']<90),
-      (df_excel['average']>=70) & (df_excel['average']<80),
-      (df_excel['average']>=60) & (df_excel['average']<70),
-      (df_excel['average']>=50) & (df_excel['average']<60),
-      (df_excel['average']<50),
-  ]
-
-  values = ['A', 'B', 'C', 'D', 'E', 'F']
+conditions = [
+    (df_excel['average']>=90),
+    (df_excel['average']>=80) & (df_excel['average']<90),
+    (df_excel['average']>=70) & (df_excel['average']<80),
+    (df_excel['average']>=60) & (df_excel['average']<70),
+    (df_excel['average']>=50) & (df_excel['average']<60),
+    (df_excel['average']<50),
+]
+values = ['A', 'B', 'C', 'D', 'E', 'F']
 
 Keep in mind that each condition should be within parenthesis. Now we use the .select() method and assign it to a new [‘grades’] column.
 
@@ -272,13 +171,13 @@ df_excel['grades'] = np.select(conditions, values)
 
 Now the first 5 rows of the output should look like this.
 
+
+Image by author
+
 We picked these 3 columns with double square brackets df_excel[[‘average’, ‘pass/fail’, ‘grades’]] and the first 5 rows can be displayed with the .head() method.
 
-
-
--------------------------
+How to Start Making Money Coding Even If You Have No ExperienceThe best way to make money without a job.medium.datadriveninvestor.com
 SumIf, CountIf, AverageIf
--------------------------
 
 To sum, count, or calculate the average based on a condition, in Python, we first filter out values and then make the calculation.
 
@@ -290,8 +189,7 @@ df_female = df_excel[df_excel['gender'] == 'female']
 
 We selected only the female gender and placed it in a dataframe called df_female. Now we can perform any calculation we saw in the “Sum, Average, Max, Min, Count” section.
 
-Two or more conditions:: 
-  ( select columns and use & or | )
+Two or more conditions (select columns and use & or |)
 
 If we have two or more conditions, the code will look similar to the one above, but with some changes. Let’s imagine we want to calculate the score of females within Group B (‘race/ethnicity’)
 
@@ -305,9 +203,7 @@ df_sumifs = df_sumifs.assign(sumifs = df_sumifs['math score'] + df_sumifs['readi
 
 In this case, I used the .assign() method to show you another way to create a new column while doing calculations.
 
--------------------
 Basic Data Cleaning
--------------------
 
 We’re going to check a few methods used for data cleaning. In case you want to know all the methods used for cleaning data, check the complete guide I wrote on how to clean and prepare data in Python.
 
@@ -348,9 +244,7 @@ df_excel[df_excel['gender'].isnull()]
 
 In this case, there are no empty values so the result will be an empty dataframe.
 
--------
 Vlookup
--------
 
 To find elements as Vlookup does in Excel, we’re going to use .loc[], .merge() or .concat() based on the problem we want to solve.
 
@@ -404,158 +298,153 @@ Above you can see that another argument is needed (how). This indicates how the 
 
 You can also use pd.concat() for the same purposes, but you have to set the id as index before concatenating frames and include the frames as lists (within brackets [])
 
-.. code-block:: python
-
-  df_excel_3 = pd.concat(
-   [df_excel_1.set_index('id'), df_excel_2.set_index('id')], axis=1
-  )
-  df_excel_3['language score'].fillna('0', inplace=True)
-  df_excel_3
+df_excel_3 = pd.concat(
+ [df_excel_1.set_index('id'), df_excel_2.set_index('id')], axis=1
+)
+df_excel_3['language score'].fillna('0', inplace=True)
+df_excel_3
 
 All the values that don’t match will receive a NaN, but we can replace it with any value by using the.fillna() method.
 
------------
 Pivot Table
------------
-
 Use the .pivot_table method
 
 The Pandas’ pivot_table method works similarly to the one you find in Excel.
 
 Let’s imagine we want to obtain the math and writing score of all the groups inside the race/ethnicity column.
 
-.. code-block:: python
-
-  df_excel = pd.read_csv('StudentsPerformance.csv')
-  df_pivot = df_excel.pivot_table(index='race/ethnicity', values=['math score', 'writing score'], aggfunc='mean')
-  df_pivot
+df_excel = pd.read_csv('StudentsPerformance.csv')
+df_pivot = df_excel.pivot_table(index='race/ethnicity', values=['math score', 'writing score'], aggfunc='mean')
+df_pivot
 
 The index argument will group the ‘race/ethnicity’ column, while the values argument will take the numerical values to show. Finally, the calculations are made by the aggfunc. In this case, we pick the mean. As a result, we obtain the following pivot table.
 
---------------------
-Replace Excel Graphs
---------------------
 
-...with Python’s Matplotlib or Seaborn
+Image by author
+Replace Excel Graphs with Python’s Matplotlib or Seaborn
 
 Python contains different libraries to make visualizations as good as those Excel offers.
 
 Let’s make a simple barplot based on the results of df_pivot we created above. First, we import matplotlib and then we use plt.bar()
 
-.. code-block:: python
-
-  import matplotlib.pyplot as plt
-  df_plot = df_pivot.reset_index()
-  plt.bar(df_plot['race/ethnicity'], df_plot['math score'])
-  plt.show()
+import matplotlib.pyplot as plt
+df_plot = df_pivot.reset_index()
+plt.bar(df_plot['race/ethnicity'], df_plot['math score'])
+plt.show()
 
 The first argument of plt.bar() is the label and the second is the numeric value. Then we display the results with plt.show()
 
+
+Image by author
+
 There are many things you can do in a Python plot such as adding labels to the graph, titles, customizing the size of the figure and colors, but that’s a whole new topic. I already made a guide to make beautiful visualizations in Python which includes lineplots, barplot, piecharts, histograms, boxplots, etc. Check it out in the link below.
+
+A Simple Guide to Beautiful Visualizations in PythonCustomize Matplotlib & Seaborn and forget those ugly blue bars forever.towardsdatascience.com
 
 That’s it! Now you’re ready to take advantage of all the benefits Python and Pandas offers! All the code used in this article is available on my Github.
 
 
 
-============
-Mega-Replace
-============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Microsoft Excel and Word are without a shred of doubt the two most abundantly used software in the corporate and non-corporate world. They are practically synonymous with the term ‘work’ itself. Often times, not a week goes by without us firing up the combination of the two and one way or another putting their goodness to use. While for the average daily purpose automation would not be solicited, there are times when automation can be a necessity. Namely, when you have a multitude of charts, figures, tables and reports to generate, it can become an exceedingly tedious undertaking if you choose the manual route. Well it doesn’t have to be that way. There is in fact a way to create a pipeline in Python where you can seamlessly integrate the two to produce spreadsheets in Excel and then transfer the results to Word to generate a report virtually instantaneously.
 
-**Openpyxl**
+Openpyxl
 
 Meet Openpyxl, arguably one of the most versatile bindings in Python that makes interfacing with Excel quite literally a stroll in the park. Armed with it you can read and write all current and legacy excel formats i.e. xlsx and xls. Openpyxl allows you to populate rows and columns, execute formulae, create 2D and 3D charts, label axes and titles, and a plethora of other abilities that can come in handy. Most importantly however, this package enables you to iterate over an endless numbers of rows and columns in Excel, thereby saving you from all that pesky number crunching and plotting that you had to do previously.
 
-**Python-docx**
+Python-docx
 
 And then comes along Python-docx, this package is to Word what Openpyxl is to Excel. If you haven’t already studied their documentation, then you should probably take a look. Python-docx is without exaggeration one of the most simplest and most self-explanatory toolkits I have worked with ever since I started working with Python itself. It allows you to automate document generation by inserting text, filling in tables and rendering images in to your report automatically without any overhead whatsoever.
 
-Without further ado let’s create our very own automated pipeline. Go ahead and fire up Anaconda (or any other IDE of your choice) and install the following packages::
+Without further ado let’s create our very own automated pipeline. Go ahead and fire up Anaconda (or any other IDE of your choice) and install the following packages:
 
-  pip install openpyxl
-  pip install python-docx
+pip install openpyxl
+pip install python-docx
+Microsoft Excel Automation
 
 Initially we’ll load an Excel workbook that has already been created (shown below):
 
-.. code-block:: python
+workbook = xl.load_workbook('Book1.xlsx')
+sheet_1 = workbook['Sheet1']
 
-  workbook = xl.load_workbook('Book1.xlsx')
-  sheet_1 = workbook['Sheet1']
-
+Image by author.
 
 Subsequently, we’ll iterate over all of the rows in our spreadsheet to compute and insert the values for power by multiplying current by voltage:
 
-.. code-block:: python
-
-  for row in range(2, sheet_1.max_row + 1):
-      current = sheet_1.cell(row, 2)
-      voltage = sheet_1.cell(row, 3)
-      power = float(current.value) * float(voltage.value)
-      power_cell = sheet_1.cell(row, 1)
-      power_cell.value = power
+for row in range(2, sheet_1.max_row + 1):
+    current = sheet_1.cell(row, 2)
+    voltage = sheet_1.cell(row, 3)
+    power = float(current.value) * float(voltage.value)
+    power_cell = sheet_1.cell(row, 1)
+    power_cell.value = power
 
 Once that is done, we will use the calculated values for power to generate a line chart that will be inserted into the specified cell as shown below:
 
-.. code-block:: python
+values = Reference(sheet_1, min_row = 2, max_row = sheet_1.max_row, min_col = 1, max_col = 1)
+chart = LineChart()
+chart.y_axis.title = 'Power'
+chart.x_axis.title = 'Index'
+chart.add_data(values)
+sheet_1.add_chart(chart, 'e2') 
+workbook.save('Book1.xlsx')
 
-  values = Reference(sheet_1, min_row = 2, max_row = sheet_1.max_row, min_col = 1, max_col = 1)
-  chart = LineChart()
-  chart.y_axis.title = 'Power'
-  chart.x_axis.title = 'Index'
-  chart.add_data(values)
-  sheet_1.add_chart(chart, 'e2') 
-  workbook.save('Book1.xlsx')
-
-Automatically generated Excel spreadsheet.
+Automatically generated Excel spreadsheet. Image by author.
 Extracting Chart
 
 Now that we have generated our chart, we need to extract it as an image so that we can use it in our Word report. First we’ll declare the exact location of our Excel file and also where the output chart image should be saved:
 
-.. code-block:: python
-
-  input_file = "C:/Users/.../Book1.xlsx"
-  output_image = "C:/Users/.../chart.png"
+input_file = "C:/Users/.../Book1.xlsx"
+output_image = "C:/Users/.../chart.png"
 
 Then access the spreadsheet using the following method:
 
-.. code-block:: python
-
-  operation = win32com.client.Dispatch("Excel.Application")
-  operation.Visible = 0
-  operation.DisplayAlerts = 0
-  workbook_2 = operation.Workbooks.Open(input_file)
-  sheet_2 = operation.Sheets(1)
+operation = win32com.client.Dispatch("Excel.Application")
+operation.Visible = 0
+operation.DisplayAlerts = 0
+workbook_2 = operation.Workbooks.Open(input_file)
+sheet_2 = operation.Sheets(1)
 
 Subsequently, you can iterate over all of the chart objects in the spreadsheet (if there are more than one) and save them in the specified location as such:
 
-.. code-block:: python
-
-  for x, chart in enumerate(sheet_2.Shapes):
-      chart.Copy()
-      image = ImageGrab.grabclipboard()
-      image.save(output_image, 'png')
-      pass
-  workbook_2.Close(True)
-  operation.Quit()
+for x, chart in enumerate(sheet_2.Shapes):
+    chart.Copy()
+    image = ImageGrab.grabclipboard()
+    image.save(output_image, 'png')
+    pass
+workbook_2.Close(True)
+operation.Quit()
+Microsoft Word Automation
 
 Now that we have our chart image generated, we must create a template document that is basically a normal Microsoft Word Document (.docx) formulated exactly in the way we want our report to look like, including typefaces, font sizes, formatting and page structure. Then all we need to do is to create placeholders for our automated content i.e. table values and images, and declare them with variable names as shown below.
 
 
-Microsoft Word document template.
+Microsoft Word document template. Image by author.
 
 Any automated content can be declared inside a pair of double curly brackets {{variable_name}}, including text and images. For tables, you need to create a table with a template row with all the columns included, and then you need to append one row above and one row below with the following notation:
 
 First row:
 
-.. code-block:: python
-
-  {%tr for item in variable_name %}
+{%tr for item in variable_name %}
 
 Last row:
 
-.. code-block:: python
-
-  {%tr endfor %}
+{%tr endfor %}
 
 In the figure above the variable names are
 
@@ -565,124 +454,79 @@ Power, Current and Voltage for the dictionary values (second, third and fourth c
 
 Then we import our template document into Python and create a dictionary that will store our table’s values:
 
-.. code-block:: python
-
-  template = DocxTemplate('template.docx')
-  table_contents = []
-  for i in range(2, sheet_1.max_row + 1):
-      table_contents.append({
-          'Index': i-1,
-          'Power': sheet_1.cell(i, 1).value,
-          'Current': sheet_1.cell(i, 2).value,
-          'Voltage': sheet_1.cell(i, 3).value
-          })
+template = DocxTemplate('template.docx')
+table_contents = []
+for i in range(2, sheet_1.max_row + 1):
+    table_contents.append({
+        'Index': i-1,
+        'Power': sheet_1.cell(i, 1).value,
+        'Current': sheet_1.cell(i, 2).value,
+        'Voltage': sheet_1.cell(i, 3).value
+        })
 
 Next we‘ll’ import the chart image that was previously produced by Excel and will create another dictionary to instantiate all of the placeholder variables declared in the template document:
 
-.. code-block:: python
-
-  image = InlineImage(template,'chart.png',Cm(10))
-  context = {
-      'title': 'Automated Report',
-      'day': datetime.datetime.now().strftime('%d'),
-      'month': datetime.datetime.now().strftime('%b'),
-      'year': datetime.datetime.now().strftime('%Y'),
-      'table_contents': table_contents,
-      'image': image
-      }
-
-And finally we’ll render the report with our table of values and chart image:
-
-.. code-block:: python
-
-  template.render(context)
-  template.save('Automated_report.docx')
-
-**Results**
-
-And there you go, an automatically generated Microsoft Word report with numbers and a chart created in Microsoft Excel. And with that you have a fully automated pipeline that can be used to create as many tables, charts and documents as you could possibly ever need.
-
-
-Automatically generated report. Image by author.
-
-.. code-block:: python
-
-  import openpyxl as xl
-  from openpyxl.chart import LineChart, Reference	3	
-	import win32com.client
-  import PIL
-  from PIL
-  import ImageGrab, Image
-  import os
-  import sys
-	from docx.shared import Cm
-  from docxtpl import DocxTemplate, InlineImage
-  from docx.shared import Cm, Inches, Mm, Emu
-  import random
-  import datetime
-  import matplotlib.pyplot as plt	
-	
-	######## Generate automated excel workbook ########
-	workbook = xl.load_workbook('Book1.xlsx')
-  sheet_1 = workbook['Sheet1']
-  
-  for row in range(2, sheet_1.max_row + 1):
-    current = sheet_1.cell(row, 2)
-    voltage = sheet_1.cell(row, 3)
-    power = float(current.value) * float(voltage.value)
-    power_cell = sheet_1.cell(row, 1)
-    power_cell.value = power
-    values = Reference(sheet_1, min_row = 2, max_row = sheet_1.max_row, min_col = 1, max_col = 1)	chart = LineChart()
-    chart.y_axis.title = 'Power'
-    chart.x_axis.title = 'Index'
-    chart.add_data(values)
-    sheet_1.add_chart(chart, 'e2')
-    workbook.save('Book1.xlsx')	
-	
-  ######## Extract chart image from Excel workbook ########	
-	input_file = "C:/Users/.../Book1.xlsx"
-  output_image = "C:/Users/.../chart.png"	44	
-	operation = win32com.client.Dispatch("Excel.Application")
-  operation.Visible = 0
-  operation.DisplayAlerts = 0
-  workbook_2 = operation.Workbooks.Open(input_file)
-  sheet_2 = operation.Sheets(1)
-  for x, chart in enumerate(sheet_2.Shapes):
-    chart.Copy()
-    image = ImageGrab.grabclipboard()
-    image.save(output_image, 'png')
-    pass
-  
-	workbook_2.Close(True)
-  operation.Quit()
-
-	######## Generating automated word document ########	
-	template = DocxTemplate('template.docx')
-	#Generate list of random values
-  table_contents = []
-	for i in range(2, sheet_1.max_row + 1):
-    table_contents.append({
-      'Index': i-1,
-      'Power': sheet_1.cell(i, 1).value,
-      'Current': sheet_1.cell(i, 2).value,
-      'Voltage': sheet_1.cell(i, 3).value	76
-    })
-  #Import saved figure
-  image = InlineImage(template,'chart.png',Cm(10))
-	#Declare template variables
-  context = {
+image = InlineImage(template,'chart.png',Cm(10))
+context = {
     'title': 'Automated Report',
     'day': datetime.datetime.now().strftime('%d'),
     'month': datetime.datetime.now().strftime('%b'),
     'year': datetime.datetime.now().strftime('%Y'),
     'table_contents': table_contents,
     'image': image
-  }	
-	#Render automated report
-  template.render(context)
-  template.save('Automated_report.docx')  
+    }
+
+And finally we’ll render the report with our table of values and chart image:
+
+template.render(context)
+template.save('Automated_report.docx')
+Results
+
+And there you go, an automatically generated Microsoft Word report with numbers and a chart created in Microsoft Excel. And with that you have a fully automated pipeline that can be used to create as many tables, charts and documents as you could possibly ever need.
+
+
+Automatically generated report. Image by author.
+Source Code
+ 
+    
+      
+        
   
+       
+      1	import openpyxl as xl	2	from openpyxl.chart import LineChart, Reference	3	
+	4	import win32com.client	5	import PIL	6	from PIL import ImageGrab, Image	7	import os	8	import sys	9	
+	10	from docx.shared import Cm	11	from docxtpl import DocxTemplate, InlineImage	12	from docx.shared import Cm, Inches, Mm, Emu	13	import random	14	import datetime	15	import matplotlib.pyplot as plt	16	
+	17	
+	18	######## Generate automated excel workbook ########	19	
+	20	workbook = xl.load_workbook('Book1.xlsx')	21	sheet_1 = workbook['Sheet1']	22	  	23	for row in range(2, sheet_1.max_row + 1):	24	    current = sheet_1.cell(row, 2)	25	    voltage = sheet_1.cell(row, 3)	26	    power = float(current.value) * float(voltage.value)	27	    power_cell = sheet_1.cell(row, 1)	28	    power_cell.value = power	29	  	30	values = Reference(sheet_1, min_row = 2, max_row = sheet_1.max_row, min_col = 1, max_col = 1)	31	chart = LineChart()	32	chart.y_axis.title = 'Power'	33	chart.x_axis.title = 'Index'	34	chart.add_data(values)	35	sheet_1.add_chart(chart, 'e2')	36	  	37	workbook.save('Book1.xlsx')	38	
+	39	
+	40	######## Extract chart image from Excel workbook ########	41	
+	42	input_file = "C:/Users/.../Book1.xlsx"	43	output_image = "C:/Users/.../chart.png"	44	
+	45	operation = win32com.client.Dispatch("Excel.Application")	46	operation.Visible = 0	47	operation.DisplayAlerts = 0	48	    	49	workbook_2 = operation.Workbooks.Open(input_file)	50	sheet_2 = operation.Sheets(1)	51	    	52	for x, chart in enumerate(sheet_2.Shapes):	53	    chart.Copy()	54	    image = ImageGrab.grabclipboard()	55	    image.save(output_image, 'png')	56	    pass	57	
+	58	workbook_2.Close(True)	59	operation.Quit()	60	
+	61	
+	62	######## Generating automated word document ########	63	
+	64	template = DocxTemplate('template.docx')	65	
+	66	#Generate list of random values	67	table_contents = []	68	
+	69	for i in range(2, sheet_1.max_row + 1):	70	    	71	    table_contents.append({	72	        'Index': i-1,	73	        'Power': sheet_1.cell(i, 1).value,	74	        'Current': sheet_1.cell(i, 2).value,	75	        'Voltage': sheet_1.cell(i, 3).value	76	        })	77	
+	78	#Import saved figure	79	image = InlineImage(template,'chart.png',Cm(10))	80	
+	81	#Declare template variables	82	context = {	83	    'title': 'Automated Report',	84	    'day': datetime.datetime.now().strftime('%d'),	85	    'month': datetime.datetime.now().strftime('%b'),	86	    'year': datetime.datetime.now().strftime('%Y'),	87	    'table_contents': table_contents,	88	    'image': image	89	    }	90	
+	91	#Render automated report	92	template.render(context)	93	template.save('Automated_report.docx')  
+  
+      
+      
+        view raw         excel_word_automation         hosted with ❤ by GitHub
         
         
-
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
